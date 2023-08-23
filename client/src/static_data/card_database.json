@@ -1,0 +1,8 @@
+{
+    "fighting arts":[{"name":"name", "ability":"ability"}],
+    "disorders":[{"name":"name", "ability":"ability"}],
+    "abilities and impairments":[{"name":"name", "ability":"ability"}],
+    "innovations":[{"name":"name", "ability":"ability"}],
+    "knowledge":[{"name":"name", "ability":"ability"}],
+    "philosophy":[{"name":"name", "neurosis":"neurosis", "tenet knowledge":"tenet knowledge"}]
+}
