@@ -268,8 +268,9 @@
         "Symposium":"+1 Survival Limit. When a survivor innovates, draw an additonal 2 innovation cards to choose from.",
         "Ultimate Weapon":"+1 Survival Limit. When you defeat a monster, gain 1 monster resource of your choice from its resource deck.",
         "Umbilical Bank":"When a new survivor is born, you may add 1 Life String strange resouce to storage. 1[[Endeavor]]: Umbilical Symbiosis event. 1[[Endeavor]], 3 organ: Innovate Pottery.",
-        "War Room":"+1 Survival Limit.",
-        "White Mask":"1[[Endeavor]]: Strange Caravan event. 2[[Endeavor]], spend 1 resource, roll 1d10: 1-6 Gain +2 survival; 7-9 Departing survival gain +1 strength token; 10+ Gain [Red Fist] secret fighting arts",
+        "War Room":"+1 Survival Limit. Quarries cannot move off of the hunt board. If the survivors would move backwards on the hunt board, roll 1d10. On 4+, they don't. 1[[Endeavor]]: The group may reroll 1 Hunt Event Table result (1d100) this lantern year. They must reroll before performing the event.",
+        "Water of Life":"+1 Survival Limit. 1[[Endeavor]]: Remove a disorder, limit once per lifetime. 1[[Endeavor]], roll 1d10: 1-5 You do not generate endeavor, record this; 6+ You may remove a random disorder.",
+        "White Mask":"1[[Endeavor]]: Strange Caravan event. 2[[Endeavor]], spend 1 resource, roll 1d10: 1-6 Gain +2 survival; 7-9 Departing survival gain +1 strength token; 10+ Gain [Red Fist] secret fighting arts"
 
     },
 
