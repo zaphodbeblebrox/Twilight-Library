@@ -1,5 +1,6 @@
 {
     "keyword":"definition",
-    "Attack Assist":"A survivor who also has [Synchronized Strike] and is in the right spot. They must be standing adjacent to the monster, on its opposite side, and parallel to you."
+    "Attack Assist":"A survivor who also has [Synchronized Strike] and is in the right spot. They must be standing adjacent to the monster, on its opposite side, and parallel to you.",
+    "Flinch Token":"When a monster with a flinch token attempts to perform a [[Reaction]], cancel it and discard the token.",
     "Pursue":"Gain [[Movement]], which must be immediately spent to move towards teh monster. If you moved and are now adjacent, draw another HL."
 }
