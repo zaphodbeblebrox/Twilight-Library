@@ -13,5 +13,6 @@
     "Pristine":"Whe you suffer a dismembered severe injury, ignore it and gain 1 bleeding token instead.",
     "Pursue":"Gain [[Movement]], which must be immediately spent to move towards teh monster. If you moved and are now adjacent, draw another HL.",
     "Surge":"Once per round, spend 1 survival to gain +1[[Activation]] and use it immediately.",
+    "Undeathable":"If you would die, roll 1d10. On a 6+, you inexplicably survive.",
     "Unwieldy":"If any attack dice roll results are 1, the weapon causes 1 random damage to the survivor for each 1 rolled. Continue the attack as normal."
 }
