@@ -10,6 +10,7 @@
     "Flinch Token":"When a monster with a flinch token attempts to perform a [[Reaction]], cancel it and discard the token.",
     "Overcharge":"If you have any +1 strength tokens, you may spend 1 survival and remove them all to give your next attack this round [Devastating] 1. Limit once per round.",
     "Partner":"When you both Arrive, gain survival up to the survival limit. Partners may only nominated with eachother for Intimacy. When a parnter dies, the remaining gains a random disorder and loses this ability.",
+    "Precision":"On a [Perfect Hit], inflict an automatic critical wound to the first # hit location you resolve.",
     "Pristine":"Whe you suffer a dismembered severe injury, ignore it and gain 1 bleeding token instead.",
     "Pursue":"Gain [[Movement]], which must be immediately spent to move towards teh monster. If you moved and are now adjacent, draw another HL.",
     "Surge":"Once per round, spend 1 survival to gain +1[[Activation]] and use it immediately.",
