@@ -23,7 +23,7 @@
                 "The Hand":[{"11":"Regal Visit", "13":"NE: The Hand Lvl 1"}],
 
                 "The Dragon King": [{"1":"Foundlings", "4":"NE: Tyrant Lvl 1", "5":"Midnight's Children", "9":"NE: Tyrant Lvl 2", "10":"Unveil the Sky", "12":"Principle: Conviction", "19":"NE: Tyrant Lvl 3", "20":"The Dragon's Tomb", "25":"NE: Death of the Dragon King"}],
-                "Gambler": [{"1":"Dreamless Respite", "5":"Stained", "11":"The Game", "12":"Principle: Conviction", "15":"Wonderous Design", "20":"Perfect Punt, NE - The Gambler", "21":"Lantern Festival"}],
+                "Gambler": [{"1":"Dreamless Respite", "11":"The Game", "12":"Principle: Conviction", "15":"Wonderous Design", "20":"Perfect Punt, NE - The Gambler", "21":"Lantern Festival"}],
                 "The Sunstalker": [{"1":"The Pool and the Sun", "4":"Sun Dipping", "5":"The Great Sky Gift", "10":"Birth of Color", "11":"Principle: Conviction", "12":"Sun Dipping", "13":"The Great Sky Gift", "19":"Sun Dipping", "20":"The Great Sky Gift", "25":"NE - The Great Devourer"}],
                 "Watcher": [{"1":"Returning Survivors", "5":"Hands of Heat", "12":"Principle: Conviction", "20":"Watched", "25":"NE - Watcher"}],
 
@@ -32,7 +32,7 @@
 
                 "Lonely Tree": [{}],
 
-                "Arc Survivors":[{"1":"First Meal"}],
+                "Arc Survivors":[{"1":"First Meal", "5":"Stained"}],
                 "Encounters":[{"3":"Missing Statue"}],
                 "Scouts":[{"1":"Extinguished Guidepost"}],
                 "Wanderers":[{"23":"Wanderer - Luck"}]

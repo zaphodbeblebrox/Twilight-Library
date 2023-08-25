@@ -1,6 +1,7 @@
 {
     "keyword":"definition",
     "Attack Assist":"A survivor who also has [Synchronized Strike] and is in the right spot. They must be standing adjacent to the monster, on its opposite side, and parallel to you.",
+    "Cursed":"This may not be removed from your gear grid for any reason. When you die, archive this card.",
     "Dash":"Once per round, spend 1 survival to gain +1[[Movement]] and use it immediately.",
     "Embolden":"Once per round, if you have no +1 strength tokens, spend 1 survival to gain a +1 strength token. Whe you are knocked down, lose all +1 strength tokens.",
     "Encourage":"Once per round, if standing, spend 1 survival cause all non-deaf, knocked down survivors to stand.",
@@ -12,4 +13,5 @@
     "Pristine":"Whe you suffer a dismembered severe injury, ignore it and gain 1 bleeding token instead.",
     "Pursue":"Gain [[Movement]], which must be immediately spent to move towards teh monster. If you moved and are now adjacent, draw another HL.",
     "Surge":"Once per round, spend 1 survival to gain +1[[Activation]] and use it immediately.",
+    "Unwieldy":"If any attack dice roll results are 1, the weapon causes 1 random damage to the survivor for each 1 rolled. Continue the attack as normal."
 }
