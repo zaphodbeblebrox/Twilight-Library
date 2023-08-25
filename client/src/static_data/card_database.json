@@ -271,7 +271,6 @@
         "War Room":"+1 Survival Limit. Quarries cannot move off of the hunt board. If the survivors would move backwards on the hunt board, roll 1d10. On 4+, they don't. 1[[Endeavor]]: The group may reroll 1 Hunt Event Table result (1d100) this lantern year. They must reroll before performing the event.",
         "Water of Life":"+1 Survival Limit. 1[[Endeavor]]: Remove a disorder, limit once per lifetime. 1[[Endeavor]], roll 1d10: 1-5 You do not generate endeavor, record this; 6+ You may remove a random disorder.",
         "White Mask":"1[[Endeavor]]: Strange Caravan event. 2[[Endeavor]], spend 1 resource, roll 1d10: 1-6 Gain +2 survival; 7-9 Departing survival gain +1 strength token; 10+ Gain [Red Fist] secret fighting arts"
-
     },
 
     "knowledge":[{"name":"name", "ability":"ability"}],
