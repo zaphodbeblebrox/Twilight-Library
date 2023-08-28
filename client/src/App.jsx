@@ -3,9 +3,15 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import { Button } from "@radix-ui/themes";
+//import JsonStuff from "./static_data/card_database.json";
 
 function App() {
   const [count, setCount] = useState(0);
+  // console.log(
+  //   JSON.stringify(
+  //     Object.fromEntries(Object.entries(JsonStuff.knowledge).sort()),
+  //   ),
+  // );
 
   return (
     <>
