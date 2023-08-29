@@ -1,22 +1,61 @@
-import { Checkbox } from "@radix-ui/themes";
+import { Checkbox } from '@radix-ui/themes';
+import * as Label from '@radix-ui/react-label';
+import ccData from '../static_data/campaign_creator.json';
 
 const PillarOptions = () => {
-  return (
-    <div>
-      <Checkbox value={"Arc Survivors"}>Arc Survivors - 3 Pillars</Checkbox>
-      <Checkbox value={"Characters"}>Characters - 1 Pillar</Checkbox>
-      <div>
-        <p>Encounters - 2 Pillars</p>
-        <Checkbox value={"Bone Eaters"}>Bone Eaters</Checkbox>
-      </div>
-      <Checkbox value={"Scouts"}>Scouts - 1 Pillar</Checkbox>
-      <Checkbox value={"Seed Patterns"}>Seed Patterns - 1 Pillar</Checkbox>
-      <div>
-        <p>Wanderers - 1 Pillar</p>
-        <Checkbox value={"Luck the Wanderer"}>Luck the Wanderer</Checkbox>
-      </div>
-    </div>
-  );
+    return (
+        <div>
+            <div>
+                <Checkbox value={'Arc Survivors'} id="arc-survivors" />
+                <Label.Root htmlFor="arc-survivors">
+                    Arc Survivors - 3 Pillars
+                </Label.Root>
+            </div>
+
+            <div>
+                <Checkbox value={'Characters'} id="characters" />
+                <Label.Root htmlFor="characters">
+                    Characters - 1 Pillar
+                </Label.Root>
+            </div>
+
+            <div>
+                <p>Encounters - 2 Pillars</p>
+                {ccData.Encounters.map((option, idx) => {
+                    return (
+                        <div key={idx}>
+                            <Checkbox value={option} id="idx" />
+                            <Label.Root htmlFor="idx">{option}</Label.Root>
+                        </div>
+                    );
+                })}
+            </div>
+
+            <div>
+                <Checkbox value={'Scouts'} id="scouts" />
+                <Label.Root htmlFor="scouts">Scouts - 1 Pillar</Label.Root>
+            </div>
+
+            <div>
+                <Checkbox value={'Seed Patterns'} id="seed-patterns" />
+                <Label.Root htmlFor="seed-patterns">
+                    Seed Patterns - 1 Pillar
+                </Label.Root>
+            </div>
+
+            <div>
+                <p>Wanderers - 1 Pillar</p>
+                {ccData.Wanderers.map((option, idx) => {
+                    return (
+                        <div key={idx}>
+                            <Checkbox value={option} id="idx" />
+                            <Label.Root htmlFor="idx">{option}</Label.Root>
+                        </div>
+                    );
+                })}
+            </div>
+        </div>
+    );
 };
 
 export default PillarOptions;
