@@ -5,10 +5,10 @@ function OptionListCC({ header, options }) {
   return (
     <Flex direction="column" gap="1">
       <Heading as="h3">{header}</Heading>
-      {options.map((opt) => (
-        <Flex key={opt}>
-          <Checkbox />
-          <label>{opt}</label>
+      {options.map((opt, idx) => (
+        <Flex key={idx}>
+          <Checkbox id={opt} />
+          <label htmlFor={opt}>{opt}</label>
         </Flex>
       ))}
     </Flex>
