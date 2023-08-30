@@ -20,7 +20,7 @@ const PillarOptions = () => {
             </div>
 
             <div>
-                <p>Encounters - 2 Pillars</p>
+                <p className="subheader">Encounters - 2 Pillars</p>
                 {ccData.Encounters.map((option, idx) => {
                     return (
                         <div key={idx}>
@@ -44,7 +44,7 @@ const PillarOptions = () => {
             </div>
 
             <div>
-                <p>Wanderers - 1 Pillar</p>
+                <p className="subheader">Wanderers - 1 Pillar</p>
                 {ccData.Wanderers.map((option, idx) => {
                     return (
                         <div key={idx}>
