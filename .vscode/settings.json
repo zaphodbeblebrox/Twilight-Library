@@ -3,6 +3,7 @@
   //   "source.fixAll.eslint": true
   // },
   // "eslint.validate": ["javascript"],
+  "files.eol": "\n",
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   "eslint.format.enable": true,
