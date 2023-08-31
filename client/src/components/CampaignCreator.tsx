@@ -11,6 +11,7 @@ import { useEffect, useState } from 'react';
 
 const CampaignCreator = () => {
     const [presetCampaign, setPresetCampaign] = useState(CcData.campaigns[0]);
+    const [campaignSettings, setCampaignSettings] = useState({});
 
     useEffect(() => console.log('campaign', presetCampaign), [presetCampaign]);
 
@@ -27,26 +28,6 @@ const CampaignCreator = () => {
                     value={presetCampaign}
                     setValue={setPresetCampaign}
                 />
-
-                {/* <Label.Root htmlFor="pre-set">Pre-set campaign</Label.Root>
-                <Select.Root id="pre-set">
-                    <Select.Trigger placeholder="Select a fruit…" />
-                    <Select.Content>
-                        <Select.Group>
-                            <Select.Item value="orange">Orange</Select.Item>
-                            <Select.Item value="apple">Apple</Select.Item>
-                            <Select.Item value="grape" disabled>
-                                Grape
-                            </Select.Item>
-                        </Select.Group>
-                        <Select.Separator />
-                        <Select.Group>
-                            <Select.Label>Vegetables</Select.Label>
-                            <Select.Item value="carrot">Carrot</Select.Item>
-                            <Select.Item value="potato">Potato</Select.Item>
-                        </Select.Group>
-                    </Select.Content>
-                </Select.Root> */}
             </div>
             <h3>Campaign Pillars</h3>
             <PillarOptions />
