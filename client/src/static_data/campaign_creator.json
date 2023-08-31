@@ -1,4 +1,20 @@
 {
+    "key_holder": [
+        "pillars",
+        "encounters",
+        "wanderers",
+        "node_quarry_1",
+        "node_quarry_2",
+        "node_quarry_3",
+        "node_quarry_4",
+        "node_nemesis_1",
+        "node_nemesis_2",
+        "node_nemesis_3",
+        "node_core",
+        "node_finale",
+        "node_special"
+    ],
+
     "campaigns": [
         "Custom",
         "People of the Dream Keeper",
@@ -6,6 +22,53 @@
         "People of the Stars",
         "People of the Sun"
     ],
+
+    "People of the Dream Keeper": [
+        "Crimson Crocodile",
+        "Smog Singers",
+        "Phoenix",
+        "The King",
+        "Butcher",
+        "Atnas",
+        "The Hand",
+        "Gambler",
+        "Godhand",
+        "Luck the Wanderer",
+        "Bone Eaters",
+        "Arc Survivors",
+        "Characters",
+        "Scouts",
+        "Seed Patterns"
+    ],
+    "People of the Lantern": [
+        "White Lion",
+        "Screaming Antelope",
+        "Phoenix",
+        "Butcher",
+        "King's Man",
+        "The Hand",
+        "Watcher",
+        "Gold Smoke Knight"
+    ],
+    "People of the Stars": [
+        "White Lion",
+        "Screaming Antelope",
+        "Phoenix",
+        "Butcher",
+        "King's Man",
+        "The Tyrant",
+        "The Dragon King"
+    ],
+    "People of the Sun": [
+        "White Lion",
+        "Screaming Antelope",
+        "Phoenix",
+        "Butcher",
+        "King's Man",
+        "The Hand",
+        "The Sunstalker"
+    ],
+
     "node_quarry_1": ["Crimson Crocodile", "Gorm", "White Lion"],
     "node_quarry_2": [
         "Flower Knight",
@@ -22,16 +85,9 @@
     "node_finale": ["Godhand", "Gold Smoke Knight"],
     "node_special": ["Lonely Tree"],
 
-    "pillars": [
-        "Arc Survivors",
-        "Characters",
-        "Encounters",
-        "Scouts",
-        "Seed Patterns",
-        "Wanderers"
-    ],
-    "Encounters": ["Bone Eaters"],
-    "Wanderers": ["Luck the Wanderer"],
+    "pillars": ["Arc Survivors", "Characters", "Scouts", "Seed Patterns"],
+    "encounters": ["Bone Eaters"],
+    "wanderers": ["Luck the Wanderer"],
 
     "timeline": {
         "Crimson Crocodile": [{ "1": "First Crimson Day" }],
@@ -89,6 +145,13 @@
             }
         ],
         "The Hand": [{ "11": "Regal Visit", "13": "NE: The Hand Lvl 1" }],
+        "The Tyrant": [
+            {
+                "4": "NE: The Tyrant Lvl 1",
+                "9": "NE: The Tyrant Lvl 2",
+                "19": "NE: The Tyrant Lvl 3"
+            }
+        ],
 
         "The Dragon King": [
             {

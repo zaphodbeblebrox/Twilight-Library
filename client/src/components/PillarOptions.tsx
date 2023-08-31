@@ -21,7 +21,7 @@ const PillarOptions = () => {
 
             <div>
                 <p className="subheader">Encounters - 2 Pillars</p>
-                {ccData.Encounters.map((option, idx) => {
+                {ccData.encounters.map((option, idx) => {
                     return (
                         <div key={idx}>
                             <Checkbox value={option} id="idx" />
@@ -45,7 +45,7 @@ const PillarOptions = () => {
 
             <div>
                 <p className="subheader">Wanderers - 1 Pillar</p>
-                {ccData.Wanderers.map((option, idx) => {
+                {ccData.wanderers.map((option, idx) => {
                     return (
                         <div key={idx}>
                             <Checkbox value={option} id="idx" />
