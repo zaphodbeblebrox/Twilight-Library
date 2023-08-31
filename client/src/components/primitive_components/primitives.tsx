@@ -1,4 +1,4 @@
-import { Button, Select } from '@radix-ui/themes';
+import { Button, Select, Flex, Text, Checkbox } from '@radix-ui/themes';
 
 // import { Select } from '@radix-ui/react-select';
 import * as Label from '@radix-ui/react-label';
@@ -31,4 +31,26 @@ const TLSelect = ({ header, options, value, setValue }: TLSelectProps) => {
     );
 };
 
-export { TLSelect };
+interface TLCheckboxProps {
+    label: string;
+    value: {};
+    setValue: React.Dispatch<React.SetStateAction<{}>>;
+}
+const TLCheckbox = ({ label, value, setValue }: TLCheckboxProps) => {
+    const checkHandler = (checked:boolean) => {
+        const temp:Record<string, boolean> = {...value};
+        temp[label]=checked;
+        setValue(temp);
+    }
+    return (
+        <Flex>
+            <Text size="2">
+                <label>
+                <Checkbox mr="1"  onCheckedChange={(checked:boolean)=>checkHandler(checked)}/> {label}
+                </label>
+            </Text>
+        </Flex>
+    );
+};
+
+export { TLSelect,TLCheckbox };
