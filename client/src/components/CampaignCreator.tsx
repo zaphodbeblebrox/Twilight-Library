@@ -13,17 +13,18 @@ const CampaignCreator = () => {
     const [presetCampaign, setPresetCampaign] = useState(ccData.campaigns[0]);
     const [campaignSettings, setCampaignSettings] = useState({});
 
-    useEffect(()=> {
-        const defaultCampaignSettings: Record<string, boolean> = {};
-        ccData.key_holder.map((cat:string)=>{
-            if(cat in ccData && ccData[cat as keyof typeof ccData] instanceof Array){
-                (ccData[cat as keyof typeof ccData] as unknown as any[]).map((key: string) => {defaultCampaignSettings[key] = false;});
-            }
-        });
-        setCampaignSettings(defaultCampaignSettings);
-        console.log(defaultCampaignSettings);
-    },[])
+    // useEffect(()=> {
+    //     const defaultCampaignSettings: Record<string, boolean> = {};
+    //     ccData.key_holder.map((cat:string)=>{
+    //         if(cat in ccData && ccData[cat as keyof typeof ccData] instanceof Array){
+    //             (ccData[cat as keyof typeof ccData] as unknown as any[]).map((key: string) => {defaultCampaignSettings[key] = false;});
+    //         }
+    //     });
+    //     setCampaignSettings(defaultCampaignSettings);
+    //     console.log(defaultCampaignSettings);
+    // },[])
 
+    useEffect(() => console.log('checkbox status', campaignSettings), [campaignSettings]);
     useEffect(() => console.log('campaign', presetCampaign), [presetCampaign]);
 
     const CreateTimelineHandler = (e) => {
@@ -41,7 +42,7 @@ const CampaignCreator = () => {
                 />
             </div>
             <h3>Campaign Pillars</h3>
-            <PillarOptions />
+            <PillarOptions data={campaignSettings} setData={setCampaignSettings}/>
             <div>
                 <h3>Node Quarries</h3>
                 <div>

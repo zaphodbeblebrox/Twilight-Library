@@ -1,56 +1,36 @@
 import { Checkbox } from '@radix-ui/themes';
 import * as Label from '@radix-ui/react-label';
 import ccData from '../static_data/campaign_creator.json';
+import { TLCheckbox } from './primitive_components/primitives';
 
-const PillarOptions = () => {
+interface PillarOptionsProps {
+    data: {};
+    setData: React.Dispatch<React.SetStateAction<{}>>;
+}
+
+const PillarOptions = ({data, setData}: PillarOptionsProps) => {
     return (
         <div>
-            <div>
-                <Checkbox value={'Arc Survivors'} id="arc-survivors" />
-                <Label.Root htmlFor="arc-survivors">
-                    Arc Survivors - 3 Pillars
-                </Label.Root>
-            </div>
+            <TLCheckbox label="Arc Survivors" value={data} setValue={setData}/>
+            <TLCheckbox label="Characters" value={data} setValue={setData}/>
 
             <div>
-                <Checkbox value={'Characters'} id="characters" />
-                <Label.Root htmlFor="characters">
-                    Characters - 1 Pillar
-                </Label.Root>
-            </div>
-
-            <div>
-                <p className="subheader">Encounters - 2 Pillars</p>
+                <p className="subheader">Encounters</p>
                 {ccData.encounters.map((option, idx) => {
                     return (
-                        <div key={idx}>
-                            <Checkbox value={option} id="idx" />
-                            <Label.Root htmlFor="idx">{option}</Label.Root>
-                        </div>
+                        <TLCheckbox key={idx} label={option} value={data} setValue={setData}/>
                     );
                 })}
             </div>
 
-            <div>
-                <Checkbox value={'Scouts'} id="scouts" />
-                <Label.Root htmlFor="scouts">Scouts - 1 Pillar</Label.Root>
-            </div>
+            <TLCheckbox label="Scouts" value={data} setValue={setData}/>
+            <TLCheckbox label="Seed Patterns" value={data} setValue={setData}/>
 
             <div>
-                <Checkbox value={'Seed Patterns'} id="seed-patterns" />
-                <Label.Root htmlFor="seed-patterns">
-                    Seed Patterns - 1 Pillar
-                </Label.Root>
-            </div>
-
-            <div>
-                <p className="subheader">Wanderers - 1 Pillar</p>
+                <p className="subheader">Wanderers</p>
                 {ccData.wanderers.map((option, idx) => {
                     return (
-                        <div key={idx}>
-                            <Checkbox value={option} id="idx" />
-                            <Label.Root htmlFor="idx">{option}</Label.Root>
-                        </div>
+                        <TLCheckbox key={idx} label={option} value={data} setValue={setData}/>
                     );
                 })}
             </div>
