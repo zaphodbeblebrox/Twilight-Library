@@ -1,6 +1,5 @@
 import { Button, Select, Flex, Text, Checkbox } from '@radix-ui/themes';
 
-// import { Select } from '@radix-ui/react-select';
 import * as Label from '@radix-ui/react-label';
 
 interface TLSelectProps {
