@@ -1,26 +1,33 @@
 import { Checkbox, Flex, Heading } from '@radix-ui/themes';
-import PropTypes from 'prop-types';
+import { TLCheckbox } from './primitive_components/primitives';
 
-function OptionListCC({ header, options }) {
+interface OptionListCCProps {
+    header: string;
+    options: string[];
+    data: {};
+    setData: React.Dispatch<React.SetStateAction<{}>>;
+}
+
+function OptionListCC({ header, options, data, setData }: OptionListCCProps) {
     // console.log(options);
     return (
         <Flex direction="column" gap="1">
-            <Heading as="h3">{header}</Heading>
-            {options.map((opt, idx) => (
-                <Flex key={idx}>
-                    <Checkbox id={opt} />
-                    <label htmlFor={opt}>{opt}</label>
+            {header.length === 3 ? (
+                <Flex direction="row" align="end" justify="center">
+                    <Heading size="7">{header[0]}</Heading>
+                    <Heading size="6">{header[1]}</Heading>
+                    <Heading size="5">{header[2]}</Heading>
                 </Flex>
-            ))}
+            ):(
+                <Heading size="7">{header}</Heading>
+            )}
+            {options.map((option, idx)=> {
+                return(
+                    <TLCheckbox key={idx} label={option} value={data} setValue={setData}/>
+                );
+            })}
         </Flex>
     );
 }
-
-OptionListCC.propTypes = {
-    header: PropTypes.string.isRequired,
-    options: PropTypes.arrayOf(PropTypes.string).isRequired,
-    // selection: PropTypes.string.isRequired,
-    // setSelection: PropTypes.func.isRequired,
-};
 
 export default OptionListCC;
