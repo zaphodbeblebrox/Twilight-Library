@@ -2,7 +2,7 @@ import PillarOptions from './PillarOptions';
 import OptionListCC from './OptionListCC';
 import ccData from '../static_data/campaign_creator.json';
 import RbListCC from './RbListCC';
-import { Button, Select } from '@radix-ui/themes';
+import { Button, Heading, Select } from '@radix-ui/themes';
 import * as Label from '@radix-ui/react-label';
 import { TLSelect } from './primitive_components/primitives';
 import { useEffect, useState } from 'react';
@@ -16,12 +16,16 @@ const CampaignCreator = () => {
     useEffect(() => console.log('checkbox status', campaignSettings), [campaignSettings]);
     useEffect(() => console.log('campaign', presetCampaign), [presetCampaign]);
 
+    const LoadPresetCampaignSelectionHandler = () => {
+
+    }
+
     const CreateTimelineHandler = (e) => {
         e.preventDefault();
     };
     return (
         <form onSubmit={CreateTimelineHandler}>
-            <h2>Campaign Creator</h2>
+            <Heading size="7">Campaign Creator</Heading>
             <div>
                 <TLSelect
                     header={'Preset Campaign'}
@@ -30,10 +34,10 @@ const CampaignCreator = () => {
                     setValue={setPresetCampaign}
                 />
             </div>
-            <h3>Campaign Pillars</h3>
+            <Heading size="5">Campaign Pillars</Heading>
             <PillarOptions data={campaignSettings} setData={setCampaignSettings}/>
             <div>
-                <h3>Node Quarries</h3>
+            <Heading size="5">Node Quarries</Heading>
                 <div>
                     <OptionListCC header="NQ1" options={ccData.node_quarry_1} data={campaignSettings} setData={setCampaignSettings}/>
                     <OptionListCC header="NQ2" options={ccData.node_quarry_2} data={campaignSettings} setData={setCampaignSettings}/>
@@ -45,7 +49,7 @@ const CampaignCreator = () => {
                 </div>
             </div>
             <div>
-                <h3>Node Nemesis</h3>
+                <Heading size="5">Node Nemesis</Heading>
                 <div>
                     <OptionListCC
                         header="NN1"
@@ -65,7 +69,7 @@ const CampaignCreator = () => {
                 </div>
             </div>
             <div>
-                <h3>Node Critical</h3>
+                <Heading size="5">Node Critical</Heading>
                 <div>
                     <RbListCC header="Core" options={ccData.node_core} />
                     <RbListCC header="Finale" options={ccData.node_finale} />

@@ -32,7 +32,7 @@ const TLSelect = ({ header, options, value, setValue }: TLSelectProps) => {
 
 interface TLCheckboxProps {
     label: string;
-    value: {};
+    value: Record<string, boolean>;
     setValue: React.Dispatch<React.SetStateAction<{}>>;
 }
 const TLCheckbox = ({ label, value, setValue }: TLCheckboxProps) => {
@@ -45,7 +45,7 @@ const TLCheckbox = ({ label, value, setValue }: TLCheckboxProps) => {
         <Flex>
             <Text size="2">
                 <label>
-                <Checkbox mr="1"  onCheckedChange={(checked:boolean)=>checkHandler(checked)}/> {label}
+                <Checkbox mr="1" checked={value[label]} onCheckedChange={(checked:boolean)=>checkHandler(checked)}/> {label}
                 </label>
             </Text>
         </Flex>
