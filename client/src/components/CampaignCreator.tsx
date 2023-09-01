@@ -13,17 +13,6 @@ const CampaignCreator = () => {
     const [presetCampaign, setPresetCampaign] = useState(ccData.campaigns[0]);
     const [campaignSettings, setCampaignSettings] = useState({});
 
-    // useEffect(()=> {
-    //     const defaultCampaignSettings: Record<string, boolean> = {};
-    //     ccData.key_holder.map((cat:string)=>{
-    //         if(cat in ccData && ccData[cat as keyof typeof ccData] instanceof Array){
-    //             (ccData[cat as keyof typeof ccData] as unknown as any[]).map((key: string) => {defaultCampaignSettings[key] = false;});
-    //         }
-    //     });
-    //     setCampaignSettings(defaultCampaignSettings);
-    //     console.log(defaultCampaignSettings);
-    // },[])
-
     useEffect(() => console.log('checkbox status', campaignSettings), [campaignSettings]);
     useEffect(() => console.log('campaign', presetCampaign), [presetCampaign]);
 
@@ -46,12 +35,12 @@ const CampaignCreator = () => {
             <div>
                 <h3>Node Quarries</h3>
                 <div>
-                    <OptionListCC header="NQ1" options={ccData.node_quarry_1} />
-                    <OptionListCC header="NQ2" options={ccData.node_quarry_2} />
-                    <OptionListCC header="NQ3" options={ccData.node_quarry_3} />
+                    <OptionListCC header="NQ1" options={ccData.node_quarry_1} data={campaignSettings} setData={setCampaignSettings}/>
+                    <OptionListCC header="NQ2" options={ccData.node_quarry_2} data={campaignSettings} setData={setCampaignSettings}/>
+                    <OptionListCC header="NQ3" options={ccData.node_quarry_3} data={campaignSettings} setData={setCampaignSettings}/>
                     <OptionListCC
-                        header={'NQ4'}
-                        options={ccData.node_quarry_4}
+                        header={'NQ4'} 
+                        options={ccData.node_quarry_4} data={campaignSettings} setData={setCampaignSettings}
                     />
                 </div>
             </div>
@@ -61,14 +50,17 @@ const CampaignCreator = () => {
                     <OptionListCC
                         header="NN1"
                         options={ccData.node_nemesis_1}
+                        data={campaignSettings} setData={setCampaignSettings}
                     />
                     <OptionListCC
                         header="NN2"
                         options={ccData.node_nemesis_2}
+                        data={campaignSettings} setData={setCampaignSettings}
                     />
                     <OptionListCC
                         header="NN3"
                         options={ccData.node_nemesis_3}
+                        data={campaignSettings} setData={setCampaignSettings}
                     />
                 </div>
             </div>
@@ -80,6 +72,7 @@ const CampaignCreator = () => {
                     <OptionListCC
                         header="Special"
                         options={ccData.node_special}
+                        data={campaignSettings} setData={setCampaignSettings}
                     />
                 </div>
             </div>
