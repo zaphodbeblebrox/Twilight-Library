@@ -6,16 +6,17 @@ interface TLSelectProps {
     header: string;
     options: string[];
     value: string;
-    setValue: React.Dispatch<React.SetStateAction<string>>;
+    // setValue: React.Dispatch<React.SetStateAction<string>>;
+    onChange:Function;
 }
-const TLSelect = ({ header, options, value, setValue }: TLSelectProps) => {
+const TLSelect = ({ header, options, value, onChange }: TLSelectProps) => {
     return (
         <div>
             <Label.Root htmlFor={header}>{header}</Label.Root>
             <Select.Root
                 name={header}
                 defaultValue={value}
-                onValueChange={(value) => setValue(value)}
+                onValueChange={(value) => onChange(value)}
             >
                 <Select.Trigger />
                 <Select.Content >

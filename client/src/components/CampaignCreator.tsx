@@ -16,7 +16,20 @@ const CampaignCreator = () => {
     useEffect(() => console.log('checkbox status', campaignSettings), [campaignSettings]);
     useEffect(() => console.log('campaign', presetCampaign), [presetCampaign]);
 
-    const LoadPresetCampaignSelectionHandler = () => {
+    const LoadPresetCampaignSelectionHandler = (campaign:string) => {
+        if(ccData.hasOwnProperty(campaign)){
+            const modCampaignSettings:Record<string, boolean> = {...campaignSettings};
+            for(const key in modCampaignSettings){
+                modCampaignSettings[key] = false;
+            }
+            const settings = ccData[campaign as keyof typeof ccData];
+            if(Array.isArray(settings)){
+                settings.map((key:string) => modCampaignSettings[key] = true);
+            }
+            console.log(modCampaignSettings);
+            setCampaignSettings(modCampaignSettings);
+        }
+        
 
     }
 
@@ -30,8 +43,9 @@ const CampaignCreator = () => {
                 <TLSelect
                     header={'Preset Campaign'}
                     options={ccData.campaigns}
+                    onChange={LoadPresetCampaignSelectionHandler}
                     value={presetCampaign}
-                    setValue={setPresetCampaign}
+                    // setValue={setPresetCampaign}
                 />
             </div>
             <Heading size="5">Campaign Pillars</Heading>
