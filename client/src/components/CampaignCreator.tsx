@@ -26,11 +26,8 @@ const CampaignCreator = () => {
             if(Array.isArray(settings)){
                 settings.map((key:string) => modCampaignSettings[key] = true);
             }
-            console.log(modCampaignSettings);
             setCampaignSettings(modCampaignSettings);
         }
-        
-
     }
 
     const CreateTimelineHandler = (e) => {
