@@ -11,7 +11,7 @@ interface TLSelectProps {
 }
 const TLSelect = ({ header, options, value, onChange }: TLSelectProps) => {
     return (
-        <Flex direction="row" gap="1">
+        <Flex direction="row" gap="1" justify="start" align="center">
             <Label.Root htmlFor={header}>{header}</Label.Root>
             <Select.Root
                 name={header}
@@ -43,15 +43,9 @@ const TLCheckbox = ({ label, value, setValue }: TLCheckboxProps) => {
         setValue(temp);
     }
     return (
-        <Flex direction="row" gap="1">
+        <Flex direction="row" gap="1" justify="start" align="center">
             <Checkbox id={label} mr="1" checked={value[label]} onCheckedChange={(checked:boolean)=>checkHandler(checked)}/>
             <Label.Root htmlFor={label}>{label}</Label.Root>
-            {/* <Text size="2">
-                <label>
-                <Checkbox mr="1" checked={value[label]} onCheckedChange={(checked:boolean)=>checkHandler(checked)}/> {label}
-                </label>
-                <Label.Root htmlFor={label}>{label}</Label.Root>
-            </Text> */}
         </Flex>
     );
 };
