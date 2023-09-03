@@ -14,7 +14,7 @@ interface OptionListCCProps {
 const RbListCC = ({ header, options, data, setData }: OptionListCCProps) => {
     const updateDataHandler = (value: string) => {
         console.log(value);
-        const temp = { ...data };
+        const temp: Record<string, boolean> = { ...data };
         options.map((key) => (temp[key] = false));
         temp[value] = true;
         setData(temp);

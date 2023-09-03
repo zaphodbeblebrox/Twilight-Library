@@ -9,7 +9,12 @@ interface OptionListCCProps {
 }
 
 function OptionListCC({ header, options, data, setData }: OptionListCCProps) {
-    // console.log(options);
+    const checkedActionHandler = (label: string, checked: boolean) => {
+        const temp: Record<string, boolean> = { ...data };
+        temp[label] = checked;
+        setData(temp);
+    };
+
     return (
         <Flex direction="column" gap="1">
             {header.length === 3 ? (
@@ -18,12 +23,17 @@ function OptionListCC({ header, options, data, setData }: OptionListCCProps) {
                     <Heading size="3">{header[1]}</Heading>
                     <Heading size="2">{header[2]}</Heading>
                 </Flex>
-            ):(
+            ) : (
                 <Heading size="5">{header}</Heading>
             )}
-            {options.map((option, idx)=> {
-                return(
-                    <TLCheckbox key={idx} label={option} value={data} setValue={setData}/>
+            {options.map((option, idx) => {
+                return (
+                    <TLCheckbox
+                        key={idx}
+                        label={option}
+                        value={data}
+                        onChange={checkedActionHandler}
+                    />
                 );
             })}
         </Flex>

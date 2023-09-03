@@ -41,21 +41,16 @@ const TLSelect = ({ header, options, value, onChange }: TLSelectProps) => {
 interface TLCheckboxProps {
     label: string;
     value: Record<string, boolean>;
-    setValue: React.Dispatch<React.SetStateAction<{}>>;
+    onChange: Function;
 }
-const TLCheckbox = ({ label, value, setValue }: TLCheckboxProps) => {
-    const checkHandler = (checked: boolean) => {
-        const temp: Record<string, boolean> = { ...value };
-        temp[label] = checked;
-        setValue(temp);
-    };
+const TLCheckbox = ({ label, value, onChange }: TLCheckboxProps) => {
     return (
         <Flex direction="row" gap="1" justify="start" align="center">
             <Checkbox
                 id={label}
                 mr="1"
                 checked={value[label]}
-                onCheckedChange={(checked: boolean) => checkHandler(checked)}
+                onCheckedChange={(checked: boolean) => onChange(label, checked)}
             />
             <Label.Root htmlFor={label}>{label}</Label.Root>
         </Flex>
