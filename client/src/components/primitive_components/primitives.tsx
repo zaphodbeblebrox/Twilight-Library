@@ -58,16 +58,30 @@ const TLCheckbox = ({ label, value, onChange }: TLCheckboxProps) => {
 };
 
 interface TLRadioGroupItemProps {
+    value: string;
     options: string[];
     onChange: Function;
 }
-const TLRadioGroupItem = ({ options, onChange }: TLRadioGroupItemProps) => {
+const TLRadioGroupItem = ({
+    value,
+    options,
+    onChange,
+}: TLRadioGroupItemProps) => {
     return (
         <Flex direction="row" gap="1" justify="start" align="center">
-            <RadioGroup.Root onValueChange={(value: string) => onChange(value)}>
+            <RadioGroup.Root
+                value={value}
+                onValueChange={(value: string) => onChange(value)}
+            >
                 {options.map((option, idx) => {
                     return (
-                        <Flex key={idx}>
+                        <Flex
+                            key={idx}
+                            direction="row"
+                            gap="1"
+                            justify="start"
+                            align="center"
+                        >
                             <RadioGroup.Item id={option} value={option} />
                             <Label.Root htmlFor={option}>{option}</Label.Root>
                         </Flex>

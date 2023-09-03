@@ -1,20 +1,4 @@
 {
-    "key_holder": [
-        "pillars",
-        "encounters",
-        "wanderers",
-        "node_quarry_1",
-        "node_quarry_2",
-        "node_quarry_3",
-        "node_quarry_4",
-        "node_nemesis_1",
-        "node_nemesis_2",
-        "node_nemesis_3",
-        "node_core",
-        "node_finale",
-        "node_special"
-    ],
-
     "campaigns": [
         "Custom",
         "People of the Dream Keeper",
@@ -57,7 +41,8 @@
         "Butcher",
         "King's Man",
         "The Tyrant",
-        "The Dragon King"
+        "The Dragon King",
+        "None"
     ],
     "People of the Sun": [
         "White Lion",
@@ -66,7 +51,8 @@
         "Butcher",
         "King's Man",
         "The Hand",
-        "The Sunstalker"
+        "The Sunstalker",
+        "None"
     ],
 
     "node_quarry_1": ["Crimson Crocodile", "Gorm", "White Lion"],
@@ -82,7 +68,7 @@
     "node_nemesis_2": ["Atnas", "King's Man", "Lion Knight", "Slenderman"],
     "node_nemesis_3": ["The Hand"],
     "node_core": ["The Dragon King", "Gambler", "The Sunstalker", "Watcher"],
-    "node_finale": ["Godhand", "Gold Smoke Knight"],
+    "node_finale": ["None", "Godhand", "Gold Smoke Knight"],
     "node_special": ["Lonely Tree"],
 
     "pillars": ["Arc Survivors", "Characters", "Scouts", "Seed Patterns"],
