@@ -1,4 +1,11 @@
-import { Button, Select, Flex, Text, Checkbox } from '@radix-ui/themes';
+import {
+    Button,
+    Select,
+    Flex,
+    Text,
+    Checkbox,
+    RadioGroup,
+} from '@radix-ui/themes';
 
 import * as Label from '@radix-ui/react-label';
 
@@ -7,7 +14,7 @@ interface TLSelectProps {
     options: string[];
     value: string;
     // setValue: React.Dispatch<React.SetStateAction<string>>;
-    onChange:Function;
+    onChange: Function;
 }
 const TLSelect = ({ header, options, value, onChange }: TLSelectProps) => {
     return (
@@ -19,7 +26,7 @@ const TLSelect = ({ header, options, value, onChange }: TLSelectProps) => {
                 onValueChange={(value) => onChange(value)}
             >
                 <Select.Trigger />
-                <Select.Content >
+                <Select.Content>
                     {options.map((option, idx) => (
                         <Select.Item value={option} key={idx}>
                             {option}
@@ -37,17 +44,43 @@ interface TLCheckboxProps {
     setValue: React.Dispatch<React.SetStateAction<{}>>;
 }
 const TLCheckbox = ({ label, value, setValue }: TLCheckboxProps) => {
-    const checkHandler = (checked:boolean) => {
-        const temp:Record<string, boolean> = {...value};
-        temp[label]=checked;
+    const checkHandler = (checked: boolean) => {
+        const temp: Record<string, boolean> = { ...value };
+        temp[label] = checked;
         setValue(temp);
-    }
+    };
     return (
         <Flex direction="row" gap="1" justify="start" align="center">
-            <Checkbox id={label} mr="1" checked={value[label]} onCheckedChange={(checked:boolean)=>checkHandler(checked)}/>
+            <Checkbox
+                id={label}
+                mr="1"
+                checked={value[label]}
+                onCheckedChange={(checked: boolean) => checkHandler(checked)}
+            />
             <Label.Root htmlFor={label}>{label}</Label.Root>
         </Flex>
     );
 };
 
-export { TLSelect,TLCheckbox };
+interface TLRadioGroupItemProps {
+    options: string[];
+    onChange: Function;
+}
+const TLRadioGroupItem = ({ options, onChange }: TLRadioGroupItemProps) => {
+    return (
+        <Flex direction="row" gap="1" justify="start" align="center">
+            <RadioGroup.Root onValueChange={(value: string) => onChange(value)}>
+                {options.map((option, idx) => {
+                    return (
+                        <Flex key={idx}>
+                            <RadioGroup.Item id={option} value={option} />
+                            <Label.Root htmlFor={option}>{option}</Label.Root>
+                        </Flex>
+                    );
+                })}
+            </RadioGroup.Root>
+        </Flex>
+    );
+};
+
+export { TLSelect, TLCheckbox, TLRadioGroupItem };

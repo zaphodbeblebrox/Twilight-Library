@@ -13,22 +13,29 @@ const CampaignCreator = () => {
     const [presetCampaign, setPresetCampaign] = useState(ccData.campaigns[0]);
     const [campaignSettings, setCampaignSettings] = useState({});
 
-    useEffect(() => console.log('checkbox status', campaignSettings), [campaignSettings]);
+    useEffect(
+        () => console.log('checkbox status', campaignSettings),
+        [campaignSettings],
+    );
     useEffect(() => console.log('campaign', presetCampaign), [presetCampaign]);
 
-    const LoadPresetCampaignSelectionHandler = (campaign:string) => {
-        if(ccData.hasOwnProperty(campaign)){
-            const modCampaignSettings:Record<string, boolean> = {...campaignSettings};
-            for(const key in modCampaignSettings){
+    const LoadPresetCampaignSelectionHandler = (campaign: string) => {
+        if (ccData.hasOwnProperty(campaign)) {
+            const modCampaignSettings: Record<string, boolean> = {
+                ...campaignSettings,
+            };
+            for (const key in modCampaignSettings) {
                 modCampaignSettings[key] = false;
             }
             const settings = ccData[campaign as keyof typeof ccData];
-            if(Array.isArray(settings)){
-                settings.map((key:string) => modCampaignSettings[key] = true);
+            if (Array.isArray(settings)) {
+                settings.map(
+                    (key: string) => (modCampaignSettings[key] = true),
+                );
             }
             setCampaignSettings(modCampaignSettings);
         }
-    }
+    };
 
     const CreateTimelineHandler = (e) => {
         e.preventDefault();
@@ -46,16 +53,36 @@ const CampaignCreator = () => {
                 />
             </div>
             <Heading size="5">Campaign Pillars</Heading>
-            <PillarOptions data={campaignSettings} setData={setCampaignSettings}/>
+            <PillarOptions
+                data={campaignSettings}
+                setData={setCampaignSettings}
+            />
             <div>
-            <Heading size="5">Node Quarries</Heading>
+                <Heading size="5">Node Quarries</Heading>
                 <div>
-                    <OptionListCC header="NQ1" options={ccData.node_quarry_1} data={campaignSettings} setData={setCampaignSettings}/>
-                    <OptionListCC header="NQ2" options={ccData.node_quarry_2} data={campaignSettings} setData={setCampaignSettings}/>
-                    <OptionListCC header="NQ3" options={ccData.node_quarry_3} data={campaignSettings} setData={setCampaignSettings}/>
                     <OptionListCC
-                        header={'NQ4'} 
-                        options={ccData.node_quarry_4} data={campaignSettings} setData={setCampaignSettings}
+                        header="NQ1"
+                        options={ccData.node_quarry_1}
+                        data={campaignSettings}
+                        setData={setCampaignSettings}
+                    />
+                    <OptionListCC
+                        header="NQ2"
+                        options={ccData.node_quarry_2}
+                        data={campaignSettings}
+                        setData={setCampaignSettings}
+                    />
+                    <OptionListCC
+                        header="NQ3"
+                        options={ccData.node_quarry_3}
+                        data={campaignSettings}
+                        setData={setCampaignSettings}
+                    />
+                    <OptionListCC
+                        header={'NQ4'}
+                        options={ccData.node_quarry_4}
+                        data={campaignSettings}
+                        setData={setCampaignSettings}
                     />
                 </div>
             </div>
@@ -65,29 +92,43 @@ const CampaignCreator = () => {
                     <OptionListCC
                         header="NN1"
                         options={ccData.node_nemesis_1}
-                        data={campaignSettings} setData={setCampaignSettings}
+                        data={campaignSettings}
+                        setData={setCampaignSettings}
                     />
                     <OptionListCC
                         header="NN2"
                         options={ccData.node_nemesis_2}
-                        data={campaignSettings} setData={setCampaignSettings}
+                        data={campaignSettings}
+                        setData={setCampaignSettings}
                     />
                     <OptionListCC
                         header="NN3"
                         options={ccData.node_nemesis_3}
-                        data={campaignSettings} setData={setCampaignSettings}
+                        data={campaignSettings}
+                        setData={setCampaignSettings}
                     />
                 </div>
             </div>
             <div>
                 <Heading size="5">Node Critical</Heading>
                 <div>
-                    <RbListCC header="Core" options={ccData.node_core} />
-                    <RbListCC header="Finale" options={ccData.node_finale} />
+                    <RbListCC
+                        header="Core"
+                        options={ccData.node_core}
+                        data={campaignSettings}
+                        setData={setCampaignSettings}
+                    />
+                    <RbListCC
+                        header="Finale"
+                        options={ccData.node_finale}
+                        data={campaignSettings}
+                        setData={setCampaignSettings}
+                    />
                     <OptionListCC
                         header="Special"
                         options={ccData.node_special}
-                        data={campaignSettings} setData={setCampaignSettings}
+                        data={campaignSettings}
+                        setData={setCampaignSettings}
                     />
                 </div>
             </div>
