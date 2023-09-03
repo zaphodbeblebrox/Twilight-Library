@@ -149,10 +149,10 @@ const CampaignCreator = () => {
                     />
                 </Flex>
             </Flex>
-            <div>
+            <Flex justify="center" align="center" gap="5">
                 <Button>Cancel</Button>
                 <Button>Timeline</Button>
-            </div>
+            </Flex>
         </form>
     );
 };
