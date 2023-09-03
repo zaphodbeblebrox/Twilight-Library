@@ -1,23 +1,31 @@
 import './App.css';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import {
+    BrowserRouter,
+    Navigate,
+    Route,
+    RouterProvider,
+    Routes,
+    createBrowserRouter,
+} from 'react-router-dom';
 import CampaignCreator from './components/CampaignCreator';
-//import JsonStuff from "./static_data/card_database.json";
 
 function App() {
-    // console.log(
-    //   JSON.stringify(
-    //     Object.fromEntries(Object.entries(JsonStuff.knowledge).sort()),
-    //   ),
-    // );
-
-    const router = createBrowserRouter([
-        {
-            path: '/',
-            element: <CampaignCreator />,
-        },
-    ]);
-
-    return <RouterProvider router={router} />;
+    return (
+        <BrowserRouter>
+            <div className="App">
+                <Routes>
+                    <Route
+                        path="/"
+                        element={<Navigate to="/twilight-library/dashboard" />}
+                    />
+                    <Route
+                        path="/twilight-library/dashboard/*"
+                        element={<CampaignCreator />}
+                    />
+                </Routes>
+            </div>
+        </BrowserRouter>
+    );
 }
 
 export default App;

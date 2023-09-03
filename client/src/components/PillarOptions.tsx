@@ -1,4 +1,4 @@
-import { Checkbox } from '@radix-ui/themes';
+import { Checkbox, Flex, Heading } from '@radix-ui/themes';
 import * as Label from '@radix-ui/react-label';
 import ccData from '../static_data/campaign_creator.json';
 import { TLCheckbox } from './primitive_components/primitives';
@@ -8,33 +8,72 @@ interface PillarOptionsProps {
     setData: React.Dispatch<React.SetStateAction<{}>>;
 }
 
-const PillarOptions = ({data, setData}: PillarOptionsProps) => {
+const PillarOptions = ({ data, setData }: PillarOptionsProps) => {
+    const checkedActionHandler = (label: string, checked: boolean) => {
+        const temp: Record<string, boolean> = { ...data };
+        temp[label] = checked;
+        setData(temp);
+    };
     return (
-        <div>
-            <TLCheckbox label="Arc Survivors" value={data} setValue={setData}/>
-            <TLCheckbox label="Characters" value={data} setValue={setData}/>
+        <Flex
+            direction="row"
+            justify="center"
+            align="start"
+            wrap="wrap"
+            gap="5"
+        >
+            <Flex direction="column" justify="start" align="start">
+                <Heading size="5">Assorted</Heading>
+                <TLCheckbox
+                    label="Arc Survivors"
+                    value={data}
+                    onChange={checkedActionHandler}
+                />
+                <TLCheckbox
+                    label="Characters"
+                    value={data}
+                    onChange={checkedActionHandler}
+                />
+                <TLCheckbox
+                    label="Scouts"
+                    value={data}
+                    onChange={checkedActionHandler}
+                />
+                <TLCheckbox
+                    label="Seed Patterns"
+                    value={data}
+                    onChange={checkedActionHandler}
+                />
+            </Flex>
 
-            <div>
-                <p className="subheader">Encounters</p>
+            <Flex direction="column" justify="start" align="start">
+                <Heading size="5">Encounters</Heading>
                 {ccData.encounters.map((option, idx) => {
                     return (
-                        <TLCheckbox key={idx} label={option} value={data} setValue={setData}/>
+                        <TLCheckbox
+                            key={idx}
+                            label={option}
+                            value={data}
+                            onChange={checkedActionHandler}
+                        />
                     );
                 })}
-            </div>
+            </Flex>
 
-            <TLCheckbox label="Scouts" value={data} setValue={setData}/>
-            <TLCheckbox label="Seed Patterns" value={data} setValue={setData}/>
-
-            <div>
-                <p className="subheader">Wanderers</p>
+            <Flex direction="column" justify="start" align="start">
+                <Heading size="5">Wanderers</Heading>
                 {ccData.wanderers.map((option, idx) => {
                     return (
-                        <TLCheckbox key={idx} label={option} value={data} setValue={setData}/>
+                        <TLCheckbox
+                            key={idx}
+                            label={option}
+                            value={data}
+                            onChange={checkedActionHandler}
+                        />
                     );
                 })}
-            </div>
-        </div>
+            </Flex>
+        </Flex>
     );
 };
 

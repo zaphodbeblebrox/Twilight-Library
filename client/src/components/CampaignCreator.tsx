@@ -2,8 +2,7 @@ import PillarOptions from './PillarOptions';
 import OptionListCC from './OptionListCC';
 import ccData from '../static_data/campaign_creator.json';
 import RbListCC from './RbListCC';
-import { Button, Heading, Select } from '@radix-ui/themes';
-import * as Label from '@radix-ui/react-label';
+import { Button, Heading, Flex } from '@radix-ui/themes';
 import { TLSelect } from './primitive_components/primitives';
 import { useEffect, useState } from 'react';
 
@@ -43,7 +42,7 @@ const CampaignCreator = () => {
     return (
         <form onSubmit={CreateTimelineHandler}>
             <Heading size="7">Campaign Creator</Heading>
-            <div>
+            <Flex justify="center">
                 <TLSelect
                     header={'Preset Campaign'}
                     options={ccData.campaigns}
@@ -51,15 +50,21 @@ const CampaignCreator = () => {
                     value={presetCampaign}
                     // setValue={setPresetCampaign}
                 />
-            </div>
+            </Flex>
             <Heading size="5">Campaign Pillars</Heading>
             <PillarOptions
                 data={campaignSettings}
                 setData={setCampaignSettings}
             />
-            <div>
+            <Flex direction="column" justify="between" align="center" gap="3">
                 <Heading size="5">Node Quarries</Heading>
-                <div>
+                <Flex
+                    direction="row"
+                    justify="start"
+                    align="start"
+                    wrap="wrap"
+                    gap="5"
+                >
                     <OptionListCC
                         header="NQ1"
                         options={ccData.node_quarry_1}
@@ -84,11 +89,17 @@ const CampaignCreator = () => {
                         data={campaignSettings}
                         setData={setCampaignSettings}
                     />
-                </div>
-            </div>
-            <div>
+                </Flex>
+            </Flex>
+            <Flex direction="column" justify="start" align="center" gap="3">
                 <Heading size="5">Node Nemesis</Heading>
-                <div>
+                <Flex
+                    direction="row"
+                    justify="start"
+                    align="start"
+                    wrap="wrap"
+                    gap="5"
+                >
                     <OptionListCC
                         header="NN1"
                         options={ccData.node_nemesis_1}
@@ -107,11 +118,17 @@ const CampaignCreator = () => {
                         data={campaignSettings}
                         setData={setCampaignSettings}
                     />
-                </div>
-            </div>
-            <div>
+                </Flex>
+            </Flex>
+            <Flex direction="column" justify="start" align="center" gap="3">
                 <Heading size="5">Node Critical</Heading>
-                <div>
+                <Flex
+                    direction="row"
+                    justify="start"
+                    align="start"
+                    wrap="wrap"
+                    gap="5"
+                >
                     <RbListCC
                         header="Core"
                         options={ccData.node_core}
@@ -130,8 +147,8 @@ const CampaignCreator = () => {
                         data={campaignSettings}
                         setData={setCampaignSettings}
                     />
-                </div>
-            </div>
+                </Flex>
+            </Flex>
             <div>
                 <Button>Cancel</Button>
                 <Button>Timeline</Button>
