@@ -5,18 +5,17 @@ import RbListCC from './RbListCC';
 import { Button, Heading, Flex, Separator } from '@radix-ui/themes';
 import { TLSelect } from './primitive_components/primitives';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-// import { Label } from '@radix-ui/react-label';
+interface CampaignCreatorProps {
+    campaignSettings: Record<string, boolean>;
+    setCampaignSettings: React.Dispatch<React.SetStateAction<{}>>;
+}
 
-const CampaignCreator = () => {
-    const [presetCampaign, setPresetCampaign] = useState(ccData.campaigns[0]);
-    const [campaignSettings, setCampaignSettings] = useState({});
+const CampaignCreator = ({ campaignSettings, setCampaignSettings }: CampaignCreatorProps) => {
+    const navigate = useNavigate();
 
-    useEffect(
-        () => console.log('checkbox status', campaignSettings),
-        [campaignSettings],
-    );
-    useEffect(() => console.log('campaign', presetCampaign), [presetCampaign]);
+    // useEffect(() => console.log('checkbox status', campaignSettings), [campaignSettings]);
 
     const LoadPresetCampaignSelectionHandler = (campaign: string) => {
         if (ccData.hasOwnProperty(campaign)) {
@@ -28,19 +27,23 @@ const CampaignCreator = () => {
             }
             const settings = ccData[campaign as keyof typeof ccData];
             if (Array.isArray(settings)) {
-                settings.map(
-                    (key: string) => (modCampaignSettings[key] = true),
-                );
+                settings.map((key: string) => (modCampaignSettings[key] = true));
             }
             setCampaignSettings(modCampaignSettings);
         }
     };
 
-    const CreateTimelineHandler = (e) => {
-        e.preventDefault();
+    const CancelHandler = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        event.preventDefault();
+        navigate('/twilight-library/dashboard');
+    };
+
+    const CreateTimelineHandler = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        navigate('/twilight-library/dashboard/create-campaign/timeline');
     };
     return (
-        <form onSubmit={CreateTimelineHandler}>
+        <form onSubmit={(e) => CreateTimelineHandler(e)}>
             <Flex direction="column" justify="start" align="center" gap="3">
                 <Heading size="7">Campaign Creator</Heading>
                 <Flex justify="center">
@@ -48,31 +51,15 @@ const CampaignCreator = () => {
                         header={'Preset Campaign'}
                         options={ccData.campaigns}
                         onChange={LoadPresetCampaignSelectionHandler}
-                        value={presetCampaign}
-                        // setValue={setPresetCampaign}
                     />
                 </Flex>
                 <Separator my="3" size="4" />
                 <Heading size="6">Campaign Pillars</Heading>
-                <PillarOptions
-                    data={campaignSettings}
-                    setData={setCampaignSettings}
-                />
-                <Flex
-                    direction="column"
-                    justify="between"
-                    align="center"
-                    gap="3"
-                >
+                <PillarOptions data={campaignSettings} setData={setCampaignSettings} />
+                <Flex direction="column" justify="between" align="center" gap="3">
                     <Separator my="3" size="4" />
                     <Heading size="6">Node Quarries</Heading>
-                    <Flex
-                        direction="row"
-                        justify="center"
-                        align="start"
-                        wrap="wrap"
-                        gap="5"
-                    >
+                    <Flex direction="row" justify="center" align="start" wrap="wrap" gap="5">
                         <OptionListCC
                             header="NQ1"
                             options={ccData.node_quarry_1}
@@ -102,13 +89,7 @@ const CampaignCreator = () => {
                 <Flex direction="column" justify="start" align="center" gap="3">
                     <Separator my="3" size="4" />
                     <Heading size="6">Node Nemesis</Heading>
-                    <Flex
-                        direction="row"
-                        justify="center"
-                        align="start"
-                        wrap="wrap"
-                        gap="5"
-                    >
+                    <Flex direction="row" justify="center" align="start" wrap="wrap" gap="5">
                         <OptionListCC
                             header="NN1"
                             options={ccData.node_nemesis_1}
@@ -132,13 +113,7 @@ const CampaignCreator = () => {
                 <Flex direction="column" justify="start" align="center" gap="3">
                     <Separator my="3" size="4" />
                     <Heading size="6">Node Critical</Heading>
-                    <Flex
-                        direction="row"
-                        justify="center"
-                        align="start"
-                        wrap="wrap"
-                        gap="5"
-                    >
+                    <Flex direction="row" justify="center" align="start" wrap="wrap" gap="5">
                         <RbListCC
                             header="Core"
                             options={ccData.node_core}
@@ -160,7 +135,13 @@ const CampaignCreator = () => {
                     </Flex>
                 </Flex>
                 <Flex justify="center" align="center" gap="5">
-                    <Button>Cancel</Button>
+                    <Button
+                        onClick={(e) => {
+                            CancelHandler(e);
+                        }}
+                    >
+                        Cancel
+                    </Button>
                     <Button>Timeline</Button>
                 </Flex>
             </Flex>
