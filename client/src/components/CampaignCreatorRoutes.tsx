@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import CampaignCreator from './CampaignCreator';
 import TimelineCreator from './TimelineCreator';
 import { useState } from 'react';
@@ -17,13 +17,18 @@ function CampaignCreatorRoutes() {
                     />
                 }
             />
+
             <Route
                 path="/timeline"
                 element={
-                    <TimelineCreator
-                        campaignSettings={campaignSettings}
-                        setCampaignSettings={setCampaignSettings}
-                    />
+                    Object.entries(campaignSettings).length > 0 ? (
+                        <TimelineCreator
+                            campaignSettings={campaignSettings}
+                            setCampaignSettings={setCampaignSettings}
+                        />
+                    ) : (
+                        <Navigate to="/twilight-library/dashboard/create-campaign" />
+                    )
                 }
             />
         </Routes>

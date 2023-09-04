@@ -13,7 +13,9 @@ interface TimelineCreatorProps {
 }
 
 const TimelineCreator = ({ campaignSettings, setCampaignSettings }: TimelineCreatorProps) => {
+    const maximumYears: number = 40;
     const navigate = useNavigate();
+
     const NaviagationHandler = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         event.preventDefault();
         navigate('/twilight-library/dashboard');
