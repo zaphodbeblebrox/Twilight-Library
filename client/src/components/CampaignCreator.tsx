@@ -27,7 +27,7 @@ const CampaignCreator = ({ campaignSettings, setCampaignSettings }: CampaignCrea
             }
             const settings = ccData[campaign as keyof typeof ccData];
             if (Array.isArray(settings)) {
-                settings.map((key: string) => (modCampaignSettings[key] = true));
+                settings.forEach((key: string) => (modCampaignSettings[key] = true));
             }
             setCampaignSettings(modCampaignSettings);
         }
