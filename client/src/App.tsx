@@ -8,6 +8,7 @@ import {
     createBrowserRouter,
 } from 'react-router-dom';
 import CampaignCreator from './components/CampaignCreator';
+import DashboardRoutes from './components/DashboardRoutes';
 
 function App() {
     return (
@@ -20,7 +21,7 @@ function App() {
                     />
                     <Route
                         path="/twilight-library/dashboard/*"
-                        element={<CampaignCreator />}
+                        element={<DashboardRoutes />}
                     />
                 </Routes>
             </div>
