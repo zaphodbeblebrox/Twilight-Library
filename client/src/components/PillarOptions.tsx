@@ -1,5 +1,4 @@
 import { Checkbox, Flex, Heading } from '@radix-ui/themes';
-import * as Label from '@radix-ui/react-label';
 import ccData from '../static_data/campaign_creator.json';
 import { TLCheckbox } from './primitive_components/primitives';
 
