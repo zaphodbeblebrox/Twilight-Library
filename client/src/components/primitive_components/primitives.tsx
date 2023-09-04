@@ -1,28 +1,21 @@
-import {
-    Button,
-    Select,
-    Flex,
-    Text,
-    Checkbox,
-    RadioGroup,
-} from '@radix-ui/themes';
+import { Button, Select, Flex, Text, Checkbox, RadioGroup } from '@radix-ui/themes';
 
 import * as Label from '@radix-ui/react-label';
 
 interface TLSelectProps {
     header: string;
     options: string[];
-    value: string;
+
     // setValue: React.Dispatch<React.SetStateAction<string>>;
     onChange: Function;
 }
-const TLSelect = ({ header, options, value, onChange }: TLSelectProps) => {
+const TLSelect = ({ header, options, onChange }: TLSelectProps) => {
     return (
         <Flex direction="row" gap="1" justify="start" align="center">
             <Label.Root htmlFor={header}>{header}</Label.Root>
             <Select.Root
                 name={header}
-                defaultValue={value}
+                defaultValue={options[0]}
                 onValueChange={(value) => onChange(value)}
             >
                 <Select.Trigger />
@@ -62,26 +55,13 @@ interface TLRadioGroupItemProps {
     options: string[];
     onChange: Function;
 }
-const TLRadioGroupItem = ({
-    value,
-    options,
-    onChange,
-}: TLRadioGroupItemProps) => {
+const TLRadioGroupItem = ({ value, options, onChange }: TLRadioGroupItemProps) => {
     return (
         <Flex direction="row" gap="1" justify="start" align="center">
-            <RadioGroup.Root
-                value={value}
-                onValueChange={(value: string) => onChange(value)}
-            >
+            <RadioGroup.Root value={value} onValueChange={(value: string) => onChange(value)}>
                 {options.map((option, idx) => {
                     return (
-                        <Flex
-                            key={idx}
-                            direction="row"
-                            gap="1"
-                            justify="start"
-                            align="center"
-                        >
+                        <Flex key={idx} direction="row" gap="1" justify="start" align="center">
                             <RadioGroup.Item id={option} value={option} />
                             <Label.Root htmlFor={option}>{option}</Label.Root>
                         </Flex>
