@@ -1,13 +1,14 @@
 import { Button, Heading, Flex, Separator, Box, Table } from '@radix-ui/themes';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { TLAddTimelineAlert } from './AlertBoxes';
 
 interface TimelineProps {
     timeline: Record<number, string[]>;
-    setTimeline: React.Dispatch<React.SetStateAction<Record<number, string[]>>>;
+    onChange: Function;
 }
 
-const Timeline = ({ timeline, setTimeline }: TimelineProps) => {
+const Timeline = ({ timeline, onChange }: TimelineProps) => {
     return (
         <Table.Root>
             <Table.Header>
@@ -25,16 +26,26 @@ const Timeline = ({ timeline, setTimeline }: TimelineProps) => {
                         <Table.Row key={idx} align="center">
                             <Table.RowHeaderCell justify="center">{year}</Table.RowHeaderCell>
                             <Table.Cell>
-                                {entries.map((entry, idy) => {
-                                    return (
-                                        <Button key={idy} variant="ghost">
-                                            {entry}
-                                        </Button>
-                                    );
-                                })}
+                                <Flex direction="row" align="start" gap="2" wrap="wrap">
+                                    {entries.map((entry, idy) => {
+                                        return (
+                                            <Flex direction="row" align="start" gap="2">
+                                                <Button key={idy} variant="ghost">
+                                                    {entry}
+                                                </Button>
+                                                {idy !== entries.length - 1 && (
+                                                    <Separator
+                                                        orientation="vertical"
+                                                        color="purple"
+                                                    />
+                                                )}
+                                            </Flex>
+                                        );
+                                    })}
+                                </Flex>
                             </Table.Cell>
                             <Table.Cell justify="center">
-                                <Button>+</Button>
+                                <TLAddTimelineAlert />
                             </Table.Cell>
                         </Table.Row>
                     );

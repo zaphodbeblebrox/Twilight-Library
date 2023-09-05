@@ -44,10 +44,15 @@ const TimelineCreator = ({ campaignSettings, setCampaignSettings }: TimelineCrea
         navigate('/twilight-library/dashboard');
     };
     console.log('timeline', campaignSettings);
+
+    const UpdateTimelineHandler = (updatedTimeline: Record<number, string[]>) => {
+        setTimeline(updatedTimeline);
+        // TODO: Save data to database
+    };
     return (
         <Flex direction="column">
             <Button onClick={(e) => NaviagationHandler(e)}>Timeline Page!</Button>
-            <Timeline timeline={timeline} setTimeline={setTimeline} />
+            <Timeline timeline={timeline} onChange={(updatedTimeline) => setTimeline} />
         </Flex>
     );
 };
