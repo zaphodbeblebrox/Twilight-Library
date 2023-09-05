@@ -19,17 +19,23 @@ const Timeline = ({ timeline, setTimeline }: TimelineProps) => {
             </Table.Header>
 
             <Table.Body>
-                {Object.keys(timeline).map((year: number, idx: number) => {
-                    const entries: string[] = timeline[year];
+                {Object.keys(timeline).map((year: string, idx: number) => {
+                    const entries: string[] = timeline[Number(year)];
                     return (
-                        <Table.Row key={idx}>
-                            <Table.RowHeaderCell>{year}</Table.RowHeaderCell>
+                        <Table.Row key={idx} align="center">
+                            <Table.RowHeaderCell justify="center">{year}</Table.RowHeaderCell>
                             <Table.Cell>
                                 {entries.map((entry, idy) => {
-                                    return <Button key={idy}>{entry}</Button>;
+                                    return (
+                                        <Button key={idy} variant="ghost">
+                                            {entry}
+                                        </Button>
+                                    );
                                 })}
                             </Table.Cell>
-                            <Table.Cell>Add</Table.Cell>
+                            <Table.Cell justify="center">
+                                <Button>+</Button>
+                            </Table.Cell>
                         </Table.Row>
                     );
                 })}
