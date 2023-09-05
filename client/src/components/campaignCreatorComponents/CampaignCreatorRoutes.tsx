@@ -11,10 +11,7 @@ function CampaignCreatorRoutes() {
             <Route
                 path="/"
                 element={
-                    <CampaignCreator
-                        campaignSettings={campaignSettings}
-                        setCampaignSettings={setCampaignSettings}
-                    />
+                    <CampaignCreator campaignSettings={campaignSettings} setCampaignSettings={setCampaignSettings} />
                 }
             />
 

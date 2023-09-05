@@ -1,9 +1,9 @@
-import ccData from '../static_data/campaign_creator.json';
+import ccData from '../../static_data/campaign_creator.json';
 
 import { Button, Heading, Flex, Separator } from '@radix-ui/themes';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Timeline from './primitive_components/TimelineRow';
+import Timeline from '../primitiveComponents/TimelineTable';
 
 interface TimelineCreatorProps {
     campaignSettings: Record<string, boolean>;

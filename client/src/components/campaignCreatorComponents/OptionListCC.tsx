@@ -1,5 +1,5 @@
 import { Checkbox, Flex, Heading } from '@radix-ui/themes';
-import { TLCheckbox } from './primitive_components/primitives';
+import { TLCheckbox } from '../primitiveComponents/Primitives';
 
 interface OptionListCCProps {
     header: string;
@@ -27,14 +27,7 @@ function OptionListCC({ header, options, data, setData }: OptionListCCProps) {
                 <Heading size="5">{header}</Heading>
             )}
             {options.map((option, idx) => {
-                return (
-                    <TLCheckbox
-                        key={idx}
-                        label={option}
-                        value={data}
-                        onChange={checkedActionHandler}
-                    />
-                );
+                return <TLCheckbox key={idx} label={option} value={data} onChange={checkedActionHandler} />;
             })}
         </Flex>
     );

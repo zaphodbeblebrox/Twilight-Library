@@ -1,8 +1,5 @@
 import { Checkbox, Flex, Heading } from '@radix-ui/themes';
-import {
-    TLCheckbox,
-    TLRadioGroupItem,
-} from './primitive_components/primitives';
+import { TLCheckbox, TLRadioGroupItem } from '../primitiveComponents/Primitives';
 
 interface OptionListCCProps {
     header: string;
@@ -20,8 +17,7 @@ const RbListCC = ({ header, options, data, setData }: OptionListCCProps) => {
         setData(temp);
     };
 
-    let value: string =
-        options.find((option: string) => data[option]) ?? options[0];
+    let value: string = options.find((option: string) => data[option]) ?? options[0];
 
     return (
         <div>
@@ -35,11 +31,7 @@ const RbListCC = ({ header, options, data, setData }: OptionListCCProps) => {
                 ) : (
                     <Heading size="5">{header}</Heading>
                 )}
-                <TLRadioGroupItem
-                    value={value}
-                    options={options}
-                    onChange={updateDataHandler}
-                />
+                <TLRadioGroupItem value={value} options={options} onChange={updateDataHandler} />
             </Flex>
         </div>
     );

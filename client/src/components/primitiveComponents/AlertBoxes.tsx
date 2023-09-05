@@ -1,8 +1,7 @@
 import * as Label from '@radix-ui/react-label';
-import * as Form from '@radix-ui/react-form';
 import { AlertDialog, Button, Flex, TextField } from '@radix-ui/themes';
-import { useEffect, useState } from 'react';
-import { TLSelect } from './primitives';
+import { useState } from 'react';
+import { TLSelect } from './Primitives';
 
 interface TLAddTimelineAlertProps {
     year: number;

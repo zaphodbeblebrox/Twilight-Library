@@ -1,9 +1,9 @@
 import PillarOptions from './PillarOptions';
 import OptionListCC from './OptionListCC';
-import ccData from '../static_data/campaign_creator.json';
+import ccData from '../../static_data/campaign_creator.json';
 import RbListCC from './RbListCC';
 import { Button, Heading, Flex, Separator } from '@radix-ui/themes';
-import { TLSelect } from './primitive_components/primitives';
+import { TLSelect } from '../primitiveComponents/Primitives';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -15,7 +15,7 @@ interface CampaignCreatorProps {
 const CampaignCreator = ({ campaignSettings, setCampaignSettings }: CampaignCreatorProps) => {
     const navigate = useNavigate();
 
-    // useEffect(() => console.log('checkbox status', campaignSettings), [campaignSettings]);
+    useEffect(() => console.log('checkbox status', campaignSettings), [campaignSettings]);
 
     const LoadPresetCampaignSelectionHandler = (campaign: string) => {
         if (ccData.hasOwnProperty(campaign)) {
