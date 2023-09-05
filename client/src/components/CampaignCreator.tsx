@@ -49,6 +49,7 @@ const CampaignCreator = ({ campaignSettings, setCampaignSettings }: CampaignCrea
                 <Flex justify="center">
                     <TLSelect
                         header={'Preset Campaign'}
+                        defaultOption={ccData.campaigns[0]}
                         options={ccData.campaigns}
                         onChange={LoadPresetCampaignSelectionHandler}
                     />

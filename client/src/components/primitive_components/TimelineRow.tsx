@@ -1,7 +1,7 @@
 import { Button, Heading, Flex, Separator, Box, Table } from '@radix-ui/themes';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { TLAddTimelineAlert } from './AlertBoxes';
+import { TLAddTimelineAlert, TLEditTimelineAlert } from './AlertBoxes';
 
 interface TimelineProps {
     timeline: Record<number, string[]>;
@@ -9,6 +9,26 @@ interface TimelineProps {
 }
 
 const Timeline = ({ timeline, onChange }: TimelineProps) => {
+    const addTimelineEvent = (year: number, newTimelineEvent: string) => {
+        const updatedTimeline = { ...timeline };
+        updatedTimeline[year] = [...updatedTimeline[year], newTimelineEvent];
+        onChange(updatedTimeline);
+    };
+
+    const moveTimelineEvent = (year: number, newYear: number, timelineEvent: string) => {
+        if (year === newYear) {
+            return;
+        }
+        const updatedTimeline = { ...timeline };
+        updatedTimeline[year] = updatedTimeline[year].filter((event) => event !== timelineEvent);
+        updatedTimeline[newYear] = [...updatedTimeline[newYear], timelineEvent];
+        onChange(updatedTimeline);
+    };
+    const deleteTimelineEvent = (year: number, timelineEvent: string) => {
+        const updatedTimeline = { ...timeline };
+        updatedTimeline[year] = updatedTimeline[year].filter((event) => event !== timelineEvent);
+        onChange(updatedTimeline);
+    };
     return (
         <Table.Root>
             <Table.Header>
@@ -29,15 +49,16 @@ const Timeline = ({ timeline, onChange }: TimelineProps) => {
                                 <Flex direction="row" align="start" gap="2" wrap="wrap">
                                     {entries.map((entry, idy) => {
                                         return (
-                                            <Flex direction="row" align="start" gap="2">
-                                                <Button key={idy} variant="ghost">
-                                                    {entry}
-                                                </Button>
+                                            <Flex key={idy} direction="row" align="start" gap="2">
+                                                <TLEditTimelineAlert
+                                                    year={Number(year)}
+                                                    maxYears={Object.keys(timeline).length}
+                                                    entry={entry}
+                                                    moveEvent={moveTimelineEvent}
+                                                    deleteEvent={deleteTimelineEvent}
+                                                />
                                                 {idy !== entries.length - 1 && (
-                                                    <Separator
-                                                        orientation="vertical"
-                                                        color="purple"
-                                                    />
+                                                    <Separator orientation="vertical" color="purple" />
                                                 )}
                                             </Flex>
                                         );
@@ -45,7 +66,7 @@ const Timeline = ({ timeline, onChange }: TimelineProps) => {
                                 </Flex>
                             </Table.Cell>
                             <Table.Cell justify="center">
-                                <TLAddTimelineAlert />
+                                <TLAddTimelineAlert year={Number(year)} onSubmit={addTimelineEvent} />
                             </Table.Cell>
                         </Table.Row>
                     );

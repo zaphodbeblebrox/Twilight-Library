@@ -4,20 +4,15 @@ import * as Label from '@radix-ui/react-label';
 
 interface TLSelectProps {
     header: string;
+    defaultOption: string;
     options: string[];
-
-    // setValue: React.Dispatch<React.SetStateAction<string>>;
     onChange: Function;
 }
-const TLSelect = ({ header, options, onChange }: TLSelectProps) => {
+const TLSelect = ({ header, defaultOption, options, onChange }: TLSelectProps) => {
     return (
         <Flex direction="row" gap="1" justify="start" align="center">
             <Label.Root htmlFor={header}>{header}</Label.Root>
-            <Select.Root
-                name={header}
-                defaultValue={options[0]}
-                onValueChange={(value) => onChange(value)}
-            >
+            <Select.Root name={header} defaultValue={defaultOption} onValueChange={(value) => onChange(value)}>
                 <Select.Trigger />
                 <Select.Content>
                     {options.map((option, idx) => (

@@ -17,9 +17,7 @@ const TimelineCreator = ({ campaignSettings, setCampaignSettings }: TimelineCrea
         for (let i: number = 1; i <= maximumYears; i++) {
             newTimeline[i] = [];
         }
-        const trueKeys = Object.keys(campaignSettings).filter(
-            (key) => campaignSettings[key] === true,
-        );
+        const trueKeys = Object.keys(campaignSettings).filter((key) => campaignSettings[key] === true);
         console.log(trueKeys);
         const jsonData: Record<string, Record<string, string[]>> = ccData['timeline'];
         trueKeys.forEach((key: string) => {
@@ -38,6 +36,10 @@ const TimelineCreator = ({ campaignSettings, setCampaignSettings }: TimelineCrea
     const [timeline, setTimeline] = useState(SetDefaultTimeline);
 
     const navigate = useNavigate();
+    const CancelHandler = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        event.preventDefault();
+        navigate('/twilight-library/dashboard');
+    };
 
     const NaviagationHandler = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         event.preventDefault();
@@ -50,9 +52,21 @@ const TimelineCreator = ({ campaignSettings, setCampaignSettings }: TimelineCrea
         // TODO: Save data to database
     };
     return (
-        <Flex direction="column">
-            <Button onClick={(e) => NaviagationHandler(e)}>Timeline Page!</Button>
-            <Timeline timeline={timeline} onChange={(updatedTimeline) => setTimeline} />
+        <Flex direction="column" gap="3">
+            <Timeline
+                timeline={timeline}
+                onChange={(updatedTimeline: Record<number, string[]>) => UpdateTimelineHandler(updatedTimeline)}
+            />
+            <Flex justify="center" align="center" gap="5">
+                <Button
+                    onClick={(e) => {
+                        CancelHandler(e);
+                    }}
+                >
+                    Cancel
+                </Button>
+                <Button onClick={(e) => NaviagationHandler(e)}>Dashboard</Button>
+            </Flex>
         </Flex>
     );
 };
