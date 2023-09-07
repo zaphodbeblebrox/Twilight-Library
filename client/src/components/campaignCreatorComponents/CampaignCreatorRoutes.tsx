@@ -1,12 +1,22 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import CampaignCreator from './CampaignCreator';
 import TimelineCreator from './TimelineCreator';
+import ccData from '../../static_data/campaign_creator.json';
 import { useState } from 'react';
 
 function CampaignCreatorRoutes() {
-    const [campaignSettings, setCampaignSettings] = useState({});
-
-    const InitializeSettings = () => {};
+    const InitializeSettings = () => {
+        const dataHolder: Record<string, boolean> = {};
+        ccData.node_nemesis_1.forEach((key: string) => (dataHolder[key] = false));
+        ccData.node_nemesis_2.forEach((key: string) => (dataHolder[key] = false));
+        ccData.node_nemesis_3.forEach((key: string) => (dataHolder[key] = false));
+        ccData.node_core.forEach((key: string) => (dataHolder[key] = false));
+        dataHolder[ccData.node_core[0]] = true;
+        ccData.node_finale.forEach((key: string) => (dataHolder[key] = false));
+        dataHolder[ccData.node_finale[0]] = true;
+        return dataHolder;
+    };
+    const [campaignSettings, setCampaignSettings] = useState(InitializeSettings);
 
     return (
         <Routes>
