@@ -1,7 +1,7 @@
 import PillarOptions from './campaignCreatorComponents/PillarOptions';
 import OptionListCC from './campaignCreatorComponents/OptionListCC';
 import ccData from '../static_data/campaign_creator.json';
-import RbListCC from './campaignCreatorComponents/RbListCC';
+import RadioButtonListCC from './campaignCreatorComponents/RadioButtonListCC';
 import { Button, Heading, Flex, Separator } from '@radix-ui/themes';
 import { TLSelect } from './primitiveComponents/Primitives';
 import { useEffect, useState } from 'react';

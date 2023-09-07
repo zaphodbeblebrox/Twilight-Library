@@ -1,7 +1,7 @@
 import PillarOptions from './PillarOptions';
 import OptionListCC from './OptionListCC';
 import ccData from '../../static_data/campaign_creator.json';
-import RbListCC from './RbListCC';
+import RadioButtonListCC from './RadioButtonListCC';
 import { Button, Heading, Flex, Separator } from '@radix-ui/themes';
 import { TLSelect } from '../primitiveComponents/Primitives';
 import { useEffect, useState } from 'react';
@@ -115,13 +115,13 @@ const CampaignCreator = ({ campaignSettings, setCampaignSettings }: CampaignCrea
                     <Separator my="3" size="4" />
                     <Heading size="6">Node Critical</Heading>
                     <Flex direction="row" justify="center" align="start" wrap="wrap" gap="5">
-                        <RbListCC
+                        <RadioButtonListCC
                             header="Core"
                             options={ccData.node_core}
                             data={campaignSettings}
                             setData={setCampaignSettings}
                         />
-                        <RbListCC
+                        <RadioButtonListCC
                             header="Finale"
                             options={ccData.node_finale}
                             data={campaignSettings}

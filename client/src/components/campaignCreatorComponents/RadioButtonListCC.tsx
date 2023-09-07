@@ -8,7 +8,7 @@ interface OptionListCCProps {
     setData: React.Dispatch<React.SetStateAction<{}>>;
 }
 
-const RbListCC = ({ header, options, data, setData }: OptionListCCProps) => {
+const RadioButtonListCC = ({ header, options, data, setData }: OptionListCCProps) => {
     const updateDataHandler = (value: string) => {
         console.log(value);
         const temp: Record<string, boolean> = { ...data };
@@ -36,4 +36,4 @@ const RbListCC = ({ header, options, data, setData }: OptionListCCProps) => {
         </div>
     );
 };
-export default RbListCC;
+export default RadioButtonListCC;

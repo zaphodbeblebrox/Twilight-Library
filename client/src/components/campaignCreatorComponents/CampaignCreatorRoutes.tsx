@@ -6,6 +6,8 @@ import { useState } from 'react';
 function CampaignCreatorRoutes() {
     const [campaignSettings, setCampaignSettings] = useState({});
 
+    const InitializeSettings = () => {};
+
     return (
         <Routes>
             <Route
