@@ -5,7 +5,7 @@ import { TwilightSelect } from './Primitives';
 
 interface TLAddTimelineAlertProps {
     year: number;
-    onSubmit: Function;
+    onSubmit: (year: number, timelineEvent: string) => void;
 }
 
 const TLAddTimelineAlert = ({ year, onSubmit }: TLAddTimelineAlertProps) => {
@@ -51,8 +51,8 @@ interface TLEditTimelineAlertProps {
     year: number;
     maxYears: number;
     entry: string;
-    moveEvent: Function;
-    deleteEvent: Function;
+    moveEvent: (year: number, newYear: number, entry: string) => void;
+    deleteEvent: (year: number, entry: string) => void;
 }
 
 const TLEditTimelineAlert = ({ year, maxYears, entry, moveEvent, deleteEvent }: TLEditTimelineAlertProps) => {

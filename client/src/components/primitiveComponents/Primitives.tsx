@@ -6,7 +6,7 @@ interface TwilightSelectProps {
     header: string;
     defaultOption: string;
     options: string[];
-    onChange: Function;
+    onChange: (value: string) => void;
 }
 const TwilightSelect = ({ header, defaultOption, options, onChange }: TwilightSelectProps) => {
     return (
@@ -29,7 +29,7 @@ const TwilightSelect = ({ header, defaultOption, options, onChange }: TwilightSe
 interface TwilightCheckboxProps {
     label: string;
     value: Record<string, boolean>;
-    onChange: Function;
+    onChange: (value: string, checked: boolean) => void;
 }
 const TwilightCheckbox = ({ label, value, onChange }: TwilightCheckboxProps) => {
     return (
@@ -48,7 +48,7 @@ const TwilightCheckbox = ({ label, value, onChange }: TwilightCheckboxProps) => 
 interface TwilightRadioGroupItemProps {
     value: string;
     options: string[];
-    onChange: Function;
+    onChange: (value: string) => void;
 }
 const TwilightRadioGroupItem = ({ value, options, onChange }: TwilightRadioGroupItemProps) => {
     return (
