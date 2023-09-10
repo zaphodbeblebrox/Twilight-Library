@@ -1,14 +1,14 @@
 import { Flex, Heading } from '@radix-ui/themes';
-import { TwilightRadioGroupItem } from '../primitiveComponents/Primitives';
+import { TwilightNodeHeader, TwilightRadioGroupItem } from '../primitiveComponents/Primitives';
 
-interface OptionListCCProps {
+interface RadioButtonListCampaignCreatorProps {
     header: string;
     options: string[];
     data: Record<string, boolean>;
     setData: React.Dispatch<React.SetStateAction<{}>>;
 }
 
-const RadioButtonListCampaignCreator = ({ header, options, data, setData }: OptionListCCProps) => {
+const RadioButtonListCampaignCreator = ({ header, options, data, setData }: RadioButtonListCampaignCreatorProps) => {
     const handleUpdateData = (value: string) => {
         console.log(value);
         const temp: Record<string, boolean> = { ...data };
@@ -22,15 +22,7 @@ const RadioButtonListCampaignCreator = ({ header, options, data, setData }: Opti
     return (
         <div>
             <Flex direction="column" gap="1">
-                {header.length === 3 ? (
-                    <Flex direction="row" align="end" justify="center">
-                        <Heading size="5">{header[0]}</Heading>
-                        <Heading size="3">{header[1]}</Heading>
-                        <Heading size="2">{header[2]}</Heading>
-                    </Flex>
-                ) : (
-                    <Heading size="5">{header}</Heading>
-                )}
+                <TwilightNodeHeader headerText={header} />
                 <TwilightRadioGroupItem value={value} options={options} onChange={handleUpdateData} />
             </Flex>
         </div>

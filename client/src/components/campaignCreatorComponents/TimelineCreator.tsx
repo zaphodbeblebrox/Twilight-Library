@@ -18,7 +18,6 @@ const TimelineCreator = ({ campaignSettings, setCampaignSettings }: TimelineCrea
             newTimeline[i] = [];
         }
         const trueKeys = Object.keys(campaignSettings).filter((key) => campaignSettings[key] === true);
-        console.log(trueKeys);
         const jsonData: Record<string, Record<string, string[]>> = ccData['timeline'];
         trueKeys.forEach((key: string) => {
             if (jsonData.hasOwnProperty(key)) {

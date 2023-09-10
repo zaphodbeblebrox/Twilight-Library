@@ -1,5 +1,5 @@
 import { Checkbox, Flex, Heading } from '@radix-ui/themes';
-import { TwilightCheckbox } from '../primitiveComponents/Primitives';
+import { TwilightCheckbox, TwilightNodeHeader } from '../primitiveComponents/Primitives';
 
 interface OptionListCampaignCreatorProps {
     header: string;
@@ -17,15 +17,7 @@ function OptionListCampaignCreator({ header, options, data, setData }: OptionLis
 
     return (
         <Flex direction="column" gap="1">
-            {header.length === 3 ? (
-                <Flex direction="row" align="end" justify="center">
-                    <Heading size="5">{header[0]}</Heading>
-                    <Heading size="3">{header[1]}</Heading>
-                    <Heading size="2">{header[2]}</Heading>
-                </Flex>
-            ) : (
-                <Heading size="5">{header}</Heading>
-            )}
+            <TwilightNodeHeader headerText={header} />
             {options.map((option, idx) => {
                 return <TwilightCheckbox key={idx} label={option} value={data} onChange={handlCheckedAction} />;
             })}

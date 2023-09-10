@@ -1,4 +1,4 @@
-import { Button, Select, Flex, Text, Checkbox, RadioGroup } from '@radix-ui/themes';
+import { Button, Select, Flex, Text, Checkbox, RadioGroup, Heading } from '@radix-ui/themes';
 
 import * as Label from '@radix-ui/react-label';
 
@@ -67,4 +67,24 @@ const TwilightRadioGroupItem = ({ value, options, onChange }: TwilightRadioGroup
     );
 };
 
-export { TwilightSelect, TwilightCheckbox, TwilightRadioGroupItem };
+interface TwilightNodeHeaderProps {
+    headerText: string;
+}
+
+const TwilightNodeHeader = ({ headerText }: TwilightNodeHeaderProps) => {
+    return (
+        <>
+            {headerText.length === 3 ? (
+                <Flex direction="row" align="end" justify="center">
+                    <Heading size="5">{headerText[0]}</Heading>
+                    <Heading size="3">{headerText[1]}</Heading>
+                    <Heading size="2">{headerText[2]}</Heading>
+                </Flex>
+            ) : (
+                <Heading size="5">{headerText}</Heading>
+            )}
+        </>
+    );
+};
+
+export { TwilightSelect, TwilightCheckbox, TwilightRadioGroupItem, TwilightNodeHeader };

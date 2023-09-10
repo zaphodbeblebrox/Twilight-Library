@@ -15,8 +15,6 @@ interface CampaignCreatorProps {
 const CampaignCreator = ({ campaignSettings, setCampaignSettings }: CampaignCreatorProps) => {
     const navigate = useNavigate();
 
-    useEffect(() => console.log('checkbox status', campaignSettings), [campaignSettings]);
-
     const handleLoadPresetCampaignSelection = (campaign: string) => {
         if (ccData.hasOwnProperty(campaign)) {
             const modCampaignSettings: Record<string, boolean> = {
