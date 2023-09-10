@@ -3,7 +3,7 @@ import { TLAddTimelineAlert, TLEditTimelineAlert } from './AlertBoxes';
 
 interface TimelineTableProps {
     timeline: Record<number, string[]>;
-    onChange: Function;
+    onChange: (updatedTimeline: Record<number, string[]>) => void;
 }
 
 const TimelineTable = ({ timeline, onChange }: TimelineTableProps) => {
