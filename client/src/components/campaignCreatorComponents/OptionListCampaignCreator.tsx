@@ -1,15 +1,15 @@
 import { Checkbox, Flex, Heading } from '@radix-ui/themes';
-import { TLCheckbox } from '../primitiveComponents/Primitives';
+import { TwilightCheckbox } from '../primitiveComponents/Primitives';
 
-interface OptionListCCProps {
+interface OptionListCampaignCreatorProps {
     header: string;
     options: string[];
     data: Record<string, boolean>;
     setData: React.Dispatch<React.SetStateAction<{}>>;
 }
 
-function OptionListCC({ header, options, data, setData }: OptionListCCProps) {
-    const checkedActionHandler = (label: string, checked: boolean) => {
+function OptionListCampaignCreator({ header, options, data, setData }: OptionListCampaignCreatorProps) {
+    const handlCheckedAction = (label: string, checked: boolean) => {
         const temp: Record<string, boolean> = { ...data };
         temp[label] = checked;
         setData(temp);
@@ -27,10 +27,10 @@ function OptionListCC({ header, options, data, setData }: OptionListCCProps) {
                 <Heading size="5">{header}</Heading>
             )}
             {options.map((option, idx) => {
-                return <TLCheckbox key={idx} label={option} value={data} onChange={checkedActionHandler} />;
+                return <TwilightCheckbox key={idx} label={option} value={data} onChange={handlCheckedAction} />;
             })}
         </Flex>
     );
 }
 
-export default OptionListCC;
+export default OptionListCampaignCreator;

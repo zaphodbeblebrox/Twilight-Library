@@ -1,6 +1,6 @@
-import { Checkbox, Flex, Heading } from '@radix-ui/themes';
+import { Flex, Heading } from '@radix-ui/themes';
 import ccData from '../../static_data/campaign_creator.json';
-import { TLCheckbox } from '../primitiveComponents/Primitives';
+import { TwilightCheckbox } from '../primitiveComponents/Primitives';
 
 interface PillarOptionsProps {
     data: {};
@@ -8,7 +8,7 @@ interface PillarOptionsProps {
 }
 
 const PillarOptions = ({ data, setData }: PillarOptionsProps) => {
-    const checkedActionHandler = (label: string, checked: boolean) => {
+    const handleCheckedAction = (label: string, checked: boolean) => {
         const temp: Record<string, boolean> = { ...data };
         temp[label] = checked;
         setData(temp);
@@ -17,23 +17,23 @@ const PillarOptions = ({ data, setData }: PillarOptionsProps) => {
         <Flex direction="row" justify="center" align="start" wrap="wrap" gap="5">
             <Flex direction="column" justify="start" align="start">
                 <Heading size="5">Assorted</Heading>
-                <TLCheckbox label="Arc Survivors" value={data} onChange={checkedActionHandler} />
-                <TLCheckbox label="Characters" value={data} onChange={checkedActionHandler} />
-                <TLCheckbox label="Scouts" value={data} onChange={checkedActionHandler} />
-                <TLCheckbox label="Seed Patterns" value={data} onChange={checkedActionHandler} />
+                <TwilightCheckbox label="Arc Survivors" value={data} onChange={handleCheckedAction} />
+                <TwilightCheckbox label="Characters" value={data} onChange={handleCheckedAction} />
+                <TwilightCheckbox label="Scouts" value={data} onChange={handleCheckedAction} />
+                <TwilightCheckbox label="Seed Patterns" value={data} onChange={handleCheckedAction} />
             </Flex>
 
             <Flex direction="column" justify="start" align="start">
                 <Heading size="5">Encounters</Heading>
                 {ccData.encounters.map((option, idx) => {
-                    return <TLCheckbox key={idx} label={option} value={data} onChange={checkedActionHandler} />;
+                    return <TwilightCheckbox key={idx} label={option} value={data} onChange={handleCheckedAction} />;
                 })}
             </Flex>
 
             <Flex direction="column" justify="start" align="start">
                 <Heading size="5">Wanderers</Heading>
                 {ccData.wanderers.map((option, idx) => {
-                    return <TLCheckbox key={idx} label={option} value={data} onChange={checkedActionHandler} />;
+                    return <TwilightCheckbox key={idx} label={option} value={data} onChange={handleCheckedAction} />;
                 })}
             </Flex>
         </Flex>

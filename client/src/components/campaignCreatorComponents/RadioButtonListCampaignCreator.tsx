@@ -1,5 +1,5 @@
-import { Checkbox, Flex, Heading } from '@radix-ui/themes';
-import { TLCheckbox, TLRadioGroupItem } from '../primitiveComponents/Primitives';
+import { Flex, Heading } from '@radix-ui/themes';
+import { TwilightRadioGroupItem } from '../primitiveComponents/Primitives';
 
 interface OptionListCCProps {
     header: string;
@@ -8,8 +8,8 @@ interface OptionListCCProps {
     setData: React.Dispatch<React.SetStateAction<{}>>;
 }
 
-const RadioButtonListCC = ({ header, options, data, setData }: OptionListCCProps) => {
-    const updateDataHandler = (value: string) => {
+const RadioButtonListCampaignCreator = ({ header, options, data, setData }: OptionListCCProps) => {
+    const handleUpdateData = (value: string) => {
         console.log(value);
         const temp: Record<string, boolean> = { ...data };
         options.forEach((key) => (temp[key] = false));
@@ -31,9 +31,9 @@ const RadioButtonListCC = ({ header, options, data, setData }: OptionListCCProps
                 ) : (
                     <Heading size="5">{header}</Heading>
                 )}
-                <TLRadioGroupItem value={value} options={options} onChange={updateDataHandler} />
+                <TwilightRadioGroupItem value={value} options={options} onChange={handleUpdateData} />
             </Flex>
         </div>
     );
 };
-export default RadioButtonListCC;
+export default RadioButtonListCampaignCreator;

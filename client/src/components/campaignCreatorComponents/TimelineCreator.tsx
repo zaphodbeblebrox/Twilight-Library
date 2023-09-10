@@ -1,9 +1,9 @@
 import ccData from '../../static_data/campaign_creator.json';
 
-import { Button, Heading, Flex, Separator } from '@radix-ui/themes';
-import { useEffect, useState } from 'react';
+import { Button, Flex } from '@radix-ui/themes';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Timeline from '../primitiveComponents/TimelineTable';
+import TimelineTable from '../primitiveComponents/TimelineTable';
 
 interface TimelineCreatorProps {
     campaignSettings: Record<string, boolean>;
@@ -12,7 +12,7 @@ interface TimelineCreatorProps {
 
 const TimelineCreator = ({ campaignSettings, setCampaignSettings }: TimelineCreatorProps) => {
     const maximumYears: number = 40;
-    const SetDefaultTimeline = () => {
+    const setDefaultTimeline = () => {
         const newTimeline: Record<number, string[]> = {};
         for (let i: number = 1; i <= maximumYears; i++) {
             newTimeline[i] = [];
@@ -33,39 +33,39 @@ const TimelineCreator = ({ campaignSettings, setCampaignSettings }: TimelineCrea
         console.log('timeline', newTimeline);
         return newTimeline;
     };
-    const [timeline, setTimeline] = useState(SetDefaultTimeline);
+    const [timeline, setTimeline] = useState(setDefaultTimeline);
 
     const navigate = useNavigate();
-    const CancelHandler = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    const handleCancel = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         event.preventDefault();
         navigate('/twilight-library/dashboard');
     };
 
-    const NaviagationHandler = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    const handleNavigation = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         event.preventDefault();
         navigate('/twilight-library/dashboard');
     };
     console.log('timeline', campaignSettings);
 
-    const UpdateTimelineHandler = (updatedTimeline: Record<number, string[]>) => {
+    const handleUpdateTimeline = (updatedTimeline: Record<number, string[]>) => {
         setTimeline(updatedTimeline);
         // TODO: Save data to database
     };
     return (
         <Flex direction="column" gap="3">
-            <Timeline
+            <TimelineTable
                 timeline={timeline}
-                onChange={(updatedTimeline: Record<number, string[]>) => UpdateTimelineHandler(updatedTimeline)}
+                onChange={(updatedTimeline: Record<number, string[]>) => handleUpdateTimeline(updatedTimeline)}
             />
             <Flex justify="center" align="center" gap="5">
                 <Button
                     onClick={(e) => {
-                        CancelHandler(e);
+                        handleCancel(e);
                     }}
                 >
                     Cancel
                 </Button>
-                <Button onClick={(e) => NaviagationHandler(e)}>Dashboard</Button>
+                <Button onClick={(e) => handleNavigation(e)}>Dashboard</Button>
             </Flex>
         </Flex>
     );

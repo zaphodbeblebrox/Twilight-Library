@@ -2,13 +2,13 @@ import { Button, Select, Flex, Text, Checkbox, RadioGroup } from '@radix-ui/them
 
 import * as Label from '@radix-ui/react-label';
 
-interface TLSelectProps {
+interface TwilightSelectProps {
     header: string;
     defaultOption: string;
     options: string[];
     onChange: Function;
 }
-const TLSelect = ({ header, defaultOption, options, onChange }: TLSelectProps) => {
+const TwilightSelect = ({ header, defaultOption, options, onChange }: TwilightSelectProps) => {
     return (
         <Flex direction="row" gap="1" justify="start" align="center">
             <Label.Root htmlFor={header}>{header}</Label.Root>
@@ -26,12 +26,12 @@ const TLSelect = ({ header, defaultOption, options, onChange }: TLSelectProps) =
     );
 };
 
-interface TLCheckboxProps {
+interface TwilightCheckboxProps {
     label: string;
     value: Record<string, boolean>;
     onChange: Function;
 }
-const TLCheckbox = ({ label, value, onChange }: TLCheckboxProps) => {
+const TwilightCheckbox = ({ label, value, onChange }: TwilightCheckboxProps) => {
     return (
         <Flex direction="row" gap="1" justify="start" align="center">
             <Checkbox
@@ -45,12 +45,12 @@ const TLCheckbox = ({ label, value, onChange }: TLCheckboxProps) => {
     );
 };
 
-interface TLRadioGroupItemProps {
+interface TwilightRadioGroupItemProps {
     value: string;
     options: string[];
     onChange: Function;
 }
-const TLRadioGroupItem = ({ value, options, onChange }: TLRadioGroupItemProps) => {
+const TwilightRadioGroupItem = ({ value, options, onChange }: TwilightRadioGroupItemProps) => {
     return (
         <Flex direction="row" gap="1" justify="start" align="center">
             <RadioGroup.Root value={value} onValueChange={(value: string) => onChange(value)}>
@@ -67,4 +67,4 @@ const TLRadioGroupItem = ({ value, options, onChange }: TLRadioGroupItemProps) =
     );
 };
 
-export { TLSelect, TLCheckbox, TLRadioGroupItem };
+export { TwilightSelect, TwilightCheckbox, TwilightRadioGroupItem };

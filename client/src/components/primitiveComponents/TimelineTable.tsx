@@ -1,14 +1,12 @@
-import { Button, Heading, Flex, Separator, Box, Table } from '@radix-ui/themes';
-import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Flex, Separator, Table } from '@radix-ui/themes';
 import { TLAddTimelineAlert, TLEditTimelineAlert } from './AlertBoxes';
 
-interface TimelineProps {
+interface TimelineTableProps {
     timeline: Record<number, string[]>;
     onChange: Function;
 }
 
-const Timeline = ({ timeline, onChange }: TimelineProps) => {
+const TimelineTable = ({ timeline, onChange }: TimelineTableProps) => {
     const addTimelineEvent = (year: number, newTimelineEvent: string) => {
         const updatedTimeline = { ...timeline };
         updatedTimeline[year] = [...updatedTimeline[year], newTimelineEvent];
@@ -76,4 +74,4 @@ const Timeline = ({ timeline, onChange }: TimelineProps) => {
     );
 };
 
-export default Timeline;
+export default TimelineTable;

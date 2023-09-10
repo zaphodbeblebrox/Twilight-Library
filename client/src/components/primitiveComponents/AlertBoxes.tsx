@@ -1,7 +1,7 @@
 import * as Label from '@radix-ui/react-label';
 import { AlertDialog, Button, Flex, TextField } from '@radix-ui/themes';
 import { useState } from 'react';
-import { TLSelect } from './Primitives';
+import { TwilightSelect } from './Primitives';
 
 interface TLAddTimelineAlertProps {
     year: number;
@@ -11,7 +11,7 @@ interface TLAddTimelineAlertProps {
 const TLAddTimelineAlert = ({ year, onSubmit }: TLAddTimelineAlertProps) => {
     const [timelineEvent, setTimelineEvent] = useState('');
 
-    const submitEntryHandler = () => {
+    const handleSubmitEntry = () => {
         onSubmit(year, timelineEvent);
         setTimelineEvent('');
     };
@@ -37,7 +37,7 @@ const TLAddTimelineAlert = ({ year, onSubmit }: TLAddTimelineAlertProps) => {
                         </Button>
                     </AlertDialog.Cancel>
                     <AlertDialog.Action>
-                        <Button onClick={submitEntryHandler} variant="solid" color="green">
+                        <Button onClick={handleSubmitEntry} variant="solid" color="green">
                             Add
                         </Button>
                     </AlertDialog.Action>
@@ -58,12 +58,12 @@ interface TLEditTimelineAlertProps {
 const TLEditTimelineAlert = ({ year, maxYears, entry, moveEvent, deleteEvent }: TLEditTimelineAlertProps) => {
     const [newYear, setNewYear] = useState(year);
 
-    const moveHandler = () => {
+    const handleMove = () => {
         moveEvent(year, newYear, entry);
         setNewYear(year);
     };
 
-    const deleteHandler = () => {
+    const handleDelete = () => {
         deleteEvent(year, entry);
     };
 
@@ -75,14 +75,14 @@ const TLEditTimelineAlert = ({ year, maxYears, entry, moveEvent, deleteEvent }: 
             <AlertDialog.Content style={{ maxWidth: 450 }}>
                 <AlertDialog.Title>Edit Story Event</AlertDialog.Title>
                 <Flex direction="row" justify="center" align="center" gap="3">
-                    <TLSelect
+                    <TwilightSelect
                         header="Change Year:"
                         defaultOption={String(year)}
                         options={Array.from({ length: maxYears }, (_, index) => String(index + 1))}
                         onChange={(value: string) => setNewYear(Number(value))}
                     />
                     <AlertDialog.Action>
-                        <Button onClick={moveHandler}>&gt;</Button>
+                        <Button onClick={handleMove}>&gt;</Button>
                     </AlertDialog.Action>
                 </Flex>
 
@@ -93,7 +93,7 @@ const TLEditTimelineAlert = ({ year, maxYears, entry, moveEvent, deleteEvent }: 
                         </Button>
                     </AlertDialog.Cancel>
                     <AlertDialog.Action>
-                        <Button onClick={deleteHandler} variant="solid" color="green">
+                        <Button onClick={handleDelete} variant="solid" color="green">
                             Delete
                         </Button>
                     </AlertDialog.Action>

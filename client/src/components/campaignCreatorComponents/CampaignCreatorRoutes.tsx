@@ -5,7 +5,7 @@ import ccData from '../../static_data/campaign_creator.json';
 import { useState } from 'react';
 
 function CampaignCreatorRoutes() {
-    const InitializeSettings = () => {
+    const initializeSettings = () => {
         const dataHolder: Record<string, boolean> = {};
         ccData.node_nemesis_1.forEach((key: string) => (dataHolder[key] = false));
         ccData.node_nemesis_2.forEach((key: string) => (dataHolder[key] = false));
@@ -16,7 +16,7 @@ function CampaignCreatorRoutes() {
         dataHolder[ccData.node_finale[0]] = true;
         return dataHolder;
     };
-    const [campaignSettings, setCampaignSettings] = useState(InitializeSettings);
+    const [campaignSettings, setCampaignSettings] = useState(initializeSettings);
 
     return (
         <Routes>
