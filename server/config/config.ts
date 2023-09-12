@@ -1,14 +1,25 @@
-import { Dialect, Sequelize } from 'sequelize';
+require('dotenv').config();
 
-const dbName = process.env.DB_NAME as string;
-const dbUser = process.env.DB_USER as string;
-const dbHost = process.env.DB_HOST;
-const dbDriver = process.env.DB_DRIVER as Dialect;
-const dbPassword = process.env.DB_PASSWORD;
-
-const sequelizeConnection = new Sequelize(dbName, dbUser, dbPassword, {
-    host: dbHost,
-    dialect: dbDriver,
-});
-
-export default sequelizeConnection;
+module.exports = {
+    development: {
+        username: process.env.DB_USERNAME,
+        password: process.env.DB_PASSWORD,
+        database: process.env.DB_NAME,
+        host: process.env.DB_HOST,
+        dialect: 'mysql',
+    },
+    test: {
+        username: 'root',
+        password: null,
+        database: 'database_test',
+        host: '127.0.0.1',
+        dialect: 'mysql',
+    },
+    production: {
+        username: 'root',
+        password: null,
+        database: 'database_production',
+        host: '127.0.0.1',
+        dialect: 'mysql',
+    },
+};
