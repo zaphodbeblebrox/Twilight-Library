@@ -3,46 +3,11 @@ import mongoose from 'mongoose';
 import Settlement from '../models/Settlement';
 
 const createSettlement = (req: Request, res: Response, next: NextFunction) => {
-    const {
-        name,
-        survival_limit,
-        arc_survivors,
-        cognition_amount,
-        notes,
-        principle_conviction,
-        principle_death,
-        principle_new_life,
-        principle_society,
-        resources,
-        gear,
-        innovations,
-        patterns,
-        locations,
-        knowledges,
-        current_year,
-        timeline,
-        quarries,
-        nemesis,
-    } = req.body;
+    const { name, timeline, quarries, nemesis } = req.body;
 
     const settlement = new Settlement({
         _id: new mongoose.Types.ObjectId(),
         name,
-        survival_limit,
-        arc_survivors,
-        cognition_amount,
-        notes,
-        principle_conviction,
-        principle_death,
-        principle_new_life,
-        principle_society,
-        resources,
-        gear,
-        innovations,
-        patterns,
-        locations,
-        knowledges,
-        current_year,
         timeline,
         quarries,
         nemesis,
