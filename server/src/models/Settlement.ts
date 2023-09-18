@@ -139,6 +139,11 @@ const SettlementSchema: Schema = new Schema(
             type: Object,
             required: [true, 'Nemesis are required for creation'],
         },
+        survivors: {
+            type: [Number],
+            required: false,
+            default: [],
+        },
     },
     {
         versionKey: false /* Probably want to enable this later, useful with concurent edits*/,
