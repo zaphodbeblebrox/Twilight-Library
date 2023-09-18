@@ -189,6 +189,12 @@ const SurvivorSchema: Schema = new Schema(
             type: [{}],
             default: [],
             required: false,
+            validate: {
+                validator: (array: String[]) => {
+                    return array.length <= 3;
+                },
+                message: 'A survivor may have a maximum of 3 knowledges.',
+            },
         },
         is_dead: {
             type: Boolean,
