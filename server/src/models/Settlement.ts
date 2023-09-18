@@ -28,7 +28,7 @@ const SettlementSchema: Schema = new Schema(
     {
         name: {
             type: String,
-            required: true,
+            required: [true, 'Settlement Name is required for creation'],
         },
         survival_limit: {
             type: Number,
@@ -145,4 +145,4 @@ const SettlementSchema: Schema = new Schema(
     },
 );
 
-export default mongoose.model<SettlementModel>('Settlement', SettlementSchema);
+export default mongoose.model<SettlementModel>('Settlements', SettlementSchema);
