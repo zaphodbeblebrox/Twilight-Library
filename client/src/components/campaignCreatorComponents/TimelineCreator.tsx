@@ -6,11 +6,14 @@ import { useNavigate } from 'react-router-dom';
 import TimelineTable from '../primitiveComponents/TimelineTable';
 
 interface TimelineCreatorProps {
+    settlementName: string;
     campaignSettings: Record<string, boolean>;
     setCampaignSettings: React.Dispatch<React.SetStateAction<{}>>;
 }
 
-const TimelineCreator = ({ campaignSettings, setCampaignSettings }: TimelineCreatorProps) => {
+type campaignDataTypes = string | Record<number, string[]> | Record<string, Record<number, boolean>>;
+
+const TimelineCreator = ({ settlementName, campaignSettings, setCampaignSettings }: TimelineCreatorProps) => {
     const maximumYears: number = 40;
     const setDefaultTimeline = () => {
         const newTimeline: Record<number, string[]> = {};
@@ -37,19 +40,34 @@ const TimelineCreator = ({ campaignSettings, setCampaignSettings }: TimelineCrea
     const navigate = useNavigate();
     const handleCancel = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         event.preventDefault();
-        navigate('/twilight-library/dashboard');
+        navigate('/twilight-library/dashboard/create-campaign');
     };
 
     const handleNavigation = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         event.preventDefault();
         navigate('/twilight-library/dashboard');
     };
-    console.log('timeline', campaignSettings);
+    console.log('campaign settings', campaignSettings);
+    console.log('timeline', timeline);
 
     const handleUpdateTimeline = (updatedTimeline: Record<number, string[]>) => {
         setTimeline(updatedTimeline);
         // TODO: Save data to database
     };
+
+    const handleSaveCampaignOnServer = () => {
+        const campaignData: Record<string, campaignDataTypes> = {};
+        campaignData['timeline'] = { ...timeline };
+        campaignData['name'] = settlementName;
+        // TODO: Loop through quarries to make data structure
+
+        // TODO: Loop through nemesis to make data structure
+
+        // TODO: Save data to database
+
+        // TODO: Navigate to dashboard
+    };
+
     return (
         <Flex direction="column" gap="3">
             <TimelineTable
@@ -62,9 +80,9 @@ const TimelineCreator = ({ campaignSettings, setCampaignSettings }: TimelineCrea
                         handleCancel(e);
                     }}
                 >
-                    Cancel
+                    Back
                 </Button>
-                <Button onClick={(e) => handleNavigation(e)}>Dashboard</Button>
+                <Button onClick={(e) => handleNavigation(e)}>Create Campaign</Button>
             </Flex>
         </Flex>
     );

@@ -17,13 +17,19 @@ function CampaignCreatorRoutes() {
         return dataHolder;
     };
     const [campaignSettings, setCampaignSettings] = useState(initializeSettings);
+    const [settlementName, setSettlementName] = useState('');
 
     return (
         <Routes>
             <Route
                 path="/"
                 element={
-                    <CampaignCreator campaignSettings={campaignSettings} setCampaignSettings={setCampaignSettings} />
+                    <CampaignCreator
+                        settlementName={settlementName}
+                        setSettlementName={setSettlementName}
+                        campaignSettings={campaignSettings}
+                        setCampaignSettings={setCampaignSettings}
+                    />
                 }
             />
 
@@ -32,6 +38,7 @@ function CampaignCreatorRoutes() {
                 element={
                     Object.entries(campaignSettings).length > 0 ? (
                         <TimelineCreator
+                            settlementName={settlementName}
                             campaignSettings={campaignSettings}
                             setCampaignSettings={setCampaignSettings}
                         />

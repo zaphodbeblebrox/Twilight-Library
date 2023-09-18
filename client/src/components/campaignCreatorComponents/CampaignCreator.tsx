@@ -3,16 +3,23 @@ import OptionListCampaignCreator from './OptionListCampaignCreator';
 import ccData from '../../static_data/campaign_creator.json';
 import RadioButtonListCampaignCreator from './RadioButtonListCampaignCreator';
 import { Button, Heading, Flex, Separator } from '@radix-ui/themes';
-import { TwilightSelect } from '../primitiveComponents/Primitives';
+import { TwilightSelect, TwilightTextField } from '../primitiveComponents/Primitives';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 interface CampaignCreatorProps {
+    settlementName: string;
+    setSettlementName: React.Dispatch<React.SetStateAction<string>>;
     campaignSettings: Record<string, boolean>;
     setCampaignSettings: React.Dispatch<React.SetStateAction<{}>>;
 }
 
-const CampaignCreator = ({ campaignSettings, setCampaignSettings }: CampaignCreatorProps) => {
+const CampaignCreator = ({
+    settlementName,
+    setSettlementName,
+    campaignSettings,
+    setCampaignSettings,
+}: CampaignCreatorProps) => {
     const navigate = useNavigate();
 
     const handleLoadPresetCampaignSelection = (campaign: string) => {
@@ -38,6 +45,10 @@ const CampaignCreator = ({ campaignSettings, setCampaignSettings }: CampaignCrea
 
     const handleCreateTimeline = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
+        if (settlementName.length < 2) {
+            // TODO: Add Toast popup with warning
+            return;
+        }
         navigate('/twilight-library/dashboard/create-campaign/timeline');
     };
     return (
@@ -53,6 +64,13 @@ const CampaignCreator = ({ campaignSettings, setCampaignSettings }: CampaignCrea
                     />
                 </Flex>
                 <Separator my="3" size="4" />
+                <TwilightTextField
+                    labelText="Settlement Name"
+                    textString={settlementName}
+                    onChange={setSettlementName}
+                />
+                <Separator my="3" size="4" />
+
                 <Heading size="6">Campaign Pillars</Heading>
                 <PillarOptions data={campaignSettings} setData={setCampaignSettings} />
                 <Flex direction="column" justify="between" align="center" gap="3">

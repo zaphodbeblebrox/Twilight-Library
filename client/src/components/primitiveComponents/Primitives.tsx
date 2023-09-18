@@ -95,7 +95,7 @@ interface TwilightTextFieldProps {
 
 const TwilightTextField = ({ labelText, textString, onChange }: TwilightTextFieldProps) => {
     return (
-        <Flex direction="row" align="end" justify="center">
+        <Flex direction="row" align="center" justify="center" wrap="wrap" gap="3">
             <Label.Root htmlFor={labelText}>{labelText}</Label.Root>
             <TextField.Root id={labelText}>
                 <TextField.Input value={textString} onChange={(e) => onChange(e.target.value)} />
