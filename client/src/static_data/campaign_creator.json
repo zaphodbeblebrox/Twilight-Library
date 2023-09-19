@@ -1,59 +1,5 @@
 {
-    "campaigns": [
-        "Custom",
-        "People of the Dream Keeper",
-        "People of the Lantern",
-        "People of the Stars",
-        "People of the Sun"
-    ],
-
-    "People of the Dream Keeper": [
-        "Crimson Crocodile",
-        "Smog Singers",
-        "Phoenix",
-        "The King",
-        "Butcher",
-        "Atnas",
-        "The Hand",
-        "Gambler",
-        "Godhand",
-        "Luck the Wanderer",
-        "Bone Eaters",
-        "Arc Survivors",
-        "Characters",
-        "Scouts",
-        "Seed Patterns"
-    ],
-    "People of the Lantern": [
-        "White Lion",
-        "Screaming Antelope",
-        "Phoenix",
-        "Butcher",
-        "King's Man",
-        "The Hand",
-        "Watcher",
-        "Gold Smoke Knight"
-    ],
-    "People of the Stars": [
-        "White Lion",
-        "Screaming Antelope",
-        "Phoenix",
-        "Butcher",
-        "King's Man",
-        "The Tyrant",
-        "The Dragon King",
-        "None"
-    ],
-    "People of the Sun": [
-        "White Lion",
-        "Screaming Antelope",
-        "Phoenix",
-        "Butcher",
-        "King's Man",
-        "The Hand",
-        "The Sunstalker",
-        "None"
-    ],
+    "campaigns": ["People of the Dream Keeper", "People of the Lantern", "People of the Stars", "People of the Sun"],
 
     "node_quarry_1": ["Crimson Crocodile", "Gorm", "White Lion"],
     "node_quarry_2": ["Flower Knight", "Screaming Antelope", "Smog Singers", "Spidicules"],
@@ -71,100 +17,61 @@
     "wanderers": ["Luck the Wanderer"],
 
     "timeline": {
-        "Crimson Crocodile": { "1": ["First Crimson Day"] },
-        "Gorm": { "1": ["The Approching Storm", "First Day"] },
-        "White Lion": { "1": ["First Day"] },
-        "Flower Knight": { "5": ["A Crone's Tale"] },
-        "Screaming Antelope": { "2": ["Endless Screams"] },
-        "Smog Singers": { "2": ["Death of Song"] },
-        "Spidicules": { "2": ["Young Rivals"] },
-        "Dragon King": { "8": ["Glowing Crater"] },
-        "Phoenix": { "7": ["Phoenix Feather"] },
-        "Sunstalker": { "8": ["Promise under the Sun"] },
-        "Dung Beetle Knight": { "8": ["Rumbling in the Dark"] },
-        "Lion God": { "13": ["Silver City"] },
-        "The King": { "22": ["The Awaited"] },
-
-        "Butcher": {
-            "4": ["NE: Butcher Lvl 1"],
-            "16": ["NE: Butcher Lvl 2"],
-            "23": ["NE: Butcher Lvl 3"]
+        "quarries": {
+            "Gorm": { "1": ["The Approching Storm"] },
+            "Flower Knight": { "5": ["A Crone's Tale"] },
+            "Screaming Antelope": { "2": ["Endless Screams"] },
+            "Smog Singers": { "2": ["Death of Song"] },
+            "Spidicules": { "2": ["Young Rivals"] },
+            "Dragon King": { "8": ["Glowing Crater"] },
+            "Phoenix": { "7": ["Phoenix Feather"] },
+            "Sunstalker": { "8": ["Promise under the Sun"] },
+            "Dung Beetle Knight": { "8": ["Rumbling in the Dark"] },
+            "Lion God": { "13": ["Silver City"] },
+            "The King": { "22": ["The Awaited"] }
         },
-        "Manhunter": {
-            "5": ["The Hanged Man"],
-            "10": ["NE: Manhunter Lvl 1"],
-            "16": ["NE: Manhunter Lvl 2"],
-            "22": ["NE: Manhunter Lvl 3"]
+        "nemesis": {
+            "Butcher": {
+                "4": ["NE: Butcher Lvl 1"],
+                "16": ["NE: Butcher Lvl 2"],
+                "23": ["NE: Butcher Lvl 3"]
+            },
+            "Manhunter": {
+                "5": ["The Hanged Man"],
+                "10": ["NE: Manhunter Lvl 1"],
+                "16": ["NE: Manhunter Lvl 2"],
+                "22": ["NE: Manhunter Lvl 3"]
+            },
+            "Atnas": {
+                "6": ["Unwanted Gifts"],
+                "9": ["NE: Atnas Lvl 1"],
+                "18": ["NE: Atnas Lvl 2"],
+                "28": ["NE: Atnas Lvl 3"]
+            },
+            "King's Man": {
+                "6": ["Armored Strangers"],
+                "9": ["NE: King's Man Lvl 1"],
+                "19": ["NE: King's Man Lvl 2"],
+                "28": ["NE: King's Man Lvl 3"]
+            },
+            "Lion Knight": { "6": ["An Uninvited Guest"] },
+            "Slenderman": {
+                "6": ["It's Already Here"],
+                "9": ["NE: Slenderman Lvl 1"],
+                "18": ["NE: Slenderman Lvl 2"],
+                "28": ["NE: Slenderman Lvl 3"]
+            },
+            "The Hand": { "11": ["Regal Visit"], "13": ["NE: The Hand Lvl 1"] }
         },
-        "Atnas": {
-            "6": ["Unwanted Gifts"],
-            "9": ["NE: Atnas Lvl 1"],
-            "18": ["NE: Atnas Lvl 2"],
-            "28": ["NE: Atnas Lvl 3"]
+        "pillars": {
+            "Arc Survivors": { "1": ["First Meal"] },
+            "Scouts": { "1": ["Extinguished Guidepost"] }
         },
-        "King's Man": {
-            "6": ["Armored Strangers"],
-            "9": ["NE: King's Man Lvl 1"],
-            "19": ["NE: King's Man Lvl 2"],
-            "28": ["NE: King's Man Lvl 3"]
+        "encounters": {
+            "Bone Eaters": { "3": ["Missing Statue"] }
         },
-        "Lion Knight": { "6": ["An Uninvited Guest"] },
-        "Slenderman": {
-            "6": ["It's Already Here"],
-            "9": ["NE: Slenderman Lvl 1"],
-            "18": ["NE: Slenderman Lvl 2"],
-            "28": ["NE: Slenderman Lvl 3"]
-        },
-        "The Hand": { "11": ["Regal Visit"], "13": ["NE: The Hand Lvl 1"] },
-        "The Tyrant": {
-            "4": ["NE: The Tyrant Lvl 1"],
-            "9": ["NE: The Tyrant Lvl 2"],
-            "19": ["NE: The Tyrant Lvl 3"]
-        },
-        "The Dragon King": {
-            "1": ["Foundlings"],
-            "4": ["NE: Tyrant Lvl 1"],
-            "5": ["Midnight's Children"],
-            "9": ["NE: Tyrant Lvl 2"],
-            "10": ["Unveil the Sky"],
-            "12": ["Principle: Conviction"],
-            "19": ["NE: Tyrant Lvl 3"],
-            "20": ["The Dragon's Tomb"],
-            "25": ["NE: Death of the Dragon King"]
-        },
-        "Gambler": {
-            "1": ["Dreamless Respite"],
-            "11": ["The Game"],
-            "12": ["Principle: Conviction"],
-            "15": ["Wonderous Design"],
-            "20": ["Perfect Punt", "NE - The Gambler"],
-            "21": ["Lantern Festival"]
-        },
-        "The Sunstalker": {
-            "1": ["The Pool and the Sun"],
-            "4": ["Sun Dipping"],
-            "5": ["The Great Sky Gift"],
-            "10": ["Birth of Color"],
-            "11": ["Principle: Conviction"],
-            "12": ["Sun Dipping"],
-            "13": ["The Great Sky Gift"],
-            "19": ["Sun Dipping"],
-            "20": ["The Great Sky Gift"],
-            "25": ["NE - The Great Devourer"]
-        },
-        "Watcher": {
-            "1": ["Returning Survivors"],
-            "5": ["Hands of Heat"],
-            "12": ["Principle: Conviction"],
-            "20": ["Watched"],
-            "25": ["NE - Watcher"]
-        },
-        "Godhand": { "30": ["NE - Godhand"] },
-        "Gold Smoke Knight": { "30": ["NE - Gold Smoke Knight"] },
-
-        "Arc Survivors": { "1": ["First Meal"], "5": ["Stained"] },
-        "Bone Eaters": { "3": ["Missing Statue"] },
-        "Scouts": { "1": ["Extinguished Guidepost"] },
-        "Luck the Wanderer": { "23": ["Wanderer - Luck"] }
+        "wanderers": {
+            "Luck the Wanderer": { "23": ["Wanderer - Luck"] }
+        }
     }
 }
