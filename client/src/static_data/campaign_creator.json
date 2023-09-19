@@ -1,6 +1,4 @@
 {
-    "campaigns": ["People of the Dream Keeper", "People of the Lantern", "People of the Stars", "People of the Sun"],
-
     "node_quarry_1": ["Crimson Crocodile", "Gorm", "White Lion"],
     "node_quarry_2": ["Flower Knight", "Screaming Antelope", "Smog Singers", "Spidicules"],
     "node_quarry_3": ["Dragon King", "Phoenix", "Sunstalker"],
@@ -8,7 +6,7 @@
     "node_nemesis_1": ["Butcher", "Manhunter"],
     "node_nemesis_2": ["Atnas", "King's Man", "Lion Knight", "Slenderman"],
     "node_nemesis_3": ["The Hand"],
-    "node_core": ["The Dragon King", "Gambler", "The Sunstalker", "Watcher"],
+    "node_core": ["Death of the Dragon King", "Gambler", "The Great Devourer", "Watcher"],
     "node_finale": ["None", "Godhand", "Gold Smoke Knight"],
     "node_special": ["Lonely Tree"],
 
