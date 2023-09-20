@@ -28,16 +28,16 @@ const TwilightSelect = ({ header, defaultOption, options, onChange }: TwilightSe
 
 interface TwilightCheckboxProps {
     label: string;
-    value: Record<string, boolean>;
+    checked: boolean;
     onChange: (value: string, checked: boolean) => void;
 }
-const TwilightCheckbox = ({ label, value, onChange }: TwilightCheckboxProps) => {
+const TwilightCheckbox = ({ label, checked, onChange }: TwilightCheckboxProps) => {
     return (
         <Flex direction="row" gap="1" justify="start" align="center">
             <Checkbox
                 id={label}
                 mr="1"
-                checked={value[label]}
+                checked={checked}
                 onCheckedChange={(checked: boolean) => onChange(label, checked)}
             />
             <Label.Root htmlFor={label}>{label}</Label.Root>
