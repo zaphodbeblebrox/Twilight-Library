@@ -1,17 +1,24 @@
 import PillarOptions from './PillarOptions';
 import OptionListCampaignCreator from './OptionListCampaignCreator';
-import ccData from '../../static_data/campaign_creator.json';
+import campaignOptionsData from '../../static_data/campaign_creator.json';
 import RadioButtonListCampaignCreator from './RadioButtonListCampaignCreator';
 import { Button, Heading, Flex, Separator } from '@radix-ui/themes';
 import { TwilightSelect, TwilightTextField } from '../primitiveComponents/Primitives';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { TypeCampaignData } from './CampaignTypeConfig';
+import presetCampaignData from '../../static_data/preset_campaigns.json';
 
 interface CampaignCreatorProps {
     settlementName: string;
     setSettlementName: React.Dispatch<React.SetStateAction<string>>;
     campaignSettings: Record<string, boolean>;
     setCampaignSettings: React.Dispatch<React.SetStateAction<{}>>;
+    selectedCampaign: TypeCampaignData;
+    setSelectedCampaign: React.Dispatch<React.SetStateAction<TypeCampaignData>>;
+    handleCampaignChange: () => Record<string, boolean>;
+    timeline: Record<number, string[]>;
+    setTimeline: React.Dispatch<React.SetStateAction<{}>>;
 }
 
 const CampaignCreator = ({
@@ -19,24 +26,39 @@ const CampaignCreator = ({
     setSettlementName,
     campaignSettings,
     setCampaignSettings,
+    selectedCampaign,
+    setSelectedCampaign,
+    handleCampaignChange,
+    timeline,
+    setTimeline,
 }: CampaignCreatorProps) => {
     const navigate = useNavigate();
+    const selectCampaignOptions: string[] = Object.keys(presetCampaignData).sort();
 
-    const handleLoadPresetCampaignSelection = (campaign: string) => {
-        if (ccData.hasOwnProperty(campaign)) {
-            const modCampaignSettings: Record<string, boolean> = {
-                ...campaignSettings,
-            };
-            for (const key in modCampaignSettings) {
-                modCampaignSettings[key] = false;
-            }
-            const settings = ccData[campaign as keyof typeof ccData];
-            if (Array.isArray(settings)) {
-                settings.forEach((key: string) => (modCampaignSettings[key] = true));
-            }
-            setCampaignSettings(modCampaignSettings);
+    const handleSetPresetCampaign = (campaign: string) => {
+        const presetCampaigns: Record<string, TypeCampaignData> = { ...presetCampaignData };
+        if (presetCampaignData.hasOwnProperty(campaign)) {
+            const newCampaign: TypeCampaignData = presetCampaigns[campaign];
+            console.log(newCampaign);
+            setSelectedCampaign(newCampaign);
         }
     };
+
+    // const handleLoadPresetCampaignSelection = (campaign: string) => {
+    //     if (ccData.hasOwnProperty(campaign)) {
+    //         const modCampaignSettings: Record<string, boolean> = {
+    //             ...campaignSettings,
+    //         };
+    //         for (const key in modCampaignSettings) {
+    //             modCampaignSettings[key] = false;
+    //         }
+    //         const settings = ccData[campaign as keyof typeof ccData];
+    //         if (Array.isArray(settings)) {
+    //             settings.forEach((key: string) => (modCampaignSettings[key] = true));
+    //         }
+    //         setCampaignSettings(modCampaignSettings);
+    //     }
+    // };
 
     const handleCancel = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         event.preventDefault();
@@ -58,9 +80,9 @@ const CampaignCreator = ({
                 <Flex justify="center">
                     <TwilightSelect
                         header={'Preset Campaign'}
-                        defaultOption={ccData.campaigns[0]}
-                        options={ccData.campaigns}
-                        onChange={handleLoadPresetCampaignSelection}
+                        defaultOption={selectCampaignOptions[0]}
+                        options={selectCampaignOptions}
+                        onChange={handleSetPresetCampaign}
                     />
                 </Flex>
                 <Separator my="3" size="4" />
@@ -79,27 +101,27 @@ const CampaignCreator = ({
                     <Flex direction="row" justify="center" align="start" wrap="wrap" gap="5">
                         <OptionListCampaignCreator
                             header="NQ1"
-                            options={ccData.node_quarry_1}
-                            data={campaignSettings}
-                            setData={setCampaignSettings}
+                            optionKey="node_quarry_1"
+                            data={selectedCampaign}
+                            setData={setSelectedCampaign}
                         />
                         <OptionListCampaignCreator
                             header="NQ2"
-                            options={ccData.node_quarry_2}
-                            data={campaignSettings}
-                            setData={setCampaignSettings}
+                            optionKey="node_quarry_2"
+                            data={selectedCampaign}
+                            setData={setSelectedCampaign}
                         />
                         <OptionListCampaignCreator
                             header="NQ3"
-                            options={ccData.node_quarry_3}
-                            data={campaignSettings}
-                            setData={setCampaignSettings}
+                            optionKey="node_quarry_3"
+                            data={selectedCampaign}
+                            setData={setSelectedCampaign}
                         />
                         <OptionListCampaignCreator
                             header={'NQ4'}
-                            options={ccData.node_quarry_4}
-                            data={campaignSettings}
-                            setData={setCampaignSettings}
+                            optionKey="node_quarry_4"
+                            data={selectedCampaign}
+                            setData={setSelectedCampaign}
                         />
                     </Flex>
                 </Flex>
@@ -109,25 +131,25 @@ const CampaignCreator = ({
                     <Flex direction="row" justify="center" align="start" wrap="wrap" gap="5">
                         <OptionListCampaignCreator
                             header="NN1"
-                            options={ccData.node_nemesis_1}
-                            data={campaignSettings}
-                            setData={setCampaignSettings}
+                            optionKey="node_nemesis_1"
+                            data={selectedCampaign}
+                            setData={setSelectedCampaign}
                         />
                         <OptionListCampaignCreator
                             header="NN2"
-                            options={ccData.node_nemesis_2}
-                            data={campaignSettings}
-                            setData={setCampaignSettings}
+                            optionKey="node_nemesis_2"
+                            data={selectedCampaign}
+                            setData={setSelectedCampaign}
                         />
                         <OptionListCampaignCreator
                             header="NN3"
-                            options={ccData.node_nemesis_3}
-                            data={campaignSettings}
-                            setData={setCampaignSettings}
+                            optionKey="node_nemesis_3"
+                            data={selectedCampaign}
+                            setData={setSelectedCampaign}
                         />
                     </Flex>
                 </Flex>
-                <Flex direction="column" justify="start" align="center" gap="3">
+                {/*<Flex direction="column" justify="start" align="center" gap="3">
                     <Separator my="3" size="4" />
                     <Heading size="6">Node Critical</Heading>
                     <Flex direction="row" justify="center" align="start" wrap="wrap" gap="5">
@@ -160,7 +182,7 @@ const CampaignCreator = ({
                         Cancel
                     </Button>
                     <Button>Timeline</Button>
-                </Flex>
+                </Flex> */}
             </Flex>
         </form>
     );
