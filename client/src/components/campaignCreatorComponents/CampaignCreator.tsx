@@ -1,9 +1,7 @@
 import OptionListCampaignCreator from './OptionListCampaignCreator';
-import campaignOptionsData from '../../static_data/campaign_creator.json';
 import RadioButtonListCampaignCreator from './RadioButtonListCampaignCreator';
 import { Button, Heading, Flex, Separator } from '@radix-ui/themes';
 import { TwilightSelect, TwilightTextField } from '../primitiveComponents/Primitives';
-import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { TypeCampaignData } from './CampaignTypeConfig';
 import presetCampaignData from '../../static_data/preset_campaigns.json';
@@ -153,30 +151,30 @@ const CampaignCreator = ({
                         />
                     </Flex>
                 </Flex>
-                {/*<Flex direction="column" justify="start" align="center" gap="3">
+                <Flex direction="column" justify="start" align="center" gap="3">
                     <Separator my="3" size="4" />
                     <Heading size="6">Node Critical</Heading>
                     <Flex direction="row" justify="center" align="start" wrap="wrap" gap="5">
                         <RadioButtonListCampaignCreator
                             header="Core"
-                            options={ccData.node_core}
-                            data={campaignSettings}
-                            setData={setCampaignSettings}
+                            optionKey="node_core"
+                            data={selectedCampaign}
+                            setData={setSelectedCampaign}
                         />
                         <RadioButtonListCampaignCreator
                             header="Finale"
-                            options={ccData.node_finale}
-                            data={campaignSettings}
-                            setData={setCampaignSettings}
+                            optionKey="node_finale"
+                            data={selectedCampaign}
+                            setData={setSelectedCampaign}
                         />
                         <OptionListCampaignCreator
                             header="Special"
-                            options={ccData.node_special}
-                            data={campaignSettings}
-                            setData={setCampaignSettings}
+                            optionKey="node_special"
+                            data={selectedCampaign}
+                            setData={setSelectedCampaign}
                         />
                     </Flex>
-                </Flex>*/}
+                </Flex>
                 <Flex justify="center" align="center" gap="5">
                     <Button
                         onClick={(e) => {

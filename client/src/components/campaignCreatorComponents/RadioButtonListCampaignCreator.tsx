@@ -1,29 +1,36 @@
 import { Flex, Heading } from '@radix-ui/themes';
 import { TwilightNodeHeader, TwilightRadioGroupItem } from '../primitiveComponents/Primitives';
+import { NodeCoreFinaleLists, TypeCampaignData } from './CampaignTypeConfig';
+import campaignOptionsData from '../../static_data/campaign_creator.json';
 
 interface RadioButtonListCampaignCreatorProps {
     header: string;
-    options: string[];
-    data: Record<string, boolean>;
-    setData: React.Dispatch<React.SetStateAction<{}>>;
+    optionKey: keyof NodeCoreFinaleLists;
+    data: TypeCampaignData;
+    setData: React.Dispatch<React.SetStateAction<TypeCampaignData>>;
 }
 
-const RadioButtonListCampaignCreator = ({ header, options, data, setData }: RadioButtonListCampaignCreatorProps) => {
+const RadioButtonListCampaignCreator = ({ header, optionKey, data, setData }: RadioButtonListCampaignCreatorProps) => {
     const handleUpdateData = (value: string) => {
-        console.log(value);
-        const temp: Record<string, boolean> = { ...data };
-        options.forEach((key) => (temp[key] = false));
-        temp[value] = true;
-        setData(temp);
+        const updatedData: TypeCampaignData = { ...data };
+        if (value !== 'None') {
+            updatedData[optionKey] = value;
+        } else {
+            updatedData[optionKey] = null;
+        }
+        setData(updatedData);
     };
-
-    let value: string = options.find((option: string) => data[option]) ?? options[0];
+    const radioOptions = [...campaignOptionsData[optionKey]];
 
     return (
         <div>
             <Flex direction="column" gap="1">
                 <TwilightNodeHeader headerText={header} />
-                <TwilightRadioGroupItem value={value} options={options} onChange={handleUpdateData} />
+                <TwilightRadioGroupItem
+                    value={data[optionKey] ?? 'None'}
+                    options={radioOptions}
+                    onChange={handleUpdateData}
+                />
             </Flex>
         </div>
     );

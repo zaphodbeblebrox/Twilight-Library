@@ -25,10 +25,14 @@ export type NemesisFightYearLists = {
     nn3_lvl3_fight_year: number | null;
     finale_fight_year: number | null;
 };
+export type NodeCoreFinaleLists = {
+    node_core: string | null;
+    node_finale: string | null;
+};
+
 export type TypeCampaignData = NodePillarLists &
-    NemesisFightYearLists & {
-        node_core: string;
-        node_finale: string | null;
+    NemesisFightYearLists &
+    NodeCoreFinaleLists & {
         milestones: { trigger: string; event: string }[];
         flexible_nemesis_encounters: boolean;
         core_fight_year: number;
