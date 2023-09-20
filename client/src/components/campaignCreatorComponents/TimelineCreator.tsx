@@ -15,7 +15,7 @@ interface TimelineCreatorProps {
 
 type campaignDataTypes = string | Record<number, string[]> | Record<string, Record<number, boolean>>;
 
-const TimelineCreator = ({ settlementName, campaignSettings, setCampaignSettings }: TimelineCreatorProps) => {
+const TimelineCreator = ({ settlementName, campaignSettings }: TimelineCreatorProps) => {
     const maximumYears: number = 40;
     const setDefaultTimeline = () => {
         const newTimeline: Record<number, string[]> = {};

@@ -32,7 +32,7 @@
         "nn3_lvl3_fight_year": null,
         "core_fight_year": 20,
         "finale_fight_year": 30,
-        "timeline": {
+        "default_timeline": {
             "1": ["Dreamless Respite", "First Crimson Day"],
             "5": ["Stained"],
             "11": ["The Game"],
@@ -41,6 +41,7 @@
             "20": ["Perfect Punt"],
             "21": ["Lantern Festival"]
         },
+        "timeline": {},
         "courage_event_1": "Bold",
         "courage_event_2": "See the Truth",
         "understanding_event_1": "Insight",
@@ -80,12 +81,13 @@
         "nn3_lvl3_fight_year": null,
         "core_fight_year": 25,
         "finale_fight_year": 30,
-        "timeline": {
+        "default_timeline": {
             "1": ["First Day", "Returning Survivors"],
             "5": ["Hands of Heat"],
             "12": ["Principle: Conviction"],
             "20": ["Watched"]
         },
+        "timeline": {},
         "courage_event_1": "Bold",
         "courage_event_2": "See the Truth",
         "understanding_event_1": "Insight",
@@ -124,7 +126,7 @@
         "nn3_lvl3_fight_year": null,
         "core_fight_year": 25,
         "finale_fight_year": null,
-        "timeline": {
+        "default_timeline": {
             "1": ["First Day", "The Foundlings"],
             "4": ["NE - The Tyrant Lvl 1"],
             "5": ["Midnight's Children"],
@@ -134,6 +136,7 @@
             "19": ["NE - The Tyrant Lvl 3"],
             "20": ["The Dragon's Tomb"]
         },
+        "timeline": {},
         "courage_event_1": "Awake",
         "courage_event_2": "See the Truth",
         "understanding_event_1": "Awake",
@@ -173,7 +176,7 @@
         "nn3_lvl3_fight_year": 24,
         "core_fight_year": 25,
         "finale_fight_year": null,
-        "timeline": {
+        "default_timeline": {
             "1": ["First Day", "The Pool and the Sun"],
             "4": ["Sun Dipping"],
             "5": ["The Great Sky Gift"],
@@ -184,6 +187,7 @@
             "19": ["Sun Dipping"],
             "20": ["Final Gift"]
         },
+        "timeline": {},
         "courage_event_1": "Bold",
         "courage_event_2": "See the Truth",
         "understanding_event_1": "Insight",

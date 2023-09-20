@@ -37,6 +37,7 @@ export type TypeCampaignData = NodePillarLists &
         flexible_nemesis_encounters: boolean;
         core_fight_year: number;
         timeline: Record<string, string[]>;
+        default_timeline: Record<string, string[]>;
         courage_event_1: string;
         courage_event_2: string;
         understanding_event_1: string;
