@@ -1,4 +1,3 @@
-import PillarOptions from './PillarOptions';
 import OptionListCampaignCreator from './OptionListCampaignCreator';
 import campaignOptionsData from '../../static_data/campaign_creator.json';
 import RadioButtonListCampaignCreator from './RadioButtonListCampaignCreator';
@@ -44,22 +43,6 @@ const CampaignCreator = ({
         }
     };
 
-    // const handleLoadPresetCampaignSelection = (campaign: string) => {
-    //     if (ccData.hasOwnProperty(campaign)) {
-    //         const modCampaignSettings: Record<string, boolean> = {
-    //             ...campaignSettings,
-    //         };
-    //         for (const key in modCampaignSettings) {
-    //             modCampaignSettings[key] = false;
-    //         }
-    //         const settings = ccData[campaign as keyof typeof ccData];
-    //         if (Array.isArray(settings)) {
-    //             settings.forEach((key: string) => (modCampaignSettings[key] = true));
-    //         }
-    //         setCampaignSettings(modCampaignSettings);
-    //     }
-    // };
-
     const handleCancel = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         event.preventDefault();
         navigate('/twilight-library/dashboard');
@@ -92,9 +75,30 @@ const CampaignCreator = ({
                     onChange={setSettlementName}
                 />
                 <Separator my="3" size="4" />
+                <Flex direction="column" justify="between" align="center" gap="3">
+                    <Heading size="6">Campaign Pillars</Heading>
+                    <Flex direction="row" justify="center" align="start" wrap="wrap" gap="5">
+                        <OptionListCampaignCreator
+                            header="Assorted"
+                            optionKey="pillars"
+                            data={selectedCampaign}
+                            setData={setSelectedCampaign}
+                        />
+                        <OptionListCampaignCreator
+                            header="NQ2"
+                            optionKey="encounters"
+                            data={selectedCampaign}
+                            setData={setSelectedCampaign}
+                        />
+                        <OptionListCampaignCreator
+                            header="NQ3"
+                            optionKey="wanderers"
+                            data={selectedCampaign}
+                            setData={setSelectedCampaign}
+                        />
+                    </Flex>
+                </Flex>
 
-                <Heading size="6">Campaign Pillars</Heading>
-                <PillarOptions data={campaignSettings} setData={setCampaignSettings} />
                 <Flex direction="column" justify="between" align="center" gap="3">
                     <Separator my="3" size="4" />
                     <Heading size="6">Node Quarries</Heading>
@@ -172,7 +176,7 @@ const CampaignCreator = ({
                             setData={setCampaignSettings}
                         />
                     </Flex>
-                </Flex>
+                </Flex>*/}
                 <Flex justify="center" align="center" gap="5">
                     <Button
                         onClick={(e) => {
@@ -182,7 +186,7 @@ const CampaignCreator = ({
                         Cancel
                     </Button>
                     <Button>Timeline</Button>
-                </Flex> */}
+                </Flex>
             </Flex>
         </form>
     );
