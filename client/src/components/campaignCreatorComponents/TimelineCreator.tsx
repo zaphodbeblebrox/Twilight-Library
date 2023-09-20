@@ -4,11 +4,13 @@ import { Button, Flex } from '@radix-ui/themes';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import TimelineTable from '../primitiveComponents/TimelineTable';
+import { TypeCampaignData } from './CampaignTypeConfig';
 
 interface TimelineCreatorProps {
     settlementName: string;
-    campaignSettings: Record<string, boolean>;
-    setCampaignSettings: React.Dispatch<React.SetStateAction<{}>>;
+    campaignSettings: TypeCampaignData;
+    timeline: Record<number, string[]>;
+    setTimeline: React.Dispatch<React.SetStateAction<{}>>;
 }
 
 type campaignDataTypes = string | Record<number, string[]> | Record<string, Record<number, boolean>>;

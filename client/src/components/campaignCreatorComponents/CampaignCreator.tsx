@@ -9,25 +9,15 @@ import presetCampaignData from '../../static_data/preset_campaigns.json';
 interface CampaignCreatorProps {
     settlementName: string;
     setSettlementName: React.Dispatch<React.SetStateAction<string>>;
-    campaignSettings: Record<string, boolean>;
-    setCampaignSettings: React.Dispatch<React.SetStateAction<{}>>;
     selectedCampaign: TypeCampaignData;
     setSelectedCampaign: React.Dispatch<React.SetStateAction<TypeCampaignData>>;
-    handleCampaignChange: () => Record<string, boolean>;
-    timeline: Record<number, string[]>;
-    setTimeline: React.Dispatch<React.SetStateAction<{}>>;
 }
 
 const CampaignCreator = ({
     settlementName,
     setSettlementName,
-    campaignSettings,
-    setCampaignSettings,
     selectedCampaign,
     setSelectedCampaign,
-    handleCampaignChange,
-    timeline,
-    setTimeline,
 }: CampaignCreatorProps) => {
     const navigate = useNavigate();
     const selectCampaignOptions: string[] = Object.keys(presetCampaignData).sort();
