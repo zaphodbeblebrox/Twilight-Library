@@ -82,7 +82,7 @@ const CampaignCreator = ({
             // TODO: Add Toast popup with warning
             return;
         }
-        // TODO: Populate Timeline
+        // Populate Timeline
         const maximumYears: number = 40;
         const timeline: Record<number, string[]> = Array.from({ length: maximumYears }, (_, index) => index + 1).reduce(
             (obj, key) => ({ ...obj, [key]: [] }),
@@ -113,6 +113,12 @@ const CampaignCreator = ({
             });
         });
         console.log(timeline);
+        const updatedCampaign = { ...selectedCampaign };
+        updatedCampaign.timeline = { ...timeline };
+        console.log(updatedCampaign);
+        setSelectedCampaign(updatedCampaign);
+
+        navigate('/twilight-library/dashboard/create-campaign/timeline');
     };
     return (
         <form onSubmit={(e) => handleCreateTimeline(e)}>
