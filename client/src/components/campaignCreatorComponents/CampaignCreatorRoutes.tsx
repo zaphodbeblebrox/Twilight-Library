@@ -14,7 +14,6 @@ function CampaignCreatorRoutes() {
     };
 
     const [selectedCampaign, setSelectedCampaign] = useState(intializeDefaultCampaign);
-    const [timeline, setTimeline] = useState({});
     const [settlementName, setSettlementName] = useState('');
 
     return (
@@ -37,8 +36,7 @@ function CampaignCreatorRoutes() {
                     <TimelineCreator
                         settlementName={settlementName}
                         campaignSettings={selectedCampaign}
-                        timeline={timeline}
-                        setTimeline={setTimeline}
+                        setCampaignSettings={setSelectedCampaign}
                     />
                 }
             />

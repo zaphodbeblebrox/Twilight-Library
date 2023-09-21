@@ -1,6 +1,6 @@
 import ccData from '../../static_data/campaign_creator.json';
 
-import { Button, Flex } from '@radix-ui/themes';
+import { Button, Flex, Heading, Separator } from '@radix-ui/themes';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import TimelineTable from '../primitiveComponents/TimelineTable';
@@ -26,6 +26,9 @@ const TimelineCreator = ({ settlementName, campaignSettings, setCampaignSettings
 
     const handleNavigation = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         event.preventDefault();
+        const updatedCampaign: TypeCampaignData = { ...campaignSettings };
+        updatedCampaign.timeline = { ...timeline };
+        setCampaignSettings(updatedCampaign);
         navigate('/twilight-library/dashboard');
     };
     console.log('campaign settings', campaignSettings);
@@ -51,6 +54,8 @@ const TimelineCreator = ({ settlementName, campaignSettings, setCampaignSettings
 
     return (
         <Flex direction="column" gap="3">
+            <Heading size="7"> Timeline Editor</Heading>
+            <Separator my="3" size="4" />
             <TimelineTable
                 timeline={timeline}
                 onChange={(updatedTimeline: Record<number, string[]>) => handleUpdateTimeline(updatedTimeline)}
@@ -63,7 +68,7 @@ const TimelineCreator = ({ settlementName, campaignSettings, setCampaignSettings
                 >
                     Back
                 </Button>
-                <Button onClick={(e) => handleNavigation(e)}>Create Campaign</Button>
+                <Button onClick={(e) => handleNavigation(e)}>Milestones</Button>
             </Flex>
         </Flex>
     );

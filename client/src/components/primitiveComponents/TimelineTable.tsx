@@ -33,7 +33,7 @@ const TimelineTable = ({ timeline, onChange }: TimelineTableProps) => {
                 <Table.Row>
                     <Table.ColumnHeaderCell>Year</Table.ColumnHeaderCell>
                     <Table.ColumnHeaderCell>Story Events</Table.ColumnHeaderCell>
-                    <Table.ColumnHeaderCell></Table.ColumnHeaderCell>
+                    <Table.ColumnHeaderCell>Add Event</Table.ColumnHeaderCell>
                 </Table.Row>
             </Table.Header>
 
