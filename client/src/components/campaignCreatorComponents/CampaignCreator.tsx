@@ -3,8 +3,15 @@ import RadioButtonListCampaignCreator from './RadioButtonListCampaignCreator';
 import { Button, Heading, Flex, Separator } from '@radix-ui/themes';
 import { TwilightSelect, TwilightTextField } from '../primitiveComponents/Primitives';
 import { useNavigate } from 'react-router-dom';
-import { TypeCampaignData } from './CampaignTypeConfig';
+import {
+    NemesisFightYearLists,
+    NodePillarLists,
+    TimelineOptionList,
+    TypeCampaignCreatorData,
+    TypeCampaignData,
+} from './CampaignTypeConfig';
 import presetCampaignData from '../../static_data/preset_campaigns.json';
+import campaignOptionsData from '../../static_data/campaign_creator.json';
 
 interface CampaignCreatorProps {
     settlementName: string;
@@ -36,13 +43,63 @@ const CampaignCreator = ({
         navigate('/twilight-library/dashboard');
     };
 
+    const addToTimeline = (
+        timeline: Record<number, string[]>,
+        nodeKey: keyof NodePillarLists,
+        typeKey: keyof TimelineOptionList,
+    ) => {
+        if (!selectedCampaign.flexible_nemesis_encounters && typeKey === 'nemesis') {
+            // Handle strict Nemesis timeline
+            const nemesis_tier: string = nodeKey.slice(-1);
+            selectedCampaign[nodeKey].forEach((selection: string) => {
+                [1, 2, 3].forEach((level: number) => {
+                    const fight_str: string = `nn${nemesis_tier}_lvl${level}_fight_year`;
+                    const fight_key: keyof NemesisFightYearLists = fight_str as keyof NemesisFightYearLists;
+                    const fight_year: number | null = selectedCampaign[fight_key];
+                    if (fight_year !== null) {
+                        timeline[fight_year].push(`NE - ${selection} lvl ${level}`);
+                    }
+                });
+            });
+            return;
+        }
+
+        selectedCampaign[nodeKey].forEach((selection: string) => {
+            const query: Record<string, Record<string, string[]>> = campaignOptionsData.timeline[typeKey];
+            if (query.hasOwnProperty(selection)) {
+                Object.keys(query[selection]).forEach((yearKey: string) => {
+                    query[selection][Number(yearKey)].forEach((yearData: string) => {
+                        timeline[Number(yearKey)].push(yearData);
+                    });
+                });
+            }
+        });
+    };
+
     const handleCreateTimeline = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         if (settlementName.length < 2) {
             // TODO: Add Toast popup with warning
             return;
         }
-        navigate('/twilight-library/dashboard/create-campaign/timeline');
+        // TODO: Populate Timeline
+        const maximumYears: number = 40;
+        const timeline: Record<number, string[]> = Array.from({ length: maximumYears }, (_, index) => index + 1).reduce(
+            (obj, key) => ({ ...obj, [key]: [] }),
+            {},
+        );
+        addToTimeline(timeline, 'node_quarry_1', 'quarries');
+        addToTimeline(timeline, 'node_quarry_2', 'quarries');
+        addToTimeline(timeline, 'node_quarry_3', 'quarries');
+        addToTimeline(timeline, 'node_quarry_4', 'quarries');
+        addToTimeline(timeline, 'node_nemesis_1', 'nemesis');
+        addToTimeline(timeline, 'node_nemesis_2', 'nemesis');
+        addToTimeline(timeline, 'node_nemesis_3', 'nemesis');
+
+        // Add Core and Finale to Timeline
+
+        // TODO: Add default events to timeline
+        console.log(timeline);
     };
     return (
         <form onSubmit={(e) => handleCreateTimeline(e)}>
