@@ -92,13 +92,26 @@ const CampaignCreator = ({
         addToTimeline(timeline, 'node_quarry_2', 'quarries');
         addToTimeline(timeline, 'node_quarry_3', 'quarries');
         addToTimeline(timeline, 'node_quarry_4', 'quarries');
+        addToTimeline(timeline, 'pillars', 'pillars');
+        addToTimeline(timeline, 'encounters', 'encounters');
+        addToTimeline(timeline, 'wanderers', 'wanderers');
         addToTimeline(timeline, 'node_nemesis_1', 'nemesis');
         addToTimeline(timeline, 'node_nemesis_2', 'nemesis');
         addToTimeline(timeline, 'node_nemesis_3', 'nemesis');
 
         // Add Core and Finale to Timeline
-
-        // TODO: Add default events to timeline
+        if (selectedCampaign.core_fight_year !== null && selectedCampaign.node_core !== null) {
+            timeline[selectedCampaign.core_fight_year].push(`NE - ${selectedCampaign.node_core}`);
+        }
+        if (selectedCampaign.finale_fight_year !== null && selectedCampaign.node_finale !== null) {
+            timeline[selectedCampaign.finale_fight_year].push(`NE - ${selectedCampaign.node_finale}`);
+        }
+        // Add default events to timeline
+        Object.keys(selectedCampaign.default_timeline).forEach((yearKey: string) => {
+            selectedCampaign.default_timeline[Number(yearKey)].forEach((yearData: string) => {
+                timeline[Number(yearKey)].push(yearData);
+            });
+        });
         console.log(timeline);
     };
     return (
