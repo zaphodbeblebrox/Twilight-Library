@@ -14,11 +14,11 @@
         "wanderers": ["Luck the Wanderer"],
         "pillars": ["Arc Survivors", "Characters", "Scouts", "Seed Patterns"],
         "milestones": [
-            { "trigger": "Population reaches 0", "event": "Game Over" },
-            { "trigger": "Population reaches 15", "event": "Principle: Society" },
-            { "trigger": "First child is born", "event": "Principle: New Life" },
-            { "trigger": "First time death count is updated", "event": "Principle: Death" },
-            { "trigger": "First Survivor to reach 3 understanding", "event": "Design & Dandelions" }
+            "Population reaches 0 - Game Over",
+            "Population reaches 15 - Principle: Society",
+            "First child is born - Principle: New Life",
+            "First time death count is updated - Principle: Death",
+            "First Survivor to reach 3 understanding - Design & Dandelions"
         ],
         "flexible_nemesis_encounters": true,
         "nn1_lvl1_fight_year": null,
@@ -63,11 +63,11 @@
         "wanderers": [],
         "pillars": [],
         "milestones": [
-            { "trigger": "Population reaches 0", "event": "Game Over" },
-            { "trigger": "Population reaches 15", "event": "Principle: Society" },
-            { "trigger": "First child is born", "event": "Principle: New Life" },
-            { "trigger": "First time death count is updated", "event": "Principle: Death" },
-            { "trigger": "Settlement has 5 innovations", "event": "Hooded Knight" }
+            "Population reaches 0 - Game Over",
+            "Population reaches 15 - Principle: Society",
+            "First child is born - Principle: New Life",
+            "First time death count is updated - Principle: Death",
+            "Settlement has 5 innovations - Hooded Knight"
         ],
         "flexible_nemesis_encounters": true,
         "nn1_lvl1_fight_year": null,
@@ -109,10 +109,10 @@
         "wanderers": [],
         "pillars": [],
         "milestones": [
-            { "trigger": "Population reaches 0", "event": "Game Over" },
-            { "trigger": "First Child is born", "event": "Principle: New Life" },
-            { "trigger": "Population reaches 15", "event": "Principle: Society" },
-            { "trigger": "First time death count is updated", "event": "Principle: Death" }
+            "Population reaches 0 - Game Over",
+            "Population reaches 15 - Principle: Society",
+            "First child is born - Principle: New Life",
+            "First time death count is updated - Principle: Death"
         ],
         "flexible_nemesis_encounters": false,
         "nn1_lvl1_fight_year": null,
@@ -158,11 +158,11 @@
         "wanderers": [],
         "pillars": [],
         "milestones": [
-            { "trigger": "Population reaches 0", "event": "Game Over" },
-            { "trigger": "Not victorious against Nemesis", "event": "Game Over" },
-            { "trigger": "Population reaches 15", "event": "Principle: Society" },
-            { "trigger": "First time death count is updated", "event": "Principle: Death" },
-            { "trigger": "Settlement has 8 innovations", "event": "Edged Tonometry" }
+            "Population reaches 0 - Game Over",
+            "Not victorious against a Nemesis - Game Over",
+            "Population reaches 15 - Principle: Society",
+            "First time death count is updated - Principle: Death",
+            "Settlement has 8 innovations - Edged Tonometry"
         ],
         "flexible_nemesis_encounters": false,
         "nn1_lvl1_fight_year": null,

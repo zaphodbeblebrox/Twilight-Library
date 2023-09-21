@@ -32,7 +32,7 @@ export type NodeCoreFinaleLists = {
 export type TypeCampaignData = NodePillarLists &
     NemesisFightYearLists &
     NodeCoreFinaleLists & {
-        milestones: { trigger: string; event: string }[];
+        milestones: string[];
         flexible_nemesis_encounters: boolean;
         core_fight_year: number;
         timeline: Record<string, string[]>;
