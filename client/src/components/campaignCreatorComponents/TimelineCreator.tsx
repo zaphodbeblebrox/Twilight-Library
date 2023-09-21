@@ -7,14 +7,13 @@ import TimelineTable from '../primitiveComponents/TimelineTable';
 import { TypeCampaignData } from './CampaignTypeConfig';
 
 interface TimelineCreatorProps {
-    settlementName: string;
     campaignSettings: TypeCampaignData;
     setCampaignSettings: React.Dispatch<React.SetStateAction<TypeCampaignData>>;
 }
 
 type campaignDataTypes = string | Record<number, string[]> | Record<string, Record<number, boolean>>;
 
-const TimelineCreator = ({ settlementName, campaignSettings, setCampaignSettings }: TimelineCreatorProps) => {
+const TimelineCreator = ({ campaignSettings, setCampaignSettings }: TimelineCreatorProps) => {
     const [timeline, setTimeline] = useState(campaignSettings.timeline);
     console.log(timeline);
 
@@ -29,7 +28,7 @@ const TimelineCreator = ({ settlementName, campaignSettings, setCampaignSettings
         const updatedCampaign: TypeCampaignData = { ...campaignSettings };
         updatedCampaign.timeline = { ...timeline };
         setCampaignSettings(updatedCampaign);
-        navigate('/twilight-library/dashboard');
+        navigate('/twilight-library/dashboard/create-campaign/final-settings');
     };
     console.log('campaign settings', campaignSettings);
     console.log('timeline', timeline);
@@ -37,19 +36,6 @@ const TimelineCreator = ({ settlementName, campaignSettings, setCampaignSettings
     const handleUpdateTimeline = (updatedTimeline: Record<number, string[]>) => {
         setTimeline(updatedTimeline);
         // TODO: Save data to database
-    };
-
-    const handleSaveCampaignOnServer = () => {
-        const campaignData: Record<string, campaignDataTypes> = {};
-        campaignData['timeline'] = { ...timeline };
-        campaignData['name'] = settlementName;
-        // TODO: Loop through quarries to make data structure
-
-        // TODO: Loop through nemesis to make data structure
-
-        // TODO: Save data to database
-
-        // TODO: Navigate to dashboard
     };
 
     return (
@@ -68,7 +54,7 @@ const TimelineCreator = ({ settlementName, campaignSettings, setCampaignSettings
                 >
                     Back
                 </Button>
-                <Button onClick={(e) => handleNavigation(e)}>Milestones</Button>
+                <Button onClick={(e) => handleNavigation(e)}>Final Settings</Button>
             </Flex>
         </Flex>
     );

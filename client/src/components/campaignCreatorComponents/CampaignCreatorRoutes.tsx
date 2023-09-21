@@ -4,6 +4,7 @@ import TimelineCreator from './TimelineCreator';
 import presetCampaignData from '../../static_data/preset_campaigns.json';
 import { useState } from 'react';
 import { TypeCampaignData } from './CampaignTypeConfig';
+import CampaignFinalSettings from './CampaignFinalSettings';
 
 function CampaignCreatorRoutes() {
     const intializeDefaultCampaign = () => {
@@ -33,7 +34,13 @@ function CampaignCreatorRoutes() {
             <Route
                 path="/timeline"
                 element={
-                    <TimelineCreator
+                    <TimelineCreator campaignSettings={selectedCampaign} setCampaignSettings={setSelectedCampaign} />
+                }
+            />
+            <Route
+                path="/final-settings"
+                element={
+                    <CampaignFinalSettings
                         settlementName={settlementName}
                         campaignSettings={selectedCampaign}
                         setCampaignSettings={setSelectedCampaign}
