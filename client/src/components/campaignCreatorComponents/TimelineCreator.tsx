@@ -9,35 +9,14 @@ import { TypeCampaignData } from './CampaignTypeConfig';
 interface TimelineCreatorProps {
     settlementName: string;
     campaignSettings: TypeCampaignData;
-    timeline: Record<number, string[]>;
-    setTimeline: React.Dispatch<React.SetStateAction<{}>>;
+    setCampaignSettings: React.Dispatch<React.SetStateAction<TypeCampaignData>>;
 }
 
 type campaignDataTypes = string | Record<number, string[]> | Record<string, Record<number, boolean>>;
 
-const TimelineCreator = ({ settlementName, campaignSettings }: TimelineCreatorProps) => {
-    const maximumYears: number = 40;
-    const setDefaultTimeline = () => {
-        const newTimeline: Record<number, string[]> = {};
-        for (let i: number = 1; i <= maximumYears; i++) {
-            newTimeline[i] = [];
-        }
-        const trueKeys = Object.keys(campaignSettings).filter((key) => campaignSettings[key] === true);
-        const jsonData: Record<string, Record<string, string[]>> = ccData['timeline'];
-        trueKeys.forEach((key: string) => {
-            if (jsonData.hasOwnProperty(key)) {
-                const jsonKeyData: Record<string, string[]> = jsonData[key];
-                Object.keys(jsonKeyData).forEach((yearKey: string) => {
-                    jsonKeyData[yearKey].forEach((yearData: string) => {
-                        newTimeline[parseInt(yearKey, 10)].push(yearData);
-                    });
-                });
-            }
-        });
-        console.log('timeline', newTimeline);
-        return newTimeline;
-    };
-    const [timeline, setTimeline] = useState(setDefaultTimeline);
+const TimelineCreator = ({ settlementName, campaignSettings, setCampaignSettings }: TimelineCreatorProps) => {
+    const [timeline, setTimeline] = useState(campaignSettings.timeline);
+    console.log(timeline);
 
     const navigate = useNavigate();
     const handleCancel = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
