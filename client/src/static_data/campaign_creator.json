@@ -30,34 +30,34 @@
         },
         "nemesis": {
             "Butcher": {
-                "4": ["NE: Butcher Lvl 1"],
-                "16": ["NE: Butcher Lvl 2"],
-                "23": ["NE: Butcher Lvl 3"]
+                "4": ["NE - Butcher Lvl 1"],
+                "16": ["NE - Butcher Lvl 2"],
+                "23": ["NE - Butcher Lvl 3"]
             },
             "Manhunter": {
                 "5": ["The Hanged Man"],
-                "10": ["NE: Manhunter Lvl 1"],
-                "16": ["NE: Manhunter Lvl 2"],
-                "22": ["NE: Manhunter Lvl 3"]
+                "10": ["NE - Manhunter Lvl 1"],
+                "16": ["NE - Manhunter Lvl 2"],
+                "22": ["NE - Manhunter Lvl 3"]
             },
             "Atnas": {
                 "6": ["Unwanted Gifts"],
-                "9": ["NE: Atnas Lvl 1"],
-                "18": ["NE: Atnas Lvl 2"],
-                "28": ["NE: Atnas Lvl 3"]
+                "9": ["NE - Atnas Lvl 1"],
+                "18": ["NE - Atnas Lvl 2"],
+                "28": ["NE - Atnas Lvl 3"]
             },
             "King's Man": {
                 "6": ["Armored Strangers"],
-                "9": ["NE: King's Man Lvl 1"],
-                "19": ["NE: King's Man Lvl 2"],
-                "28": ["NE: King's Man Lvl 3"]
+                "9": ["NE - King's Man Lvl 1"],
+                "19": ["NE - King's Man Lvl 2"],
+                "28": ["NE - King's Man Lvl 3"]
             },
             "Lion Knight": { "6": ["An Uninvited Guest"] },
             "Slenderman": {
                 "6": ["It's Already Here"],
-                "9": ["NE: Slenderman Lvl 1"],
-                "18": ["NE: Slenderman Lvl 2"],
-                "28": ["NE: Slenderman Lvl 3"]
+                "9": ["NE - Slenderman Lvl 1"],
+                "18": ["NE - Slenderman Lvl 2"],
+                "28": ["NE - Slenderman Lvl 3"]
             },
             "The Hand": { "11": ["Regal Visit"], "13": ["NE: The Hand Lvl 1"] }
         },
