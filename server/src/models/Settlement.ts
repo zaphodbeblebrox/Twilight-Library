@@ -20,6 +20,13 @@ export interface SettlementInterface {
     timeline: Record<number, string[]>;
     quarries: Record<string, Record<string, Record<number, boolean>>>;
     nemesis: Record<string, Record<string, Record<number, boolean>>>;
+    survivors: number[];
+    courage_event_1: string;
+    courage_event_2: string;
+    understanding_event_1: string;
+    understanding_event_2: string;
+    milestones: Record<string, boolean>;
+    constellations: boolean;
 }
 
 export interface SettlementModel extends SettlementInterface, Document {}
@@ -143,6 +150,31 @@ const SettlementSchema: Schema = new Schema(
             type: [Number],
             required: false,
             default: [],
+        },
+        courage_event_1: {
+            type: String,
+            required: true,
+        },
+        courage_event_2: {
+            type: String,
+            required: true,
+        },
+        understanding_event_1: {
+            type: String,
+            required: true,
+        },
+        understanding_event_2: {
+            type: String,
+            required: true,
+        },
+        milestones: {
+            type: Object,
+            required: true,
+        },
+        constellations: {
+            type: Boolean,
+            required: false,
+            default: false,
         },
     },
     {
