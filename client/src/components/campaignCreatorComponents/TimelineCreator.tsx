@@ -54,7 +54,7 @@ const TimelineCreator = ({ campaignSettings, setCampaignSettings }: TimelineCrea
                 >
                     Back
                 </Button>
-                <Button onClick={(e) => handleNavigation(e)}>Final Settings</Button>
+                <Button onClick={(e) => handleNavigation(e)}>Triggered Events</Button>
             </Flex>
         </Flex>
     );

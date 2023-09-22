@@ -29,18 +29,22 @@ export type NodeCoreFinaleLists = {
     node_finale: string | null;
 };
 
+export type CourageUnderstandingLists = {
+    courage_event_1: string;
+    courage_event_2: string;
+    understanding_event_1: string;
+    understanding_event_2: string;
+};
+
 export type TypeCampaignData = NodePillarLists &
     NemesisFightYearLists &
+    CourageUnderstandingLists &
     NodeCoreFinaleLists & {
         milestones: string[];
         flexible_nemesis_encounters: boolean;
         core_fight_year: number;
         timeline: Record<string, string[]>;
         default_timeline: Record<string, string[]>;
-        courage_event_1: string;
-        courage_event_2: string;
-        understanding_event_1: string;
-        understanding_event_2: string;
         constellations: boolean;
     };
 

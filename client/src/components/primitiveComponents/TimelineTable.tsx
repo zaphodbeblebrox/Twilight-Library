@@ -1,5 +1,5 @@
 import { Flex, Separator, Table } from '@radix-ui/themes';
-import { TLAddTimelineAlert, TLEditTimelineAlert } from './AlertBoxes';
+import { TwilightAddTimelineAlert, TwilightEditTimelineAlert } from './AlertBoxes';
 
 interface TimelineTableProps {
     timeline: Record<number, string[]>;
@@ -48,7 +48,7 @@ const TimelineTable = ({ timeline, onChange }: TimelineTableProps) => {
                                     {entries.map((entry, idy) => {
                                         return (
                                             <Flex key={idy} direction="row" align="start" gap="2">
-                                                <TLEditTimelineAlert
+                                                <TwilightEditTimelineAlert
                                                     year={Number(year)}
                                                     maxYears={Object.keys(timeline).length}
                                                     entry={entry}
@@ -64,7 +64,7 @@ const TimelineTable = ({ timeline, onChange }: TimelineTableProps) => {
                                 </Flex>
                             </Table.Cell>
                             <Table.Cell justify="center">
-                                <TLAddTimelineAlert year={Number(year)} onSubmit={addTimelineEvent} />
+                                <TwilightAddTimelineAlert year={Number(year)} onSubmit={addTimelineEvent} />
                             </Table.Cell>
                         </Table.Row>
                     );

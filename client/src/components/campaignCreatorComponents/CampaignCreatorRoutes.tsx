@@ -4,7 +4,7 @@ import TimelineCreator from './TimelineCreator';
 import presetCampaignData from '../../static_data/preset_campaigns.json';
 import { useState } from 'react';
 import { TypeCampaignData } from './CampaignTypeConfig';
-import CampaignFinalSettings from './CampaignFinalSettings';
+import CampaignFinalSettings from './TriggerEventsSettings';
 
 function CampaignCreatorRoutes() {
     const intializeDefaultCampaign = () => {
@@ -15,7 +15,7 @@ function CampaignCreatorRoutes() {
     };
 
     const [selectedCampaign, setSelectedCampaign] = useState(intializeDefaultCampaign);
-    const [settlementName, setSettlementName] = useState('');
+    const [settlementName, setSettlementName] = useState('Gotham');
 
     return (
         <Routes>
@@ -34,17 +34,28 @@ function CampaignCreatorRoutes() {
             <Route
                 path="/timeline"
                 element={
-                    <TimelineCreator campaignSettings={selectedCampaign} setCampaignSettings={setSelectedCampaign} />
+                    Object.entries(selectedCampaign.timeline).length > 0 ? (
+                        <TimelineCreator
+                            campaignSettings={selectedCampaign}
+                            setCampaignSettings={setSelectedCampaign}
+                        />
+                    ) : (
+                        <Navigate to="/twilight-library/dashboard/create-campaign" />
+                    )
                 }
             />
             <Route
                 path="/final-settings"
                 element={
-                    <CampaignFinalSettings
-                        settlementName={settlementName}
-                        campaignSettings={selectedCampaign}
-                        setCampaignSettings={setSelectedCampaign}
-                    />
+                    Object.entries(selectedCampaign.timeline).length > 0 ? (
+                        <CampaignFinalSettings
+                            settlementName={settlementName}
+                            campaignSettings={selectedCampaign}
+                            setCampaignSettings={setSelectedCampaign}
+                        />
+                    ) : (
+                        <Navigate to="/twilight-library/dashboard/create-campaign" />
+                    )
                 }
             />
         </Routes>
