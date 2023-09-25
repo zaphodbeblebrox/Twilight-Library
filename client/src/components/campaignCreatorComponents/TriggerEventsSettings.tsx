@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import TimelineTable from '../primitiveComponents/TimelineTable';
 import { CourageUnderstandingLists, TypeCampaignData } from './CampaignTypeConfig';
-import { TwilightEditTextAlert } from '../primitiveComponents/AlertBoxes';
+import { TwilightAddEventAlert, TwilightEditTextAlert } from '../primitiveComponents/AlertBoxes';
 
 interface CampaignFinalSettingsProps {
     settlementName: string;
@@ -16,6 +16,11 @@ const CampaignFinalSettings = ({
     campaignSettings,
     setCampaignSettings,
 }: CampaignFinalSettingsProps) => {
+    const navigate = useNavigate();
+    const handleBack = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        event.preventDefault();
+        navigate('/twilight-library/dashboard/create-campaign/timeline');
+    };
     const handleCourageUnderstandingChange = (newValue: string, objectKey: string) => {
         const updatedCampaign: TypeCampaignData = { ...campaignSettings };
         updatedCampaign[objectKey as keyof CourageUnderstandingLists] = newValue;
@@ -60,58 +65,82 @@ const CampaignFinalSettings = ({
                         );
                     })}
                 </Flex>
+                <TwilightAddEventAlert
+                    buttonText="Add Milestone"
+                    title="Add Milestone Event"
+                    label="Milestone:"
+                    onSubmit={(addedEvent) => {
+                        const updatedCampaign: TypeCampaignData = { ...campaignSettings };
+                        updatedCampaign.milestones.push(addedEvent);
+                        setCampaignSettings(updatedCampaign);
+                    }}
+                />
                 <Separator my="3" size="4" />
                 <Flex direction="column" justify="between" align="center" gap="3">
                     <Heading size="6">Courage Events</Heading>
-                    <Flex direction="row" justify="between" align="center" gap="3">
-                        <Text>Courage Event 1: </Text>
-                        <TwilightEditTextAlert
-                            labelText={'Edit Courage Event 1'}
-                            textInput={campaignSettings.courage_event_1}
-                            onSubmit={(newValue: string, objectKey?: string) =>
-                                handleCourageUnderstandingChange(newValue, objectKey!)
-                            }
-                            objectKey="courage_event_1"
-                        />
-                    </Flex>
-                    <Flex direction="row" justify="between" align="center" gap="3">
-                        <Text>Courage Event 2: </Text>
-                        <TwilightEditTextAlert
-                            labelText={'Edit Courage Event 2'}
-                            textInput={campaignSettings.courage_event_2}
-                            onSubmit={(newValue: string, objectKey?: string) =>
-                                handleCourageUnderstandingChange(newValue, objectKey!)
-                            }
-                            objectKey="courage_event_2"
-                        />
+                    <Flex direction="column" justify="between" align="start" gap="3">
+                        <Flex direction="row" justify="between" align="center" gap="3">
+                            <Text>Courage Event 1: </Text>
+                            <TwilightEditTextAlert
+                                labelText={'Edit Courage Event 1'}
+                                textInput={campaignSettings.courage_event_1}
+                                onSubmit={(newValue: string, objectKey?: string) =>
+                                    handleCourageUnderstandingChange(newValue, objectKey!)
+                                }
+                                objectKey="courage_event_1"
+                            />
+                        </Flex>
+                        <Flex direction="row" justify="between" align="center" gap="3">
+                            <Text>Courage Event 2: </Text>
+                            <TwilightEditTextAlert
+                                labelText={'Edit Courage Event 2'}
+                                textInput={campaignSettings.courage_event_2}
+                                onSubmit={(newValue: string, objectKey?: string) =>
+                                    handleCourageUnderstandingChange(newValue, objectKey!)
+                                }
+                                objectKey="courage_event_2"
+                            />
+                        </Flex>
                     </Flex>
                 </Flex>
                 <Separator my="3" size="4" />
                 <Flex direction="column" justify="between" align="center" gap="3">
                     <Heading size="6">Understanding Events</Heading>
-                    <Flex direction="row" justify="between" align="center" gap="3">
-                        <Text>Understanding Event 1: </Text>
-                        <TwilightEditTextAlert
-                            labelText={'Edit Understanding Event 1'}
-                            textInput={campaignSettings.understanding_event_1}
-                            onSubmit={(newValue: string, objectKey?: string) =>
-                                handleCourageUnderstandingChange(newValue, objectKey!)
-                            }
-                            objectKey="understanding_event_1"
-                        />
-                    </Flex>
-                    <Flex direction="row" justify="between" align="center" gap="3">
-                        <Text>Understanding Event 2: </Text>
-                        <TwilightEditTextAlert
-                            labelText={'Edit Understanding Event 2'}
-                            textInput={campaignSettings.understanding_event_2}
-                            onSubmit={(newValue: string, objectKey?: string) =>
-                                handleCourageUnderstandingChange(newValue, objectKey!)
-                            }
-                            objectKey="understanding_event_2"
-                        />
+                    <Flex direction="column" justify="center" align="start" gap="3">
+                        <Flex direction="row" justify="between" align="center" gap="3">
+                            <Text>Understanding Event 1: </Text>
+                            <TwilightEditTextAlert
+                                labelText={'Edit Understanding Event 1'}
+                                textInput={campaignSettings.understanding_event_1}
+                                onSubmit={(newValue: string, objectKey?: string) =>
+                                    handleCourageUnderstandingChange(newValue, objectKey!)
+                                }
+                                objectKey="understanding_event_1"
+                            />
+                        </Flex>
+                        <Flex direction="row" justify="between" align="center" gap="3">
+                            <Text>Understanding Event 2: </Text>
+                            <TwilightEditTextAlert
+                                labelText={'Edit Understanding Event 2'}
+                                textInput={campaignSettings.understanding_event_2}
+                                onSubmit={(newValue: string, objectKey?: string) =>
+                                    handleCourageUnderstandingChange(newValue, objectKey!)
+                                }
+                                objectKey="understanding_event_2"
+                            />
+                        </Flex>
                     </Flex>
                 </Flex>
+            </Flex>
+            <Flex justify="center" align="center" gap="5">
+                <Button
+                    onClick={(e) => {
+                        handleBack(e);
+                    }}
+                >
+                    Back
+                </Button>
+                <Button onClick={handleSaveCampaignOnServer}>Create Campaign</Button>
             </Flex>
         </Flex>
     );

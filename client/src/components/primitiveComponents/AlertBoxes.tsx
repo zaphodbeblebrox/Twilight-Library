@@ -59,29 +59,31 @@ const TwilightEditTextAlert = ({ labelText, textInput, objectKey, onSubmit, onDe
 };
 
 interface TwilightAddTimelineAlertProps {
-    year: number;
-    onSubmit: (year: number, timelineEvent: string) => void;
+    buttonText: string;
+    title: string;
+    label: string;
+    onSubmit: (newValue: string) => void;
 }
 
-const TwilightAddTimelineAlert = ({ year, onSubmit }: TwilightAddTimelineAlertProps) => {
-    const [timelineEvent, setTimelineEvent] = useState('');
+const TwilightAddEventAlert = ({ buttonText, title, label, onSubmit }: TwilightAddTimelineAlertProps) => {
+    const [storyEvent, setStoryEvent] = useState('');
 
     const handleSubmitEntry = () => {
-        onSubmit(year, timelineEvent);
-        setTimelineEvent('');
+        onSubmit(storyEvent);
+        setStoryEvent('');
     };
 
     return (
         <AlertDialog.Root>
             <AlertDialog.Trigger>
-                <Button>+</Button>
+                <Button>{buttonText}</Button>
             </AlertDialog.Trigger>
             <AlertDialog.Content style={{ maxWidth: 450 }}>
-                <AlertDialog.Title>Add Story Event</AlertDialog.Title>
+                <AlertDialog.Title>{title}</AlertDialog.Title>
                 <Flex direction="row" justify="center" align="center" gap="3">
-                    <Label.Root htmlFor="event">Event:</Label.Root>
+                    <Label.Root htmlFor="event">{label}</Label.Root>
                     <TextField.Root>
-                        <TextField.Input value={timelineEvent} onChange={(e) => setTimelineEvent(e.target.value)} />
+                        <TextField.Input value={storyEvent} onChange={(e) => setStoryEvent(e.target.value)} />
                     </TextField.Root>
                 </Flex>
 
@@ -164,4 +166,4 @@ const TwilightEditTimelineAlert = ({
     );
 };
 
-export { TwilightAddTimelineAlert, TwilightEditTimelineAlert, TwilightEditTextAlert };
+export { TwilightAddEventAlert, TwilightEditTimelineAlert, TwilightEditTextAlert };
