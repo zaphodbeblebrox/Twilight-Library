@@ -112,10 +112,10 @@ const CampaignCreator = ({
                 timeline[Number(yearKey)].push(yearData);
             });
         });
-        console.log(timeline);
+        // console.log(timeline);
         const updatedCampaign = { ...selectedCampaign };
         updatedCampaign.timeline = { ...timeline };
-        console.log(updatedCampaign);
+        // console.log(updatedCampaign);
         setSelectedCampaign(updatedCampaign);
 
         navigate('/twilight-library/dashboard/create-campaign/timeline');

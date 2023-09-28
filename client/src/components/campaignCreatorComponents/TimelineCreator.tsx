@@ -15,9 +15,8 @@ type campaignDataTypes = string | Record<number, string[]> | Record<string, Reco
 
 const TimelineCreator = ({ campaignSettings, setCampaignSettings }: TimelineCreatorProps) => {
     const [timeline, setTimeline] = useState(campaignSettings.timeline);
-    console.log(timeline);
-
     const navigate = useNavigate();
+
     const handleCancel = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         event.preventDefault();
         navigate('/twilight-library/dashboard/create-campaign');
@@ -30,8 +29,8 @@ const TimelineCreator = ({ campaignSettings, setCampaignSettings }: TimelineCrea
         setCampaignSettings(updatedCampaign);
         navigate('/twilight-library/dashboard/create-campaign/final-settings');
     };
-    console.log('campaign settings', campaignSettings);
-    console.log('timeline', timeline);
+    // console.log('campaign settings', campaignSettings);
+    // console.log('timeline', timeline);
 
     const handleUpdateTimeline = (updatedTimeline: Record<number, string[]>) => {
         setTimeline(updatedTimeline);

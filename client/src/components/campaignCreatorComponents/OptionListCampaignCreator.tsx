@@ -20,7 +20,7 @@ function OptionListCampaignCreator({ header, optionKey, data, setData }: OptionL
             const modifiedList: string[] = updatedData[optionKey].filter((item) => item !== label);
             updatedData[optionKey] = [...modifiedList];
         }
-        console.log(updatedData);
+        // console.log(updatedData);
         setData(updatedData);
     };
     return (

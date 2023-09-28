@@ -6,6 +6,7 @@ import TimelineTable from '../primitiveComponents/TimelineTable';
 import { TypeInitializedSettlement, TypeServerSettlement } from '../../../../SettlementTypes';
 import { CourageUnderstandingLists, NodePillarLists, TypeCampaignData } from './CampaignTypeConfig';
 import { TwilightAddEventAlert, TwilightEditTextAlert } from '../primitiveComponents/AlertBoxes';
+import axios from 'axios';
 
 interface CampaignFinalSettingsProps {
     settlementName: string;
@@ -75,6 +76,7 @@ const CampaignFinalSettings = ({
         campaignData.nemesis[campaignSettings.node_core as keyof NodePillarLists] = { 1: false };
         // TODO: Save data to database
         console.log(campaignData);
+
         // TODO: Navigate to dashboard
     };
     return (
