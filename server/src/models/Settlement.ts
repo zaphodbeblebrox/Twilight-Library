@@ -171,17 +171,17 @@ const SettlementSchema: Schema = new Schema(
         milestones: {
             type: Object,
             required: true,
-            validate: {
-                validator: (value: String) => {
-                    for (const key in value) {
-                        if (typeof value[key] !== 'boolean') {
-                            return false;
-                        }
-                    }
-                    return true;
-                },
-                message: 'Resources is strictly an Record<string, boolean>!!!',
-            },
+            // validate: {
+            //     validator: (value: String) => {
+            //         for (const key in value) {
+            //             if (typeof value[key] !== 'boolean') {
+            //                 return false;
+            //             }
+            //         }
+            //         return true;
+            //     },
+            //     message: 'Resources is strictly an Record<string, boolean>!!!',
+            // },
         },
         constellations: {
             type: Boolean,

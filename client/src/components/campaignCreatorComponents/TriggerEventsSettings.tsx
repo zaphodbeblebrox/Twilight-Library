@@ -7,6 +7,7 @@ import { TypeInitializedSettlement, TypeServerSettlement } from '../../../../Set
 import { CourageUnderstandingLists, NodePillarLists, TypeCampaignData } from './CampaignTypeConfig';
 import { TwilightAddEventAlert, TwilightEditTextAlert } from '../primitiveComponents/AlertBoxes';
 import axios from 'axios';
+import { settlementApi } from '../../service/api';
 
 interface CampaignFinalSettingsProps {
     settlementName: string;
@@ -76,7 +77,19 @@ const CampaignFinalSettings = ({
         campaignData.nemesis[campaignSettings.node_core as keyof NodePillarLists] = { 1: false };
         // TODO: Save data to database
         console.log(campaignData);
-
+        axios
+            .post(`${settlementApi}/create`, campaignData)
+            .then((res) => {
+                navigate('/twilight-library/dashboard');
+            })
+            .catch((err) => {
+                const errArray = [];
+                // console.log(err);
+                for (const key of Object.keys(err.response.data.errors)) {
+                    errArray.push(err.response.data.errors[key].message);
+                }
+                console.log(errArray);
+            });
         // TODO: Navigate to dashboard
     };
     return (

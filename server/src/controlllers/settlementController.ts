@@ -3,7 +3,19 @@ import mongoose from 'mongoose';
 import Settlement from '../models/Settlement';
 
 const createSettlement = (req: Request, res: Response, next: NextFunction) => {
-    const { name, timeline, quarries, nemesis } = req.body;
+    const {
+        name,
+        timeline,
+        quarries,
+        nemesis,
+        constellations,
+        arc_survivors,
+        understanding_event_1,
+        understanding_event_2,
+        courage_event_1,
+        courage_event_2,
+        milestones,
+    } = req.body;
 
     const settlement = new Settlement({
         _id: new mongoose.Types.ObjectId(),
@@ -11,6 +23,13 @@ const createSettlement = (req: Request, res: Response, next: NextFunction) => {
         timeline,
         quarries,
         nemesis,
+        courage_event_1,
+        courage_event_2,
+        milestones,
+        understanding_event_1,
+        understanding_event_2,
+        arc_survivors,
+        constellations,
     });
 
     return settlement
