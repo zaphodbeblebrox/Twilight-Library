@@ -2,7 +2,9 @@ import { Button, Flex, Heading, Separator, Text } from '@radix-ui/themes';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import TimelineTable from '../primitiveComponents/TimelineTable';
-import { CourageUnderstandingLists, TypeCampaignData } from './CampaignTypeConfig';
+// import { SettlementInterface } from '../../../../server/src/models/Settlement';
+import { TypeInitializedSettlement, TypeServerSettlement } from '../../../../SettlementTypes';
+import { CourageUnderstandingLists, NodePillarLists, TypeCampaignData } from './CampaignTypeConfig';
 import { TwilightAddEventAlert, TwilightEditTextAlert } from '../primitiveComponents/AlertBoxes';
 
 interface CampaignFinalSettingsProps {
@@ -27,12 +29,52 @@ const CampaignFinalSettings = ({
         setCampaignSettings(updatedCampaign);
     };
     const handleSaveCampaignOnServer = () => {
-        // const campaignData: Record<string, campaignDataTypes> = {};
-        // campaignData['timeline'] = { ...timeline };
-        // campaignData['name'] = settlementName;
-        // TODO: Loop through quarries to make data structure
-        // TODO: Loop through nemesis to make data structure
+        const campaignData: TypeInitializedSettlement = {
+            name: settlementName,
+            timeline: { ...campaignSettings.timeline },
+            courage_event_1: campaignSettings.courage_event_1,
+            courage_event_2: campaignSettings.courage_event_2,
+            understanding_event_1: campaignSettings.understanding_event_1,
+            understanding_event_2: campaignSettings.understanding_event_1,
+            milestones: {},
+            quarries: {},
+            nemesis: {},
+            constellations: campaignSettings.constellations,
+            arc_survivors: campaignSettings.pillars.includes('Arc Survivors'),
+        };
+        // Loop through milestones to make data structure
+        campaignSettings.milestones.forEach((milestone: string) => {
+            campaignData.milestones[milestone] = false;
+        });
+        // Loop through quarries to make data structure
+        const quarryList: string[] = ['node_quarry_1', 'node_quarry_2', 'node_quarry_3', 'node_quarry_4'];
+        quarryList.forEach((node: string) => {
+            campaignSettings[node as keyof NodePillarLists].forEach((quarry: string) => {
+                campaignData.quarries[quarry] = { 1: false, 2: false, 3: false };
+            });
+        });
+        // Check to add Legendary Monsters
+        if (Object.keys(campaignData.quarries).includes('White Lion')) {
+            campaignData.quarries['Beast of Sorrow'] = { 4: false };
+            campaignData.quarries['Great Golden Cat'] = { 4: false };
+        }
+        if (Object.keys(campaignData.quarries).includes('Screaming Antelope')) {
+            campaignData.quarries['Mad Steed'] = { 4: false };
+        }
+        if (Object.keys(campaignData.quarries).includes('White Lion')) {
+            campaignData.quarries['Golden Eyed King 1000 Years'] = { 5: false };
+        }
+        // Loop through nemesis to make data structure
+        const nemesisList: string[] = ['node_nemesis_1', 'node_nemesis_2', 'node_nemesis_3'];
+        nemesisList.forEach((node: string) => {
+            campaignSettings[node as keyof NodePillarLists].forEach((nemesis: string) => {
+                campaignData.nemesis[nemesis] = { 1: false, 2: false, 3: false };
+            });
+        });
+        // Add Core Monster
+        campaignData.nemesis[campaignSettings.node_core as keyof NodePillarLists] = { 1: false };
         // TODO: Save data to database
+        console.log(campaignData);
         // TODO: Navigate to dashboard
     };
     return (
