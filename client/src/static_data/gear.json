@@ -1,0 +1,1759 @@
+{
+    "Unknown Katana": {
+        "types": ["weapon", "melee", "grand", "katana", "heavy", "deathmetal", "other"],
+        "stats": { "speed": 3, "accuracy": 6, "strength": 12 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "red" },
+        "keywords": ["[Sharp]", "[Unique]"],
+        "ability": "At the end of your attack, if you wounded the monster, {story_event} Great Divide."
+    },
+    "Unknown Sword": {
+        "types": ["weapon", "melee", "sword", "deathmetal", "other"],
+        "stats": { "speed": 3, "accuracy": 6, "strength":  18},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[Cursed]", "[Unique]"],
+        "ability": "The first time you wound with this each Showdown, gain {disorder} [Immortal] and +1d1000 insanity."
+    },
+    "Unknown Club": {
+        "types": ["weapon", "melee", "grand", "club", "heavy", "deathmetal", "other"],
+        "stats": { "speed": 1, "accuracy": 6, "strength":  17},
+        "affinities": { "top": "", "right": "green", "bottom": "blue", "left": "" },
+        "keywords": ["[Slow]", "[Surpass] 5"],
+        "ability": "The first time you surpass with this each showdown, the monster is knocked down and ignores Indomitable this round."
+    },
+    "Unknown Spear": {
+        "types": ["weapon", "melee", "grand", "spear", "heavy", "deathmetal", "other"],
+        "stats": { "speed": 2, "accuracy": 6, "strength":  10},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[Reach] 2", "[Sharp]"],
+        "ability": "When you hit with this, draw {hit_location} from the discard pile. Suffer 2 brain damage for each hit. If you need to draw more cards than are discarded, die."
+    },
+    "Unknown Whip": {
+        "types": ["weapon", "melee", "grand", "whip", "dagger", "heavy", "deathmetal", "other"],
+        "stats": { "speed": 2, "accuracy": 7, "strength":  12},
+        "affinities": { "top": "", "right": "", "bottom": "blue", "left": "red" },
+        "keywords": ["[Reach] 3", "[Deadly]", "[Unique]"],
+        "ability": "When you draw {hit_location} without a critical wound, draw a Unknown Card and add its critical wound effect to this {hit_location}."
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    },
+    "": {
+        "types": ["", "", "", "", "", "", ""],
+        "stats": { "speed": , "accuracy": , "strength":  },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "" },
+        "keywords": ["[]", "[]"],
+        "ability": ""
+    }
+}
