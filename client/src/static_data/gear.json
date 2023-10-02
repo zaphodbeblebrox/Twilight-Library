@@ -314,7 +314,181 @@
         "stats": { "speed": 1, "accuracy": 8, "strength": 2 },
         "affinities": { "top": "green", "right": "", "bottom": "", "left": "", "center": "" },
         "abilities": ["After Hunt Phase setup, place the Mineral Gathering Event on any hunt space."]
-    } //,
+    },
+    "Dense Bone Arrows": {
+        "types": ["item", "bone", "ammunition", "arrow"],
+        "location": "Giga-Catarium",
+        "crafting": "x1 hooked claw, x2 white fur, x1 shimmering mane",
+        "stats": { "speed": 2, "accuracy": 5, "strength": 6 },
+        "affinities": { "top": "blue", "right": "red", "bottom": "", "left": "", "center": "" },
+        "abilities": ["[Ammo - Bow]", "[Sharp]"]
+    },
+    "Hooked Claw Knife": {
+        "types": ["weapon", "melee", "dagger", "bone"],
+        "location": "Giga-Catarium",
+        "crafting": "x1 hooked claw, x1 elder cat teeth, x2 organ",
+        "stats": { "speed": 3, "accuracy": 6, "strength": 7 },
+        "affinities": { "top": "red", "right": "red", "bottom": "red", "left": "red", "center": "" },
+        "abilities": [
+            "x4 {red_affinity}: When your wound causes a reaction where the monster moves, it suffers a wound."
+        ]
+    },
+    "Lion Slayer Cape": {
+        "types": ["item", "fur", "bone", "flammable"],
+        "location": "Giga-Catarium",
+        "crafting": "x1 hooked claw, x2 white lion fur, x1 shimmering mane",
+        "stats": { "armor": 1, "location": "chest" },
+        "affinities": { "top": "red", "right": "", "bottom": "green", "left": "", "center": "" },
+        "abilities": [
+            "[Accessory]",
+            "On Arrival, all survivors gain +1 survival.",
+            "If you are wearing fur armor, reduce all damage suffered by 1 to a minimum of 1."
+        ]
+    },
+    "Oxidized Beast Katar": {
+        "types": ["weapon", "melee", "katar", "metal", "bone"],
+        "location": "Giga-Catarium",
+        "crafting": "Oxidation, x1 lion beast katar, x2 hooked claw, x1 iron, x2 bone",
+        "stats": { "speed": 2, "accuracy": 7, "strength": 5 },
+        "affinities": { "top": "red", "right": "", "bottom": "red", "left": "", "center": "" },
+        "abilities": [
+            "[Deadly]",
+            "[Paired]",
+            "[Sharp]",
+            "x2 {red_affinity}: On a Perfect Hit, gain +4 strength for this attack."
+        ]
+    },
+    "White Lion Helm": {
+        "types": ["armor", "set", "fur", "heavy"],
+        "location": "Catarium",
+        "crafting": "x1 white fur, x1 great cat bone",
+        "stats": { "armor": 2, "location": "head" },
+        "affinities": { "top": "", "right": "", "bottom": "red", "left": "", "center": "" },
+        "abilities": [
+            "{red_puzzle}, {blue_affinity}: {activation} and 1 survival: Non-Deaf Insane survivors gain +2 strength tokens until end of round. All other survivors gain +1 insanity."
+        ]
+    },
+    "White Lion Coat": {
+        "types": ["armor", "set", "fur", "heavy"],
+        "location": "Catarium",
+        "crafting": "x1 white fur, x1 hide",
+        "stats": { "armor": 2, "location": "chest" },
+        "affinities": { "top": "blue", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["[Pounce]"]
+    },
+    "White Lion Skirt": {
+        "types": ["armor", "set", "fur", "heavy"],
+        "location": "Catarium",
+        "crafting": "x1 white fur, x1 hide",
+        "stats": { "armor": 2, "location": "waist" },
+        "affinities": { "top": "", "right": "red", "bottom": "", "left": "red", "center": "" },
+        "abilities": []
+    },
+    "White Lion Gauntlets": {
+        "types": ["armor", "set", "fur", "heavy"],
+        "location": "Catarium",
+        "crafting": "x1 white fur, x1 bone",
+        "stats": { "armor": 2, "location": "arms" },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["When you [Pounce], gain +1 accuracy for your next attack this turn."]
+    },
+    "White Lion Boots": {
+        "types": ["armor", "set", "fur", "heavy"],
+        "location": "Catarium",
+        "crafting": "x1 white fur, x1 hide",
+        "stats": { "armor": 2, "location": "legs" },
+        "affinities": { "top": "", "right": "red", "bottom": "red", "left": "", "center": "" },
+        "abilities": ["x2 {red_puzzle}: +1 Movement"]
+    },
+    "Lion Beast Katar": {
+        "types": ["weapon", "melee", "katar"],
+        "location": "Catarium",
+        "crafting": "x1 lion claw, x1 hide",
+        "stats": { "speed": 2, "accuracy": 7, "strength": 3 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["[Deadly]", "[Paired]"]
+    },
+    "Cat Eye Circlet": {
+        "types": ["item", "jewelry", "other"],
+        "location": "Catarium",
+        "crafting": "x1 eye of cat",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "blue", "center": "" },
+        "abilities": ["{activation}: Reveal the next 3 monster hit locations and put them back in any order."]
+    },
+    "Claw Head Arrow": {
+        "types": ["item", "ammunition", "arrow"],
+        "location": "Catarium",
+        "crafting": "x1 lion claw",
+        "stats": { "speed": 1, "accuracy": 6, "strength": 6 },
+        "affinities": { "top": "", "right": "blue", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Ammo - Bow]",
+            "[Slow]",
+            "If you hit, the monster gains a -1 evasion token. Limit once per showdown."
+        ]
+    },
+    "Whisker Harp": {
+        "types": ["item", "instrument", "noisy"],
+        "location": "Catarium",
+        "crafting": "x1 golden whiskers, x1 bone",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "blue", "center": "" },
+        "abilities": [
+            "On Arrival, all survivors gain +1 survival.",
+            "{activation}: Roll 1d10. On a 6+, discard 1 Mood currently in play."
+        ]
+    },
+    "King Spear": {
+        "types": ["weapon", "melee", "spear", "heavy", "two-handed"],
+        "location": "Catarium",
+        "crafting": "x1 lion claw, x1 great cat bone",
+        "stats": { "speed": 2, "accuracy": 6, "strength": 3 },
+        "affinities": { "top": "", "right": "red", "bottom": "", "left": "", "center": "" },
+        "abilities": ["[Reach] 2"]
+    },
+    "Lion Headdress": {
+        "types": ["item", "flammable"],
+        "location": "Catarium",
+        "crafting": "x1 shimmering mane",
+        "stats": { "armor": 1, "location": "head" },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["[Accessory]"]
+    },
+    "Cat Gut Bow": {
+        "types": ["weapon", "ranged", "bow", "two-handed"],
+        "location": "Catarium",
+        "crafting": "x1 sinew, x1 bone",
+        "stats": { "speed": 2, "accuracy": 7, "strength": 3 },
+        "affinities": { "top": "blue", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["[Cumbersome]", "[Range] 6", "[Aim]"]
+    },
+    "Lion Skin Cloak": {
+        "types": ["armor", "fur", "bone", "heavy", "flammable"],
+        "location": "Catarium",
+        "crafting": "x2 white fur",
+        "stats": { "armor": 0, "location": "chest" },
+        "affinities": { "top": "", "right": "green", "bottom": "", "left": "", "center": "" },
+        "abilities": ["Reduce damage from every hit suffered by 1 to a minimum of 1."]
+    },
+    "Cat Fang Knife": {
+        "types": ["weapon", "melee", "dagger", "bone"],
+        "location": "Catarium",
+        "crafting": "x1 elder cat teeth, x4 organ",
+        "stats": { "speed": 3, "accuracy": 6, "strength": 2 },
+        "affinities": { "top": "red", "right": "red", "bottom": "red", "left": "red", "center": "" },
+        "abilities": [
+            "x3 {red_affinity}: On a [Perfect Hit], gain +1 strength token. When knocked down, remove all your +1 strength tokens."
+        ]
+    },
+    "Frenzy Drink": {
+        "types": ["instrument", "consumable", "fragile"],
+        "location": "Catarium",
+        "crafting": "x1 lion testes",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["{activation} Consume: Suffer the [Frenzy] brain trauma. Can be used once per showdown."]
+    }
     // "": {
     //     "types": ["", "", "", "", "", "", "", "", ""],
     //     "location":"",
@@ -322,5 +496,5 @@
     //     "stats": {"speed": , "accuracy": , "strength": , "armor": , "location": ""},
     //     "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
     //     "abilities": ["", ""]
-    // }
+    // },
 }
