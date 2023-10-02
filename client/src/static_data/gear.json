@@ -1,6 +1,8 @@
 {
     "Unknown Katana": {
         "types": ["weapon", "melee", "grand", "katana", "heavy", "deathmetal", "other"],
+        "location": "Unknown Forge",
+        "crafting": "x1 master key, x2 deathmetal, x1 king's cloth, x1 leather",
         "stats": { "speed": 3, "accuracy": 6, "strength": 12 },
         "affinities": { "top": "", "right": "", "bottom": "", "left": "red", "center": "" },
         "abilities": [
@@ -11,6 +13,8 @@
     },
     "Unknown Sword": {
         "types": ["weapon", "melee", "sword", "deathmetal", "other"],
+        "location": "Unknown Forge",
+        "crafting": "x1 dark tower's ledger, x4 bone, x1 deathmetal, x1 perfect bone",
         "stats": { "speed": 3, "accuracy": 6, "strength": 18 },
         "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
         "abilities": [
@@ -21,6 +25,8 @@
     },
     "Unknown Club": {
         "types": ["weapon", "melee", "grand", "club", "heavy", "deathmetal", "other"],
+        "location": "Unknown Forge",
+        "crafting": "x3 deathmetal, x1 pylorix, x4 leather, x1 void fabric",
         "stats": { "speed": 1, "accuracy": 6, "strength": 17 },
         "affinities": { "top": "", "right": "green", "bottom": "blue", "left": "", "center": "" },
         "abilities": [
@@ -31,6 +37,8 @@
     },
     "Unknown Spear": {
         "types": ["weapon", "melee", "grand", "spear", "heavy", "deathmetal", "other"],
+        "location": "Unknown Forge",
+        "crafting": "x2 deathmetal, x1 king's collar, x1 skull, x2 leather, x1 antique bangle",
         "stats": { "speed": 2, "accuracy": 6, "strength": 10 },
         "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
         "abilities": [
@@ -41,6 +49,8 @@
     },
     "Unknown Whip": {
         "types": ["weapon", "melee", "grand", "whip", "dagger", "heavy", "deathmetal", "other"],
+        "location": "Unknown Forge",
+        "crafting": "x1 unclean endroot, x1 deathmetal, x1 heavy chain",
         "stats": { "speed": 2, "accuracy": 7, "strength": 12 },
         "affinities": { "top": "", "right": "", "bottom": "blue", "left": "red", "center": "" },
         "abilities": [
@@ -52,7 +62,9 @@
     },
     "Scavenger Kit": {
         "types": ["item", "heavy"],
-        "stats": { },
+        "location": "Barber Surgeon",
+        "crafting": "x1 scrap, x1 perfect hide",
+        "stats": {},
         "affinities": { "top": "", "right": "", "bottom": "green", "left": "", "center": "" },
         "abilities": [
             "[Unique]",
@@ -61,13 +73,17 @@
     },
     "Almanac": {
         "types": ["item", "soluble", "flammable"],
+        "location": "Barber Surgeon",
+        "crafting": "x2 leather",
         "stats": {},
         "affinities": { "top": "", "right": "blue", "bottom": "", "left": "", "center": "" },
         "abilities": ["When you depart, gain +2 insanity.", "You cannot gain disorders."]
     },
     "Musk Bomb": {
         "types": ["item", "stinky", "thrown", "fragile"],
-        "stats": { },
+        "location": "Barber Surgeon",
+        "crafting": "x7 resources",
+        "stats": {},
         "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
         "abilities": [
             "If adjacent to the monster when it draws {ai_card}, you may spend 2 survival and archive this to roll 1d10. On a 3+, discard the {ai_card} without playing it."
@@ -75,6 +91,8 @@
     },
     "First Aid Kit": {
         "types": ["item", "heavy"],
+        "location": "Barber Surgeon",
+        "crafting": "x1 leather, x1 perfect bone",
         "stats": {},
         "affinities": { "top": "green", "right": "green", "bottom": "green", "left": "green", "center": "" },
         "abilities": [
@@ -83,6 +101,8 @@
     },
     "Bug Trap": {
         "types": ["item", "soluble"],
+        "location": "Barber Surgeon",
+        "crafting": "x1 perfect organ, x2 bone",
         "stats": {},
         "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
         "abilities": [
@@ -91,24 +111,32 @@
     },
     "Red Charm": {
         "types": ["item", "jewelry", "fragile"],
-        "stats": { },
+        "location": "Barber Surgeon",
+        "crafting": "x1 perfect bone",
+        "stats": {},
         "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "red" },
         "abilities": ["x5 {red_affinity}: [Unstoppable]"]
     },
     "Blue Charm": {
         "types": ["item", "jewelry", "fragile"],
+        "location": "Barber Surgeon",
+        "crafting": "x1 perfect organ",
         "stats": {},
         "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "blue" },
         "abilities": ["x5 {blue_affinity}: [Unshakeable]"]
     },
     "Green Charm": {
         "types": ["item", "jewelry", "fragile"],
+        "location": "Barber Surgeon",
+        "crafting": "x1 perfect hide",
         "stats": {},
         "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "green" },
         "abilities": ["x5 {green_affinity}: [Undeathable]"]
     },
     "Polishing Lantern": {
         "types": ["item", "metal", "lantern"],
+        "location": "Blacksmith",
+        "crafting": "x1 iron, x1 organ, x1 scrap",
         "stats": {},
         "affinities": { "top": "", "right": "", "bottom": "", "left": "red", "center": "" },
         "abilities": [
@@ -118,860 +146,181 @@
     },
     "Dragon Slayer": {
         "types": ["weapon", "melee", "grand", "two-handed", "heavy", "metal"],
-        "stats": {"speed": 1, "accuracy": 6, "strength":9 },
+        "location": "Blacksmith",
+        "crafting": "x5 iron, x3 organ",
+        "stats": { "speed": 1, "accuracy": 6, "strength": 9 },
         "affinities": { "top": "blue", "right": "red", "bottom": "", "left": "", "center": "" },
         "abilities": ["[Frail]", "[Slow]", "[Sharp]", "[Devastating] 1", "[Early Iron]"]
     },
     "Perfect Slayer": {
-        "types": ["weapon", "melee", "grand", "two-handed", "heavy", "metal", "sword","finesse"],
-        "stats": {"speed": 3, "accuracy":6 , "strength": 14},
+        "types": ["weapon", "melee", "grand", "two-handed", "heavy", "metal", "sword", "finesse"],
+        "location": "Blacksmith",
+        "crafting": "Perfect Crucible, x9 iron, x3 organ",
+        "stats": { "speed": 3, "accuracy": 6, "strength": 14 },
         "affinities": { "top": "", "right": "", "bottom": "red", "left": "", "center": "" },
-        "abilities": ["[Slow]", "[Sharp]", "[Devastating] 2", "[Irreplaceable]","-2 Movement"]
+        "abilities": ["[Slow]", "[Sharp]", "[Devastating] 2", "[Irreplaceable]", "-2 Movement"]
     },
     "Lantern Glaive": {
         "types": ["weapon", "melee", "spear", "axe", "two-handed", "finesse", "metal"],
-        "stats": {"speed": 2, "accuracy":6 , "strength": 4},
+        "location": "Blacksmith",
+        "crafting": "x2 iron, x2 leather, x4 bone",
+        "stats": { "speed": 2, "accuracy": 6, "strength": 4 },
         "affinities": { "top": "", "right": "", "bottom": "green", "left": "", "center": "" },
         "abilities": ["[Reach] 2", "[Sharp]", "[Early Iron]"]
     },
     "Beacon Shield": {
         "types": ["weapon", "melee", "shield", "metal", "heavy"],
-        "stats": {"speed": 1, "accuracy": 6, "strength": 5},
+        "location": "Blacksmith",
+        "crafting": "x2 iron, x3 leather, x4 bone",
+        "stats": { "speed": 1, "accuracy": 6, "strength": 5 },
         "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
         "abilities": ["Add 2 {armor} to all hit locations.", "[Block] 2"]
     },
     "Scrap Shield": {
         "types": ["weapon", "melee", "shield", "bone", "metal"],
-        "stats": {"speed":2 , "accuracy": 7, "strength": 3},
+        "location": "Blacksmith",
+        "crafting": "x3 bone, x2 scrap, x3 leather",
+        "stats": { "speed": 2, "accuracy": 7, "strength": 3 },
         "affinities": { "top": "", "right": "red", "bottom": "", "left": "", "center": "" },
         "abilities": ["Add 1 {armor} to all hit locations.", "[Block] 1"]
     },
     "Lantern Dagger": {
         "types": ["weapon", "melee", "dagger", "finesse", "metal"],
-        "stats": {"speed":2 , "accuracy":7 , "strength": 1},
+        "location": "Blacksmith",
+        "crafting": "x1 iron, x3 leather, x2 bone",
+        "stats": { "speed": 2, "accuracy": 7, "strength": 1 },
         "affinities": { "top": "", "right": "", "bottom": "", "left": "red", "center": "" },
-        "abilities": ["[Paired]", "[Sharp]","[Early Iron]"]
+        "abilities": ["[Paired]", "[Sharp]", "[Early Iron]"]
     },
     "Ring Whip": {
         "types": ["weapon", "melee", "whip", "finesse", "metal"],
-        "stats": {"speed": 2, "accuracy": 5, "strength": 0},
+        "location": "Blacksmith",
+        "crafting": "x1 iron, x2 organ, x3 bone",
+        "stats": { "speed": 2, "accuracy": 5, "strength": 0 },
         "affinities": { "top": "", "right": "", "bottom": "", "left": "blue", "center": "" },
         "abilities": ["[Sharp]", "[Reach] 2", "[Early Iron]"]
     },
     "Lantern Sword": {
         "types": ["weapon", "melee", "sword", "finesse", "metal"],
-        "stats": {"speed": 3, "accuracy":5 , "strength":3 },
+        "location": "Blacksmith",
+        "crafting": "x1 iron, x4 bone, x3 hide",
+        "stats": { "speed": 3, "accuracy": 5, "strength": 3 },
         "affinities": { "top": "", "right": "", "bottom": "", "left": "red", "center": "" },
         "abilities": ["[Sharp]", "[Early Iron]"]
     },
     "Lantern Helm": {
         "types": ["armor", "set", "metal", "heavy"],
-        "stats": { "armor":5, "location": "head"},
+        "location": "Blacksmith",
+        "crafting": "x1 iron, x7 bone",
+        "stats": { "armor": 5, "location": "head" },
         "affinities": { "top": "", "right": "", "bottom": "blue", "left": "", "center": "" },
         "abilities": ["{blue_puzzle}: You are [Deaf]. -1 accuracy."]
     },
     "Lantern Guantlets": {
         "types": ["armor", "set", "metal", "heavy"],
-        "stats": { "armor":5, "location": "arms"},
+        "location": "Blacksmith",
+        "crafting": "x2 iron, x6 leather",
+        "stats": { "armor": 5, "location": "arms" },
         "affinities": { "top": "", "right": "", "bottom": "", "left": "green", "center": "" },
         "abilities": ["{green_puzzle}: +2 accuracy with Club weapons."]
     },
     "Lantern Cuirass": {
         "types": ["armor", "set", "metal", "heavy"],
-        "stats": {"armor":5, "location": "chest" },
+        "location": "Blacksmith",
+        "crafting": "x2 iron, x5 leather",
+        "stats": { "armor": 5, "location": "chest" },
         "affinities": { "top": "blue", "right": "green", "bottom": "blue", "left": "green", "center": "" },
-        "abilities": ["-2 Movement", "x2 {green_puzzle}, x2 {blue_puzzle}: When you depart, add 3 {armor} to all hit locations with metal armor."]
+        "abilities": [
+            "-2 Movement",
+            "x2 {green_puzzle}, x2 {blue_puzzle}: When you depart, add 3 {armor} to all hit locations with metal armor."
+        ]
     },
     "Lantern Mail": {
         "types": ["armor", "set", "metal", "heavy"],
-        "stats": {"armor":5, "location": "waist" },
+        "location": "Blacksmith",
+        "crafting": "x1 iron, x5 organ",
+        "stats": { "armor": 5, "location": "waist" },
         "affinities": { "top": "", "right": "green", "bottom": "", "left": "", "center": "" },
         "abilities": []
     },
     "Lantern Greaves": {
         "types": ["armor", "set", "metal", "heavy"],
-        "stats": {"armor":5, "location": "legs"},
+        "location": "Blacksmith",
+        "crafting": "x1 iron, x5 leather",
+        "stats": { "armor": 5, "location": "legs" },
         "affinities": { "top": "blue", "right": "red", "bottom": "", "left": "red", "center": "" },
         "abilities": ["x2 {red_puzzle}, {blue_puzzle}: +2 Movement"]
     },
     "Skull Helm": {
         "types": ["armor", "bone", "fragile"],
-        "stats": {"armor":3, "location": "head"},
+        "location": "Bone Smith",
+        "crafting": "x2 bone OR x1 skull",
+        "stats": { "armor": 3, "location": "head" },
         "affinities": { "top": "", "right": "", "bottom": "red", "left": "", "center": "" },
         "abilities": ["When you suffer a severe head injury, archive this card."]
     },
     "Bone Darts": {
         "types": ["weapon", "ranged", "thrown", "bone"],
-        "stats": {"speed": 1, "accuracy": 7, "strength":3 },
+        "location": "Bone Smith",
+        "crafting": "x1 bone",
+        "stats": { "speed": 1, "accuracy": 7, "strength": 3 },
         "affinities": { "top": "", "right": "", "bottom": "", "left": "red", "center": "" },
         "abilities": ["[Range] 6", "[Frail]"]
     },
     "Bone Club": {
         "types": ["weapon", "melee", "two-handed", "heavy", "club", "bone"],
-        "stats": {"speed": 2, "accuracy":6 , "strength":5 },
+        "location": "Bone Smith",
+        "crafting": "x3 bone",
+        "stats": { "speed": 2, "accuracy": 6, "strength": 5 },
         "affinities": { "top": "", "right": "red", "bottom": "", "left": "red", "center": "" },
         "abilities": ["[Cumbersome]"]
     },
     "Bone Axe": {
         "types": ["weapon", "melee", "axe", "bone"],
-        "stats": {"speed": 2, "accuracy":6 , "strength":3 },
+        "location": "Bone Smith",
+        "crafting": "x1 bone, x1 organ",
+        "stats": { "speed": 2, "accuracy": 6, "strength": 3 },
         "affinities": { "top": "", "right": "", "bottom": "", "left": "red", "center": "" },
         "abilities": ["[Frail]", "[Savage]"]
     },
     "Bone Blade": {
         "types": ["weapon", "melee", "sword", "bone"],
-        "stats": {"speed": 2, "accuracy": 6, "strength": 2},
+        "location": "Bone Smith",
+        "crafting": "x1 bone",
+        "stats": { "speed": 2, "accuracy": 6, "strength": 2 },
         "affinities": { "top": "", "right": "", "bottom": "", "left": "red", "center": "" },
         "abilities": ["[Frail]"]
     },
     "Bone Dagger": {
         "types": ["weapon", "melee", "dagger", "bone"],
-        "stats": {"speed": 3, "accuracy": 7, "strength":1 },
+        "location": "Bone Smith",
+        "crafting": "x1 bone",
+        "stats": { "speed": 3, "accuracy": 7, "strength": 1 },
         "affinities": { "top": "red", "right": "", "bottom": "", "left": "red", "center": "" },
         "abilities": ["[Perfect Hit]", "On a Perfect Hit, gain +1 survival."]
     },
     "Bone Sickle": {
         "types": ["item", "tool", "sickle", "bone"],
-        "stats": {"speed": 2, "accuracy": 8, "strength": 1},
+        "location": "Bone Smith",
+        "crafting": "x1 bone, x1 leather",
+        "stats": { "speed": 2, "accuracy": 8, "strength": 1 },
         "affinities": { "top": "green", "right": "", "bottom": "", "left": "", "center": "" },
         "abilities": ["After Hunt Phase setup, place the Herb Gathering Event on any hunt space."]
     },
     "Bone Pickaxe": {
         "types": ["item", "tool", "pickaxe", "bone"],
-        "stats": {"speed":1 , "accuracy": 8, "strength": 2},
+        "location": "Bone Smith",
+        "crafting": "x1 bone, x1 leather",
+        "stats": { "speed": 1, "accuracy": 8, "strength": 2 },
         "affinities": { "top": "green", "right": "", "bottom": "", "left": "", "center": "" },
         "abilities": ["After Hunt Phase setup, place the Mineral Gathering Event on any hunt space."]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "stats": {"speed": , "accuracy": , "strength": },
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
-    }
+    } //,
+    // "": {
+    //     "types": ["", "", "", "", "", "", "", "", ""],
+    //     "location":"",
+    //     "crafting":"",
+    //     "stats": {"speed": , "accuracy": , "strength": , "armor": , "location": ""},
+    //     "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+    //     "abilities": ["", ""]
+    // }
 }
