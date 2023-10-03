@@ -491,258 +491,298 @@
     },
     "Singing Cap": {
         "types": ["armor", "set", "flesh"],
-        "location":"Chorusseum",
-        "crafting":"x1 gaseous belly, x1 organ",
-        "stats": {"armor": 3, "location": "head"},
+        "location": "Chorusseum",
+        "crafting": "x1 gaseous belly, x1 organ",
+        "stats": { "armor": 3, "location": "head" },
         "affinities": { "top": "green", "right": "", "bottom": "blue", "left": "", "center": "" },
         "abilities": ["{blue_puzzle}, {green_puzzle}: Whe you are attacked and suffer more than 1 hit, ignore 1 hit."]
     },
     "Singing Gloves": {
         "types": ["armor", "set", "flesh"],
-        "location":"Chorusseum",
-        "crafting":"x1 delicate hand, x1 organ",
-        "stats": {"armor": 3, "location": "arms"},
+        "location": "Chorusseum",
+        "crafting": "x1 delicate hand, x1 organ",
+        "stats": { "armor": 3, "location": "arms" },
         "affinities": { "top": "", "right": "blue", "bottom": "", "left": "green", "center": "" },
         "abilities": ["Reduce the cost of performing your Ballads by 1."]
     },
     "Singing Breastplate": {
         "types": ["armor", "set", "flesh"],
-        "location":"Chorusseum",
-        "crafting":"x1 pink flesh, x1 bone",
-        "stats": {"armor": 3, "location": "chest"},
+        "location": "Chorusseum",
+        "crafting": "x1 pink flesh, x1 bone",
+        "stats": { "armor": 3, "location": "chest" },
         "affinities": { "top": "blue", "right": "red", "bottom": "", "left": "", "center": "" },
         "abilities": ["[Hit Song]"]
     },
     "Singing Pantaloons": {
         "types": ["armor", "set", "flesh"],
-        "location":"Chorusseum",
-        "crafting":"x1 pink flesh, x1 organ",
-        "stats": {"armor":3 , "location": "waist"},
+        "location": "Chorusseum",
+        "crafting": "x1 pink flesh, x1 organ",
+        "stats": { "armor": 3, "location": "waist" },
         "affinities": { "top": "", "right": "", "bottom": "green", "left": "", "center": "" },
         "abilities": []
     },
     "Singing ": {
         "types": ["armor", "set", "flesh"],
-        "location":"Chorusseum",
-        "crafting":"x1 pink flesh, x1 hide",
-        "stats": {"armor":3 , "location": "legs"},
+        "location": "Chorusseum",
+        "crafting": "x1 pink flesh, x1 hide",
+        "stats": { "armor": 3, "location": "legs" },
         "affinities": { "top": "green", "right": "", "bottom": "", "left": "blue", "center": "" },
-        "abilities": ["{green_puzzle}, {blue_affinity}: At the end of your act, you may move up to 3 spaces away from the monster."]
+        "abilities": [
+            "{green_puzzle}, {blue_affinity}: At the end of your act, you may move up to 3 spaces away from the monster."
+        ]
     },
     "Hamfluter": {
         "types": ["weapon", "melee", "club", "instrument", "noisy"],
-        "location":"Chorusseum",
-        "crafting":"x1 whistle tooth, x1 bone",
-        "stats": {"speed":2 , "accuracy": 6, "strength": 3},
+        "location": "Chorusseum",
+        "crafting": "x1 whistle tooth, x1 bone",
+        "stats": { "speed": 2, "accuracy": 6, "strength": 3 },
         "affinities": { "top": "red", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["[Ballad of Perfection] 7", "{red_affinity}, {blue_affinity}: Gain +1 survival and +1 insanity when you attack."]
+        "abilities": [
+            "[Ballad of Perfection] 7",
+            "{red_affinity}, {blue_affinity}: Gain +1 survival and +1 insanity when you attack."
+        ]
     },
     "Energy Drum": {
         "types": ["item", "instrument", "noisy"],
-        "location":"Chorusseum",
-        "crafting":"x1 gaseous belly, x1 vocal chords",
+        "location": "Chorusseum",
+        "crafting": "x1 gaseous belly, x1 vocal chords",
         "stats": {},
         "affinities": { "top": "", "right": "", "bottom": "", "left": "blue", "center": "" },
-        "abilities": ["{activation}: Spend 1 survival to play this. An adjacent survivor gains {activation}, which must be spent immediately. Limit once per round."]
+        "abilities": [
+            "{activation}: Spend 1 survival to play this. An adjacent survivor gains {activation}, which must be spent immediately. Limit once per round."
+        ]
     },
     "Peace Dagger": {
         "types": ["weapon", "melee", "dagger", "instrument", "noisy"],
-        "location":"Chorusseum",
-        "crafting":"x1 fluted bone, x1 tail fat, x1 hide",
-        "stats": {"speed":3 , "accuracy":6 , "strength": 2},
+        "location": "Chorusseum",
+        "crafting": "x1 fluted bone, x1 tail fat, x1 hide",
+        "stats": { "speed": 3, "accuracy": 6, "strength": 2 },
         "affinities": { "top": "blue", "right": "red", "bottom": "", "left": "green", "center": "" },
         "abilities": ["[Ballad of Peace] 3"]
     },
     "Harpy Harp": {
         "types": ["instrument", "item", "noisy"],
-        "location":"Chorusseum",
-        "crafting":"x1 singing tongue, x1 whistle tooth, x1 scrap",
+        "location": "Chorusseum",
+        "crafting": "x1 singing tongue, x1 whistle tooth, x1 scrap",
         "stats": {},
         "affinities": { "top": "", "right": "", "bottom": "red", "left": "green", "center": "" },
-        "abilities": ["You ignore Overwhelming Darkness.", "{red_puzzle}, {green_puzzle}: Your noisy weapons gain +1 strength for each instrument in your gear grid."]
+        "abilities": [
+            "You ignore Overwhelming Darkness.",
+            "{red_puzzle}, {green_puzzle}: Your noisy weapons gain +1 strength for each instrument in your gear grid."
+        ]
     },
     "Pipa": {
-        "types": ["weapon","melee", "club", "instrument", "noisy"],
-        "location":"Chorusseum",
-        "crafting":"x1 fluted severed head, x1 pink flesh, x1 organ",
-        "stats": {"speed": 2, "accuracy": 6, "strength": 0},
+        "types": ["weapon", "melee", "club", "instrument", "noisy"],
+        "location": "Chorusseum",
+        "crafting": "x1 fluted severed head, x1 pink flesh, x1 organ",
+        "stats": { "speed": 2, "accuracy": 6, "strength": 0 },
         "affinities": { "top": "red", "right": "red", "bottom": "red", "left": "red", "center": "" },
         "abilities": ["[Ballad of Savagery] 6", "{red_puzzle}, {red_puzzle}: +4 strength"]
     },
     "Singing Heart": {
         "types": ["instrument", "item", "lantern", "noisy"],
-        "location":"Chorusseum",
-        "crafting":"x1 singing tongue, x1 bone, x1 scrap",
+        "location": "Chorusseum",
+        "crafting": "x1 singing tongue, x1 bone, x1 scrap",
         "stats": {},
         "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["The weapon to the left gains noise and +1 accuracy.", "{red_affinity}, {green_affinity}, {blue_affinity}: YOu may archive this to discard all moods in play. The monster is [Dazed]."]
+        "abilities": [
+            "The weapon to the left gains noise and +1 accuracy.",
+            "{red_affinity}, {green_affinity}, {blue_affinity}: YOu may archive this to discard all moods in play. The monster is [Dazed]."
+        ]
     },
     "Razor Cymbals": {
         "types": ["weapon", "melee", "katar", "metal", "instrument", "noisy"],
-        "location":"Chorusseum",
-        "crafting":"x1 delicate hand, x1 scrap",
-        "stats": {"speed": 2, "accuracy": 6, "strength": 4},
+        "location": "Chorusseum",
+        "crafting": "x1 delicate hand, x1 scrap",
+        "stats": { "speed": 2, "accuracy": 6, "strength": 4 },
         "affinities": { "top": "red", "right": "", "bottom": "blue", "left": "", "center": "" },
-        "abilities": ["[Paired]", "Make attack rolls one at a time. For each hit, the monster suffers -1 evasion until the end of this attack."]
+        "abilities": [
+            "[Paired]",
+            "Make attack rolls one at a time. For each hit, the monster suffers -1 evasion until the end of this attack."
+        ]
     },
     "Spinning Sword": {
         "types": ["weapon", "melee", "sword"],
-        "location":"Chorusseum",
-        "crafting":"x1 fluted bone, x1 bone",
-        "stats": {"speed":2 , "accuracy": 7, "strength": 3},
+        "location": "Chorusseum",
+        "crafting": "x1 fluted bone, x1 bone",
+        "stats": { "speed": 2, "accuracy": 7, "strength": 3 },
         "affinities": { "top": "", "right": "green", "bottom": "", "left": "green", "center": "" },
         "abilities": ["[Paired]", "Gain +2 evasion against ranged attacks for each of your Spinning Swords."]
     },
     "Spear of Life": {
         "types": ["weapon", "melee", "spear", "two-handed"],
-        "location":"Chorusseum",
-        "crafting":"x1 fluted bone, x1 whistle tooth, x1 hide",
-        "stats": {"speed":2 , "accuracy":6 , "strength": 4},
+        "location": "Chorusseum",
+        "crafting": "x1 fluted bone, x1 whistle tooth, x1 hide",
+        "stats": { "speed": 2, "accuracy": 6, "strength": 4 },
         "affinities": { "top": "", "right": "", "bottom": "", "left": "green", "center": "" },
-        "abilities": ["[Reach] 2", "{green_puzzle}: When another survivor dies from bleeding tokens, roll 1d10. On a 7+, they live. They suffer -1 permanent evasion and remove up to 3 bleeding tokens."]
+        "abilities": [
+            "[Reach] 2",
+            "{green_puzzle}: When another survivor dies from bleeding tokens, roll 1d10. On a 7+, they live. They suffer -1 permanent evasion and remove up to 3 bleeding tokens."
+        ]
     },
     "Crimson Helm": {
         "types": ["armor", "set", "bone"],
-        "location":"Crimson Crockery",
-        "crafting":".1 crimson bone, x1 hide",
-        "stats": {"armor": 2, "location": "head"},
+        "location": "Crimson Crockery",
+        "crafting": ".1 crimson bone, x1 hide",
+        "stats": { "armor": 2, "location": "head" },
         "affinities": { "top": "", "right": "red", "bottom": "", "left": "", "center": "" },
         "abilities": ["[Mindlock] 1"]
     },
     "Crimson Guard": {
         "types": ["armor", "set", "flesh"],
-        "location":"Crimson Crockery",
-        "crafting":"x1 pale flesh, x1 organ",
-        "stats": { "armor": 2, "location": "arms"},
+        "location": "Crimson Crockery",
+        "crafting": "x1 pale flesh, x1 organ",
+        "stats": { "armor": 2, "location": "arms" },
         "affinities": { "top": "green", "right": "", "bottom": "", "left": "red", "center": "" },
         "abilities": ["When you depart, gain a bleeding token and add 1 {armor} to the arms hit location."]
     },
     "Crimson Dress": {
         "types": ["armor", "set", "flesh"],
-        "location":"Crimson Crockery",
-        "crafting":"x1 crimson fin, x1 hide",
-        "stats": {"armor": 2, "location": "chest"},
+        "location": "Crimson Crockery",
+        "crafting": "x1 crimson fin, x1 hide",
+        "stats": { "armor": 2, "location": "chest" },
         "affinities": { "top": "", "right": "red", "bottom": "", "left": "blue", "center": "" },
         "abilities": ["[Immortal Spin]"]
     },
     "Crimson Faulds": {
         "types": ["armor", "set", "flesh"],
-        "location":"Crimson Crockery",
-        "crafting":"x1 pale flesh, x1 organ",
-        "stats": {"armor":2 , "location": "waist"},
+        "location": "Crimson Crockery",
+        "crafting": "x1 pale flesh, x1 organ",
+        "stats": { "armor": 2, "location": "waist" },
         "affinities": { "top": "", "right": "", "bottom": "green", "left": "", "center": "" },
         "abilities": ["When you depart, gain a bleeding token. It requires one more bleeding token to kill you."]
     },
     "Crimson Slippers": {
         "types": ["armor", "set", "flesh"],
-        "location":"Crimson Crockery",
-        "crafting":"x1 pale flesh, x1 bone",
-        "stats": {"armor": 2, "location": "legs"},
+        "location": "Crimson Crockery",
+        "crafting": "x1 pale flesh, x1 bone",
+        "stats": { "armor": 2, "location": "legs" },
         "affinities": { "top": "", "right": "", "bottom": "", "left": "red", "center": "" },
         "abilities": []
     },
     "Bloodglass Dagger": {
         "types": ["weapon", "melee", "dagger", "bone"],
-        "location":"Crimson Crockery",
-        "crafting":"x1 veined glass",
-        "stats": {"speed": 3, "accuracy": 6, "strength": 0},
+        "location": "Crimson Crockery",
+        "crafting": "x1 veined glass",
+        "stats": { "speed": 3, "accuracy": 6, "strength": 0 },
         "affinities": { "top": "", "right": "red", "bottom": "", "left": "", "center": "" },
         "abilities": ["[Honed] 3"]
     },
     "Bloodglass Katar": {
         "types": ["weapon", "melee", "katar", "bone"],
-        "location":"Crimson Crockery",
-        "crafting":"x1 veined glass, x1 pale fingers",
-        "stats": {"speed": 2, "accuracy": 6, "strength":0},
+        "location": "Crimson Crockery",
+        "crafting": "x1 veined glass, x1 pale fingers",
+        "stats": { "speed": 2, "accuracy": 6, "strength": 0 },
         "affinities": { "top": "", "right": "", "bottom": "green", "left": "", "center": "" },
-        "abilities": ["[Honed] 4", "[Paired]", "While you have 3+ bleeding tokens, you gain +2 evasion and are [Guardless]."]
+        "abilities": [
+            "[Honed] 4",
+            "[Paired]",
+            "While you have 3+ bleeding tokens, you gain +2 evasion and are [Guardless]."
+        ]
     },
     "Bloodglass Longsword": {
         "types": ["weapon", "melee", "sword", "two-handed", "heavy", "bone"],
-        "location":"Crimson Crockery",
-        "crafting":"x1 immortal tongue, x1 veined glass, x1 bone",
-        "stats": {"speed":2 , "accuracy": 6, "strength":0 },
+        "location": "Crimson Crockery",
+        "crafting": "x1 immortal tongue, x1 veined glass, x1 bone",
+        "stats": { "speed": 2, "accuracy": 6, "strength": 0 },
         "affinities": { "top": "", "right": "blue", "bottom": "", "left": "red", "center": "" },
-        "abilities": ["[Honed] 3", "[Reach] 2", "{red_puzzle}, {blue_puzzle}: If you have 3+ bleeding tokens, the Honed edge cannot be ruined."]
+        "abilities": [
+            "[Honed] 3",
+            "[Reach] 2",
+            "{red_puzzle}, {blue_puzzle}: If you have 3+ bleeding tokens, the Honed edge cannot be ruined."
+        ]
     },
     "Bloodglass Cleaver": {
         "types": ["weapon", "melee", "axe", "bone"],
-        "location":"Crimson Crockery",
-        "crafting":"x1 flat vein, x1 veined glass, x1 organ",
-        "stats": {"speed":3 , "accuracy":6 , "strength":0},
+        "location": "Crimson Crockery",
+        "crafting": "x1 flat vein, x1 veined glass, x1 organ",
+        "stats": { "speed": 3, "accuracy": 6, "strength": 0 },
         "affinities": { "top": "", "right": "red", "bottom": "red", "left": "", "center": "" },
         "abilities": ["[Honed] 5", "While this is equipped, you are [Guardless]."]
     },
     "Bloodglass Saw": {
         "types": ["weapon", "melee", "saw", "two-handed", "bone"],
-        "location":"Crimson Crockery",
-        "crafting":"x1 crimson bone, x2 veined glass",
-        "stats": {"speed":2 , "accuracy": 7, "strength": 0},
+        "location": "Crimson Crockery",
+        "crafting": "x1 crimson bone, x2 veined glass",
+        "stats": { "speed": 2, "accuracy": 7, "strength": 0 },
         "affinities": { "top": "blue", "right": "", "bottom": "", "left": "", "center": "" },
         "abilities": ["[Honed] 3", "[Savage]", "[Saw]"]
     },
     "Finger Darts": {
-        "types": ["weapon", "ranged", "thrown","consumable"],
-        "location":"Crimson Crockery",
-        "crafting":"x1 pale fingers, x1 scrap",
-        "stats": {"speed": 2, "accuracy":7 , "strength": 2},
+        "types": ["weapon", "ranged", "thrown", "consumable"],
+        "location": "Crimson Crockery",
+        "crafting": "x1 pale fingers, x1 scrap",
+        "stats": { "speed": 2, "accuracy": 7, "strength": 2 },
         "affinities": { "top": "", "right": "green", "bottom": "", "left": "blue", "center": "" },
         "abilities": ["[Range] 4", "{green_puzzle}, {blue_puzzle}, {activation} Consume: Gain +{star} insanity."]
     },
     "Crocbone Hammer": {
         "types": ["weapon", "melee", "club", "bone"],
-        "location":"Crimson Crockery",
-        "crafting":"x1 crimson bone, x1 bone",
-        "stats": {"speed": 2, "accuracy": 7, "strength": 2},
+        "location": "Crimson Crockery",
+        "crafting": "x1 crimson bone, x1 bone",
+        "stats": { "speed": 2, "accuracy": 7, "strength": 2 },
         "affinities": { "top": "", "right": "red", "bottom": "green", "left": "", "center": "" },
         "abilities": ["[Clobber] 4"]
     },
     "Blood Compass Lantern": {
         "types": ["item", "lantern", "other"],
-        "location":"Crimson Crockery",
-        "crafting":"x1 groomed nails, x1 skull, x1 scrap",
+        "location": "Crimson Crockery",
+        "crafting": "x1 groomed nails, x1 skull, x1 scrap",
         "stats": {},
         "affinities": { "top": "", "right": "blue", "bottom": "blue", "left": "", "center": "" },
-        "abilities": ["Before making a wound attempt, you may gain 1 bleeding token to discard all hit locations from your attack and draw that many to replace them. Limit once per round."]
+        "abilities": [
+            "Before making a wound attempt, you may gain 1 bleeding token to discard all hit locations from your attack and draw that many to replace them. Limit once per round."
+        ]
     },
     "Crocodileyes": {
         "types": ["item", "soluble"],
-        "location":"Crimson Crockery",
-        "crafting":"x1 eye of immortal, x1 organ",
+        "location": "Crimson Crockery",
+        "crafting": "x1 eye of immortal, x1 organ",
         "stats": {},
         "affinities": { "top": "red", "right": "", "bottom": "", "left": "", "center": "" },
         "abilities": ["Gain +{star} strength if you have no [Foresight].", ""]
     },
     "Crimson Pearls": {
         "types": ["item", "jewelry", "other"],
-        "location":"Crimson Crockery",
-        "crafting":"x1 blood stool, x1 crimson bone",
+        "location": "Crimson Crockery",
+        "crafting": "x1 blood stool, x1 crimson bone",
         "stats": {},
         "affinities": { "top": "red", "right": "", "bottom": "red", "left": "", "center": "" },
-        "abilities": ["On arrival, gain 3 bleeding tokens. Your Fist & Tooth attacks gain +1 strength for each of your bleeding tokens."]
+        "abilities": [
+            "On arrival, gain 3 bleeding tokens. Your Fist & Tooth attacks gain +1 strength for each of your bleeding tokens."
+        ]
     },
     "Crimson Bow": {
         "types": ["weapon", "ranged", "bow", "two-handed"],
-        "location":"Crimson Crockery",
-        "crafting":"x1 irregular optic nerve, x1 crimson bone",
-        "stats": {"speed": 2, "accuracy": 6, "strength": 3},
+        "location": "Crimson Crockery",
+        "crafting": "x1 irregular optic nerve, x1 crimson bone",
+        "stats": { "speed": 2, "accuracy": 6, "strength": 3 },
         "affinities": { "top": "blue", "right": "red", "bottom": "", "left": "", "center": "" },
-        "abilities": ["[Cumbersome]", "[Range] 5", "{red_puzzle}, {blue_affinity}: This gains +2 strength and [Deadly] while attacking from the monster's facing."]
+        "abilities": [
+            "[Cumbersome]",
+            "[Range] 5",
+            "{red_puzzle}, {blue_affinity}: This gains +2 strength and [Deadly] while attacking from the monster's facing."
+        ]
     },
     "Giggling Scythe": {
         "types": ["weapon", "melee", "grand", "scythe", "two-handed", "bone"],
-        "location":"Crimson Crockery",
-        "crafting":"x2 perfect bone, x2 perfect hide, x13 veined glass",
-        "stats": {"speed":3 , "accuracy": 5, "strength":8},
+        "location": "Crimson Crockery",
+        "crafting": "x2 perfect bone, x2 perfect hide, x13 veined glass",
+        "stats": { "speed": 3, "accuracy": 5, "strength": 8 },
         "affinities": { "top": "blue", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["[Sharp]", "[Reach] 2","[Unique]","When you critically wound, automatically critically wound all remaining hit locations in your attack."]
+        "abilities": [
+            "[Sharp]",
+            "[Reach] 2",
+            "[Unique]",
+            "When you critically wound, automatically critically wound all remaining hit locations in your attack."
+        ]
     }
-//     "": {
-//         "types": ["", "", "", "", "", "", "", "", ""],
-//         "location":"",
-//         "crafting":"",
-//         "stats": {"speed": , "accuracy": , "strength": , "armor": , "location": ""},
-//         "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-//         "abilities": ["", ""]
-//     },
-// }
+    //     "": {
+    //         "types": ["", "", "", "", "", "", "", "", ""],
+    //         "location":"",
+    //         "crafting":"",
+    //         "stats": {"speed": , "accuracy": , "strength": , "armor": , "location": ""},
+    //         "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+    //         "abilities": ["", ""]
+    //     },
+}
