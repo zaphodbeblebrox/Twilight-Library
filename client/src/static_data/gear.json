@@ -776,7 +776,155 @@
             "[Unique]",
             "When you critically wound, automatically critically wound all remaining hit locations in your attack."
         ]
+    },
+    "Dragonskull Helm": {
+        "types": ["armor", "set", "metal", "bone"],
+        "location": "Dragon Armory",
+        "crafting": "x1 horn fragment, x2 bone, x1 husk",
+        "stats": { "armor": 4, "location": "head" },
+        "affinities": { "top": "", "right": "red", "bottom": "red", "left": "red", "center": "" },
+        "abilities": [
+            "{red_puzzle}, {red_puzzle}: Gain +1 to all severe head injury roll results. Ignore Shattered Jaw severe head injury result."
+        ]
+    },
+    "Dragon Gloves": {
+        "types": ["armor", "set", "metal"],
+        "location": "Dragon Armory",
+        "crafting": "x1 cabled vein, x1 husk, x1 leather, x1 iron",
+        "stats": { "armor": 4, "location": "arms" },
+        "affinities": { "top": "blue", "right": "green", "bottom": "", "left": "", "center": "" },
+        "abilities": []
+    },
+    "Dragon Mantle": {
+        "types": ["armor", "set", "metal"],
+        "location": "Dragon Armory",
+        "crafting": "x1 horn fragment, x1 iron, x1 hardened ribs, x1 leather",
+        "stats": { "armor": 4, "location": "chest" },
+        "affinities": { "top": "red", "right": "blue", "bottom": "green", "left": "green", "center": "" },
+        "abilities": [
+            "x2 {green_puzzle}, {red_puzzle}, {blue_puzzle}: At the start of the showdown, gain survival up to the survival limit."
+        ]
+    },
+    "Dragon Belt": {
+        "types": ["armor", "set", "metal"],
+        "location": "Dragon Armory",
+        "crafting": "x2 veined wing, x1 organ, x1 iron",
+        "stats": { "armor": 4, "location": "waist" },
+        "affinities": { "top": "", "right": "", "bottom": "blue", "left": "red", "center": "" },
+        "abilities": ["{red_puzzle}, {blue_puzzle}: You are not knocked down from suffering a heavy injury."]
+    },
+    "Dragon Boots": {
+        "types": ["armor", "set", "metal"],
+        "location": "Dragon Armory",
+        "crafting": "x1 king's claws, x1 husk, x1 organ, x1 iron",
+        "stats": { "armor": 4, "location": "legs" },
+        "affinities": { "top": "green", "right": "red", "bottom": "", "left": "", "center": "" },
+        "abilities": ["Gain +2 movement during your act."]
+    },
+    "Dragon Chakram": {
+        "types": ["weapon", "ranged", "thrown", "bone"],
+        "location": "Dragon Armory",
+        "crafting": "x1 horn fragment, x2 organ, x1 leather",
+        "stats": { "speed": 2, "accuracy": 6, "strength": 3 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Reach] 3",
+            "If you hit, the monster gains -1 evasion until the end of the round. Limit once per attack."
+        ]
+    },
+    "Blast Shield": {
+        "types": ["weapon", "melee", "shield", "metal"],
+        "location": "Dragon Armory",
+        "crafting": "x1 king's tongue, x1 iron",
+        "stats": { "speed": 1, "accuracy": 7, "strength": 4 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "Add 1 {armor} to all hit locations.",
+            "[Block] 1",
+            "The first time you block a hit each showdown, gain the priority target token."
+        ]
+    },
+    "Dragon Bite Bolt": {
+        "types": ["item", "ammunition", "arrow"],
+        "location": "Dragon Armory",
+        "crafting": "x2 radioactive dung",
+        "stats": { "speed": 1, "accuracy": 6, "strength": 6 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Slow]",
+            "[Ammo - Bow]",
+            "[Devastating] 1",
+            "If you wound the monster, it suffers [Knockback] 5. Use once per showdown."
+        ]
+    },
+    "Shielded Quiver": {
+        "types": ["item", "leather"],
+        "location": "Dragon Armory",
+        "crafting": "x1 cabled vein, x2 veined wing, x2 leather",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "You may activate and gain the benefits of each arrow gear in your grid one additional time each showdown.",
+            ""
+        ]
+    },
+    "Talon Knife": {
+        "types": ["weapon", "melee", "katar", "bone"],
+        "location": "Dragon Armory",
+        "crafting": "x2 king's claw, x2 organ",
+        "stats": { "speed": 2, "accuracy": 6, "strength": 4 },
+        "affinities": { "top": "blue", "right": "", "bottom": "", "left": "blue", "center": "" },
+        "abilities": [
+            "[Paired]",
+            "If all of your attack rolls hit, gain [Savage] and [Deadly] until the end of your attack."
+        ]
+    },
+    "Blast Sword": {
+        "types": ["weapon", "melee", "sword", "bone"],
+        "location": "Dragon Armory",
+        "crafting": "x1 horn fragment, x3 organ",
+        "stats": { "speed": 2, "accuracy": 6, "strength": 4 },
+        "affinities": { "top": "green", "right": "", "bottom": "red", "left": "", "center": "" },
+        "abilities": ["[Block] 1", "When you spend {activation} to block with this weapon, gain +1 survival."]
+    },
+    "Nuclear Knife": {
+        "types": ["weapon", "melee", "dagger", "nuclear"],
+        "location": "Dragon Armory",
+        "crafting": "x1 radiant heart, x2 horn fragment, x2 scrap",
+        "stats": { "speed": 3, "accuracy": 6, "strength": 3 },
+        "affinities": { "top": "blue", "right": "red", "bottom": "green", "left": "blue", "center": "" },
+        "abilities": [
+            "{green_puzzle}, {red_puzzle}, {blue_puzzle}, {activation}: Suffer 3 brain damage. Your next attack with this weapon gains [Devastating] 1. Limit once per round."
+        ]
+    },
+    "Nuclear Scythe": {
+        "types": ["weapon", "melee", "scythe", "two-handed", "nuclear"],
+        "location": "Dragon Armory",
+        "crafting": "x1 radiant heart, x2 king's claw, x2 scrap",
+        "stats": { "speed": 2, "accuracy": 6, "strength": 4 },
+        "affinities": { "top": "red", "right": "", "bottom": "red", "left": "blue", "center": "" },
+        "abilities": [
+            "[Reach] 2",
+            "x2 {red_puzzle}, {blue_puzzle}, {activation}: Suffer 3 brain damage. Your next attack with this weapon gains [Devastating] 1. Limit once per round."
+        ]
+    },
+    "Red Power Core": {
+        "types": ["item", "jewelry"],
+        "location": "Dragon Armory",
+        "crafting": "x1 pituitary gland, x1 iron",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["All nuclear gear cards in your gear grid gain [Sharp]."]
+    },
+    "Blue Power Core": {
+        "types": ["item", "jewelry"],
+        "location": "Dragon Armory",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["All nuclear gear cards in your gear grid gain [Deadly] 2."]
     }
+
     //     "": {
     //         "types": ["", "", "", "", "", "", "", "", ""],
     //         "location":"",
