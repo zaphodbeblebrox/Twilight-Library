@@ -488,13 +488,133 @@
         "stats": {},
         "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
         "abilities": ["{activation} Consume: Suffer the [Frenzy] brain trauma. Can be used once per showdown."]
+    },
+    "Singing Cap": {
+        "types": ["armor", "set", "flesh"],
+        "location":"Chorusseum",
+        "crafting":"x1 gaseous belly, x1 organ",
+        "stats": {"armor": 3, "location": "head"},
+        "affinities": { "top": "green", "right": "", "bottom": "blue", "left": "", "center": "" },
+        "abilities": ["{blue_puzzle}, {green_puzzle}: Whe you are attacked and suffer more than 1 hit, ignore 1 hit."]
+    },
+    "Singing Gloves": {
+        "types": ["armor", "set", "flesh"],
+        "location":"Chorusseum",
+        "crafting":"x1 delicate hand, x1 organ",
+        "stats": {"armor": 3, "location": "arms"},
+        "affinities": { "top": "", "right": "blue", "bottom": "", "left": "green", "center": "" },
+        "abilities": ["Reduce the cost of performing your Ballads by 1."]
+    },
+    "Singing Breastplate": {
+        "types": ["armor", "set", "flesh"],
+        "location":"Chorusseum",
+        "crafting":"x1 pink flesh, x1 bone",
+        "stats": {"armor": 3, "location": "chest"},
+        "affinities": { "top": "blue", "right": "red", "bottom": "", "left": "", "center": "" },
+        "abilities": ["[Hit Song]"]
+    },
+    "Singing Pantaloons": {
+        "types": ["armor", "set", "flesh"],
+        "location":"Chorusseum",
+        "crafting":"x1 pink flesh, x1 organ",
+        "stats": {"armor":3 , "location": "waist"},
+        "affinities": { "top": "", "right": "", "bottom": "green", "left": "", "center": "" },
+        "abilities": []
+    },
+    "Singing ": {
+        "types": ["armor", "set", "flesh"],
+        "location":"Chorusseum",
+        "crafting":"x1 pink flesh, x1 hide",
+        "stats": {"armor":3 , "location": "legs"},
+        "affinities": { "top": "green", "right": "", "bottom": "", "left": "blue", "center": "" },
+        "abilities": ["{green_puzzle}, {blue_affinity}: At the end of your act, you may move up to 3 spaces away from the monster."]
+    },
+    "Hamfluter": {
+        "types": ["weapon", "melee", "club", "instrument", "noisy"],
+        "location":"Chorusseum",
+        "crafting":"x1 whistle tooth, x1 bone",
+        "stats": {"speed":2 , "accuracy": 6, "strength": 3},
+        "affinities": { "top": "red", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["[Ballad of Perfection] 7", "{red_affinity}, {blue_affinity}: Gain +1 survival and +1 insanity when you attack."]
+    },
+    "Energy Drum": {
+        "types": ["item", "instrument", "noisy"],
+        "location":"Chorusseum",
+        "crafting":"x1 gaseous belly, x1 vocal chords",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "blue", "center": "" },
+        "abilities": ["{activation}: Spend 1 survival to play this. An adjacent survivor gains {activation}, which must be spent immediately. Limit once per round."]
+    },
+    "Peace Dagger": {
+        "types": ["weapon", "melee", "dagger", "instrument", "noisy"],
+        "location":"Chorusseum",
+        "crafting":"x1 fluted bone, x1 tail fat, x1 hide",
+        "stats": {"speed":3 , "accuracy":6 , "strength": 2},
+        "affinities": { "top": "blue", "right": "red", "bottom": "", "left": "green", "center": "" },
+        "abilities": ["[Ballad of Peace] 3"]
+    },
+    "Harpy Harp": {
+        "types": ["instrument", "item", "noisy"],
+        "location":"Chorusseum",
+        "crafting":"x1 singing tongue, x1 whistle tooth, x1 scrap",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "red", "left": "green", "center": "" },
+        "abilities": ["You ignore Overwhelming Darkness.", "{red_puzzle}, {green_puzzle}: Your noisy weapons gain +1 strength for each instrument in your gear grid."]
+    },
+    "Pipa": {
+        "types": ["weapon","melee", "club", "instrument", "noisy"],
+        "location":"Chorusseum",
+        "crafting":"x1 fluted severed head, x1 pink flesh, x1 organ",
+        "stats": {"speed": 2, "accuracy": 6, "strength": 0},
+        "affinities": { "top": "red", "right": "red", "bottom": "red", "left": "red", "center": "" },
+        "abilities": ["[Ballad of Savagery] 6", "{red_puzzle}, {red_puzzle}: +4 strength"]
+    },
+    "Singing Heart": {
+        "types": ["instrument", "item", "lantern", "noisy"],
+        "location":"Chorusseum",
+        "crafting":"x1 singing tongue, x1 bone, x1 scrap",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["The weapon to the left gains noise and +1 accuracy.", "{red_affinity}, {green_affinity}, {blue_affinity}: YOu may archive this to discard all moods in play. The monster is [Dazed]."]
+    },
+    "Razor Cymbals": {
+        "types": ["weapon", "melee", "katar", "metal", "instrument", "noisy"],
+        "location":"Chorusseum",
+        "crafting":"x1 delicate hand, x1 scrap",
+        "stats": {"speed": 2, "accuracy": 6, "strength": 4},
+        "affinities": { "top": "red", "right": "", "bottom": "blue", "left": "", "center": "" },
+        "abilities": ["[Paired]", "Make attack rolls one at a time. For each hit, the monster suffers -1 evasion until the end of this attack."]
+    },
+    "Spinning Sword": {
+        "types": ["weapon", "melee", "sword"],
+        "location":"Chorusseum",
+        "crafting":"x1 fluted bone, x1 bone",
+        "stats": {"speed":2 , "accuracy": 7, "strength": 3},
+        "affinities": { "top": "", "right": "green", "bottom": "", "left": "green", "center": "" },
+        "abilities": ["[Paired]", "Gain +2 evasion against ranged attacks for each of your Spinning Swords."]
+    },
+    "Spear of Life": {
+        "types": ["weapon", "melee", "spear", "two-handed"],
+        "location":"Chorusseum",
+        "crafting":"x1 fluted bone, x1 whistle tooth, x1 hide",
+        "stats": {"speed":2 , "accuracy":6 , "strength": 4},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "green", "center": "" },
+        "abilities": ["[Reach] 2", "{green_puzzle}: When another survivor dies from bleeding tokens, roll 1d10. On a 7+, they live. They suffer -1 permanent evasion and remove up to 3 bleeding tokens."]
+    },
+    "": {
+        "types": ["", "", "", "", "", "", "", "", ""],
+        "location":"Chorusseum",
+        "crafting":"",
+        "stats": {"speed": , "accuracy": , "strength": , "armor": , "location": ""},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["", ""]
     }
-    // "": {
-    //     "types": ["", "", "", "", "", "", "", "", ""],
-    //     "location":"",
-    //     "crafting":"",
-    //     "stats": {"speed": , "accuracy": , "strength": , "armor": , "location": ""},
-    //     "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-    //     "abilities": ["", ""]
-    // },
-}
+//     "": {
+//         "types": ["", "", "", "", "", "", "", "", ""],
+//         "location":"",
+//         "crafting":"",
+//         "stats": {"speed": , "accuracy": , "strength": , "armor": , "location": ""},
+//         "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+//         "abilities": ["", ""]
+//     },
+// }
