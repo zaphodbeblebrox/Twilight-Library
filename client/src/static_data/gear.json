@@ -601,13 +601,141 @@
         "affinities": { "top": "", "right": "", "bottom": "", "left": "green", "center": "" },
         "abilities": ["[Reach] 2", "{green_puzzle}: When another survivor dies from bleeding tokens, roll 1d10. On a 7+, they live. They suffer -1 permanent evasion and remove up to 3 bleeding tokens."]
     },
-    "": {
-        "types": ["", "", "", "", "", "", "", "", ""],
-        "location":"Chorusseum",
-        "crafting":"",
-        "stats": {"speed": , "accuracy": , "strength": , "armor": , "location": ""},
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["", ""]
+    "Crimson Helm": {
+        "types": ["armor", "set", "bone"],
+        "location":"Crimson Crockery",
+        "crafting":".1 crimson bone, x1 hide",
+        "stats": {"armor": 2, "location": "head"},
+        "affinities": { "top": "", "right": "red", "bottom": "", "left": "", "center": "" },
+        "abilities": ["[Mindlock] 1"]
+    },
+    "Crimson Guard": {
+        "types": ["armor", "set", "flesh"],
+        "location":"Crimson Crockery",
+        "crafting":"x1 pale flesh, x1 organ",
+        "stats": { "armor": 2, "location": "arms"},
+        "affinities": { "top": "green", "right": "", "bottom": "", "left": "red", "center": "" },
+        "abilities": ["When you depart, gain a bleeding token and add 1 {armor} to the arms hit location."]
+    },
+    "Crimson Dress": {
+        "types": ["armor", "set", "flesh"],
+        "location":"Crimson Crockery",
+        "crafting":"x1 crimson fin, x1 hide",
+        "stats": {"armor": 2, "location": "chest"},
+        "affinities": { "top": "", "right": "red", "bottom": "", "left": "blue", "center": "" },
+        "abilities": ["[Immortal Spin]"]
+    },
+    "Crimson Faulds": {
+        "types": ["armor", "set", "flesh"],
+        "location":"Crimson Crockery",
+        "crafting":"x1 pale flesh, x1 organ",
+        "stats": {"armor":2 , "location": "waist"},
+        "affinities": { "top": "", "right": "", "bottom": "green", "left": "", "center": "" },
+        "abilities": ["When you depart, gain a bleeding token. It requires one more bleeding token to kill you."]
+    },
+    "Crimson Slippers": {
+        "types": ["armor", "set", "flesh"],
+        "location":"Crimson Crockery",
+        "crafting":"x1 pale flesh, x1 bone",
+        "stats": {"armor": 2, "location": "legs"},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "red", "center": "" },
+        "abilities": []
+    },
+    "Bloodglass Dagger": {
+        "types": ["weapon", "melee", "dagger", "bone"],
+        "location":"Crimson Crockery",
+        "crafting":"x1 veined glass",
+        "stats": {"speed": 3, "accuracy": 6, "strength": 0},
+        "affinities": { "top": "", "right": "red", "bottom": "", "left": "", "center": "" },
+        "abilities": ["[Honed] 3"]
+    },
+    "Bloodglass Katar": {
+        "types": ["weapon", "melee", "katar", "bone"],
+        "location":"Crimson Crockery",
+        "crafting":"x1 veined glass, x1 pale fingers",
+        "stats": {"speed": 2, "accuracy": 6, "strength":0},
+        "affinities": { "top": "", "right": "", "bottom": "green", "left": "", "center": "" },
+        "abilities": ["[Honed] 4", "[Paired]", "While you have 3+ bleeding tokens, you gain +2 evasion and are [Guardless]."]
+    },
+    "Bloodglass Longsword": {
+        "types": ["weapon", "melee", "sword", "two-handed", "heavy", "bone"],
+        "location":"Crimson Crockery",
+        "crafting":"x1 immortal tongue, x1 veined glass, x1 bone",
+        "stats": {"speed":2 , "accuracy": 6, "strength":0 },
+        "affinities": { "top": "", "right": "blue", "bottom": "", "left": "red", "center": "" },
+        "abilities": ["[Honed] 3", "[Reach] 2", "{red_puzzle}, {blue_puzzle}: If you have 3+ bleeding tokens, the Honed edge cannot be ruined."]
+    },
+    "Bloodglass Cleaver": {
+        "types": ["weapon", "melee", "axe", "bone"],
+        "location":"Crimson Crockery",
+        "crafting":"x1 flat vein, x1 veined glass, x1 organ",
+        "stats": {"speed":3 , "accuracy":6 , "strength":0},
+        "affinities": { "top": "", "right": "red", "bottom": "red", "left": "", "center": "" },
+        "abilities": ["[Honed] 5", "While this is equipped, you are [Guardless]."]
+    },
+    "Bloodglass Saw": {
+        "types": ["weapon", "melee", "saw", "two-handed", "bone"],
+        "location":"Crimson Crockery",
+        "crafting":"x1 crimson bone, x2 veined glass",
+        "stats": {"speed":2 , "accuracy": 7, "strength": 0},
+        "affinities": { "top": "blue", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["[Honed] 3", "[Savage]", "[Saw]"]
+    },
+    "Finger Darts": {
+        "types": ["weapon", "ranged", "thrown","consumable"],
+        "location":"Crimson Crockery",
+        "crafting":"x1 pale fingers, x1 scrap",
+        "stats": {"speed": 2, "accuracy":7 , "strength": 2},
+        "affinities": { "top": "", "right": "green", "bottom": "", "left": "blue", "center": "" },
+        "abilities": ["[Range] 4", "{green_puzzle}, {blue_puzzle}, {activation} Consume: Gain +{star} insanity."]
+    },
+    "Crocbone Hammer": {
+        "types": ["weapon", "melee", "club", "bone"],
+        "location":"Crimson Crockery",
+        "crafting":"x1 crimson bone, x1 bone",
+        "stats": {"speed": 2, "accuracy": 7, "strength": 2},
+        "affinities": { "top": "", "right": "red", "bottom": "green", "left": "", "center": "" },
+        "abilities": ["[Clobber] 4"]
+    },
+    "Blood Compass Lantern": {
+        "types": ["item", "lantern", "other"],
+        "location":"Crimson Crockery",
+        "crafting":"x1 groomed nails, x1 skull, x1 scrap",
+        "stats": {},
+        "affinities": { "top": "", "right": "blue", "bottom": "blue", "left": "", "center": "" },
+        "abilities": ["Before making a wound attempt, you may gain 1 bleeding token to discard all hit locations from your attack and draw that many to replace them. Limit once per round."]
+    },
+    "Crocodileyes": {
+        "types": ["item", "soluble"],
+        "location":"Crimson Crockery",
+        "crafting":"x1 eye of immortal, x1 organ",
+        "stats": {},
+        "affinities": { "top": "red", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["Gain +{star} strength if you have no [Foresight].", ""]
+    },
+    "Crimson Pearls": {
+        "types": ["item", "jewelry", "other"],
+        "location":"Crimson Crockery",
+        "crafting":"x1 blood stool, x1 crimson bone",
+        "stats": {},
+        "affinities": { "top": "red", "right": "", "bottom": "red", "left": "", "center": "" },
+        "abilities": ["On arrival, gain 3 bleeding tokens. Your Fist & Tooth attacks gain +1 strength for each of your bleeding tokens."]
+    },
+    "Crimson Bow": {
+        "types": ["weapon", "ranged", "bow", "two-handed"],
+        "location":"Crimson Crockery",
+        "crafting":"x1 irregular optic nerve, x1 crimson bone",
+        "stats": {"speed": 2, "accuracy": 6, "strength": 3},
+        "affinities": { "top": "blue", "right": "red", "bottom": "", "left": "", "center": "" },
+        "abilities": ["[Cumbersome]", "[Range] 5", "{red_puzzle}, {blue_affinity}: This gains +2 strength and [Deadly] while attacking from the monster's facing."]
+    },
+    "Giggling Scythe": {
+        "types": ["weapon", "melee", "grand", "scythe", "two-handed", "bone"],
+        "location":"Crimson Crockery",
+        "crafting":"x2 perfect bone, x2 perfect hide, x13 veined glass",
+        "stats": {"speed":3 , "accuracy": 5, "strength":8},
+        "affinities": { "top": "blue", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["[Sharp]", "[Reach] 2","[Unique]","When you critically wound, automatically critically wound all remaining hit locations in your attack."]
     }
 //     "": {
 //         "types": ["", "", "", "", "", "", "", "", ""],
