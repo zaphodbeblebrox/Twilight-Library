@@ -1185,7 +1185,7 @@
     },
     "Sleeping Virus Flower": {
         "types": ["item", "flammable"],
-        "location": "Sense Memory",
+        "location": "Rare Gear",
         "crafting": "",
         "stats": {},
         "affinities": { "top": "blue", "right": "blue", "bottom": "blue", "left": "blue", "center": "" },
@@ -1260,6 +1260,54 @@
             "You cannot Dodge.",
             "{green_puzzle}, x2 {green_affinity}, {red_affinity}: Gains [Sharp], +1 evasion"
         ]
+    },
+    "Fortune Lantern Helm": {
+        "types": ["armor", "set", "metal", "other"],
+        "location": "Gaming Gazebo",
+        "crafting": "x1 lantern helm, x1 lucky dice, x2 iron",
+        "stats": { "armor": 7, "location": "head" },
+        "affinities": { "top": "", "right": "", "bottom": "blue", "left": "blue", "center": "" },
+        "abilities": ["[Outfit]", "x2 {blue_puzzle}: On arrival, gain a reroll token"]
+    },
+    "Fortune Lantern Cuirass": {
+        "types": ["", "", "", "", "", "", "", "", ""],
+        "location": "Gaming Gazebo",
+        "crafting": "x1 lantern cuirass, x1 lucky dice, x2 iron",
+        "stats": { "armor": 7, "location": "chest" },
+        "affinities": { "top": "blue", "right": "blue", "bottom": "blue", "left": "blue", "center": "" },
+        "abilities": [
+            "[Outfit]",
+            "On Arrival, gain a reroll token.",
+            "At the start of your first act, add 1 {armor} to all hit locations for each reroll token you have."
+        ]
+    },
+    "Fortune Lantern Sword": {
+        "types": ["weapon", "melee", "sword", "finesse", "metal"],
+        "location": "Gaming Gazebo",
+        "crafting": "x1 lantern sword, x1 rage pawn, x2 iron",
+        "stats": { "speed": 3, "accuracy": 7, "strength": 7 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "blue", "center": "" },
+        "abilities": ["[Sharp]", "[Deflect] X, where X is equal to the number of reroll tokens you have."]
+    },
+    "Fortune Lantern Dagger": {
+        "types": ["weapon", "melee", "dagger", "finesse", "metal"],
+        "location": "Gaming Gazebo",
+        "crafting": "x1 lantern dagger, x1 joy of gaming",
+        "stats": { "speed": 4, "accuracy": 9, "strength": 4 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "blue", "center": "" },
+        "abilities": [
+            "[Paired]",
+            "[Sharp]",
+            "During a paired attack, if you land 2+ [Perfect Hit]s, gain a reroll token."
+        ]
+    },
+    "Gambler's Lantern": {
+        "types": ["item", "lantern"],
+        "location": "Gaming Gazebo",
+        "crafting": "x1 broken lantern, x3 perfect resources",
+        "stats": {},
+        "affinities": { "top": "blue", "right": "red", "bottom": "", "left": "", "center": "" },
+        "abilities": ["+1 luck"]
     }
 
     //     "": {
