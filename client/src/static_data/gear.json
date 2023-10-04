@@ -1082,6 +1082,87 @@
         "stats": { "speed": 1, "accuracy": 5, "strength": 9 },
         "affinities": { "top": "", "right": "red", "bottom": "", "left": "red", "center": "" },
         "abilities": ["[Slow]", "[Block] 1", "This weapon gains +1 strength for each token you have."]
+    },
+    "Oxidized Lantern Helm": {
+        "types": ["armor", "set", "metal"],
+        "location": "Exhausted Lantern Hoard",
+        "crafting": "x1 Lantern Helm, x1 iron, x4 bone",
+        "stats": { "armor": 6, "location": "head" },
+        "affinities": { "top": "", "right": "", "bottom": "blue", "left": "", "center": "" },
+        "abilities": [
+            "[Outfit]",
+            "{blue_puzzle}, {red_affinity}: If you are not deaf, you may ignore effects that target non-deaf survivors."
+        ]
+    },
+    "Final Lantern (Lit)": {
+        "types": ["item", "lantern", "other"],
+        "location": "Exhausted Lantern Hoard",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "green", "right": "", "bottom": "", "left": "blue", "center": "" },
+        "abilities": [
+            "[Vital]",
+            "On Arrival, all survivors gain the [Horripilation] survivor status card. When insane, flip this card."
+        ]
+    },
+    "Final Lantern (Unlit)": {
+        "types": ["item", "lantern", "other"],
+        "location": "Exhausted Lantern Hoard",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "green", "right": "", "bottom": "", "left": "blue", "center": "" },
+        "abilities": [
+            "[Vital]",
+            "On Arrival, all survivors gain the [Horripilation] survivor status card. When not insane, flip this card."
+        ]
+    },
+    "Survivors' Lantern": {
+        "types": ["item", "lantern"],
+        "location": "Exhausted Lantern Hoard",
+        "crafting": "x1 {endeavor}",
+        "stats": {},
+        "affinities": { "top": "", "right": "green", "bottom": "blue", "left": "red", "center": "" },
+        "abilities": []
+    },
+    "Oxidized Lantern Sword": {
+        "types": ["weapon", "melee", "sword", "finesse", "metal"],
+        "location": "Exhausted Lantern Hoard",
+        "crafting": "x1 Lantern sword, x1 lantern tube",
+        "stats": { "speed": 3, "accuracy": 5, "strength": 5 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "red", "center": "" },
+        "abilities": ["[Sharp]", "[Deflect] 1"]
+    },
+    "Oxidized Beacon Shield": {
+        "types": ["weapon", "melee", "shield", "metal", "heavy"],
+        "location": "Exhausted Lantern Hoard",
+        "crafting": "x1 beacon shield, x2 iron, x1 hide",
+        "stats": { "speed": 1, "accuracy": 6, "strength": 6 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["Add 2 {armor] to all hit locations.", "[Deflect] 2"]
+    },
+    "Oxidized Lantern Dagger": {
+        "types": ["weapon", "melee", "dagger", "finesse", "metal"],
+        "location": "Exhausted Lantern Hoard",
+        "crafting": "x1 lantern dagger, x1 iron, x4 hide",
+        "stats": { "speed": 3, "accuracy": 6, "strength": 4 },
+        "affinities": { "top": "", "right": "red", "bottom": "", "left": "red", "center": "" },
+        "abilities": ["[Sharp]", "[Paired]", "{red_puzzle}, {red_affinity}: On a [Perfect Hit], gain +1 survival."]
+    },
+    "Oxidized Lantern Glaive": {
+        "types": ["weapon", "melee", "spear", "axe", "two-handed", "finesse", "metal"],
+        "location": "Exhausted Lantern Hoard",
+        "crafting": "x1 lantern glaive, x1 iron, x4 bone",
+        "stats": { "speed": 2, "accuracy": 5, "strength": 6 },
+        "affinities": { "top": "", "right": "", "bottom": "green", "left": "", "center": "" },
+        "abilities": ["[Sharp]", "[Reach] 2", "{green_puzzle}, {red_affinity}: [Barbed] 4"]
+    },
+    "Oxidized Ring Whip": {
+        "types": ["weapon", "melee", "whip", "finesse", "metal"],
+        "location": "Exhausted Lantern Hoard",
+        "crafting": "",
+        "stats": { "speed": 2, "accuracy": 5, "strength": 3 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "blue", "center": "" },
+        "abilities": ["[Sharp]", "[Reach] 2", "{blue_puzzle}, x3 {red_affinity}: Gains [Provoke]"]
     }
 
     //     "": {
