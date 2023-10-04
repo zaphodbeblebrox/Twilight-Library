@@ -1308,6 +1308,195 @@
         "stats": {},
         "affinities": { "top": "blue", "right": "red", "bottom": "", "left": "", "center": "" },
         "abilities": ["+1 luck"]
+    },
+    "Gorment Mask": {
+        "types": ["armor", "set", "gormskin", "heavy"],
+        "location": "Gormery",
+        "crafting": "x1 stout hide, x1 handed skull",
+        "stats": { "armor": 2, "location": "head" },
+        "affinities": { "top": "blue", "right": "", "bottom": "green", "left": "", "center": "" },
+        "abilities": [
+            "{blue_puzzle}, {green_puzzle}: If your courage is higher than {star}, ignore Intimidate actions."
+        ]
+    },
+    "Gorment Sleeves": {
+        "types": ["armor", "set", "gormskin", "heavy"],
+        "location": "Gormery",
+        "crafting": "x1 stout hide, x1 bone",
+        "stats": { "armor": 2, "location": "arms" },
+        "affinities": { "top": "", "right": "green", "bottom": "", "left": "", "center": "" },
+        "abilities": ["x2 {green_affinity}: You may [Guard] without spending survival."]
+    },
+    "Regeneration Suit": {
+        "types": ["item", "gorm"],
+        "location": "Gormery",
+        "crafting": "x1 stomach lining, x1 jiggling lard",
+        "stats": { "armor": 2, "location": "chest" },
+        "affinities": { "top": "green", "right": "", "bottom": "green", "left": "green", "center": "" },
+        "abilities": [
+            "[Accessory]",
+            "{green_puzzle}, {green_affinity}: At the end of the showdown, remove any permanent injuries you suffered this showdown."
+        ]
+    },
+    "Gorment Suit": {
+        "types": ["armor", "set", "gormskin", "heavy"],
+        "location": "Gormery",
+        "crafting": "x3 stout hide, x1 stout kidney",
+        "stats": { "armor": 2, "location": "chest, waist" },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "green", "center": "" },
+        "abilities": ["{green_puzzle}, {blue_affinity}, {red_affinity}: [Guard]"]
+    },
+    "Gorment Boots": {
+        "types": ["armor", "set", "gormskin", "heavy"],
+        "location": "Gormery",
+        "crafting": "x1 stout hide, x1 bone",
+        "stats": { "armor": 2, "location": "legs" },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["Other survivors may move through but not end movement in a space you occupy."]
+    },
+    "Rib Blade": {
+        "types": ["weapon", "melee", "grand", "bone"],
+        "location": "Gormery",
+        "crafting": "x1 meaty rib, x1 hide",
+        "stats": { "speed": 1, "accuracy": 6, "strength": 5 },
+        "affinities": { "top": "", "right": "blue", "bottom": "", "left": "", "center": "" },
+        "abilities": ["[Slow]", "[Deadly]"]
+    },
+    "Pulse Lantern": {
+        "types": ["item", "lantern", "gormskin", "fragile"],
+        "location": "Gormery",
+        "crafting": "x1 milky eye, x1 active thyroid",
+        "stats": {},
+        "affinities": { "top": "red", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "{activation}: Once per showdown, roll 1d10. On a result of 4+, the monster is knocked down and all survivors gain -1 acuracy token."
+        ]
+    },
+    "Kuckle Shield": {
+        "types": ["weapon", "melee", "shield", "gormskin"],
+        "location": "Gormery",
+        "crafting": "x1 mammoth hand, x2 bone",
+        "stats": { "speed": 3, "accuracy": 7, "strength": 1 },
+        "affinities": { "top": "", "right": "", "bottom": "red", "left": "", "center": "" },
+        "abilities": ["[Block] 1", "Once per round, if you wound with this weapon, [Block] 1 for free."]
+    },
+    "Gorn": {
+        "types": ["item", "instrument", "gormskin"],
+        "location": "Gormery",
+        "crafting": "x1 stout heart, x3 bone",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "blue", "left": "", "center": "" },
+        "abilities": [
+            "{activation}: All non-deaf knocked down survivors stand and gain 1 {armor} to all hit locations. Limit once per showdown."
+        ]
+    },
+    "Gaxe": {
+        "types": ["weapon", "melee", "axe", "bone"],
+        "location": "Gormery",
+        "crafting": "x1 dense bone, x1 stout hide",
+        "stats": { "speed": 1, "accuracy": 6, "strength": 4 },
+        "affinities": { "top": "red", "right": "", "bottom": "", "left": "red", "center": "" },
+        "abilities": [
+            "{red_affinity}: Gain +1 speed and [Savage]",
+            "Each showdown, the first time you critically wound the monster, it gains -1 evasion token."
+        ]
+    },
+    "Armor Spikes": {
+        "types": ["item", "bone", "heavy"],
+        "location": "Gormery",
+        "crafting": "x1 stout vertebrae, x1 scrap",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "blue", "left": "", "center": "" },
+        "abilities": [
+            "If adjacent to the monster when you suffer a severe body injury, the monster suffers a wound. Limit once per round."
+        ]
+    },
+    "Greater Gaxe": {
+        "types": ["weapon", "melee", "axe", "two-handed", "heavy"],
+        "location": "Gormery",
+        "crafting": "x1 dense bone, x1 jiggling lard",
+        "stats": { "speed": 2, "accuracy": 6, "strength": 4 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "red", "center": "" },
+        "abilities": [
+            "[Deadly]",
+            "[Reach] 2",
+            "{green_affinity}, {red_affinity}: On a [Perfect Hit], gain +4 strength for the rest of the attack."
+        ]
+    },
+    "Acid-Tooth Dagger": {
+        "types": ["weapon", "melee", "dagger", "bone"],
+        "location": "Gormery",
+        "crafting": "x1 acid gland, x2 bone",
+        "stats": { "speed": 2, "accuracy": 7, "strength": 2 },
+        "affinities": { "top": "red", "right": "", "bottom": "red", "left": "", "center": "" },
+        "abilities": ["[Paired]", "On a [Perfect Hit], a wound attempt in your attack automatically succeeds."]
+    },
+    "Riot Mace": {
+        "types": ["weapon", "melee", "club"],
+        "location": "Gormery",
+        "crafting": "x1 pure bulb, x1 stout kidney, x1 jiggling lard, x1 dense bone",
+        "stats": { "speed": 2, "accuracy": 5, "strength": 5 },
+        "affinities": { "top": "", "right": "blue", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Deadly]",
+            "When you critically wound, the next time the monster would draw AI, it performs Basic Action instead."
+        ]
+    },
+    "Black Sword": {
+        "types": ["weapon", "melee", "sword", "heavy"],
+        "location": "Gormery",
+        "crafting": "x1 gormite, x1 handed skull",
+        "stats": { "speed": 3, "accuracy": 5, "strength": 10 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["On a [Perfect Hit], gain +1 survival.", "If you are a Sword Master, gain +20 strength."]
+    },
+    "Power Potion": {
+        "types": ["item", "consumable"],
+        "location": "Gormchymist",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "green", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "{activation} Consume: Once per showdown, gain +1 strength token for each {green affinity} you have."
+        ]
+    },
+    "Steadfast Potion": {
+        "types": ["item", "consumable", "heavy"],
+        "location": "Gormchymist",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "red", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "When you ignore a hit with [Block], gain +1 strength token. When you are knocked down, lose all your +1 strength tokens."
+        ]
+    },
+    "Wisdom Potion": {
+        "types": ["item", "consumable", "other"],
+        "location": "Gormchymist",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "", "right": "blue", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "{blue_puzzle}, {blue affinity}: Play the showdown with the top card of the hit location deck revealed."
+        ]
+    },
+    "Healing Potion": {
+        "types": ["item", "consumable", "fragile"],
+        "location": "Gormchymist",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "red", "left": "", "center": "" },
+        "abilities": [
+            "At the end of the showdown, if you suffered any permanent injuries, you may archive this card and remove one of your choice."
+        ]
+    },
+    "Life Elixir": {
+        "types": ["item", "consumable", "stinky"],
+        "location": "Gormchymist",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["Each showdown, the first time you would die from a severe injury, ignore that injury."]
     }
 
     //     "": {
