@@ -923,6 +923,165 @@
         "stats": {},
         "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
         "abilities": ["All nuclear gear cards in your gear grid gain [Deadly] 2."]
+    },
+    "DBK Errant Badge": {
+        "types": ["item", "jewelry", "knight"],
+        "location": "Wet Resin Crafter",
+        "crafting": "x1 organ, x1 bone",
+        "stats": {},
+        "affinities": { "top": "", "right": "red", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Unique]",
+            "Add 1 {armor} to all hit locations.",
+            "At the start of the showdown, draw 1 tactics card."
+        ]
+    },
+    "Rainbow Wing Belt": {
+        "types": ["item", "flammable"],
+        "location": "Wet Resin Crafter",
+        "crafting": "x1 scarab wing, x1 organ, x1 hide",
+        "stats": {},
+        "affinities": { "top": "red", "right": "green", "bottom": "blue", "left": "", "center": "" },
+        "abilities": [
+            "x2 {red_affinity}, {blue_affinity}, {green_affinity}: When any of your attack rolls are 1, you may reroll them. Limit, once per attack."
+        ]
+    },
+    "Digging Claws": {
+        "types": ["weapon", "melee", "katar", "pickaxe", "bone", "mineral"],
+        "location": "Wet Resin Crafter",
+        "crafting": "x1 century fingernails, x2 scrap, x2 resources",
+        "stats": { "speed": 1, "accuracy": 4, "strength": 5 },
+        "affinities": { "top": "", "right": "green", "bottom": "", "left": "", "center": "" },
+        "abilities": ["[Paired]", "During the Mineral Gathering {story_event}, you may reroll one of your d10s."]
+    },
+    "Calcified Digging Claw": {
+        "types": ["weapon", "melee", "katar", "pickaxe"],
+        "location": "Wet Resin Crafter",
+        "crafting": "",
+        "stats": { "speed": 1, "accuracy": 4, "strength": 5 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "green", "center": "" },
+        "abilities": [
+            "[Paired]",
+            "[Sharp]",
+            "During the Mineral Gathering {story_event}, you may reroll one of your d10s."
+        ]
+    },
+    "Seasoned Monster Meat": {
+        "types": ["item", "consumable"],
+        "location": "Wet Resin Crafter",
+        "crafting": "x1 underplate fungus, x2 organ",
+        "stats": {},
+        "affinities": { "top": "green", "right": "red", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "When you depart, gain +3 survival.",
+            "{red_puzzle}, {activation} Consume: Gain +3 survival and +1 strength token. Limit once per showdown."
+        ]
+    },
+    "Century Shoulder Pads": {
+        "types": ["item", "bone", "mineral", "heavy"],
+        "location": "Wet Resin Crafter",
+        "crafting": "x1 scarab shell, x3 leather, x1 iron",
+        "stats": {},
+        "affinities": { "top": "", "right": "green", "bottom": "", "left": "", "center": "" },
+        "abilities": ["Add 1 {armor} to all hit locations.", "{green_puzzle}, {green_affinity}: [Ripple Pattern]"]
+    },
+    "Calcified Shoulder Pads": {
+        "types": ["item", "bone", "heavy"],
+        "location": "Wet Resin Crafter",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "", "right": "green", "bottom": "", "left": "", "center": "" },
+        "abilities": ["Add 3 {armor} to all hit locations.", "{green_puzzle}, {green_affinity}: [Ripple Pattern]"]
+    },
+    "Scarab Circlet": {
+        "types": ["item", "bone", "jewelry", "other"],
+        "location": "Wet Resin Crafter",
+        "crafting": "x1 compound eye, x1 hide, x1 bone",
+        "stats": {},
+        "affinities": { "top": "blue", "right": "", "bottom": "blue", "left": "", "center": "" },
+        "abilities": [
+            "Add 1 {armor} to all hit locations.",
+            "During the showdown, when your survival is reduced to 0, gain +1 strength token."
+        ]
+    },
+    "Century Greaves": {
+        "types": ["item", "bone", "mineral", "heavy"],
+        "location": "Wet Resin Crafter",
+        "crafting": "x1 scarab shell, x1 beetle horn, x2 iron",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "green", "center": "" },
+        "abilities": [
+            "-1 Movement.",
+            "Add 1 {armor} to all hit locations.",
+            "{green_puzzle}, {blue_affinity}: Add +1 to [Ripple Pattern] roll results."
+        ]
+    },
+    "Calciied Greaves": {
+        "types": ["item", "bone", "heavy"],
+        "location": "Wet Resin Crafter",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "green", "center": "" },
+        "abilities": [
+            "-1 Movement.",
+            "Add 3 {armor} to all hit locations.",
+            "{green_puzzle}, {blue_affinity}: Add +2 to [Ripple Pattern] roll results."
+        ]
+    },
+    "Rubber Bone Harness": {
+        "types": ["item", "bone", "leather"],
+        "location": "Wet Resin Crafter",
+        "crafting": "x1 underplate fungus, x1 century fingernails, x2 leather",
+        "stats": {},
+        "affinities": { "top": "red", "right": "green", "bottom": "blue", "left": "green", "center": "" },
+        "abilities": [
+            "Once per showdown, you may convert all of your negative attribute tokens to positive attribute tokens of the same type."
+        ]
+    },
+    "The Beetle Bomb": {
+        "types": ["item", "thrown", "fragile"],
+        "location": "Wet Resin Crafter",
+        "crafting": "x2 scarab shell, x2 preserved caustic dung, x5 resources",
+        "stats": {},
+        "affinities": { "top": "blue", "right": "", "bottom": "red", "left": "", "center": "" },
+        "abilities": [
+            "[Unique]",
+            "{activation}: If adjacent to the monster, roll 1d10. On a 6+, the monster gains -1 accuracy and -1 evasion tokens. Limit once per showdown."
+        ]
+    },
+    "Zanbato": {
+        "types": ["weapon", "melee", "grand", "two-handed", "bone", "mineral"],
+        "location": "???",
+        "crafting": "???",
+        "stats": { "speed": 1, "accuracy": 6, "strength": 6 },
+        "affinities": { "top": "red", "right": "green", "bottom": "", "left": "", "center": "" },
+        "abilities": ["[Slow]", "[Frail]", "[Deadly]", "{red_puzzle}, {green_affinity}: Gains [Devastating] 1."]
+    },
+    "Calcified Zanbato": {
+        "types": ["weapon", "melee", "grand", "two-handed", "bone", "heavy"],
+        "location": "???",
+        "crafting": "",
+        "stats": { "speed": 1, "accuracy": 5, "strength": 8 },
+        "affinities": { "top": "red", "right": "green", "bottom": "", "left": "", "center": "" },
+        "abilities": ["[Slow]", "[Deadly]", "{red_puzzle}, {green_affinity}: Gains [Devastating] 1."]
+    },
+    "Regenerating Blade": {
+        "types": ["item", "mineral", "other"],
+        "location": "???",
+        "crafting": "???",
+        "stats": {},
+        "affinities": { "top": "", "right": "blue", "bottom": "", "left": "green", "center": "" },
+        "abilities": [
+            "During the Settlement Phase, you may archive this to remove the Dismembered Arm or Leg permanent injury from one survivor."
+        ]
+    },
+    "Calcified Juggernaut Blade": {
+        "types": ["weapon", "melee", "grand", "bone", "other"],
+        "location": "???",
+        "crafting": "",
+        "stats": { "speed": 1, "accuracy": 5, "strength": 9 },
+        "affinities": { "top": "", "right": "red", "bottom": "", "left": "red", "center": "" },
+        "abilities": ["[Slow]", "[Block] 1", "This weapon gains +1 strength for each token you have."]
     }
 
     //     "": {
