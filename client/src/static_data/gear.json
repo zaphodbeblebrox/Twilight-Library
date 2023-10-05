@@ -1680,6 +1680,95 @@
         "stats": { "armor": 3, "location": "legs" },
         "affinities": { "top": "", "right": "green", "bottom": "", "left": "green", "center": "" },
         "abilities": ["x2 {green_puzzle}: At the end of your act, you may move 1 space."]
+    },
+    "Ancient Lion Claws": {
+        "types": ["item", "fur", "heavy"],
+        "location": "Rare Gear",
+        "crafting": "",
+        "stats": { "armor": 2, "location": "arms" },
+        "affinities": { "top": "red", "right": "red", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Unique]",
+            "[Accessory]",
+            "-1 evasion",
+            "+2 strength while attacking with daggers or katars.",
+            "You may move up to 2 additional spaces when you [Pounce]."
+        ]
+    },
+    "Necromancer's Eye": {
+        "types": ["item", "set", "jewelry", "other"],
+        "location": "Rare Gear",
+        "crafting": "",
+        "stats": { "armor": 2, "location": "head" },
+        "affinities": { "top": "", "right": "", "bottom": "blue", "left": "", "center": "" },
+        "abilities": [
+            "[Unique]",
+            "[Accessory]",
+            "Ignore the effects of Blind.",
+            "{blue_puzzle}, {activation}: Reveal the next 4 monster {hit_location}. Put them back in any order."
+        ]
+    },
+    "Golden Plate": {
+        "types": ["item", "metal", "heavy"],
+        "location": "Rare Gear",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "red", "right": "red", "bottom": "red", "left": "red", "center": "" },
+        "abilities": [
+            "[Unique]",
+            "-1 evasion",
+            "x4 {red_affinity}: When you depart, gain +2 {armor} to all locations wearing fur armor."
+        ]
+    },
+    "Bone Witch Mehndi": {
+        "types": ["item", "soluble", "symbol", "other"],
+        "location": "Rare Gear",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "blue", "right": "red", "bottom": "", "left": "green", "center": "" },
+        "abilities": [
+            "{green_puzzle}, {blue_puzzle}, {red_puzzle}: At the start of your act, you may spend 3 insanity to gain 1 survival or 1 survival to gain 3 insanity."
+        ]
+    },
+    "Lantern Mehndi": {
+        "types": ["item", "soluble", "symbol", "other"],
+        "location": "Rare Gear",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "blue", "left": "", "center": "red" },
+        "abilities": ["{blue_puzzle}, x2 {red_affinity}: You may start the showdown in any unoccupied board space."]
+    },
+    "Butcher's Blood": {
+        "types": ["item", "soluble", "symbol", "other"],
+        "location": "Rare Gear",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "red", "right": "", "bottom": "", "left": "red", "center": "blue" },
+        "abilities": ["{red_puzzle}, x2 {blue_affinity}: For every 10 insanity you have gain +1 speed and +1 strength."]
+    },
+    "Glyph of Solitude": {
+        "types": ["item", "soluble", "symbol", "other"],
+        "location": "Rare Gear",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "", "right": "green", "bottom": "green", "left": "", "center": "red" },
+        "abilities": ["{green_puzzle}, x2 {red_affinity}: +2 accuracy. You are Deaf. You cannot [Encourage]."]
+    },
+    "Death Mehndi": {
+        "types": ["item", "soluble", "symbol", "other"],
+        "location": "Rare Gear",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "all" },
+        "abilities": ["[Cursed]", "On a [Perfect Hit], gain 1d10 insanity.", "-4 to all brain trauma rolls."]
+    },
+    "Lion God Statue": {
+        "types": ["item", "stone", "heavy"],
+        "location": "Rare Gear",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "blue", "right": "", "bottom": "", "left": "red", "center": "" },
+        "abilities": ["[Unique]", "-1 evasion", "{red_puzzle}: Gain +1 strength for each {red_affinity} you have."]
     }
 
     // "": {
