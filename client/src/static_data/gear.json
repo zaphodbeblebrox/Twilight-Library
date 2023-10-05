@@ -1873,6 +1873,84 @@
             "If you die, roll 1d10. On a 7+, you revive during the next settlement phase.",
             "During the settlement phase, you may archive this to {story_event} Bleeding Heart."
         ]
+    },
+    "White Lion Mask": {
+        "types": ["item", "mask", "bone", "other"],
+        "location": "Mask Maker",
+        "crafting": "x1 {endeavor}, x6 bone, x4 organ, x1 shimmering mane",
+        "stats": { "armor": 2, "location": "head" },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Unique]",
+            "[Accessory]",
+            "[Irreplaceable]",
+            "x2 {green_affinity}: If insane, spend {activation} to lose all your survival and gain that many +1 strength tokens."
+        ]
+    },
+    "Antelope Mask": {
+        "types": ["item", "mask", "bone", "other"],
+        "location": "Mask Maker",
+        "crafting": "x1 {endeavor}, x6 bone, x4 organ, x1 pelt",
+        "stats": { "armor": 2, "location": "head" },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Unique]",
+            "[Accessory]",
+            "[Irreplaceable]",
+            "x2 {red_affinity}, x2 {blue_affinity}: At the start of your act, if insane, gain +1 {movement}."
+        ]
+    },
+    "Phoenix Mask": {
+        "types": ["item", "mask", "bone", "other"],
+        "location": "Mask Maker",
+        "crafting": "x1 {endeavor}, x6 bone, x4 organ, x1 small feather",
+        "stats": { "armor": 2, "location": "head" },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Unique]",
+            "[Accessory]",
+            "[Irreplaceable]",
+            "x4 {red_affinity}: If insane, you may dodge 1 additional time per round."
+        ]
+    },
+    "Death Mask": {
+        "types": ["item", "mask", "bone", "other"],
+        "location": "Mask Maker",
+        "crafting": "x1 {endeavor}, x6 bone, x4 organ, -1 population",
+        "stats": { "armor": 2, "location": "head" },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Unique]",
+            "[Accessory]",
+            "[Irreplaceable]",
+            "If you have no affinities, gain +4 luck and suffer -4 to all severe injury rolls."
+        ]
+    },
+    "Man Mask": {
+        "types": ["item", "mask", "bone", "other"],
+        "location": "Mask Maker",
+        "crafting": "x1 {endeavor}, x6 bone, x4 organ, x1 skull",
+        "stats": { "armor": 2, "location": "head" },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Unique]",
+            "[Accessory]",
+            "[Irreplaceable]",
+            "{red_affinity}, {green_affinity}: If insane, you may spend negative attribute tokens in place of survival."
+        ]
+    },
+    "God Mask": {
+        "types": ["item", "mask", "bone", "other"],
+        "location": "Mask Maker",
+        "crafting": "x1 {endeavor}, x6 bone, x4 organ, x1 founding stone",
+        "stats": { "armor": 2, "location": "head" },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Unique]",
+            "[Accessory]",
+            "[Irreplaceable]",
+            "x2 {red_affinity}, x2 {green_affinity}, x2 {blue_affinity}: At the start of your act, if insane, gain +1 survival."
+        ]
     }
 
     // "": {
