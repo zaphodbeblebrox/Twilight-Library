@@ -1759,7 +1759,7 @@
         "location": "Rare Gear",
         "crafting": "",
         "stats": {},
-        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "all" },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "all_affinity" },
         "abilities": ["[Cursed]", "On a [Perfect Hit], gain 1d10 insanity.", "-4 to all brain trauma rolls."]
     },
     "Lion God Statue": {
@@ -2555,6 +2555,175 @@
         "stats": { "speed": 2, "accuracy": 7, "strength": 8 },
         "affinities": { "top": "", "right": "", "bottom": "", "left": "red", "center": "" },
         "abilities": ["[Ballad of Blues] 8"]
+    },
+    "Phoenix Helm": {
+        "types": ["armor", "set", "feather", "metal", "flammable"],
+        "location": "Plumery",
+        "crafting": "x1 hollow wing bone, x1 small feathers, x1 bone",
+        "stats": { "armor": 4, "location": "head" },
+        "affinities": { "top": "", "right": "", "bottom": "blue", "left": "", "center": "" },
+        "abilities": [
+            "{blue_puzzle}, {green_affinity}, {red_affinity}: If insane at the start of the showdown, gain +1 evasion token."
+        ]
+    },
+    "Phoenix Gauntlet": {
+        "types": ["armor", "set", "feather", "metal", "flammable"],
+        "location": "Plumery",
+        "crafting": "x1 iron, x1 leather, x1 small feather, x1 bone",
+        "stats": { "armor": 4, "location": "arms" },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["When you depart, gain +1 insanity."]
+    },
+    "Phoenix Plackart": {
+        "types": ["armor", "set", "feather", "metal", "flammable"],
+        "location": "Plumery",
+        "crafting": "x1 iron, x1 leather, x1 tail feathers, x1 hide",
+        "stats": { "armor": 4, "location": "chest" },
+        "affinities": { "top": "blue", "right": "red", "bottom": "", "left": "green", "center": "" },
+        "abilities": [
+            "{blue_puzzle}, {green_puzzle}, {red_puzzle}: If insane, ignore the first hit each round and suffer 1 brain damage instead."
+        ]
+    },
+    "Phoenix Faulds": {
+        "types": ["armor", "set", "feather", "metal", "flammable"],
+        "location": "Plumery",
+        "crafting": "x1 iron, x1 leather, x1 tail feathers, x1 organ",
+        "stats": { "armor": 4, "location": "waist" },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["When you depart, gain +1 insanity."]
+    },
+    "Phoenix Greaves": {
+        "types": ["armor", "set", "feather", "metal", "flammable"],
+        "location": "Plumery",
+        "crafting": "x1 iron, x1 leather, x1 small feathers, x1 organ",
+        "stats": { "armor": 4, "location": "legs" },
+        "affinities": { "top": "", "right": "red", "bottom": "", "left": "", "center": "" },
+        "abilities": ["If insane, gain +2 movement."]
+    },
+    "Feather Shield": {
+        "types": ["weapon", "melee", "shield", "flammable"],
+        "location": "Plumery",
+        "crafting": "x2 small feathers, x1 muculent droppings",
+        "stats": { "speed": 3, "accuracy": 7, "strength": 0 },
+        "affinities": { "top": "blue", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Block] 1",
+            "{green_affinity}, {red_affinity}, {blue_affinity}: Reduce any suffered brain damage by 1 to a minimum of 1."
+        ]
+    },
+    "Sonic Tomahawk": {
+        "types": ["weapon", "melee", "axe", "metal"],
+        "location": "Plumery",
+        "crafting": "x1 small feathers, x1 iron, x1 hollow wing bone",
+        "stats": { "speed": 3, "accuracy": 5, "strength": 6 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "red", "center": "" },
+        "abilities": [
+            "On a [Perfect Hit], make 1 additional attack roll.",
+            "{red_puzzle}, {red_affinity}, {blue_affinity}: Gain [Savage] and [Paired]"
+        ]
+    },
+    "Rainbow Katana": {
+        "types": ["weapon", "melee", "katana", "finesse", "two-handed"],
+        "location": "Plumery",
+        "crafting": "x1 bird beak, x1 rainbow droppings, x1 iron, x6 bone",
+        "stats": { "speed": 4, "accuracy": 4, "strength": 4 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "red", "center": "" },
+        "abilities": ["[Frail]", "{red_puzzle}, {green_affinity}, {blue_affinity}: Gain [Deadly]"]
+    },
+    "Hollowpoint Arrow": {
+        "types": ["item", "ammunition", "arrow"],
+        "location": "Plumery",
+        "crafting": ".1 hollow wing bone, x1 scrap",
+        "stats": { "speed": 1, "accuracy": 6, "strength": 11 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["[Slow]", "[Ammo - Bow]", "On a hit, monster gains -1 movement token. Use once per showdown."]
+    },
+    "Arc Bow": {
+        "types": ["weapon", "ranged", "bow", "two-handed"],
+        "location": "Plumery",
+        "crafting": "x1 phoenix whisker, x1 wishbone, x1 scrap",
+        "stats": { "speed": 1, "accuracy": 6, "strength": 9 },
+        "affinities": { "top": "", "right": "green", "bottom": "", "left": "red", "center": "" },
+        "abilities": ["[Slow]", "[Range] 6", "[Cumbersome]", "{red_puzzle}, {green_puzzle}, {blue_affinity}: Range +2"]
+    },
+    "Hollow Sword": {
+        "types": ["weapon", "melee", "sword", "dagger", "bone"],
+        "location": "Plumery",
+        "crafting": "x1 hollow wing bone, x2 bone, x2 hide",
+        "stats": { "speed": 2, "accuracy": 5, "strength": 5 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["[Frail]", "This weapon gains strength equal to the monster's damage attribute."]
+    },
+    "Finger of God": {
+        "types": ["weapon", "melee", "spear", "two-handed"],
+        "location": "Plumery",
+        "crafting": "x1 phoenix finger, x4 bone",
+        "stats": { "speed": 2, "accuracy": 5, "strength": 5 },
+        "affinities": { "top": "red", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Reach] 2",
+            "{red_affinity}, {green_affinity}, {blue_affinity}: As long as you have 5+ survival, gain +1 accuracy and +1 strength."
+        ]
+    },
+    "Feather Mantle": {
+        "types": ["item", "flammable"],
+        "location": "Plumery",
+        "crafting": "x2 tail feathers, x1 scrap",
+        "stats": {},
+        "affinities": { "top": "", "right": "green", "bottom": "red", "left": "blue", "center": "" },
+        "abilities": [
+            "When you suffer [Knockback], you may ignore [Collision] with other survivors and reduce the movement by up to 3 spaces."
+        ]
+    },
+    "Bird Bread": {
+        "types": ["item", "consumable", "soluble"],
+        "location": "Plumery",
+        "crafting": "x1 pustules, x3 hide",
+        "stats": {},
+        "affinities": { "top": "", "right": "green", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "{activation} Consume: Once per showdown, add 1 {armor} to all hit locations. Gain the Priority Target token. Roll 1d10, on a 1, reduce your survival to 0."
+        ]
+    },
+    "Bloom Sphere": {
+        "types": ["item", "stinky", "other"],
+        "location": "Plumery",
+        "crafting": "x1 small hand parasites, x3 bone",
+        "stats": {},
+        "affinities": { "top": "", "right": "blue", "bottom": "", "left": "green", "center": "" },
+        "abilities": [
+            "{green_puzzle}, {blue_puzzle}: When you are picked as a target, roll 1d10. On a 6+, the monster must pick a new target if possible."
+        ]
+    },
+    "Hours Ring": {
+        "types": ["item", "other"],
+        "location": "Plumery",
+        "crafting": "x1 shimmering halo, x5 organ",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Unique]",
+            "During the Aftermath, if you died or ceased to exist, you may archive this and reset the campaign to the previous settlement phase's develop step before you departed."
+        ]
+    },
+    "Crest Crown": {
+        "types": ["item", "other"],
+        "location": "Plumery",
+        "crafting": "x1 phoenix crest, x6 organ",
+        "stats": {},
+        "affinities": { "top": "blue", "right": "green", "bottom": "blue", "left": "red", "center": "" },
+        "abilities": [
+            "{activation}: If insane, reshuffle the {hit_location} deck.",
+            "x2 {blue_puzzle}, {red_puzzle}: When you depart, gain +1 insanity and +1 survival for every {blue_affinity} you have."
+        ]
+    },
+    "Blood Sheath": {
+        "types": ["item", "bone", "other"],
+        "location": "Plumery",
+        "crafting": "x5 organ, x1 hollow wing bone, x1 muculent droppings",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["[Block] 1", "When Rainbow Katana is directly left of this, it loses [Frail] and gains [Sharp]."]
     }
 
     // "": {
