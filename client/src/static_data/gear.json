@@ -330,7 +330,7 @@
         "stats": { "speed": 3, "accuracy": 6, "strength": 7 },
         "affinities": { "top": "red", "right": "red", "bottom": "red", "left": "red", "center": "" },
         "abilities": [
-            "x4 {red_affinity}: When your wound causes a reaction where the monster moves, it suffers a wound."
+            "x4 {red_affinity}: When your wound causes a {reaction} where the monster moves, it suffers a wound."
         ]
     },
     "Lion Slayer Cape": {
@@ -2393,7 +2393,7 @@
         "affinities": { "top": "", "right": "red", "bottom": "", "left": "", "center": "" },
         "abilities": [
             "Gains [Sharp] when attacking {pumpkin} monsters.",
-            "If you are not wearing any head armor, you may ignore the first reaction during your first attack each round."
+            "If you are not wearing any head armor, you may ignore the first {reaction} during your first attack each round."
         ]
     },
     "Seditioner": {
@@ -2724,6 +2724,241 @@
         "stats": {},
         "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
         "abilities": ["[Block] 1", "When Rainbow Katana is directly left of this, it loses [Frail] and gains [Sharp]."]
+    },
+    "Jack O' Lantern": {
+        "types": ["item", "consumable", "lantern", "other"],
+        "location": "Promo",
+        "crafting": "x1 skull, x1 scrap, x1 organ",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Irreplaceable]",
+            "During the showdown, if you are insane when a survivor dies, gain +10 survival."
+        ]
+    },
+    "Vibrant Lantern": {
+        "types": ["item", "lantern", "other"],
+        "location":"Promo",
+        "crafting":"???",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["+1 accuracy", "You may archive this to gain 1 broken lantern basic resource and 1 survival."]
+    },
+    "Nightmare Breast Pump": {
+        "types": ["item", "noisy", "fragile", "other"],
+        "location":"Promo",
+        "crafting":"???",
+        "stats": {},
+        "affinities": { "top": "blue", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["[Sentient]", "[Irreplaceable]","Female Only","As a returning survivor, gain +1 to your intimacy rolls this settlement phase."]
+    },
+    "Primactic Lantern": {
+        "types": ["item", "lantern", "other"],
+        "location":"Promo",
+        "crafting":"???",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["+1 movement", "[Unique]","[Irreplaceable]","During the showdown, you may archive this and gain 1 permanent affinity of any color."]
+    },
+    "Dying Lantern": {
+        "types": ["item", "lantern", "other"],
+        "location":"Promo",
+        "crafting":"???",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["+1 evasion", "You may archive this to gain 1 skull basic resource and +3 insanity."]
+    },
+    "Black Friday Lantern": {
+        "types": ["item", "lantern", "other"],
+        "location":"Promo",
+        "crafting":"???",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["+1 evasion", "On Arrival, you may archive this and [Ambush] the monster. Limit once per campaign."]
+    },
+    "Twilight Revovler": {
+        "types": ["weapon", "ranged", "metal", "finesse", "other"],
+        "location":"Promo",
+        "crafting":"???",
+        "stats": {"speed": 1, "accuracy":8, "strength":10 },
+        "affinities": { "top": "", "right": "blue", "bottom": "", "left": "red", "center": "" },
+        "abilities": ["[Cursed]", "[Sentient]","[Range] 8","{activation} {movement} & 1 survival: Make an attack using this weapon. This attack has [Range] 3 and gains -2 accuracy and +5 speed. Ignore {reaction} WOUND for this attack. Limit once per showdown."]
+    },
+    "Blood Plasma Gun": {
+        "types": ["weapon", "ranged", "gun", "other"],
+        "location":"Promo",
+        "crafting":"???",
+        "stats": {"speed": "X", "accuracy": 4, "strength": "Z"},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["[Range] X^3", "[Unique]","When you activate this, gain 1 bleeding token. X = your bleeding tokens. Z = 5 * X"]
+    },
+    "Refined Lantern Sword": {
+        "types": ["weapon", "melee", "sword", "finesse", "metal"],
+        "location":"Promo",
+        "crafting":"x1 {endeavor}, x1 lantern sword, x1 perfect bone, x5 resources from a level 3 monster.",
+        "stats": {"speed": 3, "accuracy":5 , "strength": 5},
+        "affinities": { "top": "", "right": "blue", "bottom": "", "left": "red", "center": "" },
+        "abilities": ["[Sharp]", "[Refined]"]
+    },
+    "Ashen Shears": {
+        "types": ["weapon", "melee", "scissors", "two-handed", "bone"],
+        "location":"Promo",
+        "crafting":"x1 perfect hide, x3 scrap, x1 organ",
+        "stats": {"speed": 1, "accuracy":6 , "strength":6 },
+        "affinities": { "top": "red", "right": "green", "bottom": "", "left": "", "center": "" },
+        "abilities": ["[Slow]", "[Frail]","[Block] 1","{red_puzzle}, {green_puzzle}: Gains [Cleavage] 3"]
+    },
+    "Gusk Knife": {
+        "types": ["weapon", "melee", "dagger", "shield", "bone"],
+        "location":"Promo",
+        "crafting":"x1 dense bone from Lvl 3 Gorm, x1 organ, x1 scrap OR x1 perfect bone, x1 bone resource from lvl 3 monster, x1 organ, x1 scrap",
+        "stats": {"speed": 3, "accuracy": 6, "strength":5 },
+        "affinities": { "top": "", "right": "", "bottom": "green", "left": "", "center": "" },
+        "abilities": ["[Paired]", "[Block] 1","If paired, gains [Grimstep] & [Blindside]."]
+    },
+    "Stonesmasher": {
+        "types": ["weapon", "melee", "club", "heavy", "bone"],
+        "location":"Promo",
+        "crafting":"x2 large flat tooth, x1 legendary horns, x2 bone",
+        "stats": {"speed": 1, "accuracy": 6, "strength":8 },
+        "affinities": { "top": "green", "right": "", "bottom": "green", "left": "", "center": "" },
+        "abilities": ["[Savage]", "[Demolish]","[Irreplaceable]","This gains +4 luck when attacking a knocked down monster."]
+    },
+    "Xmaxe": {
+        "types": ["weapon", "melee", "axe", "other"],
+        "location":"Promo",
+        "crafting":"x2 leather, x2 bone, x1 fresh acanthus",
+        "stats": {"speed":2 , "accuracy":5 , "strength":0 },
+        "affinities": { "top": "red", "right": "green", "bottom": "green", "left": "red", "center": "" },
+        "abilities": ["[Irreplaceable]", "This weapon's strength is equal to your current insanity."]
+    },
+    "Hope Stealer": {
+        "types": ["weapon", "melee", "spear", "two-handed", "other"],
+        "location":"Promo",
+        "crafting":"",
+        "stats": {"speed": 2, "accuracy": 6, "strength": 0},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["[Unique]", "[Sentient]","[Reach] 2","At the end of the showdown, you die.","You settlement's death count is added to this weapon's strength."]
+    },
+    "Blood Plasma Katana": {
+        "types": ["weapon", "melee", "katana", "other"],
+        "location":"Promo",
+        "crafting":"???",
+        "stats": {"speed":9 , "accuracy": 6, "strength": 9},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["[Unique]", "[Sharp]","[Devastating] X","When you activate this, gain 1 bleeding token. X = your bleeding tokens minus 2."]
+    },
+    "Banshee Loincloth": {
+        "types": ["armor", "set", "cloth", "jewelry"],
+        "location":"Promo",
+        "crafting":"x2 cloth, x1 perfect organ, x1 leather",
+        "stats": {"armor": 1, "location": "waist"},
+        "affinities": { "top": "red", "right": "red", "bottom": "green", "left": "", "center": "" },
+        "abilities": ["{green_affinity}: Increase the effect of your [Banshee Dura] by 1 for every {red_affinity} {red_affinity} you have."]
+    },
+    "Banshee Bedlah": {
+        "types": ["armor", "set", "cloth", "jewelry"],
+        "location":"Promo",
+        "crafting":"x2 cloth, x2 scrap",
+        "stats": {"armor": 1, "location": "chest"},
+        "affinities": { "top": "red", "right": "green", "bottom": "", "left": "red", "center": "" },
+        "abilities": ["[Banshee Dura] 5", "Do not gain {activation} or {movement} at the start of your act. You cannot spend survival."]
+    },
+    "Petrichor Stechhelm": {
+        "types": ["armor", "set", "metal"],
+        "location":"Promo",
+        "crafting":"x2 iron",
+        "stats": {"armor": 5, "location": "head"},
+        "affinities": { "top": "", "right": "", "bottom": "green", "left": "blue", "center": "" },
+        "abilities": ["{blue_puzzle}: When you suffer damage from [Current] X, gain a [Charged] token."]
+    },
+    "Petrichor Sleeves": {
+        "types": ["armor", "set", "fur", "metal"],
+        "location":"Promo",
+        "crafting":"x1 iron, x2 perfect hide",
+        "stats": {"armor": 5, "location": "arms"},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "green", "center": "" },
+        "abilities": ["{red_affinity}, x2 {blue_affinity}, {activation}, {movement}: If you have a metal weapon in your gear grid, gain a [Charged] token."]
+    },
+    "Screaming Oni Mask": {
+        "types": ["armor", "bone", "mask"],
+        "location":"Promo",
+        "crafting":"x1 spiral horn, x1 skull, x1 perfect bone",
+        "stats": {"armor": 2, "location": "head"},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "blue", "center": "" },
+        "abilities": ["{activation}: Non-deaf knocked down survivors suffer {star} brain damage and stand. Limit once per round."]
+    },
+    "Gloom Cowl": {
+        "types": ["armor", "gloomy", "leather"],
+        "location":"Promo",
+        "crafting":"x1 dark water, x1 leather, x1 scrap OR x1 perfect organ, x1 leather, x1 scrap",
+        "stats": {"armor": 3, "location": "head"},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "blue, red" },
+        "abilities": ["Your attacks gain +2 accuracy when attacking a monster you are adjacent to.", ""]
+    },
+    "": {
+        "types": ["armor", "", "", "", "", "", "", "", ""],
+        "location":"Promo",
+        "crafting":"",
+        "stats": {"armor": , "location": ""},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["", ""]
+    },
+    "": {
+        "types": ["armor", "", "", "", "", "", "", "", ""],
+        "location":"Promo",
+        "crafting":"",
+        "stats": {"armor": , "location": ""},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["", ""]
+    },
+    "": {
+        "types": ["armor", "", "", "", "", "", "", "", ""],
+        "location":"Promo",
+        "crafting":"",
+        "stats": {"armor": , "location": ""},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["", ""]
+    },
+    "": {
+        "types": ["armor", "", "", "", "", "", "", "", ""],
+        "location":"Promo",
+        "crafting":"",
+        "stats": {"armor": , "location": ""},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["", ""]
+    },
+    "": {
+        "types": ["armor", "", "", "", "", "", "", "", ""],
+        "location":"Promo",
+        "crafting":"",
+        "stats": {"armor": , "location": ""},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["", ""]
+    },
+    "": {
+        "types": ["armor", "", "", "", "", "", "", "", ""],
+        "location":"Promo",
+        "crafting":"",
+        "stats": {"armor": , "location": ""},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["", ""]
+    },
+    "": {
+        "types": ["armor", "", "", "", "", "", "", "", ""],
+        "location":"Promo",
+        "crafting":"",
+        "stats": {"armor": , "location": ""},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["", ""]
+    },
+    "": {
+        "types": ["armor", "", "", "", "", "", "", "", ""],
+        "location":"Promo",
+        "crafting":"",
+        "stats": {"armor": , "location": ""},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["", ""]
     }
 
     // "": {
