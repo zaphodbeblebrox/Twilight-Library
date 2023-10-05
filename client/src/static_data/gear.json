@@ -1624,6 +1624,62 @@
         "stats": {},
         "affinities": { "top": "blue", "right": "", "bottom": "red", "left": "", "center": "" },
         "abilities": ["The monster starts 2 spaces closer to the Start space on the hunt board."]
+    },
+    "Round Leather Shield": {
+        "types": ["weapon", "melee", "shield", "leather"],
+        "location": "Leather Worker",
+        "crafting": "x1 leather, x1 bone, x1 hide",
+        "stats": { "speed": 1, "accuracy": 8, "strength": 1 },
+        "affinities": { "top": "green", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["Add 1 {armor} to all hit locations.", "[Block] 1"]
+    },
+    "Hunter Whip": {
+        "types": ["weapon", "melee", "whip", "leather"],
+        "location": "Leather Worker",
+        "crafting": "x2 leather, x1 bone",
+        "stats": { "speed": 3, "accuracy": 6, "strength": 3 },
+        "affinities": { "top": "blue", "right": "blue", "bottom": "", "left": "", "center": "" },
+        "abilities": ["x2 {blue_puzzle}: On a [Perfect Hit], discard 1 mood in play"]
+    },
+    "Leather Mask": {
+        "types": ["armor", "set", "leather"],
+        "location": "Leather Worker",
+        "crafting": "x1 leather, x1 scrap",
+        "stats": { "armor": 3, "location": "head" },
+        "affinities": { "top": "blue", "right": "", "bottom": "red", "left": "", "center": "" },
+        "abilities": ["When you depart, gain +2 insanity."]
+    },
+    "Leather Bracers": {
+        "types": ["armor", "set", "leather"],
+        "location": "Leather Worker",
+        "crafting": "x1 leather, x1 hide",
+        "stats": { "armor": 3, "location": "arms" },
+        "affinities": { "top": "", "right": "green", "bottom": "", "left": "", "center": "" },
+        "abilities": ["When you depart, gain +2 survival."]
+    },
+    "Leather Cuirass": {
+        "types": ["armor", "set", "leather"],
+        "location": "Leather Worker",
+        "crafting": "x1 leather, x1 bone",
+        "stats": { "armor": 3, "location": "chest" },
+        "affinities": { "top": "red", "right": "", "bottom": "blue", "left": "", "center": "" },
+        "abilities": []
+    },
+    "Leather Skirt": {
+        "types": ["armor", "set", "leather"],
+        "location": "Leather Worker",
+        "crafting": "x1 leather",
+        "stats": { "armor": 3, "location": "waist" },
+        "affinities": { "top": "", "right": "", "bottom": "green", "left": "", "center": "" },
+        "abilities": []
+    },
+    "Leather Boots": {
+        "types": ["armor", "set", "leather"],
+        "location": "Leather Worker",
+        "crafting": "x1 leather, x1 hide",
+        "stats": { "armor": 3, "location": "legs" },
+        "affinities": { "top": "", "right": "green", "bottom": "", "left": "green", "center": "" },
+        "abilities": ["x2 {green_puzzle}: At the end of your act, you may move 1 space."]
     }
 
     // "": {
