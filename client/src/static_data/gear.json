@@ -2077,6 +2077,131 @@
         "stats": {},
         "affinities": { "top": "", "right": "blue", "bottom": "", "left": "blue", "center": "" },
         "abilities": ["x2 {blue_affinity}: Gain +1 luck."]
+    },
+    "Stone Face Cloak": {
+        "types": ["armor", "scout", "heavy", "stone"],
+        "location": "Outskirts",
+        "crafting": "x3 hollow stone, x1 organ",
+        "stats": { "armor": 2, "location": "head, chest" },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "At the start of your act, if you are not on terrain, you may hide. Replace yourself with the Hidden Face terrain tile. Place the Scout miniature on the terrain card."
+        ]
+    },
+    "Vermin Bellyboots": {
+        "types": ["armor", "scout"],
+        "location": "Outskirts",
+        "crafting": "x1 perfect hide, x1 vermin",
+        "stats": { "armor": 2, "location": "legs" },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["+1 movement", "When the monster has another eligible target, it will always pick them first."]
+    },
+    "Grimjaw": {
+        "types": ["weapon", "scout", "mask", "dagger", "finesse", "metal"],
+        "location": "Outskirts",
+        "crafting": "x1 iron, x1 perfect bone",
+        "stats": { "speed": 3, "accuracy": 5, "strength": 4 },
+        "affinities": { "top": "", "right": "red", "bottom": "blue", "left": "", "center": "" },
+        "abilities": [
+            "During the Aftermath, if you wounded the monster at least once, gain +1 {monster_resource}.",
+            "{red_puzzle}, {blue_puzzle}: [Barbed] 6"
+        ]
+    },
+    "Scout's Lantern": {
+        "types": ["item", "scout", "lantern", "fragile"],
+        "location": "Outskirts",
+        "crafting": "x3 broken lantern",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "When you return to the settlement, draw 2 cards and pick 1 to keep when drawing random settlement events this lantern year."
+        ]
+    },
+    "Hunting Salve": {
+        "types": ["item", "scout", "soluble"],
+        "location": "Outskirts",
+        "crafting": "x1 fecal salve, x1 perfect organ",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["After revealing a hunt event card, you may archive this to skip it."]
+    },
+    "Blood Pack": {
+        "types": ["item", "scout", "fragile"],
+        "location": "Outskirts",
+        "crafting": "x1 hide, x1 perfect organ",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "During the Aftermath, if another survivor died from bleeding tokens, archive this and roll 1d10. On a 7+, they live."
+        ]
+    },
+    "Disguise Kit": {
+        "types": ["item", "scout", "balm", "soluble"],
+        "location": "Outskirts",
+        "crafting": "x1 bone, x1 hollow stone, x1 organ",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "After resolving a hunt event or encounter in which a survivor died, you die instead of that survivor."
+        ]
+    },
+    "Scout Whistle": {
+        "types": ["item", "scout", "instrument", "noisy"],
+        "location": "Outskirts",
+        "crafting": "x1 hollow stone, x1 perfect bone",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "At the start of the round, you may roll 1d10. On a 3+, gain the priority target token. Limit once per showdown."
+        ]
+    },
+    "Smog Singers Tablet": {
+        "types": ["item", "scout", "heavy", "stone", "tablet"],
+        "location": "Outskirts",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["All survivors can use [Hated Ones] survival action."]
+    },
+    "King Tablet": {
+        "types": ["item", "scout", "heavy", "stone", "tablet"],
+        "location": "Outskirts",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["All survivors can use [Silent Rebellion] survival action."]
+    },
+    "Screaming Antelope Tablet": {
+        "types": ["item", "scout", "heavy", "stone", "tablet"],
+        "location": "Outskirts",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["All survivors can use [Toothpicker] survival action."]
+    },
+    "Crimson Crocodile Tablet": {
+        "types": ["item", "scout", "heavy", "stone", "tablet"],
+        "location": "Outskirts",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["All survivors can use [Enchanted Reflection] survival action."]
+    },
+    "Phoenix Tablet": {
+        "types": ["item", "scout", "heavy", "stone", "tablet"],
+        "location": "Outskirts",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["All survivors can use [Unforeseen Strike] survival action."]
+    },
+    "White Lion Tablet": {
+        "types": ["item", "scout", "heavy", "stone", "tablet"],
+        "location": "Outskirts",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["All survivors can use [Distracted Cat] survival action."]
     }
 
     // "": {
