@@ -2202,6 +2202,359 @@
         "stats": {},
         "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
         "abilities": ["All survivors can use [Distracted Cat] survival action."]
+    },
+    "Vault Key Earrings": {
+        "types": ["item", "jewelry", "fragile"],
+        "location": "Pattern",
+        "crafting": "x1 {endeavor}, x1 bone, x1 broken lantern, x1 cyclops fly",
+        "stats": {},
+        "affinities": { "top": "", "right": "green", "bottom": "", "left": "", "center": "" },
+        "abilities": ["While you have this in your gear grid, choose one of your disorders and ignore its effects."]
+    },
+    "Telcric Eye Tac": {
+        "types": ["item", "jewelry", "other"],
+        "location": "Pattern",
+        "crafting": "x1 cat eye circlet, x1 golden whiskers, x1 sinew",
+        "stats": {},
+        "affinities": { "top": "", "right": "blue", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "{activation}: Roll 3 hit location dice and note the results. The next time you are hit, use one of these results (discarding the remaining)."
+        ]
+    },
+    "Vixen Tail": {
+        "types": ["item", "fur", "flammable", "other"],
+        "location": "Pattern",
+        "crafting": "x1 leather, x1 scrap",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "green", "left": "", "center": "" },
+        "abilities": ["If you are insane, you cannot be [Ambushed]."]
+    },
+    "Afterdeath Brew": {
+        "types": ["item", "consumable", "soluble", "other"],
+        "location": "Pattern",
+        "crafting": "x1 blistering plasma fruit, x1 love juice, x1 scrap",
+        "stats": {},
+        "affinities": { "top": "", "right": "green", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "{activation}: You consume this and gain 5 bleeding tokens.",
+            "During the Aftermath, roll 1d10 for each survivor that died from bleeding tokens. On a 9+, the brew saves their life but makes them Deaf."
+        ]
+    },
+    "Violet Armor Charm": {
+        "types": ["item", "jewelry", "feather", "flammable", "other"],
+        "location": "Pattern",
+        "crafting": "x1 violet droppings, x1 bird beak, x1 small feathers, x1 leather",
+        "stats": {},
+        "affinities": { "top": "", "right": "green", "bottom": "", "left": "red", "center": "" },
+        "abilities": [
+            "Add 2 {armor} to all hit locations wearing feather armor.",
+            "At the start of your act, roll 1d10. Add that amount to all feather armor, limited to that gear's max armor value."
+        ]
+    },
+    "Bone Chibouk": {
+        "types": ["item", "bone", "fragile", "stinky"],
+        "location": "Pattern",
+        "crafting": "x3 lumi, x1 perfect bone, x1 black lichen",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "blue", "left": "green", "center": "" },
+        "abilities": [
+            "{activation}: Gain +{star} lumi and suffer the [Collapsed Lung] severe body injury unless you have [Legendary Lungs]. Limit once per showdown."
+        ]
+    },
+    "Grim Muffler": {
+        "types": ["item", "cloth", "fur", "heavy"],
+        "location": "Pattern",
+        "crafting": "x1 cloth, x1 hide",
+        "stats": { "armor": 1, "location": "chest" },
+        "affinities": { "top": "", "right": "blue", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Accessory]",
+            "One of gear loses the noisy keyword.",
+            "{blue_affinity}: Ignore survival loss from cold hunt events."
+        ]
+    },
+    "White Sunlion Mask": {
+        "types": ["armor", "mask"],
+        "location": "Pattern",
+        "crafting": "x1 bleeding corpse lily, x1 bone, x1 golden whiskers",
+        "stats": { "armor": 2, "location": "head" },
+        "affinities": { "top": "", "right": "", "bottom": "red", "left": "red", "center": "" },
+        "abilities": [
+            "[Accessory]",
+            "x2 {red_puzzle}: When you [Pounce] and attack from the blind spot, add +4 strength for the attack."
+        ]
+    },
+    "Brave Dirndl": {
+        "types": ["armor", "cloth"],
+        "location": "Pattern",
+        "crafting": "x2 cloth, x1 leather, x1 skullcap hammer",
+        "stats": { "armor": 1, "location": "chest, waist" },
+        "affinities": { "top": "", "right": "red", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "Once per lifetime, when you are a returning survivor and this is the only armor you are wearing, gain +1 courage. If your settlement has Song of the Brave, gain +1 permanent strength."
+        ]
+    },
+    "Violet Phoenix Gauntlets": {
+        "types": ["armor", "set", "feather", "metal", "bone", "flammable"],
+        "location": "Pattern",
+        "crafting": "x1 violet small feathers, x1 phoenix gauntlets",
+        "stats": { "armor": 4, "location": "arms" },
+        "affinities": { "top": "", "right": "green", "bottom": "blue", "left": "", "center": "" },
+        "abilities": ["[Outfit]", "While you are insane, ignore all hits to the arms location."]
+    },
+    "Violet Phoenix Faulds": {
+        "types": ["armor", "set", "feather", "metal", "bone", "flammable"],
+        "location": "Pattern",
+        "crafting": "x1 violet plume, x1 phoenix faulds, x1 perfect organ",
+        "stats": { "armor": 4, "location": "waist" },
+        "affinities": { "top": "", "right": "", "bottom": "blue", "left": "green", "center": "" },
+        "abilities": ["[Outfit]", "While you are insane, ignore all hits to the waist location."]
+    },
+    "Regal Plume": {
+        "types": ["armor", "metal", "leather"],
+        "location": "Pattern",
+        "crafting": "x1 {endeavor}, x1 iron, x1 leather, x1 organ",
+        "stats": { "armor": 4, "location": "head" },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Outfit]",
+            "Once per round, during your act, you may spend 2 insanity to look at the top card of the {hit_location} deck. You may place it on bottom."
+        ]
+    },
+    "Beast Kunai": {
+        "types": ["melee", "dagger", "tool", "bone"],
+        "location": "Pattern",
+        "crafting": "x1 bleeding corpse lily, x1 perfect bone, x1 lion claw",
+        "stats": { "speed": 2, "accuracy": 6, "strength": 4 },
+        "affinities": { "top": "", "right": "", "bottom": "red", "left": "", "center": "" },
+        "abilities": [
+            "At the end of your attack with any melee weapon, you may place yourself in any unoccupied space adjacent to the monster."
+        ]
+    },
+    "Longclaw": {
+        "types": ["weapon", "melee", "bone", "katar"],
+        "location": "Pattern",
+        "crafting": "x1 overgrown dewclaw, x2 iron, x2 bone, x2 hide",
+        "stats": { "speed": 3, "accuracy": 6, "strength": 3 },
+        "affinities": { "top": "", "right": "red", "bottom": "blue", "left": "", "center": "" },
+        "abilities": [
+            "[Reach] 2",
+            "[Deadly]",
+            "[Sharp]",
+            "{red_puzzle}, {blue_affinity}: When you [Pounce] with this, cancel reactions on one {hit_location} of your choice."
+        ]
+    },
+    "Tempered Spear": {
+        "types": ["weapon", "melee", "spear", "finesse", "metal"],
+        "location": "Pattern",
+        "crafting": "x1 scrap sword, x2 bone, x1 cloth, x1 leather",
+        "stats": { "speed": 2, "accuracy": 5, "strength": 5 },
+        "affinities": { "top": "red", "right": "blue", "bottom": "red", "left": "blue", "center": "" },
+        "abilities": [
+            "[Range] 2",
+            "x2 {red_affinity}, x2 {blue_affinity}: Add +1 to your Spear Specialization roll results with this weapon."
+        ]
+    },
+    "Tempered Axe": {
+        "types": ["weapon", "melee", "axe", "finesse", "metal"],
+        "location": "Pattern",
+        "crafting": "x1 bone, x1 bone axe, x1 leather, x1 scrap",
+        "stats": { "speed": 2, "accuracy": 6, "strength": 6 },
+        "affinities": { "top": "", "right": "", "bottom": "red", "left": "", "center": "" },
+        "abilities": [
+            "[Paired]",
+            "When you use Axe Specialization, your second attempt to wound the selected hit location gains [Sharp]."
+        ]
+    },
+    "Tempered Dagger": {
+        "types": ["weapon", "melee", "dagger", "finesse", "metal"],
+        "location": "Pattern",
+        "crafting": "x1 bone, x1 leather, x1 scrap, x1 scrap dagger",
+        "stats": { "speed": 3, "accuracy": 7, "strength": 4 },
+        "affinities": { "top": "", "right": "", "bottom": "blue", "left": "", "center": "" },
+        "abilities": [
+            "[Paired]",
+            "While using Dagger Specialization, you may discard all other drawn hit locations to gain that much luck for your second attempt to wound that hit location. "
+        ]
+    },
+    "Plated Shield": {
+        "types": ["weapon", "melee", "shield", "finesse", "metal"],
+        "location": "Pattern",
+        "crafting": "x1 monster grease, x1 round leather shield, x3 scrap",
+        "stats": { "speed": 1, "accuracy": 8, "strength": 3 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["[Frail]", "[Deflect] 1", "This has [Sharp] while you have any deflect tokens."]
+    },
+    "Brazen Bat": {
+        "types": ["weapon", "melee", "club"],
+        "location": "Pattern",
+        "crafting": "x2 bone, x1 dried acanthus, x1 scrap",
+        "stats": { "speed": 2, "accuracy": 5, "strength": 6 },
+        "affinities": { "top": "", "right": "red", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "Gains [Sharp] when attacking {pumpkin} monsters.",
+            "If you are not wearing any head armor, you may ignore the first reaction during your first attack each round."
+        ]
+    },
+    "Seditioner": {
+        "types": ["weapon", "melee", "grand", "axe", "club", "heavy", "deathmetal"],
+        "location": "Pattern",
+        "crafting": "x1 miracle liver, x2 deathmetal, x2 leather",
+        "stats": { "speed": 1, "accuracy": 6, "strength": 17 },
+        "affinities": { "top": "red", "right": "green", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Slow]",
+            "When you wound a Super-Dense {hit_location}, archive it and inflict an additional wound. The monster is knocked down."
+        ]
+    },
+    "Regicider": {
+        "types": ["weapon", "melee", "grand", "club", "heavy", "deathmetal"],
+        "location": "Pattern",
+        "crafting": "x1 huge deathmetal ingot, x1 pallium, x2 leather",
+        "stats": { "speed": 1, "accuracy": 5, "strength": 16 },
+        "affinities": { "top": "", "right": "green", "bottom": "", "left": "red", "center": "" },
+        "abilities": [
+            "[Slow]",
+            "[Savage]",
+            "[Surpass] 5",
+            "When this deals more than one wound in a single wound attempt, the monster gains -1 toughness token."
+        ]
+    },
+    "Unbreakable Zanbato": {
+        "types": ["weapon", "melee", "grand", "two-handed", "bone", "mineral"],
+        "location": "Pattern",
+        "crafting": "x1 {endeavor}, x1 lumi, x1 zanbato",
+        "stats": { "speed": 1, "accuracy": 6, "strength": 6 },
+        "affinities": { "top": "red", "right": "green", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Slow]",
+            "[Frail]",
+            "[Devastating] 1",
+            "[Unique]",
+            "When you archive this due to a Super-Dense {hit_location}, gain the Shattered Blade innovation."
+        ]
+    },
+    "Cruel Cleaver": {
+        "types": ["weapon", "melee", "sword", "cleaver", "finesse", "bone", "metal"],
+        "location": "Pattern",
+        "crafting": "x2 lumi, x1 iron, -1 population",
+        "stats": { "speed": 2, "accuracy": 5, "strength": 5 },
+        "affinities": { "top": "", "right": "", "bottom": "red", "left": "blue", "center": "" },
+        "abilities": ["[Sentient]", "Add your [Body Count] to this weapon's strength."]
+    },
+    "Colossal Chef's Carver": {
+        "types": ["weapon", "melee", "grand", "dagger", "finesse", "metal"],
+        "location": "Pattern",
+        "crafting": "x2 lumi, x3 iron, x1 black lichen",
+        "stats": { "speed": 1, "accuracy": 5, "strength": 8 },
+        "affinities": { "top": "", "right": "red", "bottom": "red", "left": "green", "center": "" },
+        "abilities": [
+            "[Slow]",
+            "[Sharp]",
+            "x2 {red_affinity}: When you wound the monster, search through its {monster_resource} deck and gain an organ of your choice. Limit once per showdown."
+        ]
+    },
+    "Immortal Arm": {
+        "types": ["weapon", "melee", "bone", "shield"],
+        "location": "Pattern",
+        "crafting": "x1 diffuser heart, x2 bone, x1 organ",
+        "stats": { "speed": 2, "accuracy": 7, "strength": 7 },
+        "affinities": { "top": "red", "right": "", "bottom": "", "left": "red", "center": "" },
+        "abilities": [
+            "On Arrival, add 2 {armor} to the arms hit location.",
+            "[Locked]",
+            "x2 {red_affinity}: This gains the fist & tooth keyword. When you attack with fist & tooth, [Deflect] 1."
+        ]
+    },
+    "Fear Spear": {
+        "types": ["weapon", "melee", "bone", "spear"],
+        "location": "Pattern",
+        "crafting": "x1 crimson gland, x2 bone, x1 hide",
+        "stats": { "speed": 2, "accuracy": 6, "strength": 5 },
+        "affinities": { "top": "", "right": "red", "bottom": "", "left": "green", "center": "" },
+        "abilities": [
+            "[Reach] 2",
+            "[Sharp]",
+            "{red_puzzle}, {blue_affinity}: When you gain insanity during the showdown, you may gain 0 or +3 instead."
+        ]
+    },
+    "Dome Buster": {
+        "types": ["weapon", "melee", "grand", "club", "heavy"],
+        "location": "Pattern",
+        "crafting": "x1 secret stone, x4 bone",
+        "stats": { "speed": 1, "accuracy": 5, "strength": 12 },
+        "affinities": { "top": "", "right": "", "bottom": "blue", "left": "", "center": "" },
+        "abilities": ["[Surpass] 5"]
+    },
+    "Blood Drinker": {
+        "types": ["weapon", "melee", "bone", "axe", "other"],
+        "location": "Pattern",
+        "crafting": "x1 vampire fang, x2 organ, x1 bone",
+        "stats": { "speed": 2, "accuracy": 6, "strength": 6 },
+        "affinities": { "top": "", "right": "blue", "bottom": "red", "left": "", "center": "" },
+        "abilities": [
+            "When you wound the monster, remove one of your bleeding tokens.",
+            "{red_puzzle}, {blue_affinity}: This weapon gains +3 strength for each of your bleeding tokens."
+        ]
+    },
+    "Diamond Scab Katar": {
+        "types": ["weapon", "melee", "bone", "katar"],
+        "location": "Pattern",
+        "crafting": "x1 diamond scabs, x2 organ, x1 perfect resource",
+        "stats": { "speed": 3, "accuracy": 6, "strength": 4 },
+        "affinities": { "top": "", "right": "red", "bottom": "green", "left": "", "center": "" },
+        "abilities": [
+            "[Paired]",
+            "[Sharp]",
+            "[Clobber] 4",
+            "{red_puzzle}, {green_affinity}: On a [Perfect Hit], monster gains -1 toughness until end of the attack."
+        ]
+    },
+    "Curse Hammer": {
+        "types": ["weapon", "melee", "grand", "club", "instrument", "heavy", "noisy"],
+        "location": "Pattern",
+        "crafting": "x1 fused feet, x1 bone, x2 organ",
+        "stats": { "speed": 2, "accuracy": 7, "strength": 12 },
+        "affinities": { "top": "blue", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "When you wound with this, gain -1 strength token.",
+            "{blue_puzzle}, {blue affinity}: [Ballad of Inversion] 7"
+        ]
+    },
+    "Discordian": {
+        "types": ["weapon", "melee", "sword", "metal", "instrument", "noisy"],
+        "location": "Pattern",
+        "crafting": "x1 foreskin hood, x1 hide, x2 bone",
+        "stats": { "speed": 2, "accuracy": 6, "strength": 3 },
+        "affinities": { "top": "", "right": "red", "bottom": "", "left": "green", "center": "" },
+        "abilities": ["[Unwieldy]", "[Sharp]", "[Ballad of Swordpolka] 5"]
+    },
+    "Drum of Hope": {
+        "types": ["weapon", "melee", "club", "axe", "bone", "instrument", "noisy"],
+        "location": "Pattern",
+        "crafting": "x1 belly steel, x1 bone, x1 perfect resource",
+        "stats": { "speed": 1, "accuracy": 6, "strength": 9 },
+        "affinities": { "top": "red", "right": "red", "bottom": "red", "left": "", "center": "" },
+        "abilities": ["[Slow]", "[Ballad of Smash] 6"]
+    },
+    "Durendal": {
+        "types": ["weapon", "melee", "sword", "metal", "other"],
+        "location": "Pattern",
+        "crafting": "x2 iron, x1 leather, x1 other gear or resource",
+        "stats": { "speed": 2, "accuracy": 6, "strength": 9 },
+        "affinities": { "top": "", "right": "", "bottom": "red", "left": "", "center": "" },
+        "abilities": [
+            "[Ethereal]",
+            "When you depart with 1 {armor} or less at each hit location (after all other bonuses), add armor equal to your courage to all hit locations."
+        ]
+    },
+    "Saxe": {
+        "types": ["weapon", "melee", "axe", "bone", "metal", "instrument", "noisy"],
+        "location": "Pattern",
+        "crafting": "x1 crystallized song, x2 bone, x1 organ",
+        "stats": { "speed": 2, "accuracy": 7, "strength": 8 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "red", "center": "" },
+        "abilities": ["[Ballad of Blues] 8"]
     }
 
     // "": {
