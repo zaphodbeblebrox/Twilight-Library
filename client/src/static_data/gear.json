@@ -2023,6 +2023,60 @@
             "[Unique]",
             "You may [Slam] and [Skewer]. When your Slam moves the monster, it gains a [Flinch] token."
         ]
+    },
+    "Stone Noses": {
+        "types": ["item", "jewelry"],
+        "location": "Organ Grinder",
+        "crafting": "x1 {endeavor}",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["On Arrival, gain +1 survival, +1 insanity."]
+    },
+    "Fecal Salve": {
+        "types": ["item", "balm", "stinky"],
+        "location": "Organ Grinder",
+        "crafting": "x1 organ",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "blue", "center": "" },
+        "abilities": [
+            "When you depart, gain +1 survival.",
+            "{activation}: You are not a threat until you attack. If you have the priority target token, remove it."
+        ]
+    },
+    "Monster Grease": {
+        "types": ["item", "consumable", "soluble", "stinky", "flammable"],
+        "location": "Organ Grinder",
+        "crafting": "x2 organ",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "green", "center": "" },
+        "abilities": ["Gain +1 evasion.", "x3 {green_affinity}: Gain +1 evasion."]
+    },
+    "Dried Acanthus": {
+        "types": ["item", "herb", "consumable"],
+        "location": "Organ Grinder",
+        "crafting": "x1 fresh acanthus",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "When you depart, gain +2 survival.",
+            "When you suffer a severe injury, ignore it and archive this card instead."
+        ]
+    },
+    "Monster Tooth Necklace": {
+        "types": ["item", "jewelry", "bone"],
+        "location": "Organ Grinder",
+        "crafting": "x1 scrap, x1 bone",
+        "stats": {},
+        "affinities": { "top": "", "right": "red", "bottom": "", "left": "", "center": "" },
+        "abilities": ["Gain +1 strength.", "x2 {red_affinity}: Gain +1 strength."]
+    },
+    "Lucky Charm": {
+        "types": ["item", "jewelry"],
+        "location": "Organ Grinder",
+        "crafting": "x1 organ",
+        "stats": {},
+        "affinities": { "top": "", "right": "blue", "bottom": "", "left": "blue", "center": "" },
+        "abilities": ["x2 {blue_affinity}: Gain +1 luck."]
     }
 
     // "": {
