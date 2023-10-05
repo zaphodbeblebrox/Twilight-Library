@@ -1769,6 +1769,51 @@
         "stats": {},
         "affinities": { "top": "blue", "right": "", "bottom": "", "left": "red", "center": "" },
         "abilities": ["[Unique]", "-1 evasion", "{red_puzzle}: Gain +1 strength for each {red_affinity} you have."]
+    },
+    "Lion Knight's Right Claw": {
+        "types": ["weapon", "melee", "katar"],
+        "location": "Rare Gear",
+        "crafting": "",
+        "stats": { "speed": 2, "accuracy": 8, "strength": 8 },
+        "affinities": { "top": "", "right": "red", "bottom": "", "left": "blue", "center": "" },
+        "abilities": [
+            "[Paired] with Lion Knight's Left Claw.",
+            "{red_puzzle}: On a [Perfect Hit], +1 survival.",
+            "{blue_puzzle}: Gain +1 speed."
+        ]
+    },
+    "Lion Knight's Left Claw": {
+        "types": ["weapon", "melee", "katar"],
+        "location": "Rare Gear",
+        "crafting": "",
+        "stats": { "speed": 2, "accuracy": 5, "strength": 4 },
+        "affinities": { "top": "", "right": "red", "bottom": "", "left": "blue", "center": "" },
+        "abilities": [
+            "[Paired] with Lion Knight's Right Claw.",
+            "{red_puzzle}: Gains [Deadly]",
+            "{blue_puzzle}: Gain +1 speed."
+        ]
+    },
+    "Hideous Disguise": {
+        "types": ["item", "mask", "bone", "other"],
+        "location": "Rare Gear",
+        "crafting": "",
+        "stats": { "armor": 2, "location": "head" },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Accessory]",
+            "[Cursed]",
+            "Gain +1 strength",
+            "Athe the start of the showdown, if you are fighting the Lion Knight, choose your role card."
+        ]
+    },
+    "Lion Knight Badge": {
+        "types": ["item", "jewelry", "knight"],
+        "location": "Rare Gear",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["[Unique]", "Gain +1 accuracy", "At the start of the showdown, draw 1 tactics card."]
     }
 
     // "": {
