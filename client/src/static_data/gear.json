@@ -1951,6 +1951,78 @@
             "[Irreplaceable]",
             "x2 {red_affinity}, x2 {green_affinity}, x2 {blue_affinity}: At the start of your act, if insane, gain +1 survival."
         ]
+    },
+    "Time Milk": {
+        "types": ["item", "meal", "consumable", "soluble"],
+        "location": "Meal Gear",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Meal] - Phoenix",
+            "[Unique]",
+            "You may [Charge]. During this Charge, you may rewind time. If you do, reset the showdown to the start of your act and end the round."
+        ]
+    },
+    "Supreme Stew": {
+        "types": ["item", "meal", "consumable", "soluble"],
+        "location": "Meal Gear",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "green", "left": "", "center": "" },
+        "abilities": ["[Meal]", "+4 strength"]
+    },
+    "Smog Soup": {
+        "types": ["item", "meal", "consumable", "soluble"],
+        "location": "Meal Gear",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "blue", "right": "", "bottom": "green", "left": "", "center": "" },
+        "abilities": ["[Meal] - Smog Singers", "[Unique]", "Ignore hits when the monster's attack rolls are 4 or less."]
+    },
+    "King Lantern Sausage": {
+        "types": ["item", "meal", "consumable", "noisy"],
+        "location": "Meal Gear",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["[Meal] - King", "[Unique]", "You may use [Instrument Force]."]
+    },
+    "Fatty Crimson Goulash": {
+        "types": ["item", "meal", "consumable", "soluble"],
+        "location": "Meal Gear",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "", "right": "green", "bottom": "", "left": "red", "center": "" },
+        "abilities": [
+            "[Meal] - Crimson Crocodile",
+            "[Unique]",
+            "You cannot remove bleeding tokens. When you gain a bleeding token, add 4 {armor} to all hit locations."
+        ]
+    },
+    "White Lion Bread Box": {
+        "types": ["item", "meal", "consumable"],
+        "location": "Meal Gear",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "", "right": "blue", "bottom": "", "left": "red", "center": "" },
+        "abilities": [
+            "[Meal] - White Lion",
+            "[Unique]",
+            "You may [Pounce]. During that attack, your weapon gains [Deadly] and the Katar keyword."
+        ]
+    },
+    "Seared Beast Skewer": {
+        "types": ["item", "meal", "consumable"],
+        "location": "Meal Gear",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "red", "left": "", "center": "" },
+        "abilities": [
+            "[Meal] - Screaming Antelope",
+            "[Unique]",
+            "You may [Slam] and [Skewer]. When your Slam moves the monster, it gains a [Flinch] token."
+        ]
     }
 
     // "": {
