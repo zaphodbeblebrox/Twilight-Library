@@ -1497,14 +1497,141 @@
         "stats": {},
         "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
         "abilities": ["Each showdown, the first time you would die from a severe injury, ignore that injury."]
+    },
+    "Deathking Helm": {
+        "types": ["armor", "set", "deathmetal", "heavy"],
+        "location": "Kingsmith",
+        "crafting": "x1 pallium, x1 deathmetal",
+        "stats": { "armor": 10, "location": "head" },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["While insane, you cannot be knocked down."]
+    },
+    "Deathking Guantlets": {
+        "types": ["armor", "set", "deathmetal", "heavy"],
+        "location": "Kingsmith",
+        "crafting": "x1 majestic arm, x1 deathmetal",
+        "stats": { "armor": 10, "location": "arms" },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["[Deflect] 1", "Before drawing hit locations, you may make 1 additional attack roll."]
+    },
+    "Deathking Platemail": {
+        "types": ["armor", "set", "deathmetal", "heavy"],
+        "location": "Kingsmith",
+        "crafting": "x1 king's cloth, x1 deathmetal",
+        "stats": { "armor": 10, "location": "chest" },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["You are [Hushed]."]
+    },
+    "Deathking Greaves": {
+        "types": ["armor", "set", "deathmetal", "heavy"],
+        "location": "Kingsmith",
+        "crafting": "x1 king's coin, x1 deathmetal",
+        "stats": { "armor": 10, "location": "waist" },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "{activation}: If you are in the monster's field of view, it is knocked down. Limit once per showdown."
+        ]
+    },
+    "Deathking Boots": {
+        "types": ["armor", "set", "deathmetal", "heavy"],
+        "location": "Kingsmith",
+        "crafting": "x1 perfect hide, x1 deathmetal",
+        "stats": { "armor": 10, "location": "legs" },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["[Death Geometry]"]
+    },
+    "Kingslayer": {
+        "types": ["weapon", "melee", "grand", "sword", "deathmetal", "heavy"],
+        "location": "Kingsmith",
+        "crafting": "x1 deathmetal, x1 ancient blade, x1 leather",
+        "stats": { "speed": 2, "accuracy": 6, "strength": 8 },
+        "affinities": { "top": "", "right": "red", "bottom": "", "left": "blue", "center": "" },
+        "abilities": [
+            "[Sharp]",
+            "[Refined]",
+            "If you attack from the monster's facing, cancel {reaction} on the first selected {hit_location}."
+        ]
+    },
+    "Grand Kingslayer": {
+        "types": ["weapon", "melee", "grand", "sword", "two-handed", "deathmetal", "heavy"],
+        "location": "Kingsmith",
+        "crafting": "x1 deathmetal, x1 pylorix, x1 iron, x1 ancient blade",
+        "stats": { "speed": 1, "accuracy": 6, "strength": 13 },
+        "affinities": { "top": "", "right": "blue", "bottom": "red", "left": "blue", "center": "" },
+        "abilities": [
+            "[Slow]",
+            "[Sharp]",
+            "[Devastating] 1",
+            "When you critically wound the monster, if you have no armor points and all you injury level boxes are filled in, the monster is slain."
+        ]
+    },
+    "Adjudicator": {
+        "types": ["weapon", "melee", "grand", "spear", "two-handed", "deathmetal", "heavy"],
+        "location": "Kingsmith",
+        "crafting": "x1 deathmetal, x1 king's collar, x1 perfect bone",
+        "stats": { "speed": 2, "accuracy": 6, "strength": 14 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Reach] 2",
+            "If you draw the Trap with this weapon, the monster suffers a wound before resolving the trap."
+        ]
+    },
+    "Usurper": {
+        "types": ["weapon", "melee", "grand", "axe", "two-handed", "deathmetal", "heavy"],
+        "location": "Kingsmith",
+        "crafting": "x1 deathmetal, x1 iron, x1 spiral pauldron",
+        "stats": { "speed": 2, "accuracy": 6, "strength": 14 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "green", "center": "" },
+        "abilities": [
+            "If you would be knocked down by an adjacent monster, instead the monster is knocked down and suffers a wound. Limit once per showdown."
+        ]
+    },
+    "Assassinator": {
+        "types": ["weapon", "melee", "grand", "katar", "deathmetal", "heavy"],
+        "location": "Kingsmith",
+        "crafting": "x1 deathmetal, x1 leather, x2 bone",
+        "stats": { "speed": 1, "accuracy": 5, "strength": 12 },
+        "affinities": { "top": "", "right": "blue", "bottom": "", "left": "red", "center": "" },
+        "abilities": [
+            "[Paired]",
+            "[Barbed] 4",
+            "On a [Perfect Hit], make additional attack rolls until you miss and gain [Deadly] 1 (2 if Paired) until the end of the attack. Limit once per attack."
+        ]
+    },
+    "Royal Shield": {
+        "types": ["weapon", "melee", "grand", "shield", "deathmetal", "heavy"],
+        "location": "Kingsmith",
+        "crafting": "x1 deathmetal, x1 stone infant, x1 void fabric",
+        "stats": { "speed": 1, "accuracy": 7, "strength": 8 },
+        "affinities": { "top": "", "right": "green", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "Add 3 {armor} to all hit locations.",
+            "{red_affinity}, {green_affinity}: After you attack with the weapon to the left of this, [Deflect] 2 for free."
+        ]
+    },
+    "Royal Medallion": {
+        "types": ["item", "deathmetal", "other"],
+        "location": "Kingsmith",
+        "crafting": "x1 king's coin, x1 king's cloth, x1 heavy chain",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["At the start of each round, lose 3 survival and gain the Priority Target token."]
+    },
+    "Royal Lantern": {
+        "types": ["item", "lantern", "deathmetal", "other"],
+        "location": "Kingsmith",
+        "crafting": "x1 antique bangle, x1 pylorix",
+        "stats": {},
+        "affinities": { "top": "blue", "right": "", "bottom": "red", "left": "", "center": "" },
+        "abilities": ["The monster starts 2 spaces closer to the Start space on the hunt board."]
     }
 
-    //     "": {
-    //         "types": ["", "", "", "", "", "", "", "", ""],
-    //         "location":"",
-    //         "crafting":"",
-    //         "stats": {"speed": , "accuracy": , "strength": , "armor": , "location": ""},
-    //         "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-    //         "abilities": ["", ""]
-    //     },
+    // "": {
+    //     "types": ["", "", "", "", "", "", "", "", ""],
+    //     "location":"",
+    //     "crafting":"",
+    //     "stats": {"speed": , "accuracy": , "strength": , "armor": , "location": ""},
+    //     "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+    //     "abilities": ["", ""]
+    // },
 }
