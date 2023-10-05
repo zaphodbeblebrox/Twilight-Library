@@ -1814,6 +1814,65 @@
         "stats": {},
         "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
         "abilities": ["[Unique]", "Gain +1 accuracy", "At the start of the showdown, draw 1 tactics card."]
+    },
+    "Deathpact": {
+        "types": ["item", "metal", "fragile"],
+        "location": "Rare Gear",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "blue", "right": "red", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Unique]",
+            "At the start of your act, gain +1 survival.",
+            "Once per campaign, you may fire the gun to automatically hit and inflict a critical wound."
+        ]
+    },
+    "Manhunter's Hat": {
+        "types": ["item", "rawhide", "leather"],
+        "location": "Rare Gear",
+        "crafting": "",
+        "stats": { "armor": 2, "location": "head" },
+        "affinities": { "top": "red", "right": "", "bottom": "blue", "left": "red", "center": "" },
+        "abilities": [
+            "[Unique]",
+            "[Accessory]",
+            "{blue_puzzle}, {red_affinity}: Ignore the first severe head injury you suffer each showdown."
+        ]
+    },
+    "Reveberating Lantern": {
+        "types": ["item", "tool", "lantern"],
+        "location": "Rare Gear",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "green", "right": "blue", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Unique]",
+            "At the start of any hunt turn, before an event is revealed, you may {story_event} Sonorous Rest. Limit once per hunt."
+        ]
+    },
+    "Tool Belt": {
+        "types": ["item", "metal", "fragile"],
+        "location": "Rare Gear",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "blue", "right": "green", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Unique]",
+            "If you have no weapons in your gear grid, gain +3 evasion.",
+            "Tools in your gear grid lose [Frail]. Tools with attack profiles gain +1 speed, +3 accuracy, and [Sharp]."
+        ]
+    },
+    "Hunter's Heart": {
+        "types": ["item", "consumable", "metal", "heavy"],
+        "location": "Rare Gear",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Unique]",
+            "If you die, roll 1d10. On a 7+, you revive during the next settlement phase.",
+            "During the settlement phase, you may archive this to {story_event} Bleeding Heart."
+        ]
     }
 
     // "": {
