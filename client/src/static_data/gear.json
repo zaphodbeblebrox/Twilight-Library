@@ -4465,6 +4465,125 @@
         "abilities": [
             "{activation}: Throw this from any location on the board. Archive this for 1 automatic hit that inflicts a critical wound."
         ]
+    },
+    "Screaming Horns": {
+        "types": ["armor", "set", "bone"],
+        "location": "Stone Circle",
+        "crafting": "x1 spiral horn, x1 scrap",
+        "stats": { "armor": 2, "location": "head" },
+        "affinities": { "top": "", "right": "", "bottom": "blue", "left": "", "center": "" },
+        "abilities": [
+            "{activation}: Non-deaf, insane survivors gain +1 movement until end of round. All other non-deaf survivors gain +1 insanity."
+        ]
+    },
+    "Screaming Bracers": {
+        "types": ["armor", "set", "fur"],
+        "location": "Stone Circle",
+        "crafting": "x1 pelt, x1 hide",
+        "stats": { "armor": 2, "location": "arms" },
+        "affinities": { "top": "green", "right": "", "bottom": "", "left": "red", "center": "" },
+        "abilities": ["When you activate terrain, you may add +2 your roll result."]
+    },
+    "Screaming Coat": {
+        "types": ["armor", "set", "fur"],
+        "location": "Stone Circle",
+        "crafting": "x1 pelt, x1 bone",
+        "stats": { "armor": 2, "location": "chest" },
+        "affinities": { "top": "blue", "right": "blue", "bottom": "green", "left": "green", "center": "" },
+        "abilities": ["[Slam]"]
+    },
+    "Screaming Skirt": {
+        "types": ["armor", "set", "fur"],
+        "location": "Stone Circle",
+        "crafting": "x1 pelt, x1 hide",
+        "stats": { "armor": 2, "location": "waist" },
+        "affinities": { "top": "", "right": "green", "bottom": "blue", "left": "", "center": "" },
+        "abilities": ["Add +1 to severe waist injury roll results."]
+    },
+    "Screaming Leg Warmers": {
+        "types": ["armor", "set", "fur"],
+        "location": "Stone Circle",
+        "crafting": "x1 pelt, x1 hide",
+        "stats": { "armor": 2, "location": "legs" },
+        "affinities": { "top": "blue", "right": "red", "bottom": "", "left": "", "center": "" },
+        "abilities": ["On Arrival, gain +3 insanity."]
+    },
+    "Beast Knuckle": {
+        "types": ["weapon", "melee", "katar", "bone"],
+        "location": "Stone Circle",
+        "crafting": "x1 large flat tooth, x1 pelt",
+        "stats": { "speed": 2, "accuracy": 6, "strength": 4 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Paired]",
+            "When you wound with this weapon, monster gain -1 toughness until the end of the attack."
+        ]
+    },
+    "Lance of Longinus": {
+        "types": ["weapon", "melee", "spear", "two-handed", "bone"],
+        "location": "Stone Circle",
+        "crafting": "x1 legendary horns, x6 organ",
+        "stats": { "speed": 2, "accuracy": 6, "strength": 9 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Irreplaceable]",
+            "[Reach] 2",
+            "Each showdown, the first time you wound, the monster gains a -1 toughness token."
+        ]
+    },
+    "Boss Mehndi": {
+        "types": ["item", "soluble"],
+        "location": "Stone Circle",
+        "crafting": "x1 beast steak, x1 bone",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["While adjacent to you, insane survivors gain +1 speed."]
+    },
+    "Bone Earrings": {
+        "types": ["item", "jewelry", "bone"],
+        "location": "Stone Circle",
+        "crafting": "x1 shank bone, x1 bone",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "At the start of the showdown, gain +2 speed and +2 strength tokens if insane and all gear in your gear grid has the bone keyword."
+        ]
+    },
+    "Speed Powder": {
+        "types": ["item", "soluble"],
+        "location": "Stone Circle",
+        "crafting": "x1 second heart, x2 organ",
+        "stats": {},
+        "affinities": { "top": "", "right": "blue", "bottom": "", "left": "", "center": "" },
+        "abilities": ["{activation}: Suffer 2 brain damage and gain +1 speed token. Limit once per showdown."]
+    },
+    "Brain Mint": {
+        "types": ["item", "consumable"],
+        "location": "Stone Circle",
+        "crafting": "x1 screaming brain",
+        "stats": {},
+        "affinities": { "top": "green", "right": "", "bottom": "", "left": "blue", "center": "" },
+        "abilities": [
+            "{activation} Consume: Remove all your tokens and stand up. You may use this while knocked down. Limit once per showdown."
+        ]
+    },
+    "Elder Earrings": {
+        "types": ["item", "jewelry"],
+        "location": "Stone Circle",
+        "crafting": "x1 shank bone, x1 scrap",
+        "stats": {},
+        "affinities": { "top": "", "right": "green", "bottom": "blue", "left": "red", "center": "" },
+        "abilities": ["On Arrival, gain +2 survival.", "During the Aftermath, gain +1 Hunt XP."]
+    },
+    "Blood Paint": {
+        "types": ["item", "soluble"],
+        "location": "Stone Circle",
+        "crafting": "x1 bladder, x1 organ",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "{activation}: Activate weapon gear to the left and right of this card. These are two separate attacks. Cannot be used with two-handed weapons."
+        ]
     }
 
     // "": {
