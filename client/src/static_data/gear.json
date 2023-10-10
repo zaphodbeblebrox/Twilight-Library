@@ -3732,6 +3732,371 @@
         "stats": { "speed": 1, "accuracy": 6, "strength": 6 },
         "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
         "abilities": ["[Irreplaceable]", "-3 movement", "Spend {activation} or 1 survival to ignore a hit."]
+    },
+    "Rawhide Bandana": {
+        "types": ["seed", "armor", "set", "rawhide"],
+        "location": "Seed Pattern",
+        "crafting": "x1 {endeavor}, x1 rawhide headband, x1 hide",
+        "stats": { "armor": 1, "location": "head" },
+        "affinities": { "top": "", "right": "", "bottom": "blue", "left": "", "center": "" },
+        "abilities": [
+            "[Outfit]",
+            "{blue_puzzle}: While insane, you may spend 1 survival to turn a monster {reaction} into a {reaction} FAILURE before you make a wound attempt."
+        ]
+    },
+    "Elder's Aegis": {
+        "types": ["seed", "weapon", "melee", "shield", "stone"],
+        "location": "Seed Pattern",
+        "crafting": "x1 founding stone, x1 round leather shield",
+        "stats": { "speed": 1, "accuracy": 8, "strength": 2 },
+        "affinities": { "top": "green", "right": "green", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Deflect] 1",
+            "x2 {green_puzzle}: When you depart, if you have the most Hunt XP, add 1 {armor} to all hit locations for every 4 XP more than the youngest."
+        ]
+    },
+    "Lucky Cat Fang Knife": {
+        "types": ["seed", "weapon", "melee", "dagger", "bone", "metal"],
+        "location": "Seed Pattern",
+        "crafting": "x1 Cat Fang Knife, x1 broken lanter, x1 lucky charm, x1 sword beetle",
+        "stats": { "speed": 3, "accuracy": 6, "strength": 4 },
+        "affinities": { "top": "blue", "right": "blue", "bottom": "blue", "left": "blue", "center": "" },
+        "abilities": ["[Razor Sharp]", "x4 {blue_puzzle}: [Deadly] 3"]
+    },
+    "Imitation Butcher Mask": {
+        "types": ["seed", "armor", "set", "mask", "leather", "metal", "other"],
+        "location": "Seed Pattern",
+        "crafting": "x3 leather, x1 iron",
+        "stats": { "armor": 4, "location": "head" },
+        "affinities": { "top": "red", "right": "", "bottom": "blue", "left": "", "center": "" },
+        "abilities": [
+            "-2 to all brain trauma rolls",
+            "{red_puzzle}, x2 {red_affinity}, {blue_affinity}: At the start of your act, if you are insane, gain {activation}."
+        ]
+    },
+    "Monster Trophy": {
+        "types": ["seed", "item", "fur", "flammable"],
+        "location": "Seed Pattern",
+        "crafting": "x1 pelt, x1 perfect organ",
+        "stats": {},
+        "affinities": { "top": "", "right": "red", "bottom": "", "left": "green", "center": "" },
+        "abilities": [
+            "Increase your personal survival limit by {star}.",
+            "{red_puzzle}, {green_puzzle}: All your weapons gain [Persistence] 1."
+        ]
+    },
+    "Sprinter Helm": {
+        "types": ["seed", "armor", "set", "bone", "fur"],
+        "location": "Seed Pattern",
+        "crafting": "x1 white fur, x1 spiral horn, x1 skull",
+        "stats": { "armor": 3, "location": "head" },
+        "affinities": { "top": "red", "right": "", "bottom": "red", "left": "", "center": "" },
+        "abilities": [
+            "+1 movement while insane.",
+            "x2 {red_puzzle}: When you [Pounce], move your full movement and ignore the first reaction."
+        ]
+    },
+    "Dream Keeper Knife": {
+        "types": ["seed", "weapon", "melee", "dagger", "bone", "other"],
+        "location": "Seed Pattern",
+        "crafting": "x1 bone, x1 perfect bone, x1 organ",
+        "stats": { "speed": 3, "accuracy": 5, "strength": 3 },
+        "affinities": { "top": "", "right": "blue", "bottom": "", "left": "blue", "center": "" },
+        "abilities": [
+            "[Savage]",
+            "When you critically wound the monster, it gains -1 luck token. Limit once per showdown."
+        ]
+    },
+    "Dream Keeper Cowl": {
+        "types": ["seed", "item", "cloth", "other"],
+        "location": "Seed Pattern",
+        "crafting": "x1 hide, x1 organ, x1 broken lantern",
+        "stats": { "armor": 1, "location": "head" },
+        "affinities": { "top": "blue", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Accessory]",
+            "When you depart, gain +1 luck token.",
+            "During the Aftermath, suffer -1 permanent luck."
+        ]
+    },
+    "Fingernail Whip": {
+        "types": ["seed", "weapon", "melee", "whip", "bone", "other"],
+        "location": "Seed Pattern",
+        "crafting": "x1 groomed nail, x1 hide, x1 veined glass",
+        "stats": { "speed": 2, "accuracy": 5, "strength": 4 },
+        "affinities": { "top": "", "right": "blue", "bottom": "", "left": "red", "center": "" },
+        "abilities": [
+            "[Heroic]",
+            "{red_puzzle}, {blue_affinity}: This weapon gains [Razor Sharp] against Super-Dense hit locations."
+        ]
+    },
+    "Shadow Skleaver": {
+        "types": ["seed", "weapon", "melee", "grand", "metal", "other"],
+        "location": "Seed Pattern",
+        "crafting": "x1 skleaver, x1 shadow ink gland, x1 stink gland",
+        "stats": { "speed": 2, "accuracy": 5, "strength": 13 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Razor Sharp]",
+            "[Devastating] 1",
+            "On Arrival, put Sun Dial and Light & Shadow Sunstalker trait cards into play.",
+            "When you are in darkness, spend {movement} to place yourself in any other shadow that is not a monster shadow."
+        ]
+    },
+    "Tithe Box": {
+        "types": ["seed", "item", "stinky", "heavy", "other"],
+        "location": "Seed Pattern",
+        "crafting": "x1 bone, x1 broken lantern, x1 hide",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "-1 movement",
+            "When a seed weapon deals the killing blow, you collect the monster's ear in this box. While there are 3+ ears inside, gain +2 accuracy, +2 strength, and +2 evasion."
+        ]
+    },
+    "Cyclops Ledge": {
+        "types": ["seed", "item", "other"],
+        "location": "Seed Pattern",
+        "crafting": "x1 cyclops fly, x1 leather, x2 broken lantern",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "green", "center": "" },
+        "abilities": [
+            "On Arrival, you may change one instance of [Sharp] to [Razor Sharp] or increase [Deadly] by 1 until the end of the showdown."
+        ]
+    },
+    "Beast Hunter Helm": {
+        "types": ["seed", "armor", "set", "bone", "fur"],
+        "location": "Seed Pattern",
+        "crafting": "x1 pelt, x1 tail feathers, x1 iron",
+        "stats": { "armor": 4, "location": "head" },
+        "affinities": { "top": "", "right": "green", "bottom": "blue", "left": "", "center": "" },
+        "abilities": [
+            "{activation}: Select an {ai} from the discard pile and place it on top of its Basic Action. The next time the monster performs Basic Action, it performs the selected card at -1 speed instead.",
+            ""
+        ]
+    },
+    "Hushing Harmonium": {
+        "types": ["seed", "weapon", "melee", "instrument", "metal", "other"],
+        "location": "Seed Pattern",
+        "crafting": "x1 singing tongue, x1 broken lantern, x1 vocal chords",
+        "stats": { "speed": 1, "accuracy": 7, "strength": 0 },
+        "affinities": { "top": "", "right": "green", "bottom": "green", "left": "", "center": "" },
+        "abilities": ["[Ballad of Silence] 12"]
+    },
+    "Itemsmith's Lens": {
+        "types": ["seed", "item", "metal", "other"],
+        "location": "Seed Pattern",
+        "crafting": "x1 organ, x1 broken lantern",
+        "stats": { "armor": 1, "location": "head" },
+        "affinities": { "top": "blue", "right": "blue", "bottom": "blue", "left": "blue", "center": "" },
+        "abilities": ["[Accessory]", "-1 accuracy", "x4 {blue_puzzle}: [Grace of Splendor]"]
+    },
+    "Armorsmith's Tongs": {
+        "types": ["seed", "item", "metal", "other"],
+        "location": "Seed Pattern",
+        "crafting": "x3 broken lantern, x1 organ",
+        "stats": {},
+        "affinities": { "top": "green", "right": "green", "bottom": "green", "left": "green", "center": "" },
+        "abilities": [
+            "[Grace of Valor]",
+            "x4 {green_puzzle}, {movement}, {activation}: Reduce damage from hits by 1 to a minimum of 1 this showdown."
+        ]
+    },
+    "Weaponsmith's Hammer": {
+        "types": ["seed", "weapon", "melee", "club", "metal", "other"],
+        "location": "Seed Pattern",
+        "crafting": "x3 broken lantern, x1 bone, x1 hide",
+        "stats": { "speed": 2, "accuracy": 5, "strength": 2 },
+        "affinities": { "top": "red", "right": "red", "bottom": "red", "left": "red", "center": "" },
+        "abilities": [
+            "[Cumbersome]",
+            "[Grace of Power]",
+            "x4 {red_puzzle}, {movement}, {activation}: A weapon in your gear grid gains [Impeccable] for this showdown."
+        ]
+    },
+    "Hypersight Visor": {
+        "types": ["seed", "item", "other"],
+        "location": "Seed Pattern",
+        "crafting": "x1 perfect organ, x1 broken lantern, x1 hide",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "blue", "left": "", "center": "" },
+        "abilities": [
+            "During the hunt and showdown, play with the top cards of all resource decks revealed. Once per lantern year, you may suffle all of them.",
+            ""
+        ]
+    },
+    "Ornate Rapier": {
+        "types": ["seed", "weapon", "melee", "sword", "finesse", "metal", "other"],
+        "location": "Seed Pattern",
+        "crafting": "x1 perfect bone, x1 bone, x1 organ",
+        "stats": { "speed": 3, "accuracy": 3, "strength": 3 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["[Razor Sharp]", "[Frail]", "[Precision] 1"]
+    },
+    "Plasma Cutter": {
+        "types": ["seed", "weapon", "melee", "sword", "metal", "plasma"],
+        "location": "Seed Pattern",
+        "crafting": "x3 iron, x1 shimmering mane, x2 bone, x1 perfect bone",
+        "stats": { "speed": 3, "accuracy": 6, "strength": 21 },
+        "affinities": { "top": "red", "right": "", "bottom": "", "left": "red", "center": "" },
+        "abilities": [
+            "[Razor Sharp]",
+            "[Irreplaceable]",
+            "[Sentient]",
+            "x2 {red_puzzle}: When you wound a {hit_location} with a persistent injury, critically wound instead."
+        ]
+    },
+    "True Lantern Halberd": {
+        "types": ["seed", "weapon", "melee", "spear", "two-handed", "finesse", "lantern", "other"],
+        "location": "Seed Pattern",
+        "crafting": "x1 {endeavor}, x1 lantern halberd",
+        "stats": { "speed": 2, "accuracy": 4, "strength": 14 },
+        "affinities": { "top": "", "right": "", "bottom": "red", "left": "", "center": "" },
+        "abilities": [
+            "[Razor Sharp]",
+            "[Reach] 2",
+            "[Irreplaceable]",
+            "You are [Hushed].",
+            "After attacking, if standing, you may move up to 2 spaces."
+        ]
+    },
+    "Masamune": {
+        "types": ["seed", "weapon", "melee", "katana", "metal", "other"],
+        "location": "Seed Pattern",
+        "crafting": "x4 iron, x1 perfect hide",
+        "stats": { "speed": 7, "accuracy": 7, "strength": 7 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["[Deadly] 2", "[Deflect] 2", "You must remove 2 of your bleeding tokens to activate this weapon."]
+    },
+    "Neko Twilight Armor": {
+        "types": ["seed", "armor", "metal", "other"],
+        "location": "Seed Pattern",
+        "crafting": "x2 iron, x2 hide, x1 organ",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Full Ensemble]",
+            "+1 evasion",
+            "Add 2 {armor] to all hit locations.",
+            "You may [Pounce]. When you do, move 6 spaces instead and double the strength of [Cumbersome] weapons for the attack."
+        ]
+    },
+    "Jarngreipr": {
+        "types": ["seed", "item", "metal", "other"],
+        "location": "Seed Pattern",
+        "crafting": "x1 {endeavor}, x5 iron, x2 perfect bone",
+        "stats": { "armor": 4, "location": "arms" },
+        "affinities": { "top": "", "right": "blue", "bottom": "green", "left": "red", "center": "" },
+        "abilities": [
+            "[Accessory]",
+            "+5 strength",
+            "{red_puzzle}, {blue_puzzle}, {green_puzzle}: You cannot suffer disarm or the dismembered arm severe injury."
+        ]
+    },
+    "Backstabbing Stone": {
+        "types": ["seed", "weapon", "melee", "stone"],
+        "location": "Seed Pattern",
+        "crafting": "x1 {endeavor}, x1 founding stone",
+        "stats": { "speed": 2, "accuracy": 6, "strength": 1 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "Spend {activation} to stab an adjacent survivor. They gain 3 bleeding tokens, -1 movement token, the priority target token, and are knocked down."
+        ]
+    },
+    "Master Bone Dagger": {
+        "types": ["seed", "weapon", "melee", "dagger", "finesse", "bone", "other"],
+        "location": "Seed Pattern",
+        "crafting": "x1 bone dagger, x1 perfect bone, x1 perfect organ, x1 skull",
+        "stats": { "speed": 3, "accuracy": 6, "strength": 2 },
+        "affinities": { "top": "", "right": "red", "bottom": "", "left": "red", "center": "" },
+        "abilities": ["[Razor Sharp]", "[Persistance] 2", "[Impeccable]"]
+    },
+    "Heart Seeker": {
+        "types": ["seed", "weapon", "melee", "sword", "heavy", "deathmetal", "grand"],
+        "location": "Seed Pattern",
+        "crafting": "x2 deathmetal, x2 hide, x1 pylorix",
+        "stats": { "speed": 2, "accuracy": 5, "strength": 11 },
+        "affinities": { "top": "", "right": "red", "bottom": "", "left": "blue", "center": "" },
+        "abilities": ["[Razor Sharp]", "[Impeccable]", "Ignore First Strike while attacking with this weapon."]
+    },
+    "Death Defier": {
+        "types": ["seed", "weapon", "melee", "grand", "dagger", "heavy", "deathmetal"],
+        "location": "Seed Pattern",
+        "crafting": "x1 deathmetal, x2 bone, x1 heavy chain",
+        "stats": { "speed": 3, "accuracy": 6, "strength": 9 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "red", "center": "" },
+        "abilities": ["[Razor Sharp]", "[Blindside]", "You cannot lose survival."]
+    },
+    "Mighty Bone Axe": {
+        "types": ["seed", "weapon", "melee", "axe", "bone"],
+        "location": "Seed Pattern",
+        "crafting": "x1 bone axe, x1 bone, x1 organ",
+        "stats": { "speed": 2, "accuracy": 5, "strength": 6 },
+        "affinities": { "top": "red", "right": "", "bottom": "", "left": "red", "center": "" },
+        "abilities": ["[Savage]", "[Heroic]"]
+    },
+    "Reaperjaw": {
+        "types": ["seed", "weapon", "melee", "dagger", "metal", "scout", "other"],
+        "location": "Seed Pattern",
+        "crafting": "x1 bone, x1 grimjaw, x2 iron",
+        "stats": { "speed": 3, "accuracy": 7, "strength": 8 },
+        "affinities": { "top": "blue", "right": "red", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "During the Aftermath, if this wounded the monster, gain +1 {monster_resource}.",
+            "{red_puzzle}, {blue_puzzle}: If you are carrying Grimjaw, this gains [Razor Sharp] and [Barbed] 6."
+        ]
+    },
+    "Lagomorph Kanabo": {
+        "types": ["weapon", "melee", "club", "heavy", "bone", "metal"],
+        "location": "Seed Pattern",
+        "crafting": "x1 bone, x2 broken lantern",
+        "stats": { "speed": 3, "accuracy": 6, "strength": 3 },
+        "affinities": { "top": "red", "right": "", "bottom": "", "left": "red", "center": "" },
+        "abilities": [
+            "[Surpass] 5",
+            "{red_puzzle}, x2 {red_affinity}: When you [Rush] with this, double your wound attempt total on the first selected hit location."
+        ]
+    },
+    "Flower Costume": {
+        "types": ["item"],
+        "location": "Seed Pattern",
+        "crafting": "x1 lantern bloom, x1 leather, x1 sighing bloom",
+        "stats": {},
+        "affinities": { "top": "blue", "right": "green", "bottom": "", "left": "green", "center": "" },
+        "abilities": [
+            "Add 1 {armor} to all hit locations.",
+            "{green_puzzle}, {blue_puzzle}: On Arrival, roll 1d10: On 1-5, survivors gain a -1 luck token. On 6+, survivors gain +1 luck token."
+        ]
+    },
+    "Ghostlink Pumpkin": {
+        "types": ["item", "consumable"],
+        "location": "Seed Pattern",
+        "crafting": "x1 black lichen, x1 muculent droppings",
+        "stats": {},
+        "affinities": { "top": "", "right": "green", "bottom": "", "left": "green", "center": "" },
+        "abilities": [
+            "{activation} Consume: Suffer [Frenzy] and become [Doomed] until end of round. Convert all your attribute tokens to +1 strength tokens. Limit once per showdown."
+        ]
+    },
+    "Scythe of Doom": {
+        "types": ["weapon", "melee", "scythe", "grand", "two-handed", "other"],
+        "location": "Seed Pattern",
+        "crafting": "x1 bone, x3 iron, x1 leather",
+        "stats": { "speed": 2, "accuracy": 5, "strength": 13 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "blue", "center": "" },
+        "abilities": ["[Doombound]", "[Devastating] 2", "[Deadly]", "[Sharp]"]
+    },
+    "Robes of Dedheim": {
+        "types": ["armor", "rawhide", "other"],
+        "location": "Seed Pattern",
+        "crafting": "x1 cloth, x1 hide",
+        "stats": { "armor": 2, "location": "chest" },
+        "affinities": { "top": "red", "right": "red", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Outfit]",
+            "When you become [Doomed], before any actions are resolved, gain +1 evasion token.",
+            "x2 {red_puzzle}: +2 speed"
+        ]
     }
 
     // "": {
