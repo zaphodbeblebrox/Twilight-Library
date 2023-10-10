@@ -4097,6 +4097,75 @@
             "When you become [Doomed], before any actions are resolved, gain +1 evasion token.",
             "x2 {red_puzzle}: +2 speed"
         ]
+    },
+    "Rawhide Headband": {
+        "types": ["armor", "set", "rawhide"],
+        "location": "Skinnery",
+        "crafting": "x1 hide",
+        "stats": { "armor": 1, "location": "head" },
+        "affinities": { "top": "", "right": "", "bottom": "blue", "left": "", "center": "" },
+        "abilities": [
+            "{blue_puzzle}, {activation}: Reveal the top 2 {ai}. Place them back on top of the deck in any order."
+        ]
+    },
+    "Rawhide Gloves": {
+        "types": ["armor", "set", "rawhide"],
+        "location": "Skinnery",
+        "crafting": "x1 hide",
+        "stats": { "armor": 1, "location": "arms" },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "red", "center": "" },
+        "abilities": ["When you depart, gain +1 survival."]
+    },
+    "Rawhide Vest": {
+        "types": ["armor", "set", "rawhide"],
+        "location": "Skinnery",
+        "crafting": "x1 hide",
+        "stats": { "armor": 1, "location": "chest" },
+        "affinities": { "top": "blue", "right": "red", "bottom": "", "left": "", "center": "" },
+        "abilities": ["{blue_puzzle}, {red_puzzle}: +1 evasion"]
+    },
+    "Rawhide Pants": {
+        "types": ["armor", "set", "rawhide"],
+        "location": "Skinnery",
+        "crafting": "x1 hide",
+        "stats": { "armor": 1, "location": "waist" },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": []
+    },
+    "Rawhide Boots": {
+        "types": ["armor", "set", "rawhide"],
+        "location": "Skinnery",
+        "crafting": "x1 hide",
+        "stats": { "armor": 1, "location": "legs" },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["When you depart, gain +1 survival."]
+    },
+    "Rawhide Whip": {
+        "types": ["weapon", "melee", "whip", "rawhide"],
+        "location": "Skinnery",
+        "crafting": "x1 bone, x1 hide",
+        "stats": { "speed": 3, "accuracy": 7, "strength": 1 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["[Provoke]"]
+    },
+    "Bandages": {
+        "types": ["item"],
+        "location": "Skinnery",
+        "crafting": "x1 hide",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "green", "left": "blue", "center": "" },
+        "abilities": ["{activation}: Remove up to 2 bleeding tokens from yourself or an adjacent survivor."]
+    },
+    "Rawhide Drum": {
+        "types": ["item", "rawhide", "instrument", "noisy"],
+        "location": "Skinnery",
+        "crafting": "x1 bone, x1 hide",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "green", "center": "" },
+        "abilities": [
+            "On Arrival, all survivors gain +1 insanity.",
+            "When you perform [Encourage], all non-deaf survivors are affected."
+        ]
     }
 
     // "": {
