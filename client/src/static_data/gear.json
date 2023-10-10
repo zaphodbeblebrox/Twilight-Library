@@ -1049,14 +1049,6 @@
             "{activation}: If adjacent to the monster, roll 1d10. On a 6+, the monster gains -1 accuracy and -1 evasion tokens. Limit once per showdown."
         ]
     },
-    "Zanbato": {
-        "types": ["weapon", "melee", "grand", "two-handed", "bone", "mineral"],
-        "location": "???",
-        "crafting": "???",
-        "stats": { "speed": 1, "accuracy": 6, "strength": 6 },
-        "affinities": { "top": "red", "right": "green", "bottom": "", "left": "", "center": "" },
-        "abilities": ["[Slow]", "[Frail]", "[Deadly]", "{red_puzzle}, {green_affinity}: Gains [Devastating] 1."]
-    },
     "Calcified Zanbato": {
         "types": ["weapon", "melee", "grand", "two-handed", "bone", "heavy"],
         "location": "???",
@@ -4762,14 +4754,85 @@
             "When you depart, gain +1 survival.",
             "After the hunt phase setup, place the Sky Fishing event on any hunt space."
         ]
+    },
+    "Scrap Rebar": {
+        "types": ["item", "metal", "heavy"],
+        "location": "Weapon Crafter",
+        "crafting": "x2 scrap, x1 organ",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "The weapon to the left loses [Frail] and gains [Unwieldy]. If you attempt to wound a Super-Dense location with the weapon, archive this at the end of the attack."
+        ]
+    },
+    "Scrap Lantern": {
+        "types": ["item", "metal", "lantern"],
+        "location": "Weapon Crafter",
+        "crafting": "x1 scrap, x1 perfect organ",
+        "stats": {},
+        "affinities": { "top": "", "right": "blue", "bottom": "", "left": "", "center": "" },
+        "abilities": ["When you depart, gain +1 survival.", "{red_affinity}, {blue_affinity}: +1 accuracy."]
+    },
+    "Counterweighted Axe": {
+        "types": ["weapon", "melee", "axe", "two-handed"],
+        "location": "Weapon Crafter",
+        "crafting": "x2 bone, x1 hide, x1 organ",
+        "stats": { "speed": 2, "accuracy": 6, "strength": 4 },
+        "affinities": { "top": "red", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Reach] 2",
+            "{red_puzzle}: On a [Perfect Hit], monster suffers 1 wound, do not draw a {hit_location}. Limit once per attack."
+        ]
+    },
+    "Skullcap Hammer": {
+        "types": ["weapon", "melee", "club", "bone"],
+        "location": "Weapon Crafter",
+        "crafting": "x1 skull, x1 hide",
+        "stats": { "speed": 2, "accuracy": 7, "strength": 3 },
+        "affinities": { "top": "", "right": "", "bottom": "green", "left": "", "center": "" },
+        "abilities": ["On a [Perfect Hit], the monster is [Dazed]."]
+    },
+    "Whistling Mace": {
+        "types": ["weapon", "melee", "club", "bone", "", "", "", "", ""],
+        "location": "Weapon Crafter",
+        "crafting": "x2 bone, x1 organ",
+        "stats": { "speed": 3, "accuracy": 6, "strength": 3 },
+        "affinities": { "top": "", "right": "", "bottom": "green", "left": "", "center": "" },
+        "abilities": [
+            "On a [Perfect Hit], reveal the next {ai} card. Place it on top or bottom of the {ai} deck.",
+            "[Unwieldy]"
+        ]
+    },
+    "Scrap Sword": {
+        "types": ["weapon", "melee", "sword", "metal"],
+        "location": "Weapon Crafter",
+        "crafting": "x2 bone, x1 scrap",
+        "stats": { "speed": 2, "accuracy": 5, "strength": 3 },
+        "affinities": { "top": "blue", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["[Barbed] 4", "x2 {red_affinity}, {blue_affinity}: Gains [Deadly]"]
+    },
+    "Scrap Dagger": {
+        "types": ["weapon", "melee", "dagger", "metal"],
+        "location": "Weapon Crafter",
+        "crafting": "x1 bone, x1 scrap",
+        "stats": { "speed": 3, "accuracy": 7, "strength": 2 },
+        "affinities": { "top": "", "right": "red", "bottom": "red", "left": "", "center": "" },
+        "abilities": ["[Barbed] 2"]
+    },
+    "Scrap Bone Spear": {
+        "types": ["weapon", "melee", "spear", "bone", "metal"],
+        "location": "Weapon Crafter",
+        "crafting": "x4 bone, x1 scrap",
+        "stats": { "speed": 2, "accuracy": 6, "strength": 3 },
+        "affinities": { "top": "", "right": "red", "bottom": "", "left": "green", "center": "" },
+        "abilities": ["[Reach] 2", "[Frail]", "{red_puzzle}: [Barbed] 4"]
+    },
+    "Zanbato": {
+        "types": ["weapon", "melee", "grand", "two-handed", "bone", "mineral"],
+        "location": "Weapon Crafter",
+        "crafting": "x1 perfect bone, x3 scrap, x1 hide",
+        "stats": { "speed": 1, "accuracy": 6, "strength": 6 },
+        "affinities": { "top": "red", "right": "green", "bottom": "", "left": "", "center": "" },
+        "abilities": ["[Slow]", "[Frail]", "[Deadly]", "{red_puzzle}, {green_affinity}: Gains [Devastating] 1"]
     }
-
-    // "": {
-    //     "types": ["", "", "", "", "", "", "", "", ""],
-    //     "location":"",
-    //     "crafting":"",
-    //     "stats": {"speed": , "accuracy": , "strength": , "armor": , "location": ""},
-    //     "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-    //     "abilities": ["", ""]
-    // },
 }
