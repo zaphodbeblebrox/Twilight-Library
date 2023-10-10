@@ -4166,6 +4166,118 @@
             "On Arrival, all survivors gain +1 insanity.",
             "When you perform [Encourage], all non-deaf survivors are affected."
         ]
+    },
+    "Gloom-Coated Arrow": {
+        "types": ["item", "ammunition", "arrow", "gloomy"],
+        "location": "Light-Forging",
+        "crafting": "x2 bone, x1 dark water",
+        "stats": { "speed": 5, "accuracy": 6, "strength": 5 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Ammo - Bow]",
+            "[Cumbersome]",
+            "[Deadly]",
+            "After attempting to wound each hit location, place it on top of the deck instead of in the discard pile. Use once per showdown."
+        ]
+    },
+    "Gloom Katana": {
+        "types": ["weapon", "melee", "katana", "two-handed", "finesse", "gloomy", "other"],
+        "location": "Light-Forging",
+        "crafting": "x1 iron, x1 crystal mold, x2 dark water",
+        "stats": { "speed": 4, "accuracy": 5, "strength": 0 },
+        "affinities": { "top": "blue", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "Your insanity is added to this weapon's strength.",
+            "When Gloom Sheath is right of this in your gear grid, this gains [Savage]."
+        ]
+    },
+    "Gloom Hammer": {
+        "types": ["weapon", "melee", "club", "two-handed", "gloomy", "other"],
+        "location": "Light-Forging",
+        "crafting": "x3 skull, x1 iron, x1 organ, x3 dark water",
+        "stats": { "speed": 2, "accuracy": 7, "strength": 13 },
+        "affinities": { "top": "blue", "right": "", "bottom": "", "left": "red", "center": "" },
+        "abilities": [
+            "[Unique]",
+            "[Sentient]",
+            "[Reach] 2",
+            "[Deadly]",
+            "When you wound, end your attack (cancel reactions). Gain the monster controller tile and full move the monster directly away from you."
+        ]
+    },
+    "Gloom Bracelets": {
+        "types": ["item", "jewelry", "gloomy", "fragile", "heavy"],
+        "location": "Light-Forging",
+        "crafting": "x1 bone, x1 lion tail, x1 scrap, x1 dark water",
+        "stats": { "armor": 6, "location": "arms" },
+        "affinities": { "top": "", "right": "red", "bottom": "blue", "left": "red", "center": "" },
+        "abilities": [
+            "[Accessory]",
+            "When you depart, gain +2 insanity.",
+            "When you suffer a severe arm injury, archive this card."
+        ]
+    },
+    "Raptor-Worm Collar": {
+        "types": ["item", "jewelry", "gloomy"],
+        "location": "Light-Forging",
+        "crafting": "x1 organ, x1 scrap, x1 dark water",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "green", "left": "red", "center": "" },
+        "abilities": [
+            "You may [Encourage] without spending survival.",
+            "When you [Encourage] a survivor, they suffer 2 brain damage."
+        ]
+    },
+    "Gloom Sheath": {
+        "types": ["item", "gloomy", "other"],
+        "location": "Light-Forging",
+        "crafting": "x1 shank bone, x2 organ, x2 dark water",
+        "stats": {},
+        "affinities": { "top": "red", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["[Block] 1", "{red_puzzle}, {blue_affinity}: At the start of your act, gain +1 insanity."]
+    },
+    "Gloom Mehndi": {
+        "types": ["item", "gloomy", "soluble"],
+        "location": "Light-Forging",
+        "crafting": "x3 organ, x1 dark water",
+        "stats": {},
+        "affinities": { "top": "", "right": "red", "bottom": "red", "left": "blue", "center": "" },
+        "abilities": [
+            "When you depart, gain 1 {armor} to all hit locations.",
+            "When you gain the [Crystal Skin] ability, gain the Crystal Sword Mold strange resource."
+        ]
+    },
+    "Gloom Cream": {
+        "types": ["item", "consumable", "balm", "gloomy", "stinky", "other"],
+        "location": "Light-Forging",
+        "crafting": "x1 love juice, x1 hide, x2 dark water",
+        "stats": {},
+        "affinities": { "top": "blue", "right": "red", "bottom": "blue", "left": "red", "center": "" },
+        "abilities": [
+            "x2 {red_puzzle}, x2 {blue_affinity}: When you depart, gain -3 Hunt XP, -1 understanding. If you have no understanding, you die."
+        ]
+    },
+    "Slender Ovule": {
+        "types": ["item", "jewelry", "gloomy", "other"],
+        "location": "Light-Forging",
+        "crafting": "x1 phoenix eye, x4 dark water",
+        "stats": {},
+        "affinities": { "top": "blue", "right": "green", "bottom": "blue", "left": "", "center": "" },
+        "abilities": [
+            "[Unique]",
+            "When you depart, gain +3 insanity.",
+            "{blue_puzzle}, {green_puzzle}: Monster and survivors adjacent to you have -1 luck."
+        ]
+    },
+    "Dark Water Vial": {
+        "types": ["item", "consumable", "gloomy", "fragile"],
+        "location": "Light-Forging",
+        "crafting": "x1 organ, x1 dark water",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "green", "left": "", "center": "" },
+        "abilities": [
+            "{activation} Consume: You are knocked down and cannot gain bleeding tokens until the end of the round. Limit once per showdown."
+        ]
     }
 
     // "": {
