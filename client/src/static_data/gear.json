@@ -4278,6 +4278,167 @@
         "abilities": [
             "{activation} Consume: You are knocked down and cannot gain bleeding tokens until the end of the round. Limit once per showdown."
         ]
+    },
+    "Silk Turban": {
+        "types": ["armor", "set", "silk", "flammable"],
+        "location": "Silk Mill",
+        "crafting": "x1 silken nervous system",
+        "stats": { "armor": 3, "location": "head" },
+        "affinities": { "top": "", "right": "green", "bottom": "", "left": "blue", "center": "" },
+        "abilities": [
+            "{green_puzzle}, {blue_puzzle}, {activation}: Turn the monster to face away from you. Use only during the survivors' turn."
+        ]
+    },
+    "Silk Wraps": {
+        "types": ["armor", "set", "silk", "flammable"],
+        "location": "Silk Mill",
+        "crafting": "x1 thick web silk, x1 silk",
+        "stats": { "armor": 3, "location": "arms" },
+        "affinities": { "top": "", "right": "", "bottom": "red", "left": "green", "center": "" },
+        "abilities": []
+    },
+    "Silk Robes": {
+        "types": ["armor", "set", "silk", "flammable"],
+        "location": "Silk Mill",
+        "crafting": "x2 silk, x1 hide, x1 exoskeleton",
+        "stats": { "armor": 3, "location": "chest" },
+        "affinities": { "top": "red", "right": "blue", "bottom": "red", "left": "", "center": "" },
+        "abilities": [
+            "When you depart, gain 1 survival.",
+            "x2 {red_puzzle}, {blue_puzzle}, {activation}: Add 1 {armor} to all hit locations. Use once per showdown."
+        ]
+    },
+    "Silk Sash": {
+        "types": ["armor", "set", "silk", "flammable"],
+        "location": "Silk Mill",
+        "crafting": "x2 silk, x1 bone, x1 hide",
+        "stats": { "armor": 3, "location": "waist" },
+        "affinities": { "top": "", "right": "", "bottom": "green", "left": "green", "center": "" },
+        "abilities": [
+            "When you depart, gain 1 survival.",
+            "x2 {green_puzzle}, {activation}: Add 1 {armor} to all hit locations. Use once per showdown."
+        ]
+    },
+    "Silk Boots": {
+        "types": ["armor", "set", "silk", "flammable"],
+        "location": "Silk Mill",
+        "crafting": "x1 large appendage",
+        "stats": { "armor": 3, "location": "legs" },
+        "affinities": { "top": "green", "right": "green", "bottom": "", "left": "", "center": "" },
+        "abilities": ["x2 {green_puzzle}: +1 movement. Once per round, you may spend 1 survival to gain +2 insanity."]
+    },
+    "Red Ring": {
+        "types": ["item", "jewelry", "amber"],
+        "location": "Silk Mill",
+        "crafting": "x3 venom set, x2 arachnid heart",
+        "stats": { "armor": 2, "location": "arms" },
+        "affinities": { "top": "red", "right": "", "bottom": "red", "left": "red", "center": "" },
+        "abilities": [
+            "[Unique]",
+            "[Accessory]",
+            "x3 {red_puzzle}: If you gain a bleeding token while monster controller, the monster suffers 1 wound. Limit twice per round."
+        ]
+    },
+    "Blue Ring": {
+        "types": ["item", "jewelry", "amber"],
+        "location": "Silk Mill",
+        "crafting": "x3 eyeballs, x2 stomach",
+        "stats": { "armor": 2, "location": "arms" },
+        "affinities": { "top": "", "right": "blue", "bottom": "blue", "left": "blue", "center": "" },
+        "abilities": [
+            "[Unique]",
+            "[Accessory]",
+            "x3 {blue_puzzle}: If you are monster controller when the monster draws {ai}, draw 1 extra card. Select 1 to play and discard the other."
+        ]
+    },
+    "Green Ring": {
+        "types": ["item", "jewelry", "amber"],
+        "location": "Silk Mill",
+        "crafting": "x3 unlaid eggs, x2 spinnerets",
+        "stats": { "armor": 2, "location": "arms" },
+        "affinities": { "top": "green", "right": "green", "bottom": "green", "left": "", "center": "" },
+        "abilities": [
+            "[Unique]",
+            "[Accessory]",
+            "x3 {green_puzzle}: The first time you are attacked each round, gain 3 {armor} to all hit locations if you are the monster controller."
+        ]
+    },
+    "Silk Whip": {
+        "types": ["weapon", "melee", "whip", "silk"],
+        "location": "Silk Mill",
+        "crafting": "x1 large appendage, x1 bone",
+        "stats": { "speed": 2, "accuracy": 6, "strength": 3 },
+        "affinities": { "top": "", "right": "blue", "bottom": "green", "left": "", "center": "" },
+        "abilities": [
+            "{blue_puzzle}, {green_puzzle}: On a [Perfect Hit], you may archive a mood in play instead of drawing a hit location."
+        ]
+    },
+    "Amber Poleaxe": {
+        "types": ["weapon", "melee", "axe", "spear", "two-handed", "amber"],
+        "location": "Silk Mill",
+        "crafting": "x2 bone, x1 organ, x1 venom sac",
+        "stats": { "speed": 2, "accuracy": 6, "strength": 3 },
+        "affinities": { "top": "", "right": "", "bottom": "green", "left": "", "center": "" },
+        "abilities": [
+            "[Reach] 2",
+            "When a monster [Collides] with you, roll 1d10. On a 6+, the monster suffers 1 wound."
+        ]
+    },
+    "Amber Edge": {
+        "types": ["weapon", "melee", "scimitar", "amber"],
+        "location": "Silk Mill",
+        "crafting": "x1 bone, x1 organ, x1 chitin",
+        "stats": { "speed": 1, "accuracy": 6, "strength": 4 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Slow]",
+            "At the end of each attack, if you wounded the monster, make an additional attack with this weapon."
+        ]
+    },
+    "Throwing Knife": {
+        "types": ["weapon", "ranged", "thrown"],
+        "location": "Silk Mill",
+        "crafting": "x1 silk, x1 serrated fangs",
+        "stats": { "speed": 4, "accuracy": 9, "strength": 2 },
+        "affinities": { "top": "", "right": "red", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Range] 4",
+            "At the end of your attack, gain +1 accuracy token for each [Perfect Hit].",
+            "When knocked down, remove all your +1 accuracy tokens."
+        ]
+    },
+    "Hooded Scrap Katar": {
+        "types": ["weapon", "melee", "katar", "metal"],
+        "location": "Silk Mill",
+        "crafting": "x1 small appendage, x1 scrap",
+        "stats": { "speed": 2, "accuracy": 7, "strength": 4 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "blue", "center": "" },
+        "abilities": [
+            "[Paired]",
+            "If you hit 4 or more times in a single attack with this weapon, the monster suffers 1 wound before hit locations are drawn."
+        ]
+    },
+    "Silk Body Suit": {
+        "types": ["item", "silk", "flammable"],
+        "location": "Silk Mill",
+        "crafting": "x5 silk, x2 hide, x1 spinnerets",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Unique]",
+            "Reduce damage from every hit suffered by 2, to a minimum of 1.",
+            "You may not have any heavy or metal armor in your gear grid."
+        ]
+    },
+    "Silk Bomb": {
+        "types": ["item", "thrown", "silk", "amber", "fragile"],
+        "location": "Silk Mill",
+        "crafting": "x2 resources, x2 silk",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "{activation}: Until the end of the round, all survivors ignore [Knockback] and [Bash]. Archive after use."
+        ]
     }
 
     // "": {
