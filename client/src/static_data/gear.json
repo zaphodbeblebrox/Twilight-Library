@@ -4439,6 +4439,32 @@
         "abilities": [
             "{activation}: Until the end of the round, all survivors ignore [Knockback] and [Bash]. Archive after use."
         ]
+    },
+    "Bloody Cloth": {
+        "types": ["armor", "cloth"],
+        "location": "Starting Gear",
+        "crafting": "",
+        "stats": { "armor": 1, "location": "" },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["When you depart, gain +1 insanity.", "You may use this as armor for any hit location."]
+    },
+    "Cloth": {
+        "types": ["armor"],
+        "location": "Starting Gear",
+        "crafting": "",
+        "stats": { "armor": 1, "location": "waist" },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": []
+    },
+    "Founding Stone": {
+        "types": ["weapon", "melee", "stone"],
+        "location": "Starting Gear",
+        "crafting": "",
+        "stats": { "speed": 2, "accuracy": 7, "strength": 1 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "{activation}: Throw this from any location on the board. Archive this for 1 automatic hit that inflicts a critical wound."
+        ]
     }
 
     // "": {
