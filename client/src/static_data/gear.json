@@ -3220,9 +3220,13 @@
         "types": ["armor", "bone", "metal"],
         "location": "Rare Gear",
         "crafting": "",
-        "stats": { "armor": 4, "location": "legs" },
+        "stats": { "armor": 5, "location": "legs" },
         "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["[Cursed]", "At the Aftermath, {story_event} King's Curse."]
+        "abilities": [
+            "[Cursed]",
+            "At the Aftermath, {story_event} King's Curse.",
+            "When you gain this, cure all permanent leg injuries."
+        ]
     },
     "Regal Guantlet": {
         "types": ["armor", "bone", "metal"],
@@ -3230,15 +3234,23 @@
         "crafting": "",
         "stats": { "armor": 5, "location": "arms" },
         "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["[Cursed]", "At the Aftermath, {story_event} King's Curse."]
+        "abilities": [
+            "[Cursed]",
+            "At the Aftermath, {story_event} King's Curse.",
+            "When you gain this, cure all permanent arm injuries."
+        ]
     },
     "Regal Faulds": {
         "types": ["armor", "bone", "metal"],
         "location": "Rare Gear",
         "crafting": "",
-        "stats": { "armor": 4, "location": "waist" },
+        "stats": { "armor": 5, "location": "waist" },
         "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["[Cursed]", "At the Aftermath, {story_event} King's Curse."]
+        "abilities": [
+            "[Cursed]",
+            "At the Aftermath, {story_event} King's Curse.",
+            "You are not knocked down from suffering heavy or severe injuries."
+        ]
     },
     "Regal Plackart": {
         "types": ["armor", "bone", "metal"],
@@ -3246,15 +3258,19 @@
         "crafting": "",
         "stats": { "armor": 5, "location": "chest" },
         "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["[Cursed]", "At the Aftermath, {story_event} King's Curse."]
+        "abilities": [
+            "[Cursed]",
+            "At the Aftermath, {story_event} King's Curse.",
+            "When you depart, add 1 {armor} to each hit location with metal armor."
+        ]
     },
     "Regal Helm": {
         "types": ["armor", "bone", "metal"],
         "location": "Rare Gear",
         "crafting": "",
-        "stats": { "armor": 4, "location": "head" },
+        "stats": { "armor": 5, "location": "head" },
         "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
-        "abilities": ["[Cursed]", "At the Aftermath, {story_event} King's Curse."]
+        "abilities": ["[Cursed]", "At the Aftermath, {story_event} King's Curse.", "You are [Hushed]."]
     },
     "Lantern Festival Midi": {
         "types": ["item", "festival"],
