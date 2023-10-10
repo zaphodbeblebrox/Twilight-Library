@@ -4584,6 +4584,184 @@
         "abilities": [
             "{activation}: Activate weapon gear to the left and right of this card. These are two separate attacks. Cannot be used with two-handed weapons."
         ]
+    },
+    "Cycloid Scale Hood": {
+        "types": ["armor", "set", "scale"],
+        "location": "Skyreef Sanctuary",
+        "crafting": "x1 cycloid scales, x1 hide, x1 prismatic gills",
+        "stats": { "armor": 2, "location": "head" },
+        "affinities": { "top": "", "right": "", "bottom": "blue", "left": "", "center": "" },
+        "abilities": ["Whenever you spend {movement}, gain +1 evasion until your next act."]
+    },
+    "Cycloid Scale Sleeves": {
+        "types": ["armor", "set", "scale"],
+        "location": "Skyreef Sanctuary",
+        "crafting": "x1 cycloid scales, x1 bone, x1 small sunteeth, x1 salt",
+        "stats": { "armor": 2, "location": "arms" },
+        "affinities": { "top": "", "right": "blue", "bottom": "", "left": "blue", "center": "" },
+        "abilities": [
+            "When you [Shadow Walk] and attack the monster from its blind spot, your weapon gains +1 accuracy and [Sharp] for the attack."
+        ]
+    },
+    "Cycloid Scale Jacket": {
+        "types": ["armor", "set", "scale"],
+        "location": "Skyreef Sanctuary",
+        "crafting": "x1 cycloid scales, x1 scrap, x1 huge sunteeth, x1 salt",
+        "stats": { "armor": 2, "location": "chest" },
+        "affinities": { "top": "blue", "right": "red", "bottom": "", "left": "red", "center": "" },
+        "abilities": [
+            "{blue_puzzle}, x2 {red_affinity}: +1 accuracy",
+            "When you spend {movement}, you [Shadow Walk] and may move through spaces survivors occupy without causing [Collision]."
+        ]
+    },
+    "Cycloid Scale Skirt": {
+        "types": ["armor", "set", "scale"],
+        "location": "Skyreef Sanctuary",
+        "crafting": "x1 cycloid scales, x1 hide, x1 huge sunteeth",
+        "stats": { "armor": 2, "location": "waist" },
+        "affinities": { "top": "blue", "right": "", "bottom": "green", "left": "", "center": "" },
+        "abilities": [
+            "{green_puzzle}, x3 {blue_affinity}: When you depart, gain survival equal to the number of {blue_affinity} you have."
+        ]
+    },
+    "Cycloid Scale Shoes": {
+        "types": ["armor", "set", "scale"],
+        "location": "Skyreef Sanctuary",
+        "crafting": "x1 cycloid scales, x1 bone, x1 shadow tenticles",
+        "stats": { "armor": 2, "location": "legs" },
+        "affinities": { "top": "green", "right": "", "bottom": "", "left": "blue", "center": "" },
+        "abilities": [
+            "{blue_puzzle}, {green_puzzle}, {movement}: You are not a threat until you attack. If you have the priority target token, gain +2 survival and remove it."
+        ]
+    },
+    "Ink Sword": {
+        "types": ["weapon", "melee", "sword", "fragile"],
+        "location": "Skyreef Sanctuary",
+        "crafting": "x1 3,000 year sunspot, x4 hide, x1 shadow ink gland, x1 iron",
+        "stats": { "speed": 4, "accuracy": 4, "strength": 4 },
+        "affinities": { "top": "", "right": "", "bottom": "blue", "left": "", "center": "" },
+        "abilities": ["[Reach] 3", "[Deadly] 3", "You may only attack with this while in darkness."]
+    },
+    "Sky Harpoon": {
+        "types": ["weapon", "melee", "thrown", "spear"],
+        "location": "Skyreef Sanctuary",
+        "crafting": "x1 sunshark bone, x1 scrap, x1 salt",
+        "stats": { "speed": 2, "accuracy": 5, "strength": 5 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "red", "center": "" },
+        "abilities": [
+            "[Reach] 3",
+            "[Savage]",
+            "Once per showdown, if the monster is within reach, roll 1d10. On a 6+, it suffers 1 wound. Move it up to 3 spaces towards you."
+        ]
+    },
+    "Skleaver": {
+        "types": ["weapon", "melee", "grand", "heavy", "two-handed", "bone"],
+        "location": "Skyreef Sanctuary",
+        "crafting": "x2 1,000 year sunspot, x1 salt, x1 black lens, x1 sunshark bone",
+        "stats": { "speed": 1, "accuracy": 5, "strength": 10 },
+        "affinities": { "top": "red", "right": "", "bottom": "red", "left": "", "center": "" },
+        "abilities": [
+            "On the first [Perfect Hit] each attack, this gains [Devastating] 1 until the end of the attack.",
+            "{red_puzzle}, x2 {red_affinity}: Loses the heavy keyword."
+        ]
+    },
+    "Denticle Axe": {
+        "types": ["weapon", "melee", "axe", "scale"],
+        "location": "Skyreef Sanctuary",
+        "crafting": "x1 1,000 year sunspot, x1 salt, x1 black lens, x1 iron, x1 bone",
+        "stats": { "speed": 2, "accuracy": 6, "strength": 5 },
+        "affinities": { "top": "", "right": "red", "bottom": "blue", "left": "", "center": "" },
+        "abilities": [
+            "{blue_puzzle}, {blue_affinity}, {red_affinity}: When attacking from the blind spot, the attack gains +2 strength and the first successful wound attempt gains [Devastating] 1."
+        ]
+    },
+    "Ink Blood Bow": {
+        "types": ["weapon", "ranged", "bow", "two-handed", "other"],
+        "location": "Skyreef Sanctuary",
+        "crafting": "x1 3,000 year sunspot, x5 organ, x3 shadow tenticles, x1 iron",
+        "stats": { "speed": 2, "accuracy": 7, "strength": 8 },
+        "affinities": { "top": "red", "right": "blue", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Range] 7",
+            "[Deadly]",
+            "[Cumbersome]",
+            "Gains +1 strength for each bleeding token you have.",
+            "Loses [Cumbersome] while in darkness."
+        ]
+    },
+    "Sunspot Dart": {
+        "types": ["weapon", "ranged", "thrown"],
+        "location": "Skyreef Sanctuary",
+        "crafting": "x1 sunstones, x3 bone",
+        "stats": { "speed": 4, "accuracy": 7, "strength": 3 },
+        "affinities": { "top": "", "right": "red", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Range] 5",
+            "[Deadly]",
+            "[Activation Limit] 3",
+            "When you hit, survivors adjacent to the monster gain +1 survival."
+        ]
+    },
+    "Sunshark Bow": {
+        "types": ["weapon", "melee", "ranged", "bow", "two-handed"],
+        "location": "Skyreef Sanctuary",
+        "crafting": "x2 huge sunteeth, x1 organ, x1 sunshark bone, x1 salt",
+        "stats": { "speed": 3, "accuracy": 6, "strength": 0 },
+        "affinities": { "top": "", "right": "", "bottom": "red", "left": "", "center": "" },
+        "abilities": ["[Sharp]", "[Range] 1", "{red_puzzle}, x2 {red_affinity}: Gains +4 strength and [Slow]."]
+    },
+    "Sunshark Arrows": {
+        "types": ["item", "ammunition", "arrow", "soluble"],
+        "location": "Skyreef Sanctuary",
+        "crafting": "x3 small sunteeth, x1 bone, x1 sunshark fin, x1 salt",
+        "stats": { "speed": 1, "accuracy": 4, "strength": 6 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["[Sharp]", "[Ammo - Bow]", "[Activation Limit] 3"]
+    },
+    "Sunspot Lantern": {
+        "types": ["item", "lantern"],
+        "location": "Skyreef Sanctuary",
+        "crafting": "x2 sunstones, x1 scrap, x1 salt",
+        "stats": {},
+        "affinities": { "top": "", "right": "green", "bottom": "", "left": "green", "center": "" },
+        "abilities": [
+            "+1 accuracy",
+            "You cast a 1-space shadow directly away from the monster. If the shadow could be cast in 2 spaces, pick which one until you move."
+        ]
+    },
+    "Quiver & Sun String": {
+        "types": ["item", "leather", "scale"],
+        "location": "Skyreef Sanctuary",
+        "crafting": "x1 inner shadow skin, x4 hide, x1 brain root, x1 salt",
+        "stats": {},
+        "affinities": { "top": "", "right": "blue", "bottom": "", "left": "red", "center": "" },
+        "abilities": [
+            "You may carry up to 3 arrow gear cards outside of your grid. (All must be different)",
+            "x2 {blue_affinity}, {red_affinity}: All your bows gain +2 range."
+        ]
+    },
+    "Shadow Saliva Shawl": {
+        "types": ["item", "balm", "stinky", "other"],
+        "location": "Skyreef Sanctuary",
+        "crafting": "x1 shadow ink gland, x1 salt, x1 stink lung, x1 shark tongue",
+        "stats": {},
+        "affinities": { "top": "green", "right": "", "bottom": "green", "left": "", "center": "" },
+        "abilities": [
+            "+2 evasion",
+            "Cannot wear if you have heavy, soluble, or shield gear, or any gear with 3 {armor} or higher printed on it.",
+            "x2 {green_puzzle}, x2 {green_puzzle}: +1 evasion. All weapons gain [Slow]."
+        ]
+    },
+    "Sun Lure and Hook": {
+        "types": ["item", "tool"],
+        "location": "Skyreef Sanctuary",
+        "crafting": "x1 sunshark blubber, x1 scrap",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "blue", "left": "", "center": "" },
+        "abilities": [
+            "When you depart, gain +1 survival.",
+            "After the hunt phase setup, place the Sky Fishing event on any hunt space."
+        ]
     }
 
     // "": {
