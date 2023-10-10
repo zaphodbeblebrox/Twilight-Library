@@ -1,0 +1,566 @@
+{
+    "Barber Surgeon": {
+        "gear": [
+            "First Aid Kit",
+            "Almanac",
+            "Musk Bomb",
+            "Red Charm",
+            "Scavenger Kit",
+            "Bug Trap",
+            "Blue Charm",
+            "Green Charm"
+        ],
+        "endeavour": {
+            "Trepanning": {
+                "cost": "1",
+                "effect": "Roll 1d10. 1-2: Surffer the [Intracranial hemorrhage] severe head injury. 3-6: Cure 1 disorder. 7-9: Cure [Intracranial hemorrhage]. 10+ Gain 1 random disorder and 1 random fighting art."
+            }
+        }
+    },
+    "Blacksmith": {
+        "gear": [
+            "Lantern Helm",
+            "Lantern Gauntlets",
+            "Lantern Cuirass",
+            "Lantern Mail",
+            "Lantern Greaves",
+            "Lantern Sword",
+            "Lantern Dagger",
+            "Lantern Glaive",
+            "Dragon Slayer",
+            "Perfect Slayer",
+            "Scrap Shield",
+            "Beacon Shield",
+            "Ring Whip",
+            "Polishing Lantern"
+        ],
+        "endeavour": {}
+    },
+    "Bone Smith": {
+        "gear": [
+            "Bone Dagger",
+            "Bone Blade",
+            "Bone Axe",
+            "Bone Darts",
+            "Bone Club",
+            "Bone Helm",
+            "Bone Pickaxe",
+            "Bone Sickle"
+        ],
+        "endeavour": {
+            "Weapon Crafter": {
+                "cost": "1",
+                "effect": "Unlock the Weapon Crafter settlement location."
+            }
+        }
+    },
+    "Catarium": {
+        "gear": [
+            "White Lion Helm",
+            "White Lion Gauntlets",
+            "White Lion Coat",
+            "White Lion Skirt",
+            "White Lion Boots",
+            "Lion Beast Katar",
+            "Claw Head Arrow",
+            "King Spear",
+            "Cat Gut Bow",
+            "Cat Fang Knife",
+            "Cat Eye Circlet",
+            "Whisker Harp",
+            "Lion Headdress",
+            "Lion Skin Cloak",
+            "Frenzy Drink"
+        ],
+        "endeavour": {}
+    },
+    "Chorusseum": {
+        "gear": [
+            "Singing Cap",
+            "Singing Gloves",
+            "Singing Breastplate",
+            "Singing Pantaloons",
+            "Singing Boots",
+            "Hamfluter",
+            "Peace Dagger",
+            "Pipa",
+            "Razor Cymbals",
+            "Spear of Life",
+            "Energy Drum",
+            "Harpy Harp",
+            "Singing Heart",
+            "Spinning Sword"
+        ],
+        "endeavour": {}
+    },
+    "Crimson Crockery": {
+        "gear": [
+            "Crimson Helm",
+            "Crimson Guard",
+            "Crimson Dress",
+            "Crimson Faulds",
+            "Crimson Slippers",
+            "Bloodglass Dagger",
+            "Crocbone Hammer",
+            "Bloodglass Longsword",
+            "Blood Compass Lantern",
+            "Crocodileyes",
+            "Crimson Bow",
+            "Finger Darts",
+            "Bloodglass Cleaver",
+            "Bloodglass Katar",
+            "Bloodglass Saw",
+            "Crimson Pearls",
+            "Giggling Scythe"
+        ],
+        "endeavour": {}
+    },
+    "Dragon Armory": {
+        "gear": [
+            "Dragonskull Helm",
+            "Dragon Gloves",
+            "Dragon Mantle",
+            "Dragon Belt",
+            "Dragon Boots",
+            "Dragon Chakram",
+            "Dragon Bite Bolt",
+            "Talon Knife",
+            "Nuclear Knife",
+            "Red Core",
+            "Blast Shield",
+            "Shielded Quiver",
+            "Blast Sword",
+            "Nuclear Scythe",
+            "Blue Core"
+        ],
+        "endeavour": {}
+    },
+    "Exhausted Lantern Hoard": {
+        "gear": [],
+        "endeavour": {
+            "Lantern Research - Pulse Discoveries": {
+                "cost": "2",
+                "effect": "Perform Story Event"
+            },
+            "Oxidation": {
+                "cost": "1",
+                "effect": "Perform Story Event"
+            },
+            "Craft Lantern": {
+                "cost": "1",
+                "effect": "Craft x1 Survivor's Lantern Gear."
+            },
+            "Investigate": {
+                "cost": "1",
+                "effect": "Roll 1d10. 1-2: Die unless you have [Legendary Lungs]. 3: Gain 1 random disorder. 4-6: Add  x'roll result' Broken Lantern basic resource to settlement storage. 7-8: Add 2 Cocoon Membrane strange resources to settlement storage. 9+: Add 1 Lantern Tube strange resouce to settlement storage."
+            }
+        }
+    },
+    "Forum": {
+        "gear": [],
+        "endeavour": {}
+    },
+    "Gaming Gazebo": {
+        "gear": [
+            "Fortune Lantern Sword",
+            "Fortune Lantern Dagger",
+            "Fortune Lantern Helm",
+            "Fortune Lantern Cuirass",
+            "Gambler's Lantern"
+        ],
+        "endeavour": {
+            "A Game Session": {
+                "cost": "1",
+                "effect": "Spend 1 Black Lichen roll 1d10. Before rolling, spend any amount of Lumi to add to the roll result. A roll of 1 still counts as 1. 1: Gain the [Game Master] ability. 2-4: Gain 1 {strange_resource} Rage Pawn. 5-7: Gain 1 {strange_resource} Joy of Gaming. 8-9: Gain 1 {strange_resource} Lucky Dice. 10+: Gain {knowledge} [High Roller]."
+            }
+        }
+    },
+    "Giga-Catarium": {
+        "gear": ["Hooked Claw Knife", "Lion Slayer Cape", "Dense Bone Arrows", "Oxidized Beast Katar"],
+        "endeavour": {}
+    },
+    "Gormchymist": {
+        "gear": [],
+        "endeavour": {}
+    },
+    "Gormery": {
+        "gear": [
+            "Gorment Mask",
+            "Gorment Sleeves",
+            "Gorment Suit",
+            "Gorment Boots",
+            "Regeneration Suit",
+            "Rib Blade",
+            "Knuckle Shield",
+            "Gaxe",
+            "Greater Gaxe",
+            "Riot Mace",
+            "Pulse Lantern",
+            "Gorn",
+            "Armor Spikes",
+            "Acid Tooth Dagger",
+            "Black Sword"
+        ],
+        "endeavour": {}
+    },
+    "Keeper of Dreams": {
+        "gear": [],
+        "endeavour": {
+            "Innovate": {
+                "cost": "1",
+                "effect": "Once per settlement phase, may spend 1 each bone, organ, hide to draw 2 innovations cards. Keep 1 and return the other to the deck."
+            },
+            "Build Bone Smith": {
+                "cost": "1",
+                "effect": ""
+            },
+            "Build Organ Grinder": {
+                "cost": "1",
+                "effect": ""
+            },
+            "Build Skinnery": {
+                "cost": "1",
+                "effect": ""
+            },
+            "Groom the Dream Keeper": {
+                "cost": "1",
+                "effect": "Once per lantern year, roll 1d10. 1: -1 Luck. 2+: Gain +1 Lumi."
+            }
+        }
+    },
+    "Kingsmith": {
+        "gear": [
+            "Deathking Helm",
+            "Deathking Gauntlets",
+            "Deathking Platemail",
+            "Deathking Greaves",
+            "Deathking Boots",
+            "Kingslayer",
+            "Adjudicator",
+            "Assassinator",
+            "Royal Medallion",
+            "Grand Kingslayer",
+            "Usurper",
+            "Royal Shield",
+            "Royal Lantern"
+        ],
+        "endeavour": {
+            "Pull Binding Chains": {
+                "cost": "1",
+                "effect": "{story_event}Decomposing Labyrinth"
+            }
+        }
+    },
+    "Lantern Hoard": {
+        "gear": [],
+        "endeavour": {
+            "Innovate": {
+                "cost": "1",
+                "effect": "Once per settlement phase, may spend 1 each bone, organ, hide to draw 2 innovations cards. Keep 1 and return the other to the deck."
+            },
+            "Build Bone Smith": {
+                "cost": "1",
+                "effect": ""
+            },
+            "Build Organ Grinder": {
+                "cost": "1",
+                "effect": ""
+            },
+            "Build Skinnery": {
+                "cost": "1",
+                "effect": ""
+            },
+            "Shared Experience": {
+                "cost": "1",
+                "effect": "Nominate a survivor with 2+ Hunt XP than you. If you are not deaf, gain +1 Hunt XP. If the nominated survivor has a shattered jaw, instead gain +1 insanity."
+            }
+        }
+    },
+    "Leather Worker": {
+        "gear": [
+            "Leather Mask",
+            "Leather Bracers",
+            "Leather Curiass",
+            "Leather Skirt",
+            "Leather Boots",
+            "Round Leather Shield",
+            "Hunter Whip"
+        ],
+        "endeavour": {
+            "Leather-Making": {
+                "cost": "1",
+                "effect": "Spend any number of hide to add an equal number of {strange_resource} leather to the settlement storage."
+            }
+        }
+    },
+    "Mask Maker": {
+        "gear": ["White Lion Mask", "Antelope Mask", "Phoenix Mask", "Death Mask", "Man Mask", "God Mask"],
+        "endeavour": {
+            "White Lion Mask": {
+                "cost": "1",
+                "effect": "May hunt the Great Golden Cat."
+            },
+            "Antelope Mask": {
+                "cost": "1",
+                "effect": "May hunt the Mad Steed."
+            },
+            "Phoenix Mask": {
+                "cost": "1",
+                "effect": "May hunt the Golden Eyed King."
+            }
+        }
+    },
+    "Organ Grinder": {
+        "gear": [
+            "Stone Noses",
+            "Fecal Salve",
+            "Monster Grease",
+            "Dried Acanthus",
+            "Lucky Charm",
+            "Monster Tooth Necklace"
+        ],
+        "endeavour": {
+            "Augury": {
+                "cost": "1",
+                "effect": "Roll 1d10, add +1 to the result if your understanding is 3+. 1-3: Lose 1 resouce, gain +1 understanding. 4-7: Gain +1 Survival. 8+: {story_event} Intimacy."
+            },
+            "Build Barber Surgeon": {
+                "cost": "1",
+                "effect": ""
+            }
+        }
+    },
+    "Outskirts": {
+        "gear": [
+            "Stone Face Cloak",
+            "Vermin Bellyboots",
+            "Gimjaw",
+            "Disguise Kit",
+            "Scout Whistle",
+            "Scout's Lantern",
+            "Hunting Salve",
+            "Blood Pack"
+        ],
+        "endeavour": {
+            "Hollow Stone Gathering": {
+                "cost": "1",
+                "effect": "Once per settlement phase, gain a {strange_resource} Hollow Stone."
+            }
+        }
+    },
+    "Plumery": {
+        "gear": [
+            "Phoenix Helm",
+            "Phoenix Gauntlets",
+            "Phoenix Plackart",
+            "Phoenix Faulds",
+            "Phoenix Greaves",
+            "Feather Shield",
+            "Bloom Sphere",
+            "Sonic Tomahawk",
+            "Hollow Sword",
+            "Arc Bow",
+            "Finger of God",
+            "Rainbow Katana",
+            "Feather Mantle",
+            "Bird Bread",
+            "Hours Ring",
+            "Crest Crown",
+            "Hollowpoint Arrow",
+            "Blood Sheath"
+        ],
+        "endeavour": {}
+    },
+    "Sacred Pool": {
+        "gear": ["Sun Vestments", "Sunring Bow", "Apostle Crown", "Prism Mace"],
+        "endeavour": {
+            "Sacred Water": {
+                "cost": "1",
+                "effect": "Once per settlement phase, {story_event} Intimacy."
+            },
+            "Purification Ceremony": {
+                "cost": "2",
+                "effect": "Once per lifetime, become [Purified]. You cannot depart this year. Gain the [Protective] disorder and roll 1d10. On 8+, gain +1 permanent attribute of your choice. Otherwise, gain +1 permanent strength or accuracy."
+            },
+            "Sun Sealing": {
+                "cost": "1",
+                "effect": "Gain [Hellfire] secret fighting art. You cannot depart this year."
+            }
+        }
+    },
+    "Silk Mill": {
+        "gear": [
+            "Silk Turban",
+            "Silk Wraps",
+            "Silk Robes",
+            "Silk Sash",
+            "Silk Boots",
+            "Amber Poleaxe",
+            "Throwing Knife",
+            "Silk Whip",
+            "Hooded Scrap Katar",
+            "Amber Edge",
+            "Body Suit",
+            "Silk Bomb",
+            "Red Ring",
+            "Blue Ring",
+            "Green Ring"
+        ],
+        "endeavour": {}
+    },
+    "Skinnery": {
+        "gear": [
+            "Rawhide Headband",
+            "Rawhide Gloves",
+            "Rawhide Vest",
+            "Rawhide Pants",
+            "Rawhide Boots",
+            "Bandages",
+            "Rawhide Drum",
+            "Rawhide Whip"
+        ],
+        "endeavour": {
+            "Build Leather Worker": {
+                "cost": "1",
+                "effect": ""
+            }
+        }
+    },
+    "Skyreef Sanctuary": {
+        "gear": [
+            "Cycloid Scale Hood",
+            "Cycloid Scale Sleeves",
+            "Cycloid Scale Jacket",
+            "Cycloid Scale Skirt",
+            "Cycloid Scale Shoes",
+            "Sunspot Dart",
+            "Sunshark Bow",
+            "Sunshark Arrows",
+            "Denticle Axe",
+            "Skleaver",
+            "Ink Sword",
+            "Sunspot Lantern",
+            "Quiver and Sunstring",
+            "Shadow Saliva Shawl",
+            "Sun Lure and Hood",
+            "Sky Harpoon",
+            "Ink Blood Bow"
+        ],
+        "endeavour": {}
+    },
+    "Stone Circle": {
+        "gear": [
+            "Screaming Horns",
+            "Screaming Bracers",
+            "Screaming Coat",
+            "Screaming Skirt",
+            "Screaming Leg Warmers",
+            "Boss Mehndi",
+            "Beast Knuckle",
+            "Brain Mint",
+            "Blood Paint",
+            "Bone Earrings",
+            "Speed Powder",
+            "Elder Earrings",
+            "Lance of Longinus"
+        ],
+        "endeavour": {
+            "Harvest Ritual": {
+                "cost": "1",
+                "effect": "Spend any number of monster resources to draw an equal number of basic resources."
+            }
+        }
+    },
+    "The Sun": {
+        "gear": [],
+        "endeavour": {
+            "Innovate": {
+                "cost": "1",
+                "effect": "Once per settlement phase, may spend 1 each bone, organ, hide to draw 2 innovations cards. Keep 1 and return the other to the deck."
+            },
+            "Build Bone Smith": {
+                "cost": "1",
+                "effect": ""
+            },
+            "Build Organ Grinder": {
+                "cost": "1",
+                "effect": ""
+            },
+            "Build Skinnery": {
+                "cost": "1",
+                "effect": ""
+            }
+        }
+    },
+    "Throne": {
+        "gear": [],
+        "endeavour": {
+            "Innovate": {
+                "cost": "1",
+                "effect": "Once per settlement phase, may spend 1 each bone, organ, hide to draw 2 innovations cards. Keep 1 and return the other to the deck."
+            },
+            "Build Bone Smith": {
+                "cost": "1",
+                "effect": ""
+            },
+            "Build Organ Grinder": {
+                "cost": "1",
+                "effect": ""
+            },
+            "Build Skinnery": {
+                "cost": "1",
+                "effect": ""
+            },
+            "Fear and Trembling": {
+                "cost": "1",
+                "effect": "Once per settlement phase, roll 1d10. 1-2: You die. 3-6: Suffer the [Blind] severe head injury and gain a [Scar]. 7-9: Remove all your permanent waist injuries. 10+: You die. Gain the top card of the innovation deck at no cost."
+            }
+        }
+    },
+    "Unknown Forge": {
+        "gear": ["Unknown Katana", "Unknown Club", "Unknown Spear", "Unknown Whip", "Unknown Sword"],
+        "endeavour": {
+            "Wet & Dry Crusher": {
+                "cost": "1",
+                "effect": "Archive 2 {monster_resource} King scrap to add 1 {strange_resource} Deathmetal to settlement storage."
+            }
+        }
+    },
+    "Weapon Crafter": {
+        "gear": [
+            "Counterweighted Axe",
+            "Whistling Mace",
+            "Scrap Lantern",
+            "Scrap Rebar",
+            "Zanbato",
+            "Skullcap Hammer",
+            "Scrap Sword",
+            "Scrap Dagger",
+            "Scrap Bone Spear"
+        ],
+        "endeavour": {
+            "Scrap Scavenge": {
+                "cost": "1",
+                "effect": "Roll 1d10. 1-5: Spend 1 survival or die! 6-9: Gain 1 {basic_resource} broken lantern. 10+: Gain +1 courage."
+            },
+            "Special Innovate - Scrap Smelting": {
+                "cost": "1",
+                "effect": ""
+            }
+        }
+    },
+    "Wet Resin Crafter": {
+        "gear": [
+            "DBK Errant Badge",
+            "Rainbow Wing Belt",
+            "Digging Claws",
+            "Seasoned Monster Meat",
+            "Century Shoulder Pads",
+            "Scarab Circlet",
+            "Century Greaves",
+            "Elastic Harness",
+            "The Beetle Bomb"
+        ],
+        "endeavour": {}
+    }
+}
