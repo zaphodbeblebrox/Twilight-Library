@@ -75,22 +75,17 @@ const CampaignFinalSettings = ({
         });
         // Add Core Monster
         campaignData.nemesis[campaignSettings.node_core as keyof NodePillarLists] = { 1: false };
-        // TODO: Save data to database
-        console.log(campaignData);
-        axios
-            .post(`${settlementApi}/create`, campaignData)
-            .then((res) => {
+        //Save data to database
+        // console.log(campaignData);
+
+        try {
+            (async () => {
+                await axios.post(`${settlementApi}/create`, campaignData);
                 navigate('/twilight-library/dashboard');
-            })
-            .catch((err) => {
-                const errArray = [];
-                // console.log(err);
-                for (const key of Object.keys(err.response.data.errors)) {
-                    errArray.push(err.response.data.errors[key].message);
-                }
-                console.log(errArray);
-            });
-        // TODO: Navigate to dashboard
+            })();
+        } catch (err) {
+            console.error(err);
+        }
     };
     return (
         <Flex direction="column" justify="start" align="center" gap="3">
@@ -128,7 +123,7 @@ const CampaignFinalSettings = ({
                     label="Milestone:"
                     onSubmit={(addedEvent) => {
                         const updatedCampaign: TypeCampaignData = { ...campaignSettings };
-                        updatedCampaign.milestones.push(addedEvent);
+                        updatedCampaign.milestones = [...updatedCampaign.milestones, addedEvent];
                         setCampaignSettings(updatedCampaign);
                     }}
                 />

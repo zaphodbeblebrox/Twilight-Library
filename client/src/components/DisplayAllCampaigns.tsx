@@ -10,18 +10,17 @@ const DisplayAllCampaigns = () => {
     const [allCampaigns, setAllCampaigns] = useState<TypeServerSettlement[]>([]);
 
     useEffect(() => {
-        axios
-            .get(`${settlementApi}/get`)
-            .then((res) => {
+        try {
+            (async () => {
+                const res = await axios.get(`${settlementApi}/get`);
                 console.log(res.data);
                 setAllCampaigns(res.data.settlements);
-            })
-            .catch((err) => console.log(err));
+            })();
+        } catch (err) {
+            console.error(err);
+        }
     }, []);
 
-    const handleNavigation = () => {
-        navigate('/twilight-library/dashboard/create-campaign');
-    };
     return (
         <Flex direction="column" justify="between" align="center" gap="3">
             {allCampaigns.map((campaign, idx) => {

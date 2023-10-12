@@ -53,13 +53,20 @@ const CampaignCreator = ({
             const nemesis_tier: string = nodeKey.slice(-1);
             selectedCampaign[nodeKey].forEach((selection: string) => {
                 [1, 2, 3].forEach((level: number) => {
-                    const fight_str: string = `nn${nemesis_tier}_lvl${level}_fight_year`;
+                    const fight_str = `nn${nemesis_tier}_lvl${level}_fight_year`;
                     const fight_key: keyof NemesisFightYearLists = fight_str as keyof NemesisFightYearLists;
                     const fight_year: number | null = selectedCampaign[fight_key];
                     if (fight_year !== null) {
                         timeline[fight_year].push(`NE - ${selection} lvl ${level}`);
                     }
                 });
+                // const meow = [1, 2, 3].map((level: number) => {
+                //     const fight_str = `nn${nemesis_tier}_lvl${level}_fight_year`;
+                //     const fight_key: keyof NemesisFightYearLists = fight_str as keyof NemesisFightYearLists;
+                //     return selectedCampaign[fight_key];
+                // }).filter((fight_year) => fight_year).map((fight_year, idx) => `NE - ${selection} lvl ${idx + 1}`);
+
+                // timeline[fight_year] =
             });
             return;
         }
@@ -115,7 +122,7 @@ const CampaignCreator = ({
         // console.log(timeline);
         const updatedCampaign = { ...selectedCampaign };
         updatedCampaign.timeline = { ...timeline };
-        // console.log(updatedCampaign);
+        console.log(updatedCampaign);
         setSelectedCampaign(updatedCampaign);
 
         navigate('/twilight-library/dashboard/create-campaign/timeline');
