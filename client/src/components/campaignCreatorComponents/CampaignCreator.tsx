@@ -77,49 +77,70 @@ const CampaignCreator = ({
                 }
             });
         }
+        return timeline;
+    };
+
+    const addBossEventsToTimeline = (timeline: Record<number, string[]>, nodeType: string) => {
+        const fightYearKey: keyof NemesisFightYearLists = `${nodeType}_fight_year` as keyof NemesisFightYearLists;
+        const nodeKey: keyof TypeCampaignData = `node_${nodeType}` as keyof TypeCampaignData;
+        if (selectedCampaign[fightYearKey] && selectedCampaign[nodeKey]) {
+            timeline[selectedCampaign[fightYearKey]!].push(`NE - ${selectedCampaign[nodeKey]}`);
+        }
+
+        return timeline;
+    };
+
+    const addDefaultEventsToTimeline = (timeline: Record<number, string[]>) => {
+        Object.keys(selectedCampaign.default_timeline).forEach((yearKey: string) => {
+            selectedCampaign.default_timeline[Number(yearKey)].forEach((yearData: string) => {
+                timeline[Number(yearKey)].push(yearData);
+            });
+        });
+
+        return timeline;
     };
 
     const handleCreateTimeline = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
+        // If settlement name does not meet length requirement, end process
         if (settlementName.length < 2) {
             // TODO: Add Toast popup with warning
             return;
         }
-        //
+        // Initialize Timeline
         const maximumYears: number = 40;
         const timeline: Record<number, string[]> = Array.from({ length: maximumYears }, (_, index) => index + 1).reduce(
             (obj, key) => ({ ...obj, [key]: [] }),
             {},
         );
         // Populate Timeline
-        addMonsterEventsToTimeline(timeline, 'node_quarry_1', 'quarries');
-        addMonsterEventsToTimeline(timeline, 'node_quarry_2', 'quarries');
-        addMonsterEventsToTimeline(timeline, 'node_quarry_3', 'quarries');
-        addMonsterEventsToTimeline(timeline, 'node_quarry_4', 'quarries');
-        addMonsterEventsToTimeline(timeline, 'pillars', 'pillars');
-        addMonsterEventsToTimeline(timeline, 'encounters', 'encounters');
-        addMonsterEventsToTimeline(timeline, 'wanderers', 'wanderers');
-        addMonsterEventsToTimeline(timeline, 'node_nemesis_1', 'nemesis');
-        addMonsterEventsToTimeline(timeline, 'node_nemesis_2', 'nemesis');
-        addMonsterEventsToTimeline(timeline, 'node_nemesis_3', 'nemesis');
+        const monsterTimelineFunctionArray = [
+            (tl: Record<number, string[]>) => addMonsterEventsToTimeline(tl, 'node_quarry_1', 'quarries'),
+            (tl: Record<number, string[]>) => addMonsterEventsToTimeline(tl, 'node_quarry_2', 'quarries'),
+            (tl: Record<number, string[]>) => addMonsterEventsToTimeline(tl, 'node_quarry_3', 'quarries'),
+            (tl: Record<number, string[]>) => addMonsterEventsToTimeline(tl, 'node_quarry_4', 'quarries'),
+            (tl: Record<number, string[]>) => addMonsterEventsToTimeline(tl, 'pillars', 'pillars'),
+            (tl: Record<number, string[]>) => addMonsterEventsToTimeline(tl, 'encounters', 'encounters'),
+            (tl: Record<number, string[]>) => addMonsterEventsToTimeline(tl, 'wanderers', 'wanderers'),
+            (tl: Record<number, string[]>) => addMonsterEventsToTimeline(tl, 'node_nemesis_1', 'nemesis'),
+            (tl: Record<number, string[]>) => addMonsterEventsToTimeline(tl, 'node_nemesis_2', 'nemesis'),
+            (tl: Record<number, string[]>) => addMonsterEventsToTimeline(tl, 'node_nemesis_3', 'nemesis'),
+            (tl: Record<number, string[]>) => addBossEventsToTimeline(tl, 'core'),
+            (tl: Record<number, string[]>) => addBossEventsToTimeline(tl, 'finale'),
+            (tl: Record<number, string[]>) => addDefaultEventsToTimeline(tl),
+        ];
+        const updatedTimeline: Record<number, string[]> = monsterTimelineFunctionArray.reduce(
+            (currentTimeline, monsterEventFunction) => {
+                return monsterEventFunction(currentTimeline);
+            },
+            timeline,
+        );
+        // console.log('testing timeline:', updatedTimeline);
 
-        // Add Core and Finale to Timeline
-        if (selectedCampaign.core_fight_year && selectedCampaign.node_core) {
-            timeline[selectedCampaign.core_fight_year].push(`NE - ${selectedCampaign.node_core}`);
-        }
-        if (selectedCampaign.finale_fight_year && selectedCampaign.node_finale) {
-            timeline[selectedCampaign.finale_fight_year].push(`NE - ${selectedCampaign.node_finale}`);
-        }
-        // Add default events to timeline
-        Object.keys(selectedCampaign.default_timeline).forEach((yearKey: string) => {
-            selectedCampaign.default_timeline[Number(yearKey)].forEach((yearData: string) => {
-                timeline[Number(yearKey)].push(yearData);
-            });
-        });
-        // console.log(timeline);
-        const updatedCampaign = { ...selectedCampaign, timeline: { ...timeline } };
-        // console.log(updatedCampaign);
+        const updatedCampaign = { ...selectedCampaign, timeline: { ...updatedTimeline } };
+
         setSelectedCampaign(updatedCampaign);
+        console.log('testing campaign:', updatedCampaign);
 
         navigate('/twilight-library/dashboard/create-campaign/timeline');
     };

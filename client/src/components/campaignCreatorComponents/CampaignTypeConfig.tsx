@@ -23,6 +23,7 @@ export type NemesisFightYearLists = {
     nn3_lvl2_fight_year: number | null;
     nn3_lvl3_fight_year: number | null;
     finale_fight_year: number | null;
+    core_fight_year: number;
 };
 export type NodeCoreFinaleLists = {
     node_core: string | null;
@@ -42,7 +43,6 @@ export type TypeCampaignData = NodePillarLists &
     NodeCoreFinaleLists & {
         milestones: string[];
         flexible_nemesis_encounters: boolean;
-        core_fight_year: number;
         timeline: Record<string, string[]>;
         default_timeline: Record<string, string[]>;
         constellations: boolean;
