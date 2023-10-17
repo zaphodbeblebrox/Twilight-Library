@@ -74,4 +74,16 @@ export type TimelineOptionList = {
     wanderers: Record<string, Record<string, string[]>>;
 };
 
-export type TypeCampaignCreatorData = NodeOptionsList & TimelineOptionList;
+export type BonusQuarryOptionList = {
+    bonus_quarries: Record<string, Record<string, number[]>>;
+};
+
+export type TypeCampaignCreatorData = NodeOptionsList &
+    BonusQuarryOptionList & {
+        timeline: TimelineOptionList;
+    };
+
+import rawCampaignCreatorData from '../../static_data/campaign_creator.json';
+const campaignCreatorData: TypeCampaignCreatorData = rawCampaignCreatorData;
+
+export default campaignCreatorData;
