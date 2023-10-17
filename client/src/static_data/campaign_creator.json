@@ -14,6 +14,13 @@
     "encounters": ["Bone Eaters"],
     "wanderers": ["Luck the Wanderer"],
 
+    "bonus_quarries": {
+        "White Lion": { "Giga Lion": [2, 3], "Beast of Sorrow": [4], "Great Golden Cat": [4] },
+        "Screaming Antelope": { "Mad Steed": [4] },
+        "Phoenix": { "Golden Eyed King 1000 Years": [5] },
+        "Dung Beetle Knight": { "The Old Master": [4] }
+    },
+
     "timeline": {
         "quarries": {
             "Gorm": { "1": ["The Approching Storm"] },
