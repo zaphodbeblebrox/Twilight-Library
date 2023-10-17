@@ -1,13 +1,11 @@
 import { Button, Flex, Heading, Separator, Text } from '@radix-ui/themes';
-import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import TimelineTable from '../primitiveComponents/TimelineTable';
-// import { SettlementInterface } from '../../../../server/src/models/Settlement';
 import { TypeInitializedSettlement, TypeServerSettlement } from '../../../../SettlementTypes';
 import { CourageUnderstandingLists, NodePillarLists, TypeCampaignData } from './CampaignTypeConfig';
 import { TwilightAddEventAlert, TwilightEditTextAlert } from '../primitiveComponents/AlertBoxes';
 import axios from 'axios';
 import { settlementApi } from '../../service/api';
+import campaignCreatorData from './CampaignTypeConfig';
 
 interface CampaignFinalSettingsProps {
     settlementName: string;
@@ -21,15 +19,83 @@ const CampaignFinalSettings = ({
     setCampaignSettings,
 }: CampaignFinalSettingsProps) => {
     const navigate = useNavigate();
-    const handleBack = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-        event.preventDefault();
-        navigate('/twilight-library/dashboard/create-campaign/timeline');
-    };
+
     const handleCourageUnderstandingChange = (newValue: string, objectKey: string) => {
         const updatedCampaign: TypeCampaignData = { ...campaignSettings };
         updatedCampaign[objectKey as keyof CourageUnderstandingLists] = newValue;
         setCampaignSettings(updatedCampaign);
     };
+
+    const setMilestones = () => {
+        const formattedMilestones = campaignSettings.milestones.reduce(
+            (currentMilestoneObject, milestone) => ({
+                ...currentMilestoneObject,
+                [milestone]: false,
+            }),
+            {},
+        );
+        return formattedMilestones;
+    };
+
+    const setBasicQuarries = () => {
+        return ['node_quarry_1', 'node_quarry_2', 'node_quarry_3', 'node_quarry_4'].reduce(
+            (currentQuarryObject, node) => {
+                return {
+                    ...currentQuarryObject,
+                    ...campaignSettings[node as keyof NodePillarLists].reduce((currentNodeObject, quarry) => {
+                        return { ...currentNodeObject, [quarry]: { 1: false, 2: false, 3: false } };
+                    }, {}),
+                };
+            },
+            {},
+        );
+    };
+
+    const setBonusQuarries = () => {
+        return ['node_quarry_1', 'node_quarry_2', 'node_quarry_3', 'node_quarry_4'].reduce(
+            (currentQuarryObject, node) => {
+                return {
+                    ...currentQuarryObject,
+                    ...campaignSettings[node as keyof NodePillarLists]
+                        .filter((quarry) => quarry in campaignCreatorData.bonus_quarries)
+                        .reduce((currentNodeObject, quarry: string) => {
+                            return {
+                                ...currentNodeObject,
+                                ...Object.keys(campaignCreatorData.bonus_quarries[quarry]).reduce(
+                                    (currentBonusQuarry, bonusQuarry: string) => {
+                                        return {
+                                            ...currentBonusQuarry,
+                                            [bonusQuarry]: {
+                                                ...campaignCreatorData.bonus_quarries[quarry][bonusQuarry].reduce(
+                                                    (currentLevelObject: Record<number, boolean>, level: number) => {
+                                                        return { ...currentLevelObject, [level]: false };
+                                                    },
+                                                    {},
+                                                ),
+                                            },
+                                        };
+                                    },
+                                    {},
+                                ),
+                            };
+                        }, {}),
+                };
+            },
+            {},
+        );
+    };
+
+    const setNemesis = () => {
+        return ['node_nemesis_1', 'node_nemesis_2', 'node_nemesis_3'].reduce((currentNemesisObject, node) => {
+            return {
+                ...currentNemesisObject,
+                ...campaignSettings[node as keyof NodePillarLists].reduce((currentNodeObject, nemesis) => {
+                    return { ...currentNodeObject, [nemesis]: { 1: false, 2: false, 3: false } };
+                }, {}),
+            };
+        }, {});
+    };
+
     const handleSaveCampaignOnServer = () => {
         const campaignData: TypeInitializedSettlement = {
             name: settlementName,
@@ -38,46 +104,15 @@ const CampaignFinalSettings = ({
             courage_event_2: campaignSettings.courage_event_2,
             understanding_event_1: campaignSettings.understanding_event_1,
             understanding_event_2: campaignSettings.understanding_event_1,
-            milestones: {},
-            quarries: {},
-            nemesis: {},
+            milestones: { ...setMilestones },
+            quarries: { ...setBasicQuarries(), ...setBonusQuarries() },
+            nemesis: { ...setNemesis(), [campaignSettings.node_core as keyof NodePillarLists]: { 1: false } },
             constellations: campaignSettings.constellations,
             arc_survivors: campaignSettings.pillars.includes('Arc Survivors'),
         };
-        // Loop through milestones to make data structure
-        campaignSettings.milestones.forEach((milestone: string) => {
-            campaignData.milestones[milestone] = false;
-        });
-        // Loop through quarries to make data structure
-        const quarryList: string[] = ['node_quarry_1', 'node_quarry_2', 'node_quarry_3', 'node_quarry_4'];
-        quarryList.forEach((node: string) => {
-            campaignSettings[node as keyof NodePillarLists].forEach((quarry: string) => {
-                campaignData.quarries[quarry] = { 1: false, 2: false, 3: false };
-            });
-        });
-        // Check to add Legendary Monsters
-        if (Object.keys(campaignData.quarries).includes('White Lion')) {
-            campaignData.quarries['Beast of Sorrow'] = { 4: false };
-            campaignData.quarries['Great Golden Cat'] = { 4: false };
-        }
-        if (Object.keys(campaignData.quarries).includes('Screaming Antelope')) {
-            campaignData.quarries['Mad Steed'] = { 4: false };
-        }
-        if (Object.keys(campaignData.quarries).includes('White Lion')) {
-            campaignData.quarries['Golden Eyed King 1000 Years'] = { 5: false };
-        }
-        // Loop through nemesis to make data structure
-        const nemesisList: string[] = ['node_nemesis_1', 'node_nemesis_2', 'node_nemesis_3'];
-        nemesisList.forEach((node: string) => {
-            campaignSettings[node as keyof NodePillarLists].forEach((nemesis: string) => {
-                campaignData.nemesis[nemesis] = { 1: false, 2: false, 3: false };
-            });
-        });
-        // Add Core Monster
-        campaignData.nemesis[campaignSettings.node_core as keyof NodePillarLists] = { 1: false };
-        //Save data to database
-        // console.log(campaignData);
 
+        //Save data to database
+        console.log(campaignData);
         try {
             (async () => {
                 await axios.post(`${settlementApi}/create`, campaignData);
@@ -87,6 +122,7 @@ const CampaignFinalSettings = ({
             console.error(err);
         }
     };
+
     return (
         <Flex direction="column" justify="start" align="center" gap="3">
             <Heading size="7">Triggered Events</Heading>
@@ -186,8 +222,8 @@ const CampaignFinalSettings = ({
             </Flex>
             <Flex justify="center" align="center" gap="5">
                 <Button
-                    onClick={(e) => {
-                        handleBack(e);
+                    onClick={() => {
+                        navigate('/twilight-library/dashboard/create-campaign/timeline');
                     }}
                 >
                     Back
