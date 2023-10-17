@@ -12,13 +12,7 @@ interface RadioButtonListCampaignCreatorProps {
 
 const RadioButtonListCampaignCreator = ({ header, optionKey, data, setData }: RadioButtonListCampaignCreatorProps) => {
     const handleUpdateData = (value: string) => {
-        const updatedData: TypeCampaignData = { ...data };
-        if (value !== 'None') {
-            updatedData[optionKey] = value;
-        } else {
-            updatedData[optionKey] = null;
-        }
-        setData(updatedData);
+        setData({ ...data, [optionKey]: value === 'None' ? null : value });
     };
     const radioOptions = [...campaignOptionsData[optionKey]];
 

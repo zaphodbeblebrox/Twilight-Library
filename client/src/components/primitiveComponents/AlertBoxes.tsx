@@ -15,12 +15,9 @@ const TwilightEditTextAlert = ({ labelText, textInput, objectKey, onSubmit, onDe
     const [displayedText, setDisplayedText] = useState(textInput);
 
     const handleSubmitEntry = () => {
-        if (objectKey !== undefined) {
-            onSubmit(displayedText, objectKey);
-        } else {
-            onSubmit(displayedText);
-        }
+        onSubmit(displayedText, objectKey);
     };
+
     return (
         <AlertDialog.Root>
             <AlertDialog.Trigger>
@@ -41,7 +38,7 @@ const TwilightEditTextAlert = ({ labelText, textInput, objectKey, onSubmit, onDe
                         </Button>
                     </AlertDialog.Cancel>
                     <AlertDialog.Action>
-                        {textInput !== '' && onDelete !== undefined && (
+                        {textInput && onDelete && (
                             <Button onClick={onDelete} variant="solid" color="red">
                                 Delete
                             </Button>

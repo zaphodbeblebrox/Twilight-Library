@@ -17,8 +17,7 @@ function OptionListCampaignCreator({ header, optionKey, data, setData }: OptionL
         if (checked && !updatedData[optionKey].includes(label)) {
             updatedData[optionKey] = [...updatedData[optionKey], label];
         } else if (!checked && updatedData[optionKey].includes(label)) {
-            const modifiedList: string[] = updatedData[optionKey].filter((item) => item !== label);
-            updatedData[optionKey] = [...modifiedList];
+            updatedData[optionKey] = updatedData[optionKey].filter((item) => item !== label);
         }
         // console.log(updatedData);
         setData(updatedData);
