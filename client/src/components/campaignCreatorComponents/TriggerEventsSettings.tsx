@@ -6,6 +6,7 @@ import { TwilightAddEventAlert, TwilightEditTextAlert } from '../primitiveCompon
 import axios from 'axios';
 import { settlementApi } from '../../service/api';
 import campaignCreatorData from './CampaignTypeConfig';
+import useAxios from 'axios-hooks';
 
 interface CampaignFinalSettingsProps {
     settlementName: string;
@@ -19,6 +20,14 @@ const CampaignFinalSettings = ({
     setCampaignSettings,
 }: CampaignFinalSettingsProps) => {
     const navigate = useNavigate();
+
+    const [{ data: postData, loading: postLoading, error: postError }, executePost] = useAxios(
+        {
+            url: `${settlementApi}/create`,
+            method: 'POST',
+        },
+        { manual: true },
+    );
 
     const handleCourageUnderstandingChange = (newValue: string, objectKey: string) => {
         const updatedCampaign: TypeCampaignData = { ...campaignSettings };
@@ -113,14 +122,12 @@ const CampaignFinalSettings = ({
 
         //Save data to database
         console.log(campaignData);
-        try {
-            (async () => {
-                await axios.post(`${settlementApi}/create`, campaignData);
-                navigate('/twilight-library/dashboard');
-            })();
-        } catch (err) {
-            console.error(err);
-        }
+
+        executePost({
+            data: campaignData,
+        })
+            .then(() => navigate('/twilight-library/dashboard'))
+            .catch((err) => console.error(err));
     };
 
     return (

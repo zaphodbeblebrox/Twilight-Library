@@ -7,8 +7,6 @@ import { TypeServerSettlement } from '../../../SettlementTypes';
 import useAxios from 'axios-hooks';
 
 const DisplayAllCampaigns = () => {
-    // const [allCampaigns, setAllCampaigns] = useState<TypeServerSettlement[]>([]);
-
     const [{ data, loading, error }, refetch] = useAxios(`${settlementApi}/get`);
     const [allCampaigns, setAllCampaigns] = useState<TypeServerSettlement[]>([]);
 
