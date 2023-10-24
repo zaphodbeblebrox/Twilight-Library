@@ -1,57 +1,46 @@
 import ccData from '../../static_data/campaign_creator.json';
 
-import { Button, Flex } from '@radix-ui/themes';
+import { Button, Flex, Heading, Separator } from '@radix-ui/themes';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import TimelineTable from '../primitiveComponents/TimelineTable';
+import { TypeCampaignData } from './CampaignTypeConfig';
 
 interface TimelineCreatorProps {
-    campaignSettings: Record<string, boolean>;
-    setCampaignSettings: React.Dispatch<React.SetStateAction<{}>>;
+    campaignSettings: TypeCampaignData;
+    setCampaignSettings: React.Dispatch<React.SetStateAction<TypeCampaignData>>;
 }
 
-const TimelineCreator = ({ campaignSettings, setCampaignSettings }: TimelineCreatorProps) => {
-    const maximumYears: number = 40;
-    const setDefaultTimeline = () => {
-        const newTimeline: Record<number, string[]> = {};
-        for (let i: number = 1; i <= maximumYears; i++) {
-            newTimeline[i] = [];
-        }
-        const trueKeys = Object.keys(campaignSettings).filter((key) => campaignSettings[key] === true);
-        const jsonData: Record<string, Record<string, string[]>> = ccData['timeline'];
-        trueKeys.forEach((key: string) => {
-            if (jsonData.hasOwnProperty(key)) {
-                const jsonKeyData: Record<string, string[]> = jsonData[key];
-                Object.keys(jsonKeyData).forEach((yearKey: string) => {
-                    jsonKeyData[yearKey].forEach((yearData: string) => {
-                        newTimeline[parseInt(yearKey, 10)].push(yearData);
-                    });
-                });
-            }
-        });
-        console.log('timeline', newTimeline);
-        return newTimeline;
-    };
-    const [timeline, setTimeline] = useState(setDefaultTimeline);
+type campaignDataTypes = string | Record<number, string[]> | Record<string, Record<number, boolean>>;
 
+const TimelineCreator = ({ campaignSettings, setCampaignSettings }: TimelineCreatorProps) => {
+    const [timeline, setTimeline] = useState(campaignSettings.timeline);
     const navigate = useNavigate();
+
     const handleCancel = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         event.preventDefault();
-        navigate('/twilight-library/dashboard');
+        navigate('/twilight-library/dashboard/create-campaign');
     };
 
     const handleNavigation = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         event.preventDefault();
-        navigate('/twilight-library/dashboard');
+        const updatedCampaign: TypeCampaignData = { ...campaignSettings };
+        updatedCampaign.timeline = { ...timeline };
+        setCampaignSettings(updatedCampaign);
+        navigate('/twilight-library/dashboard/create-campaign/final-settings');
     };
-    console.log('timeline', campaignSettings);
+    // console.log('campaign settings', campaignSettings);
+    // console.log('timeline', timeline);
 
     const handleUpdateTimeline = (updatedTimeline: Record<number, string[]>) => {
         setTimeline(updatedTimeline);
         // TODO: Save data to database
     };
+
     return (
         <Flex direction="column" gap="3">
+            <Heading size="7"> Timeline Editor</Heading>
+            <Separator my="3" size="4" />
             <TimelineTable
                 timeline={timeline}
                 onChange={(updatedTimeline: Record<number, string[]>) => handleUpdateTimeline(updatedTimeline)}
@@ -62,9 +51,9 @@ const TimelineCreator = ({ campaignSettings, setCampaignSettings }: TimelineCrea
                         handleCancel(e);
                     }}
                 >
-                    Cancel
+                    Back
                 </Button>
-                <Button onClick={(e) => handleNavigation(e)}>Dashboard</Button>
+                <Button onClick={(e) => handleNavigation(e)}>Triggered Events</Button>
             </Flex>
         </Flex>
     );

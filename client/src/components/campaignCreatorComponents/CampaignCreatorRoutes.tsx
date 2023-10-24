@@ -1,39 +1,57 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import CampaignCreator from './CampaignCreator';
 import TimelineCreator from './TimelineCreator';
-import ccData from '../../static_data/campaign_creator.json';
+import presetCampaignData from '../../static_data/preset_campaigns.json';
 import { useState } from 'react';
+import { TypeCampaignData } from './CampaignTypeConfig';
+import CampaignFinalSettings from './TriggerEventsSettings';
 
 function CampaignCreatorRoutes() {
-    const initializeSettings = () => {
-        const dataHolder: Record<string, boolean> = {};
-        ccData.node_nemesis_1.forEach((key: string) => (dataHolder[key] = false));
-        ccData.node_nemesis_2.forEach((key: string) => (dataHolder[key] = false));
-        ccData.node_nemesis_3.forEach((key: string) => (dataHolder[key] = false));
-        ccData.node_core.forEach((key: string) => (dataHolder[key] = false));
-        dataHolder[ccData.node_core[0]] = true;
-        ccData.node_finale.forEach((key: string) => (dataHolder[key] = false));
-        dataHolder[ccData.node_finale[0]] = true;
-        return dataHolder;
+    const intializeDefaultCampaign = () => {
+        const presetCampaigns: Record<string, TypeCampaignData> = { ...presetCampaignData };
+        const availableCampaigns: string[] = Object.keys(presetCampaigns).sort();
+        const defaultCampaign: TypeCampaignData = presetCampaigns[availableCampaigns[0]];
+        return defaultCampaign;
     };
-    const [campaignSettings, setCampaignSettings] = useState(initializeSettings);
+
+    const [selectedCampaign, setSelectedCampaign] = useState(intializeDefaultCampaign);
+    const [settlementName, setSettlementName] = useState('Gotham');
 
     return (
         <Routes>
             <Route
                 path="/"
                 element={
-                    <CampaignCreator campaignSettings={campaignSettings} setCampaignSettings={setCampaignSettings} />
+                    <CampaignCreator
+                        settlementName={settlementName}
+                        setSettlementName={setSettlementName}
+                        selectedCampaign={selectedCampaign}
+                        setSelectedCampaign={setSelectedCampaign}
+                    />
                 }
             />
 
             <Route
                 path="/timeline"
                 element={
-                    Object.entries(campaignSettings).length > 0 ? (
+                    Object.entries(selectedCampaign.timeline).length > 0 ? (
                         <TimelineCreator
-                            campaignSettings={campaignSettings}
-                            setCampaignSettings={setCampaignSettings}
+                            campaignSettings={selectedCampaign}
+                            setCampaignSettings={setSelectedCampaign}
+                        />
+                    ) : (
+                        <Navigate to="/twilight-library/dashboard/create-campaign" />
+                    )
+                }
+            />
+            <Route
+                path="/final-settings"
+                element={
+                    Object.entries(selectedCampaign.timeline).length > 0 ? (
+                        <CampaignFinalSettings
+                            settlementName={settlementName}
+                            campaignSettings={selectedCampaign}
+                            setCampaignSettings={setSelectedCampaign}
                         />
                     ) : (
                         <Navigate to="/twilight-library/dashboard/create-campaign" />

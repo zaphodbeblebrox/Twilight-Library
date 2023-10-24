@@ -3,30 +3,84 @@ import { AlertDialog, Button, Flex, TextField } from '@radix-ui/themes';
 import { useState } from 'react';
 import { TwilightSelect } from './Primitives';
 
-interface TLAddTimelineAlertProps {
-    year: number;
-    onSubmit: (year: number, timelineEvent: string) => void;
+interface TwilightEditTextAlertProps {
+    labelText: string;
+    textInput: string;
+    objectKey?: string;
+    onSubmit: (newValue: string, objectKey?: string) => void;
+    onDelete?: () => void;
 }
 
-const TLAddTimelineAlert = ({ year, onSubmit }: TLAddTimelineAlertProps) => {
-    const [timelineEvent, setTimelineEvent] = useState('');
+const TwilightEditTextAlert = ({ labelText, textInput, objectKey, onSubmit, onDelete }: TwilightEditTextAlertProps) => {
+    const [displayedText, setDisplayedText] = useState(textInput);
 
     const handleSubmitEntry = () => {
-        onSubmit(year, timelineEvent);
-        setTimelineEvent('');
+        onSubmit(displayedText, objectKey);
     };
 
     return (
         <AlertDialog.Root>
             <AlertDialog.Trigger>
-                <Button>+</Button>
+                <Button variant="ghost">{textInput}</Button>
             </AlertDialog.Trigger>
             <AlertDialog.Content style={{ maxWidth: 450 }}>
-                <AlertDialog.Title>Add Story Event</AlertDialog.Title>
+                <AlertDialog.Title>{labelText}</AlertDialog.Title>
                 <Flex direction="row" justify="center" align="center" gap="3">
-                    <Label.Root htmlFor="event">Event:</Label.Root>
                     <TextField.Root>
-                        <TextField.Input value={timelineEvent} onChange={(e) => setTimelineEvent(e.target.value)} />
+                        <TextField.Input value={displayedText} onChange={(e) => setDisplayedText(e.target.value)} />
+                    </TextField.Root>
+                </Flex>
+
+                <Flex gap="3" mt="4" justify="end">
+                    <AlertDialog.Cancel>
+                        <Button variant="soft" color="gray">
+                            Cancel
+                        </Button>
+                    </AlertDialog.Cancel>
+                    <AlertDialog.Action>
+                        {textInput && onDelete && (
+                            <Button onClick={onDelete} variant="solid" color="red">
+                                Delete
+                            </Button>
+                        )}
+                    </AlertDialog.Action>
+                    <AlertDialog.Action>
+                        <Button onClick={handleSubmitEntry} variant="solid" color="green">
+                            {textInput !== '' ? 'Modify' : 'Add'}
+                        </Button>
+                    </AlertDialog.Action>
+                </Flex>
+            </AlertDialog.Content>
+        </AlertDialog.Root>
+    );
+};
+
+interface TwilightAddTimelineAlertProps {
+    buttonText: string;
+    title: string;
+    label: string;
+    onSubmit: (newValue: string) => void;
+}
+
+const TwilightAddEventAlert = ({ buttonText, title, label, onSubmit }: TwilightAddTimelineAlertProps) => {
+    const [storyEvent, setStoryEvent] = useState('');
+
+    const handleSubmitEntry = () => {
+        onSubmit(storyEvent);
+        setStoryEvent('');
+    };
+
+    return (
+        <AlertDialog.Root>
+            <AlertDialog.Trigger>
+                <Button>{buttonText}</Button>
+            </AlertDialog.Trigger>
+            <AlertDialog.Content style={{ maxWidth: 450 }}>
+                <AlertDialog.Title>{title}</AlertDialog.Title>
+                <Flex direction="row" justify="center" align="center" gap="3">
+                    <Label.Root htmlFor="event">{label}</Label.Root>
+                    <TextField.Root>
+                        <TextField.Input value={storyEvent} onChange={(e) => setStoryEvent(e.target.value)} />
                     </TextField.Root>
                 </Flex>
 
@@ -47,7 +101,7 @@ const TLAddTimelineAlert = ({ year, onSubmit }: TLAddTimelineAlertProps) => {
     );
 };
 
-interface TLEditTimelineAlertProps {
+interface TwilightEditTimelineAlertProps {
     year: number;
     maxYears: number;
     entry: string;
@@ -55,7 +109,13 @@ interface TLEditTimelineAlertProps {
     deleteEvent: (year: number, entry: string) => void;
 }
 
-const TLEditTimelineAlert = ({ year, maxYears, entry, moveEvent, deleteEvent }: TLEditTimelineAlertProps) => {
+const TwilightEditTimelineAlert = ({
+    year,
+    maxYears,
+    entry,
+    moveEvent,
+    deleteEvent,
+}: TwilightEditTimelineAlertProps) => {
     const [newYear, setNewYear] = useState(year);
 
     const handleMove = () => {
@@ -103,4 +163,4 @@ const TLEditTimelineAlert = ({ year, maxYears, entry, moveEvent, deleteEvent }: 
     );
 };
 
-export { TLAddTimelineAlert, TLEditTimelineAlert };
+export { TwilightAddEventAlert, TwilightEditTimelineAlert, TwilightEditTextAlert };

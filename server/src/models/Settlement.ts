@@ -1,28 +1,36 @@
 import mongoose, { Document, Schema } from 'mongoose';
+import { TypeServerSettlement } from '../../../SettlementTypes';
 
-export interface SettlementInterface {
-    name: string;
-    survival_limit: number;
-    arc_survivors: boolean;
-    cognition_amount: number;
-    notes: string;
-    principle_conviction: string;
-    principle_death: string;
-    principle_new_life: string;
-    principle_society: string;
-    resources: Record<string, number>;
-    gear: Record<string, number>;
-    innovations: string[];
-    patterns: string[];
-    locations: string[];
-    knowledges: string[];
-    current_year: Number;
-    timeline: Record<number, string[]>;
-    quarries: Record<string, Record<string, Record<number, boolean>>>;
-    nemesis: Record<string, Record<string, Record<number, boolean>>>;
-}
+// export interface SettlementInterface {
+//     name: string;
+//     survival_limit: number;
+//     arc_survivors: boolean;
+//     cognition_amount: number;
+//     notes: string;
+//     principle_conviction: string;
+//     principle_death: string;
+//     principle_new_life: string;
+//     principle_society: string;
+//     resources: Record<string, number>;
+//     gear: Record<string, number>;
+//     innovations: string[];
+//     patterns: string[];
+//     locations: string[];
+//     knowledges: string[];
+//     current_year: Number;
+//     timeline: Record<number, string[]>;
+//     quarries: Record<string, Record<string, Record<number, boolean>>>;
+//     nemesis: Record<string, Record<string, Record<number, boolean>>>;
+//     survivors: number[];
+//     courage_event_1: string;
+//     courage_event_2: string;
+//     understanding_event_1: string;
+//     understanding_event_2: string;
+//     milestones: Record<string, boolean>;
+//     constellations: boolean;
+// }
 
-export interface SettlementModel extends SettlementInterface, Document {}
+export interface SettlementModel extends TypeServerSettlement, Document {}
 
 const SettlementSchema: Schema = new Schema(
     {
@@ -143,6 +151,42 @@ const SettlementSchema: Schema = new Schema(
             type: [Number],
             required: false,
             default: [],
+        },
+        courage_event_1: {
+            type: String,
+            required: true,
+        },
+        courage_event_2: {
+            type: String,
+            required: true,
+        },
+        understanding_event_1: {
+            type: String,
+            required: true,
+        },
+        understanding_event_2: {
+            type: String,
+            required: true,
+        },
+        milestones: {
+            type: Object,
+            required: true,
+            // validate: {
+            //     validator: (value: String) => {
+            //         for (const key in value) {
+            //             if (typeof value[key] !== 'boolean') {
+            //                 return false;
+            //             }
+            //         }
+            //         return true;
+            //     },
+            //     message: 'Resources is strictly an Record<string, boolean>!!!',
+            // },
+        },
+        constellations: {
+            type: Boolean,
+            required: false,
+            default: false,
         },
     },
     {
