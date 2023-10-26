@@ -9,6 +9,7 @@ import useAxios from 'axios-hooks';
 const DisplayAllCampaigns = () => {
     const [{ data, loading, error }, refetch] = useAxios(`${settlementApi}/get`);
     const [allCampaigns, setAllCampaigns] = useState<TypeServerSettlement[]>([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (data) {
@@ -24,22 +25,14 @@ const DisplayAllCampaigns = () => {
         return <p>Error!</p>;
     }
 
-    // useEffect(() => {
-    //     try {
-    //         (async () => {
-    //             const res = await axios.get(`${settlementApi}/get`);
-    //             console.log('res data', res.data);
-    //             setAllCampaigns(res.data.settlements);
-    //         })();
-    //     } catch (err) {
-    //         console.error(err);
-    //     }
-    // }, []);
-
     return (
         <Flex direction="column" justify="between" align="center" gap="3">
-            {allCampaigns.map((campaign, idx) => {
-                return <Button key={idx}>{campaign.name}</Button>;
+            {data.settlements.map((campaign: Record<string, string>, idx: number) => {
+                return (
+                    <Button key={idx} onClick={() => navigate(`/twilight-library/campaign/${campaign._id}`)}>
+                        {campaign.name}
+                    </Button>
+                );
             })}
         </Flex>
     );

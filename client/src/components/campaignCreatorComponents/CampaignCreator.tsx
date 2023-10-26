@@ -57,13 +57,6 @@ const CampaignCreator = ({
                         timeline[fight_year].push(`NE - ${selection} lvl ${level}`);
                     }
                 });
-                // const meow = [1, 2, 3].map((level: number) => {
-                //     const fight_str = `nn${nemesis_tier}_lvl${level}_fight_year`;
-                //     const fight_key: keyof NemesisFightYearLists = fight_str as keyof NemesisFightYearLists;
-                //     return selectedCampaign[fight_key];
-                // }).filter((fight_year) => fight_year).map((fight_year, idx) => `NE - ${selection} lvl ${idx + 1}`);
-
-                // timeline[fight_year] =
             });
         } else {
             selectedCampaign[nodeKey].forEach((selection: string) => {

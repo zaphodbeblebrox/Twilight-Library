@@ -1,39 +1,14 @@
 import mongoose, { Document, Schema } from 'mongoose';
 import { TypeServerSettlement } from '../../../SettlementTypes';
 
-// export interface SettlementInterface {
-//     name: string;
-//     survival_limit: number;
-//     arc_survivors: boolean;
-//     cognition_amount: number;
-//     notes: string;
-//     principle_conviction: string;
-//     principle_death: string;
-//     principle_new_life: string;
-//     principle_society: string;
-//     resources: Record<string, number>;
-//     gear: Record<string, number>;
-//     innovations: string[];
-//     patterns: string[];
-//     locations: string[];
-//     knowledges: string[];
-//     current_year: Number;
-//     timeline: Record<number, string[]>;
-//     quarries: Record<string, Record<string, Record<number, boolean>>>;
-//     nemesis: Record<string, Record<string, Record<number, boolean>>>;
-//     survivors: number[];
-//     courage_event_1: string;
-//     courage_event_2: string;
-//     understanding_event_1: string;
-//     understanding_event_2: string;
-//     milestones: Record<string, boolean>;
-//     constellations: boolean;
-// }
-
-export interface SettlementModel extends TypeServerSettlement, Document {}
+// export interface SettlementModel extends TypeServerSettlement, Document {}
 
 const SettlementSchema: Schema = new Schema(
     {
+        _id: {
+            type: String,
+            required: false,
+        },
         name: {
             type: String,
             required: [true, 'Settlement Name is required for creation'],
@@ -194,4 +169,4 @@ const SettlementSchema: Schema = new Schema(
     },
 );
 
-export default mongoose.model<SettlementModel>('Settlements', SettlementSchema);
+export default mongoose.model<TypeServerSettlement>('Settlements', SettlementSchema);
