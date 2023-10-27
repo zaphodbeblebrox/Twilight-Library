@@ -4,18 +4,19 @@ import { useNavigate, useParams } from 'react-router-dom';
 import useAxios from 'axios-hooks';
 import { TypeServerSettlement } from '../../../../SettlementTypes';
 import { settlementApi } from '../../service/api';
+import TimelineTab from './TimelineTab';
 
 const CampaignTabs = () => {
     const { id } = useParams();
 
     const [{ data, loading, error }, refetch] = useAxios(`${settlementApi}/get/${id}`);
-    const [campaign, setCampaign] = useState<TypeServerSettlement>();
+    const [campaignData, setCampaignData] = useState<TypeServerSettlement>();
     const navigate = useNavigate();
 
     useEffect(() => {
         if (data) {
             console.log(data);
-            setCampaign(data.settlements);
+            setCampaignData(data.settlements);
         }
     }, [data]);
 
@@ -46,7 +47,7 @@ const CampaignTabs = () => {
                 </Tabs.Content>
 
                 <Tabs.Content value="timeline">
-                    <Text size="2">timeline Info...</Text>
+                    <TimelineTab campaignData={campaignData} setCampaignData={setCampaignData} />
                 </Tabs.Content>
 
                 <Tabs.Content value="survivors">
