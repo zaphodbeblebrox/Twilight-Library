@@ -9,15 +9,15 @@ const CampaignTabs = () => {
     const { id } = useParams();
 
     const [{ data, loading, error }, refetch] = useAxios(`${settlementApi}/get/${id}`);
-    const [campaign, setCampaign] = useState<TypeServerSettlement>();
+    // const [campaign, setCampaign] = useState<TypeServerSettlement>();
     const navigate = useNavigate();
 
-    useEffect(() => {
-        if (data) {
-            console.log(data);
-            // setCampaign(data.settlements);
-        }
-    }, [data]);
+    // useEffect(() => {
+    //     if (data) {
+    //         console.log(data);
+    //         // setCampaign(data.settlements);
+    //     }
+    // }, [data]);
 
     if (loading) {
         return <p>Loading...</p>;
