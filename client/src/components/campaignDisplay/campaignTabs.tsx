@@ -1,6 +1,5 @@
-import { Button, Flex, Tabs, Box, Text } from '@radix-ui/themes';
+import { Tabs, Box, Text } from '@radix-ui/themes';
 import { useEffect, useState } from 'react';
-import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 import useAxios from 'axios-hooks';
 import { TypeServerSettlement } from '../../../../SettlementTypes';
