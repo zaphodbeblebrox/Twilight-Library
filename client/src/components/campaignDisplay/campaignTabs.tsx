@@ -43,6 +43,7 @@ const CampaignTabs = () => {
             <Box px="4" pt="3" pb="2">
                 <Tabs.Content value="settlement">
                     <Text size="2">Settlement Info...</Text>
+                    <Text size="2">{JSON.stringify(data, null, 2)}</Text>
                 </Tabs.Content>
 
                 <Tabs.Content value="timeline">
