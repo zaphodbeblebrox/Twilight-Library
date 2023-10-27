@@ -5,10 +5,6 @@ import { TypeServerSettlement } from '../../../SettlementTypes';
 
 const SettlementSchema: Schema = new Schema(
     {
-        _id: {
-            type: String,
-            required: false,
-        },
         name: {
             type: String,
             required: [true, 'Settlement Name is required for creation'],
