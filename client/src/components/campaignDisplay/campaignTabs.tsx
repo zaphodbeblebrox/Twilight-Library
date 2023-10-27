@@ -3,9 +3,30 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 import useAxios from 'axios-hooks';
+import { TypeServerSettlement } from '../../../../SettlementTypes';
+import { settlementApi } from '../../service/api';
 
 const CampaignTabs = () => {
     const { id } = useParams();
+
+    const [{ data, loading, error }, refetch] = useAxios(`${settlementApi}/get/${id}`);
+    const [campaign, setCampaign] = useState<TypeServerSettlement>();
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (data) {
+            console.log(data);
+            // setCampaign(data.settlements);
+        }
+    }, [data]);
+
+    if (loading) {
+        return <p>Loading...</p>;
+    }
+    if (error) {
+        console.error('error:', error);
+        return <p>Error!</p>;
+    }
 
     return (
         <Tabs.Root defaultValue="settlement">
