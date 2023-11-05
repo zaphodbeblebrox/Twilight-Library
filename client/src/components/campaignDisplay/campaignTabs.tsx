@@ -10,15 +10,7 @@ const CampaignTabs = () => {
     const { id } = useParams();
 
     const [{ data, loading, error }, refetch] = useAxios(`${settlementApi}/get/${id}`);
-    const [campaignData, setCampaignData] = useState<TypeServerSettlement>();
     const navigate = useNavigate();
-
-    useEffect(() => {
-        if (data) {
-            console.log(data);
-            setCampaignData(data.settlements);
-        }
-    }, [data]);
 
     if (loading) {
         return <p>Loading...</p>;
@@ -27,7 +19,7 @@ const CampaignTabs = () => {
         console.error('error:', error);
         return <p>Error!</p>;
     }
-
+    // console.log('data:', data);
     return (
         <Tabs.Root defaultValue="settlement">
             <Tabs.List>
@@ -47,7 +39,7 @@ const CampaignTabs = () => {
                 </Tabs.Content>
 
                 <Tabs.Content value="timeline">
-                    <TimelineTab campaignData={campaignData} setCampaignData={setCampaignData} />
+                    <TimelineTab campaignData={data.settlement} />
                 </Tabs.Content>
 
                 <Tabs.Content value="survivors">

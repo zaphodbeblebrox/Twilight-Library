@@ -8,15 +8,15 @@ import TimelineTable from '../primitiveComponents/TimelineTable';
 
 interface TimelineTabProps {
     campaignData: TypeServerSettlement;
-    setCampaignData: React.Dispatch<React.SetStateAction<TypeServerSettlement>>;
 }
 
-const TimelineTab = ({ campaignData, setCampaignData }: TimelineTabProps) => {
+const TimelineTab = ({ campaignData }: TimelineTabProps) => {
     const handleUpdateTimeline = (updatedTimeline: Record<number, string[]>) => {
-        setCampaignData({ ...campaignData, timeline: updatedTimeline });
+        // setCampaignData({ ...campaignData, timeline: updatedTimeline });
         // TODO: Save data to database
     };
-
+    console.log('all data:', campaignData);
+    console.log('timeline:', campaignData.timeline);
     return (
         <Flex direction="column" gap="3">
             <Heading size="7"> Timeline Editor</Heading>
