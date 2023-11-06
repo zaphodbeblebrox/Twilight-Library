@@ -11,12 +11,27 @@ interface TimelineTabProps {
 }
 
 const TimelineTab = ({ campaignData }: TimelineTabProps) => {
+    const [{ data: patchData, loading: patchLoading, error: patchError }, executePatch] = useAxios(
+        {
+            url: `${settlementApi}/update/${campaignData._id}`,
+            method: 'PATCH',
+        },
+        { manual: true },
+    );
+
     const handleUpdateTimeline = (updatedTimeline: Record<number, string[]>) => {
-        // setCampaignData({ ...campaignData, timeline: updatedTimeline });
+        console.log('updated timeline: ', updatedTimeline);
+
+        executePatch({
+            data: { timeline: updatedTimeline },
+        })
+            // .then(() => navigate('/twilight-library/dashboard'))
+            .catch((err) => console.error(err));
+
         // TODO: Save data to database
     };
-    console.log('all data:', campaignData);
-    console.log('timeline:', campaignData.timeline);
+    // console.log('all data:', campaignData);
+    // console.log('timeline:', campaignData.timeline);
     return (
         <Flex direction="column" gap="3">
             <Heading size="7"> Timeline Editor</Heading>
