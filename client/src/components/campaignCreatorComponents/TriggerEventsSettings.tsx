@@ -113,7 +113,7 @@ const CampaignFinalSettings = ({
             courage_event_2: campaignSettings.courage_event_2,
             understanding_event_1: campaignSettings.understanding_event_1,
             understanding_event_2: campaignSettings.understanding_event_1,
-            milestones: { ...setMilestones },
+            milestones: { ...setMilestones() },
             quarries: { ...setBasicQuarries(), ...setBonusQuarries() },
             nemesis: { ...setNemesis(), [campaignSettings.node_core as keyof NodePillarLists]: { 1: false } },
             constellations: campaignSettings.constellations,
