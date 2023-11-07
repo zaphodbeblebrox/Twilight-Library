@@ -38,9 +38,7 @@ const TimelineTab = ({ campaignData, dbRefetch }: TimelineTabProps) => {
     // console.log('timeline:', campaignData.timeline);
     // TODO: Pass current_year to TimelineTable to highlight row of current year
     return (
-        <Flex direction="column" gap="3">
-            <Heading size="7"> Timeline Editor</Heading>
-            <Separator my="3" size="4" />
+        <Flex direction="column" justify="center" gap="3">
             <Flex direction="row" justify="center" align="center" gap="2">
                 <Text size="2">Current Lantern Year: {String(campaignData.current_year)}</Text>
                 <Button variant="outline" onClick={handleUpdateCurrentYear}>
