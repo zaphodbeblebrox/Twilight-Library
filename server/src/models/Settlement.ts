@@ -1,8 +1,6 @@
 import mongoose, { Document, Schema } from 'mongoose';
 import { TypeServerSettlement } from '../../../SettlementTypes';
 
-// export interface SettlementModel extends TypeServerSettlement, Document {}
-
 const SettlementSchema: Schema = new Schema(
     {
         name: {
@@ -142,6 +140,7 @@ const SettlementSchema: Schema = new Schema(
         milestones: {
             type: Object,
             required: true,
+            // TODO: Create proper validation check
             // validate: {
             //     validator: (value: String) => {
             //         for (const key in value) {
