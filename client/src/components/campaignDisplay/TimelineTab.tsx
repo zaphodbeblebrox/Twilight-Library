@@ -1,4 +1,4 @@
-import { Flex, Heading, Separator, Button } from '@radix-ui/themes';
+import { Flex, Heading, Separator, Button, Text } from '@radix-ui/themes';
 import useAxios, { RefetchFunction } from 'axios-hooks';
 import { TypeServerSettlement } from '../../../../SettlementTypes';
 import { settlementApi } from '../../service/api';
@@ -18,21 +18,35 @@ const TimelineTab = ({ campaignData, dbRefetch }: TimelineTabProps) => {
         { manual: true },
     );
 
+    const handleUpdateCurrentYear = () => {
+        executePatch({
+            data: { current_year: campaignData.current_year + 1 },
+        })
+            .then(() => dbRefetch())
+            .catch((err) => console.error(err));
+    };
+
     const handleUpdateTimeline = (updatedTimeline: Record<number, string[]>) => {
-        console.log('updated timeline: ', updatedTimeline);
+        // console.log('updated timeline: ', updatedTimeline);
         executePatch({
             data: { timeline: updatedTimeline },
         })
             .then(() => dbRefetch())
             .catch((err) => console.error(err));
-
-        // TODO: Save data to database
     };
     // console.log('all data:', campaignData);
     // console.log('timeline:', campaignData.timeline);
+    // TODO: Pass current_year to TimelineTable to highlight row of current year
     return (
         <Flex direction="column" gap="3">
             <Heading size="7"> Timeline Editor</Heading>
+            <Separator my="3" size="4" />
+            <Flex direction="row" justify="center" align="center" gap="2">
+                <Text size="2">Current Lantern Year: {String(campaignData.current_year)}</Text>
+                <Button variant="outline" onClick={handleUpdateCurrentYear}>
+                    Advance to Next Year
+                </Button>
+            </Flex>
             <Separator my="3" size="4" />
             <TimelineTable
                 timeline={campaignData.timeline}
