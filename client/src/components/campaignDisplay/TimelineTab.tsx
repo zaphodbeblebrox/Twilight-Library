@@ -1,6 +1,4 @@
-import { Tabs, Box, Text, Flex, Heading, Separator, Button } from '@radix-ui/themes';
-import { useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Flex, Heading, Separator, Button } from '@radix-ui/themes';
 import useAxios, { RefetchFunction } from 'axios-hooks';
 import { TypeServerSettlement } from '../../../../SettlementTypes';
 import { settlementApi } from '../../service/api';
