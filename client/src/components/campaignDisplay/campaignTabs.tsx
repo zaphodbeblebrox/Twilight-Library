@@ -12,13 +12,13 @@ const CampaignTabs = () => {
     const [{ data, loading, error }, refetch] = useAxios(`${settlementApi}/get/${id}`);
     const navigate = useNavigate();
 
-    if (loading) {
-        return <p>Loading...</p>;
-    }
-    if (error) {
-        console.error('error:', error);
-        return <p>Error!</p>;
-    }
+    // if (loading) {
+    //     return <p>Loading...</p>;
+    // }
+    // if (error) {
+    //     console.error('error:', error);
+    //     return <p>Error!</p>;
+    // }
     // console.log('data:', data);
     return (
         <Tabs.Root defaultValue="settlement">
@@ -35,11 +35,11 @@ const CampaignTabs = () => {
             <Box px="4" pt="3" pb="2">
                 <Tabs.Content value="settlement">
                     <Text size="2">Settlement Info...</Text>
-                    <Text size="2">{JSON.stringify(data, null, 2)}</Text>
+                    {data && <Text size="2">{JSON.stringify(data, null, 2)}</Text>}
                 </Tabs.Content>
 
                 <Tabs.Content value="timeline">
-                    <TimelineTab campaignData={data.settlement} dbRefetch={refetch} />
+                    {data && <TimelineTab campaignData={data.settlement} dbRefetch={refetch} />}
                 </Tabs.Content>
 
                 <Tabs.Content value="survivors">
