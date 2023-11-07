@@ -35,7 +35,7 @@ export type TypeServerSettlement = SettlementStrLists &
         survival_limit: number;
         arc_survivors: boolean;
         cognition_amount: number;
-        current_year: Number;
+        current_year: number;
         timeline: Record<number, string[]>;
         survivors: number[];
         milestones: Record<string, boolean>;
