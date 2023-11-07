@@ -10,8 +10,6 @@ interface TimelineTabProps {
 }
 
 const TimelineTab = ({ campaignData, dbRefetch }: TimelineTabProps) => {
-    // const [timelineData, setTimelineData] = usesState(campaignData.timeline);
-
     const [{ data: patchData, loading: patchLoading, error: patchError }, executePatch] = useAxios(
         {
             url: `${settlementApi}/update/${campaignData._id}`,
@@ -22,8 +20,6 @@ const TimelineTab = ({ campaignData, dbRefetch }: TimelineTabProps) => {
 
     const handleUpdateTimeline = (updatedTimeline: Record<number, string[]>) => {
         console.log('updated timeline: ', updatedTimeline);
-        // setTimelineData(updatedTimeline);
-
         executePatch({
             data: { timeline: updatedTimeline },
         })
