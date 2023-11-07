@@ -1,15 +1,12 @@
 import { Tabs, Box, Text } from '@radix-ui/themes';
 import { useNavigate, useParams } from 'react-router-dom';
 import useAxios from 'axios-hooks';
-import { TypeServerSettlement } from '../../../../SettlementTypes';
 import { settlementApi } from '../../service/api';
 import TimelineTab from './TimelineTab';
 
 const CampaignTabs = () => {
     const { id } = useParams();
-
     const [{ data, loading, error }, refetch] = useAxios(`${settlementApi}/get/${id}`);
-    const navigate = useNavigate();
 
     return (
         <Tabs.Root defaultValue="settlement">
