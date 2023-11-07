@@ -1,31 +1,12 @@
 import { Tabs, Box, Text } from '@radix-ui/themes';
-import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import useAxios from 'axios-hooks';
-import { TypeServerSettlement } from '../../../../SettlementTypes';
 import { settlementApi } from '../../service/api';
+import TimelineTab from './TimelineTab';
 
 const CampaignTabs = () => {
     const { id } = useParams();
-
     const [{ data, loading, error }, refetch] = useAxios(`${settlementApi}/get/${id}`);
-    // const [campaign, setCampaign] = useState<TypeServerSettlement>();
-    const navigate = useNavigate();
-
-    // useEffect(() => {
-    //     if (data) {
-    //         console.log(data);
-    //         // setCampaign(data.settlements);
-    //     }
-    // }, [data]);
-
-    if (loading) {
-        return <p>Loading...</p>;
-    }
-    if (error) {
-        console.error('error:', error);
-        return <p>Error!</p>;
-    }
 
     return (
         <Tabs.Root defaultValue="settlement">
@@ -42,11 +23,11 @@ const CampaignTabs = () => {
             <Box px="4" pt="3" pb="2">
                 <Tabs.Content value="settlement">
                     <Text size="2">Settlement Info...</Text>
-                    <Text size="2">{JSON.stringify(data, null, 2)}</Text>
+                    {data && <Text size="2">{JSON.stringify(data, null, 2)}</Text>}
                 </Tabs.Content>
 
                 <Tabs.Content value="timeline">
-                    <Text size="2">timeline Info...</Text>
+                    {data && <TimelineTab campaignData={data.settlement} dbRefetch={refetch} />}
                 </Tabs.Content>
 
                 <Tabs.Content value="survivors">

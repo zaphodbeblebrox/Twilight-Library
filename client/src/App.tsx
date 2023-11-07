@@ -2,7 +2,7 @@ import './App.css';
 import { BrowserRouter, Navigate, Route, RouterProvider, Routes, createBrowserRouter } from 'react-router-dom';
 import CampaignCreator from './components/campaignCreatorComponents/CampaignCreator';
 import DashboardRoutes from './components/DashboardRoutes';
-import CampaignTabs from './components/campaignDisplay/campaignTabs';
+import CampaignTabs from './components/campaignDisplay/CampaignTabs';
 
 function App() {
     return (

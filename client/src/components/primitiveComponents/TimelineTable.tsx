@@ -21,6 +21,7 @@ const TimelineTable = ({ timeline, onChange }: TimelineTableProps) => {
         updatedTimeline[year] = updatedTimeline[year].filter((event) => event !== timelineEvent);
         onChange(updatedTimeline);
     };
+
     return (
         <Table.Root>
             <Table.Header>
