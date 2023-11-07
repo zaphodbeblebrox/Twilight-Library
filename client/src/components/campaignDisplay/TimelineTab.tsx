@@ -1,16 +1,19 @@
 import { Tabs, Box, Text, Flex, Heading, Separator, Button } from '@radix-ui/themes';
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import useAxios from 'axios-hooks';
+import useAxios, { RefetchFunction } from 'axios-hooks';
 import { TypeServerSettlement } from '../../../../SettlementTypes';
 import { settlementApi } from '../../service/api';
 import TimelineTable from '../primitiveComponents/TimelineTable';
 
 interface TimelineTabProps {
     campaignData: TypeServerSettlement;
+    dbRefetch: RefetchFunction<any, any>;
 }
 
-const TimelineTab = ({ campaignData }: TimelineTabProps) => {
+const TimelineTab = ({ campaignData, dbRefetch }: TimelineTabProps) => {
+    // const [timelineData, setTimelineData] = usesState(campaignData.timeline);
+
     const [{ data: patchData, loading: patchLoading, error: patchError }, executePatch] = useAxios(
         {
             url: `${settlementApi}/update/${campaignData._id}`,
@@ -21,11 +24,12 @@ const TimelineTab = ({ campaignData }: TimelineTabProps) => {
 
     const handleUpdateTimeline = (updatedTimeline: Record<number, string[]>) => {
         console.log('updated timeline: ', updatedTimeline);
+        // setTimelineData(updatedTimeline);
 
         executePatch({
             data: { timeline: updatedTimeline },
         })
-            // .then(() => navigate('/twilight-library/dashboard'))
+            .then(() => dbRefetch())
             .catch((err) => console.error(err));
 
         // TODO: Save data to database

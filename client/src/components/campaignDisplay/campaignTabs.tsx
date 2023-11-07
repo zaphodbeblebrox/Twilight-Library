@@ -39,7 +39,7 @@ const CampaignTabs = () => {
                 </Tabs.Content>
 
                 <Tabs.Content value="timeline">
-                    <TimelineTab campaignData={data.settlement} />
+                    <TimelineTab campaignData={data.settlement} dbRefetch={refetch} />
                 </Tabs.Content>
 
                 <Tabs.Content value="survivors">
