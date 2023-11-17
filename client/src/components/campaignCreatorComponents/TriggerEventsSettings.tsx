@@ -147,16 +147,19 @@ const CampaignFinalSettings = ({
     };
 
     const createGearGroup = (categoryKey: keyof TypeLocationsData) => {
-        return locationsData[categoryKey].gear.reduce((currentLocationObject, gear) => {
-            return {
-                ...currentLocationObject,
-                [gear]: 0,
-            };
-        }, {});
+        console.log('cat key', categoryKey);
+        return locationsData[categoryKey].gear.length === 0
+            ? {}
+            : locationsData[categoryKey].gear.reduce((currentLocationObject, gear) => {
+                  return {
+                      ...currentLocationObject,
+                      [gear]: 0,
+                  };
+              }, {});
     };
 
     const createLocationList = () => {
-        return ['Starting Gear', 'Rare Gear']
+        return ['Starting Gear']
             .filter((location) => location && Object.keys(locationsData).includes(location))
             .reduce((currentLocationObject, location) => {
                 console.log('location', location);
@@ -189,11 +192,11 @@ const CampaignFinalSettings = ({
         //Save data to database
         console.log('gear', campaignData.gear);
 
-        // executePost({
-        //     data: campaignData,
-        // })
-        //     .then(() => navigate('/twilight-library/dashboard'))
-        //     .catch((err) => console.error(err));
+        executePost({
+            data: campaignData,
+        })
+            .then(() => navigate('/twilight-library/dashboard'))
+            .catch((err) => console.error(err));
     };
 
     return (

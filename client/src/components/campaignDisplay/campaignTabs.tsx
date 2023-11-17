@@ -4,11 +4,18 @@ import useAxios from 'axios-hooks';
 import { settlementApi } from '../../service/api';
 import TimelineTab from './TimelineTab';
 import StorageTab from './StorageTab';
+import { useEffect } from 'react';
 
 const CampaignTabs = () => {
     const { id } = useParams();
     const [{ data, loading, error }, refetch] = useAxios(`${settlementApi}/get/${id}`);
     const navigate = useNavigate();
+
+    useEffect(() => {
+        if (data) {
+            console.log('Settlement Data', data.settlement);
+        }
+    }, [data]);
 
     return (
         <Flex direction="column" style={{ width: '100%' }}>
