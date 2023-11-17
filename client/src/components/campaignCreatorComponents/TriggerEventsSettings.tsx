@@ -136,12 +136,14 @@ const CampaignFinalSettings = ({
         console.log('monster list', monsterList);
         // return { ...createResourceGroup('Basic') };
         return monsterList
-            .filter((monster) => Object.keys(resourceListData).includes(monster!))
+            .filter((monster) => monster && Object.keys(resourceListData).includes(monster))
             .reduce((currentResourceObject, monster) => {
-                return {
-                    ...currentResourceObject,
-                    [monster!]: createResourceGroup(monster as keyof TypeResourceListData),
-                };
+                return monster
+                    ? {
+                          ...currentResourceObject,
+                          [monster]: createResourceGroup(monster as keyof TypeResourceListData),
+                      }
+                    : { ...currentResourceObject };
             }, {});
     };
 
