@@ -92,3 +92,18 @@ import rawResourceListData from '../../static_data/resource_list.json';
 export type TypeResourceListData = { [K in keyof typeof rawResourceListData]: string[] };
 
 export const resourceListData: TypeResourceListData = rawResourceListData;
+
+//------------------------------------------------------------
+// --- Locations Json ---
+import rawLocationsData from '../../static_data/locations.json';
+export type TypeLocationEndeavour = {
+    cost: string;
+    effect: string;
+};
+export type TypeLocationFormat = {
+    gear: string[];
+    endeavour: Record<string, TypeLocationEndeavour>;
+};
+export type TypeLocationsData = { [K in keyof typeof rawLocationsData]: TypeLocationFormat };
+
+export const locationsData: TypeLocationsData = rawLocationsData;
