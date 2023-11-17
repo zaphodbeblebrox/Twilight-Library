@@ -8,6 +8,8 @@ import {
     TypeResourceListData,
     resourceListData,
     campaignCreatorData,
+    TypeLocationsData,
+    locationsData,
 } from './CampaignTypeConfig';
 import { TwilightAddEventAlert, TwilightEditTextAlert } from '../primitiveComponents/AlertBoxes';
 import axios from 'axios';
@@ -121,7 +123,6 @@ const CampaignFinalSettings = ({
     };
 
     const createResourceList = () => {
-        // console.log('setttings', campaignSettings);
         const monsterList = [
             ...campaignSettings.node_nemesis_1,
             ...campaignSettings.node_nemesis_2,
@@ -133,8 +134,6 @@ const CampaignFinalSettings = ({
             campaignSettings.node_core,
             'Basic',
         ];
-        console.log('monster list', monsterList);
-        // return { ...createResourceGroup('Basic') };
         return monsterList
             .filter((monster) => monster && Object.keys(resourceListData).includes(monster))
             .reduce((currentResourceObject, monster) => {
@@ -144,6 +143,29 @@ const CampaignFinalSettings = ({
                           [monster]: createResourceGroup(monster as keyof TypeResourceListData),
                       }
                     : { ...currentResourceObject };
+            }, {});
+    };
+
+    const createGearGroup = (categoryKey: keyof TypeLocationsData) => {
+        return locationsData[categoryKey].gear.reduce((currentLocationObject, gear) => {
+            return {
+                ...currentLocationObject,
+                [gear]: 0,
+            };
+        }, {});
+    };
+
+    const createLocationList = () => {
+        return ['Starting Gear', 'Rare Gear']
+            .filter((location) => location && Object.keys(locationsData).includes(location))
+            .reduce((currentLocationObject, location) => {
+                console.log('location', location);
+                return location
+                    ? {
+                          ...currentLocationObject,
+                          [location]: createGearGroup(location as keyof TypeLocationsData),
+                      }
+                    : { ...currentLocationObject };
             }, {});
     };
 
@@ -161,17 +183,17 @@ const CampaignFinalSettings = ({
             constellations: campaignSettings.constellations,
             arc_survivors: campaignSettings.pillars.includes('Arc Survivors'),
             resources: { ...createResourceList() },
-            gear: {},
+            gear: { ...createLocationList() },
         };
 
         //Save data to database
-        console.log('resources', campaignData.resources);
+        console.log('gear', campaignData.gear);
 
-        executePost({
-            data: campaignData,
-        })
-            .then(() => navigate('/twilight-library/dashboard'))
-            .catch((err) => console.error(err));
+        // executePost({
+        //     data: campaignData,
+        // })
+        //     .then(() => navigate('/twilight-library/dashboard'))
+        //     .catch((err) => console.error(err));
     };
 
     return (
