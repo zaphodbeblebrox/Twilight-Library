@@ -1,4 +1,4 @@
-import { Tabs, Box, Text } from '@radix-ui/themes';
+import { Tabs, Box, Text, Flex } from '@radix-ui/themes';
 import { useNavigate, useParams } from 'react-router-dom';
 import useAxios from 'axios-hooks';
 import { settlementApi } from '../../service/api';
@@ -10,15 +10,32 @@ const CampaignTabs = () => {
     const [{ data, loading, error }, refetch] = useAxios(`${settlementApi}/get/${id}`);
 
     return (
-        <Tabs.Root defaultValue="settlement">
+        <Tabs.Root
+            defaultValue="settlement"
+            style={{ display: 'flex', justifyContent: 'start', flexDirection: 'column', flex: 1, width: '100%' }}
+        >
             <Tabs.List>
-                <Tabs.Trigger value="settlement">Settlement</Tabs.Trigger>
-                <Tabs.Trigger value="timeline">Timeline</Tabs.Trigger>
-                <Tabs.Trigger value="survivors">Survivors</Tabs.Trigger>
-                <Tabs.Trigger value="storage">Storage</Tabs.Trigger>
-                <Tabs.Trigger value="innovations">Innovations</Tabs.Trigger>
-                <Tabs.Trigger value="arc">Arc</Tabs.Trigger>
-                <Tabs.Trigger value="patterns">Patterns</Tabs.Trigger>
+                <Tabs.Trigger style={{ flex: 1 }} value="settlement">
+                    Settlement
+                </Tabs.Trigger>
+                <Tabs.Trigger style={{ flex: 1 }} value="timeline">
+                    Timeline
+                </Tabs.Trigger>
+                <Tabs.Trigger style={{ flex: 1 }} value="survivors">
+                    Survivors
+                </Tabs.Trigger>
+                <Tabs.Trigger style={{ flex: 1 }} value="storage">
+                    Storage
+                </Tabs.Trigger>
+                <Tabs.Trigger style={{ flex: 1 }} value="innovations">
+                    Innovations
+                </Tabs.Trigger>
+                <Tabs.Trigger style={{ flex: 1 }} value="arc">
+                    Arc
+                </Tabs.Trigger>
+                <Tabs.Trigger style={{ flex: 1 }} value="patterns">
+                    Patterns
+                </Tabs.Trigger>
             </Tabs.List>
 
             <Box px="4" pt="3" pb="2">

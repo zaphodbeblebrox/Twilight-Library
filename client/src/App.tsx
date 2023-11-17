@@ -8,7 +8,7 @@ import { Flex } from '@radix-ui/themes';
 function App() {
     return (
         <BrowserRouter>
-            <Flex className="App" direction="column" justify="start" align="start">
+            <Flex className="App" direction="column" justify="start" align="center" style={{ width: '100%' }}>
                 <Routes>
                     <Route path="/" element={<Navigate to="/twilight-library/dashboard" />} />
                     <Route path="/twilight-library/dashboard/*" element={<DashboardRoutes />} />

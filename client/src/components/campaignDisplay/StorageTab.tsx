@@ -11,10 +11,17 @@ interface StorageTabProps {
 
 const StorageTab = ({ campaignData, dbRefetch }: StorageTabProps) => {
     return (
-        <Tabs.Root defaultValue="resources">
+        <Tabs.Root
+            defaultValue="resources"
+            style={{ display: 'flex', justifyContent: 'start', flexDirection: 'column', flex: 1, width: '100%' }}
+        >
             <Tabs.List>
-                <Tabs.Trigger value="resources">Resources</Tabs.Trigger>
-                <Tabs.Trigger value="gear">Gear</Tabs.Trigger>
+                <Tabs.Trigger style={{ flex: 1 }} value="resources">
+                    Resources
+                </Tabs.Trigger>
+                <Tabs.Trigger style={{ flex: 1 }} value="gear">
+                    Gear
+                </Tabs.Trigger>
             </Tabs.List>
 
             <Box px="4" pt="3" pb="2">
