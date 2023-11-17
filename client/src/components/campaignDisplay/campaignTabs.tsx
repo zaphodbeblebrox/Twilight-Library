@@ -11,7 +11,7 @@ const CampaignTabs = () => {
     const navigate = useNavigate();
 
     return (
-        <Flex direction="column">
+        <Flex direction="column" style={{ width: '100%' }}>
             <Button
                 onClick={() => {
                     navigate('/twilight-library/dashboard');
