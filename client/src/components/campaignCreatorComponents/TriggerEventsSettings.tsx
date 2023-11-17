@@ -165,11 +165,11 @@ const CampaignFinalSettings = ({
         //Save data to database
         console.log('resources', campaignData.resources);
 
-        // executePost({
-        //     data: campaignData,
-        // })
-        //     .then(() => navigate('/twilight-library/dashboard'))
-        //     .catch((err) => console.error(err));
+        executePost({
+            data: campaignData,
+        })
+            .then(() => navigate('/twilight-library/dashboard'))
+            .catch((err) => console.error(err));
     };
 
     return (
