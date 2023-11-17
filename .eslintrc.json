@@ -5,8 +5,7 @@
     },
     "extends": [
         "standard",
-        "plugin:react/recommended",
-        "prettier"
+        "plugin:react/recommended"
     ],
     "parserOptions": {
         "ecmaVersion": "latest",
@@ -16,6 +15,5 @@
         "react"
     ],
     "rules": {
-        "indent": "off"
     }
 }
