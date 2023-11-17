@@ -42,14 +42,15 @@ export type TypeServerSettlement = SettlementStrLists &
         constellations: boolean;
     };
 
-export type TypeInitializedSettlement = SettlementMonsterLists & {
-    name: string;
-    timeline: Record<number, string[]>;
-    courage_event_1: string;
-    courage_event_2: string;
-    understanding_event_1: string;
-    understanding_event_2: string;
-    milestones: Record<string, boolean>;
-    arc_survivors?: boolean;
-    constellations?: boolean;
-};
+export type TypeInitializedSettlement = SettlementMonsterLists &
+    SettlementStorageLists & {
+        name: string;
+        timeline: Record<number, string[]>;
+        courage_event_1: string;
+        courage_event_2: string;
+        understanding_event_1: string;
+        understanding_event_2: string;
+        milestones: Record<string, boolean>;
+        arc_survivors?: boolean;
+        constellations?: boolean;
+    };
