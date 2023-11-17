@@ -148,14 +148,12 @@ const CampaignFinalSettings = ({
 
     const createGearGroup = (categoryKey: keyof TypeLocationsData) => {
         console.log('cat key', categoryKey);
-        return locationsData[categoryKey].gear.length === 0
-            ? {}
-            : locationsData[categoryKey].gear.reduce((currentLocationObject, gear) => {
-                  return {
-                      ...currentLocationObject,
-                      [gear]: 0,
-                  };
-              }, {});
+        return locationsData[categoryKey].gear.reduce((currentLocationObject, gear) => {
+            return {
+                ...currentLocationObject,
+                [gear]: 0,
+            };
+        }, {});
     };
 
     const createLocationList = () => {
