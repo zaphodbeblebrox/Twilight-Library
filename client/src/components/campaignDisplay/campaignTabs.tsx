@@ -3,6 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import useAxios from 'axios-hooks';
 import { settlementApi } from '../../service/api';
 import TimelineTab from './TimelineTab';
+import StorageTab from './StorageTab';
 
 const CampaignTabs = () => {
     const { id } = useParams();
@@ -35,7 +36,7 @@ const CampaignTabs = () => {
                 </Tabs.Content>
 
                 <Tabs.Content value="storage">
-                    <Text size="2">storage Info...</Text>
+                    {data && <StorageTab campaignData={data.settlement} dbRefetch={refetch} />}
                 </Tabs.Content>
 
                 <Tabs.Content value="innovations">
