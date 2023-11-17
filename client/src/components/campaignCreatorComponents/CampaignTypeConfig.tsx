@@ -84,6 +84,11 @@ export type TypeCampaignCreatorData = NodeOptionsList &
     };
 
 import rawCampaignCreatorData from '../../static_data/campaign_creator.json';
-const campaignCreatorData: TypeCampaignCreatorData = rawCampaignCreatorData;
+export const campaignCreatorData: TypeCampaignCreatorData = rawCampaignCreatorData;
 
-export default campaignCreatorData;
+//------------------------------------------------------------
+// --- Resource List Json ---
+import rawResourceListData from '../../static_data/resource_list.json';
+export type TypeResourceListData = { [K in keyof typeof rawResourceListData]: string[] };
+
+export const resourceListData: TypeResourceListData = rawResourceListData;

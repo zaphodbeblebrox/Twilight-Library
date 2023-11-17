@@ -1,11 +1,17 @@
 import { Button, Flex, Heading, Separator, Text } from '@radix-ui/themes';
 import { useNavigate } from 'react-router-dom';
 import { TypeInitializedSettlement, TypeServerSettlement } from '../../../../SettlementTypes';
-import { CourageUnderstandingLists, NodePillarLists, TypeCampaignData } from './CampaignTypeConfig';
+import {
+    CourageUnderstandingLists,
+    NodePillarLists,
+    TypeCampaignData,
+    TypeResourceListData,
+    resourceListData,
+    campaignCreatorData,
+} from './CampaignTypeConfig';
 import { TwilightAddEventAlert, TwilightEditTextAlert } from '../primitiveComponents/AlertBoxes';
 import axios from 'axios';
 import { settlementApi } from '../../service/api';
-import campaignCreatorData from './CampaignTypeConfig';
 import useAxios from 'axios-hooks';
 
 interface CampaignFinalSettingsProps {
@@ -105,6 +111,40 @@ const CampaignFinalSettings = ({
         }, {});
     };
 
+    const createResourceGroup = (categoryKey: keyof TypeResourceListData) => {
+        return resourceListData[categoryKey].reduce((currentResourceObject, resource) => {
+            return {
+                ...currentResourceObject,
+                [resource]: 0,
+            };
+        }, {});
+    };
+
+    const createResourceList = () => {
+        // console.log('setttings', campaignSettings);
+        const monsterList = [
+            ...campaignSettings.node_nemesis_1,
+            ...campaignSettings.node_nemesis_2,
+            ...campaignSettings.node_nemesis_3,
+            ...campaignSettings.node_quarry_1,
+            ...campaignSettings.node_quarry_2,
+            ...campaignSettings.node_quarry_3,
+            ...campaignSettings.node_quarry_4,
+            campaignSettings.node_core,
+            'Basic',
+        ];
+        console.log('monster list', monsterList);
+        // return { ...createResourceGroup('Basic') };
+        return monsterList
+            .filter((monster) => Object.keys(resourceListData).includes(monster!))
+            .reduce((currentResourceObject, monster) => {
+                return {
+                    ...currentResourceObject,
+                    [monster!]: createResourceGroup(monster as keyof TypeResourceListData),
+                };
+            }, {});
+    };
+
     const handleSaveCampaignOnServer = () => {
         const campaignData: TypeInitializedSettlement = {
             name: settlementName,
@@ -118,16 +158,18 @@ const CampaignFinalSettings = ({
             nemesis: { ...setNemesis(), [campaignSettings.node_core as keyof NodePillarLists]: { 1: false } },
             constellations: campaignSettings.constellations,
             arc_survivors: campaignSettings.pillars.includes('Arc Survivors'),
+            resources: { ...createResourceList() },
+            gear: {},
         };
 
         //Save data to database
-        console.log(campaignData);
+        console.log('resources', campaignData.resources);
 
-        executePost({
-            data: campaignData,
-        })
-            .then(() => navigate('/twilight-library/dashboard'))
-            .catch((err) => console.error(err));
+        // executePost({
+        //     data: campaignData,
+        // })
+        //     .then(() => navigate('/twilight-library/dashboard'))
+        //     .catch((err) => console.error(err));
     };
 
     return (
