@@ -371,6 +371,10 @@
         ],
         "endeavour": {}
     },
+    "Rare Gear": {
+        "gear": [],
+        "endeavour": {}
+    },
     "Sacred Pool": {
         "gear": ["Sun Vestments", "Sunring Bow", "Apostle Crown", "Prism Mace"],
         "endeavour": {
@@ -446,6 +450,10 @@
             "Sky Harpoon",
             "Ink Blood Bow"
         ],
+        "endeavour": {}
+    },
+    "Starting Gear": {
+        "gear": ["Cloth", "Bloody Cloth", "Founding Stone"],
         "endeavour": {}
     },
     "Stone Circle": {

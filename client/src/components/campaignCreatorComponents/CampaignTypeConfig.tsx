@@ -1,3 +1,8 @@
+// --- Imports ---
+import rawLocationsData from '../../static_data/locations.json';
+import rawCampaignCreatorData from '../../static_data/campaign_creator.json';
+import rawResourceListData from '../../static_data/resource_list.json';
+
 // --- Preset campaign Json ---
 export type NodePillarLists = {
     node_quarry_1: string[];
@@ -50,7 +55,6 @@ export type TypeCampaignData = NodePillarLists &
 
 //------------------------------------------------------------
 // --- Campaign Creator Json ---
-
 export type NodeOptionsList = {
     node_quarry_1: string[];
     node_quarry_2: string[];
@@ -83,12 +87,22 @@ export type TypeCampaignCreatorData = NodeOptionsList &
         timeline: TimelineOptionList;
     };
 
-import rawCampaignCreatorData from '../../static_data/campaign_creator.json';
 export const campaignCreatorData: TypeCampaignCreatorData = rawCampaignCreatorData;
 
 //------------------------------------------------------------
 // --- Resource List Json ---
-import rawResourceListData from '../../static_data/resource_list.json';
 export type TypeResourceListData = { [K in keyof typeof rawResourceListData]: string[] };
-
 export const resourceListData: TypeResourceListData = rawResourceListData;
+
+//------------------------------------------------------------
+// --- Locations Json ---
+export type TypeLocationEndeavour = {
+    cost: string;
+    effect: string;
+};
+export type TypeLocationFormat = {
+    gear: string[];
+    endeavour: Record<string, TypeLocationEndeavour>;
+};
+export type TypeLocationsData = { [K in keyof typeof rawLocationsData]: TypeLocationFormat };
+export const locationsData: TypeLocationsData = rawLocationsData;
