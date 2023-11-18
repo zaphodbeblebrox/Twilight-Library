@@ -184,7 +184,7 @@ const TwilightEditCountAlert = ({ labelText, count, onSubmit }: TwilightEditCoun
                 <Flex direction="column" justify="center" align="center" gap="3">
                     <Button onClick={() => setCurrentCount(currentCount + 1)}>+</Button>
                     <Text size="2">{currentCount}</Text>
-                    <Button onClick={() => setCurrentCount(currentCount - 1)}>-</Button>
+                    <Button onClick={() => (currentCount > 0 ? setCurrentCount(currentCount - 1) : null)}>-</Button>
                 </Flex>
                 <AlertDialog.Action>
                     <Button onClick={() => onSubmit(currentCount)} variant="solid" color="green">
