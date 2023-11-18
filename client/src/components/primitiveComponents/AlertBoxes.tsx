@@ -1,5 +1,5 @@
 import * as Label from '@radix-ui/react-label';
-import { AlertDialog, Button, Flex, TextField } from '@radix-ui/themes';
+import { AlertDialog, Button, Flex, Text, TextField } from '@radix-ui/themes';
 import { useState } from 'react';
 import { TwilightSelect } from './Primitives';
 
@@ -163,4 +163,37 @@ const TwilightEditTimelineAlert = ({
     );
 };
 
-export { TwilightAddEventAlert, TwilightEditTimelineAlert, TwilightEditTextAlert };
+interface TwilightEditCountAlertProps {
+    labelText: string;
+    count: number;
+    onSubmit: (newValue: number) => void;
+}
+
+const TwilightEditCountAlert = ({ labelText, count, onSubmit }: TwilightEditCountAlertProps) => {
+    const [currentCount, setCurrentCount] = useState(count);
+
+    return (
+        <AlertDialog.Root>
+            <AlertDialog.Trigger>
+                <Button variant="ghost">
+                    {labelText} : {count}
+                </Button>
+            </AlertDialog.Trigger>
+            <AlertDialog.Content style={{ maxWidth: 450 }}>
+                <AlertDialog.Title>{labelText}</AlertDialog.Title>
+                <Flex direction="column" justify="center" align="center" gap="3">
+                    <Button onClick={() => setCurrentCount(currentCount + 1)}>+</Button>
+                    <Text size="2">{currentCount}</Text>
+                    <Button onClick={() => setCurrentCount(currentCount - 1)}>-</Button>
+                </Flex>
+                <AlertDialog.Action>
+                    <Button onClick={() => onSubmit(currentCount)} variant="solid" color="green">
+                        Update
+                    </Button>
+                </AlertDialog.Action>
+            </AlertDialog.Content>
+        </AlertDialog.Root>
+    );
+};
+
+export { TwilightAddEventAlert, TwilightEditTimelineAlert, TwilightEditTextAlert, TwilightEditCountAlert };
