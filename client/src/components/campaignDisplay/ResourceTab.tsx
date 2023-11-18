@@ -16,13 +16,13 @@ const ResourceTab = ({ campaignData, dbRefetch }: ResourceTabProps) => {
                 .sort()
                 .map((resourceCategory, idx) => {
                     return (
-                        <Flex key={idx} direction="column">
+                        <Flex key={idx} direction="column" gap="1" justify="start" align="center">
                             <h3>{resourceCategory}</h3>
                             {Object.keys(campaignData.resources[resourceCategory])
                                 .sort()
                                 .map((resource, idy) => {
                                     return (
-                                        <Flex key={idy} direction="row">
+                                        <Flex key={idy} direction="row" justify="end">
                                             <p>{resource}:</p>
                                             <p>{campaignData.resources[resourceCategory][resource]}</p>
                                         </Flex>
