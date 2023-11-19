@@ -182,9 +182,12 @@ const TwilightEditCountDialog = ({ labelText, count, onSubmit }: TwilightEditCou
 
             <Dialog.Content className="DialogContent">
                 <Dialog.Title className="DialogTitle">{labelText}</Dialog.Title>
-                {/* <Dialog.Description className="DialogDescription">
+                {
+                    // TODO: Remove the commented code once above components are updated.
+                    /* <Dialog.Description className="DialogDescription">
                     Make changes to your profile here. Click save when you're done.
-                </Dialog.Description> */}
+                </Dialog.Description> */
+                }
                 <Flex direction="column" justify="center" align="center" gap="3">
                     <Button onClick={() => setCurrentCount(currentCount + 1)}>+</Button>
                     <Text size="2">{currentCount}</Text>
