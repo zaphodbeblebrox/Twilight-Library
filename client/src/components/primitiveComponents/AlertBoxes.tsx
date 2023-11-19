@@ -10,7 +10,7 @@ interface TwilightEditTextAlertProps {
     onSubmit: (newValue: string, objectKey?: string) => void;
     onDelete?: () => void;
 }
-
+// TODO: Change to use Dialog Box instead of Alert Box
 const TwilightEditTextAlert = ({ labelText, textInput, objectKey, onSubmit, onDelete }: TwilightEditTextAlertProps) => {
     const [displayedText, setDisplayedText] = useState(textInput);
 
@@ -61,7 +61,7 @@ interface TwilightAddTimelineAlertProps {
     label: string;
     onSubmit: (newValue: string) => void;
 }
-
+// TODO: Change to use Dialog Box instead of Alert Box
 const TwilightAddEventAlert = ({ buttonText, title, label, onSubmit }: TwilightAddTimelineAlertProps) => {
     const [storyEvent, setStoryEvent] = useState('');
 
@@ -108,7 +108,7 @@ interface TwilightEditTimelineAlertProps {
     moveEvent: (year: number, newYear: number, entry: string) => void;
     deleteEvent: (year: number, entry: string) => void;
 }
-
+// TODO: Change to use Dialog Box instead of Alert Box
 const TwilightEditTimelineAlert = ({
     year,
     maxYears,
@@ -162,12 +162,6 @@ const TwilightEditTimelineAlert = ({
         </AlertDialog.Root>
     );
 };
-
-interface TwilightEditCountDialogProps {
-    labelText: string;
-    count: number;
-    onSubmit: (newValue: number) => void;
-}
 
 interface TwilightEditCountDialogProps {
     labelText: string;
