@@ -1,5 +1,5 @@
 import * as Label from '@radix-ui/react-label';
-import { AlertDialog, Button, Flex, Text, TextField } from '@radix-ui/themes';
+import { AlertDialog, Button, Dialog, Flex, Text, TextField } from '@radix-ui/themes';
 import { useState } from 'react';
 import { TwilightSelect } from './Primitives';
 
@@ -163,37 +163,47 @@ const TwilightEditTimelineAlert = ({
     );
 };
 
-interface TwilightEditCountAlertProps {
+interface TwilightEditCountDialogProps {
     labelText: string;
     count: number;
     onSubmit: (newValue: number) => void;
 }
 
-const TwilightEditCountAlert = ({ labelText, count, onSubmit }: TwilightEditCountAlertProps) => {
+interface TwilightEditCountDialogProps {
+    labelText: string;
+    count: number;
+    onSubmit: (newValue: number) => void;
+}
+
+const TwilightEditCountDialog = ({ labelText, count, onSubmit }: TwilightEditCountDialogProps) => {
     const [currentCount, setCurrentCount] = useState(count);
 
     return (
-        <AlertDialog.Root>
-            <AlertDialog.Trigger>
+        <Dialog.Root>
+            <Dialog.Trigger>
                 <Button variant="ghost">
                     {labelText} : {count}
                 </Button>
-            </AlertDialog.Trigger>
-            <AlertDialog.Content style={{ maxWidth: 450 }}>
-                <AlertDialog.Title>{labelText}</AlertDialog.Title>
+            </Dialog.Trigger>
+
+            <Dialog.Content className="DialogContent">
+                <Dialog.Title className="DialogTitle">{labelText}</Dialog.Title>
+                {/* <Dialog.Description className="DialogDescription">
+                    Make changes to your profile here. Click save when you're done.
+                </Dialog.Description> */}
                 <Flex direction="column" justify="center" align="center" gap="3">
                     <Button onClick={() => setCurrentCount(currentCount + 1)}>+</Button>
                     <Text size="2">{currentCount}</Text>
                     <Button onClick={() => (currentCount > 0 ? setCurrentCount(currentCount - 1) : null)}>-</Button>
                 </Flex>
-                <AlertDialog.Action>
+                <Dialog.Close>
                     <Button onClick={() => onSubmit(currentCount)} variant="solid" color="green">
                         Update
                     </Button>
-                </AlertDialog.Action>
-            </AlertDialog.Content>
-        </AlertDialog.Root>
+                </Dialog.Close>
+            </Dialog.Content>
+        </Dialog.Root>
     );
 };
 
-export { TwilightAddEventAlert, TwilightEditTimelineAlert, TwilightEditTextAlert, TwilightEditCountAlert };
+export { TwilightAddEventAlert, TwilightEditTimelineAlert, TwilightEditTextAlert, TwilightEditCountDialog };

@@ -3,7 +3,7 @@ import useAxios, { RefetchFunction } from 'axios-hooks';
 import { SettlementStorageLists, TypeServerSettlement } from '../../../../SettlementTypes';
 import { settlementApi } from '../../service/api';
 import TimelineTable from '../primitiveComponents/TimelineTable';
-import { TwilightEditCountAlert } from '../primitiveComponents/AlertBoxes';
+import { TwilightEditCountDialog } from '../primitiveComponents/AlertBoxes';
 import { TwilightNodeHeader } from '../primitiveComponents/Primitives';
 
 interface ResourceTabProps {
@@ -41,7 +41,7 @@ const ResourceTab = ({ campaignData, dbRefetch }: ResourceTabProps) => {
                                             .catch((err) => console.error(err));
                                     };
                                     return (
-                                        <TwilightEditCountAlert
+                                        <TwilightEditCountDialog
                                             key={idy}
                                             labelText={resource}
                                             count={campaignData.resources[resourceCategory][resource]}
