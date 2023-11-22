@@ -24,7 +24,7 @@ export type SettlementMonsterLists = {
 };
 
 export type SettlementStorageLists = {
-    resources: Record<string, Record<string, number>>;
+    gear: Record<string, Record<string, number>>;
     gear: Record<string, Record<string, number>>;
 };
 

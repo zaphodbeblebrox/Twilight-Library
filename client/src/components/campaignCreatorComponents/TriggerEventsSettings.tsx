@@ -183,7 +183,7 @@ const CampaignFinalSettings = ({
             nemesis: { ...setNemesis(), [campaignSettings.node_core as keyof NodePillarLists]: { 1: false } },
             constellations: campaignSettings.constellations,
             arc_survivors: campaignSettings.pillars.includes('Arc Survivors'),
-            resources: { ...createResourceList() },
+            gear: { ...createResourceList() },
             gear: { ...createLocationList() },
         };
 
