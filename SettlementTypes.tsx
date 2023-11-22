@@ -30,6 +30,7 @@ export type SettlementStorageLists = {
 
 export type TypeServerSettlement = SettlementStrLists &
     SettlementStrArrayLists &
+    SettlementStorageLists &
     SettlementMonsterLists & {
         _id: string;
         survival_limit: number;

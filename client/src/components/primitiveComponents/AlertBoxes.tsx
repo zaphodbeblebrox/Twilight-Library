@@ -1,5 +1,5 @@
 import * as Label from '@radix-ui/react-label';
-import { AlertDialog, Button, Flex, TextField } from '@radix-ui/themes';
+import { AlertDialog, Button, Dialog, Flex, Text, TextField } from '@radix-ui/themes';
 import { useState } from 'react';
 import { TwilightSelect } from './Primitives';
 
@@ -10,7 +10,7 @@ interface TwilightEditTextAlertProps {
     onSubmit: (newValue: string, objectKey?: string) => void;
     onDelete?: () => void;
 }
-
+// TODO: Change to use Dialog Box instead of Alert Box
 const TwilightEditTextAlert = ({ labelText, textInput, objectKey, onSubmit, onDelete }: TwilightEditTextAlertProps) => {
     const [displayedText, setDisplayedText] = useState(textInput);
 
@@ -61,7 +61,7 @@ interface TwilightAddTimelineAlertProps {
     label: string;
     onSubmit: (newValue: string) => void;
 }
-
+// TODO: Change to use Dialog Box instead of Alert Box
 const TwilightAddEventAlert = ({ buttonText, title, label, onSubmit }: TwilightAddTimelineAlertProps) => {
     const [storyEvent, setStoryEvent] = useState('');
 
@@ -108,7 +108,7 @@ interface TwilightEditTimelineAlertProps {
     moveEvent: (year: number, newYear: number, entry: string) => void;
     deleteEvent: (year: number, entry: string) => void;
 }
-
+// TODO: Change to use Dialog Box instead of Alert Box
 const TwilightEditTimelineAlert = ({
     year,
     maxYears,
@@ -163,4 +163,44 @@ const TwilightEditTimelineAlert = ({
     );
 };
 
-export { TwilightAddEventAlert, TwilightEditTimelineAlert, TwilightEditTextAlert };
+interface TwilightEditCountDialogProps {
+    labelText: string;
+    count: number;
+    onSubmit: (newValue: number) => void;
+}
+
+const TwilightEditCountDialog = ({ labelText, count, onSubmit }: TwilightEditCountDialogProps) => {
+    const [currentCount, setCurrentCount] = useState(count);
+
+    return (
+        <Dialog.Root onOpenChange={() => setCurrentCount(count)}>
+            <Dialog.Trigger>
+                <Button variant="ghost">
+                    {labelText} : {count}
+                </Button>
+            </Dialog.Trigger>
+
+            <Dialog.Content className="DialogContent">
+                <Dialog.Title className="DialogTitle">{labelText}</Dialog.Title>
+                {
+                    // TODO: Remove the commented code once above components are updated.
+                    /* <Dialog.Description className="DialogDescription">
+                    Make changes to your profile here. Click save when you're done.
+                </Dialog.Description> */
+                }
+                <Flex direction="column" justify="center" align="center" gap="3">
+                    <Button onClick={() => setCurrentCount((newCount) => newCount + 1)}>+</Button>
+                    <Text size="2">{currentCount}</Text>
+                    <Button onClick={() => currentCount > 0 && setCurrentCount((newCount) => newCount - 1)}>-</Button>
+                </Flex>
+                <Dialog.Close>
+                    <Button onClick={() => onSubmit(currentCount)} variant="solid" color="green">
+                        Update
+                    </Button>
+                </Dialog.Close>
+            </Dialog.Content>
+        </Dialog.Root>
+    );
+};
+
+export { TwilightAddEventAlert, TwilightEditTimelineAlert, TwilightEditTextAlert, TwilightEditCountDialog };
