@@ -173,7 +173,7 @@ const TwilightEditCountDialog = ({ labelText, count, onSubmit }: TwilightEditCou
     const [currentCount, setCurrentCount] = useState(count);
 
     return (
-        <Dialog.Root>
+        <Dialog.Root onOpenChange={() => setCurrentCount(count)}>
             <Dialog.Trigger>
                 <Button variant="ghost">
                     {labelText} : {count}
@@ -189,9 +189,9 @@ const TwilightEditCountDialog = ({ labelText, count, onSubmit }: TwilightEditCou
                 </Dialog.Description> */
                 }
                 <Flex direction="column" justify="center" align="center" gap="3">
-                    <Button onClick={() => setCurrentCount(currentCount + 1)}>+</Button>
+                    <Button onClick={() => setCurrentCount((newCount) => newCount + 1)}>+</Button>
                     <Text size="2">{currentCount}</Text>
-                    <Button onClick={() => (currentCount > 0 ? setCurrentCount(currentCount - 1) : null)}>-</Button>
+                    <Button onClick={() => currentCount > 0 && setCurrentCount((newCount) => newCount - 1)}>-</Button>
                 </Flex>
                 <Dialog.Close>
                     <Button onClick={() => onSubmit(currentCount)} variant="solid" color="green">
