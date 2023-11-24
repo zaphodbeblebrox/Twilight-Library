@@ -9,7 +9,7 @@ import {
     TimelineOptionList,
     TypeCampaignCreatorData,
     TypeCampaignData,
-} from '../jsonFileConfigs/CampaignTypeConfig';
+} from '../static_data_file_configs/CampaignTypeConfig';
 import presetCampaignData from '../../static_data/preset_campaigns.json';
 import campaignOptionsData from '../../static_data/campaign_creator.json';
 

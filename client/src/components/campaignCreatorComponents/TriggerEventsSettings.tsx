@@ -10,7 +10,7 @@ import {
     campaignCreatorData,
     TypeLocationsData,
     locationsData,
-} from '../jsonFileConfigs/CampaignTypeConfig';
+} from '../static_data_file_configs/CampaignTypeConfig';
 import { TwilightAddEventAlert, TwilightEditTextAlert } from '../primitiveComponents/AlertBoxes';
 import axios from 'axios';
 import { settlementApi } from '../../service/api';

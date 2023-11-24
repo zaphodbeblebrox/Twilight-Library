@@ -4,7 +4,7 @@ import { Button, Flex, Heading, Separator } from '@radix-ui/themes';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import TimelineTable from '../primitiveComponents/TimelineTable';
-import { TypeCampaignData } from '../jsonFileConfigs/CampaignTypeConfig';
+import { TypeCampaignData } from '../static_data_file_configs/CampaignTypeConfig';
 
 interface TimelineCreatorProps {
     campaignSettings: TypeCampaignData;

@@ -1,6 +1,6 @@
 import { Flex, Heading } from '@radix-ui/themes';
 import { TwilightNodeHeader, TwilightRadioGroupItem } from '../primitiveComponents/Primitives';
-import { NodeCoreFinaleLists, TypeCampaignData } from '../jsonFileConfigs/CampaignTypeConfig';
+import { NodeCoreFinaleLists, TypeCampaignData } from '../static_data_file_configs/CampaignTypeConfig';
 import campaignOptionsData from '../../static_data/campaign_creator.json';
 
 interface RadioButtonListCampaignCreatorProps {
