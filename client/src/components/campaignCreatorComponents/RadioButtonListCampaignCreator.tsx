@@ -1,7 +1,7 @@
 import { Flex, Heading } from '@radix-ui/themes';
 import { TwilightNodeHeader, TwilightRadioGroupItem } from '../primitiveComponents/Primitives';
-import { NodeCoreFinaleLists, TypeCampaignData } from '../static_data_file_configs/CampaignTypeConfig';
-import campaignOptionsData from '../../static_data/campaign_creator.json';
+import { campaignCreatorData } from '../static_data_file_configs/CampaignCreatorConfig';
+import { NodeCoreFinaleLists, TypeCampaignData } from '../static_data_file_configs/presetCampaignConfig';
 
 interface RadioButtonListCampaignCreatorProps {
     header: string;
@@ -14,7 +14,7 @@ const RadioButtonListCampaignCreator = ({ header, optionKey, data, setData }: Ra
     const handleUpdateData = (value: string) => {
         setData({ ...data, [optionKey]: value === 'None' ? null : value });
     };
-    const radioOptions = [...campaignOptionsData[optionKey]];
+    const radioOptions = [...campaignCreatorData[optionKey]];
 
     return (
         <div>
