@@ -39,14 +39,18 @@ export type CourageUnderstandingLists = {
     understanding_event_2: string;
 };
 
+export type TimelineLists = {
+    timeline: Record<string, string[]>;
+    default_timeline: Record<string, string[]>;
+};
+
 export type TypeCampaignData = NodePillarLists &
     NemesisFightYearLists &
     CourageUnderstandingLists &
-    NodeCoreFinaleLists & {
+    NodeCoreFinaleLists &
+    TimelineLists & {
         milestones: string[];
         flexible_nemesis_encounters: boolean;
-        timeline: Record<string, string[]>;
-        default_timeline: Record<string, string[]>;
         constellations: boolean;
     };
 
