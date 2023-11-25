@@ -3,8 +3,8 @@ import CampaignCreator from './CampaignCreator';
 import TimelineCreator from './TimelineCreator';
 import presetCampaignData from '../../static_data/preset_campaigns.json';
 import { useState } from 'react';
-import { TypeCampaignData } from '../static_data_file_configs/CampaignTypeConfig';
 import CampaignFinalSettings from './TriggerEventsSettings';
+import { TypeCampaignData } from '../static_data_file_configs/presetCampaignConfig';
 
 function CampaignCreatorRoutes() {
     const intializeDefaultCampaign = () => {
