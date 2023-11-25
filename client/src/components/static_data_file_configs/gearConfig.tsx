@@ -10,18 +10,18 @@ export type TypeAffinities = {
 };
 
 export type TypeStats = {
-    armor?: number;
-    location?: string;
-    speed?: number | string;
-    accuracy?: number;
-    strength?: number | string;
+    armor: number;
+    location: string;
+    speed: number | string;
+    accuracy: number;
+    strength: number | string;
 };
 
 export type TypeGearData = {
     types: string[];
     location: string;
     crafting: string;
-    stats: TypeStats;
+    stats: Partial<TypeStats>;
     affinities: Record<keyof TypeAffinities, string>;
     abilities: string[];
 };
