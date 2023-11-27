@@ -8,7 +8,7 @@ interface TwilightSearchPopup {
     buttonText: string;
     labelText: string;
     options: string[];
-    onSubmit: (selectedValue: number) => void;
+    onSubmit: (selectedValue: string) => void;
 }
 
 const TwilightSearchPopup = ({ buttonText, labelText, options, onSubmit }: TwilightSearchPopup) => {
@@ -25,7 +25,12 @@ const TwilightSearchPopup = ({ buttonText, labelText, options, onSubmit }: Twili
     // useEffect(() => console.log(results), [results]);
 
     return (
-        <Dialog.Root onOpenChange={() => setSearchTerm('')}>
+        <Dialog.Root
+            onOpenChange={() => {
+                setSearchTerm('');
+                setResults([]);
+            }}
+        >
             <Dialog.Trigger>
                 <Button>{buttonText}</Button>
             </Dialog.Trigger>
@@ -53,7 +58,7 @@ const TwilightSearchPopup = ({ buttonText, labelText, options, onSubmit }: Twili
                     {results.map((itemOption, idx) => {
                         return (
                             <Dialog.Close key={idx}>
-                                <Button>{itemOption}</Button>
+                                <Button onClick={() => onSubmit(results[idx])}>{itemOption}</Button>
                             </Dialog.Close>
                         );
                     })}
