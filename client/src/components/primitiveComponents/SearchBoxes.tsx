@@ -12,16 +12,17 @@ interface TwilightSearchPopup {
 }
 
 const TwilightSearchPopup = ({ buttonText, labelText, options, onSubmit }: TwilightSearchPopup) => {
+    // TODO: Make this popup window a static size
     const [searchTerm, setSearchTerm] = useState('');
-    const [results, setResults] = useState<{}[]>([]);
+    const [results, setResults] = useState<string[]>([]);
 
     const settings = {
         includeScore: true,
-        threshold: 0.2,
+        threshold: 0.1,
     };
 
     const fuse = useMemo(() => new Fuse(options, settings), []);
-    useEffect(() => console.log(results), [results]);
+    // useEffect(() => console.log(results), [results]);
 
     return (
         <Dialog.Root onOpenChange={() => setSearchTerm('')}>
@@ -43,45 +44,24 @@ const TwilightSearchPopup = ({ buttonText, labelText, options, onSubmit }: Twili
                             setResults(
                                 fuse
                                     .search(nextSearchTerm)
-                                    .slice(0, 8)
-                                    .map((searchResult) => searchResult.item),
+                                    .slice(0, 8) //Sets number of displayed results
+                                    .map((searchResult) => searchResult.item)
+                                    .sort(),
                             );
                         }}
                     />
-                    {/* {results.map((role) => (
-                        <Dialog.Close key={role.id}>
-                            <button
-                                onClick={async () => {
-                                    if (!script.find((r) => r.id === role.id)) {
-                                        await setScript([...script, { id: role.id as Role }]);
-                                    }
-                                    if (!characterSelectState.selectedRoles.value[role.id]) {
-                                        characterSelectState.selectedRoles.set((selectedRoles) => ({
-                                            ...selectedRoles,
-                                            [role.id]: 1,
-                                        }));
-                                    }
-                                }}
-                            >
-                                <Flex justify="between" align="center">
-                                    <Flex gap="2" align="center">
-                                        <RoleIcon role={role.id} className="h-[60px]" />
-                                        <Text size="5" autoCapitalize="true">
-                                            {RoleName(role.id)}
-                                        </Text>
-                                    </Flex>
-                                    <Text size="5" autoCapitalize="true">
-                                        {role.team}
-                                    </Text>
-                                </Flex>
-                            </button>
-                        </Dialog.Close>
-                    ))} */}
+                    {results.map((itemOption, idx) => {
+                        return (
+                            <Dialog.Close key={idx}>
+                                <Button>{itemOption}</Button>
+                            </Dialog.Close>
+                        );
+                    })}
                 </Flex>
 
                 <Dialog.Close>
-                    <Button variant="solid" color="green">
-                        Add
+                    <Button variant="solid" color="red">
+                        Cancel
                     </Button>
                 </Dialog.Close>
             </Dialog.Content>
