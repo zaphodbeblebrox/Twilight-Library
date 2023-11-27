@@ -38,6 +38,7 @@ const GearTab = ({ campaignData, dbRefetch }: GearTabProps) => {
                         updatedGear[newGearLocation] = { ...updatedGear[newGearLocation], [gearToAdd]: 0 };
                     } else {
                         // TODO: Return popup message "Already in inventory under ____ Location."
+                        return;
                     }
                     executePatch({
                         data: { gear: updatedGear },
