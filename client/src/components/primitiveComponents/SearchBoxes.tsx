@@ -41,8 +41,10 @@ const TwilightSearchPopup = ({ buttonText, labelText, options, onSubmit }: Twili
                             const nextSearchTerm = e.currentTarget.value;
                             setSearchTerm(nextSearchTerm);
                             setResults(
-                                fuse.search(nextSearchTerm),
-                                // .map(({ item }) => getCharacter(item.id as Role)),
+                                fuse
+                                    .search(nextSearchTerm)
+                                    .slice(0, 8)
+                                    .map((searchResult) => searchResult.item),
                             );
                         }}
                     />
