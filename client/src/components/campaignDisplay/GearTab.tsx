@@ -6,6 +6,7 @@ import { TwilightEditCountDialog } from '../primitiveComponents/AlertBoxes';
 import { TwilightNodeHeader } from '../primitiveComponents/Primitives';
 import { TwilightSearchPopup } from '../primitiveComponents/SearchBoxes';
 import { GearKeys, gearData } from '../static_data_file_configs/gearConfig';
+import { useMemo } from 'react';
 
 interface GearTabProps {
     campaignData: TypeServerSettlement;
@@ -13,6 +14,8 @@ interface GearTabProps {
 }
 
 const GearTab = ({ campaignData, dbRefetch }: GearTabProps) => {
+    const gearDataMemo = useMemo(() => Object.keys(gearData), []);
+
     const [{ data: patchData, loading: patchLoading, error: patchError }, executePatch] = useAxios(
         {
             url: `${settlementApi}/update/${campaignData._id}`,
@@ -27,14 +30,14 @@ const GearTab = ({ campaignData, dbRefetch }: GearTabProps) => {
             <TwilightSearchPopup
                 buttonText="Add Gear"
                 labelText="Search Gear"
-                options={Object.keys(gearData)}
+                options={gearDataMemo}
                 onSubmit={(gearToAdd) => {
                     console.log(gearToAdd);
                     const newGearLocation = gearData[gearToAdd as keyof GearKeys].location;
                     const updatedGear = { ...campaignData.gear };
                     if (!campaignData.gear[newGearLocation]) {
                         updatedGear[newGearLocation] = { [gearToAdd]: 0 };
-                    } else if (campaignData.gear[newGearLocation] && !campaignData.gear[newGearLocation][gearToAdd]) {
+                    } else if (!campaignData.gear[newGearLocation][gearToAdd]) {
                         updatedGear[newGearLocation] = { ...updatedGear[newGearLocation], [gearToAdd]: 0 };
                     } else {
                         // TODO: Return popup message "Already in inventory under ____ Location."

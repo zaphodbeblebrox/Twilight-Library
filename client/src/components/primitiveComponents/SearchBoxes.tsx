@@ -21,7 +21,7 @@ const TwilightSearchPopup = ({ buttonText, labelText, options, onSubmit }: Twili
         threshold: 0.1,
     };
 
-    const fuse = useMemo(() => new Fuse(options, settings), []);
+    const fuse = useMemo(() => new Fuse(options, settings), [options]);
     // useEffect(() => console.log(results), [results]);
 
     return (
@@ -41,7 +41,7 @@ const TwilightSearchPopup = ({ buttonText, labelText, options, onSubmit }: Twili
                 <Dialog.Description className="DialogDescription">Search:</Dialog.Description>
                 <Flex direction="column" gap="3">
                     <TextField.Input
-                        placeholder="Find gear..."
+                        placeholder="Find..."
                         value={searchTerm}
                         onChange={(e) => {
                             const nextSearchTerm = e.currentTarget.value;
