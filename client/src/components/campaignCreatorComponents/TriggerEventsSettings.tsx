@@ -1,20 +1,17 @@
 import { Button, Flex, Heading, Separator, Text } from '@radix-ui/themes';
 import { useNavigate } from 'react-router-dom';
 import { TypeInitializedSettlement, TypeServerSettlement } from '../../../../SettlementTypes';
+import { TwilightAddEventAlert, TwilightEditTextAlert } from '../primitiveComponents/AlertBoxes';
+import { settlementApi } from '../../service/api';
+import useAxios from 'axios-hooks';
 import {
     CourageUnderstandingLists,
     NodePillarLists,
     TypeCampaignData,
-    TypeResourceListData,
-    resourceListData,
-    campaignCreatorData,
-    TypeLocationsData,
-    locationsData,
-} from './CampaignTypeConfig';
-import { TwilightAddEventAlert, TwilightEditTextAlert } from '../primitiveComponents/AlertBoxes';
-import axios from 'axios';
-import { settlementApi } from '../../service/api';
-import useAxios from 'axios-hooks';
+} from '../static_data_file_configs/presetCampaignConfig';
+import { campaignCreatorData } from '../static_data_file_configs/CampaignCreatorConfig';
+import { TypeResourceListData, resourceListData } from '../static_data_file_configs/ResourceListConfig';
+import { TypeLocationsData, locationsData } from '../static_data_file_configs/LocationsConfig';
 
 interface CampaignFinalSettingsProps {
     settlementName: string;
@@ -183,7 +180,7 @@ const CampaignFinalSettings = ({
             nemesis: { ...setNemesis(), [campaignSettings.node_core as keyof NodePillarLists]: { 1: false } },
             constellations: campaignSettings.constellations,
             arc_survivors: campaignSettings.pillars.includes('Arc Survivors'),
-            gear: { ...createResourceList() },
+            resources: { ...createResourceList() },
             gear: { ...createLocationList() },
         };
 
