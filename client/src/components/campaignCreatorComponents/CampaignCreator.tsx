@@ -3,15 +3,13 @@ import RadioButtonListCampaignCreator from './RadioButtonListCampaignCreator';
 import { Button, Heading, Flex, Separator } from '@radix-ui/themes';
 import { TwilightSelect, TwilightTextField } from '../primitiveComponents/Primitives';
 import { useNavigate } from 'react-router-dom';
+import { TimelineOptionList, campaignCreatorData } from '../static_data_file_configs/CampaignCreatorConfig';
 import {
     NemesisFightYearLists,
     NodePillarLists,
-    TimelineOptionList,
-    TypeCampaignCreatorData,
     TypeCampaignData,
-} from './CampaignTypeConfig';
-import presetCampaignData from '../../static_data/preset_campaigns.json';
-import campaignOptionsData from '../../static_data/campaign_creator.json';
+    presetCampaignData,
+} from '../static_data_file_configs/presetCampaignConfig';
 
 interface CampaignCreatorProps {
     settlementName: string;
@@ -60,7 +58,7 @@ const CampaignCreator = ({
             });
         } else {
             selectedCampaign[nodeKey].forEach((selection: string) => {
-                const query: Record<string, Record<string, string[]>> = campaignOptionsData.timeline[typeKey];
+                const query: Record<string, Record<string, string[]>> = campaignCreatorData.timeline[typeKey];
                 if (query.hasOwnProperty(selection)) {
                     Object.keys(query[selection]).forEach((yearKey: string) => {
                         query[selection][Number(yearKey)].forEach((yearData: string) => {

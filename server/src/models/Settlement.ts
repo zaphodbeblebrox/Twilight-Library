@@ -49,35 +49,37 @@ const SettlementSchema: Schema = new Schema(
         },
         resources: {
             type: Object,
-            required: false,
+            required: true,
             default: {},
-            validate: {
-                validator: (value: String) => {
-                    for (const key in value) {
-                        if (typeof value[key] !== 'number') {
-                            return false;
-                        }
-                    }
-                    return true;
-                },
-                message: 'Resources is strictly an Record<string, number>!!!',
-            },
+            // TODO: Add proper validation
+            // validate: {
+            //     validator: (value: String) => {
+            //         for (const key in value) {
+            //             if (typeof value[key] !== 'number') {
+            //                 return false;
+            //             }
+            //         }
+            //         return true;
+            //     },
+            //     message: 'Resources is strictly an Record<string, number>!!!',
+            // },
         },
         gear: {
             type: Object,
-            required: false,
+            required: true,
             default: {},
-            validate: {
-                validator: (value: String) => {
-                    for (const key in value) {
-                        if (typeof value[key] !== 'number') {
-                            return false;
-                        }
-                    }
-                    return true;
-                },
-                message: 'Gear is strictly an Record<string, number>!!!',
-            },
+            // TODO: Add proper validation
+            // validate: {
+            //     validator: (value: String) => {
+            //         for (const key in value) {
+            //             if (typeof value[key] !== 'number') {
+            //                 return false;
+            //             }
+            //         }
+            //         return true;
+            //     },
+            //     message: 'Gear is strictly an Record<string, number>!!!',
+            // },
         },
         innovations: {
             type: [String],

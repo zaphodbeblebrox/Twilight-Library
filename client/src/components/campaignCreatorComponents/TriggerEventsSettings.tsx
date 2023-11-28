@@ -1,12 +1,17 @@
 import { Button, Flex, Heading, Separator, Text } from '@radix-ui/themes';
 import { useNavigate } from 'react-router-dom';
 import { TypeInitializedSettlement, TypeServerSettlement } from '../../../../SettlementTypes';
-import { CourageUnderstandingLists, NodePillarLists, TypeCampaignData } from './CampaignTypeConfig';
 import { TwilightAddEventAlert, TwilightEditTextAlert } from '../primitiveComponents/AlertBoxes';
-import axios from 'axios';
 import { settlementApi } from '../../service/api';
-import campaignCreatorData from './CampaignTypeConfig';
 import useAxios from 'axios-hooks';
+import {
+    CourageUnderstandingLists,
+    NodePillarLists,
+    TypeCampaignData,
+} from '../static_data_file_configs/presetCampaignConfig';
+import { campaignCreatorData } from '../static_data_file_configs/CampaignCreatorConfig';
+import { TypeResourceListData, resourceListData } from '../static_data_file_configs/ResourceListConfig';
+import { TypeLocationsData, locationsData } from '../static_data_file_configs/LocationsConfig';
 
 interface CampaignFinalSettingsProps {
     settlementName: string;
@@ -105,6 +110,63 @@ const CampaignFinalSettings = ({
         }, {});
     };
 
+    const createResourceGroup = (categoryKey: keyof TypeResourceListData) => {
+        return resourceListData[categoryKey].reduce((currentResourceObject, resource) => {
+            return {
+                ...currentResourceObject,
+                [resource]: 0,
+            };
+        }, {});
+    };
+
+    const createResourceList = () => {
+        const monsterList = [
+            ...campaignSettings.node_nemesis_1,
+            ...campaignSettings.node_nemesis_2,
+            ...campaignSettings.node_nemesis_3,
+            ...campaignSettings.node_quarry_1,
+            ...campaignSettings.node_quarry_2,
+            ...campaignSettings.node_quarry_3,
+            ...campaignSettings.node_quarry_4,
+            campaignSettings.node_core,
+            'Basic',
+        ];
+        return monsterList
+            .filter((monster) => monster && Object.keys(resourceListData).includes(monster))
+            .reduce((currentResourceObject, monster) => {
+                return monster
+                    ? {
+                          ...currentResourceObject,
+                          [monster]: createResourceGroup(monster as keyof TypeResourceListData),
+                      }
+                    : { ...currentResourceObject };
+            }, {});
+    };
+
+    const createGearGroup = (categoryKey: keyof TypeLocationsData) => {
+        console.log('cat key', categoryKey);
+        return locationsData[categoryKey].gear.reduce((currentLocationObject, gear) => {
+            return {
+                ...currentLocationObject,
+                [gear]: 0,
+            };
+        }, {});
+    };
+
+    const createLocationList = () => {
+        return ['Starting Gear']
+            .filter((location) => location && Object.keys(locationsData).includes(location))
+            .reduce((currentLocationObject, location) => {
+                console.log('location', location);
+                return location
+                    ? {
+                          ...currentLocationObject,
+                          [location]: createGearGroup(location as keyof TypeLocationsData),
+                      }
+                    : { ...currentLocationObject };
+            }, {});
+    };
+
     const handleSaveCampaignOnServer = () => {
         const campaignData: TypeInitializedSettlement = {
             name: settlementName,
@@ -118,10 +180,12 @@ const CampaignFinalSettings = ({
             nemesis: { ...setNemesis(), [campaignSettings.node_core as keyof NodePillarLists]: { 1: false } },
             constellations: campaignSettings.constellations,
             arc_survivors: campaignSettings.pillars.includes('Arc Survivors'),
+            resources: { ...createResourceList() },
+            gear: { ...createLocationList() },
         };
 
         //Save data to database
-        console.log(campaignData);
+        console.log('gear', campaignData.gear);
 
         executePost({
             data: campaignData,

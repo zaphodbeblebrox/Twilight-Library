@@ -3,6 +3,8 @@ import useAxios, { RefetchFunction } from 'axios-hooks';
 import { TypeServerSettlement } from '../../../../SettlementTypes';
 import { settlementApi } from '../../service/api';
 import TimelineTable from '../primitiveComponents/TimelineTable';
+import ResourceTab from './ResourceTab';
+import GearTab from './GearTab';
 
 interface StorageTabProps {
     campaignData: TypeServerSettlement;
@@ -26,11 +28,11 @@ const StorageTab = ({ campaignData, dbRefetch }: StorageTabProps) => {
 
             <Box px="4" pt="3" pb="2">
                 <Tabs.Content value="resources">
-                    <Text size="2">Resource Info...</Text>
+                    {campaignData && <ResourceTab campaignData={campaignData} dbRefetch={dbRefetch} />}
                 </Tabs.Content>
 
                 <Tabs.Content value="gear">
-                    <Text size="2">Gear Info...</Text>
+                    {campaignData && <GearTab campaignData={campaignData} dbRefetch={dbRefetch} />}
                 </Tabs.Content>
             </Box>
         </Tabs.Root>

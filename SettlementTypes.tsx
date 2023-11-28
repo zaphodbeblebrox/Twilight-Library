@@ -24,12 +24,13 @@ export type SettlementMonsterLists = {
 };
 
 export type SettlementStorageLists = {
-    resources: Record<string, number>;
-    gear: Record<string, number>;
+    resources: Record<string, Record<string, number>>;
+    gear: Record<string, Record<string, number>>;
 };
 
 export type TypeServerSettlement = SettlementStrLists &
     SettlementStrArrayLists &
+    SettlementStorageLists &
     SettlementMonsterLists & {
         _id: string;
         survival_limit: number;
@@ -42,14 +43,15 @@ export type TypeServerSettlement = SettlementStrLists &
         constellations: boolean;
     };
 
-export type TypeInitializedSettlement = SettlementMonsterLists & {
-    name: string;
-    timeline: Record<number, string[]>;
-    courage_event_1: string;
-    courage_event_2: string;
-    understanding_event_1: string;
-    understanding_event_2: string;
-    milestones: Record<string, boolean>;
-    arc_survivors?: boolean;
-    constellations?: boolean;
-};
+export type TypeInitializedSettlement = SettlementMonsterLists &
+    SettlementStorageLists & {
+        name: string;
+        timeline: Record<number, string[]>;
+        courage_event_1: string;
+        courage_event_2: string;
+        understanding_event_1: string;
+        understanding_event_2: string;
+        milestones: Record<string, boolean>;
+        arc_survivors?: boolean;
+        constellations?: boolean;
+    };

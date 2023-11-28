@@ -1,7 +1,7 @@
 import { Flex } from '@radix-ui/themes';
 import { TwilightCheckbox, TwilightNodeHeader } from '../primitiveComponents/Primitives';
-import { NodePillarLists, TypeCampaignData } from './CampaignTypeConfig';
-import campaignOptionsData from '../../static_data/campaign_creator.json';
+import { NodePillarLists, TypeCampaignData } from '../static_data_file_configs/presetCampaignConfig';
+import { campaignCreatorData } from '../static_data_file_configs/CampaignCreatorConfig';
 
 interface OptionListCampaignCreatorProps {
     header: string;
@@ -25,7 +25,7 @@ function OptionListCampaignCreator({ header, optionKey, data, setData }: OptionL
     return (
         <Flex direction="column" gap="1">
             <TwilightNodeHeader headerText={header} />
-            {campaignOptionsData[optionKey].map((option, idx) => {
+            {campaignCreatorData[optionKey].map((option, idx) => {
                 return (
                     <TwilightCheckbox
                         key={idx}

@@ -15,6 +15,8 @@ const createSettlement = (req: Request, res: Response, next: NextFunction) => {
         courage_event_1,
         courage_event_2,
         milestones,
+        resources,
+        gear,
     } = req.body;
 
     const settlement = new Settlement({
@@ -30,6 +32,8 @@ const createSettlement = (req: Request, res: Response, next: NextFunction) => {
         understanding_event_2,
         arc_survivors,
         constellations,
+        resources,
+        gear,
     });
 
     return settlement
