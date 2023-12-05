@@ -13,7 +13,7 @@ interface SubTabGearProps {
     dbExecutePatch: RefetchFunction<any, any>;
 }
 
-const SubTabGear = ({ campaignData, dbRefetch, dbExecutePatch: executePatch }: SubTabGearProps) => {
+const SubTabGear = ({ campaignData, dbRefetch, dbExecutePatch }: SubTabGearProps) => {
     const gearDataMemo = useMemo(() => Object.keys(gearData), []);
 
     return (
@@ -34,7 +34,7 @@ const SubTabGear = ({ campaignData, dbRefetch, dbExecutePatch: executePatch }: S
                         // TODO: Return popup message "Already in inventory under ____ Location."
                         return;
                     }
-                    executePatch({
+                    dbExecutePatch({
                         data: { gear: updatedGear },
                     })
                         .then(() => dbRefetch())
@@ -54,7 +54,7 @@ const SubTabGear = ({ campaignData, dbRefetch, dbExecutePatch: executePatch }: S
                                         const updatedResources = { ...campaignData.gear };
                                         updatedResources[gearCategory][gear] = updatedCount;
                                         console.log(updatedResources);
-                                        executePatch({
+                                        dbExecutePatch({
                                             data: { gear: updatedResources },
                                         })
                                             .then(() => dbRefetch())
