@@ -11,19 +11,11 @@ import { useMemo } from 'react';
 interface GearTabProps {
     campaignData: TypeServerSettlement;
     dbRefetch: RefetchFunction<any, any>;
+    dbExecutePatch: RefetchFunction<any, any>;
 }
 
-const GearTab = ({ campaignData, dbRefetch }: GearTabProps) => {
+const GearTab = ({ campaignData, dbRefetch, dbExecutePatch: executePatch }: GearTabProps) => {
     const gearDataMemo = useMemo(() => Object.keys(gearData), []);
-
-    const [{ data: patchData, loading: patchLoading, error: patchError }, executePatch] = useAxios(
-        {
-            url: `${settlementApi}/update/${campaignData._id}`,
-            method: 'PATCH',
-        },
-        { manual: true },
-    );
-    console.log(campaignData.gear);
 
     return (
         <Flex direction="row" wrap="wrap" gap="3">

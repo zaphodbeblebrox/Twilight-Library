@@ -9,9 +9,10 @@ import GearTab from './GearTab';
 interface StorageTabProps {
     campaignData: TypeServerSettlement;
     dbRefetch: RefetchFunction<any, any>;
+    dbExecutePatch: RefetchFunction<any, any>;
 }
 
-const StorageTab = ({ campaignData, dbRefetch }: StorageTabProps) => {
+const StorageTab = ({ campaignData, dbRefetch, dbExecutePatch }: StorageTabProps) => {
     return (
         <Tabs.Root
             defaultValue="resources"
@@ -28,11 +29,19 @@ const StorageTab = ({ campaignData, dbRefetch }: StorageTabProps) => {
 
             <Box px="4" pt="3" pb="2">
                 <Tabs.Content value="resources">
-                    {campaignData && <ResourceTab campaignData={campaignData} dbRefetch={dbRefetch} />}
+                    {campaignData && (
+                        <ResourceTab
+                            campaignData={campaignData}
+                            dbRefetch={dbRefetch}
+                            dbExecutePatch={dbExecutePatch}
+                        />
+                    )}
                 </Tabs.Content>
 
                 <Tabs.Content value="gear">
-                    {campaignData && <GearTab campaignData={campaignData} dbRefetch={dbRefetch} />}
+                    {campaignData && (
+                        <GearTab campaignData={campaignData} dbRefetch={dbRefetch} dbExecutePatch={dbExecutePatch} />
+                    )}
                 </Tabs.Content>
             </Box>
         </Tabs.Root>
