@@ -5,6 +5,7 @@ import { settlementApi } from '../../service/api';
 import TimelineTab from './TimelineTab';
 import StorageTab from './StorageTab';
 import { useEffect, useMemo } from 'react';
+import AdvancementsTab from './AdvancementsTab';
 
 const CampaignTabs = () => {
     const { id } = useParams();
@@ -52,8 +53,8 @@ const CampaignTabs = () => {
                     <Tabs.Trigger style={{ flex: 1 }} value="storage">
                         Storage
                     </Tabs.Trigger>
-                    <Tabs.Trigger style={{ flex: 1 }} value="innovations">
-                        Innovations
+                    <Tabs.Trigger style={{ flex: 1 }} value="advancements">
+                        Advancements
                     </Tabs.Trigger>
                     <Tabs.Trigger style={{ flex: 1 }} value="arc">
                         Arc
@@ -93,8 +94,14 @@ const CampaignTabs = () => {
                         )}
                     </Tabs.Content>
 
-                    <Tabs.Content value="innovations">
-                        <Text size="2">innovations Info...</Text>
+                    <Tabs.Content value="advancements">
+                        {getData && (
+                            <AdvancementsTab
+                                campaignData={getData.settlement}
+                                dbRefetch={refetch}
+                                dbExecutePatch={executePatch}
+                            />
+                        )}
                     </Tabs.Content>
                     <Tabs.Content value="arc">
                         <Text size="2">arc Info...</Text>

@@ -14,7 +14,7 @@ interface AdvancementsTabProps {
 const AdvancementsTab = ({ campaignData, dbRefetch, dbExecutePatch }: AdvancementsTabProps) => {
     return (
         <Tabs.Root
-            defaultValue="resources"
+            defaultValue="innovations"
             style={{ display: 'flex', justifyContent: 'start', flexDirection: 'column', flex: 1, width: '100%' }}
         >
             <Tabs.List>
