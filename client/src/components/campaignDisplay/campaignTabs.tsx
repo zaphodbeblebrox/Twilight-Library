@@ -70,7 +70,13 @@ const CampaignTabs = () => {
                     </Tabs.Content>
 
                     <Tabs.Content value="timeline">
-                        {getData && <TimelineTab campaignData={getData.settlement} dbRefetch={refetch} />}
+                        {getData && (
+                            <TimelineTab
+                                campaignData={getData.settlement}
+                                dbRefetch={refetch}
+                                dbExecutePatch={executePatch}
+                            />
+                        )}
                     </Tabs.Content>
 
                     <Tabs.Content value="survivors">
