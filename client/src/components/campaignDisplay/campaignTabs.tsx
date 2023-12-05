@@ -4,18 +4,27 @@ import useAxios from 'axios-hooks';
 import { settlementApi } from '../../service/api';
 import TimelineTab from './TimelineTab';
 import StorageTab from './StorageTab';
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 
 const CampaignTabs = () => {
     const { id } = useParams();
-    const [{ data, loading, error }, refetch] = useAxios(`${settlementApi}/get/${id}`);
+    const [{ data: getData, loading: getLoading, error: getError }, refetch] = useAxios(`${settlementApi}/get/${id}`);
+
+    const [{ data: patchData, loading: patchLoading, error: patchError }, executePatch] = useAxios(
+        {
+            url: `${settlementApi}/update/${id}`,
+            method: 'PATCH',
+        },
+        { manual: true },
+    );
+
     const navigate = useNavigate();
 
     useEffect(() => {
-        if (data) {
-            console.log('Settlement Data', data.settlement);
+        if (getData) {
+            console.log('Settlement Data', getData.settlement);
         }
-    }, [data]);
+    }, [getData]);
 
     return (
         <Flex direction="column" style={{ width: '100%' }}>
@@ -57,11 +66,17 @@ const CampaignTabs = () => {
                 <Box px="4" pt="3" pb="2">
                     <Tabs.Content value="settlement">
                         <Text size="2">Settlement Info...</Text>
-                        {data && <Text size="2">{JSON.stringify(data, null, 2)}</Text>}
+                        {getData && <Text size="2">{JSON.stringify(getData, null, 2)}</Text>}
                     </Tabs.Content>
 
                     <Tabs.Content value="timeline">
-                        {data && <TimelineTab campaignData={data.settlement} dbRefetch={refetch} />}
+                        {getData && (
+                            <TimelineTab
+                                campaignData={getData.settlement}
+                                dbRefetch={refetch}
+                                dbExecutePatch={executePatch}
+                            />
+                        )}
                     </Tabs.Content>
 
                     <Tabs.Content value="survivors">
@@ -69,7 +84,13 @@ const CampaignTabs = () => {
                     </Tabs.Content>
 
                     <Tabs.Content value="storage">
-                        {data && <StorageTab campaignData={data.settlement} dbRefetch={refetch} />}
+                        {getData && (
+                            <StorageTab
+                                campaignData={getData.settlement}
+                                dbRefetch={refetch}
+                                dbExecutePatch={executePatch}
+                            />
+                        )}
                     </Tabs.Content>
 
                     <Tabs.Content value="innovations">

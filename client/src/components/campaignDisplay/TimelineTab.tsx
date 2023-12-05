@@ -7,19 +7,12 @@ import TimelineTable from '../primitiveComponents/TimelineTable';
 interface TimelineTabProps {
     campaignData: TypeServerSettlement;
     dbRefetch: RefetchFunction<any, any>;
+    dbExecutePatch: RefetchFunction<any, any>;
 }
 
-const TimelineTab = ({ campaignData, dbRefetch }: TimelineTabProps) => {
-    const [{ data: patchData, loading: patchLoading, error: patchError }, executePatch] = useAxios(
-        {
-            url: `${settlementApi}/update/${campaignData._id}`,
-            method: 'PATCH',
-        },
-        { manual: true },
-    );
-
+const TimelineTab = ({ campaignData, dbRefetch, dbExecutePatch }: TimelineTabProps) => {
     const handleUpdateCurrentYear = () => {
-        executePatch({
+        dbExecutePatch({
             data: { current_year: campaignData.current_year + 1 },
         })
             .then(() => dbRefetch())
@@ -28,7 +21,7 @@ const TimelineTab = ({ campaignData, dbRefetch }: TimelineTabProps) => {
 
     const handleUpdateTimeline = (updatedTimeline: Record<number, string[]>) => {
         // console.log('updated timeline: ', updatedTimeline);
-        executePatch({
+        dbExecutePatch({
             data: { timeline: updatedTimeline },
         })
             .then(() => dbRefetch())

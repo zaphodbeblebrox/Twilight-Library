@@ -8,16 +8,10 @@ import { TwilightNodeHeader } from '../primitiveComponents/Primitives';
 interface ResourceTabProps {
     campaignData: TypeServerSettlement;
     dbRefetch: RefetchFunction<any, any>;
+    dbExecutePatch: RefetchFunction<any, any>;
 }
 
-const ResourceTab = ({ campaignData, dbRefetch }: ResourceTabProps) => {
-    const [{ data: patchData, loading: patchLoading, error: patchError }, executePatch] = useAxios(
-        {
-            url: `${settlementApi}/update/${campaignData._id}`,
-            method: 'PATCH',
-        },
-        { manual: true },
-    );
+const ResourceTab = ({ campaignData, dbRefetch, dbExecutePatch }: ResourceTabProps) => {
     return (
         <Flex direction="row" wrap="wrap" gap="3">
             {Object.keys(campaignData.resources)
@@ -33,7 +27,7 @@ const ResourceTab = ({ campaignData, dbRefetch }: ResourceTabProps) => {
                                         const updatedResources = { ...campaignData.resources };
                                         updatedResources[resourceCategory][resource] = updatedCount;
                                         console.log(updatedResources);
-                                        executePatch({
+                                        dbExecutePatch({
                                             data: { resources: updatedResources },
                                         })
                                             .then(() => dbRefetch())
