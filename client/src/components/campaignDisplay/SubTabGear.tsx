@@ -14,7 +14,7 @@ interface GearTabProps {
     dbExecutePatch: RefetchFunction<any, any>;
 }
 
-const GearTab = ({ campaignData, dbRefetch, dbExecutePatch: executePatch }: GearTabProps) => {
+const SubTabGear = ({ campaignData, dbRefetch, dbExecutePatch: executePatch }: GearTabProps) => {
     const gearDataMemo = useMemo(() => Object.keys(gearData), []);
 
     return (
@@ -77,4 +77,4 @@ const GearTab = ({ campaignData, dbRefetch, dbExecutePatch: executePatch }: Gear
     );
 };
 
-export default GearTab;
+export default SubTabGear;

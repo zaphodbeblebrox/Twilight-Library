@@ -10,7 +10,7 @@ interface TimelineTabProps {
     dbExecutePatch: RefetchFunction<any, any>;
 }
 
-const TimelineTab = ({ campaignData, dbRefetch, dbExecutePatch }: TimelineTabProps) => {
+const TabTimeline = ({ campaignData, dbRefetch, dbExecutePatch }: TimelineTabProps) => {
     const handleUpdateCurrentYear = () => {
         dbExecutePatch({
             data: { current_year: campaignData.current_year + 1 },
@@ -47,4 +47,4 @@ const TimelineTab = ({ campaignData, dbRefetch, dbExecutePatch }: TimelineTabPro
     );
 };
 
-export default TimelineTab;
+export default TabTimeline;

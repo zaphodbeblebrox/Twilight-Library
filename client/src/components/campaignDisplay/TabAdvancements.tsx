@@ -8,7 +8,7 @@ interface AdvancementsTabProps {
     dbExecutePatch: RefetchFunction<any, any>;
 }
 
-const AdvancementsTab = ({ campaignData, dbRefetch, dbExecutePatch }: AdvancementsTabProps) => {
+const TabAdvancements = ({ campaignData, dbRefetch, dbExecutePatch }: AdvancementsTabProps) => {
     return (
         <Tabs.Root
             defaultValue="innovations"
@@ -39,4 +39,4 @@ const AdvancementsTab = ({ campaignData, dbRefetch, dbExecutePatch }: Advancemen
     );
 };
 
-export default AdvancementsTab;
+export default TabAdvancements;

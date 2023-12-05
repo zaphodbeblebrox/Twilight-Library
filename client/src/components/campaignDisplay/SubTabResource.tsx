@@ -11,7 +11,7 @@ interface ResourceTabProps {
     dbExecutePatch: RefetchFunction<any, any>;
 }
 
-const ResourceTab = ({ campaignData, dbRefetch, dbExecutePatch }: ResourceTabProps) => {
+const SubTabResource = ({ campaignData, dbRefetch, dbExecutePatch }: ResourceTabProps) => {
     return (
         <Flex direction="row" wrap="wrap" gap="3">
             {Object.keys(campaignData.resources)
@@ -49,4 +49,4 @@ const ResourceTab = ({ campaignData, dbRefetch, dbExecutePatch }: ResourceTabPro
     );
 };
 
-export default ResourceTab;
+export default SubTabResource;

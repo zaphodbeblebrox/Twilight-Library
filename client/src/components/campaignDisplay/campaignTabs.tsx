@@ -2,10 +2,10 @@ import { Tabs, Box, Text, Flex, Button } from '@radix-ui/themes';
 import { useNavigate, useParams } from 'react-router-dom';
 import useAxios from 'axios-hooks';
 import { settlementApi } from '../../service/api';
-import TimelineTab from './TimelineTab';
-import StorageTab from './StorageTab';
+import TabTimeline from './TabTimeline';
+import TabStorage from './TabStorage';
 import { useEffect, useMemo } from 'react';
-import AdvancementsTab from './AdvancementsTab';
+import TabAdvancements from './TabAdvancements';
 
 const CampaignTabs = () => {
     const { id } = useParams();
@@ -72,7 +72,7 @@ const CampaignTabs = () => {
 
                     <Tabs.Content value="timeline">
                         {getData && (
-                            <TimelineTab
+                            <TabTimeline
                                 campaignData={getData.settlement}
                                 dbRefetch={refetch}
                                 dbExecutePatch={executePatch}
@@ -86,7 +86,7 @@ const CampaignTabs = () => {
 
                     <Tabs.Content value="storage">
                         {getData && (
-                            <StorageTab
+                            <TabStorage
                                 campaignData={getData.settlement}
                                 dbRefetch={refetch}
                                 dbExecutePatch={executePatch}
@@ -96,7 +96,7 @@ const CampaignTabs = () => {
 
                     <Tabs.Content value="advancements">
                         {getData && (
-                            <AdvancementsTab
+                            <TabAdvancements
                                 campaignData={getData.settlement}
                                 dbRefetch={refetch}
                                 dbExecutePatch={executePatch}
