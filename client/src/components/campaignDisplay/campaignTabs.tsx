@@ -4,7 +4,7 @@ import useAxios from 'axios-hooks';
 import { settlementApi } from '../../service/api';
 import TabTimeline from './TabTimeline';
 import TabStorage from './TabStorage';
-import { useEffect, useMemo } from 'react';
+import { useEffect } from 'react';
 import TabAdvancements from './TabAdvancements';
 
 const CampaignTabs = () => {

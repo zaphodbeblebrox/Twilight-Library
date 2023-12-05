@@ -1,17 +1,16 @@
 import { Flex } from '@radix-ui/themes';
-import useAxios, { RefetchFunction } from 'axios-hooks';
+import { RefetchFunction } from 'axios-hooks';
 import { TypeServerSettlement } from '../../../../SettlementTypes';
-import { settlementApi } from '../../service/api';
 import { TwilightEditCountDialog } from '../primitiveComponents/AlertBoxes';
 import { TwilightNodeHeader } from '../primitiveComponents/Primitives';
 
-interface ResourceTabProps {
+interface SubTabResourceProps {
     campaignData: TypeServerSettlement;
     dbRefetch: RefetchFunction<any, any>;
     dbExecutePatch: RefetchFunction<any, any>;
 }
 
-const SubTabResource = ({ campaignData, dbRefetch, dbExecutePatch }: ResourceTabProps) => {
+const SubTabResource = ({ campaignData, dbRefetch, dbExecutePatch }: SubTabResourceProps) => {
     return (
         <Flex direction="row" wrap="wrap" gap="3">
             {Object.keys(campaignData.resources)

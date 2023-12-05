@@ -1,20 +1,19 @@
 import { Flex } from '@radix-ui/themes';
-import useAxios, { RefetchFunction } from 'axios-hooks';
+import { RefetchFunction } from 'axios-hooks';
 import { TypeServerSettlement } from '../../../../SettlementTypes';
-import { settlementApi } from '../../service/api';
 import { TwilightEditCountDialog } from '../primitiveComponents/AlertBoxes';
 import { TwilightNodeHeader } from '../primitiveComponents/Primitives';
 import { TwilightSearchPopup } from '../primitiveComponents/SearchBoxes';
 import { GearKeys, gearData } from '../static_data_file_configs/gearConfig';
 import { useMemo } from 'react';
 
-interface GearTabProps {
+interface SubTabGearProps {
     campaignData: TypeServerSettlement;
     dbRefetch: RefetchFunction<any, any>;
     dbExecutePatch: RefetchFunction<any, any>;
 }
 
-const SubTabGear = ({ campaignData, dbRefetch, dbExecutePatch: executePatch }: GearTabProps) => {
+const SubTabGear = ({ campaignData, dbRefetch, dbExecutePatch: executePatch }: SubTabGearProps) => {
     const gearDataMemo = useMemo(() => Object.keys(gearData), []);
 
     return (

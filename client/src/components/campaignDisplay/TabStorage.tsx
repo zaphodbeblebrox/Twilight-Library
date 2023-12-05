@@ -1,18 +1,16 @@
-import { Flex, Heading, Separator, Button, Text, Tabs, Box } from '@radix-ui/themes';
-import useAxios, { RefetchFunction } from 'axios-hooks';
+import { Tabs, Box } from '@radix-ui/themes';
+import { RefetchFunction } from 'axios-hooks';
 import { TypeServerSettlement } from '../../../../SettlementTypes';
-import { settlementApi } from '../../service/api';
-import TimelineTable from '../primitiveComponents/TimelineTable';
 import SubTabResource from './SubTabResource';
 import SubTabGear from './SubTabGear';
 
-interface StorageTabProps {
+interface TabStorageProps {
     campaignData: TypeServerSettlement;
     dbRefetch: RefetchFunction<any, any>;
     dbExecutePatch: RefetchFunction<any, any>;
 }
 
-const TabStorage = ({ campaignData, dbRefetch, dbExecutePatch }: StorageTabProps) => {
+const TabStorage = ({ campaignData, dbRefetch, dbExecutePatch }: TabStorageProps) => {
     return (
         <Tabs.Root
             defaultValue="resources"
