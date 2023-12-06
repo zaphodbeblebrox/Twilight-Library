@@ -1,7 +1,6 @@
 import { Flex } from '@radix-ui/themes';
-import useAxios, { RefetchFunction } from 'axios-hooks';
+import { RefetchFunction } from 'axios-hooks';
 import { TypeServerSettlement } from '../../../../SettlementTypes';
-import { settlementApi } from '../../service/api';
 import { TwilightEditCountDialog } from '../primitiveComponents/AlertBoxes';
 import { TwilightNodeHeader } from '../primitiveComponents/Primitives';
 
