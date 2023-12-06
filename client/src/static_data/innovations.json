@@ -14,8 +14,8 @@
         "mod_movement": ,
         "endeavor":[{
             "cost": "",
-            "roll": "",
             "effect": "",
+            "roll": "",
             "table": [{
                 "limit_low": "",
                 "limit_high": "",
@@ -31,7 +31,7 @@
         "name": "Albedo",
         "endeavor":[{
             "cost": "2[[Endeavor]]",
-            "roll": "Roll 1d10",
+            "roll": "1d10",
             "table": [
                 {
                 "limit_low": "1",
@@ -60,7 +60,7 @@
         "survival_limit_mod": 1,
         "endeavor":[{
             "cost": "1[[Endeavor]]",
-            "roll": "Roll 1d10",
+            "roll": "1d10",
             "table": [{
                 "limit_low": "1",
                 "limit_high": "1",
@@ -80,7 +80,7 @@
         "name": "Arena",
         "endeavor":[{
             "cost": "1[[Endeavor]], 1 iron",
-            "roll": "Roll 1d10",
+            "roll": "1d10",
             "table": [{
                 "limit_low": "1",
                 "limit_high": "2",
@@ -112,7 +112,7 @@
         "survival_limit_mod": 1,
         "endeavor":[{
             "cost": "1[[Endeavor]]",
-            "roll": "Roll 1d10",
+            "roll": "1d10",
             "table": [{
                 "limit_low": "1",
                 "limit_high": "3",
@@ -131,7 +131,7 @@
             "effect": "Strange Caravan event."
         },{
             "cost": "2[[Endeavor]]",
-            "roll": "Roll 1d10",
+            "roll": "1d10",
             "table": [{
                 "limit_low": "1",
                 "limit_high": "5",
@@ -152,7 +152,7 @@
         "name": "Bloodletting",
         "endeavor":[{
             "cost": "1[[Endeavor]], 1 resource",
-            "roll": "Roll 1d10",
+            "roll": "1d10",
             "table": [{
                 "limit_low": "1",
                 "limit_high": "3",
@@ -181,18 +181,104 @@
             "effect": "Spend 1 organ to gain +1 weapon Proficiency. Limit once per lifetime.",
         }]
     },
+    {
+        "name": "Cannibalize",
+        "static_effect": ["When a survivor dies, draw 1 basic resource and add it to the settlement storage. Do not gain if a survivor is lost, ceases to exist, or is exiled."],
+        "survival_limit_mod": 1
+    },
+    {
+        "name": "Character",
+        "static_effect": ["When a survivor is named, they gain a random Character card."],
+        "survival_limit_mod": 1
+    },
+    {
+        "name": "Choreia",
+        "endeavor":[{
+            "cost": "2[[Endeavor]], Nominate a M & F survivor",
+            "roll": "1d10",
+            "table": [{
+                "limit_low": "1",
+                "limit_high": "7",
+                "effect": "No effect."
+            },{
+                "limit_low": "8",
+                "limit_high": "9",
+                "effect": "If both survivors depart this year, the M gains [Harvestman] fighting art."
+            },{
+                "limit_low": "10+",
+                "limit_high": "10+",
+                "effect": "The F devours the M (dies). The F gains half of the M's Hunt XP (rounded down), one of their fighting arts, and the [Death Touch] secret fighting art."
+            }]
+        }]
+    },
+    {
+        "name": "Citrinitas",
+        "survival_limit_mod": 1,
+        "endeavor":[{
+            "cost": "3[[Endeavor]]",
+            "roll": "1d10",
+            "table": [{
+                "limit_low": "1",
+                "limit_high": "2",
+                "effect": "Returning survivors suffer -1 permanent evasion."
+            },{
+                "limit_low": "3",
+                "limit_high": "10",
+                "effect": "Returning survivors may remove 1 Broken severe injury."
+            }]
+        }]
+    },
+    {
+        "name": "Clan of Death",
+        "static_effect": ["All newborn survivors gain: +1 accuracy, +1 strength, +1 evasion."],
+        "mod_strength": 1,
+        "mod_accuracy": 1,
+        "mod_evasion": 1
+    },
+    {
+        "name": "Collective Toil",
+        "static_effect": ["At the start of the settlement phase, gain +1[[Endeavor]] for every 10 population."],
+        "mod_strength": 1,
+        "mod_accuracy": 1,
+        "mod_evasion": 1
+    },
+    {
+        "name": "Cooking",
+        "static_effect": ["+1[[Endeavor]]"],
+        "survival_limit_mod": 1,
+        "endeavor":[{
+            "cost": "1[[Endeavor]]",
+            "effect": "Cooking"
+        },{
+            "cost": "1[[Endeavor]], 1 organ and 1 bone",
+            "effect": "During the next Hunt phase, ignore [Starvation]."
+        }]
+    },
+    {
+        "name": "Crimson Candy",
+        "static_effect": ["At the start of the showdown, each survivor gains [[star]] survival."],
+        "endeavor":[{
+            "cost": "1[[Endeavor]]",
+            "roll": "1d10",
+            "table": [{
+                "limit_low": "1",
+                "limit_high": "1",
+                "effect": "-1 permanent accuracy."
+            },{
+                "limit_low": "2",
+                "limit_high": "6",
+                "effect": "Skip the next hunt."
+            },{
+                "limit_low": "7+",
+                "limit_high": "7+",
+                "effect": "Heal Intracranial Hemorrhage & Gaping Chest Wound."
+            }]
+        }]
+    },
 
 ]
 
 {
-    "Cannibalize": "+1 Survival Limit. When a survivor dies, draw 1 basic resource and add it to the settlement storage. Do not gain if a survivor is lost, ceases to exist, or is exiled.",
-    "Character": "+1 Survival Limit. When a survivor is named, they gain a random Character card.",
-    "Choreia": "2[[Endeavor]], Nominate a M and F survivor, roll 1d10: 1-7 No effect; 8-9 If both survivors depart this year, the M gains [Harvestman] fighting art; 10+ The F devours the M (dies). The F gain half of the male's Hunt XP (rounded down), one of their fighting arts, and the [Death Touch] secret fighting art.",
-    "Citrinitas": "Survival Limit +1. 3[[Endeavor]]: 1-2 Returning survivors suffer -1 permanent evasion; 3-10 Returning survivors may remove 1 Broken severe injury.",
-    "Clan of Death": "All newborn survivors gain: +1 accuracy, +1 strength, +1 evasion",
-    "Collective Toil": "At the start of the settlement phase, gain +1[[Endeavor]] for every 10 population.",
-    "Cooking": "+1[[Endeavor]]. +1 Survival Limit. 1[[Endeavor]]: Cooking. 1[[Endeavor]]: Spend 1 organ and 1 bone, during the next Hunt phase, ignore [Starvation].",
-    "Crimson Candy": "At the start of the showdown, each survivor gains Lvl survival. 1[[Endeavor]]: 1 -1 permanent accuracy; 2-6 Skip the next hunt; 7+ Heal Intracranial Hemorrhage & Gaping Chest Wound.",
     "Death Pact": "When the survivors perish on the hunt or are defeated in the showdown, Logistics of Death event. 1[[Endeavor]], spend 1 hide & 1 organ: Special Innovate Pictograph",
     "Destiny": "Survival Limit +1. All survivors gain the [Endure] survival action.",
     "Drafting Table": "When a survivor first reaches 3 understanding, gain a Seed Pattern card. 1[[Endeavor]], spend 1 resource, roll 1d10: 1-3 No Effect; 4-7 +1 understanding, once per lifetime; 8+ Gain a Seed Pattern card, skip the next hunt.",
