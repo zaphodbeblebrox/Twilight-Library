@@ -15,6 +15,7 @@
         "endeavor":[{
             "cost": "",
             "roll": "",
+            "effect": "",
             "table": [{
                 "limit_low": "",
                 "limit_high": "",
@@ -78,7 +79,7 @@
     {
         "name": "Arena",
         "endeavor":[{
-            "cost": "1[[Endeavor]] & 1 iron",
+            "cost": "1[[Endeavor]], 1 iron",
             "roll": "Roll 1d10",
             "table": [{
                 "limit_low": "1",
@@ -123,13 +124,67 @@
             }]
         }]
     },
+    {
+        "name": "Black Mask",
+        "endeavor":[{
+            "cost": "1[[Endeavor]]",
+            "effect": "Strange Caravan event."
+        },{
+            "cost": "2[[Endeavor]]",
+            "roll": "Roll 1d10",
+            "table": [{
+                "limit_low": "1",
+                "limit_high": "5",
+                "effect": "Gain 1 Skull basic resource."
+            },{
+                "limit_low": "6",
+                "limit_high": "9",
+                "effect": "Gain 1 ??? basic resource."
+            },{
+                "limit_low": "10+",
+                "limit_high": "10+",
+                "effect": "Gain [Legendary Lungs] secret fighting arts."
+            }]
+        }
+    ]
+    },
+    {
+        "name": "Bloodletting",
+        "endeavor":[{
+            "cost": "1[[Endeavor]], 1 resource",
+            "roll": "Roll 1d10",
+            "table": [{
+                "limit_low": "1",
+                "limit_high": "3",
+                "effect": "Gain +1 understanding, lose all survival. You cannot gain survival this settlement phase for any reason."
+            },{
+                "limit_low": "4",
+                "limit_high": "7",
+                "effect": "Gain +3 insanity."
+            },{
+                "limit_low": "8+",
+                "limit_high": "8+",
+                "effect": "Gain +6 insanity, you may remove one of the following: -1 Disorder -Warped Pelvis -Intestinal Prolapse"
+            }]
+        }
+    ]
+    },
+    {
+        "name": "Bloodline",
+        "static_effect": ["Newborn survivors inherit the following from their parents: -The Oracle's Eye, Iridescent Hide, or Pristine ability -1 Surname -Half of one parent's weapon Proficiency levels (rounded up)"],
+    },
+    {
+        "name": "Butchery",
+        "static_effect": ["You may now select a weapon type for Proficiency."],
+        "endeavor":[{
+            "cost": "1[[Endeavor]]",
+            "effect": "Spend 1 organ to gain +1 weapon Proficiency. Limit once per lifetime.",
+        }]
+    },
+
 ]
 
 {
-    "Black Mask": "1[[Endeavor]]: Strange Caravan event. 2[[Endeavor]], roll 1d10: 1-5 Gain 1 Skull basic resource; 6-9 Gain 1 ??? basic resource; 10+ Gain [Legendary Lungs] secret fighting arts",
-    "Bloodletting": "1[[Endeavor]], spend 1 resource, roll 1d10: 1-3 Gain +1 understanding, lose all survival. You cannot gain survival this settlement phase for any reason; 4-7 Gain +3 insanity; 8+ Gain +6 insanity, you may remove one of the following: -1 disorder -Warped Pelvis -Intestinal Prolapse",
-    "Bloodline": "Newborn survivors inherit the following from their parents: -The Oracle's Eye, Iridescent Hide, or Pristine ability -1 Surname -Half of one parent's weapon Proficiency levels (rounded up)",
-    "Butchery": "You may now select a weapon type for Proficiency. 1[[Endeavor]]: Spend 1 organ to gain +1 weapon Proficiency. Limit once per lifetime.",
     "Cannibalize": "+1 Survival Limit. When a survivor dies, draw 1 basic resource and add it to the settlement storage. Do not gain if a survivor is lost, ceases to exist, or is exiled.",
     "Character": "+1 Survival Limit. When a survivor is named, they gain a random Character card.",
     "Choreia": "2[[Endeavor]], Nominate a M and F survivor, roll 1d10: 1-7 No effect; 8-9 If both survivors depart this year, the M gains [Harvestman] fighting art; 10+ The F devours the M (dies). The F gain half of the male's Hunt XP (rounded down), one of their fighting arts, and the [Death Touch] secret fighting art.",

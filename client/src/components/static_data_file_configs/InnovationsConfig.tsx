@@ -16,6 +16,7 @@ import rawInnovationsData from '../../static_data/innovations.json';
     "endeavor":[{
         "cost": ,
         "roll": ,
+        "effect": ""
         "table": [{
             "limit_low": ,
             "limit_high": ,
