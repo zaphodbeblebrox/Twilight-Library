@@ -350,17 +350,112 @@
             "effect": "Select one: -Gain +2 insanity -Gain +2 survival -Gain [Rhythm Chaser] fighting art or [Synchronized Strike] secret fighting art."
         }]
     },
+    {
+        "name": "Empire",
+        "static_effect": ["Newborn survivors are born with +1 permanent strength and the [Pristine] ability."],
+        "mod_strength": 1
+    },
+    {
+        "name": "Face Painting",
+        "endeavor":[{
+            "cost": "1[[Endeavor]]",
+            "roll": "1d10",
+            "table": [{
+                "limit_low": "1",
+                "limit_high": "3",
+                "effect": "No Effect."
+            },{
+                "limit_low": "4+",
+                "limit_high": "4+",
+                "effect": "Departing survivors gain +2 survival, +1 insanity."
+            }]
+        },{
+            "cost": "1[[Endeavor]]",
+            "roll": "1d10",
+            "table": [{
+                "limit_low": "1",
+                "limit_high": "3",
+                "effect": "No Effect."
+            },{
+                "limit_low": "4+",
+                "limit_high": "4+",
+                "effect": "Gain +1 to all rolls on the Intimacy event this settlement phase."
+            }]
+        }]
+    },
+    {
+        "name": "Family",
+        "static_effect": ["Survivors nominated for Intimacy may give themselves a surname if they do not have one.","A newborn inherits the surname of one parent, their weapon type, & half their weapon Proficiency levels rounded down."],
+        "departing_survival": 1
+    },
+    {
+        "name": "Fig Sapling",
+        "endeavor":[{
+            "cost": "1[[Endeavor]]",
+            "roll": "1d10",
+            "table": [{
+                "limit_low": "1",
+                "limit_high": "8",
+                "effect": "No Effect."
+            },{
+                "limit_low": "9+",
+                "limit_high": "9+",
+                "effect": "The Sapling grows. Record this. When this result is rolled again, flip this card."
+            }]
+        }]
+    },
+    {
+        "name": "Fig Tree",
+        "static_effect": ["Departing survivors [Consume] the fruit and gain +1 survival."],
+        "survival_limit_mod": 1,
+        "departing_survival": 1
+    },
+    {
+        "name": "Filleting Table",
+        "static_effect": ["Once per settlement phase, if the Returning Survivors are victorious, gain 1 random basic resouce."],
+        "endeavor":[{
+            "cost": "1[[Endeavor]]",
+            "roll": "1d10",
+            "table": [{
+                "limit_low": "1",
+                "limit_high": "5",
+                "effect": "Suffer [dismembered arm] severe injury."
+            },{
+                "limit_low": "6+",
+                "limit_high": "6+",
+                "effect": "Gain the [Trick Attack] fighting art."
+            }]
+        }]
+    },
+    {
+        "name": "Final Fighting Art",
+        "static_effect": ["Once per showdown, you may select a card from the discard pile or wound stack and place it on top of its respective deck."],
+        "survival_limit_mod": 1
+    },
+    {
+        "name": "Forbidden Dance",
+        "static_effect": ["When a survivor uses the [Synchronized Strike] SFA, reroll missed attack rolls once."],
+        "endeavor":[{
+            "cost": "1[[Endeavor]]",
+            "roll": "1d10",
+            "table": [{
+                "limit_low": "1",
+                "limit_high": "5",
+                "effect": "Suffer -1 permanent movement."
+            },{
+                "limit_low": "6",
+                "limit_high": "9",
+                "effect": "Gain +1 permanent evasion."
+            },{
+                "limit_low": "10+",
+                "limit_high": "10+",
+                "effect": "Gain the [King's Step] secret fighting art."
+            },]
+        }]
+    },    
 ]
 
 {
-    "Empire": "Newborn survivors are born with +1 permanent strength and the [Pristine] ability. ",
-    "Face Painting": "1[[Endeavor]], roll 1d10: 1-3 No Effect; 4+ Departing survivors gain +2 survival, +1 insanity; 1[[Endeavor]], roll 1d10: 1-3 No Effect; 4+ Gain +1 to all rolls on the Intimacy event this settlement phase;",
-    "Family": "Departing Survivors gain +1 survival. Survivors nominated for Intimacy may give themselves a surname if they do not have one. A newborn inherits the surname of one parent, their weapon type, & half their weapon Proficiency levels rounded down",
-    "Fig Sapling": "1[[Endeavor]], roll 1d10: 1-8 No Effect; 9+ The Sapling grows. Record this. When this result is rolled again, flip this card.",
-    "Fig Tree": "+1 Survival Limit. Departing survivors [Consume] the fruit and gain +1 survival.",
-    "Filleting Table": "Once per settlement phase, if the Returning Survivors are victorious, gain 1 random basic resouce. 1[[Endeavor]], roll 1d10: 1-5 Suffer dismembered arm severe injury; 6+ Gain the [Trick Attack] fighting art.",
-    "Final Fighting Art": "+1 Survival Limit. Once per showdown, you may select a card from the discard pile or wound stack and place it on top of its respective deck.",
-    "Forbidden Dance": "When a survivor uses the [Synchronized Strike] SFA, reroll missed attack rolls once. 1[[Endeavor]], roll 1d10: 1-5 Suffer -1 permanent movement; 6-9 Gain +1 permanent evasion; 10+ Gain the [King's Step] secret fighting art.",
     "Graves": "All newborn survivors gain +1 understanding. When a survivor dies during the hunt or showdown, gain +2 [[Endeavor]]. When a survivor dies during the settlement phase, gain +1 [[Endeavor]].",
     "Guidepost": "Departing Survivors gain +1 survival. 1[[Endeavor]]: Roll 1d10 + survivor's strength. If the result is 12+, gain the Lantern Halbard rare gear and archive this card.",
     "Hands of the Sun": "All survivors gain [Overcharge] survival action.",
