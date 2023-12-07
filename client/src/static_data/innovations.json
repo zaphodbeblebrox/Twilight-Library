@@ -105,7 +105,7 @@
         "name": "Barbaric",
         "static_effect": ["All current and newborn survivors gain +1 permanent strength."],
         "survival_limit_mod": 1,
-        "mod_strength": 1,
+        "mod_strength": 1
     },
     {
         "name": "Bed",
@@ -171,14 +171,14 @@
     },
     {
         "name": "Bloodline",
-        "static_effect": ["Newborn survivors inherit the following from their parents: -The Oracle's Eye, Iridescent Hide, or Pristine ability -1 Surname -Half of one parent's weapon Proficiency levels (rounded up)"],
+        "static_effect": ["Newborn survivors inherit the following from their parents: -The Oracle's Eye, Iridescent Hide, or Pristine ability -1 Surname -Half of one parent's weapon Proficiency levels (rounded up)"]
     },
     {
         "name": "Butchery",
         "static_effect": ["You may now select a weapon type for Proficiency."],
         "endeavor":[{
             "cost": "1[[Endeavor]]",
-            "effect": "Spend 1 organ to gain +1 weapon Proficiency. Limit once per lifetime.",
+            "effect": "Spend 1 organ to gain +1 weapon Proficiency. Limit once per lifetime."
         }]
     },
     {
@@ -275,17 +275,84 @@
             }]
         }]
     },
-
+    {
+        "name": "Death Pact",
+        "static_effect": ["When the survivors perish on the hunt or are defeated in the showdown, Logistics of Death event."],
+        "endeavor":[{
+            "cost": "1[[Endeavor]], 1 hide, 1 organ",
+            "effect": "Special Innovate Pictograph"
+        }]
+    },
+    {
+        "name": "Death Pact",
+        "survival_limit_mod": 1,
+        "static_effect": ["All survivors gain the [Endure] survival action."]
+    },
+    {
+        "name": "Drafting Table",
+        "static_effect": ["When a survivor first reaches 3 understanding, gain a Seed Pattern card."],
+        "endeavor":[{
+            "cost": "1[[Endeavor]], 1 resource",
+            "roll": "1d10",
+            "table": [{
+                "limit_low": "1",
+                "limit_high": "3",
+                "effect": "No Effect."
+            },{
+                "limit_low": "4",
+                "limit_high": "7",
+                "effect": "+1 understanding, once per lifetime."
+            },{
+                "limit_low": "8+",
+                "limit_high": "8+",
+                "effect": "Gain a Seed Pattern card, skip the next hunt."
+            }]
+        }]
+    },
+    {
+        "name": "Dragon Speech",
+        "survival_limit_mod": 1,
+        "static_effect": ["All survivors gain [Encourage] survival action."]
+    },
+    {
+        "name": "Dreamless Language",
+        "survival_limit_mod": 1,
+        "static_effect": ["All survivors gain [Encourage] survival action."]
+    },
+    {
+        "name": "Dream Schematics",
+        "endeavor":[{
+            "cost": "At the start of the develop step, a survivor must Build the Dream",
+            "roll": "1d10",
+            "table": [{
+                "limit_low": "1",
+                "limit_high": "2",
+                "effect": "Suffer Broken Arm severe injury."
+            },{
+                "limit_low": "3",
+                "limit_high": "4",
+                "effect": "Lose 1[[Endeavor]]."
+            },{
+                "limit_low": "5",
+                "limit_high": "6",
+                "effect": "Lose 1 resource."
+            },{
+                "limit_low": "7+",
+                "limit_high": "7+",
+                "effect": "Gain +1 Lumi & +1 construction point for the dream project."
+            }]
+        }]
+    },
+    {
+        "name": "Drums",
+        "endeavor":[{
+            "cost": "1[[Endeavor]]",
+            "effect": "Select one: -Gain +2 insanity -Gain +2 survival -Gain [Rhythm Chaser] fighting art or [Synchronized Strike] secret fighting art."
+        }]
+    },
 ]
 
 {
-    "Death Pact": "When the survivors perish on the hunt or are defeated in the showdown, Logistics of Death event. 1[[Endeavor]], spend 1 hide & 1 organ: Special Innovate Pictograph",
-    "Destiny": "Survival Limit +1. All survivors gain the [Endure] survival action.",
-    "Drafting Table": "When a survivor first reaches 3 understanding, gain a Seed Pattern card. 1[[Endeavor]], spend 1 resource, roll 1d10: 1-3 No Effect; 4-7 +1 understanding, once per lifetime; 8+ Gain a Seed Pattern card, skip the next hunt.",
-    "Dragon Speech": "Survival Limit +1. All survivors gain [Encourage] survival action.",
-    "Dreamless Language": "Survival Limit +1. All survivors gain [Encourage] survival action.",
-    "Dream Schematics": "At the start of the develop step, a survivor must Build the Dream. Roll 1d10: 1-2 Suffer Broken Arm severe injury; 3-4 Lose 1[[Endeavor]]; 5-6 Lose 1 resource; 7+ Gain +1 Lumi & +1 construction point for the dream project",
-    "Drums": "1[[Endeavor]], select one: -Gain +2 insanity -Gain +2 survival -Gain [Rhythm Chaser] fighting art or [Synchronized Strike] secret fighting art.",
     "Empire": "Newborn survivors are born with +1 permanent strength and the [Pristine] ability. ",
     "Face Painting": "1[[Endeavor]], roll 1d10: 1-3 No Effect; 4+ Departing survivors gain +2 survival, +1 insanity; 1[[Endeavor]], roll 1d10: 1-3 No Effect; 4+ Gain +1 to all rolls on the Intimacy event this settlement phase;",
     "Family": "Departing Survivors gain +1 survival. Survivors nominated for Intimacy may give themselves a surname if they do not have one. A newborn inherits the surname of one parent, their weapon type, & half their weapon Proficiency levels rounded down",
