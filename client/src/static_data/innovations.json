@@ -450,16 +450,53 @@
                 "limit_low": "10+",
                 "limit_high": "10+",
                 "effect": "Gain the [King's Step] secret fighting art."
-            },]
+            }]
         }]
-    },    
+    },
+    {
+        "name": "Graves",
+        "static_effect": ["All newborn survivors gain +1 understanding.", "When a survivor dies during the hunt or showdown, gain +2[[Endeavor]]","When a survivor dies during the settlement phase, gain +1[[Endeavor]]."],
+        "mod_understanding": 1
+    },
+    {
+        "name": "Guidepost",
+        "static_effect": [""],
+        "departing_survival": 1,
+        "endeavor":[{
+            "cost": "1[[Endeavor]]",
+            "effect": "If the result is 12+, gain the Lantern Halbard rare gear and archive this card.",
+            "roll": "1d10 + survivor's strength"
+        }]
+    },
+    {
+        "name": "Hands of the Sun",
+        "static_effect": ["All survivors gain [Overcharge] survival action."]
+    },
+    {
+        "name": "Heart Flute",
+        "static_effect": ["When a survivor uses [Synchronized Strike], their attack assist may spend 1 survival to change any monster [[Reaction]] to [[Reaction]] FAILURE before wound attempts are made. Limit once per attack."],
+        "endeavor":[{
+            "cost": "1[[Endeavor]]",
+            "roll": "1d10",
+            "table": [{
+                "limit_low": "1",
+                "limit_high": "5",
+                "effect": "You die."
+            },{
+                "limit_low": "6+",
+                "limit_high": "6+",
+                "effect": "Select any Nemesis monster. Add a special showdown with them this year at the highest level you have not faced. You cannot endeavor here again this phase."
+            }]
+        }]
+    },
+    {
+        "name": "Hovel",
+        "survival_limit_mod": 1,
+        "departing_survival": 1
+    },
 ]
 
 {
-    "Graves": "All newborn survivors gain +1 understanding. When a survivor dies during the hunt or showdown, gain +2 [[Endeavor]]. When a survivor dies during the settlement phase, gain +1 [[Endeavor]].",
-    "Guidepost": "Departing Survivors gain +1 survival. 1[[Endeavor]]: Roll 1d10 + survivor's strength. If the result is 12+, gain the Lantern Halbard rare gear and archive this card.",
-    "Hands of the Sun": "All survivors gain [Overcharge] survival action.",
-    "Heart Flute": "When a survivor uses [Synchronized Strike], their attack assist may spend 1 survival to change any monster [[Reaction]] to [[Reaction]] FAILURE before wound attempts are made. Limit once per attack. 1[[Endeavor]], roll 1d10: 1-5 Die; 6+ Select any Nemesis monster. Add a special showdown with them this year at the highest level you have not faced. You cannot endeavor here again this phase.",
     "Hovel": "+1 Survival Limit. Departing Survivors gain +1 survival.",
     "Inner Lantern": "All surivors gain the [Surge] survival action.",
     "The Knowledge Worm": "At the start of each settlement phase, add 1 scrap to the settlement storage. Departing surivors gain +3 survial and +3 insanity. If any of those survivors have 10+ insanity, A Gracious Host event.",
