@@ -1,29 +1,5 @@
 [
     {
-        "name": "",
-        "static_effect": [""],
-        "survival_limit_mod": ,
-        "departing_survival": ,
-        "departing_insanity": ,
-        "mod_strength": ,
-        "mod_accuracy": ,
-        "mod_luck": ,
-        "mod_speed": ,
-        "mod_lumi": ,
-        "mod_evasion": ,
-        "mod_movement": ,
-        "endeavor":[{
-            "cost": "",
-            "effect": "",
-            "roll": "",
-            "table": [{
-                "limit_low": "",
-                "limit_high": "",
-                "effect": ""
-            }]
-        }]
-    },
-    {
         "name": "Accept Darkness",
         "static_effect": ["Add +2 to all Brain Trauma rolls."]
     },
@@ -657,25 +633,88 @@
         "survival_limit_mod": 1,
         "endeavor":[{
             "cost": "1[[Endeavor]]",
-            "effect": "Spend 1 organ resource and gain 1 Love Juice basic resource. Limit once per year.",
+            "effect": "Spend 1 organ resource and gain 1 Love Juice basic resource. Limit once per year."
         },{
             "cost": "1[[Endeavor]]",
-            "effect": "Spend 1 herb basic resource and gain 1 hide resource. Limit once per lantern year.",
+            "effect": "Spend 1 herb basic resource and gain 1 hide resource. Limit once per lantern year."
         }]
     },
     {
         "name": "Protect the Young",
-        "static_effect": ["When rolling on the Intimacy story event, roll twice and pick 1 result."],
+        "static_effect": ["When rolling on the Intimacy story event, roll twice and pick 1 result."]
+    },
+    {
+        "name": "Radiating Orb",
+        "static_effect": ["Heat.","Departing and newborn survivors gain +1 survival.","Departing survivors with a constellation gain +1 survival."],
+        "departing_survival": 1
+    },
+    {
+        "name": "Records",
+        "endeavor":[{
+            "cost": "1[[Endeavor]]",
+            "effect": "Gain [Scholar of Death] SFA."
+        },{
+            "cost": "1[[Endeavor]]",
+            "effect": "Add \"(Monster Name) Vol. X\", where X is the level of the defeated monster to the settlement record sheet. You retire. There can be up to 3 volumes for each monster."
+        }]
+    },
+    {
+        "name": "Romantic-Arc",
+        "static_effect": ["Add the Romanticism philosophy card to the philosophy deck.","Reduce the Lumi cost to learn knowledge at the Forum by 1 (to a minimum of 1)."],
+        "survival_limit_mod": 1
+    },
+    {
+        "name": "Romantic",
+        "static_effect": ["When you gain a random fighting art, draw 3, pick 1 instead."],
+        "survival_limit_mod": 1
+    },
+    {
+        "name": "Round Stone Training",
+        "endeavor":[{
+            "cost": "1[[Endeavor]], 1 resource",
+            "roll": "1d10",
+            "table": [{
+                "limit_low": "1",
+                "limit_high": "1",
+                "effect": "Gain [Motion Sickness] disorder."
+            },{
+                "limit_low": "2",
+                "limit_high": "2",
+                "effect": "Gain [Crossarm Block] fighting art."
+            },{
+                "limit_low": "3",
+                "limit_high": "8",
+                "effect": "Gain [Tumble] fighting art."
+            },{
+                "limit_low": "9+",
+                "limit_high": "9+",
+                "effect": "Gain +3 insanity and either the [Carapace of Will] or [Propulsion Drive] SFA."
+            }]
+        }]
+    },
+    {
+        "name": "Rubedo",
+        "endeavor":[{
+            "cost": "4[[Endeavor]], once per year",
+            "roll": "1d10",
+            "table": [{
+                "limit_low": "1",
+                "limit_high": "2",
+                "effect": "Returning survivors gain the [Hemophobia] disorder."
+            },{
+                "limit_low": "3",
+                "limit_high": "8",
+                "effect": "Returning survivors gain +1 courage and must skip the next hunt."
+            },{
+                "limit_low": "9+",
+                "limit_high": "9+",
+                "effect": "Returning survivors invert their attribute mondifiers."
+            }]
+        }]
     },
 ]
 
 {
-    "Radiating Orb": "Heat. Departing and newborn survivors gain +1 survival. Departing survivors with a constellation gain +1 survival.",
-    "Records": "1[[Endeavor]]: Gain [Scholar of Death] SFA. 1[[Endeavor]]: Add \"(Monster Name) Vol. X\", where X is the level of the defeated monster to the settlement record sheet. You retire. There can be up to 3 volumes for each monster.",
-    "Romantic-Arc": "+1 Survival Limit. Add the Romanticism philosophy card to the philosophy deck. Reduce the Lumi cost to learn knowledge at the Forum by 1 (to a minimum of 1).",
-    "Romantic": "+1 Survival Limit. When you gain a random fighting art, draw 3, pick 1 instead.",
-    "Round Stone Training": "1[[Endeavor]], spend 1 resource, roll 1d10: 1 Gain [Motion Sickness] disorder; 2 Gain Crossarm Block fighting art; 3-8 Gain [Tumble] fighting art; 9+ Gain +3 insanity and either the [Carapace of Will] or [Propulsion Drive] SFA.",
-    "Rubedo": "4[[Endeavor]], once per year, roll 1d10: 1-2 Returning survivors gain the [Hemophobia] disorder; 3-8 Returning survivors gain +1 courage and must skip the next hunt; 9+ Returning survivors invert their attribute mondifiers",
     "Sacrifice": "1[[Endeavor]], roll 1d10: 1 -2 Population; 2-3 -1 population, departing survivors gain +1 insanity; 4-5 -1 population, departing survivors gain +3 insanity; 6+ -1 population, Lose all your insanity and may remove 1 disorder. If you couldn't depart this settlement phase, you may now do so (even if retired).",
     "Saga": "All newborn survivors gain: +2 courage, +2 understanding, +2 Hunt XP.",
     "Sauna Shrine": "When survivors depart for a NE or special showdown, they gain +10 survival. 1[[Endeavor]], spend 1 organ, roll 1d10: 1-4 Departing survivors gain +2 insanity; 5+ Departing survivors gain +2 strength tokens and add 1[[Armor]] to all hit locations.",
@@ -706,3 +745,28 @@
     "Water of Life": "+1 Survival Limit. 1[[Endeavor]]: Remove a disorder, limit once per lifetime. 1[[Endeavor]], roll 1d10: 1-5 You do not generate endeavor, record this; 6+ You may remove a random disorder.",
     "White Mask": "1[[Endeavor]]: Strange Caravan event. 2[[Endeavor]], spend 1 resource, roll 1d10: 1-6 Gain +2 survival; 7-9 Departing survival gain +1 strength token; 10+ Gain [Red Fist] secret fighting arts"
 }
+
+{
+    "name": "",
+    "static_effect": [""],
+    "survival_limit_mod": ,
+    "departing_survival": ,
+    "departing_insanity": ,
+    "mod_strength": ,
+    "mod_accuracy": ,
+    "mod_luck": ,
+    "mod_speed": ,
+    "mod_lumi": ,
+    "mod_evasion": ,
+    "mod_movement": ,
+    "endeavor":[{
+        "cost": "",
+        "effect": "",
+        "roll": "",
+        "table": [{
+            "limit_low": "",
+            "limit_high": "",
+            "effect": ""
+        }]
+    }]
+},
