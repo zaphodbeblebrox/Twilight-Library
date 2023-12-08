@@ -712,11 +712,41 @@
             }]
         }]
     },
+    {
+        "name": "Sacrifice",
+        "endeavor":[{
+            "cost": "1[[Endeavor]]",
+            "roll": "1d10",
+            "table": [{
+                "limit_low": "1",
+                "limit_high": "1",
+                "effect": "-2 Population."
+            },{
+                "limit_low": "2",
+                "limit_high": "3",
+                "effect": "-1 Population, departing survivors gain +1 insanity."
+            },{
+                "limit_low": "4",
+                "limit_high": "5",
+                "effect": "-1 Population, departing survivors gain +3 insanity."
+            },{
+                "limit_low": "6+",
+                "limit_high": "6+",
+                "effect": "-1 population, Lose all your insanity and may remove 1 disorder. If you couldn't depart this settlement phase, you may now do so (even if retired)."
+            }]
+        }]
+    },
+    {
+        "name": "Saga",
+        "static_effect": ["All newborn survivors gain: +2 courage, +2 understanding, +2 Hunt XP."],
+        "mod_understanding": 2,
+        "mod_courage": 2,
+        "mod_hunt_xp": 2
+    },
+
 ]
 
 {
-    "Sacrifice": "1[[Endeavor]], roll 1d10: 1 -2 Population; 2-3 -1 population, departing survivors gain +1 insanity; 4-5 -1 population, departing survivors gain +3 insanity; 6+ -1 population, Lose all your insanity and may remove 1 disorder. If you couldn't depart this settlement phase, you may now do so (even if retired).",
-    "Saga": "All newborn survivors gain: +2 courage, +2 understanding, +2 Hunt XP.",
     "Sauna Shrine": "When survivors depart for a NE or special showdown, they gain +10 survival. 1[[Endeavor]], spend 1 organ, roll 1d10: 1-4 Departing survivors gain +2 insanity; 5+ Departing survivors gain +2 strength tokens and add 1[[Armor]] to all hit locations.",
     "Scarification": "1[[Endeavor]], once per lifetime, roll the hit location die: [[Head]] Suffer Blinded severe head injury; [[Body]] Gain [Tough] fighting art; [[Waist]] Suffer Destroyed Genitals severe injury; [[Arms]] Gain +1 permanent luck; [[Legs]] Roll 1d10, on 6+, -1 permanent movement.",
     "Scrap Smelting": "1[[Endeavor]], roll 1d10: 1-2 No effect; 3-9 Spend 3 scrap and add 1 Iron to storage; 10+ Spend 3 scrap and add 1 Iron to storage. Repeat any number of times; 1[[Endeavor]], 6 bone, 3 scrap: Build Blacksmith",
@@ -759,6 +789,9 @@
     "mod_lumi": ,
     "mod_evasion": ,
     "mod_movement": ,
+    "mod_understanding": ,
+    "mod_courage": ,
+    "mod_hunt_xp": ,
     "endeavor":[{
         "cost": "",
         "effect": "",
