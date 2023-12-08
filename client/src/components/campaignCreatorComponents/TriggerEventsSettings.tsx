@@ -131,6 +131,7 @@ const CampaignFinalSettings = ({
             campaignSettings.node_core,
             'Basic',
         ];
+
         return monsterList
             .filter((monster) => monster && Object.keys(resourceListData).includes(monster))
             .reduce((currentResourceObject, monster) => {
