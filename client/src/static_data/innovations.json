@@ -496,7 +496,7 @@
     },
     {
         "name": "Inner Lantern",
-        "static_effect": ["All surivors gain the [Surge] survival action."],
+        "static_effect": ["All surivors gain the [Surge] survival action."]
     },
     {
         "name": "The Knowledge Worm",
@@ -555,19 +555,121 @@
         "name": "Morgue",
         "static_effect": ["Cooling.","If the settlement has [Cannibalize], at the start of the develop step gain 1 random basic resource for every 10 survivors in your death count (rounded down)."]
     },
+    {
+        "name": "Nightmare Training",
+        "static_effect": ["May only be used once per settlement phase."],
+        "endeavor":[{
+            "cost": "1[[Endeavor]], lose 3 survival",
+            "roll": "1d10",
+            "table": [{
+                "limit_low": "1",
+                "limit_high": "1",
+                "effect": "Spend 1 survival or die."
+            },{
+                "limit_low": "2",
+                "limit_high": "7",
+                "effect": "May spend 1 survival and roll again."
+            },{
+                "limit_low": "8",
+                "limit_high": "9",
+                "effect": "Gain +1 weapon Proficiency."
+            },{
+                "limit_low": "10+",
+                "limit_high": "10+",
+                "effect": "Gain +1 permanent accuracy or strength."
+            }]
+        }]
+    },
+    {
+        "name": "Nigredo",
+        "static_effect": ["May only be used once per settlement phase."],
+        "survival_limit_mod": 1,
+        "endeavor":[{
+            "cost": "1[[Endeavor]]",
+            "roll": "1d10",
+            "table": [{
+                "limit_low": "1",
+                "limit_high": "2",
+                "effect": "Add 1 Bone resource."
+            },{
+                "limit_low": "3",
+                "limit_high": "10",
+                "effect": "Spend 3 bone to gain 1 Dense Bone Gorm resource."
+            }]
+        }]
+    },
+    {
+        "name": "Nutrition",
+        "static_effect": ["Share +1 Forum Knowledge."],
+        "endeavor":[{
+            "cost": "1[[Endeavor]]",
+            "effect": "Gain +1 Lumi."
+        },{
+            "cost": "3[[Endeavor]]",
+            "effect": "Gain +4 Lumi."
+        },{
+            "cost": "5[[Endeavor]]",
+            "effect": "Gain +1 accuracy and +1 strength. Limit once per lifetime."
+        }]
+    },
+    {
+        "name": "Paint",
+        "static_effect": ["All survivors gain the [Dash] action."]
+    },
+    {
+        "name": "Partnership",
+        "endeavor":[{
+            "cost": "2[[Endeavor]]",
+            "effect": "Nominate two surivivors, they gain the [Partner]-\"(Parnter's Name)\" ability. A survivor may be nominated only once per lifetime."
+        }]
+    },
+    {
+        "name": "Petal Spiral",
+        "static_effect": ["Regardless of their Hunt XP, survivors may select Sword for their weapon Proficiency."],
+        "endeavor":[{
+            "cost": "1[[Endeavor]]",
+            "roll": "1d10",
+            "table": [{
+                "limit_low": "1",
+                "limit_high": "3",
+                "effect": "Lose 1 flower resouce. If you do gain the [Flower Addiction] disorder and roll again. Otherwise, no effect."
+            },{
+                "limit_low": "4",
+                "limit_high": "5",
+                "effect": "Gain 2 survival and +1 understanding."
+            },{
+                "limit_low": "6+",
+                "limit_high": "6+",
+                "effect": "Gain +1 sword Proficiency level."
+            }]
+        }]
+    },
+    {
+        "name": "Pictograph-Scout",
+        "static_effect": ["The first time a Level 3+ quarry monster is defeated by survivors accompanied by a scout, gain the Scout Discovery for that monster."]
+    },
+    {
+        "name": "Pictograph",
+        "static_effect": ["At the start of a survivor's act, they may decide to skip their act and Run Away event.","After a hunt is resolved, a survivor may decide it's time to go home and Run Away event."]
+    },
+    {
+        "name": "Pottery",
+        "survival_limit_mod": 1,
+        "endeavor":[{
+            "cost": "1[[Endeavor]]",
+            "effect": "Spend 1 organ resource and gain 1 Love Juice basic resource. Limit once per year.",
+        },{
+            "cost": "1[[Endeavor]]",
+            "effect": "Spend 1 herb basic resource and gain 1 hide resource. Limit once per lantern year.",
+        }]
+    },
+    {
+        "name": "Protect the Young",
+        "static_effect": ["When rolling on the Intimacy story event, roll twice and pick 1 result."],
+    },
 ]
 
 {
-    "Nightmare Training": "1[[Endeavor]], lose 3 survival, roll 1d10: 1 Spend 1 survival or die; 2-7 May spend 1 survival and roll again; 8-9 Gain +1 weapon Proficiency; 10+ Gain +1 permanent accuracy or strength",
-    "Nigredo": "+1 Survival Limit. 1[[Endeavor]], once this phase, roll 1d10: 1-2 Add 1 Bone resource; 3-10 Spend 3 bone to gain 1 Dense Bone Gorm resource",
-    "Nutrition": "Share +1 Forum Knowledge. 1[[Endeavor]]: Gain +1 Lumi. 3[[Endeavor]]: Gain +4 Lumi. 5[[Endeavor]]: Gain +1 accuracy and +1 strength. Limit once per lifetime.",
-    "Paint": "All survivors gain the [Dash] action.",
-    "Partnership": "2[[Endeavor]]: Nominate two surivivors, they gain the [Partner]-\"(Parnter's Name)\" ability. A survivor may be nominated only once per lifetime.",
-    "Petal Spiral": "Regardless of their Hunt XP, survivors may select Sword for their weapon Proficiency. 1[[Endeavor]], roll 1d10: 1-3 Lose 1 flower resouce. If you do gain the [Flower Addiction] disorder and roll again. Otherwise, no effect; 4-5 Gain 2 survival and +1 understanding; 6+ Gain +1 sword Proficiency level.",
-    "Pictograph-Scout": "The first time a Level 3+ quarry monster is defeated by survivors accompanied by a scout, gain the Scout Discovery for that monster.",
-    "Pictograph": "At the start of a survivor's act, they may decide to skip their act and Run Away event. After a hunt is resolved, a survivor may decide it's time to go home and Run Away event.",
-    "Pottery": "+1 Survival Limit. 1[[Endeavor]]: Spend 1 organ resource and gain 1 Love Juice basic resource. Limit once per year. 1[[Endeavor]]: Spend 1 herb basic resource and gain 1 hide resource. Limit once per lantern year.",
-    "Protect the Young": "When rolling on the Intimacy story event, roll twice and pick 1 result.",
     "Radiating Orb": "Heat. Departing and newborn survivors gain +1 survival. Departing survivors with a constellation gain +1 survival.",
     "Records": "1[[Endeavor]]: Gain [Scholar of Death] SFA. 1[[Endeavor]]: Add \"(Monster Name) Vol. X\", where X is the level of the defeated monster to the settlement record sheet. You retire. There can be up to 3 volumes for each monster.",
     "Romantic-Arc": "+1 Survival Limit. Add the Romanticism philosophy card to the philosophy deck. Reduce the Lumi cost to learn knowledge at the Forum by 1 (to a minimum of 1).",
