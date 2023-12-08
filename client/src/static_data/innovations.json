@@ -494,17 +494,70 @@
         "survival_limit_mod": 1,
         "departing_survival": 1
     },
+    {
+        "name": "Inner Lantern",
+        "static_effect": ["All surivors gain the [Surge] survival action."],
+    },
+    {
+        "name": "The Knowledge Worm",
+        "static_effect": ["At the start of each settlement phase, add 1 scrap to the settlement storage.", "Departing surivors gain +3 survial and +3 insanity. If any of those survivors have 10+ insanity, A Gracious Host event."],
+        "departing_survival": 3,
+        "departing_insanity": 3
+    },
+    {
+        "name": "Language",
+        "static_effect": ["All surivors gain the [Encourage] survival action."],
+        "survival_limit_mod": 1
+    },
+    {
+        "name": "Lantern Oven",
+        "static_effect": ["Heat."],
+        "departing_survival": 1
+    },
+    {
+        "name": "Legless Ball",
+        "static_effect": ["Spend only 1 [[Endeavor]] here per settlement phase."],
+        "departing_insanity": 2,
+        "endeavor":[{
+            "cost": "1[[Endeavor]]",
+            "effect": "Add 1 Web Silk strange resource to storage."
+        },{
+            "cost": "1[[Endeavor]]",
+            "effect": "A survivor with 10+ insanity may kill the Spidicules. Gain Grinning Visage rare gear and archive this card."
+        }]
+    },
+    {
+        "name": "Momento Mori",
+        "static_effect": ["May only be used once per settlement phase."],
+        "endeavor":[{
+            "cost": "1[[Endeavor]], nominate a survior that died last showdown",
+            "roll": "1d10",
+            "table": [{
+                "limit_low": "1",
+                "limit_high": "1",
+                "effect": "No Effect."
+            },{
+                "limit_low": "2",
+                "limit_high": "3",
+                "effect": "Gain the insanity of the dead survivor."
+            },{
+                "limit_low": "4",
+                "limit_high": "8",
+                "effect": "Gain the courage and understanding of the dead survivor."
+            },{
+                "limit_low": "9",
+                "limit_high": "10",
+                "effect": "Gain the Hunt XP of the dead survivor."
+            }]
+        }]
+    },
+    {
+        "name": "Morgue",
+        "static_effect": ["Cooling.","If the settlement has [Cannibalize], at the start of the develop step gain 1 random basic resource for every 10 survivors in your death count (rounded down)."]
+    },
 ]
 
 {
-    "Hovel": "+1 Survival Limit. Departing Survivors gain +1 survival.",
-    "Inner Lantern": "All surivors gain the [Surge] survival action.",
-    "The Knowledge Worm": "At the start of each settlement phase, add 1 scrap to the settlement storage. Departing surivors gain +3 survial and +3 insanity. If any of those survivors have 10+ insanity, A Gracious Host event.",
-    "Language": "+1 Survival Limit. All survivors gain the [Encourage] survival action.",
-    "Lantern Oven": "Heat. Departing survivors gain +1 survival.",
-    "Legless Ball": "Departing survivors gain +2 insanity. Spend only 1 [[Endeavor]] here per settlement phase. 1[[Endeavor]]: Add 1 Web Silk strange resource to storage. 1[[Endeavor]]: A survivor with 10+ insanity may kill the Spidicules. Gain Grinning Visage rare gear and archive this card.",
-    "Momento Mori": "May only be used once per settlement phase. 1[[Endeavor]], nominate a survior that died last showdown, roll 1d10: 1 No Effect; 2-3 Gain the insanity of the dead survivor; 4-8 Gain the courage and understanding of the dead survivor; 9-10 Gain the Hunt XP of the dead survivor",
-    "Morgue": "Cooling. If the settlement has [Cannibalize], at the start of the develop step gain 1 random basic resource for every 10 survivors in your death count (rounded down).",
     "Nightmare Training": "1[[Endeavor]], lose 3 survival, roll 1d10: 1 Spend 1 survival or die; 2-7 May spend 1 survival and roll again; 8-9 Gain +1 weapon Proficiency; 10+ Gain +1 permanent accuracy or strength",
     "Nigredo": "+1 Survival Limit. 1[[Endeavor]], once this phase, roll 1d10: 1-2 Add 1 Bone resource; 3-10 Spend 3 bone to gain 1 Dense Bone Gorm resource",
     "Nutrition": "Share +1 Forum Knowledge. 1[[Endeavor]]: Gain +1 Lumi. 3[[Endeavor]]: Gain +4 Lumi. 5[[Endeavor]]: Gain +1 accuracy and +1 strength. Limit once per lifetime.",
