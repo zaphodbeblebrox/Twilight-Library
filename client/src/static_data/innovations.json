@@ -743,32 +743,288 @@
         "mod_courage": 2,
         "mod_hunt_xp": 2
     },
-
+    {
+        "name": "Sauna Shrine",
+        "static_effect": ["When survivors depart for a NE or special showdown, they gain +10 survival."],
+        "endeavor":[{
+            "cost": "1[[Endeavor]], spend 1 organ",
+            "roll": "1d10",
+            "table": [{
+                "limit_low": "1",
+                "limit_high": "4",
+                "effect": "Departing survivors gain +2 insanity."
+            },{
+                "limit_low": "5+",
+                "limit_high": "5+",
+                "effect": "Departing survivors gain +2 strength tokens and add 1[[Armor]] to all hit locations."
+            }]
+        }]
+    },
+    {
+        "name": "Scarification",
+        "endeavor":[{
+            "cost": "1[[Endeavor]], once per lifetime",
+            "roll": "hit location die",
+            "table": [{
+                "limit_low": "[[head]]",
+                "limit_high": "[[head]]",
+                "effect": "Suffer [Blinded] severe head injury."
+            },{
+                "limit_low": "[[body]]",
+                "limit_high": "[[body]]",
+                "effect": "Gain [Tough] fighting art."
+            },{
+                "limit_low": "[[waist]]",
+                "limit_high": "[[waist]]",
+                "effect": "Suffer [Destroyed Genitals] severe injury."
+            },{
+                "limit_low": "[[arms]]",
+                "limit_high": "[[arms]]",
+                "effect": "Gain +1 permanent luck."
+            },{
+                "limit_low": "[[legs]]",
+                "limit_high": "[[legs]]",
+                "effect": "Roll 1d10, on 6+, -1 permanent movement."
+            }]
+        }]
+    },
+    {
+        "name": "Scrap Smelting",
+        "endeavor":[{
+            "cost": "1[[Endeavor]]",
+            "roll": "1d10",
+            "table": [{
+                "limit_low": "1",
+                "limit_high": "2",
+                "effect": "No Effect."
+            },{
+                "limit_low": "3",
+                "limit_high": "9",
+                "effect": "Spend 3 scrap and add 1 Iron to storage."
+            },{
+                "limit_low": "10+",
+                "limit_high": "10+",
+                "effect": "Spend 3 scrap and add 1 Iron to storage. Repeat any number of times."
+            }]
+        },{
+            "cost": "1[[Endeavor]], 6 bone, 3 scrap",
+            "effect": "Build Blacksmith"
+        }]
+    },
+    {
+        "name": "Sculpture",
+        "endeavor":[{
+            "cost": "1[[Endeavor]]",
+            "effect": "Skip the next Hunt and lose a fighting art. Record this fighting art on the settlement record sheet. A settlement can only have one statue."
+        },{
+            "cost": "1[[Endeavor]]",
+            "effect": "Roll 1d10, on 6+ gain the recorded fighting art."
+        }]
+    },
+    {
+        "name": "Sculpture-Arc",
+        "endeavor":[{
+            "cost": "1[[Endeavor]]",
+            "effect": "Skip the next Hunt and lose a knowledge. Record this knowledge on the settlement record sheet. A settlement can only have one statue. Always [Share] this knowledge in addition to the others at the Forum. It costs 1 less lumi to gain."
+        }]
+    },
+    {
+        "name": "Settlement Watch",
+        "static_effect": ["Departing Survivors gain +2 survival when they depart for a Nemesis Encounter or a Special Showdown."],
+        "endeavor":[{
+            "cost": "1[[Endeavor]]",
+            "roll": "1d10",
+            "table": [{
+                "limit_low": "1",
+                "limit_high": "7",
+                "effect": "If you have no fighting arts, gain a random fighting art."
+            },{
+                "limit_low": "8+",
+                "limit_high": "8+",
+                "effect": "If you have 0 or less strength, gain +1 strength. Limit once per lifetime."
+            }]
+        }]
+    },
+    {
+        "name": "Shadow Dancing",
+        "static_effect": ["You may only endeavor here if a survivor died during the last hunt or showdown."],
+        "endeavor":[{
+            "cost": "1[[Endeavor]], once per year",
+            "roll": "1d10",
+            "table": [{
+                "limit_low": "1",
+                "limit_high": "5",
+                "effect": "Gain +3 insanity and a random fighting art."
+            },{
+                "limit_low": "6+",
+                "limit_high": "6+",
+                "effect": "Gain the [Sneak Attack] fighting art."
+            }]
+        }]
+    },
+    {
+        "name": "Shattered Blade",
+        "endeavor":[{
+            "cost": "1[[Endeavor]], Spend 1 organ, archive this card",
+            "effect": "Gain the Unbreakable Zanbato pattern gear. With every reforge, the weapon gains +2 strength for the rest of this campaign (note this on the settlement record sheet)."
+        }]
+    },
+    {
+        "name": "Shrine",
+        "endeavor":[{
+            "cost": "1[[Endeavor]], once per year",
+            "roll": "1d10",
+            "table": [{
+                "limit_low": "1",
+                "limit_high": "3",
+                "effect": "Departing survivors gain +1 insanity."
+            },{
+                "limit_low": "4+",
+                "limit_high": "4+",
+                "effect": "Departing Survivors add 1[[Armor]] to all hit locations."
+            }]
+        }]
+    },
+    {
+        "name": "Silent Dialect",
+        "static_effect": ["All survivors gain the [Fist Pump] survival action."]
+    },
+    {
+        "name": "Silk-Refining",
+        "survival_limit_mod": 1,
+        "endeavor":[{
+            "cost": "1[[Endeavor]], once per year",
+            "effect": "Silk Surgery."
+        },{
+            "cost": "1[[Endeavor]], once per year",
+            "effect": "Convert 1 silk resource into 1 hide basic resource."
+        },{
+            "cost": "1[[Endeavor]], once per year",
+            "effect": "Spend 2 silk, 1 bone, and 1 organ to build the Silk Mill settlement location."
+        }]
+    },
+    {
+        "name": "Song of Concord",
+        "static_effect": ["Archive this when you hunt Smog Singers."],
+        "departing_survival": 5,
+        "endeavor":[{
+            "cost": "1[[Endeavor]]",
+            "roll": "1d10",
+            "table": [{
+                "limit_low": "1",
+                "limit_high": "2",
+                "effect": "No Effect."
+            },{
+                "limit_low": "3",
+                "limit_high": "5",
+                "effect": "Departing survivors gain +2 insanity."
+            },{
+                "limit_low": "6+",
+                "limit_high": "6+",
+                "effect": "You are [Hushed] until the next lantern year."
+            }]
+        }]
+    },
+    {
+        "name": "Song of the Brave",
+        "static_effect": ["On Arrival, each non-deaf survivor may remove 1  negative attribute token.","During the Overwhelming Darkness event, each non-deaf survivor may select the Path of the Brave."],
+    },
+    {
+        "name": "Stoic Statue",
+        "endeavor":[{
+            "cost": "1[[Endeavor]], you may not depart or endeavor again this year",
+            "roll": "1d10",
+            "table": [{
+                "limit_low": "1",
+                "limit_high": "6",
+                "effect": "Gain +1 understanding."
+            },{
+                "limit_low": "7",
+                "limit_high": "10",
+                "effect": "Departing survivors gain +1 survival. If this result is gained more than once in a year, instead gain +10 survival."
+            }]
+        }]
+    },
+    {
+        "name": "Stone Plate",
+        "static_effect": ["Survivors may claim the Clothed & Satiated armor bonus card if they meet the requirements."]
+    },
+    {
+        "name": "Stone Stairs",
+        "static_effect": ["During the settlement phase, if a survivor runs away, is exiled, or dies, they climb the stairs instead."],
+        "endeavor":[{
+            "cost": "-",
+            "roll": "1d10",
+            "table": [{
+                "limit_low": "1",
+                "limit_high": "9",
+                "effect": "They die, do not roll here again."
+            },{
+                "limit_low": "10+",
+                "limit_high": "10+",
+                "effect": "You disappear. Do not gain the benefits of your Death Principle. Returning survivors gain +1 Lumi."
+            }]
+        }]
+    },
+    {
+        "name": "Storytelling",
+        "survival_limit_mod": 1,
+        "endeavor":[{
+            "cost": "2[[Endeavor]]",
+            "roll": "1d10",
+            "table": [{
+                "limit_low": "1",
+                "limit_high": "3",
+                "effect": "Gain +1 understanding."
+            },{
+                "limit_low": "4",
+                "limit_high": "7",
+                "effect": "All departing survivors gain +3 insanity."
+            },{
+                "limit_low": "8+",
+                "limit_high": "8+",
+                "effect": "White Speaker event."
+            }]
+        }]
+    },
+    {
+        "name": "Subterranean Agriculture",
+        "endeavor":[{
+            "cost": "1[[Endeavor]]",
+            "effect": "If Black Harvest isn't on the timeline, Underground Sow event."
+        },{
+            "cost": "1[[Endeavor]]",
+            "effect": "If Black Harvest is on the timeline, you may spend 1 Preserved Caustic Dung to increase its rank by 1 to a max of 3. Limit once per year."
+        }]
+    },
+    {
+        "name": "Sun Language",
+        "static_effect": ["All survivors gain the [Embolden] survival action."]
+    },
+    {
+        "name": "Supreme Cuisine",
+        "static_effect": ["Returning survivors gain +2 lumi."],
+        "survival_limit_mod": 3,
+        "endeavor":[{
+            "cost": "1[[Endeavor]]",
+            "effect": "Select a quarry monster. If the settlement has earned at least 10 CC from the monster, gain its meal gear card."
+        }]
+    },
+    {
+        "name": "Survival of the Fittest",
+        "static_effect": ["When rolling on the Intimacy story event, roll twice and pick the lowest result.","All current and newborn survivors gain +1 strength & +1 evasion.","Once per lifetime, a survivor may reroll a single roll result. They must keep the new result."],
+        "survival_limit_mod": 1,
+        "mod_strength": 1,
+        "mod_evasion": 1
+    },
+    {
+        "name": "Symposium",
+        "static_effect": ["When a survivor innovates, draw an additonal 2 innovation cards to choose from."],
+        "survival_limit_mod": 1
+    },
 ]
 
 {
-    "Sauna Shrine": "When survivors depart for a NE or special showdown, they gain +10 survival. 1[[Endeavor]], spend 1 organ, roll 1d10: 1-4 Departing survivors gain +2 insanity; 5+ Departing survivors gain +2 strength tokens and add 1[[Armor]] to all hit locations.",
-    "Scarification": "1[[Endeavor]], once per lifetime, roll the hit location die: [[Head]] Suffer Blinded severe head injury; [[Body]] Gain [Tough] fighting art; [[Waist]] Suffer Destroyed Genitals severe injury; [[Arms]] Gain +1 permanent luck; [[Legs]] Roll 1d10, on 6+, -1 permanent movement.",
-    "Scrap Smelting": "1[[Endeavor]], roll 1d10: 1-2 No effect; 3-9 Spend 3 scrap and add 1 Iron to storage; 10+ Spend 3 scrap and add 1 Iron to storage. Repeat any number of times; 1[[Endeavor]], 6 bone, 3 scrap: Build Blacksmith",
-    "Sculpture": "1[[Endeavor]]: Skip the next Hunt and lose a fighting art. Record this fighting art on the settlement record sheet. A settlement can only have one statue. 1[[Endeavor]]: Roll 1d10, on 6+ gain the recorded fighting art.",
-    "Sculpture-Arc": "1[[Endeavor]]: Skip the next Hunt and lose a knowledge. Record this knowledge on the settlement record sheet. A settlement can only have one statue. Always [Share] this knowledge in addition to the others at the Forum. It costs 1 less lumi to gain.",
-    "Settlement Watch": "Departing Survivors gain +2 survival when they depart for a NE or a Special showdown. 1[[Endeavor]], roll 1d10: 1-7 If you have no fighting arts, gain a random fighting art; 8+ If you have 0 or less strength, gain +1 strength. Limit once per lifetime.",
-    "Shadow Dancing": "You may only endeavor here if a survivor died during the last hunt or showdown. 1[[Endeavor]], once per year, roll 1d10: 1-5 Gain +3 insanity and a random fighting art; 6+ Gain the [Sneak Attack] fighting art.",
-    "Shattered Blade": "1[[Endeavor]]: Spend 1 organ and archive this card. Gain the Unbreakable Zanbato pattern gear. With every reforge, the weapon gains +2 strength for the rest of this campaign (note this on the settlement record sheet).",
-    "Shrine": "May be used once per year. 1[[Endeavor]], roll 1d10: 1-3 Departing survivors gain +1 insanity; 4+ Departing Survivors add 1[[Armor]] to all hit locations.",
-    "Silent Dialect": "All survivors gain the Fist Pump survival action.",
-    "Silk-Refining": "+1 Survival Limit. 1[[Endeavor]]: Silk Surgery. 1[[Endeavor]]: Convert 1 silk resource into 1 hide basic resource. 1[[Endeavor]]: Spend 2 silk, 1 bone, and 1 organ to build the Silk Mill settlement location.",
-    "Song of Concord": "Departing survivors gain +5 survival. Archive this when you hunt Smog Singers. 1[[Endeavor]], roll 1d10: 1-2 No Effect; 3-5 Departing survivors gain +2 insanity; 6+ You are [Hushed] until the next lantern year.",
-    "Song of the Brave": "On Arrival, each non-deaf survivor may remove 1  negative attribute token. During the Overwhelming Darkness event, each non-deaf survivor may select the Path of the Brave.",
-    "Stoic Statue": "1[[Endeavor]], you may not depart or endeavor again this year, roll 1d10: 1-6 Gain +1 understanding; 7-10 Departing survivors gain +1 survival. If this result is gained more than once in a year, instead gain +10 survival.",
-    "Stone Plate": "Survivors may claim the Clothed & Satiated armor bonus card if they meet the requirements.",
-    "Stone Stairs": "During the settlement phase, if a survivor runs away, is exiled, or dies, they climb the stairs instead. -> Roll 1d10: 1-9: Dies, do not roll here again; 10+ You disappear. Do not gain the benefits of your Death Principle. Returning survivors gain +1 Lumi.",
-    "Storytelling": "+1 Survival Limit. 2[[Endeavor]], roll 1d10: 1-3 Gain +1 understanding; 4-7 All departing survivors gain +3 insanity; 8+ White Speaker event.",
-    "Subterranean Agriculture": "1[[Endeavor]]: If Black Harvest isn't on the timeline, Underground Sow event. 1[[Endeavor]]: If Black Harvest is on the timeline, you may spend 1 Preserved Caustic Dung to increase its rank by 1 to a max of 3. Limit once per year.",
-    "Sun Language": "All survivors gain the [Embolden] survival action.",
-    "Supreme Cuisine": "+3 Survival Limit. Returning survivors gain +2 lumi. 1[[Endeavor]]: Select a quarry monster. If the settlement has earned at least 10 CC from the monster, gain its meal gear card.",
-    "Survival of the Fittest": "+1 Survival Limit. When rolling on the Intimacy story event, roll twice and pick the lowest result. All current and newborn survivors gain +1 strength & +1 evasion. Once per lifetime, a survivor may reroll a single roll result. They must keep the new result.",
-    "Symposium": "+1 Survival Limit. When a survivor innovates, draw an additonal 2 innovation cards to choose from.",
     "Ultimate Weapon": "+1 Survival Limit. When you defeat a monster, gain 1 monster resource of your choice from its resource deck.",
     "Umbilical Bank": "When a new survivor is born, you may add 1 Life String strange resouce to storage. 1[[Endeavor]]: Umbilical Symbiosis event. 1[[Endeavor]], 3 organ: Innovate Pottery.",
     "War Room": "+1 Survival Limit. Quarries cannot move off of the hunt board. If the survivors would move backwards on the hunt board, roll 1d10. On 4+, they don't. 1[[Endeavor]]: The group may reroll 1 Hunt Event Table result (1d100) this lantern year. They must reroll before performing the event.",
