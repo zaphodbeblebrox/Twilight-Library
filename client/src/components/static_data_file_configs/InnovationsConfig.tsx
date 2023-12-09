@@ -1,8 +1,8 @@
 import rawInnovationsData from '../../static_data/innovations.json';
 
 {
-    "name": ,
-    "static_effect": [],
+    "name": "",
+    "static_effect": [""],
     "survival_limit_mod": ,
     "departing_survival": ,
     "departing_insanity": ,
@@ -13,14 +13,17 @@ import rawInnovationsData from '../../static_data/innovations.json';
     "mod_lumi": ,
     "mod_evasion": ,
     "mod_movement": ,
+    "mod_understanding": ,
+    "mod_courage": ,
+    "mod_hunt_xp": ,
     "endeavor":[{
-        "cost": ,
-        "roll": ,
-        "effect": ""
+        "cost": "",
+        "effect": "",
+        "roll": "",
         "table": [{
-            "limit_low": ,
-            "limit_high": ,
-            "effect": 
+            "limit_low": "",
+            "limit_high": "",
+            "effect": ""
         }]
     }]
 }
