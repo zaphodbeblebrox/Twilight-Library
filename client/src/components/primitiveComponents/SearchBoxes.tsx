@@ -3,15 +3,16 @@ import { AlertDialog, Button, Dialog, Flex, Text, TextField } from '@radix-ui/th
 import { useEffect, useMemo, useState } from 'react';
 import { TwilightSelect } from './Primitives';
 import Fuse from 'fuse.js';
+import { innovationData } from '../static_data_file_configs/InnovationsConfig';
 
-interface TwilightSearchPopup {
+interface TwilightSearchPopupProps {
     buttonText: string;
     labelText: string;
     options: string[];
     onSubmit: (selectedValue: string) => void;
 }
 
-const TwilightSearchPopup = ({ buttonText, labelText, options, onSubmit }: TwilightSearchPopup) => {
+const TwilightSearchPopup = ({ buttonText, labelText, options, onSubmit }: TwilightSearchPopupProps) => {
     // TODO: Make this popup window a static size
     const [searchTerm, setSearchTerm] = useState('');
     const [results, setResults] = useState<string[]>([]);
