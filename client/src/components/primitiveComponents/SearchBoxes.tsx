@@ -1,9 +1,6 @@
-import * as Label from '@radix-ui/react-label';
-import { AlertDialog, Button, Dialog, Flex, Text, TextField } from '@radix-ui/themes';
-import { useEffect, useMemo, useState } from 'react';
-import { TwilightSelect } from './Primitives';
+import { Button, Dialog, Flex, TextField } from '@radix-ui/themes';
+import { useMemo, useState } from 'react';
 import Fuse from 'fuse.js';
-import { innovationData } from '../static_data_file_configs/InnovationsConfig';
 
 interface TwilightSearchPopupProps {
     buttonText: string;
