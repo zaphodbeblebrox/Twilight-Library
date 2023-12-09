@@ -36,4 +36,5 @@ export type TypeInnovationData = Partial<TypeInnovationStatMods> & {
     endeavor?: Partial<TypeInnovationEndeavor>[];
 };
 
-export const innovationData: TypeInnovationData[] = rawInnovationsData;
+export type InnovationKeys = { [K in keyof typeof rawInnovationsData]: string[] };
+export const innovationData: Record<keyof InnovationKeys, TypeInnovationData> = rawInnovationsData;
