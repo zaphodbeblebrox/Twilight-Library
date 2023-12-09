@@ -1,33 +1,5 @@
 import rawInnovationsData from '../../static_data/innovations.json';
 
-// {
-//     "name": str,
-//     "static_effect": str[],
-//     "survival_limit_mod": num,
-//     "departing_survival": num,
-//     "departing_insanity": num,
-//     "mod_strength": num,
-//     "mod_accuracy": num,
-//     "mod_luck": num,
-//     "mod_speed": num,
-//     "mod_lumi": num,
-//     "mod_evasion": num,
-//     "mod_movement": num,
-//     "mod_understanding": num,
-//     "mod_courage": num,
-//     "mod_hunt_xp": num,
-//     "endeavor":[{
-//         "cost": str,
-//         "effect": str,
-//         "roll": str,
-//         "table": [{
-//             "limit_low": str,
-//             "limit_high": str,
-//             "effect": str
-//         }]
-//     }]
-// }
-
 // --- Innovations Json ---
 export type TypeInnovationStatMods = {
     survival_limit_mod: number;
