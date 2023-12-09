@@ -1,9 +1,9 @@
-{
-    "Accept Darkness": {
+[
+    {
         "name": "Accept Darkness",
         "static_effect": ["Add +2 to all Brain Trauma rolls."]
     },
-    "Albedo": {
+    {
         "name": "Albedo",
         "endeavor": [
             {
@@ -29,11 +29,11 @@
             }
         ]
     },
-    "Ammonia": {
+    {
         "name": "Ammonia",
         "departing_survival": 1
     },
-    "Aquarobics": {
+    {
         "name": "Aquarobics",
         "survival_limit_mod": 1,
         "endeavor": [
@@ -60,7 +60,7 @@
             }
         ]
     },
-    "Arena": {
+    {
         "name": "Arena",
         "endeavor": [
             {
@@ -91,13 +91,13 @@
             }
         ]
     },
-    "Barbaric": {
+    {
         "name": "Barbaric",
         "static_effect": ["All current and newborn survivors gain +1 permanent strength."],
         "survival_limit_mod": 1,
         "mod_strength": 1
     },
-    "Bed": {
+    {
         "name": "Bed",
         "survival_limit_mod": 1,
         "endeavor": [
@@ -119,7 +119,7 @@
             }
         ]
     },
-    "Black Mask": {
+    {
         "name": "Black Mask",
         "endeavor": [
             {
@@ -149,7 +149,7 @@
             }
         ]
     },
-    "Bloodletting": {
+    {
         "name": "Bloodletting",
         "endeavor": [
             {
@@ -175,13 +175,13 @@
             }
         ]
     },
-    "Bloodline": {
+    {
         "name": "Bloodline",
         "static_effect": [
             "Newborn survivors inherit the following from their parents: -The Oracle's Eye, Iridescent Hide, or Pristine ability -1 Surname -Half of one parent's weapon Proficiency levels (rounded up)"
         ]
     },
-    "Butchery": {
+    {
         "name": "Butchery",
         "static_effect": ["You may now select a weapon type for Proficiency."],
         "endeavor": [
@@ -191,19 +191,19 @@
             }
         ]
     },
-    "Cannibalize": {
+    {
         "name": "Cannibalize",
         "static_effect": [
             "When a survivor dies, draw 1 basic resource and add it to the settlement storage. Do not gain if a survivor is lost, ceases to exist, or is exiled."
         ],
         "survival_limit_mod": 1
     },
-    "Character": {
+    {
         "name": "Character",
         "static_effect": ["When a survivor is named, they gain a random Character card."],
         "survival_limit_mod": 1
     },
-    "Choreia": {
+    {
         "name": "Choreia",
         "endeavor": [
             {
@@ -229,7 +229,7 @@
             }
         ]
     },
-    "Citrinitas": {
+    {
         "name": "Citrinitas",
         "survival_limit_mod": 1,
         "endeavor": [
@@ -251,21 +251,21 @@
             }
         ]
     },
-    "Clan of Death": {
+    {
         "name": "Clan of Death",
         "static_effect": ["All newborn survivors gain: +1 accuracy, +1 strength, +1 evasion."],
         "mod_strength": 1,
         "mod_accuracy": 1,
         "mod_evasion": 1
     },
-    "Collective Toil": {
+    {
         "name": "Collective Toil",
         "static_effect": ["At the start of the settlement phase, gain +1[[Endeavor]] for every 10 population."],
         "mod_strength": 1,
         "mod_accuracy": 1,
         "mod_evasion": 1
     },
-    "Cooking": {
+    {
         "name": "Cooking",
         "static_effect": ["+1[[Endeavor]]"],
         "survival_limit_mod": 1,
@@ -280,7 +280,7 @@
             }
         ]
     },
-    "Crimson Candy": {
+    {
         "name": "Crimson Candy",
         "static_effect": ["At the start of the showdown, each survivor gains [[star]] survival."],
         "endeavor": [
@@ -307,7 +307,7 @@
             }
         ]
     },
-    "Death Pact": {
+    {
         "name": "Death Pact",
         "static_effect": [
             "When the survivors perish on the hunt or are defeated in the showdown, Logistics of Death event."
@@ -319,12 +319,12 @@
             }
         ]
     },
-    "Destiny": {
-        "name": "Destiny",
+    {
+        "name": "Death Pact",
         "survival_limit_mod": 1,
         "static_effect": ["All survivors gain the [Endure] survival action."]
     },
-    "Drafting Table": {
+    {
         "name": "Drafting Table",
         "static_effect": ["When a survivor first reaches 3 understanding, gain a Seed Pattern card."],
         "endeavor": [
@@ -351,17 +351,17 @@
             }
         ]
     },
-    "Dragon Speech": {
+    {
         "name": "Dragon Speech",
         "survival_limit_mod": 1,
         "static_effect": ["All survivors gain [Encourage] survival action."]
     },
-    "Dreamless Language": {
+    {
         "name": "Dreamless Language",
         "survival_limit_mod": 1,
         "static_effect": ["All survivors gain [Encourage] survival action."]
     },
-    "Dream Schematics": {
+    {
         "name": "Dream Schematics",
         "endeavor": [
             {
@@ -392,7 +392,7 @@
             }
         ]
     },
-    "Drums": {
+    {
         "name": "Drums",
         "endeavor": [
             {
@@ -401,12 +401,12 @@
             }
         ]
     },
-    "Empire": {
+    {
         "name": "Empire",
         "static_effect": ["Newborn survivors are born with +1 permanent strength and the [Pristine] ability."],
         "mod_strength": 1
     },
-    "Face Painting": {
+    {
         "name": "Face Painting",
         "endeavor": [
             {
@@ -443,7 +443,7 @@
             }
         ]
     },
-    "Family": {
+    {
         "name": "Family",
         "static_effect": [
             "Survivors nominated for Intimacy may give themselves a surname if they do not have one.",
@@ -451,7 +451,7 @@
         ],
         "departing_survival": 1
     },
-    "Fig Sapling": {
+    {
         "name": "Fig Sapling",
         "endeavor": [
             {
@@ -472,13 +472,13 @@
             }
         ]
     },
-    "Fig Tree": {
+    {
         "name": "Fig Tree",
         "static_effect": ["Departing survivors [Consume] the fruit and gain +1 survival."],
         "survival_limit_mod": 1,
         "departing_survival": 1
     },
-    "Filleting Table": {
+    {
         "name": "Filleting Table",
         "static_effect": [
             "Once per settlement phase, if the Returning Survivors are victorious, gain 1 random basic resouce."
@@ -502,14 +502,14 @@
             }
         ]
     },
-    "Final Fighting Art": {
+    {
         "name": "Final Fighting Art",
         "static_effect": [
             "Once per showdown, you may select a card from the discard pile or wound stack and place it on top of its respective deck."
         ],
         "survival_limit_mod": 1
     },
-    "Forbidden Dance": {
+    {
         "name": "Forbidden Dance",
         "static_effect": ["When a survivor uses the [Synchronized Strike] SFA, reroll missed attack rolls once."],
         "endeavor": [
@@ -536,7 +536,7 @@
             }
         ]
     },
-    "Graves": {
+    {
         "name": "Graves",
         "static_effect": [
             "All newborn survivors gain +1 understanding.",
@@ -545,7 +545,7 @@
         ],
         "mod_understanding": 1
     },
-    "Guidepost": {
+    {
         "name": "Guidepost",
         "static_effect": [""],
         "departing_survival": 1,
@@ -557,11 +557,11 @@
             }
         ]
     },
-    "Hands of the Sun": {
+    {
         "name": "Hands of the Sun",
         "static_effect": ["All survivors gain [Overcharge] survival action."]
     },
-    "Heart Flute": {
+    {
         "name": "Heart Flute",
         "static_effect": [
             "When a survivor uses [Synchronized Strike], their attack assist may spend 1 survival to change any monster [[Reaction]] to [[Reaction]] FAILURE before wound attempts are made. Limit once per attack."
@@ -585,16 +585,16 @@
             }
         ]
     },
-    "Hovel": {
+    {
         "name": "Hovel",
         "survival_limit_mod": 1,
         "departing_survival": 1
     },
-    "Inner Lantern": {
+    {
         "name": "Inner Lantern",
         "static_effect": ["All surivors gain the [Surge] survival action."]
     },
-    "The Knowledge Worm": {
+    {
         "name": "The Knowledge Worm",
         "static_effect": [
             "At the start of each settlement phase, add 1 scrap to the settlement storage.",
@@ -603,17 +603,17 @@
         "departing_survival": 3,
         "departing_insanity": 3
     },
-    "Language": {
+    {
         "name": "Language",
         "static_effect": ["All surivors gain the [Encourage] survival action."],
         "survival_limit_mod": 1
     },
-    "Lantern Oven": {
+    {
         "name": "Lantern Oven",
         "static_effect": ["Heat."],
         "departing_survival": 1
     },
-    "Legless Ball": {
+    {
         "name": "Legless Ball",
         "static_effect": ["Spend only 1 [[Endeavor]] here per settlement phase."],
         "departing_insanity": 2,
@@ -628,7 +628,7 @@
             }
         ]
     },
-    "Momento Mori": {
+    {
         "name": "Momento Mori",
         "static_effect": ["May only be used once per settlement phase."],
         "endeavor": [
@@ -660,14 +660,14 @@
             }
         ]
     },
-    "Morgue": {
+    {
         "name": "Morgue",
         "static_effect": [
             "Cooling.",
             "If the settlement has [Cannibalize], at the start of the develop step gain 1 random basic resource for every 10 survivors in your death count (rounded down)."
         ]
     },
-    "Nightmare Training": {
+    {
         "name": "Nightmare Training",
         "static_effect": ["May only be used once per settlement phase."],
         "endeavor": [
@@ -699,7 +699,7 @@
             }
         ]
     },
-    "Nigredo": {
+    {
         "name": "Nigredo",
         "static_effect": ["May only be used once per settlement phase."],
         "survival_limit_mod": 1,
@@ -722,7 +722,7 @@
             }
         ]
     },
-    "Nutrition": {
+    {
         "name": "Nutrition",
         "static_effect": ["Share +1 Forum Knowledge."],
         "endeavor": [
@@ -740,11 +740,11 @@
             }
         ]
     },
-    "Paint": {
+    {
         "name": "Paint",
         "static_effect": ["All survivors gain the [Dash] action."]
     },
-    "Partnership": {
+    {
         "name": "Partnership",
         "endeavor": [
             {
@@ -753,7 +753,7 @@
             }
         ]
     },
-    "Petal Spiral": {
+    {
         "name": "Petal Spiral",
         "static_effect": ["Regardless of their Hunt XP, survivors may select Sword for their weapon Proficiency."],
         "endeavor": [
@@ -780,20 +780,20 @@
             }
         ]
     },
-    "Pictograph-Scout": {
+    {
         "name": "Pictograph-Scout",
         "static_effect": [
             "The first time a Level 3+ quarry monster is defeated by survivors accompanied by a scout, gain the Scout Discovery for that monster."
         ]
     },
-    "Pictograph": {
+    {
         "name": "Pictograph",
         "static_effect": [
             "At the start of a survivor's act, they may decide to skip their act and Run Away event.",
             "After a hunt is resolved, a survivor may decide it's time to go home and Run Away event."
         ]
     },
-    "Pottery": {
+    {
         "name": "Pottery",
         "survival_limit_mod": 1,
         "endeavor": [
@@ -807,11 +807,11 @@
             }
         ]
     },
-    "Protect the Young": {
+    {
         "name": "Protect the Young",
         "static_effect": ["When rolling on the Intimacy story event, roll twice and pick 1 result."]
     },
-    "Radiating Orb": {
+    {
         "name": "Radiating Orb",
         "static_effect": [
             "Heat.",
@@ -820,7 +820,7 @@
         ],
         "departing_survival": 1
     },
-    "Records": {
+    {
         "name": "Records",
         "endeavor": [
             {
@@ -833,7 +833,7 @@
             }
         ]
     },
-    "Romantic-Arc": {
+    {
         "name": "Romantic-Arc",
         "static_effect": [
             "Add the Romanticism philosophy card to the philosophy deck.",
@@ -841,12 +841,12 @@
         ],
         "survival_limit_mod": 1
     },
-    "Romantic": {
+    {
         "name": "Romantic",
         "static_effect": ["When you gain a random fighting art, draw 3, pick 1 instead."],
         "survival_limit_mod": 1
     },
-    "Round Stone Training": {
+    {
         "name": "Round Stone Training",
         "endeavor": [
             {
@@ -877,7 +877,7 @@
             }
         ]
     },
-    "Rubedo": {
+    {
         "name": "Rubedo",
         "endeavor": [
             {
@@ -903,7 +903,7 @@
             }
         ]
     },
-    "Sacrifice": {
+    {
         "name": "Sacrifice",
         "endeavor": [
             {
@@ -934,14 +934,14 @@
             }
         ]
     },
-    "Saga": {
+    {
         "name": "Saga",
         "static_effect": ["All newborn survivors gain: +2 courage, +2 understanding, +2 Hunt XP."],
         "mod_understanding": 2,
         "mod_courage": 2,
         "mod_hunt_xp": 2
     },
-    "Sauna Shrine": {
+    {
         "name": "Sauna Shrine",
         "static_effect": ["When survivors depart for a NE or special showdown, they gain +10 survival."],
         "endeavor": [
@@ -963,7 +963,7 @@
             }
         ]
     },
-    "Scarification": {
+    {
         "name": "Scarification",
         "endeavor": [
             {
@@ -999,7 +999,7 @@
             }
         ]
     },
-    "Scrap Smelting": {
+    {
         "name": "Scrap Smelting",
         "endeavor": [
             {
@@ -1029,7 +1029,7 @@
             }
         ]
     },
-    "Sculpture": {
+    {
         "name": "Sculpture",
         "endeavor": [
             {
@@ -1042,7 +1042,7 @@
             }
         ]
     },
-    "Sculpture-Arc": {
+    {
         "name": "Sculpture-Arc",
         "endeavor": [
             {
@@ -1051,7 +1051,7 @@
             }
         ]
     },
-    "Settlement Watch": {
+    {
         "name": "Settlement Watch",
         "static_effect": [
             "Departing Survivors gain +2 survival when they depart for a Nemesis Encounter or a Special Showdown."
@@ -1075,7 +1075,7 @@
             }
         ]
     },
-    "Shadow Dancing": {
+    {
         "name": "Shadow Dancing",
         "static_effect": ["You may only endeavor here if a survivor died during the last hunt or showdown."],
         "endeavor": [
@@ -1097,7 +1097,7 @@
             }
         ]
     },
-    "Shattered Blade": {
+    {
         "name": "Shattered Blade",
         "endeavor": [
             {
@@ -1106,7 +1106,7 @@
             }
         ]
     },
-    "Shrine": {
+    {
         "name": "Shrine",
         "endeavor": [
             {
@@ -1127,11 +1127,11 @@
             }
         ]
     },
-    "Silent Dialect": {
+    {
         "name": "Silent Dialect",
         "static_effect": ["All survivors gain the [Fist Pump] survival action."]
     },
-    "Silk-Refining": {
+    {
         "name": "Silk-Refining",
         "survival_limit_mod": 1,
         "endeavor": [
@@ -1149,7 +1149,7 @@
             }
         ]
     },
-    "Song of Concord": {
+    {
         "name": "Song of Concord",
         "static_effect": ["Archive this when you hunt Smog Singers."],
         "departing_survival": 5,
@@ -1177,14 +1177,14 @@
             }
         ]
     },
-    "Song of the Brave": {
+    {
         "name": "Song of the Brave",
         "static_effect": [
             "On Arrival, each non-deaf survivor may remove 1  negative attribute token.",
             "During the Overwhelming Darkness event, each non-deaf survivor may select the Path of the Brave."
         ]
     },
-    "Stoic Statue": {
+    {
         "name": "Stoic Statue",
         "endeavor": [
             {
@@ -1205,11 +1205,11 @@
             }
         ]
     },
-    "Stone Plate": {
+    {
         "name": "Stone Plate",
         "static_effect": ["Survivors may claim the Clothed & Satiated armor bonus card if they meet the requirements."]
     },
-    "Stone Stairs": {
+    {
         "name": "Stone Stairs",
         "static_effect": [
             "During the settlement phase, if a survivor runs away, is exiled, or dies, they climb the stairs instead."
@@ -1233,7 +1233,7 @@
             }
         ]
     },
-    "Storytelling": {
+    {
         "name": "Storytelling",
         "survival_limit_mod": 1,
         "endeavor": [
@@ -1260,7 +1260,7 @@
             }
         ]
     },
-    "Subterranean Agriculture": {
+    {
         "name": "Subterranean Agriculture",
         "endeavor": [
             {
@@ -1273,11 +1273,11 @@
             }
         ]
     },
-    "Sun Language": {
+    {
         "name": "Sun Language",
         "static_effect": ["All survivors gain the [Embolden] survival action."]
     },
-    "Supreme Cuisine": {
+    {
         "name": "Supreme Cuisine",
         "static_effect": ["Returning survivors gain +2 lumi."],
         "survival_limit_mod": 3,
@@ -1288,7 +1288,7 @@
             }
         ]
     },
-    "Survival of the Fittest": {
+    {
         "name": "Survival of the Fittest",
         "static_effect": [
             "When rolling on the Intimacy story event, roll twice and pick the lowest result.",
@@ -1299,17 +1299,17 @@
         "mod_strength": 1,
         "mod_evasion": 1
     },
-    "Symposium": {
+    {
         "name": "Symposium",
         "static_effect": ["When a survivor innovates, draw an additonal 2 innovation cards to choose from."],
         "survival_limit_mod": 1
     },
-    "Ultimate Weapon": {
+    {
         "name": "Ultimate Weapon",
         "static_effect": ["When you defeat a monster, gain 1 monster resource of your choice from its resource deck."],
         "survival_limit_mod": 1
     },
-    "Umbilical Bank": {
+    {
         "name": "Umbilical Bank",
         "static_effect": ["When a new survivor is born, you may add 1 Life String strange resouce to storage."],
         "endeavor": [
@@ -1323,7 +1323,7 @@
             }
         ]
     },
-    "War Room": {
+    {
         "name": "War Room",
         "static_effect": [
             "Quarries cannot move off of the hunt board.",
@@ -1337,7 +1337,7 @@
             }
         ]
     },
-    "Water of Life": {
+    {
         "name": "Water of Life",
         "survival_limit_mod": 1,
         "endeavor": [
@@ -1363,7 +1363,7 @@
             }
         ]
     },
-    "White Mask": {
+    {
         "name": "White Mask",
         "endeavor": [
             {
@@ -1393,4 +1393,4 @@
             }
         ]
     }
-}
+]
