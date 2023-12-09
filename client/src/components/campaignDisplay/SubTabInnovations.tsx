@@ -1,8 +1,10 @@
-import { Flex } from '@radix-ui/themes';
+import { Flex, Text } from '@radix-ui/themes';
 import { RefetchFunction } from 'axios-hooks';
 import { TypeServerSettlement } from '../../../../SettlementTypes';
-import { TwilightEditCountDialog } from '../primitiveComponents/AlertBoxes';
 import { TwilightNodeHeader } from '../primitiveComponents/Primitives';
+import { TwilightSearchPopup } from '../primitiveComponents/SearchBoxes';
+import { innovationData } from '../static_data_file_configs/InnovationsConfig';
+import { useMemo } from 'react';
 
 interface SubTabInnovationsProps {
     campaignData: TypeServerSettlement;
@@ -11,64 +13,31 @@ interface SubTabInnovationsProps {
 }
 
 const SubTabInnovations = ({ campaignData, dbRefetch, dbExecutePatch }: SubTabInnovationsProps) => {
-    const gearDataMemo = useMemo(() => Object.keys(gearData), []);
+    const innovationDataMemo = useMemo(() => Object.keys(innovationData), []);
 
     return (
-        <Flex direction="row" wrap="wrap" gap="3">
+        <Flex direction="column" wrap="wrap" gap="3">
             <TwilightSearchPopup
-                buttonText="Add Gear"
-                labelText="Search Gear"
-                options={gearDataMemo}
-                onSubmit={(gearToAdd) => {
-                    console.log(gearToAdd);
-                    const newGearLocation = gearData[gearToAdd as keyof GearKeys].location;
-                    const updatedGear = { ...campaignData.gear };
-                    if (!campaignData.gear[newGearLocation]) {
-                        updatedGear[newGearLocation] = { [gearToAdd]: 0 };
-                    } else if (!campaignData.gear[newGearLocation][gearToAdd]) {
-                        updatedGear[newGearLocation] = { ...updatedGear[newGearLocation], [gearToAdd]: 0 };
-                    } else {
-                        // TODO: Return popup message "Already in inventory under ____ Location."
-                        return;
+                buttonText="Add Innovation"
+                labelText="Search Innovations"
+                options={innovationDataMemo}
+                onSubmit={(innovationToAdd) => {
+                    console.log(innovationToAdd);
+                    if (campaignData.innovations.indexOf(innovationToAdd) === -1) {
+                        dbExecutePatch({
+                            data: { innovations: [...campaignData.innovations, innovationToAdd] },
+                        })
+                            .then(() => dbRefetch())
+                            .catch((err) => console.error(err));
                     }
-                    dbExecutePatch({
-                        data: { gear: updatedGear },
-                    })
-                        .then(() => dbRefetch())
-                        .catch((err) => console.error(err));
                 }}
             />
-            {Object.keys(campaignData.gear)
-                .sort()
-                .map((gearCategory, idx) => {
-                    return (
-                        <Flex key={idx} direction="column" gap="1" justify="start" align="end">
-                            <TwilightNodeHeader headerText={gearCategory} />
-                            {Object.keys(campaignData.gear[gearCategory])
-                                .sort()
-                                .map((gear, idy) => {
-                                    const handleCountChange = (updatedCount: number) => {
-                                        const updatedResources = { ...campaignData.gear };
-                                        updatedResources[gearCategory][gear] = updatedCount;
-                                        console.log(updatedResources);
-                                        dbExecutePatch({
-                                            data: { gear: updatedResources },
-                                        })
-                                            .then(() => dbRefetch())
-                                            .catch((err) => console.error(err));
-                                    };
-                                    return (
-                                        <TwilightEditCountDialog
-                                            key={idy}
-                                            labelText={gear}
-                                            count={campaignData.gear[gearCategory][gear]}
-                                            onSubmit={(updatedCount) => handleCountChange(updatedCount)}
-                                        />
-                                    );
-                                })}
-                        </Flex>
-                    );
+            <Flex direction="column" gap="3">
+                <TwilightNodeHeader headerText="Innovations" />
+                {campaignData.innovations.sort().map((innovation, idx) => {
+                    return <Text key={idx}>{innovation}</Text>;
                 })}
+            </Flex>
         </Flex>
     );
 };
