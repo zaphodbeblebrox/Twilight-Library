@@ -1,14 +1,14 @@
 // Popup that displays given information for passed in Innovation
 
-import { Button, Dialog, Flex, Text, TextField } from '@radix-ui/themes';
-import { InnovationKeys, innovationData, TypeInnovationStatMods } from '../static_data_file_configs/InnovationsConfig';
-import { useState } from 'react';
+import { Button, Dialog, Flex, Text } from '@radix-ui/themes';
+import { InnovationKeys, innovationData } from '../static_data_file_configs/InnovationsConfig';
 
 interface InnovationCardProps {
     innovation: keyof InnovationKeys;
 }
 
 const InnovationCard = ({ innovation }: InnovationCardProps) => {
+    console.log('data', innovationData);
     return (
         <Dialog.Root>
             <Dialog.Trigger>
@@ -18,7 +18,7 @@ const InnovationCard = ({ innovation }: InnovationCardProps) => {
                 {innovationData[innovation].survival_limit_mod && (
                     <Text>Survival Limit Increase: {String(innovationData[innovation].survival_limit_mod)}</Text>
                 )}
-                {innovationData[innovation].departing_survival && (
+                {/* {innovationData[innovation].departing_survival && (
                     <Text>Survival on departure: {String(innovationData[innovation].departing_survival)}</Text>
                 )}
                 {innovationData[innovation].departing_insanity && (
@@ -53,7 +53,7 @@ const InnovationCard = ({ innovation }: InnovationCardProps) => {
                 )}
                 {innovationData[innovation].mod_hunt_xp && (
                     <Text>Hunt XP: {String(innovationData[innovation].mod_hunt_xp)}</Text>
-                )}
+                )} */}
             </Flex>
 
             <Dialog.Content className="DialogContent">

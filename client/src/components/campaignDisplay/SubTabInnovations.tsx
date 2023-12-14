@@ -1,10 +1,11 @@
-import { Flex, Text } from '@radix-ui/themes';
+import { Flex } from '@radix-ui/themes';
 import { RefetchFunction } from 'axios-hooks';
 import { TypeServerSettlement } from '../../../../SettlementTypes';
 import { TwilightNodeHeader } from '../primitiveComponents/Primitives';
 import { TwilightSearchPopup } from '../primitiveComponents/SearchBoxes';
-import { innovationData } from '../static_data_file_configs/InnovationsConfig';
+import { InnovationKeys, innovationData } from '../static_data_file_configs/InnovationsConfig';
 import { useMemo } from 'react';
+import InnovationCard from '../infoCards/InnovationCard';
 
 interface SubTabInnovationsProps {
     campaignData: TypeServerSettlement;
@@ -35,7 +36,7 @@ const SubTabInnovations = ({ campaignData, dbRefetch, dbExecutePatch }: SubTabIn
             <Flex direction="column" gap="3">
                 <TwilightNodeHeader headerText="Innovations" />
                 {campaignData.innovations.sort().map((innovation, idx) => {
-                    return <Text key={idx}>{innovation}</Text>;
+                    return <InnovationCard key={idx} innovation={innovation as keyof InnovationKeys} />;
                 })}
             </Flex>
         </Flex>
