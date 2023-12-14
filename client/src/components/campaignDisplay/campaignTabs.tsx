@@ -9,9 +9,9 @@ import TabAdvancements from './TabAdvancements';
 
 const CampaignTabs = () => {
     const { id } = useParams();
-    const [{ data: getData, loading: getLoading, error: getError }, refetch] = useAxios(`${settlementApi}/get/${id}`);
+    const [{ data: getData }, refetch] = useAxios(`${settlementApi}/get/${id}`);
 
-    const [{ data: patchData, loading: patchLoading, error: patchError }, executePatch] = useAxios(
+    const [, executePatch] = useAxios(
         {
             url: `${settlementApi}/update/${id}`,
             method: 'PATCH',

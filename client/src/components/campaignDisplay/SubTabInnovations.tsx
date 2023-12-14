@@ -9,7 +9,7 @@ import InnovationCard from '../infoCards/InnovationCard';
 
 interface SubTabInnovationsProps {
     campaignData: TypeServerSettlement;
-    dbRefetch: RefetchFunction<any, any>;
+    dbRefetch: RefetchFunction<null, null>;
     dbExecutePatch: RefetchFunction<any, any>;
 }
 
