@@ -34,11 +34,45 @@ const InnovationCard = ({ innovation }: InnovationCardProps) => {
                             ))}
                         </Flex>
                     )}
+
+                    {/* Endeavors */}
+
+                    {innovationData[innovation].endeavor && (
+                        <Flex direction="column" gap="2">
+                            {innovationData[innovation].endeavor?.map((endeavor, idx) => {
+                                return (
+                                    <Flex direction="column" gap="2" key={idx}>
+                                        <Text>Cost: {endeavor.cost}</Text>
+                                        {endeavor.effect && <Text>Effect: {endeavor.effect}</Text>}
+                                        {endeavor.roll && <Text>Roll: {endeavor.roll}</Text>}
+                                        {endeavor.table && (
+                                            <Flex direction="column">
+                                                {endeavor.table.map((row, idy) => {
+                                                    return (
+                                                        <Flex key={idy} direction="row" gap="2">
+                                                            {row.limit_high === row.limit_low ? (
+                                                                <Text>{row.limit_high}:</Text>
+                                                            ) : (
+                                                                <Text>
+                                                                    {row.limit_low}-{row.limit_high}:
+                                                                </Text>
+                                                            )}
+                                                            <Text>{row.effect}</Text>
+                                                        </Flex>
+                                                    );
+                                                })}
+                                            </Flex>
+                                        )}
+                                    </Flex>
+                                );
+                            })}
+                        </Flex>
+                    )}
                 </Flex>
 
                 <Dialog.Close>
                     <Button variant="solid" color="red">
-                        Cancel
+                        Close
                     </Button>
                 </Dialog.Close>
             </Dialog.Content>
