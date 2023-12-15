@@ -10,7 +10,7 @@ import InnovationCard from '../infoCards/InnovationCard';
 interface SubTabInnovationsProps {
     campaignData: TypeServerSettlement;
     dbRefetch: RefetchFunction<null, null>;
-    dbExecutePatch: RefetchFunction<any, any>;
+    dbExecutePatch: RefetchFunction<Partial<TypeServerSettlement>, null>;
 }
 
 const SubTabInnovations = ({ campaignData, dbRefetch, dbExecutePatch }: SubTabInnovationsProps) => {
