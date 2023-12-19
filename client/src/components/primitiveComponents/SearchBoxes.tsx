@@ -14,12 +14,14 @@ const TwilightSearchPopup = ({ buttonText, labelText, options, onSubmit }: Twili
     const [searchTerm, setSearchTerm] = useState('');
     const [results, setResults] = useState<string[]>([]);
 
-    const settings = {
-        includeScore: true,
-        threshold: 0.1,
-    };
-
-    const fuse = useMemo(() => new Fuse(options, settings), [options]);
+    const fuse = useMemo(
+        () =>
+            new Fuse(options, {
+                includeScore: true,
+                threshold: 0.1,
+            }),
+        [options],
+    );
     // useEffect(() => console.log(results), [results]);
 
     return (
