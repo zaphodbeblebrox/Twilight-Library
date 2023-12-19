@@ -1,18 +1,16 @@
-import { Flex, Heading, Separator, Button, Text, Tabs, Box } from '@radix-ui/themes';
-import useAxios, { RefetchFunction } from 'axios-hooks';
+import { Tabs, Box } from '@radix-ui/themes';
+import { RefetchFunction } from 'axios-hooks';
 import { TypeServerSettlement } from '../../../../SettlementTypes';
-import { settlementApi } from '../../service/api';
-import TimelineTable from '../primitiveComponents/TimelineTable';
-import ResourceTab from './ResourceTab';
-import GearTab from './GearTab';
+import SubTabResource from './SubTabResource';
+import SubTabGear from './SubTabGear';
 
-interface StorageTabProps {
+interface TabStorageProps {
     campaignData: TypeServerSettlement;
     dbRefetch: RefetchFunction<any, any>;
     dbExecutePatch: RefetchFunction<any, any>;
 }
 
-const StorageTab = ({ campaignData, dbRefetch, dbExecutePatch }: StorageTabProps) => {
+const TabStorage = ({ campaignData, dbRefetch, dbExecutePatch }: TabStorageProps) => {
     return (
         <Tabs.Root
             defaultValue="resources"
@@ -30,7 +28,7 @@ const StorageTab = ({ campaignData, dbRefetch, dbExecutePatch }: StorageTabProps
             <Box px="4" pt="3" pb="2">
                 <Tabs.Content value="resources">
                     {campaignData && (
-                        <ResourceTab
+                        <SubTabResource
                             campaignData={campaignData}
                             dbRefetch={dbRefetch}
                             dbExecutePatch={dbExecutePatch}
@@ -40,7 +38,7 @@ const StorageTab = ({ campaignData, dbRefetch, dbExecutePatch }: StorageTabProps
 
                 <Tabs.Content value="gear">
                     {campaignData && (
-                        <GearTab campaignData={campaignData} dbRefetch={dbRefetch} dbExecutePatch={dbExecutePatch} />
+                        <SubTabGear campaignData={campaignData} dbRefetch={dbRefetch} dbExecutePatch={dbExecutePatch} />
                     )}
                 </Tabs.Content>
             </Box>
@@ -48,4 +46,4 @@ const StorageTab = ({ campaignData, dbRefetch, dbExecutePatch }: StorageTabProps
     );
 };
 
-export default StorageTab;
+export default TabStorage;

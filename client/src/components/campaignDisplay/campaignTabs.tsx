@@ -2,15 +2,16 @@ import { Tabs, Box, Text, Flex, Button } from '@radix-ui/themes';
 import { useNavigate, useParams } from 'react-router-dom';
 import useAxios from 'axios-hooks';
 import { settlementApi } from '../../service/api';
-import TimelineTab from './TimelineTab';
-import StorageTab from './StorageTab';
-import { useEffect, useMemo } from 'react';
+import TabTimeline from './TabTimeline';
+import TabStorage from './TabStorage';
+import { useEffect } from 'react';
+import TabAdvancements from './TabAdvancements';
 
 const CampaignTabs = () => {
     const { id } = useParams();
-    const [{ data: getData, loading: getLoading, error: getError }, refetch] = useAxios(`${settlementApi}/get/${id}`);
+    const [{ data: getData }, refetch] = useAxios(`${settlementApi}/get/${id}`);
 
-    const [{ data: patchData, loading: patchLoading, error: patchError }, executePatch] = useAxios(
+    const [, executePatch] = useAxios(
         {
             url: `${settlementApi}/update/${id}`,
             method: 'PATCH',
@@ -52,8 +53,8 @@ const CampaignTabs = () => {
                     <Tabs.Trigger style={{ flex: 1 }} value="storage">
                         Storage
                     </Tabs.Trigger>
-                    <Tabs.Trigger style={{ flex: 1 }} value="innovations">
-                        Innovations
+                    <Tabs.Trigger style={{ flex: 1 }} value="advancements">
+                        Advancements
                     </Tabs.Trigger>
                     <Tabs.Trigger style={{ flex: 1 }} value="arc">
                         Arc
@@ -71,7 +72,7 @@ const CampaignTabs = () => {
 
                     <Tabs.Content value="timeline">
                         {getData && (
-                            <TimelineTab
+                            <TabTimeline
                                 campaignData={getData.settlement}
                                 dbRefetch={refetch}
                                 dbExecutePatch={executePatch}
@@ -85,7 +86,7 @@ const CampaignTabs = () => {
 
                     <Tabs.Content value="storage">
                         {getData && (
-                            <StorageTab
+                            <TabStorage
                                 campaignData={getData.settlement}
                                 dbRefetch={refetch}
                                 dbExecutePatch={executePatch}
@@ -93,8 +94,14 @@ const CampaignTabs = () => {
                         )}
                     </Tabs.Content>
 
-                    <Tabs.Content value="innovations">
-                        <Text size="2">innovations Info...</Text>
+                    <Tabs.Content value="advancements">
+                        {getData && (
+                            <TabAdvancements
+                                campaignData={getData.settlement}
+                                dbRefetch={refetch}
+                                dbExecutePatch={executePatch}
+                            />
+                        )}
                     </Tabs.Content>
                     <Tabs.Content value="arc">
                         <Text size="2">arc Info...</Text>

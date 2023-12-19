@@ -1,16 +1,15 @@
 import { Flex, Heading, Separator, Button, Text } from '@radix-ui/themes';
-import useAxios, { RefetchFunction } from 'axios-hooks';
+import { RefetchFunction } from 'axios-hooks';
 import { TypeServerSettlement } from '../../../../SettlementTypes';
-import { settlementApi } from '../../service/api';
 import TimelineTable from '../primitiveComponents/TimelineTable';
 
-interface TimelineTabProps {
+interface TabTimelineProps {
     campaignData: TypeServerSettlement;
     dbRefetch: RefetchFunction<any, any>;
     dbExecutePatch: RefetchFunction<any, any>;
 }
 
-const TimelineTab = ({ campaignData, dbRefetch, dbExecutePatch }: TimelineTabProps) => {
+const TabTimeline = ({ campaignData, dbRefetch, dbExecutePatch }: TabTimelineProps) => {
     const handleUpdateCurrentYear = () => {
         dbExecutePatch({
             data: { current_year: campaignData.current_year + 1 },
@@ -47,4 +46,4 @@ const TimelineTab = ({ campaignData, dbRefetch, dbExecutePatch }: TimelineTabPro
     );
 };
 
-export default TimelineTab;
+export default TabTimeline;

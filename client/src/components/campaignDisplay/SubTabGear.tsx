@@ -1,20 +1,19 @@
 import { Flex } from '@radix-ui/themes';
-import useAxios, { RefetchFunction } from 'axios-hooks';
+import { RefetchFunction } from 'axios-hooks';
 import { TypeServerSettlement } from '../../../../SettlementTypes';
-import { settlementApi } from '../../service/api';
 import { TwilightEditCountDialog } from '../primitiveComponents/AlertBoxes';
 import { TwilightNodeHeader } from '../primitiveComponents/Primitives';
 import { TwilightSearchPopup } from '../primitiveComponents/SearchBoxes';
 import { GearKeys, gearData } from '../static_data_file_configs/gearConfig';
 import { useMemo } from 'react';
 
-interface GearTabProps {
+interface SubTabGearProps {
     campaignData: TypeServerSettlement;
     dbRefetch: RefetchFunction<any, any>;
     dbExecutePatch: RefetchFunction<any, any>;
 }
 
-const GearTab = ({ campaignData, dbRefetch, dbExecutePatch: executePatch }: GearTabProps) => {
+const SubTabGear = ({ campaignData, dbRefetch, dbExecutePatch }: SubTabGearProps) => {
     const gearDataMemo = useMemo(() => Object.keys(gearData), []);
 
     return (
@@ -35,7 +34,7 @@ const GearTab = ({ campaignData, dbRefetch, dbExecutePatch: executePatch }: Gear
                         // TODO: Return popup message "Already in inventory under ____ Location."
                         return;
                     }
-                    executePatch({
+                    dbExecutePatch({
                         data: { gear: updatedGear },
                     })
                         .then(() => dbRefetch())
@@ -55,7 +54,7 @@ const GearTab = ({ campaignData, dbRefetch, dbExecutePatch: executePatch }: Gear
                                         const updatedResources = { ...campaignData.gear };
                                         updatedResources[gearCategory][gear] = updatedCount;
                                         console.log(updatedResources);
-                                        executePatch({
+                                        dbExecutePatch({
                                             data: { gear: updatedResources },
                                         })
                                             .then(() => dbRefetch())
@@ -77,4 +76,4 @@ const GearTab = ({ campaignData, dbRefetch, dbExecutePatch: executePatch }: Gear
     );
 };
 
-export default GearTab;
+export default SubTabGear;

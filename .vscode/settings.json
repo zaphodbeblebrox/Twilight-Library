@@ -1,18 +1,58 @@
+// {
+//   // "editor.codeActionsOnSave": {
+//   //   "source.fixAll.eslint": true
+//   // },
+//   // "eslint.validate": ["javascript"],
+//   "files.eol": "\n",
+//   "editor.formatOnSave": true,
+//   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+//   "eslint.format.enable": true,
+//   "[json]": {
+//     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+//   },
+//   "eslint.codeActionsOnSave.rules": null,
+//   "[typescript]": {
+//     "editor.defaultFormatter": "esbenp.prettier-vscode"
+//   },
+//   "[typescriptreact]": { "editor.defaultFormatter": "dbaeumer.vscode-eslint" }
+// }
+
 {
-  // "editor.codeActionsOnSave": {
-  //   "source.fixAll.eslint": true
-  // },
-  // "eslint.validate": ["javascript"],
-  "files.eol": "\n",
-  "editor.formatOnSave": true,
-  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "eslint.codeActionsOnSave.mode": "all",
   "eslint.format.enable": true,
+  "editor.formatOnSave": true,
+  "eslint.workingDirectories": ["client", "server"],
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "search.useIgnoreFiles": true,
+  "prettier.configPath": ".prettierrc",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/declarations/**/*": true,
+    "**/dist/**/*": true
+  },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "eslint.codeActionsOnSave.rules": null,
-  "[typescript]": {
+  "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-},
-"[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" }
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "editor.tabSize": 2
+  
 }
