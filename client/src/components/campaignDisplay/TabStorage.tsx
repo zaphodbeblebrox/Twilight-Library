@@ -6,8 +6,8 @@ import SubTabGear from './SubTabGear';
 
 interface TabStorageProps {
     campaignData: TypeServerSettlement;
-    dbRefetch: RefetchFunction<any, any>;
-    dbExecutePatch: RefetchFunction<any, any>;
+    dbRefetch: RefetchFunction<null, null>;
+    dbExecutePatch: RefetchFunction<Partial<TypeServerSettlement>, null>;
 }
 
 const TabStorage = ({ campaignData, dbRefetch, dbExecutePatch }: TabStorageProps) => {
