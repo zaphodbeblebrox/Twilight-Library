@@ -1,4 +1,4 @@
-import { Flex, Heading } from '@radix-ui/themes';
+import { Flex } from '@radix-ui/themes';
 import { TwilightNodeHeader, TwilightRadioGroupItem } from '../primitiveComponents/Primitives';
 import { campaignCreatorData } from '../static_data_file_configs/CampaignCreatorConfig';
 import { NodeCoreFinaleLists, TypeCampaignData } from '../static_data_file_configs/presetCampaignConfig';

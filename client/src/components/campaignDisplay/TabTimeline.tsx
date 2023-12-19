@@ -1,12 +1,12 @@
-import { Flex, Heading, Separator, Button, Text } from '@radix-ui/themes';
+import { Flex, Separator, Button, Text } from '@radix-ui/themes';
 import { RefetchFunction } from 'axios-hooks';
 import { TypeServerSettlement } from '../../../../SettlementTypes';
 import TimelineTable from '../primitiveComponents/TimelineTable';
 
 interface TabTimelineProps {
     campaignData: TypeServerSettlement;
-    dbRefetch: RefetchFunction<any, any>;
-    dbExecutePatch: RefetchFunction<any, any>;
+    dbRefetch: RefetchFunction<null, null>;
+    dbExecutePatch: RefetchFunction<Partial<TypeServerSettlement>, null>;
 }
 
 const TabTimeline = ({ campaignData, dbRefetch, dbExecutePatch }: TabTimelineProps) => {

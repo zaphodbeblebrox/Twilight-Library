@@ -1,6 +1,5 @@
 import { Button, Flex } from '@radix-ui/themes';
 import { useEffect, useState } from 'react';
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { settlementApi } from '../service/api';
 import { TypeServerSettlement } from '../../../SettlementTypes';

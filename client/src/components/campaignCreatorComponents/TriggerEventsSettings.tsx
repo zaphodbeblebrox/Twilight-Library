@@ -1,6 +1,6 @@
 import { Button, Flex, Heading, Separator, Text } from '@radix-ui/themes';
 import { useNavigate } from 'react-router-dom';
-import { TypeInitializedSettlement, TypeServerSettlement } from '../../../../SettlementTypes';
+import { TypeInitializedSettlement } from '../../../../SettlementTypes';
 import { TwilightAddEventAlert, TwilightEditTextAlert } from '../primitiveComponents/AlertBoxes';
 import { settlementApi } from '../../service/api';
 import useAxios from 'axios-hooks';
@@ -26,7 +26,7 @@ const CampaignFinalSettings = ({
 }: CampaignFinalSettingsProps) => {
     const navigate = useNavigate();
 
-    const [{ data: postData, loading: postLoading, error: postError }, executePost] = useAxios(
+    const [, executePost] = useAxios(
         {
             url: `${settlementApi}/create`,
             method: 'POST',

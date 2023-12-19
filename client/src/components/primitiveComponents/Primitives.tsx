@@ -1,4 +1,4 @@
-import { Button, Select, Flex, Text, Checkbox, RadioGroup, Heading, TextField } from '@radix-ui/themes';
+import { Select, Flex, Checkbox, RadioGroup, Heading, TextField } from '@radix-ui/themes';
 
 import * as Label from '@radix-ui/react-label';
 

@@ -1,12 +1,12 @@
-import { Box, Flex, Tabs, Text } from '@radix-ui/themes';
+import { Box, Tabs, Text } from '@radix-ui/themes';
 import { RefetchFunction } from 'axios-hooks';
 import { TypeServerSettlement } from '../../../../SettlementTypes';
 import SubTabInnovations from './SubTabInnovations';
 
 interface TabAdvancementsProps {
     campaignData: TypeServerSettlement;
-    dbRefetch: RefetchFunction<any, any>;
-    dbExecutePatch: RefetchFunction<any, any>;
+    dbRefetch: RefetchFunction<null, null>;
+    dbExecutePatch: RefetchFunction<Partial<TypeServerSettlement>, null>;
 }
 
 const TabAdvancements = ({ campaignData, dbRefetch, dbExecutePatch }: TabAdvancementsProps) => {

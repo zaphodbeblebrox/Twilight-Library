@@ -9,8 +9,8 @@ import { useMemo } from 'react';
 
 interface SubTabGearProps {
     campaignData: TypeServerSettlement;
-    dbRefetch: RefetchFunction<any, any>;
-    dbExecutePatch: RefetchFunction<any, any>;
+    dbRefetch: RefetchFunction<null, null>;
+    dbExecutePatch: RefetchFunction<Partial<TypeServerSettlement>, null>;
 }
 
 const SubTabGear = ({ campaignData, dbRefetch, dbExecutePatch }: SubTabGearProps) => {
