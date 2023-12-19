@@ -59,7 +59,7 @@ const CampaignCreator = ({
         } else {
             selectedCampaign[nodeKey].forEach((selection: string) => {
                 const query: Record<string, Record<string, string[]>> = campaignCreatorData.timeline[typeKey];
-                if (query.hasOwnProperty(selection)) {
+                if (query[selection]) {
                     Object.keys(query[selection]).forEach((yearKey: string) => {
                         query[selection][Number(yearKey)].forEach((yearData: string) => {
                             timeline[Number(yearKey)].push(yearData);

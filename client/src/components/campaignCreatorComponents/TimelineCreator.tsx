@@ -9,8 +9,6 @@ interface TimelineCreatorProps {
     setCampaignSettings: React.Dispatch<React.SetStateAction<TypeCampaignData>>;
 }
 
-type campaignDataTypes = string | Record<number, string[]> | Record<string, Record<number, boolean>>;
-
 const TimelineCreator = ({ campaignSettings, setCampaignSettings }: TimelineCreatorProps) => {
     const [timeline, setTimeline] = useState(campaignSettings.timeline);
     const navigate = useNavigate();
@@ -32,7 +30,6 @@ const TimelineCreator = ({ campaignSettings, setCampaignSettings }: TimelineCrea
 
     const handleUpdateTimeline = (updatedTimeline: Record<number, string[]>) => {
         setTimeline(updatedTimeline);
-        // TODO: Save data to database
     };
 
     return (
