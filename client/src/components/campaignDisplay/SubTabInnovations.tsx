@@ -23,7 +23,7 @@ const SubTabInnovations = ({ campaignData, dbRefetch, dbExecutePatch }: SubTabIn
                 labelText="Search Innovations"
                 options={innovationDataMemo}
                 onSubmit={(innovationToAdd) => {
-                    console.log(innovationToAdd);
+                    // console.log(innovationToAdd);
                     if (campaignData.innovations.indexOf(innovationToAdd) === -1) {
                         dbExecutePatch({
                             data: { innovations: [...campaignData.innovations, innovationToAdd] },
