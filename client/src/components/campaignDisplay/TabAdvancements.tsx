@@ -2,6 +2,7 @@ import { Box, Tabs, Text } from '@radix-ui/themes';
 import { RefetchFunction } from 'axios-hooks';
 import { TypeServerSettlement } from '../../../../SettlementTypes';
 import SubTabInnovations from './SubTabInnovations';
+import SubTabMilestones from './SubTabMilestones';
 
 interface TabAdvancementsProps {
     campaignData: TypeServerSettlement;
@@ -41,7 +42,15 @@ const TabAdvancements = ({ campaignData, dbRefetch, dbExecutePatch }: TabAdvance
                     )}
                 </Tabs.Content>
                 <Tabs.Content value="principles">{campaignData && <Text>...Loading principles</Text>}</Tabs.Content>
-                <Tabs.Content value="milestones">{campaignData && <Text>...Loading milestones</Text>}</Tabs.Content>
+                <Tabs.Content value="milestones">
+                    {campaignData && (
+                        <SubTabMilestones
+                            campaignData={campaignData}
+                            dbRefetch={dbRefetch}
+                            dbExecutePatch={dbExecutePatch}
+                        />
+                    )}
+                </Tabs.Content>
                 <Tabs.Content value="bonuses">{campaignData && <Text>...Loading bonuses</Text>}</Tabs.Content>
             </Box>
         </Tabs.Root>
