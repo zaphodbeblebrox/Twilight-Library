@@ -8,7 +8,7 @@ import {
     CourageUnderstandingLists,
     NodePillarLists,
     TypeCampaignData,
-} from '../static_data_file_configs/presetCampaignConfig';
+} from '../static_data_file_configs/PresetCampaignConfig';
 import { campaignCreatorData } from '../static_data_file_configs/CampaignCreatorConfig';
 import { TypeResourceListData, resourceListData } from '../static_data_file_configs/ResourceListConfig';
 import { TypeLocationsData, locationsData } from '../static_data_file_configs/LocationsConfig';

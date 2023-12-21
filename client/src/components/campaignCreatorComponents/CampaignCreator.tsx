@@ -9,7 +9,7 @@ import {
     NodePillarLists,
     TypeCampaignData,
     presetCampaignData,
-} from '../static_data_file_configs/presetCampaignConfig';
+} from '../static_data_file_configs/PresetCampaignConfig';
 
 interface CampaignCreatorProps {
     settlementName: string;
