@@ -315,6 +315,16 @@ const CampaignFinalSettings = ({
                         </Flex>
                     </Flex>
                 </Flex>
+                <Separator my="3" size="4" />
+                <Flex>
+                    <Heading size="6">Intimacy</Heading>
+                    {/* TODO Add Initimacy */}
+                </Flex>
+                <Separator my="3" size="4" />
+                <Flex>
+                    <Heading size="6">Principles</Heading>
+                    {/* TODO Add Principles */}
+                </Flex>
             </Flex>
             <Flex justify="center" align="center" gap="5">
                 <Button
