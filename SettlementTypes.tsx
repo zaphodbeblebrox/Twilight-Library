@@ -1,10 +1,18 @@
+export type TypePrinciple = {
+    selected: string | null;
+    options: string[] | null;
+}
+
+export type PrinciplesList = {
+    principle_conviction: TypePrinciple;
+    principle_death: TypePrinciple;
+    principle_new_life: TypePrinciple;
+    principle_society: TypePrinciple;
+}
+
 export type SettlementStrLists = {
     name: string;
     notes: string;
-    principle_conviction: string;
-    principle_death: string;
-    principle_new_life: string;
-    principle_society: string;
     courage_event_1: string;
     courage_event_2: string;
     understanding_event_1: string;
@@ -30,7 +38,7 @@ export type SettlementStorageLists = {
 
 export type TypeServerSettlement = SettlementStrLists &
     SettlementStrArrayLists &
-    SettlementStorageLists &
+    SettlementStorageLists & PrinciplesList &
     SettlementMonsterLists & {
         _id: string;
         survival_limit: number;
