@@ -53,7 +53,7 @@ export type TypeServerSettlement = SettlementStrLists &
     };
 
 export type TypeInitializedSettlement = SettlementMonsterLists &
-    SettlementStorageLists & {
+    SettlementStorageLists & PrinciplesList & {
         name: string;
         timeline: Record<number, string[]>;
         courage_event_1: string;

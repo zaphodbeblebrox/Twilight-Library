@@ -1,12 +1,13 @@
 import { Button, Flex, Heading, Separator, Text } from '@radix-ui/themes';
 import { useNavigate } from 'react-router-dom';
-import { TypeInitializedSettlement } from '../../../../SettlementTypes';
+import { PrinciplesList, TypeInitializedSettlement } from '../../../../SettlementTypes';
 import { TwilightAddEventAlert, TwilightEditTextAlert } from '../primitiveComponents/AlertBoxes';
 import { settlementApi } from '../../service/api';
 import useAxios from 'axios-hooks';
 import {
     CourageUnderstandingLists,
     NodePillarLists,
+    PrinciplesDefaultLists,
     TypeCampaignData,
 } from '../static_data_file_configs/PresetCampaignConfig';
 import { campaignCreatorData } from '../static_data_file_configs/CampaignCreatorConfig';
@@ -168,6 +169,20 @@ const CampaignFinalSettings = ({
             }, {});
     };
 
+    const createPrincipleObject = (principleKey: keyof PrinciplesDefaultLists) => {
+        if (campaignSettings[principleKey].includes('None')) {
+            if (campaignSettings[principleKey][0] === 'None' && campaignSettings[principleKey][1] === 'None') {
+                return { selected: null, options: null };
+            } else if (campaignSettings[principleKey][0] === 'None') {
+                return { selected: campaignSettings[principleKey][1], options: [campaignSettings[principleKey][1]] };
+            } else {
+                return { selected: campaignSettings[principleKey][0], options: [campaignSettings[principleKey][0]] };
+            }
+        } else {
+            return { selected: null, options: [...campaignSettings[principleKey]] };
+        }
+    };
+
     const handleSaveCampaignOnServer = () => {
         const campaignData: TypeInitializedSettlement = {
             name: settlementName,
@@ -183,6 +198,11 @@ const CampaignFinalSettings = ({
             arc_survivors: campaignSettings.pillars.includes('Arc Survivors'),
             resources: { ...createResourceList() },
             gear: { ...createLocationList() },
+            intimacy: campaignSettings.intimacy,
+            principle_conviction: { ...createPrincipleObject('principle_conviction') },
+            principle_death: { ...createPrincipleObject('principle_death') },
+            principle_new_life: { ...createPrincipleObject('principle_new_life') },
+            principle_society: { ...createPrincipleObject('principle_society') },
         };
 
         //Save data to database

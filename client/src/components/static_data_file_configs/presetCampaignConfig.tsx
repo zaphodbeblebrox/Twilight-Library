@@ -44,10 +44,13 @@ export type Intimacy = {
 };
 
 export type PrinciplesDefaultLists = {
-    principle_conviction: string[];
-    principle_death: string[];
-    principle_new_life: string[];
-    principle_society: string[];
+    principle_conviction: { Barbaric: string; Romantic: string };
+    principle_death: { Cannibalize: string; Graves: string };
+    principle_new_life: {
+        'Survival of the Fittest': string;
+        'Protect the Young': string;
+    };
+    principle_society: { 'Collective Toil': string; 'Accept Darkness': string };
 };
 
 export type TimelineLists = {
