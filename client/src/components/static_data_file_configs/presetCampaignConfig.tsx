@@ -39,6 +39,13 @@ export type CourageUnderstandingLists = {
     understanding_event_2: string;
 };
 
+export type PrinciplesDefaultLists = {
+    principle_conviction: string[];
+    principle_death: string[];
+    principle_new_life: string[];
+    principle_society: string[];
+};
+
 export type TimelineLists = {
     timeline: Record<string, string[]>;
     default_timeline: Record<string, string[]>;
@@ -46,6 +53,7 @@ export type TimelineLists = {
 
 export type TypeCampaignData = NodePillarLists &
     NemesisFightYearLists &
+    PrinciplesDefaultLists &
     CourageUnderstandingLists &
     NodeCoreFinaleLists &
     TimelineLists & {

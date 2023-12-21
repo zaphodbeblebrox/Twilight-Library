@@ -46,7 +46,11 @@
         "courage_event_2": "See the Truth",
         "understanding_event_1": "Insight",
         "understanding_event_2": "White Secret",
-        "constellations": false
+        "constellations": false,
+        "principle_conviction": ["Barbaric", "Romantic"],
+        "principle_death": ["Cannibalize", "Graves"],
+        "principle_new_life": ["Protect the Young", "Survival of the Fittest"],
+        "principle_society": ["Collective Toil", "Accept Darkness"]
     },
     "People of the Lantern": {
         "node_quarry_1": ["White Lion"],
@@ -92,7 +96,11 @@
         "courage_event_2": "See the Truth",
         "understanding_event_1": "Insight",
         "understanding_event_2": "White Secret",
-        "constellations": false
+        "constellations": false,
+        "principle_conviction": ["Barbaric", "Romantic"],
+        "principle_death": ["Cannibalize", "Graves"],
+        "principle_new_life": ["Protect the Young", "Survival of the Fittest"],
+        "principle_society": ["Collective Toil", "Accept Darkness"]
     },
     "People of the Stars": {
         "node_quarry_1": ["White Lion"],
@@ -141,7 +149,11 @@
         "courage_event_2": "See the Truth",
         "understanding_event_1": "Awake",
         "understanding_event_2": "White Secret",
-        "constellations": true
+        "constellations": true,
+        "principle_conviction": ["Barbaric", "Romantic"],
+        "principle_death": ["Cannibalize", "Graves"],
+        "principle_new_life": ["Protect the Young", "Survival of the Fittest"],
+        "principle_society": ["Collective Toil", "Accept Darkness"]
     },
     "People of the Sun": {
         "node_quarry_1": ["White Lion"],
@@ -192,6 +204,10 @@
         "courage_event_2": "See the Truth",
         "understanding_event_1": "Insight",
         "understanding_event_2": "White Secret",
-        "constellations": false
+        "constellations": false,
+        "principle_conviction": ["Barbaric", "Romantic"],
+        "principle_death": ["Cannibalize", "Graves"],
+        "principle_new_life": ["Protect the Young", "Survival of the Fittest"],
+        "principle_society": ["Collective Toil", "Accept Darkness"]
     }
 }
