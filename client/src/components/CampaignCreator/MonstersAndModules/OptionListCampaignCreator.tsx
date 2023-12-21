@@ -1,7 +1,7 @@
 import { Flex } from '@radix-ui/themes';
-import { TwilightCheckbox, TwilightNodeHeader } from '../primitiveComponents/Primitives';
-import { NodePillarLists, TypeCampaignData } from '../static_data_file_configs/PresetCampaignConfig';
-import { campaignCreatorData } from '../static_data_file_configs/CampaignCreatorConfig';
+import { TwilightCheckbox, TwilightNodeHeader } from '../../primitiveComponents/Primitives';
+import { NodePillarLists, TypeCampaignData } from '../../static_data_file_configs/PresetCampaignConfig';
+import { campaignCreatorData } from '../../static_data_file_configs/CampaignCreatorConfig';
 
 interface OptionListCampaignCreatorProps {
     header: string;

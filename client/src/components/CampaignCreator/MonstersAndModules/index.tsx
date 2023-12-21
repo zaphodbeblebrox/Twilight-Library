@@ -1,29 +1,29 @@
 import OptionListCampaignCreator from './OptionListCampaignCreator';
 import RadioButtonListCampaignCreator from './RadioButtonListCampaignCreator';
 import { Button, Heading, Flex, Separator } from '@radix-ui/themes';
-import { TwilightSelect, TwilightTextField } from '../primitiveComponents/Primitives';
+import { TwilightSelect, TwilightTextField } from '../../primitiveComponents/Primitives';
 import { useNavigate } from 'react-router-dom';
-import { TimelineOptionList, campaignCreatorData } from '../static_data_file_configs/CampaignCreatorConfig';
+import { TimelineOptionList, campaignCreatorData } from '../../static_data_file_configs/CampaignCreatorConfig';
 import {
     NemesisFightYearLists,
     NodePillarLists,
     TypeCampaignData,
     presetCampaignData,
-} from '../static_data_file_configs/PresetCampaignConfig';
+} from '../../static_data_file_configs/PresetCampaignConfig';
 
-interface CampaignCreatorProps {
+interface MonstersAndModulesProps {
     settlementName: string;
     setSettlementName: React.Dispatch<React.SetStateAction<string>>;
     selectedCampaign: TypeCampaignData;
     setSelectedCampaign: React.Dispatch<React.SetStateAction<TypeCampaignData>>;
 }
 
-const CampaignCreator = ({
+const MonstersAndModules = ({
     settlementName,
     setSettlementName,
     selectedCampaign,
     setSelectedCampaign,
-}: CampaignCreatorProps) => {
+}: MonstersAndModulesProps) => {
     const navigate = useNavigate();
     const selectCampaignOptions: string[] = Object.keys(presetCampaignData).sort();
 
@@ -271,4 +271,4 @@ const CampaignCreator = ({
     );
 };
 
-export default CampaignCreator;
+export default MonstersAndModules;
