@@ -1,6 +1,6 @@
 import { Button, Flex, Heading, Separator, Text } from '@radix-ui/themes';
 import { useNavigate } from 'react-router-dom';
-import { PrinciplesList, TypeInitializedSettlement } from '../../../../SettlementTypes';
+import { TypeInitializedSettlement } from '../../../../SettlementTypes';
 import { TwilightAddEventAlert, TwilightEditTextAlert } from '../primitiveComponents/AlertBoxes';
 import { settlementApi } from '../../service/api';
 import useAxios from 'axios-hooks';
