@@ -17,6 +17,7 @@ export type SettlementStrLists = {
     courage_event_2: string;
     understanding_event_1: string;
     understanding_event_2: string;
+    intimacy: string;
 };
 
 export type SettlementStrArrayLists = {
@@ -62,4 +63,5 @@ export type TypeInitializedSettlement = SettlementMonsterLists &
         milestones: Record<string, boolean>;
         arc_survivors?: boolean;
         constellations?: boolean;
+        intimacy: string;
     };

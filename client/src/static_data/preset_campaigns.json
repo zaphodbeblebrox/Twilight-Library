@@ -50,7 +50,8 @@
         "principle_conviction": ["Barbaric", "Romantic"],
         "principle_death": ["Cannibalize", "Graves"],
         "principle_new_life": ["Protect the Young", "Survival of the Fittest"],
-        "principle_society": ["Collective Toil", "Accept Darkness"]
+        "principle_society": ["Collective Toil", "Accept Darkness"],
+        "intimacy": "Intimacy - Gambler"
     },
     "People of the Lantern": {
         "node_quarry_1": ["White Lion"],
@@ -100,7 +101,8 @@
         "principle_conviction": ["Barbaric", "Romantic"],
         "principle_death": ["Cannibalize", "Graves"],
         "principle_new_life": ["Protect the Young", "Survival of the Fittest"],
-        "principle_society": ["Collective Toil", "Accept Darkness"]
+        "principle_society": ["Collective Toil", "Accept Darkness"],
+        "intimacy": "Intimacy"
     },
     "People of the Stars": {
         "node_quarry_1": ["White Lion"],
@@ -153,7 +155,8 @@
         "principle_conviction": ["Barbaric", "Romantic"],
         "principle_death": ["Cannibalize", "Graves"],
         "principle_new_life": ["Protect the Young", "Survival of the Fittest"],
-        "principle_society": ["Collective Toil", "Accept Darkness"]
+        "principle_society": ["Collective Toil", "Accept Darkness"],
+        "intimacy": "Intimacy - Dragon King"
     },
     "People of the Sun": {
         "node_quarry_1": ["White Lion"],
@@ -208,6 +211,7 @@
         "principle_conviction": ["Barbaric", "Romantic"],
         "principle_death": ["Cannibalize", "Graves"],
         "principle_new_life": ["Protect the Young", "Survival of the Fittest"],
-        "principle_society": ["Collective Toil", "Accept Darkness"]
+        "principle_society": ["Collective Toil", "Accept Darkness"],
+        "intimacy": "Intimacy - Sunstalker"
     }
 }

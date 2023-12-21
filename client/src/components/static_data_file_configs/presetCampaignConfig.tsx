@@ -39,6 +39,10 @@ export type CourageUnderstandingLists = {
     understanding_event_2: string;
 };
 
+export type Intimacy = {
+    intimacy: string;
+};
+
 export type PrinciplesDefaultLists = {
     principle_conviction: string[];
     principle_death: string[];
@@ -54,6 +58,7 @@ export type TimelineLists = {
 export type TypeCampaignData = NodePillarLists &
     NemesisFightYearLists &
     PrinciplesDefaultLists &
+    Intimacy &
     CourageUnderstandingLists &
     NodeCoreFinaleLists &
     TimelineLists & {
