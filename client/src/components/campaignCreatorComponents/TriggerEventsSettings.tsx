@@ -170,16 +170,20 @@ const CampaignFinalSettings = ({
     };
 
     const createPrincipleObject = (principleKey: keyof PrinciplesDefaultLists) => {
-        if (campaignSettings[principleKey].includes('None')) {
-            if (campaignSettings[principleKey][0] === 'None' && campaignSettings[principleKey][1] === 'None') {
-                return { selected: null, options: null };
-            } else if (campaignSettings[principleKey][0] === 'None') {
-                return { selected: campaignSettings[principleKey][1], options: [campaignSettings[principleKey][1]] };
-            } else {
-                return { selected: campaignSettings[principleKey][0], options: [campaignSettings[principleKey][0]] };
+        const options = Object.keys(campaignSettings[principleKey]).reduce((principleObj, principleOption) => {
+            const principleSettings = campaignSettings[principleKey];
+            if (principleSettings[principleOption as keyof typeof principleSettings] !== 'None') {
+                return [...principleObj, principleSettings[principleOption as keyof typeof principleSettings]];
             }
+            return principleObj;
+        }, []);
+
+        if (options.length === 0) {
+            return { selected: null, options: null };
+        } else if (options.length === 1) {
+            return { selected: options[0], options: [...options] };
         } else {
-            return { selected: null, options: [...campaignSettings[principleKey]] };
+            return { selected: null, options: [...options] };
         }
     };
 
