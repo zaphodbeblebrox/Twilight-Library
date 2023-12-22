@@ -1,18 +1,10 @@
 import { Button, Flex, Heading, Separator, Text } from '@radix-ui/themes';
 import { useNavigate } from 'react-router-dom';
-import { TypeInitializedSettlement } from '../../../../../SettlementTypes';
 import { TwilightAddEventAlert, TwilightEditTextAlert } from '../../primitiveComponents/AlertBoxes';
 import { settlementApi } from '../../../service/api';
 import useAxios from 'axios-hooks';
-import {
-    CourageUnderstandingLists,
-    NodePillarLists,
-    PrinciplesDefaultLists,
-    TypeCampaignData,
-} from '../../static_data_file_configs/PresetCampaignConfig';
-import { campaignCreatorData } from '../../static_data_file_configs/CampaignCreatorConfig';
-import { TypeResourceListData, resourceListData } from '../../static_data_file_configs/ResourceListConfig';
-import { TypeLocationsData, locationsData } from '../../static_data_file_configs/LocationsConfig';
+import { CourageUnderstandingLists, TypeCampaignData } from '../../static_data_file_configs/PresetCampaignConfig';
+import InitializeCampaign from './InitializeCampaign';
 
 interface CampaignFinalSettingsProps {
     settlementName: string;
@@ -210,6 +202,13 @@ const CampaignFinalSettings = ({
         // };
         // //Save data to database
         // console.log('gear', campaignData.gear);
+        // executePost({
+        //     data: campaignData,
+        // })
+        //     .then(() => navigate('/twilight-library/dashboard'))
+        //     .catch((err) => console.error(err));
+        const campaignData = InitializeCampaign(settlementName, campaignSettings);
+        console.log('data', campaignData);
         // executePost({
         //     data: campaignData,
         // })

@@ -1,8 +1,5 @@
-import useAxios from 'axios-hooks';
 import { TypeInitializedSettlement } from '../../../../../SettlementTypes';
-import { settlementApi } from '../../../service/api';
 import { NodePillarLists, TypeCampaignData } from '../../static_data_file_configs/PresetCampaignConfig';
-import { useNavigate } from 'react-router-dom';
 import ConfigureMilestones from './ConfigureMilestones';
 import ConfigureBasicQuarries from './ConfigureBasicQuarries';
 import ConfigureBonusQuarries from './ConfigureBonusQuarries';
@@ -11,22 +8,8 @@ import ConfigureResourceList from './ConfigureResourceList';
 import ConfigureGear from './ConfigureGear';
 import ConfigurePrinciple from './ConfigurePrinciple';
 
-interface InitializeCampaignProps {
-    settlementName: string;
-    campaignSettings: TypeCampaignData;
-}
-
-const InitializeCampaign = ({ settlementName, campaignSettings }: InitializeCampaignProps) => {
-    const navigate = useNavigate();
-    const [, executePost] = useAxios(
-        {
-            url: `${settlementApi}/create`,
-            method: 'POST',
-        },
-        { manual: true },
-    );
-
-    const campaignData: TypeInitializedSettlement = {
+const InitializeCampaign = (settlementName: string, campaignSettings: TypeCampaignData): TypeInitializedSettlement => {
+    return {
         name: settlementName,
         timeline: { ...campaignSettings.timeline },
         courage_event_1: campaignSettings.courage_event_1,
@@ -49,15 +32,6 @@ const InitializeCampaign = ({ settlementName, campaignSettings }: InitializeCamp
         principle_new_life: { ...ConfigurePrinciple(campaignSettings, 'principle_new_life') },
         principle_society: { ...ConfigurePrinciple(campaignSettings, 'principle_society') },
     };
-
-    //Save data to database
-    console.log('data', campaignData);
-
-    executePost({
-        data: campaignData,
-    })
-        .then(() => navigate('/twilight-library/dashboard'))
-        .catch((err) => console.error(err));
 };
 
 export default InitializeCampaign;
