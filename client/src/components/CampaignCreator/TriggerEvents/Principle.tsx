@@ -21,7 +21,13 @@ const Principle = ({ principleLable, principlekey, campaignSettings, setCampaign
                         buttonText={principleObj[option as keyof typeof principleObj]}
                         targetKey={option}
                         onSubmit={(selectedOption) => {
-                            console.log(selectedOption);
+                            setCampaignSettings({
+                                ...campaignSettings,
+                                [principlekey]: {
+                                    ...principleObj,
+                                    [option as keyof typeof principleObj]: selectedOption,
+                                },
+                            });
                         }}
                     />
                 );
