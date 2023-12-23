@@ -1,7 +1,6 @@
-import { Button, Dialog, Flex, TextField } from '@radix-ui/themes';
-import { useMemo, useState } from 'react';
+import { Button, Dialog, Flex } from '@radix-ui/themes';
+import { useMemo } from 'react';
 import Fuse from 'fuse.js';
-import { PrinciplesDefaultLists } from '../../static_data_file_configs/PresetCampaignConfig';
 import { innovationData } from '../../static_data_file_configs/InnovationsConfig';
 
 interface ModifyPrincipleProps {
@@ -31,8 +30,6 @@ const ModifyPrinciple = ({ buttonText, targetKey, onSubmit }: ModifyPrinciplePro
         [fuse, targetKey],
     );
 
-    // useEffect(() => console.log(results), [results]);
-
     return (
         <Dialog.Root>
             <Dialog.Trigger>
@@ -42,7 +39,6 @@ const ModifyPrinciple = ({ buttonText, targetKey, onSubmit }: ModifyPrinciplePro
             <Dialog.Content className="DialogContent">
                 <Dialog.Title className="DialogTitle">Select Option for {String(targetKey)}:</Dialog.Title>
 
-                <Dialog.Description className="DialogDescription">Search:</Dialog.Description>
                 <Flex direction="column" gap="3">
                     <Dialog.Close>
                         <Button variant="ghost" onClick={() => onSubmit('None')}>
