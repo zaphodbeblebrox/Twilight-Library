@@ -1,10 +1,10 @@
 import { Flex } from '@radix-ui/themes';
 import { RefetchFunction } from 'axios-hooks';
-import { TypeServerSettlement } from '../../../../SettlementTypes';
-import { TwilightEditCountDialog } from '../primitiveComponents/AlertBoxes';
-import { TwilightNodeHeader } from '../primitiveComponents/Primitives';
-import { TwilightSearchPopup } from '../primitiveComponents/SearchBoxes';
-import { GearKeys, gearData } from '../static_data_file_configs/GearConfig';
+import { TypeServerSettlement } from '../../../../../SettlementTypes';
+import { TwilightEditCountDialog } from '../../primitiveComponents/AlertBoxes';
+import { TwilightNodeHeader } from '../../primitiveComponents/Primitives';
+import { TwilightSearchPopup } from '../../primitiveComponents/SearchBoxes';
+import { GearKeys, gearData } from '../../static_data_file_configs/GearConfig';
 import { useMemo } from 'react';
 
 interface SubTabGearProps {

@@ -1,7 +1,7 @@
 import { Flex } from '@radix-ui/themes';
 import { RefetchFunction } from 'axios-hooks';
-import { TypeServerSettlement } from '../../../../SettlementTypes';
-import { TwilightCheckbox } from '../primitiveComponents/Primitives';
+import { TypeServerSettlement } from '../../../../../SettlementTypes';
+import { TwilightCheckbox } from '../../primitiveComponents/Primitives';
 
 interface SubTabInnovationsProps {
     campaignData: TypeServerSettlement;
