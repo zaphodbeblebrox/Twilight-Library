@@ -1,10 +1,4 @@
 {
-    "Barbaric - Tester": {
-        "name": "Barbaric - Tester",
-        "static_effect": ["Testing ONLY."],
-        "survival_limit_mod": 1,
-        "mod_strength": 1
-    },
     "Accept Darkness": {
         "name": "Accept Darkness",
         "static_effect": ["Add +2 to all Brain Trauma rolls."]
