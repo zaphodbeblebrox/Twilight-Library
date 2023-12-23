@@ -1,8 +1,8 @@
 import { Flex } from '@radix-ui/themes';
 import { RefetchFunction } from 'axios-hooks';
-import { TypeServerSettlement } from '../../../../SettlementTypes';
-import { TwilightEditCountDialog } from '../primitiveComponents/AlertBoxes';
-import { TwilightNodeHeader } from '../primitiveComponents/Primitives';
+import { TypeServerSettlement } from '../../../../../SettlementTypes';
+import { TwilightEditCountDialog } from '../../primitiveComponents/AlertBoxes';
+import { TwilightNodeHeader } from '../../primitiveComponents/Primitives';
 
 interface SubTabResourceProps {
     campaignData: TypeServerSettlement;

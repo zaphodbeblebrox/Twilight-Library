@@ -1,6 +1,6 @@
 import { Box, Tabs, Text } from '@radix-ui/themes';
 import { RefetchFunction } from 'axios-hooks';
-import { TypeServerSettlement } from '../../../../SettlementTypes';
+import { TypeServerSettlement } from '../../../../../SettlementTypes';
 import SubTabInnovations from './SubTabInnovations';
 import SubTabMilestones from './SubTabMilestones';
 
