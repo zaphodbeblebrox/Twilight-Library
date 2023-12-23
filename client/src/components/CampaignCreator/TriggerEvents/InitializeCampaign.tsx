@@ -1,12 +1,6 @@
 import { TypeInitializedSettlement } from '../../../../../SettlementTypes';
 import { NodePillarLists, TypeCampaignData } from '../../static_data_file_configs/PresetCampaignConfig';
-import ConfigureMilestones from './ConfigureMilestones';
-import ConfigureBasicQuarries from './ConfigureBasicQuarries';
-import ConfigureBonusQuarries from './ConfigureBonusQuarries';
-import ConfigureNemesis from './ConfigureNemesis';
-import ConfigureResourceList from './ConfigureResourceList';
-import ConfigureGear from './ConfigureGear';
-import ConfigurePrinciple from './ConfigurePrinciple';
+import { TransformData } from './TransformData';
 
 const InitializeCampaign = (settlementName: string, campaignSettings: TypeCampaignData): TypeInitializedSettlement => {
     return {
@@ -16,21 +10,24 @@ const InitializeCampaign = (settlementName: string, campaignSettings: TypeCampai
         courage_event_2: campaignSettings.courage_event_2,
         understanding_event_1: campaignSettings.understanding_event_1,
         understanding_event_2: campaignSettings.understanding_event_1,
-        milestones: { ...ConfigureMilestones(campaignSettings) },
-        quarries: { ...ConfigureBasicQuarries(campaignSettings), ...ConfigureBonusQuarries(campaignSettings) },
+        milestones: { ...TransformData.Milestones(campaignSettings) },
+        quarries: {
+            ...TransformData.BasicQuarries(campaignSettings),
+            ...TransformData.BonusQuarries(campaignSettings),
+        },
         nemesis: {
-            ...ConfigureNemesis(campaignSettings),
+            ...TransformData.Nemesis(campaignSettings),
             [campaignSettings.node_core as keyof NodePillarLists]: { 1: false },
         },
         constellations: campaignSettings.constellations,
         arc_survivors: campaignSettings.pillars.includes('Arc Survivors'),
-        resources: { ...ConfigureResourceList(campaignSettings) },
-        gear: { ...ConfigureGear() },
+        resources: { ...TransformData.ResourceList(campaignSettings) },
+        gear: { ...TransformData.Gear() },
         intimacy: campaignSettings.intimacy,
-        principle_conviction: { ...ConfigurePrinciple(campaignSettings, 'principle_conviction') },
-        principle_death: { ...ConfigurePrinciple(campaignSettings, 'principle_death') },
-        principle_new_life: { ...ConfigurePrinciple(campaignSettings, 'principle_new_life') },
-        principle_society: { ...ConfigurePrinciple(campaignSettings, 'principle_society') },
+        principle_conviction: { ...TransformData.Principle(campaignSettings, 'principle_conviction') },
+        principle_death: { ...TransformData.Principle(campaignSettings, 'principle_death') },
+        principle_new_life: { ...TransformData.Principle(campaignSettings, 'principle_new_life') },
+        principle_society: { ...TransformData.Principle(campaignSettings, 'principle_society') },
     };
 };
 

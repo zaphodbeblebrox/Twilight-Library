@@ -1,4 +1,4 @@
-import { TypeLocationsData, locationsData } from '../../static_data_file_configs/LocationsConfig';
+import { TypeLocationsData, locationsData } from '../../../static_data_file_configs/LocationsConfig';
 
 const createGearGroup = (categoryKey: keyof TypeLocationsData) => {
     console.log('cat key', categoryKey);

@@ -1,5 +1,5 @@
-import { TypeCampaignData } from '../../static_data_file_configs/PresetCampaignConfig';
-import { TypeResourceListData, resourceListData } from '../../static_data_file_configs/ResourceListConfig';
+import { TypeCampaignData } from '../../../static_data_file_configs/PresetCampaignConfig';
+import { TypeResourceListData, resourceListData } from '../../../static_data_file_configs/ResourceListConfig';
 
 const createResourceGroup = (categoryKey: keyof TypeResourceListData) => {
     return resourceListData[categoryKey].reduce((currentResourceObject, resource) => {

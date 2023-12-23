@@ -1,4 +1,4 @@
-import { PrinciplesDefaultLists, TypeCampaignData } from '../../static_data_file_configs/PresetCampaignConfig';
+import { PrinciplesDefaultLists, TypeCampaignData } from '../../../static_data_file_configs/PresetCampaignConfig';
 
 const ConfigurePrinciple = (campaignSettings: TypeCampaignData, principleKey: keyof PrinciplesDefaultLists) => {
     const options = Object.keys(campaignSettings[principleKey]).reduce((principleObj, principleOption) => {

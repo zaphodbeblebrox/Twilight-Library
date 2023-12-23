@@ -1,4 +1,4 @@
-import { TypeCampaignData } from '../../static_data_file_configs/PresetCampaignConfig';
+import { TypeCampaignData } from '../../../static_data_file_configs/PresetCampaignConfig';
 
 const ConfigureMilestones = (campaignSettings: TypeCampaignData) => {
     const formattedMilestones = campaignSettings.milestones.reduce(
