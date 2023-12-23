@@ -37,12 +37,12 @@ const CampaignFinalSettings = ({
 
     const handleSaveCampaignOnServer = () => {
         const campaignData = InitializeCampaign(settlementName, campaignSettings);
-        console.log('data', campaignData);
-        // executePost({
-        //     data: campaignData,
-        // })
-        //     .then(() => navigate('/twilight-library/dashboard'))
-        //     .catch((err) => console.error(err));
+        console.log('campaignData to server', campaignData);
+        executePost({
+            data: campaignData,
+        })
+            .then(() => navigate('/twilight-library/dashboard'))
+            .catch((err) => console.error(err));
     };
 
     return (

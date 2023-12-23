@@ -2,6 +2,16 @@ import { NextFunction, Request, Response } from 'express';
 import mongoose from 'mongoose';
 import Settlement from '../models/Settlement';
 
+export type AxiosError = {
+    code: string;
+    config: {};
+    message: string;
+    name: string;
+    request: {};
+    response: {};
+    stack: string;
+}
+
 const createSettlement = (req: Request, res: Response, next: NextFunction) => {
     const {
         name,
@@ -17,6 +27,11 @@ const createSettlement = (req: Request, res: Response, next: NextFunction) => {
         milestones,
         resources,
         gear,
+        intimacy,
+        principle_conviction,
+        principle_death,
+        principle_new_life,
+        principle_society,
     } = req.body;
 
     const settlement = new Settlement({
@@ -34,12 +49,17 @@ const createSettlement = (req: Request, res: Response, next: NextFunction) => {
         constellations,
         resources,
         gear,
+        intimacy,
+        principle_conviction,
+        principle_death,
+        principle_new_life,
+        principle_society,
     });
 
     return settlement
         .save()
         .then((settlement) => res.status(201).json({ settlement }))
-        .catch((error) => res.status(500).json({ error }));
+        .catch((error: AxiosError) => res.status(500).json({ error }));
 };
 
 const readSettlement = (req: Request, res: Response, next: NextFunction) => {
