@@ -5,6 +5,7 @@ import { settlementApi } from '../../../service/api';
 import useAxios from 'axios-hooks';
 import { CourageUnderstandingLists, TypeCampaignData } from '../../static_data_file_configs/PresetCampaignConfig';
 import InitializeCampaign from './InitializeCampaign';
+import Principle from './Principle';
 
 interface CampaignFinalSettingsProps {
     settlementName: string;
@@ -145,9 +146,32 @@ const CampaignFinalSettings = ({
                     {/* TODO Add Initimacy */}
                 </Flex>
                 <Separator my="3" size="4" />
-                <Flex>
+                <Flex direction="column" gap="3">
                     <Heading size="6">Principles</Heading>
-                    {/* TODO Add Principles */}
+                    <Principle
+                        principleLable="New Life"
+                        principlekey={'principle_new_life'}
+                        campaignSettings={campaignSettings}
+                        setCampaignSettings={setCampaignSettings}
+                    />
+                    <Principle
+                        principleLable="Death"
+                        principlekey={'principle_death'}
+                        campaignSettings={campaignSettings}
+                        setCampaignSettings={setCampaignSettings}
+                    />
+                    <Principle
+                        principleLable="Conviction"
+                        principlekey={'principle_conviction'}
+                        campaignSettings={campaignSettings}
+                        setCampaignSettings={setCampaignSettings}
+                    />
+                    <Principle
+                        principleLable="Society"
+                        principlekey={'principle_society'}
+                        campaignSettings={campaignSettings}
+                        setCampaignSettings={setCampaignSettings}
+                    />
                 </Flex>
             </Flex>
             <Flex justify="center" align="center" gap="5">
