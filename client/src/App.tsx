@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter, Navigate, Route, RouterProvider, Routes, createBrowserRouter } from 'react-router-dom';
-import CampaignCreator from './components/campaignCreatorComponents/CampaignCreator';
+import MonstersAndModules from './components/CampaignCreator/MonstersAndModules';
 import DashboardRoutes from './components/DashboardRoutes';
 import CampaignTabs from './components/campaignDisplay/CampaignTabs';
 import { Flex } from '@radix-ui/themes';
