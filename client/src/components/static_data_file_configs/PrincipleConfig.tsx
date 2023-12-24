@@ -1,4 +1,4 @@
-import rawPrincipleData from '../../static_data/innovations.json';
+import rawPrincipleData from '../../static_data/principles.json';
 
 // --- Innovations Json ---
 export type TypePrincipleStatMods = {
