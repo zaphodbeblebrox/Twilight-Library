@@ -1,7 +1,7 @@
 import { Button, Dialog, Flex } from '@radix-ui/themes';
 import { useMemo } from 'react';
 import Fuse from 'fuse.js';
-import { innovationData } from '../../static_data_file_configs/InnovationsConfig';
+import { principleData } from '../../static_data_file_configs/PrincipleConfig';
 
 interface ModifyPrincipleProps {
     buttonText: string;
@@ -10,14 +10,14 @@ interface ModifyPrincipleProps {
 }
 
 const ModifyPrinciple = ({ buttonText, targetKey, onSubmit }: ModifyPrincipleProps) => {
-    const innovationDataMemo = useMemo(() => Object.keys(innovationData), []);
+    const principleDataMemo = useMemo(() => Object.keys(principleData), []);
     const fuse = useMemo(
         () =>
-            new Fuse(innovationDataMemo, {
+            new Fuse(principleDataMemo, {
                 includeScore: true,
                 threshold: 0.1,
             }),
-        [innovationDataMemo],
+        [principleDataMemo],
     );
 
     const searchResults = useMemo(
