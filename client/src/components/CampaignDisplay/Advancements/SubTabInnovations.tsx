@@ -5,7 +5,7 @@ import { TwilightNodeHeader } from '../../primitiveComponents/Primitives';
 import { TwilightSearchPopup } from '../../primitiveComponents/SearchBoxes';
 import { InnovationKeys, innovationData } from '../../static_data_file_configs/InnovationsConfig';
 import { useMemo } from 'react';
-import InnovationCard from '../../infoCards/InnovationCard';
+import InnovationCard from './InnovationCard';
 
 interface SubTabInnovationsProps {
     campaignData: TypeServerSettlement;

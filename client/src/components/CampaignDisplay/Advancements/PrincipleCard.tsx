@@ -1,35 +1,40 @@
 // Popup that displays given information for passed in Innovation
 
 import { Button, Dialog, Flex, Text } from '@radix-ui/themes';
-import { InnovationKeys, innovationData } from '../static_data_file_configs/InnovationsConfig';
+import { PrincipleKeys, principleData } from '../../static_data_file_configs/PrincipleConfig';
 
-interface InnovationCardProps {
-    innovation: keyof InnovationKeys;
+interface PrincipleCardProps {
+    principleOption: keyof PrincipleKeys;
+    isSelected: boolean | null;
+    onChange: (selectedValue: string) => void;
 }
 
-const InnovationCard = ({ innovation }: InnovationCardProps) => {
+const PrincipleCard = ({ principleOption, isSelected, onChange }: PrincipleCardProps) => {
+    console.log('prin', principleOption, isSelected);
     return (
         <Dialog.Root>
             <Dialog.Trigger>
-                <Button variant="ghost">{String(innovation)}</Button>
+                <Button variant="ghost">{String(principleOption)}</Button>
             </Dialog.Trigger>
 
             <Dialog.Content className="DialogContent">
-                <Dialog.Title className="DialogTitle">{String(innovation)}</Dialog.Title>
+                <Dialog.Title className="DialogTitle">{String(principleOption)}</Dialog.Title>
 
                 <Flex direction="column" gap="2">
-                    {innovationData[innovation].survival_limit_mod && (
-                        <Text>Survival Limit Increase: {String(innovationData[innovation].survival_limit_mod)}</Text>
+                    {principleData[principleOption].survival_limit_mod && (
+                        <Text>
+                            Survival Limit Increase: {String(principleData[principleOption].survival_limit_mod)}
+                        </Text>
                     )}
-                    {innovationData[innovation].departing_survival && (
-                        <Text>Survival on departure: {String(innovationData[innovation].departing_survival)}</Text>
+                    {principleData[principleOption].departing_survival && (
+                        <Text>Survival on departure: {String(principleData[principleOption].departing_survival)}</Text>
                     )}
-                    {innovationData[innovation].departing_insanity && (
-                        <Text>Insanity on departure: {String(innovationData[innovation].departing_insanity)}</Text>
+                    {principleData[principleOption].departing_insanity && (
+                        <Text>Insanity on departure: {String(principleData[principleOption].departing_insanity)}</Text>
                     )}
-                    {innovationData[innovation].static_effect && (
+                    {principleData[principleOption].static_effect && (
                         <Flex direction="column" gap="2">
-                            {innovationData[innovation].static_effect?.map((effect, idx) => (
+                            {principleData[principleOption].static_effect?.map((effect, idx) => (
                                 <Text key={idx}>{effect}</Text>
                             ))}
                         </Flex>
@@ -37,9 +42,9 @@ const InnovationCard = ({ innovation }: InnovationCardProps) => {
 
                     {/* Endeavors */}
 
-                    {innovationData[innovation].endeavor && (
+                    {principleData[principleOption].endeavor && (
                         <Flex direction="column" gap="2">
-                            {innovationData[innovation].endeavor?.map((endeavor, idx) => {
+                            {principleData[principleOption].endeavor?.map((endeavor, idx) => {
                                 return (
                                     <Flex direction="column" gap="2" key={idx}>
                                         <Text>Cost: {endeavor.cost}</Text>
@@ -71,13 +76,15 @@ const InnovationCard = ({ innovation }: InnovationCardProps) => {
                 </Flex>
 
                 <Dialog.Close>
-                    <Button variant="solid" color="red">
-                        Close
-                    </Button>
+                    {isSelected !== null && (
+                        <Button variant="solid" color="red">
+                            {isSelected ? 'Deselect' : 'Select'}
+                        </Button>
+                    )}
                 </Dialog.Close>
             </Dialog.Content>
         </Dialog.Root>
     );
 };
 
-export default InnovationCard;
+export default PrincipleCard;
