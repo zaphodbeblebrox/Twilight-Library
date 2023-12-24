@@ -1,23 +1,23 @@
 import { Button, Dialog, Flex } from '@radix-ui/themes';
 import { useMemo } from 'react';
 import Fuse from 'fuse.js';
-import { campaignCreatorData } from '../../static_data_file_configs/CampaignCreatorConfig';
+import { principleData } from '../../static_data_file_configs/PrincipleConfig';
 
-interface ModifyIntimacyProps {
+interface ModifyPrincipleProps {
     buttonText: string;
+    targetKey: string;
     onSubmit: (selectedValue: string) => void;
 }
 
-const ModifyIntimacy = ({ buttonText, onSubmit }: ModifyIntimacyProps) => {
-    const intimacyMemo = useMemo(() => campaignCreatorData.intimacy, []);
-    const targetKey = 'Intimacy';
+const ModifyPrincipleDialog = ({ buttonText, targetKey, onSubmit }: ModifyPrincipleProps) => {
+    const principleDataMemo = useMemo(() => Object.keys(principleData), []);
     const fuse = useMemo(
         () =>
-            new Fuse(intimacyMemo, {
+            new Fuse(principleDataMemo, {
                 includeScore: true,
                 threshold: 0.1,
             }),
-        [intimacyMemo],
+        [principleDataMemo],
     );
 
     const searchResults = useMemo(
@@ -36,9 +36,14 @@ const ModifyIntimacy = ({ buttonText, onSubmit }: ModifyIntimacyProps) => {
             </Dialog.Trigger>
 
             <Dialog.Content className="DialogContent">
-                <Dialog.Title className="DialogTitle">Select Option for Intimacy:</Dialog.Title>
+                <Dialog.Title className="DialogTitle">Select Option for {String(targetKey)}:</Dialog.Title>
 
                 <Flex direction="column" gap="3">
+                    <Dialog.Close>
+                        <Button variant="ghost" onClick={() => onSubmit('None')}>
+                            None
+                        </Button>
+                    </Dialog.Close>
                     {searchResults.map((resultOption, idx) => {
                         return (
                             <Dialog.Close key={idx}>
@@ -60,4 +65,4 @@ const ModifyIntimacy = ({ buttonText, onSubmit }: ModifyIntimacyProps) => {
     );
 };
 
-export default ModifyIntimacy;
+export default ModifyPrincipleDialog;

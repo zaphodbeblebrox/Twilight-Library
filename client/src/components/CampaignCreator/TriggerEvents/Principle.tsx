@@ -1,6 +1,6 @@
 import { Flex, Text } from '@radix-ui/themes';
 import { PrinciplesDefaultLists, TypeCampaignData } from '../../static_data_file_configs/PresetCampaignConfig';
-import ModifyPrinciple from './ModifyPrinciple';
+import ModifyPrincipleDialog from './ModifyPrincipleDialog';
 
 interface PrincipleProps {
     principleLable: string;
@@ -16,7 +16,7 @@ const Principle = ({ principleLable, principlekey, campaignSettings, setCampaign
             <Text>Principle - {principleLable}:</Text>
             {Object.keys(principleObj).map((option, idx) => {
                 return (
-                    <ModifyPrinciple
+                    <ModifyPrincipleDialog
                         key={idx}
                         buttonText={principleObj[option as keyof typeof principleObj]}
                         targetKey={option}

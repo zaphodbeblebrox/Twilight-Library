@@ -6,7 +6,7 @@ import useAxios from 'axios-hooks';
 import { CourageUnderstandingLists, TypeCampaignData } from '../../static_data_file_configs/PresetCampaignConfig';
 import InitializeCampaign from './InitializeCampaign';
 import Principle from './Principle';
-import ModifyIntimacy from './ModifyIntimacy';
+import ModifyIntimacyDialog from './ModifyIntimacyDialog';
 
 interface CampaignFinalSettingsProps {
     settlementName: string;
@@ -146,7 +146,7 @@ const CampaignFinalSettings = ({
                     <Heading size="6">Intimacy</Heading>
                     <Flex direction="row" gap="3" align="center">
                         <Text>Story Event:</Text>
-                        <ModifyIntimacy
+                        <ModifyIntimacyDialog
                             buttonText={campaignSettings.intimacy}
                             onSubmit={(selectedOption) => {
                                 setCampaignSettings({
