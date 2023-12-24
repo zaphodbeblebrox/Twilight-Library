@@ -38,6 +38,20 @@ const SubTabPrinciples = ({ campaignData, dbRefetch, dbExecutePatch }: SubTabPri
             {Object.entries(principleCatagories).map((category, idx) => {
                 const availableOptions = campaignData[category[1]].options;
                 const selectedOption = campaignData[category[1]].selected;
+
+                const SelectionHandler = (choice: string) => {
+                    const updatedPrinciple =
+                        selectedOption === null
+                            ? { ...campaignData[category[1]], selected: choice }
+                            : { ...campaignData[category[1]], selected: null };
+                    console.log(updatedPrinciple);
+                    dbExecutePatch({
+                        data: { [category[1]]: { ...updatedPrinciple } },
+                    })
+                        .then(() => dbRefetch())
+                        .catch((err) => console.error(err));
+                };
+
                 if ((selectedOption === null && availableOptions === null) || availableOptions === null) {
                     return <></>;
                 } else {
@@ -49,26 +63,20 @@ const SubTabPrinciples = ({ campaignData, dbRefetch, dbExecutePatch }: SubTabPri
                                     <PrincipleCard
                                         principleOption={availableOptions[0] as keyof PrincipleKeys}
                                         isSelected={!!selectedOption}
-                                        onChange={(val) => {
-                                            console.log(val);
-                                        }}
+                                        onChange={SelectionHandler}
                                     />
                                     <Text>OR</Text>
                                     <PrincipleCard
                                         principleOption={availableOptions[1] as keyof PrincipleKeys}
                                         isSelected={!!selectedOption}
-                                        onChange={(val) => {
-                                            console.log(val);
-                                        }}
+                                        onChange={SelectionHandler}
                                     />
                                 </>
                             ) : (
                                 <PrincipleCard
                                     principleOption={selectedOption as keyof PrincipleKeys}
                                     isSelected={availableOptions.length < 2 ? null : !!selectedOption}
-                                    onChange={(val) => {
-                                        console.log(val);
-                                    }}
+                                    onChange={SelectionHandler}
                                 />
                             )}
                         </Flex>

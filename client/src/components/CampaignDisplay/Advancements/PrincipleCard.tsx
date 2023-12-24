@@ -77,7 +77,7 @@ const PrincipleCard = ({ principleOption, isSelected, onChange }: PrincipleCardP
 
                 <Dialog.Close>
                     {isSelected !== null && (
-                        <Button variant="solid" color="red">
+                        <Button variant="solid" color="red" onClick={() => onChange(String(principleOption))}>
                             {isSelected ? 'Deselect' : 'Select'}
                         </Button>
                     )}
