@@ -1,8 +1,4 @@
 {
-    "Accept Darkness": {
-        "name": "Accept Darkness",
-        "static_effect": ["Add +2 to all Brain Trauma rolls."]
-    },
     "Albedo": {
         "name": "Albedo",
         "endeavor": [
@@ -90,12 +86,6 @@
                 ]
             }
         ]
-    },
-    "Barbaric": {
-        "name": "Barbaric",
-        "static_effect": ["All current and newborn survivors gain +1 permanent strength."],
-        "survival_limit_mod": 1,
-        "mod_strength": 1
     },
     "Bed": {
         "name": "Bed",
@@ -191,13 +181,6 @@
             }
         ]
     },
-    "Cannibalize": {
-        "name": "Cannibalize",
-        "static_effect": [
-            "When a survivor dies, draw 1 basic resource and add it to the settlement storage. Do not gain if a survivor is lost, ceases to exist, or is exiled."
-        ],
-        "survival_limit_mod": 1
-    },
     "Character": {
         "name": "Character",
         "static_effect": ["When a survivor is named, they gain a random Character card."],
@@ -254,13 +237,6 @@
     "Clan of Death": {
         "name": "Clan of Death",
         "static_effect": ["All newborn survivors gain: +1 accuracy, +1 strength, +1 evasion."],
-        "mod_strength": 1,
-        "mod_accuracy": 1,
-        "mod_evasion": 1
-    },
-    "Collective Toil": {
-        "name": "Collective Toil",
-        "static_effect": ["At the start of the settlement phase, gain +1[[Endeavor]] for every 10 population."],
         "mod_strength": 1,
         "mod_accuracy": 1,
         "mod_evasion": 1
@@ -536,15 +512,6 @@
             }
         ]
     },
-    "Graves": {
-        "name": "Graves",
-        "static_effect": [
-            "All newborn survivors gain +1 understanding.",
-            "When a survivor dies during the hunt or showdown, gain +2[[Endeavor]]",
-            "When a survivor dies during the settlement phase, gain +1[[Endeavor]]."
-        ],
-        "mod_understanding": 1
-    },
     "Guidepost": {
         "name": "Guidepost",
         "static_effect": [""],
@@ -807,10 +774,6 @@
             }
         ]
     },
-    "Protect the Young": {
-        "name": "Protect the Young",
-        "static_effect": ["When rolling on the Intimacy story event, roll twice and pick 1 result."]
-    },
     "Radiating Orb": {
         "name": "Radiating Orb",
         "static_effect": [
@@ -832,19 +795,6 @@
                 "effect": "Add \"(Monster Name) Vol. X\", where X is the level of the defeated monster to the settlement record sheet. You retire. There can be up to 3 volumes for each monster."
             }
         ]
-    },
-    "Romantic-Arc": {
-        "name": "Romantic-Arc",
-        "static_effect": [
-            "Add the Romanticism philosophy card to the philosophy deck.",
-            "Reduce the Lumi cost to learn knowledge at the Forum by 1 (to a minimum of 1)."
-        ],
-        "survival_limit_mod": 1
-    },
-    "Romantic": {
-        "name": "Romantic",
-        "static_effect": ["When you gain a random fighting art, draw 3, pick 1 instead."],
-        "survival_limit_mod": 1
     },
     "Round Stone Training": {
         "name": "Round Stone Training",
@@ -1287,17 +1237,6 @@
                 "effect": "Select a quarry monster. If the settlement has earned at least 10 CC from the monster, gain its meal gear card."
             }
         ]
-    },
-    "Survival of the Fittest": {
-        "name": "Survival of the Fittest",
-        "static_effect": [
-            "When rolling on the Intimacy story event, roll twice and pick the lowest result.",
-            "All current and newborn survivors gain +1 strength & +1 evasion.",
-            "Once per lifetime, a survivor may reroll a single roll result. They must keep the new result."
-        ],
-        "survival_limit_mod": 1,
-        "mod_strength": 1,
-        "mod_evasion": 1
     },
     "Symposium": {
         "name": "Symposium",

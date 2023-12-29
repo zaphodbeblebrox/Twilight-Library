@@ -31,6 +31,7 @@ export type BonusQuarryOptionList = {
 export type TypeCampaignCreatorData = NodeOptionsList &
     BonusQuarryOptionList & {
         timeline: TimelineOptionList;
+        intimacy: string[];
     };
 
 export const campaignCreatorData: TypeCampaignCreatorData = rawCampaignCreatorData;

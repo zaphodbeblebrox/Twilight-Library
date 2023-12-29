@@ -27,26 +27,6 @@ const SettlementSchema: Schema = new Schema(
             required: false,
             default: '',
         },
-        principle_conviction: {
-            type: String,
-            required: false,
-            default: null,
-        },
-        principle_death: {
-            type: String,
-            required: false,
-            default: null,
-        },
-        principle_new_life: {
-            type: String,
-            required: false,
-            default: null,
-        },
-        principle_society: {
-            type: String,
-            required: false,
-            default: null,
-        },
         resources: {
             type: Object,
             required: true,
@@ -139,21 +119,34 @@ const SettlementSchema: Schema = new Schema(
             type: String,
             required: true,
         },
+        intimacy: {
+            type: String,
+            required: true,
+        },
+        principle_conviction: {
+            type: Object,
+            required: true,
+            // TODO: Create proper validation check
+        },
+        principle_death: {
+            type: Object,
+            required: true,
+            // TODO: Create proper validation check
+        },
+        principle_new_life: {
+            type: Object,
+            required: true,
+            // TODO: Create proper validation check
+        },
+        principle_society: {
+            type: Object,
+            required: true,
+            // TODO: Create proper validation check
+        },
         milestones: {
             type: Object,
             required: true,
             // TODO: Create proper validation check
-            // validate: {
-            //     validator: (value: String) => {
-            //         for (const key in value) {
-            //             if (typeof value[key] !== 'boolean') {
-            //                 return false;
-            //             }
-            //         }
-            //         return true;
-            //     },
-            //     message: 'Resources is strictly an Record<string, boolean>!!!',
-            // },
         },
         constellations: {
             type: Boolean,

@@ -21,6 +21,8 @@
         "Dung Beetle Knight": { "The Old Master": [4] }
     },
 
+    "intimacy": ["Intimacy", "Intimacy - Gambler", "Intimacy - Dragon King", "Intimacy - Sunstalker"],
+
     "timeline": {
         "quarries": {
             "Gorm": { "1": ["The Approching Storm"] },

@@ -46,7 +46,15 @@
         "courage_event_2": "See the Truth",
         "understanding_event_1": "Insight",
         "understanding_event_2": "White Secret",
-        "constellations": false
+        "constellations": false,
+        "principle_conviction": { "Barbaric": "Barbaric", "Romantic": "Romantic-Arc" },
+        "principle_death": { "Cannibalize": "Cannibalize", "Graves": "Graves" },
+        "principle_new_life": {
+            "Survival of the Fittest": "Survival of the Fittest",
+            "Protect the Young": "Protect the Young"
+        },
+        "principle_society": { "Collective Toil": "Collective Toil", "Accept Darkness": "Accept Darkness" },
+        "intimacy": "Intimacy - Gambler"
     },
     "People of the Lantern": {
         "node_quarry_1": ["White Lion"],
@@ -92,7 +100,15 @@
         "courage_event_2": "See the Truth",
         "understanding_event_1": "Insight",
         "understanding_event_2": "White Secret",
-        "constellations": false
+        "constellations": false,
+        "principle_conviction": { "Barbaric": "Barbaric", "Romantic": "Romantic" },
+        "principle_death": { "Cannibalize": "Cannibalize", "Graves": "Graves" },
+        "principle_new_life": {
+            "Survival of the Fittest": "Survival of the Fittest",
+            "Protect the Young": "Protect the Young"
+        },
+        "principle_society": { "Collective Toil": "Collective Toil", "Accept Darkness": "Accept Darkness" },
+        "intimacy": "Intimacy"
     },
     "People of the Stars": {
         "node_quarry_1": ["White Lion"],
@@ -141,7 +157,15 @@
         "courage_event_2": "See the Truth",
         "understanding_event_1": "Awake",
         "understanding_event_2": "White Secret",
-        "constellations": true
+        "constellations": true,
+        "principle_conviction": { "Barbaric": "Barbaric", "Romantic": "Romantic" },
+        "principle_death": { "Cannibalize": "Cannibalize", "Graves": "Graves" },
+        "principle_new_life": {
+            "Survival of the Fittest": "Survival of the Fittest",
+            "Protect the Young": "Protect the Young"
+        },
+        "principle_society": { "Collective Toil": "Collective Toil", "Accept Darkness": "Accept Darkness" },
+        "intimacy": "Intimacy - Dragon King"
     },
     "People of the Sun": {
         "node_quarry_1": ["White Lion"],
@@ -192,6 +216,11 @@
         "courage_event_2": "See the Truth",
         "understanding_event_1": "Insight",
         "understanding_event_2": "White Secret",
-        "constellations": false
+        "constellations": false,
+        "principle_conviction": { "Barbaric": "Barbaric", "Romantic": "Romantic" },
+        "principle_death": { "Cannibalize": "Cannibalize", "Graves": "Graves" },
+        "principle_new_life": { "Survival of the Fittest": "Survival of the Fittest", "Protect the Young": "None" },
+        "principle_society": { "Collective Toil": "Collective Toil", "Accept Darkness": "Accept Darkness" },
+        "intimacy": "Intimacy - Sunstalker"
     }
 }

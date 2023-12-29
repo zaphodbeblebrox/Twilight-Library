@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import Dashboard from './Dashboard';
-import CampaignCreatorRoutes from './campaignCreatorComponents/CampaignCreatorRoutes';
+import CampaignCreatorRoutes from './CampaignCreator';
 
 function DashboardRoutes() {
     return (

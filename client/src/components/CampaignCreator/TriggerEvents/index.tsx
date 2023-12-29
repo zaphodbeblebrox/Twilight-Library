@@ -1,17 +1,12 @@
 import { Button, Flex, Heading, Separator, Text } from '@radix-ui/themes';
 import { useNavigate } from 'react-router-dom';
-import { TypeInitializedSettlement } from '../../../../SettlementTypes';
-import { TwilightAddEventAlert, TwilightEditTextAlert } from '../primitiveComponents/AlertBoxes';
-import { settlementApi } from '../../service/api';
+import { TwilightAddEventAlert, TwilightEditTextAlert } from '../../primitiveComponents/AlertBoxes';
+import { settlementApi } from '../../../service/api';
 import useAxios from 'axios-hooks';
-import {
-    CourageUnderstandingLists,
-    NodePillarLists,
-    TypeCampaignData,
-} from '../static_data_file_configs/presetCampaignConfig';
-import { campaignCreatorData } from '../static_data_file_configs/CampaignCreatorConfig';
-import { TypeResourceListData, resourceListData } from '../static_data_file_configs/ResourceListConfig';
-import { TypeLocationsData, locationsData } from '../static_data_file_configs/LocationsConfig';
+import { CourageUnderstandingLists, TypeCampaignData } from '../../static_data_file_configs/PresetCampaignConfig';
+import InitializeCampaign from './InitializeCampaign';
+import Principle from './Principle';
+import ModifyIntimacyDialog from './ModifyIntimacyDialog';
 
 interface CampaignFinalSettingsProps {
     settlementName: string;
@@ -40,154 +35,9 @@ const CampaignFinalSettings = ({
         setCampaignSettings(updatedCampaign);
     };
 
-    const setMilestones = () => {
-        const formattedMilestones = campaignSettings.milestones.reduce(
-            (currentMilestoneObject, milestone) => ({
-                ...currentMilestoneObject,
-                [milestone]: false,
-            }),
-            {},
-        );
-        return formattedMilestones;
-    };
-
-    const setBasicQuarries = () => {
-        return ['node_quarry_1', 'node_quarry_2', 'node_quarry_3', 'node_quarry_4'].reduce(
-            (currentQuarryObject, node) => {
-                return {
-                    ...currentQuarryObject,
-                    ...campaignSettings[node as keyof NodePillarLists].reduce((currentNodeObject, quarry) => {
-                        return { ...currentNodeObject, [quarry]: { 1: false, 2: false, 3: false } };
-                    }, {}),
-                };
-            },
-            {},
-        );
-    };
-
-    const setBonusQuarries = () => {
-        return ['node_quarry_1', 'node_quarry_2', 'node_quarry_3', 'node_quarry_4'].reduce(
-            (currentQuarryObject, node) => {
-                return {
-                    ...currentQuarryObject,
-                    ...campaignSettings[node as keyof NodePillarLists]
-                        .filter((quarry) => quarry in campaignCreatorData.bonus_quarries)
-                        .reduce((currentNodeObject, quarry: string) => {
-                            return {
-                                ...currentNodeObject,
-                                ...Object.keys(campaignCreatorData.bonus_quarries[quarry]).reduce(
-                                    (currentBonusQuarry, bonusQuarry: string) => {
-                                        return {
-                                            ...currentBonusQuarry,
-                                            [bonusQuarry]: {
-                                                ...campaignCreatorData.bonus_quarries[quarry][bonusQuarry].reduce(
-                                                    (currentLevelObject: Record<number, boolean>, level: number) => {
-                                                        return { ...currentLevelObject, [level]: false };
-                                                    },
-                                                    {},
-                                                ),
-                                            },
-                                        };
-                                    },
-                                    {},
-                                ),
-                            };
-                        }, {}),
-                };
-            },
-            {},
-        );
-    };
-
-    const setNemesis = () => {
-        return ['node_nemesis_1', 'node_nemesis_2', 'node_nemesis_3'].reduce((currentNemesisObject, node) => {
-            return {
-                ...currentNemesisObject,
-                ...campaignSettings[node as keyof NodePillarLists].reduce((currentNodeObject, nemesis) => {
-                    return { ...currentNodeObject, [nemesis]: { 1: false, 2: false, 3: false } };
-                }, {}),
-            };
-        }, {});
-    };
-
-    const createResourceGroup = (categoryKey: keyof TypeResourceListData) => {
-        return resourceListData[categoryKey].reduce((currentResourceObject, resource) => {
-            return {
-                ...currentResourceObject,
-                [resource]: 0,
-            };
-        }, {});
-    };
-
-    const createResourceList = () => {
-        const monsterList = [
-            ...campaignSettings.node_nemesis_1,
-            ...campaignSettings.node_nemesis_2,
-            ...campaignSettings.node_nemesis_3,
-            ...campaignSettings.node_quarry_1,
-            ...campaignSettings.node_quarry_2,
-            ...campaignSettings.node_quarry_3,
-            ...campaignSettings.node_quarry_4,
-            campaignSettings.node_core,
-            'Basic',
-        ];
-
-        return monsterList
-            .filter((monster) => monster && Object.keys(resourceListData).includes(monster))
-            .reduce((currentResourceObject, monster) => {
-                return monster
-                    ? {
-                          ...currentResourceObject,
-                          [monster]: createResourceGroup(monster as keyof TypeResourceListData),
-                      }
-                    : { ...currentResourceObject };
-            }, {});
-    };
-
-    const createGearGroup = (categoryKey: keyof TypeLocationsData) => {
-        console.log('cat key', categoryKey);
-        return locationsData[categoryKey].gear.reduce((currentLocationObject, gear) => {
-            return {
-                ...currentLocationObject,
-                [gear]: 0,
-            };
-        }, {});
-    };
-
-    const createLocationList = () => {
-        return ['Starting Gear']
-            .filter((location) => location && Object.keys(locationsData).includes(location))
-            .reduce((currentLocationObject, location) => {
-                console.log('location', location);
-                return location
-                    ? {
-                          ...currentLocationObject,
-                          [location]: createGearGroup(location as keyof TypeLocationsData),
-                      }
-                    : { ...currentLocationObject };
-            }, {});
-    };
-
     const handleSaveCampaignOnServer = () => {
-        const campaignData: TypeInitializedSettlement = {
-            name: settlementName,
-            timeline: { ...campaignSettings.timeline },
-            courage_event_1: campaignSettings.courage_event_1,
-            courage_event_2: campaignSettings.courage_event_2,
-            understanding_event_1: campaignSettings.understanding_event_1,
-            understanding_event_2: campaignSettings.understanding_event_1,
-            milestones: { ...setMilestones() },
-            quarries: { ...setBasicQuarries(), ...setBonusQuarries() },
-            nemesis: { ...setNemesis(), [campaignSettings.node_core as keyof NodePillarLists]: { 1: false } },
-            constellations: campaignSettings.constellations,
-            arc_survivors: campaignSettings.pillars.includes('Arc Survivors'),
-            resources: { ...createResourceList() },
-            gear: { ...createLocationList() },
-        };
-
-        //Save data to database
-        console.log('gear', campaignData.gear);
-
+        const campaignData = InitializeCampaign(settlementName, campaignSettings);
+        console.log('campaignData to server', campaignData);
         executePost({
             data: campaignData,
         })
@@ -290,6 +140,50 @@ const CampaignFinalSettings = ({
                             />
                         </Flex>
                     </Flex>
+                </Flex>
+                <Separator my="3" size="4" />
+                <Flex direction="column" gap="3">
+                    <Heading size="6">Intimacy</Heading>
+                    <Flex direction="row" gap="3" align="center">
+                        <Text>Story Event:</Text>
+                        <ModifyIntimacyDialog
+                            buttonText={campaignSettings.intimacy}
+                            onSubmit={(selectedOption) => {
+                                setCampaignSettings({
+                                    ...campaignSettings,
+                                    intimacy: selectedOption,
+                                });
+                            }}
+                        />
+                    </Flex>
+                </Flex>
+                <Separator my="3" size="4" />
+                <Flex direction="column" gap="3">
+                    <Heading size="6">Principles</Heading>
+                    <Principle
+                        principleLable="New Life"
+                        principlekey={'principle_new_life'}
+                        campaignSettings={campaignSettings}
+                        setCampaignSettings={setCampaignSettings}
+                    />
+                    <Principle
+                        principleLable="Death"
+                        principlekey={'principle_death'}
+                        campaignSettings={campaignSettings}
+                        setCampaignSettings={setCampaignSettings}
+                    />
+                    <Principle
+                        principleLable="Conviction"
+                        principlekey={'principle_conviction'}
+                        campaignSettings={campaignSettings}
+                        setCampaignSettings={setCampaignSettings}
+                    />
+                    <Principle
+                        principleLable="Society"
+                        principlekey={'principle_society'}
+                        campaignSettings={campaignSettings}
+                        setCampaignSettings={setCampaignSettings}
+                    />
                 </Flex>
             </Flex>
             <Flex justify="center" align="center" gap="5">

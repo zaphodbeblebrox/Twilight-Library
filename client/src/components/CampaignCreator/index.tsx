@@ -1,10 +1,10 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
-import CampaignCreator from './CampaignCreator';
+import MonstersAndModules from './MonstersAndModules';
 import TimelineCreator from './TimelineCreator';
 import presetCampaignData from '../../static_data/preset_campaigns.json';
 import { useState } from 'react';
-import CampaignFinalSettings from './TriggerEventsSettings';
-import { TypeCampaignData } from '../static_data_file_configs/presetCampaignConfig';
+import CampaignFinalSettings from './TriggerEvents';
+import { TypeCampaignData } from '../static_data_file_configs/PresetCampaignConfig';
 
 function CampaignCreatorRoutes() {
     const intializeDefaultCampaign = () => {
@@ -22,7 +22,7 @@ function CampaignCreatorRoutes() {
             <Route
                 path="/"
                 element={
-                    <CampaignCreator
+                    <MonstersAndModules
                         settlementName={settlementName}
                         setSettlementName={setSettlementName}
                         selectedCampaign={selectedCampaign}

@@ -2,10 +2,10 @@ import { Tabs, Box, Text, Flex, Button } from '@radix-ui/themes';
 import { useNavigate, useParams } from 'react-router-dom';
 import useAxios from 'axios-hooks';
 import { settlementApi } from '../../service/api';
-import TabTimeline from './TabTimeline';
-import TabStorage from './TabStorage';
+import TabTimeline from './Timeline';
+import TabStorage from './Storage';
 import { useEffect } from 'react';
-import TabAdvancements from './TabAdvancements';
+import TabAdvancements from './Advancements';
 
 const CampaignTabs = () => {
     const { id } = useParams();
@@ -36,6 +36,7 @@ const CampaignTabs = () => {
             >
                 Dashboard
             </Button>
+
             <Tabs.Root
                 defaultValue="settlement"
                 style={{ display: 'flex', justifyContent: 'start', flexDirection: 'column', flex: 1, width: '100%' }}
