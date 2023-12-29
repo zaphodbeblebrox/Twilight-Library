@@ -12,26 +12,12 @@ interface SubTabPrinciplesProps {
 }
 
 const SubTabPrinciples = ({ campaignData, dbRefetch, dbExecutePatch }: SubTabPrinciplesProps) => {
-    // const principleCatagories: (keyof PrinciplesDefaultLists)[] = [
-    //     'principle_conviction',
-    //     'principle_death',
-    //     'principle_new_life',
-    //     'principle_society',
-    // ];
-
     const principleCatagories: Record<string, keyof PrinciplesDefaultLists> = {
         Conviction: 'principle_conviction',
         Death: 'principle_death',
         'New Life': 'principle_new_life',
         Society: 'principle_society',
     };
-
-    // const principleCatagories: Record<(keyof PrinciplesDefaultLists), string> = {
-    //   'principle_conviction':"Conviction",
-    //   'principle_death':"Death",
-    //   'principle_new_life':"New Life",
-    //   'principle_society':"Society",
-    // }
 
     return (
         <Flex direction="column">
