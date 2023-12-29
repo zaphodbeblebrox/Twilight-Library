@@ -1,5 +1,3 @@
-// Popup that displays given information for passed in Innovation
-
 import { Button, Dialog, Flex, Text } from '@radix-ui/themes';
 import { InnovationKeys, innovationData } from '../../static_data_file_configs/InnovationsConfig';
 
@@ -7,6 +5,7 @@ interface InnovationCardProps {
     innovation: keyof InnovationKeys;
 }
 
+// Popup that displays given information for passed in Innovation
 const InnovationCard = ({ innovation }: InnovationCardProps) => {
     return (
         <Dialog.Root>
