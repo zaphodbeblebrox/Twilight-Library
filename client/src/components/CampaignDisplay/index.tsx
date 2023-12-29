@@ -1,4 +1,4 @@
-import { Tabs, Box, Text, Flex, Button } from '@radix-ui/themes';
+import { Tabs, Box, Text, Flex, Button, Heading } from '@radix-ui/themes';
 import { useNavigate, useParams } from 'react-router-dom';
 import useAxios from 'axios-hooks';
 import { settlementApi } from '../../service/api';
@@ -67,8 +67,16 @@ const CampaignTabs = () => {
 
                 <Box px="4" pt="3" pb="2">
                     <Tabs.Content value="settlement">
-                        <Text size="2">Settlement Info...</Text>
-                        {getData && <Text size="2">{JSON.stringify(getData, null, 2)}</Text>}
+                        {/* {getData && <Text size="2">{JSON.stringify(getData, null, 2)}</Text>} */}
+                        {getData &&
+                            Object.keys(getData.settlement).map((objKey, idx) => {
+                                return (
+                                    <Flex key={idx} direction="column">
+                                        <Heading>{objKey}</Heading>
+                                        <Text size="2">{JSON.stringify(getData.settlement[objKey], null, 2)}</Text>
+                                    </Flex>
+                                );
+                            })}
                     </Tabs.Content>
 
                     <Tabs.Content value="timeline">
