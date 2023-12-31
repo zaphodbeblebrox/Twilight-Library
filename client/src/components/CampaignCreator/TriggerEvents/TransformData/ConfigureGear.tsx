@@ -1,7 +1,7 @@
 import { TypeLocationsData, locationsData } from '../../../static_data_file_configs/LocationsConfig';
 
 const createGearGroup = (categoryKey: keyof TypeLocationsData) => {
-    console.log('cat key', categoryKey);
+    // console.log('cat key', categoryKey);
     return locationsData[categoryKey].gear.reduce((currentLocationObject, gear) => {
         return {
             ...currentLocationObject,

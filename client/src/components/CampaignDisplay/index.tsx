@@ -69,14 +69,16 @@ const CampaignTabs = () => {
                     <Tabs.Content value="settlement">
                         {/* {getData && <Text size="2">{JSON.stringify(getData, null, 2)}</Text>} */}
                         {getData &&
-                            Object.keys(getData.settlement).map((objKey, idx) => {
-                                return (
-                                    <Flex key={idx} direction="column">
-                                        <Heading>{objKey}</Heading>
-                                        <Text size="2">{JSON.stringify(getData.settlement[objKey], null, 2)}</Text>
-                                    </Flex>
-                                );
-                            })}
+                            Object.keys(getData.settlement)
+                                .sort()
+                                .map((objKey, idx) => {
+                                    return (
+                                        <Flex key={idx} direction="column">
+                                            <Heading>{objKey}</Heading>
+                                            <Text size="2">{JSON.stringify(getData.settlement[objKey], null, 2)}</Text>
+                                        </Flex>
+                                    );
+                                })}
                     </Tabs.Content>
 
                     <Tabs.Content value="timeline">

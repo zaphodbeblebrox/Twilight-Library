@@ -1,20 +1,13 @@
 import { Button, Flex } from '@radix-ui/themes';
-import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { settlementApi } from '../service/api';
-import { TypeServerSettlement } from '../../../SettlementTypes';
-import useAxios from 'axios-hooks';
+import useAxios, { configure } from 'axios-hooks';
 
 const DisplayAllCampaigns = () => {
-    const [{ data, loading, error }, refetch] = useAxios(`${settlementApi}/get`);
-    const [allCampaigns, setAllCampaigns] = useState<TypeServerSettlement[]>([]);
-    const navigate = useNavigate();
+    const [{ data, loading, error }, refetch] = useAxios(`${settlementApi}/get`, { useCache: false });
+    configure;
 
-    useEffect(() => {
-        if (data) {
-            setAllCampaigns(data.settlements);
-        }
-    }, [data]);
+    const navigate = useNavigate();
 
     if (loading) {
         return <p>Loading...</p>;

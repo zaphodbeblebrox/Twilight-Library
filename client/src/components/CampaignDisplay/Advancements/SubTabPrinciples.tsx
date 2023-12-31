@@ -30,7 +30,7 @@ const SubTabPrinciples = ({ campaignData, dbRefetch, dbExecutePatch }: SubTabPri
                         selectedOption === null
                             ? { ...campaignData[category[1]], selected: choice }
                             : { ...campaignData[category[1]], selected: null };
-                    console.log(updatedPrinciple);
+                    // console.log(updatedPrinciple);
                     dbExecutePatch({
                         data: { [category[1]]: { ...updatedPrinciple } },
                     })

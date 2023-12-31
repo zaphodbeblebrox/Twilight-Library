@@ -10,7 +10,6 @@ interface PrincipleCardProps {
 }
 
 const PrincipleCard = ({ principleOption, isSelected, onChange }: PrincipleCardProps) => {
-    console.log('prin', principleOption, isSelected);
     return (
         <Dialog.Root>
             <Dialog.Trigger>
