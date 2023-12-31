@@ -4,6 +4,7 @@ import { TypeServerSettlement } from '../../../../../SettlementTypes';
 import SubTabInnovations from './SubTabInnovations';
 import SubTabMilestones from './SubTabMilestones';
 import SubTabPrinciples from './SubTabPrinciples';
+import SubTabBonuses from './SubTabBonuses';
 
 interface TabAdvancementsProps {
     campaignData: TypeServerSettlement;
@@ -60,7 +61,9 @@ const TabAdvancements = ({ campaignData, dbRefetch, dbExecutePatch }: TabAdvance
                         />
                     )}
                 </Tabs.Content>
-                <Tabs.Content value="bonuses">{campaignData && <Text>...Loading bonuses</Text>}</Tabs.Content>
+                <Tabs.Content value="bonuses">
+                    {campaignData && <SubTabBonuses campaignData={campaignData} />}
+                </Tabs.Content>
             </Box>
         </Tabs.Root>
     );
