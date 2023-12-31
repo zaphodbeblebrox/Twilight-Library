@@ -1,20 +1,35 @@
 import { Button, Flex } from '@radix-ui/themes';
-import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { settlementApi } from '../service/api';
-import { TypeServerSettlement } from '../../../SettlementTypes';
-import useAxios from 'axios-hooks';
+import useAxios, { configure } from 'axios-hooks';
+import { useEffect, useState } from 'react';
+// import { useIsFocused } from '@react-navigation/native';
 
 const DisplayAllCampaigns = () => {
-    const [{ data, loading, error }, refetch] = useAxios(`${settlementApi}/get`);
-    const [allCampaigns, setAllCampaigns] = useState<TypeServerSettlement[]>([]);
+    // const [axiosInitiated, setAxiosInitiated] = useState(false);
+    const [{ data, loading, error }, refetch] = useAxios(`${settlementApi}/get`, { useCache: false });
+    configure;
+
     const navigate = useNavigate();
 
+    // const isFocused = useIsFocused();
+
+    // useEffect(() => {
+    //     if (isFocused) {
+    //         refetch();
+    //     }
+    // }, [isFocused, refetch]);
+
+    // TODO: Trigger refetch() when navigated to.
+
     useEffect(() => {
-        if (data) {
-            setAllCampaigns(data.settlements);
-        }
-    }, [data]);
+        console.log('Mounted!');
+        console.log('Data: ', data);
+        console.log('Loading: ', loading);
+        console.log('Error: ', error);
+        // console.log('DAC has Remounted!', axiosInitiated);
+        // axiosInitiated ? refetch() : setAxiosInitiated(true);
+    }, [loading]);
 
     if (loading) {
         return <p>Loading...</p>;
