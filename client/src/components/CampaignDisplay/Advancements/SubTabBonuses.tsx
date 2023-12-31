@@ -59,7 +59,6 @@ const SubTabBonuses = ({ campaignData }: SubTabBonusesProps) => {
             mod_hunt_xp: 0,
         },
     );
-    console.log('innovation modifiers: ', innovationModifiers);
 
     // Gain stat bonuses from Principles
     const principleKeys: (keyof PrinciplesList)[] = [
@@ -89,7 +88,6 @@ const SubTabBonuses = ({ campaignData }: SubTabBonusesProps) => {
         },
         { ...innovationModifiers },
     );
-    console.log('total modifiers: ', survivorModifiers);
 
     return (
         <Flex direction="column" gap="2" align="start" justify="start">
@@ -112,9 +110,6 @@ const SubTabBonuses = ({ campaignData }: SubTabBonusesProps) => {
             {survivorModifiers.mod_hunt_xp && <Text>Hunt XP: +{String(survivorModifiers.mod_hunt_xp)}</Text>}
         </Flex>
     );
-
-    {
-    }
 };
 
 export default SubTabBonuses;
