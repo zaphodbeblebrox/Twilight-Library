@@ -6,6 +6,7 @@ import TabTimeline from './Timeline';
 import TabStorage from './Storage';
 import { useEffect } from 'react';
 import TabAdvancements from './Advancements';
+import TabCampaignSettings from './CampaignSettings';
 
 const CampaignTabs = () => {
     const { id } = useParams();
@@ -63,6 +64,9 @@ const CampaignTabs = () => {
                     <Tabs.Trigger style={{ flex: 1 }} value="patterns">
                         Patterns
                     </Tabs.Trigger>
+                    <Tabs.Trigger style={{ flex: 1 }} value="campaignSettings">
+                        Campaign Settings
+                    </Tabs.Trigger>
                 </Tabs.List>
 
                 <Box px="4" pt="3" pb="2">
@@ -119,6 +123,15 @@ const CampaignTabs = () => {
                     </Tabs.Content>
                     <Tabs.Content value="patterns">
                         <Text size="2">patterns Info...</Text>
+                    </Tabs.Content>
+                    <Tabs.Content value="campaignSettings">
+                        {getData && (
+                            <TabCampaignSettings
+                                campaignData={getData.settlement}
+                                dbRefetch={refetch}
+                                dbExecutePatch={executePatch}
+                            />
+                        )}
                     </Tabs.Content>
                 </Box>
             </Tabs.Root>
