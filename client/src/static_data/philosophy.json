@@ -1,0 +1,19 @@
+{
+    "Ambitionism": { "Neurosis": "Spoiled", "2": 6, "3": 10, "4": 14 },
+    "Champion": { "Neurosis": "Compelled", "2": 4, "3": 6, "4": 12 },
+    "Collectivism": { "Neurosis": "Selfless", "2": 6, "3": 10, "4": 14 },
+    "Deadism": { "Neurosis": "Disembodied", "2": 4, "3": 10, "4": 12 },
+    "Dreamism": { "Neurosis": "Sleepless", "2": 4, "3": 7, "4": 10 },
+    "Faceism": { "Neurosis": "Fixated", "2": 4, "3": 7, "4": 10 },
+    "Gourmandism": { "Neurosis": "Ravenous", "2": 6, "3": 10, "4": 14 },
+    "Homicidalism": { "Neurosis": "Murderer", "2": 6, "3": 10, "4": 14 },
+    "Impermanism": { "Neurosis": "Unrestrained", "2": 4, "3": 7, "4": 10 },
+    "Lanternism": { "Neurosis": "Phototaxis", "2": 4, "3": 7, "4": 10 },
+    "Luck": { "Neurosis": "Woebegone", "2": 6, "3": 10, "4": 14 },
+    "Marrowism": { "Neurosis": "Arrogance", "2": 6, "3": 10, "4": 14 },
+    "Optimism": { "Neurosis": "Important", "2": 6, "3": 10, "4": 14 },
+    "Regalism": { "Neurosis": "Inferiority Complex", "2": 6, "3": 10, "4": 14 },
+    "Romanticism": { "Neurosis": "Dilettante", "2": 6, "3": 10, "4": 14 },
+    "Survivalism": { "Neurosis": "Selfish", "2": 4, "3": 7, "4": 10 },
+    "Verminism": { "Neurosis": "Frailty", "2": 6, "3": 10, "4": 14 }
+}
