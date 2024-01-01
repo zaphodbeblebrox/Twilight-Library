@@ -17,7 +17,7 @@ const InitializeCampaign = (settlementName: string, campaignSettings: TypeCampai
         },
         nemesis: {
             ...TransformData.Nemesis(campaignSettings),
-            [campaignSettings.node_core as keyof NodePillarLists]: { 1: false },
+            [campaignSettings.node_core as keyof NodePillarLists]: { 1: 0 },
         },
         constellations: campaignSettings.constellations,
         arc_survivors: campaignSettings.pillars.includes('Arc Survivors'),

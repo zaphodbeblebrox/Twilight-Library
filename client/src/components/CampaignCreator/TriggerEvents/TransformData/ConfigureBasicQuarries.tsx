@@ -5,7 +5,7 @@ const ConfigureBasicQuarries = (campaignSettings: TypeCampaignData) => {
         return {
             ...currentQuarryObject,
             ...campaignSettings[node as keyof NodePillarLists].reduce((currentNodeObject, quarry) => {
-                return { ...currentNodeObject, [quarry]: { 1: false, 2: false, 3: false } };
+                return { ...currentNodeObject, [quarry]: { 1: 0, 2: 0, 3: 0 } };
             }, {}),
         };
     }, {});
