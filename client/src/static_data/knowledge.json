@@ -1,0 +1,1088 @@
+{
+    "Accuracy Training I": {
+        "ability": "[Theory]",
+        "observation": 6,
+        "condition": "When you successfully hit the monster, gain +1 mark. Limit once per attack.",
+        "next_rank": "Accuracy Training II"
+    },
+    "Accuracy Training II": {
+        "ability": "+1 accuracy.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Adrenaline Junkie": {
+        "ability": "When you attack with 3+ speed and draw the trap, gain +1 luck token.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Affirmation": {
+        "ability": "You can spend insanity as though it were survival.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "All for One I": {
+        "ability": "With their permission, you can spend other survivors' survival as though it were your own. Limit once per round.",
+        "observation": 4,
+        "condition": "When another survivor lets you spend their survival, gain +1 mark.",
+        "next_rank": "All for One II"
+    },
+    "All for One II": {
+        "ability": "With their permission, you can spend other survivors' survival as though it were your own. Limit twice per round.",
+        "observation": 8,
+        "condition": "When another survivor lets you spend their survival, gain +1 mark.",
+        "next_rank": "All for One III"
+    },
+    "All for One III": {
+        "ability": "With their permission, you can spend other survivors' survival as though it were your own.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Appreciation": {
+        "ability": "During the showdown, when you would archive a resource or gear, roll 1d10. On a 6+, you keep it instead.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Aspirational Ethos": {
+        "ability": "+1 strength for every 10 CC the settlement has.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Believe in Yourself I": {
+        "ability": "You are [Guardless]. On Arrival, if your survival is at the settlement's survival limit, gain +1 evasion token.",
+        "observation": 3,
+        "condition": "In the Aftermath, if you have no filled heavy injury boxes, gain +1 mark.",
+        "next_rank": "Believe in Yourself II"
+    },
+    "Believe in Yourself II": {
+        "ability": "You are [Guardless]. On Arrival, if your survival is at the settlement's survival limit, gain +2 evasion tokens.",
+        "observation": 4,
+        "condition": "In the Aftermath, if you have no filled injury boxes, gain +1 mark.",
+        "next_rank": "Believe in Yourself III"
+    },
+    "Believe in Yourself III": {
+        "ability": "You are [Guardless]. On Arrival, if your survival is at the settlement's survival limit, gain +3 evasion tokens.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Better Than This": {
+        "ability": "During your act, you may spend up to 5 insanity to gain that much survival. Limit once per showdown.",
+        "observation": 2,
+        "condition": "(Dangerous) When you suffer a brain trauma, gain +1 mark.",
+        "next_rank": null
+    },
+    "Blackheart": {
+        "ability": "On Arrival, gain +1 strength token. Add your number of +1 strength tokens to your brain trauma rolls.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Blood Dancer I": {
+        "ability": "[Theory]",
+        "observation": 4,
+        "condition": "When you gain a bleeding token, gain +1 mark.",
+        "next_rank": "Blood Dancer II"
+    },
+    "Blood Dancer II": {
+        "ability": "+1 strength for each bleeding token you have. While you have any bleeding tokens, you lose yourself to the blood and are [Guardless].",
+        "observation": 6,
+        "condition": "When you wound the monster while Guardless, gain +1 mark.",
+        "next_rank": "Blood Dancer III"
+    },
+    "Blood Dancer III": {
+        "ability": "+1 strength for each bleeding token you have.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Braggart": {
+        "ability": "When you [Encourage] a survivor, gain +2 survival and they lose 1 survival.",
+        "observation": 3,
+        "condition": "When you are Encouraged, gain +1 mark.",
+        "next_rank": null
+    },
+    "Call the Storm": {
+        "ability": "Once per round, you may spend 2 insanity to give your next wound attempt bonus strength equal to your weapon's proficiency.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Call to Arms": {
+        "ability": "During your act, you may set all other survivors' insanity equal to your insanity. Limit once per showdown.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Chosen I": {
+        "ability": "[Theory]",
+        "observation": 1,
+        "condition": "When you make a dangerous observation, gain +1 mark.",
+        "next_rank": "Chosen II"
+    },
+    "Chosen II": {
+        "ability": "You may erase an observation from another knowledge you possess.",
+        "observation": 4,
+        "condition": "When you erase an observation using this knowledge, gain +1 mark.",
+        "next_rank": "Chosen III"
+    },
+    "Chosen III": {
+        "ability": "You may record a permanent injury you do not alread have to erase an observation from another knowledge you possess.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Combat Conviction I": {
+        "ability": "When you [Perfect Hit] with a sword, gain +1d5 insanity.",
+        "observation": 2,
+        "condition": "When you Perfect Hit with a sword, gain +1 mark.",
+        "next_rank": "Combat Conviction II"
+    },
+    "Combat Conviction II": {
+        "ability": "When you [Perfect Hit] with a sword or when you [Block]/[Deflect] a hit, gain +1d5 insanity. ",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Dark Eye I": {
+        "ability": "[Theory]",
+        "observation": 6,
+        "condition": "On a [Perfect Hit], gain +1 mark.",
+        "next_rank": "Dark Eye II"
+    },
+    "Dark Eye II": {
+        "ability": "+1 accuracy, +1 systemic pressure. Increase the range of your [Perfect Hit]s by 1.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Dark Impulse I": {
+        "ability": "[Theory]",
+        "observation": 1,
+        "condition": "When you inflict the killing blow on a monster or murder a survivor, gain +1 mark.",
+        "next_rank": "Dark Impulse II"
+    },
+    "Dark Impulse II": {
+        "ability": "When you inflict the killing blow on a monster or murder a survivor, roll 1d10. On a 6+, gain +1 strength.",
+        "observation": 1,
+        "condition": "When you are the only surivor to return from a victorious showdown, gain +1 mark.",
+        "next_rank": "Dark Impulse III"
+    },
+    "Dark Impulse III": {
+        "ability": "While adjacent to another survivor, you may spend 1 survival to murder them. When you kill another survivor, gain all their positive attributes.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Darkness I": {
+        "ability": "+1 torment.",
+        "observation": 5,
+        "condition": "When you suffer brain damage, gain +1 mark.",
+        "next_rank": "Darkness II"
+    },
+    "Darkness II": {
+        "ability": "Add +1 to your brain trauma rolls.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Death Collector I": {
+        "ability": "When a survivor dies on the showdown board, replace their minature with a Fallen Lantern terrain tile.",
+        "observation": 1,
+        "condition": "When you activate a Fallen Lantern, gain +1 mark.",
+        "next_rank": "Death Collector II"
+    },
+    "Death Collector II": {
+        "ability": "When a survivor dies on the showdown board, replace their minature with a Fallen Lantern terrain tile. Gain +1 strength and +1 accuracy while you have a death token.",
+        "observation": 3,
+        "condition": "When you activate a Fallen Lantern, gain +1 mark.",
+        "next_rank": "Death Collector III"
+    },
+    "Death Collector III": {
+        "ability": "When a survivor dies on the showdown board, replace their minature with a Fallen Lantern terrain tile. Gain +1 strength, +1 accuracy, & +1 evasion while you have a death token.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Death Education": {
+        "ability": "When you use [Range], [Block], [Deflect], [Mindlock], or [Deadly], increase the effect by 1 for every 20 CC in the settlement.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Death Poet I": {
+        "ability": "When you suffer a brain trauma, gain +1 strength token. Limit once per showdown.",
+        "observation": 2,
+        "condition": "When you suffer a brain trauma, gain +1 mark.",
+        "next_rank": "Death Poet II"
+    },
+    "Death Poet II": {
+        "ability": "When you suffer a brain trauma, gain +1 strength token.",
+        "observation": 5,
+        "condition": "When you suffer a brain trauma, gain +1 mark.",
+        "next_rank": "Death Poet III"
+    },
+    "Death Poet III": {
+        "ability": "When you suffer a brain trauma, gain +1 strength token. If you would die from a brain trauma, all other non-deaf survivors suffer 3 brain damage instead. Limit once per showdown.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Death Sense I": {
+        "ability": "[Theory]",
+        "observation": 8,
+        "condition": "When you [Dodge], gain +1 mark.",
+        "next_rank": "Death Sense II"
+    },
+    "Death Sense II": {
+        "ability": "You may [Dodge] 1 additional time per round.",
+        "observation": 4,
+        "condition": "When you Dodge for the second time in a round, gain +1 mark.",
+        "next_rank": "Death Sense III"
+    },
+    "Death Sense III": {
+        "ability": "You may [Dodge] 1 additional time per round and you my dodge while you are attacking or [Doomed].",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Death's Edge": {
+        "ability": "+1 systemic pressure. Gain +1 strength for each systemic pressure you have.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Deconstructive Mind I": {
+        "ability": "When you gain a disorder, you may replace one of your disorders with it.",
+        "observation": 6,
+        "condition": "When you use this knowledge, gain +1 mark.",
+        "next_rank": "Deconstructive Mind II"
+    },
+    "Deconstructive Mind II": {
+        "ability": "When you gain a disorder, you may gain +1 Lumi instead. Limit once per lantern year.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Demagogue I": {
+        "ability": "When you [Encourage] another survivor, they gain +1 insanity.",
+        "observation": 3,
+        "condition": "When you Encourage, gain +1 mark.",
+        "next_rank": "Demagogue II"
+    },
+    "Demagogue II": {
+        "ability": "When you [Encourage] another survivor, they gain +2 insanity.",
+        "observation": 6,
+        "condition": "When you Encourage, gain +1 mark.",
+        "next_rank": "Demagogue III"
+    },
+    "Demagogue III": {
+        "ability": "+1 torment. When you [Encourage], all non-deaf survivors are affected and they gain +2 insanity.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Despair I": {
+        "ability": "[Theory]",
+        "observation": 1,
+        "condition": "When you suffer a brain trauma, gain +1 mark.",
+        "next_rank": "Despair II"
+    },
+    "Despair II": {
+        "ability": "When you depart, gain +1 insanity.",
+        "observation": 3,
+        "condition": "When you suffer a brain trauma, gain +1 mark.",
+        "next_rank": "Despair III"
+    },
+    "Despair III": {
+        "ability": "When you depart, gain +2 insanity.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Desperate Strike I": {
+        "ability": "[Theory]",
+        "observation": 1,
+        "condition": "On a [Perfect Hit], gain +1 mark.",
+        "next_rank": "Desperate Strike II"
+    },
+    "Desperate Strike II": {
+        "ability": "On a [Perfect Hit], gain +2 strength until the end of the attack.",
+        "observation": 6,
+        "condition": "On a [Perfect Hit], gain +1 mark.",
+        "next_rank": "Desperate Strike III"
+    },
+    "Desperate Strike III": {
+        "ability": "On a [Perfect Hit], gain +4 strength until the end of the attack.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Digestion I": {
+        "ability": "You may [[Activation]] to [Consume] one of your positive attribute tokens. Archive it. Limit once per lantern year.",
+        "observation": 3,
+        "condition": "When consume an attribute token, gain +1 mark.",
+        "next_rank": "Digestion II"
+    },
+    "Digestion II": {
+        "ability": "You may [[Activation]] to [Consume] one of your positive attribute tokens. Archive it and gain its effects permanently. Limit once per lantern year.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Dissociation": {
+        "ability": "When you suffer a brain trauma, place your survivor in any unoccupied space within 5 spaces of your current space.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Dreamless Sleep": {
+        "ability": "Ignore the effects of your disorders.",
+        "observation": 1,
+        "condition": "(Dangerous) When you depart and there is no Keeper of Dreams settlement Location, gain +1 mark.",
+        "next_rank": null
+    },
+    "Eight Eyes": {
+        "ability": "On Arrival, if the survivors have more functioning eyes than the monster, they ambush the monster.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Envenom Edge I": {
+        "ability": "When you hit a monster at least two times in one attack, it gains a venom token. When a monster has 3+ venom tokens, it suffers 1 wound. Then archive all of its venom tokens.",
+        "observation": 3,
+        "condition": "When the monster suffers a wound from venom tokens, gain +1 mark.",
+        "next_rank": "Envenom Edge II"
+    },
+    "Envenom Edge II": {
+        "ability": "When you hit a monster at least two times in one attack, it gains a venom token. When a monster has 2+ venom tokens, it suffers 1 wound. Then archive all of its venom tokens.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Eudaimonia": {
+        "ability": "When you make an observation, gain +1 understanding. Before making a wound roll, you may spend any amount of understanding to gain that much luck for that wound attempt.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Evasion Training I": {
+        "ability": "[Theory]",
+        "observation": 5,
+        "condition": "When you are targeted, gain +1 mark.",
+        "next_rank": "Evasion Training II"
+    },
+    "Evasion Training II": {
+        "ability": "+1 evasion, +1 torment. When you depart, subtract 2[[Armor]] from the legs.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Evermore I": {
+        "ability": "You are [Undeathable].",
+        "observation": 3,
+        "condition": "Whenever you survive death, gain +1 mark.",
+        "next_rank": "Evermore II"
+    },
+    "Evermore II": {
+        "ability": "[[Activation]]: Suffer a random brain trauma.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Fear I": {
+        "ability": "[Theory]",
+        "observation": 3,
+        "condition": "When you suffer damage, gain +1 mark.",
+        "next_rank": "Fear II"
+    },
+    "Fear II": {
+        "ability": "When a monster targets you, you may spend 1 survival to suffer the flee brain trauma. Limit once per showdown.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Find the Castle I": {
+        "ability": "While insane, you may move up to 1 space diagonally during a [[Movement]] action.",
+        "observation": 8,
+        "condition": "When you use this knowledge, gain +1 mark.",
+        "next_rank": "Find the Castle II"
+    },
+    "Find the Castle II": {
+        "ability": "While insane, you may move up to 2 spaces diagonally during a [[Movement]] action.",
+        "observation": 8,
+        "condition": "When you use this knowledge, gain +1 mark.",
+        "next_rank": "Find the Castle III"
+    },
+    "Find the Castle III": {
+        "ability": "While insane, you may move up to 3 spaces diagonally during a [[Movement]] action.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Fingernail Door I": {
+        "ability": "When you roll a lantern 10, before anything else happens, physically rotate the die to a 1 and gain +1 insanity.",
+        "observation": 5,
+        "condition": "When you use this knowledge, gain +1 mark.",
+        "next_rank": "Fingernail Door II"
+    },
+    "Fingernail Door II": {
+        "ability": "When you roll a lantern 10, before anything else happens, physically rotate the die to a 1 and gain +3 insanity.",
+        "observation": 3,
+        "condition": "During the Aftermath, if you have 13+ insanity, gain +1 mark.",
+        "next_rank": "Fingernail Door III"
+    },
+    "Fingernail Door III": {
+        "ability": "The first time another survivor rolls a lantern 10 during the showdown, before anything else happens, physically rotate the die to a 1 and gain +1 permanent luck.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Font of Ingenuity": {
+        "ability": "Whe you depart, convert all unspent endeavors into reroll tokens for yourself.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Fortis Fortuna I": {
+        "ability": "On a [Perfect Hit], gain +1 Lumi. Limit once per round.",
+        "observation": 5,
+        "condition": "When you spend Lumi, gain that many +1 marks.",
+        "next_rank": "Fortis Fortuna II"
+    },
+    "Fortis Fortuna II": {
+        "ability": "On a [Perfect Hit], gain +1 Lumi.",
+        "observation": 8,
+        "condition": "When you spend Lumi, gain that many +1 marks.",
+        "next_rank": "Fortis Fortuna III"
+    },
+    "Fortis Fortuna III": {
+        "ability": "On a [Perfect Hit], gain +1 Lumi. On Arrival, you may spend 3 Lumi to increase the range of your [Perfect Hit]s by 1 this lantern year.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Fortune & Misfortune I": {
+        "ability": "On Arrival, gain +1 luck token and all other survivors gain +1 systemic pressure token.",
+        "observation": 9,
+        "condition": "When you critically wound, gain +1 mark.",
+        "next_rank": "Fortune & Misfortune II"
+    },
+    "Fortune & Misfortune II": {
+        "ability": "On Arrival, gain +2 luck tokens and all other survivors gain +2 systemic pressure tokens.",
+        "observation": 6,
+        "condition": "When a survivor with systemic pressure tokens dies from a severe injury, gain +1 mark.",
+        "next_rank": "Fortune & Misfortune III"
+    },
+    "Fortune & Misfortune III": {
+        "ability": "On Arrival, gain +3 luck tokens and all other survivors gain +3 systemic pressure tokens.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Freedom": {
+        "ability": "Once per round, you may spend 1 Lumi to perform a survival action, including repeating survival actions you have already performed.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Gambler's Grace": {
+        "ability": "+2 systemic pressure, +1 luck. When you roll a 1 during the hunt or showdown phase, lose 1 survival and reroll it.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Gastromancer": {
+        "ability": "When you depart, gain the Second Stomach survivor status card.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Ghostzerker": {
+        "ability": "[Subconscious]. Treat all your tokens, including ones on survivor status cards, as death tokens.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Guardian I": {
+        "ability": "After an adjacent survivor makes a roll, you may intervene. Gain +1 systemic pressure token and reroll one of their roll results. Limit once per showdown.",
+        "observation": 2,
+        "condition": "When you use this knowledge, gain +1 mark.",
+        "next_rank": "Guardian II"
+    },
+    "Guardian II": {
+        "ability": "After an a survivor in your field of view makes a roll, you may intervene. Gain +1 systemic pressure token and reroll one of their roll results. Limit once per showdown.",
+        "observation": 4,
+        "condition": "When you use this knowledge, gain +1 mark.",
+        "next_rank": "Guardian III"
+    },
+    "Guardian III": {
+        "ability": "After an a survivor in your field of view makes a roll, you may intervene. Gain +1 systemic pressure token and reroll one of their roll results. Limit twice per showdown.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Hardy Ego": {
+        "ability": "When you would suffer a brain trauma, instead draw two knowledges. Replace this with one of them.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Health I": {
+        "ability": "When you [Consume] during the hunt or showdown, gain +1 strength token.",
+        "observation": 4,
+        "condition": "When you consume during the hunt or showdown, gain +1 mark.",
+        "next_rank": "Health II"
+    },
+    "Health II": {
+        "ability": "When you [Consume] during the hunt or showdown, gain +1 strength or accuracy token.",
+        "observation": 5,
+        "condition": "When you consume during the hunt or showdown, gain +1 mark.",
+        "next_rank": "Health III"
+    },
+    "Health III": {
+        "ability": "When you [Consume] during the hunt or showdown, gain +1 strength, speed, or accuracy token.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Herb Grinder I": {
+        "ability": "[Theory]",
+        "observation": 1,
+        "condition": "When you gain Fresh Acanthus, gain +1 mark.",
+        "next_rank": "Herb Grinder II"
+    },
+    "Herb Grinder II": {
+        "ability": "[[Movement]][[Activation]]: Archive a Fresh Acanthus to grind it into a medicial paste. You or an adjacent survivor fully heal 2 hit locations.",
+        "observation": 4,
+        "condition": "When you grind Fresh Acanthus into a medicinal paste, gain +1 mark.",
+        "next_rank": "Herb Grinder III"
+    },
+    "Herb Grinder III": {
+        "ability": "[[Movement]][[Activation]]: Archive a Fresh Acanthus to grind it into a medicial paste. You or an adjacent survivor fully heal all hit locations.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "High Roller I": {
+        "ability": "+1 torment. You may steal a d10 from an attack roll made against you. If you do, the speed of the attack is reduced by 1. Place the stolen d10 aside with the roll result unchanged. You cannot steal a d10 while you have one stolen. After your wound attempt roll, you may replace a single roll result with the stolen d10 result.",
+        "observation": 5,
+        "condition": "When replacing a d10 with a stolen d10, gain +1 mark.",
+        "next_rank": "High Roller II"
+    },
+    "High Roller II": {
+        "ability": "+1 torment. You may steal a d10 from an attack roll made against you. If you do, the speed of the attack is reduced by 1. Place the stolen d10 aside with the roll result unchanged. You cannot steal a d10 while you have one stolen. During your attack, you may replace a single roll result with the stolen d10 result.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Hissing Arms I": {
+        "ability": "All of your weapons gain [Paired]. You cannot pair two-handed weapons this way. While you have paired weapons in your gear grid, you may spend [[Activation]] to [Deflect] 1.",
+        "observation": 3,
+        "condition": "When you make a paired attack, gain +1 mark.",
+        "next_rank": "Hissing Arms II"
+    },
+    "Hissing Arms II": {
+        "ability": "All of your weapons gain [Paired]. You cannot pair two-handed weapons this way. While you have paired weapons in your gear grid, you may spend [[Activation]] to [Deflect] 2.",
+        "observation": 8,
+        "condition": "When you make a paired attack, gain +1 mark.",
+        "next_rank": "Hissing Arms III"
+    },
+    "Hissing Arms III": {
+        "ability": "All of your weapons gain [Paired]. You cannot pair two-handed weapons this way. While you have paired weapons in your gear grid, you may spend [[Activation]] to [Deflect] 3.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Hunger I": {
+        "ability": "+1 systemic pressure.",
+        "observation": 1,
+        "condition": "During the Aftermath, gain +1 mark.",
+        "next_rank": "Hunger II"
+    },
+    "Hunger II": {
+        "ability": "When you depart, gain +1 survival.",
+        "observation": 3,
+        "condition": "When you [Consume], gain +1 mark.",
+        "next_rank": "Hunger III"
+    },
+    "Hunger III": {
+        "ability": "When you depart, gain +2 survival.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Imagination": {
+        "ability": "You may spend 3 Lumi to gain a rank of weapon proficiency. Limit once per lantern year.",
+        "observation": 1,
+        "condition": "When you depart with 12 or more Lumi, gain +1 mark.",
+        "next_rank": null
+    },
+    "Juggernaut I": {
+        "ability": "When you suffer a severe injury, you may archive 2 positive attribute tokens to ignore it.",
+        "observation": 4,
+        "condition": "When you use this knowledge, gain +1 mark.",
+        "next_rank": "Juggernaut II"
+    },
+    "Juggernaut II": {
+        "ability": "When you suffer a severe injury, you may archive 1 positive attribute token to ignore it.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Lanterns' Souls": {
+        "ability": "When you depart, +1 affinity of your choice.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Legion I": {
+        "ability": "[Theory]",
+        "observation": 1,
+        "condition": "When another survivor in the settlement has Legion, gain +1 mark.",
+        "next_rank": "Legion II"
+    },
+    "Legion II": {
+        "ability": "You may spend 3 Lumi to teach another survivor Legion. Limit once per lantern year.",
+        "observation": 1,
+        "condition": "When there are 8 survivors in the settlement with Legion, gain +1 mark.",
+        "next_rank": "Legion III"
+    },
+    "Legion III": {
+        "ability": "You gain strength equal to the number of survivors with Legion on the showdown board.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Life Eater": {
+        "ability": "[Subconscious]. On Arrival, gain a death token. [[Activation]]: [Consume] a Death token. Archive it and suffer the [Frenzy] brain trauma.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Light Stealer": {
+        "ability": "After you successfully wound the monster, you end your attack and attempt to steal the monster's soul. Roll 1d10. On a 3+, gain a Death token. Limit [[Star]] times per showdown.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Light Warrior": {
+        "ability": "On Arrival, gain a Death token. [[Activation]]: Gain +2 strength for each death token you have until the end of your next attack. Then roll 1d10. On a 1, [Consume] a Death token. Archive it and suffer the [Frenzy] brain truama.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Light Whisperer": {
+        "ability": "On Arrival, gain a Death token. [[Activation]]: Reveal cards from the top of the HL deck equal to the number of your Death tokens and put them back in any order. Then roll 1d10. On a 1, [Consume] a Death token. Archive it and suffer the [Frenzy] brain truama.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Limit Break": {
+        "ability": "At the start of the showdown, you may gain +1 movement, accuracy, evasion, strength, and luck. You will die during the Aftermath. In the Aftermath, nominate another survivor. They gain this knowledge.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Marrow Monarch": {
+        "ability": "Marrowists gain the [Cutthroat] ability.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Meat Shield": {
+        "ability": "Before resolving damage from a monster's Move & Attack action, you may exchange places with a survivor adjacent to you. They suffer any damage instead. A switched survivor cannot perform Meat Shield or [Dodge].",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Mirror Eyes I": {
+        "ability": "[Theory]",
+        "observation": 3,
+        "condition": "When you hit the monster at least 2 times in one attack, gain +1 mark.",
+        "next_rank": "Mirror Eyes II"
+    },
+    "Mirror Eyes II": {
+        "ability": "When you make a paired attack, it gains [Precision] 1.",
+        "observation": 3,
+        "condition": "When you hit the monster at least 3 times in one attack, gain +1 mark.",
+        "next_rank": "Mirror Eyes III"
+    },
+    "Mirror Eyes III": {
+        "ability": "When you make a paired attack, it gains [Precision] 2.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Myrmidon's Call": {
+        "ability": "You [Encourage] without spending survival. When you Encourage a survivor, they gain +2 movement tokens until the end of the round.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Osteophage I": {
+        "ability": "You may archive a bone resource to [Consume] it. If you do, gain the [Marrow Hunger] impairment.",
+        "observation": 3,
+        "condition": "When you consume a bone, gain +1 mark.",
+        "next_rank": "Osteophage II"
+    },
+    "Osteophage II": {
+        "ability": "You may archive a bone resource to [Consume] it. If you do, gain the [Marrow Hunger] impairment. When you depart with no armor and no shield in your gear grid, add 1[[Armor]] to all hit locations for each observation of this knowledge.",
+        "observation": 5,
+        "condition": "When you consume a bone, gain +1 mark.",
+        "next_rank": "Osteophage III"
+    },
+    "Osteophage III": {
+        "ability": "You may archive a bone resource to [Consume] it. If you do, [Heal] your survivor. Limit once per lantern year. When you depart with no armor an dnow shield in your gear grid, add 6[[Armor]] to all hit locations.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Perfect Physique": {
+        "ability": "At the beginning of your act, you may gain +3 strength and -3 movement until the end of the round.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Physiognomy I": {
+        "ability": "During the showdown setup, draw an additional terrain card and place it according to its setup rules.",
+        "observation": 5,
+        "condition": "When you activate terrain, gain +1 mark.",
+        "next_rank": "Physiognomy II"
+    },
+    "Physiognomy II": {
+        "ability": "During the showdown setup, draw two additional terrain cards and pick one. Place it according to its setup rules.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Plausibility I": {
+        "ability": "[Theory]",
+        "observation": 2,
+        "condition": "When you suffer a severe injury, gain +1 mark.",
+        "next_rank": "Plausibility II"
+    },
+    "Plausibility II": {
+        "ability": "When you suffer a severe injury, gain a reroll token.",
+        "observation": 4,
+        "condition": "when you use a reroll token on a severe injury roll, gain +1 mark.",
+        "next_rank": "Plausibility III"
+    },
+    "Plausibility III": {
+        "ability": "When you suffer a severe injury, but before you roll, gain a reroll token.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Positivity I": {
+        "ability": "On Arrival, if your survival is at the settlement's survival limit, gain 1 reroll token.",
+        "observation": 3,
+        "condition": "In the Aftermath, if your survial is at the settlement's survival limit, gain +1 mark.",
+        "next_rank": "Positivity II"
+    },
+    "Positivity II": {
+        "ability": "On Arrival, if your survival is at the settlement's survival limit, gain 2 reroll tokens.",
+        "observation": 5,
+        "condition": "In the Aftermath, gain +1 mark for each reroll token you have.",
+        "next_rank": "Positivity III"
+    },
+    "Positivity III": {
+        "ability": "On Arrival, if your survival is at the settlement's survival limit, gain 2 reroll tokens. When you reroll result is 9+, gain another reroll token.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Potentia Est I": {
+        "ability": "Increase the total number of knowledges you can have by 1, to a limit of 4.",
+        "observation": 3,
+        "condition": "When you depart with 4 knowledges, gain +1 mark.",
+        "next_rank": "Potentia Est II"
+    },
+    "Potentia Est II": {
+        "ability": "+1 torment. Increase the total number of knowledges you can have by 2, to a limit of 5.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Pyschopathy I": {
+        "ability": "Reduce all brain damage suffered during the showdown by 1 (to a minimum of 1).",
+        "observation": 8,
+        "condition": "When you suffer brain damage during the showdown, gain +1 mark.",
+        "next_rank": "Pyschopathy II"
+    },
+    "Pyschopathy II": {
+        "ability": "Reduce all brain damage suffered during the showdown by 2 (to a minimum of 1).",
+        "observation": 6,
+        "condition": "When you suffer a brain trauma, gain +1 mark.",
+        "next_rank": "Pyschopathy III"
+    },
+    "Queen of Hands": {
+        "ability": "+2 speed, +1 systemic pressure. When the left and right columns of your gear grid match, you may cancel any number of hits in you attack before drawing HL. For each cancelled hit, +1 luck for the rest of the attack.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Razor's Edge": {
+        "ability": "While you have no armor points, you attacks with melee weapons gain [Devastating] 1.",
+        "observation": 2,
+        "condition": "(Dangerous) When you wound the monster, gain +1 mark.",
+        "next_rank": null
+    },
+    "Relativity": {
+        "ability": "+1 torment, +1 systemic pressure. In the Aftermath, each survivor must gain +1 mark in a knowledge of their choice.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Relentless I": {
+        "ability": "[Theory]",
+        "observation": 1,
+        "condition": "When a monster moves away from you during your attack, gain +1 mark.",
+        "next_rank": "Relentless II"
+    },
+    "Relentless II": {
+        "ability": "When a monster moves away from you during your attack, you must [Pursue]. Limit once per attack.",
+        "observation": 4,
+        "condition": "When you pursue and wound, gain +1 mark.",
+        "next_rank": "Relentless III"
+    },
+    "Relentless III": {
+        "ability": "When a monster moves away from you during your attack, you may [Pursue]. Limit once per attack.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Rolling Dive": {
+        "ability": "+1 torment. When you are adjacent to the monster, you may spend [[Movement]] to place your survivor on any other unoccupied space adjacent to the monster.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Sculptor's Apprentice": {
+        "ability": "During the hunt or showdown, add 9[[Armor]] to all hit locations. During the Aftermath, you are never seen again.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Serial Code I": {
+        "ability": "[Theory]",
+        "observation": 1,
+        "condition": "When you depart after the settlement has witnessed The Game, gain +1 mark.",
+        "next_rank": "Serial Code II"
+    },
+    "Serial Code II": {
+        "ability": "If you would die, you inexplicably survive. Suffer -1 permanent luck and lose this knowledge. Limit once per lifetime.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Shatterstar I": {
+        "ability": "When you attack with a [Frail] weapon, gain +1 strength until the end of the attack.",
+        "observation": 4,
+        "condition": "When you attack with a Frail weapon, gain +1 mark.",
+        "next_rank": "Shatterstar II"
+    },
+    "Shatterstar II": {
+        "ability": "When you attack with a [Frail] weapon, gain +2 strength until the end of the attack.",
+        "observation": 3,
+        "condition": "When you archive a Frail weapon, gain +1 mark.",
+        "next_rank": "Shatterstar III"
+    },
+    "Shatterstar III": {
+        "ability": "When you would archive a [Frail] weapon without a Cracked token, put a Cracked token on it instead. When you attack with a [Frail] weapon, gain +2 strength until the end of the attack. If it has a Cracked token, gain +5 strength instead.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Stone Architect": {
+        "ability": "+1 torment. When you are a returning survivor, add +1 construction point to the dream project.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Stone Heart I": {
+        "ability": "[Theory]",
+        "observation": 1,
+        "condition": "When you suffer a severe injury, gain +1 mark.",
+        "next_rank": "Stone Heart II"
+    },
+    "Stone Heart II": {
+        "ability": "Add +1 to your severe injury results.",
+        "observation": 5,
+        "condition": "When you suffer a severe injury, gain +1 mark.",
+        "next_rank": "Stone Heart III"
+    },
+    "Stone Heart III": {
+        "ability": "Add +2 to your severe injury results.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Stone Skin I": {
+        "ability": "When a hit causes you to fill in a heavy injury level, cancel any remaining damage from that hit.",
+        "observation": 9,
+        "condition": "When you fill in a heavy injury level, gain +1 mark.",
+        "next_rank": "Stone Skin II"
+    },
+    "Stone Skin II": {
+        "ability": "When a hit causes you to fill in a light or heavy injury level, cancel any remaining damage from that hit.",
+        "observation": 1,
+        "condition": "When you are a Rank 4 Marrowist, gain +1 mark.",
+        "next_rank": "Stone Skin III"
+    },
+    "Stone Skin III": {
+        "ability": "Gain an additional light injury box at every hit location. When a hit causes you to fill in a light or heavy injury level, cancel any remaining damage from that hit.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Stone Wrecker": {
+        "ability": "Once per showdown, if adjacent to a Stone Column, you may spend [[Activation]] to lift it as a weapon! Archive the terrain tile and gain the Stone Column rare gear. If you still have it during the Aftermath, archive it.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Story of the Four Hands": {
+        "ability": "Melee weapons gain [Deadly] 9 and ignore teh monster's luck when you attack with them.",
+        "observation": 3,
+        "condition": "(Dangerous) When you are critically wound, gain +1 mark.",
+        "next_rank": null
+    },
+    "Story of the Gloaming": {
+        "ability": "The first time you ignore a hit from a drawn AI using [Block] or [Deflect], the monster suffers a wound.",
+        "observation": 2,
+        "condition": "(Dangerous) When you [Block] or [Deflect], gain +1 mark.",
+        "next_rank": null
+    },
+    "Story of the Hunter's Arrow": {
+        "ability": "When you hit with a ranged weapon, you must reveal the entire HL deck and select a hit location to attempt to wound. Then shuffle the deck.",
+        "observation": 3,
+        "condition": "(Dangerous) Whe you hit with a ranged weapon, gain +1 mark.",
+        "next_rank": null
+    },
+    "Story of the Rootcrown": {
+        "ability": "When another survivor [Encourage]s you, they die. Survivors adjacent to them suffer [[Star]] severe injuries. Monsters adjacent to them suffer [[Star]] automatic wounds.",
+        "observation": 2,
+        "condition": "(Dangerous) When you are [Encourage]d, gain +1 mark.",
+        "next_rank": null
+    },
+    "Strength Training I": {
+        "ability": "[Theory]",
+        "observation": 6,
+        "condition": "When you wound the monster, gain +1 mark. Limit once per attack.",
+        "next_rank": "Strength Training II"
+    },
+    "Strength Training II": {
+        "ability": "+1 strength, +1 systemic pressure.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Surgical Precision": {
+        "ability": "If all the gear in your gear grid has the bone keyword, your weapons lose [Frail] and gain [Sharp].",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Sword & Shield Style": {
+        "ability": "When you have sword specialization, you also have shield specialization and visa versa.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Tactical Drag I": {
+        "ability": "[Theory]",
+        "observation": 3,
+        "condition": "When you spend [[Movement]] to escape a zone, gain +1 mark.",
+        "next_rank": "Tactical Drag II"
+    },
+    "Tactical Drag II": {
+        "ability": "Spend [[Movement]] to drag an adjacent survivor, full move away from the monster, and place the survivor adjacent to you, knocked down. Then you are knocked down.",
+        "observation": 4,
+        "condition": "When another survivor would be attacked or suffer damage from a zone and your drag avoids that outcome, gain +1 mark.",
+        "next_rank": "Tactical Drag III"
+    },
+    "Tactical Drag III": {
+        "ability": "Spend [[Movement]] to drag an adjacent survivor, full move away from the monster, and place the survivor adjacent to you, knocked down.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Team Sacrifice": {
+        "ability": "Instead of rolling to pick a Straggler during the hunt, you can choose to be the straggler. When you are the Straggler, add +3 to your roll results.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Tenacity I": {
+        "ability": "When you depart, gain a survival token. You may spend a survival token at any time to gain +1 survival.",
+        "observation": 2,
+        "condition": "When you spend a survival token, gain +1 mark.",
+        "next_rank": "Tenacity II"
+    },
+    "Tenacity II": {
+        "ability": "When you depart, gain 2 survival tokens. You may spend a survival token at any time to gain +1 survival.",
+        "observation": 6,
+        "condition": "When you spend a survival token, gain +1 mark.",
+        "next_rank": "Tenacity III"
+    },
+    "Tenacity III": {
+        "ability": "When you depart, gain 3 survival tokens. You may spend a survival token at any time to gain +1 survival.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "The Breaking Point": {
+        "ability": "+1 luck to wound attempts on hit locations with a persistent injury.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Tumble I": {
+        "ability": "When something would [Collide] with you, roll 1d10. On a 7+, place your survivor standing on the closest free space outside of the collision path.",
+        "observation": 2,
+        "condition": "When you successfully Tumble, gain +1 mark.",
+        "next_rank": "Tumble II"
+    },
+    "Tumble II": {
+        "ability": "When something would [Collide] with you, roll 1d10. On a 6+, place your survivor standing on the closest free space outside of the collision path.",
+        "observation": 5,
+        "condition": "When you successfully Tumble, gain +1 mark.",
+        "next_rank": "Tumble III"
+    },
+    "Tumble III": {
+        "ability": "When something would [Collide] with you, roll 1d10. On a 5+, place your survivor standing on the closest free space outside of the collision path.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Unyielding I": {
+        "ability": "[Theory]",
+        "observation": 5,
+        "condition": "When you are targeted by an AI card, gain +1 mark.",
+        "next_rank": "Unyielding II"
+    },
+    "Unyielding II": {
+        "ability": "Reduce damage from every hit suffered by 1, to a minimum of 1.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Void": {
+        "ability": "+2 torment. [[Movement]][[Activation]]: For the rest of the showdown, you are unaffected by Intimidate actions and you cannot gain knowledge, observations, disorders, survival, or insanity.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
+    "Wanderlust": {
+        "ability": "When you gain Hunt XP during the hunt or showdown, gain that much Lumi (this includes the Aftermath).",
+        "observation": 1,
+        "condition": "When you depart with 6+ Lumi, gain +1 mark.",
+        "next_rank": null
+    }
+}
