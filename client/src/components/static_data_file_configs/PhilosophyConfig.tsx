@@ -1,7 +1,7 @@
 import rawPhilosophyData from '../../static_data/philosophy.json';
 
 export type TypePhilosophy = {
-    Neurosis: string;
+    neurosis: string;
     '2': number;
     '3': number;
     '4': number;
