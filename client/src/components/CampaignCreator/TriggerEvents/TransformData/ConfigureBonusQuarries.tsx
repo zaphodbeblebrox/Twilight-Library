@@ -16,8 +16,8 @@ const ConfigureBonusQuarries = (campaignSettings: TypeCampaignData) => {
                                     ...currentBonusQuarry,
                                     [bonusQuarry]: {
                                         ...campaignCreatorData.bonus_quarries[quarry][bonusQuarry].reduce(
-                                            (currentLevelObject: Record<number, boolean>, level: number) => {
-                                                return { ...currentLevelObject, [level]: false };
+                                            (currentLevelObject: Record<number, number>, level: number) => {
+                                                return { ...currentLevelObject, [level]: 0 };
                                             },
                                             {},
                                         ),

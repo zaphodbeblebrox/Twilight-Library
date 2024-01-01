@@ -5,7 +5,7 @@ const ConfigureNemesis = (campaignSettings: TypeCampaignData) => {
         return {
             ...currentNemesisObject,
             ...campaignSettings[node as keyof NodePillarLists].reduce((currentNodeObject, nemesis) => {
-                return { ...currentNodeObject, [nemesis]: { 1: false, 2: false, 3: false } };
+                return { ...currentNodeObject, [nemesis]: { 1: 0, 2: 0, 3: 0 } };
             }, {}),
         };
     }, {});

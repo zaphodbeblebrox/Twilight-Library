@@ -28,8 +28,8 @@ export type SettlementStrArrayLists = {
 };
 
 export type SettlementMonsterLists = {
-    quarries: Record<string, Record<number, boolean>>;
-    nemesis: Record<string, Record<number, boolean>>;
+    quarries: Record<string, Record<number, number>>;
+    nemesis: Record<string, Record<number, number>>;
 };
 
 export type SettlementStorageLists = {
