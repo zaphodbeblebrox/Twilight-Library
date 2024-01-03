@@ -16,7 +16,7 @@ const ConfigureBossEvents = (
                 ...timeline[fightYear],
                 story_event: [
                     ...timeline[fightYear].story_event,
-                    { name: 'Nemesis Encounter', monster: campaignSettings[nodeKey] },
+                    { name: 'Nemesis Encounter', monster: String(campaignSettings[nodeKey]) },
                 ],
             },
         };
