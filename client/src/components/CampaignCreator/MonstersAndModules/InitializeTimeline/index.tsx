@@ -1,12 +1,20 @@
+import { TypeYear } from '../../../../../../SettlementTypes';
 import { TypeCampaignData } from '../../../static_data_file_configs/PresetCampaignConfig';
 import { TransformData } from './TransformData';
 
 const InitializeTimeline = (campaignSettings: TypeCampaignData) => {
-    const maximumYears: number = 40;
-    const timeline: Record<number, string[]> = Array.from({ length: maximumYears }, (_, index) => index + 1).reduce(
-        (obj, key) => ({ ...obj, [key]: [] }),
+    // Initialize timeline, empty of story events
+    const timeline: Record<number, TypeYear> = Array.from(
+        { length: campaignSettings.max_years },
+        (_, index) => index + 1,
+    ).reduce(
+        (obj, year) => ({
+            ...obj,
+            [year]: { story_event: [], settlement_event: null, monster: null, monster_level: null, victorious: null },
+        }),
         {},
     );
+
     // Populate Timeline
     const monsterTimelineFunctionArray = [
         (tl: Record<number, string[]>) =>
