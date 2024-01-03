@@ -3,13 +3,7 @@ import RadioButtonListCampaignCreator from './RadioButtonListCampaignCreator';
 import { Button, Heading, Flex, Separator } from '@radix-ui/themes';
 import { TwilightSelect, TwilightTextField } from '../../primitiveComponents/Primitives';
 import { useNavigate } from 'react-router-dom';
-import { TimelineOptionList, campaignCreatorData } from '../../static_data_file_configs/CampaignCreatorConfig';
-import {
-    NemesisFightYearLists,
-    NodePillarLists,
-    TypeCampaignData,
-    presetCampaignData,
-} from '../../static_data_file_configs/PresetCampaignConfig';
+import { TypeCampaignData, presetCampaignData } from '../../static_data_file_configs/PresetCampaignConfig';
 import InitializeTimeline from './InitializeTimeline';
 
 interface MonstersAndModulesProps {
