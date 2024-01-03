@@ -4834,5 +4834,289 @@
         "stats": { "speed": 1, "accuracy": 6, "strength": 6 },
         "affinities": { "top": "red", "right": "green", "bottom": "", "left": "", "center": "" },
         "abilities": ["[Slow]", "[Frail]", "[Deadly]", "{red_puzzle}, {green_affinity}: Gains [Devastating] 1"]
+    },
+    "Fish of Abundance": {
+        "types": ["item", "consumable"],
+        "location": "Rare Gear",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "blue", "center": "" },
+        "abilities": ["On Arrival, gain +1 luck token.", "Whenever you are knocked down, flip all of your luck tokens."]
+    },
+    "Heartbow": {
+        "types": ["weapon", "ranged", "bow", "two-handed", "other"],
+        "location": "Pattern",
+        "crafting": "x1 Undying Heart, x2 Perfect Bone, x1 Phoenix Whisker",
+        "stats": { "speed": 2, "accuracy": 7, "strength": 7 },
+        "affinities": { "top": "red", "right": "", "bottom": "red", "left": "", "center": "" },
+        "abilities": [
+            "[Cumbersome]",
+            "[Range] 4",
+            "x2 {red_puzzle}: If you have no non-red affinities, this loses Cumbersome and gains [Sharp]."
+        ]
+    },
+    "Heartstop Arrows": {
+        "types": ["item", "ammunition", "arrow", "fragile", "other"],
+        "location": "Pattern",
+        "crafting": "x1 Undying Heart, x2 Leather, x1 Phoenix Eye",
+        "stats": { "speed": 1, "accuracy": 4, "strength": 9 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Ammo - Heartbow]",
+            "[Campaign Limit] 5",
+            "When you wound with this, the monster is knocked down."
+        ]
+    },
+    "Screaming Tanto": {
+        "types": ["weapon", "melee", "dagger", "finesse", "metal"],
+        "location": "Pattern",
+        "crafting": "x1 Carmine Cochineal, x1 Large Flat Tooth, x2 Scrap",
+        "stats": { "speed": 2, "accuracy": 6, "strength": 4 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Persistance] 1",
+            "[Savage]",
+            "On a [Perfect Hit], your +1 strength tokens are also treated as +1 luck tokens for this attack."
+        ]
+    },
+    "Screaming Sun Mask": {
+        "types": ["armor", "bone", "mask"],
+        "location": "Pattern",
+        "crafting": "x1 Carmine Cochineal, x1 Spiral Horn, x1 Skull",
+        "stats": { "armor": 2, "location": "head" },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "blue", "center": "" },
+        "abilities": [
+            "{blue_affinity}, {activation}: Non-deaf knocked down survivors suffer {star} brain damage and stand."
+        ]
+    },
+    "Upstage Scarf": {
+        "types": ["item", "cloth", "finesse"],
+        "location": "Pattern",
+        "crafting": "x1 Cloth, x1 Pink Flesh, x1 Vocal Chords",
+        "stats": { "armor": 1, "location": "head" },
+        "affinities": { "top": "", "right": "blue", "bottom": "", "left": "red", "center": "" },
+        "abilities": [
+            "[Accessory]",
+            "Thge first time you perform a Ballad each showdown, roll a d10 for each card archived. For each 5+, gain +1 survival. If you gain 5 or more survival this way, the monster is knocked down."
+        ]
+    },
+    "Blackstar Bikini": {
+        "types": ["armor", "seed", "void fabric", "other"],
+        "location": "Seed Pattern",
+        "crafting": "x1 Leather, x1 Perfect Hide, x1 Cocoon Membrane",
+        "stats": { "armor": 2, "location": "chest, waist" },
+        "affinities": { "top": "", "right": "green", "bottom": "", "left": "green", "center": "" },
+        "abilities": ["+1 Evasion", "When you are hit, roll 1d10. On a 7+, ignore the hit."]
+    },
+    "Ghost Garters - Legs": {
+        "types": ["seed", "void fabric", "other"],
+        "location": "Seed Pattern",
+        "crafting": "x1 perfect hide, x1 black lichen",
+        "stats": { "armor": 1, "location": "legs" },
+        "affinities": { "top": "blue", "right": "", "bottom": "red", "left": "", "center": "" },
+        "abilities": [
+            "[Accessory]",
+            "When you wound the monster, you may remove a bleeding token. Limit once per round unless you are not wearing leg armor."
+        ]
+    },
+    "Ghost Garters - Arms": {
+        "types": ["seed", "void fabric", "other"],
+        "location": "Seed Pattern",
+        "crafting": "x1 lantern tube, x1 {Endeavor}",
+        "stats": { "armor": 1, "location": "arms" },
+        "affinities": { "top": "red", "right": "", "bottom": "blue", "left": "", "center": "" },
+        "abilities": [
+            "[Accessory]",
+            "When you wound the monster, add 1{armor} to all hit locations. Limit, once per round unless you are not wearing arm armor."
+        ]
+    },
+    "Big Bite Costume": {
+        "types": ["item"],
+        "location": "Seed Pattern",
+        "crafting": "x1 leather, x2 organ, x1 skull",
+        "stats": {},
+        "affinities": { "top": "green", "right": "", "bottom": "red", "left": "", "center": "" },
+        "abilities": [
+            "Add 1{armor} to all hit locations.",
+            "{red_puzzle}, {green_puzzle}: On arrival, roll 1d10: 1-5 Survivors gain 1 bleeding token; 6+ Survivors gain +6 insanity."
+        ]
+    },
+    "Gold Cat Costume": {
+        "types": ["item"],
+        "location": "Seed Pattern",
+        "crafting": "x1 Golden Whiskers, x1 iron, x1 shimmering mane",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "blue", "left": "red", "center": "" },
+        "abilities": [
+            "Add 1{armor} to all hit locations.",
+            "{red_puzzle}, {blue_puzzle}: On arrival, roll 1d10: 1-5 Survivors gain -1 strength token; 6+ Survivors gain +1 strength token."
+        ]
+    },
+    "Retching Costume": {
+        "types": ["item"],
+        "location": "Seed Pattern",
+        "crafting": "x1 crab spider, x1 leather, x1 scrap",
+        "stats": {},
+        "affinities": { "top": "", "right": "red", "bottom": "blue", "left": "", "center": "" },
+        "abilities": [
+            "Add 1{armor} to all hit locations.",
+            "{red_puzzle}, {blue_puzzle}: On arrival, roll 1d10: 1-5 Survivors lose 1 {armor} to all hit locations; 6+ Survivors gain 1 {armor} to all hit locations."
+        ]
+    },
+    "Screaming Costume": {
+        "types": ["item"],
+        "location": "Seed Pattern",
+        "crafting": "x1 bladder, x1 pelt, x1 shank bone, x1 spiral horn",
+        "stats": {},
+        "affinities": { "top": "", "right": "blue", "bottom": "", "left": "green", "center": "" },
+        "abilities": [
+            "Add 1{armor} to all hit locations.",
+            "{green_puzzle}, {blue_puzzle}: On arrival, roll 1d10: 1-5 Survivors gain a -1 movement token; 6+ Survivors gain a +1 movement token."
+        ]
+    },
+    "Regal Costume": {
+        "types": ["item"],
+        "location": "Seed Pattern",
+        "crafting": "x1 iron, x1 leather, x2 bone",
+        "stats": {},
+        "affinities": { "top": "red", "right": "red", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "Add 1{armor} to all hit locations.",
+            "{green_affinity}, 2{red_affinity}: On arrival, roll 1d10: 1-5 Survivors skip their first turn; 6+ The monster skips its first turn."
+        ]
+    },
+    "Compact Quiver": {
+        "types": ["item", "leather"],
+        "location": "Beta",
+        "crafting": "x3 leather, x1 perfect hide, x2 bone, x1 scrap",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "Bows and arrows this gear points to gain +2 accuracy.",
+            "If this gear points to 2 or more arrows, bows this points to lose [Cumbersome]."
+        ]
+    },
+    "Mechanical Heart": {
+        "types": ["item", "metal", "heavy"],
+        "location": "Beta",
+        "crafting": "*Special",
+        "stats": {},
+        "affinities": { "top": "green", "right": "green", "bottom": "green", "left": "green", "center": "" },
+        "abilities": [
+            "[Cursed]",
+            "[Center]",
+            "Add 9{armor} to all hit locations.",
+            "Reduce damage you suffer to 1.",
+            "You can no longer remove your armor gear or gain armor points."
+        ]
+    },
+    "Sighing Sarong": {
+        "types": ["overwear", "cloth"],
+        "location": "Beta",
+        "crafting": "x1v {endeavor}, x1 cloth, x1 sighing bloom or x1 perfect organ",
+        "stats": { "armor": 2, "location": "waist, leg" },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "green", "center": "" },
+        "abilities": ["[Accessory]", "On Arrival, gain a reroll token."]
+    },
+    "Sighing Acanthus Hat": {
+        "types": ["herb", "flammable"],
+        "location": "Beta",
+        "crafting": "x2 fresh ancanthus, x1 black lichen, x1 sighing bloom or x1 perfect organ",
+        "stats": { "armor": 1, "location": "head" },
+        "affinities": { "top": "", "right": "blue", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Accessory]",
+            "{blue_puzzle}, {red_affinity}: When you draw the trap, gain a reroll token. If wearing no armor, gain 2."
+        ]
+    },
+    "Soldier Lantern Cuirass": {
+        "types": ["armor", "set", "metal", "heavy", "other"],
+        "location": "Beta",
+        "crafting": "x1 Lantern Cuirass, x1 black lichen",
+        "stats": { "armor": 6, "location": "chest" },
+        "affinities": { "top": "blue", "right": "green", "bottom": "blue", "left": "green", "center": "" },
+        "abilities": [
+            "-1 movement",
+            "Add 4{armor} to all hit locations wearing metal armor.",
+            "Can be used to complete a Lantern Armor set.",
+            "2{blue_affinity}, 2{green_affinity}: This gains [Poise]."
+        ]
+    },
+    "Acanthus Underwear": {
+        "types": ["underwear", "herb", "flammable"],
+        "location": "Beta",
+        "crafting": "x1 {endeavor}, x1 fresh acanthus",
+        "stats": { "armor": 1, "location": "chest, waist" },
+        "affinities": { "top": "", "right": "green", "bottom": "", "left": "blue", "center": "" },
+        "abilities": [
+            "[Accessory]",
+            "{blue_puzzle}, {green_puzzle}: +1 strength & +1 evasion for each reroll token you have."
+        ]
+    },
+    "Sunlantern Mask": {
+        "types": ["armor", "metal", "mask"],
+        "location": "Beta",
+        "crafting": "x2 iron, x5 bone, x1 perfect bone",
+        "stats": { "armor": 4, "location": "head" },
+        "affinities": { "top": "", "right": "", "bottom": "blue", "left": "", "center": "" },
+        "abilities": [
+            "+2 movement",
+            "When a weapon with 5 or less strength is to the left of this, it gains [Range] 4 and the thrown keyword."
+        ]
+    },
+    "Refined Lantern Axe": {
+        "types": ["weapon", "melee", "axe", "metal", "lantern"],
+        "location": "Beta",
+        "crafting": "x1 {endeavor}, x1 lantern halberd, x1 perfect bone, x5 resources from a lvl 3 monster",
+        "stats": { "speed": 2, "accuracy": 6, "strength": 6 },
+        "affinities": { "top": "red", "right": "", "bottom": "", "left": "red", "center": "" },
+        "abilities": ["[Sharp]", "[Refined]", "2{red_affinity}: This gains [Cleave]."]
+    },
+    "Survival Spear": {
+        "types": ["weapon", "melee", "spear", "two-handed"],
+        "location": "Beta",
+        "crafting": "When you scavenge a Survivor Corpse and roll a 10+, gain the this. Limit once per campaign.",
+        "stats": { "speed": 2, "accuracy": 6, "strength": 3 },
+        "affinities": { "top": "red", "right": "red", "bottom": "", "left": "green", "center": "" },
+        "abilities": [
+            "[Reach] 2",
+            "[Unique]",
+            "This gains +1 strength token after each time the wielder performs a survival action.",
+            "2 {red_puzzle}, {green_puzzle}: On arrival, gain {strange_resource} Fresh Kill."
+        ]
+    },
+    "Toxicimitar": {
+        "types": ["weapon", "melee", "scimitar", "other"],
+        "location": "Beta",
+        "crafting": "(x1 Venom Sac from a lvl 3 Spidicules, x1 iron, x1 bone) OR (x1 perfect organ), x1 organ resource from a lvl 3 monster, x1 iron, x1 bone)",
+        "stats": { "speed": 2, "accuracy": 6, "strength": 2 },
+        "affinities": { "top": "blue", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Sharp]",
+            "[Cleave]",
+            "On arrival, lose 1{armor} to all hit locations. When this wounds the monster the 3rd time, it gains -1 movement and -1 evasion token.",
+            "[Sealed] - Gain the [Crescent Step] {secret_fighting_art}."
+        ]
+    },
+    "Cold Face Dagger": {
+        "types": ["weapon", "melee", "dagger", "ice", "stone"],
+        "location": "Beta",
+        "crafting": ".1 {endeavor}, x1 founding stone",
+        "stats": { "speed": 2, "accuracy": 7, "strength": 0 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["[Melting] 4", "If you are [Insulated], this gains +1 speed."]
+    },
+    "Needle Sword": {
+        "types": ["weapon", "melee", "sword"],
+        "location": "Beta",
+        "crafting": "*Special",
+        "stats": { "speed": 3, "accuracy": 2, "strength": 1 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Cursed]",
+            "[Frail]",
+            "On a [Perfect Hit], the monster suffers a wound.",
+            "3{green_affinity}: This gains +1 [Perfect Hit] range."
+        ]
     }
 }
