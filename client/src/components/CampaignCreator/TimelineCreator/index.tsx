@@ -1,7 +1,7 @@
 import { Button, Flex, Heading, Separator } from '@radix-ui/themes';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import TimelineTable from '../../primitiveComponents/TimelineTable';
+import TimelineTable from './TimelineTable';
 import { TypeCampaignData } from '../../static_data_file_configs/PresetCampaignConfig';
 
 interface TimelineCreatorProps {
@@ -13,42 +13,25 @@ const TimelineCreator = ({ campaignSettings, setCampaignSettings }: TimelineCrea
     const [timeline, setTimeline] = useState(campaignSettings.timeline);
     const navigate = useNavigate();
 
-    const handleCancel = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-        event.preventDefault();
-        navigate('/twilight-library/dashboard/create-campaign');
-    };
-
-    const handleNavigation = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-        event.preventDefault();
-        const updatedCampaign: TypeCampaignData = { ...campaignSettings };
-        updatedCampaign.timeline = { ...timeline };
-        setCampaignSettings(updatedCampaign);
-        navigate('/twilight-library/dashboard/create-campaign/final-settings');
-    };
-    console.log('campaign settings', campaignSettings);
-    console.log('timeline', timeline);
-
-    const handleUpdateTimeline = (updatedTimeline: Record<number, string[]>) => {
-        setTimeline(updatedTimeline);
-    };
+    console.log('in progress timeline', timeline);
 
     return (
         <Flex direction="column" gap="3">
             <Heading size="7"> Timeline Editor</Heading>
             <Separator my="3" size="4" />
-            <TimelineTable
-                timeline={timeline}
-                onChange={(updatedTimeline: Record<number, string[]>) => handleUpdateTimeline(updatedTimeline)}
-            />
+
+            <TimelineTable timeline={timeline} onChange={(updatedTimeline) => setTimeline(updatedTimeline)} />
+
             <Flex justify="center" align="center" gap="5">
+                <Button onClick={() => navigate('/twilight-library/dashboard/create-campaign')}>Back</Button>
                 <Button
-                    onClick={(e) => {
-                        handleCancel(e);
+                    onClick={() => {
+                        setCampaignSettings({ ...campaignSettings, timeline: { ...timeline } });
+                        navigate('/twilight-library/dashboard/create-campaign/final-settings');
                     }}
                 >
-                    Back
+                    Triggered Events
                 </Button>
-                <Button onClick={(e) => handleNavigation(e)}>Triggered Events</Button>
             </Flex>
         </Flex>
     );
