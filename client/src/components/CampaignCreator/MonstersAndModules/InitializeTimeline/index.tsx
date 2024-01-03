@@ -36,8 +36,8 @@ const InitializeTimeline = (campaignSettings: TypeCampaignData) => {
             TransformData.AddMonsterEvents(campaignSettings, tl, 'node_nemesis_2', 'nemesis'),
         (tl: Record<number, TypeYear>) =>
             TransformData.AddMonsterEvents(campaignSettings, tl, 'node_nemesis_3', 'nemesis'),
-        // (tl: Record<number, TypeYear>) => TransformData.AddBossEvents(campaignSettings, tl, 'core'),
-        // (tl: Record<number, TypeYear>) => TransformData.AddBossEvents(campaignSettings, tl, 'finale'),
+        (tl: Record<number, TypeYear>) => TransformData.AddBossEvents(campaignSettings, tl, 'core'),
+        (tl: Record<number, TypeYear>) => TransformData.AddBossEvents(campaignSettings, tl, 'finale'),
         // (tl: Record<number, TypeYear>) => TransformData.AddDefaultEvents(campaignSettings, tl),
     ];
     const updatedTimeline: Record<number, TypeYear> = monsterTimelineFunctionArray.reduce(

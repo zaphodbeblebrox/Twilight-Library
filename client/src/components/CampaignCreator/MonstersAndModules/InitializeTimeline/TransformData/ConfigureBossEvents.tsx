@@ -8,8 +8,18 @@ const ConfigureBossEvents = (
 ) => {
     const fightYearKey: keyof NemesisFightYearLists = `${nodeType}_fight_year` as keyof NemesisFightYearLists;
     const nodeKey: keyof TypeCampaignData = `node_${nodeType}` as keyof TypeCampaignData;
-    if (campaignSettings[fightYearKey] && campaignSettings[nodeKey]) {
-        timeline[campaignSettings[fightYearKey]!].push(`NE - ${campaignSettings[nodeKey]}`);
+    const fightYear = campaignSettings[fightYearKey];
+    if (fightYear && campaignSettings[nodeKey]) {
+        return {
+            ...timeline,
+            [fightYear]: {
+                ...timeline[fightYear],
+                story_event: [
+                    ...timeline[fightYear].story_event,
+                    { name: 'Nemesis Encounter', monster: campaignSettings[nodeKey] },
+                ],
+            },
+        };
     }
 
     return timeline;
