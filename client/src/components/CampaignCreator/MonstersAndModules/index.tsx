@@ -46,6 +46,7 @@ const MonstersAndModules = ({
             // TODO: Add Toast popup with warning
             return;
         }
+        console.log('pre-timeline', selectedCampaign);
 
         const updatedCampaign = { ...selectedCampaign, timeline: { ...InitializeTimeline(selectedCampaign) } };
 
