@@ -55,52 +55,6 @@ const TwilightEditTextAlert = ({ labelText, textInput, objectKey, onSubmit, onDe
     );
 };
 
-interface TwilightAddTimelineAlertProps {
-    buttonText: string;
-    title: string;
-    label: string;
-    onSubmit: (newValue: string) => void;
-}
-// TODO: Change to use Dialog Box instead of Alert Box
-const TwilightAddEventAlert = ({ buttonText, title, label, onSubmit }: TwilightAddTimelineAlertProps) => {
-    const [storyEvent, setStoryEvent] = useState('');
-
-    const handleSubmitEntry = () => {
-        onSubmit(storyEvent);
-        setStoryEvent('');
-    };
-
-    return (
-        <AlertDialog.Root>
-            <AlertDialog.Trigger>
-                <Button>{buttonText}</Button>
-            </AlertDialog.Trigger>
-            <AlertDialog.Content style={{ maxWidth: 450 }}>
-                <AlertDialog.Title>{title}</AlertDialog.Title>
-                <Flex direction="row" justify="center" align="center" gap="3">
-                    <Label.Root htmlFor="event">{label}</Label.Root>
-                    <TextField.Root>
-                        <TextField.Input value={storyEvent} onChange={(e) => setStoryEvent(e.target.value)} />
-                    </TextField.Root>
-                </Flex>
-
-                <Flex gap="3" mt="4" justify="end">
-                    <AlertDialog.Cancel>
-                        <Button variant="soft" color="gray">
-                            Cancel
-                        </Button>
-                    </AlertDialog.Cancel>
-                    <AlertDialog.Action>
-                        <Button onClick={handleSubmitEntry} variant="solid" color="green">
-                            Add
-                        </Button>
-                    </AlertDialog.Action>
-                </Flex>
-            </AlertDialog.Content>
-        </AlertDialog.Root>
-    );
-};
-
 interface TwilightEditTimelineAlertProps {
     year: number;
     maxYears: number;
@@ -203,4 +157,4 @@ const TwilightEditCountDialog = ({ labelText, count, onSubmit }: TwilightEditCou
     );
 };
 
-export { TwilightAddEventAlert, TwilightEditTimelineAlert, TwilightEditTextAlert, TwilightEditCountDialog };
+export { TwilightEditTimelineAlert, TwilightEditTextAlert, TwilightEditCountDialog };
