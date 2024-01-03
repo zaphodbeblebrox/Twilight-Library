@@ -25,54 +25,57 @@
 
     "timeline": {
         "quarries": {
-            "Gorm": { "1": ["The Approching Storm"] },
-            "Flower Knight": { "5": ["A Crone's Tale"] },
-            "Screaming Antelope": { "2": ["Endless Screams"] },
-            "Smog Singers": { "2": ["Death of Song"] },
-            "Spidicules": { "2": ["Young Rivals"] },
-            "Dragon King": { "8": ["Glowing Crater"] },
-            "Phoenix": { "7": ["Phoenix Feather"] },
-            "Sunstalker": { "8": ["Promise under the Sun"] },
-            "Dung Beetle Knight": { "8": ["Rumbling in the Dark"] },
-            "Lion God": { "13": ["Silver City"] },
-            "The King": { "22": ["The Awaited"] }
+            "Gorm": { "1": [{ "name": "The Approching Storm" }] },
+            "Flower Knight": { "5": [{ "name": "A Crone's Tale" }] },
+            "Screaming Antelope": { "2": [{ "name": "Endless Screams" }] },
+            "Smog Singers": { "2": [{ "name": "Death of Song" }] },
+            "Spidicules": { "2": [{ "name": "Young Rivals" }] },
+            "Dragon King": { "8": [{ "name": "Glowing Crater" }] },
+            "Phoenix": { "7": [{ "name": "Phoenix Feather" }] },
+            "Sunstalker": { "8": [{ "name": "Promise under the Sun" }] },
+            "Dung Beetle Knight": { "8": [{ "name": "Rumbling in the Dark" }] },
+            "Lion God": { "13": [{ "name": "Silver City" }] },
+            "The King": { "22": [{ "name": "The Awaited" }] }
         },
         "nemesis": {
             "Butcher": {
-                "4": ["NE - Butcher Lvl 1"],
-                "16": ["NE - Butcher Lvl 2"],
-                "23": ["NE - Butcher Lvl 3"]
+                "4": [{ "name": "Nemesis Encounter", "monster": "Butcher", "monster_level": 1 }],
+                "16": [{ "name": "Nemesis Encounter", "monster": "Butcher", "monster_level": 2 }],
+                "23": [{ "name": "Nemesis Encounter", "monster": "Butcher", "monster_level": 3 }]
             },
             "Manhunter": {
-                "5": ["The Hanged Man"],
-                "10": ["NE - Manhunter Lvl 1"],
-                "16": ["NE - Manhunter Lvl 2"],
-                "22": ["NE - Manhunter Lvl 3"]
+                "5": [{ "name": "The Hanged Man" }],
+                "10": [{ "name": "Nemesis Encounter", "monster": "Manhunter", "monster_level": 1 }],
+                "16": [{ "name": "Nemesis Encounter", "monster": "Manhunter", "monster_level": 2 }],
+                "22": [{ "name": "Nemesis Encounter", "monster": "Manhunter", "monster_level": 3 }]
             },
             "Atnas": {
-                "6": ["Unwanted Gifts"],
-                "9": ["NE - Atnas Lvl 1"],
-                "18": ["NE - Atnas Lvl 2"],
-                "28": ["NE - Atnas Lvl 3"]
+                "6": [{ "name": "Unwanted Gifts" }],
+                "9": [{ "name": "Nemesis Encounter", "monster": "Atnas", "monster_level": 1 }],
+                "18": [{ "name": "Nemesis Encounter", "monster": "Atnas", "monster_level": 2 }],
+                "28": [{ "name": "Nemesis Encounter", "monster": "Atnas", "monster_level": 3 }]
             },
             "King's Man": {
-                "6": ["Armored Strangers"],
-                "9": ["NE - King's Man Lvl 1"],
-                "19": ["NE - King's Man Lvl 2"],
-                "28": ["NE - King's Man Lvl 3"]
+                "6": [{ "name": "Armored Strangers" }],
+                "9": [{ "name": "Nemesis Encounter", "monster": "King's Man", "monster_level": 1 }],
+                "19": [{ "name": "Nemesis Encounter", "monster": "King's Man", "monster_level": 2 }],
+                "28": [{ "name": "Nemesis Encounter", "monster": "King's Man", "monster_level": 3 }]
             },
-            "Lion Knight": { "6": ["An Uninvited Guest"] },
+            "Lion Knight": { "6": [{ "name": "An Uninvited Guest" }] },
             "Slenderman": {
-                "6": ["It's Already Here"],
-                "9": ["NE - Slenderman Lvl 1"],
-                "18": ["NE - Slenderman Lvl 2"],
-                "28": ["NE - Slenderman Lvl 3"]
+                "6": [{ "name": "It's Already Here" }],
+                "9": [{ "name": "Nemesis Encounter", "monster": "Slenderman", "monster_level": 1 }],
+                "18": [{ "name": "Nemesis Encounter", "monster": "Slenderman", "monster_level": 2 }],
+                "28": [{ "name": "Nemesis Encounter", "monster": "Slenderman", "monster_level": 3 }]
             },
-            "The Hand": { "11": ["Regal Visit"], "13": ["NE: The Hand Lvl 1"] }
+            "The Hand": {
+                "11": [{ "name": "Regal Visit" }],
+                "13": [{ "name": "Nemesis Encounter", "monster": "The Hand", "monster_level": 1 }]
+            }
         },
         "pillars": {
-            "Arc Survivors": { "1": ["First Meal"] },
-            "Scouts": { "1": ["Extinguished Guidepost"] }
+            "Arc Survivors": { "1": [{ "name": "First Meal" }] },
+            "Scouts": { "1": [{ "name": "Extinguished Guidepost" }] }
         },
         "encounters": {
             "Bone Eaters": { "3": ["Missing Statue"] }
