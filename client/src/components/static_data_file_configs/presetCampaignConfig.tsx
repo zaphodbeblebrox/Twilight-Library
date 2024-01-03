@@ -1,3 +1,4 @@
+import { TypeStoryEvent } from '../../../../SettlementTypes';
 import rawPresetCampaignData from '../../static_data/preset_campaigns.json';
 
 // --- Preset campaign Json ---
@@ -54,8 +55,8 @@ export type PrinciplesDefaultLists = {
 };
 
 export type TimelineLists = {
-    timeline: Record<string, string[]>;
-    default_timeline: Record<string, string[]>;
+    timeline: Record<string, TypeStoryEvent[]>;
+    default_timeline: Record<string, TypeStoryEvent[]>;
 };
 
 export type TypeCampaignData = NodePillarLists &
@@ -68,6 +69,7 @@ export type TypeCampaignData = NodePillarLists &
         milestones: string[];
         flexible_nemesis_encounters: boolean;
         constellations: boolean;
+        max_years: number;
     };
 
 export type TypeAvailableCampaignsData = { [K in keyof typeof rawPresetCampaignData]: string[] };
