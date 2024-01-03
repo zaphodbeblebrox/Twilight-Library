@@ -14,17 +14,27 @@ const ConfigureMonsterEvents = (
 ) => {
     if (!campaignSettings.flexible_nemesis_encounters && categoryKey === 'nemesis') {
         // Handle strict Nemesis timeline
-        const nemesis_tier: string = nodeKey.slice(-1);
-        campaignSettings[nodeKey].forEach((selection: string) => {
-            [1, 2, 3].forEach((level: number) => {
+        const nemesis_tier = nodeKey.slice(-1);
+        return campaignSettings[nodeKey].reduce((tl, selection) => {
+            return [1, 2, 3].reduce((updatedTimeline, level) => {
                 const fight_str = `nn${nemesis_tier}_lvl${level}_fight_year`;
                 const fight_key: keyof NemesisFightYearLists = fight_str as keyof NemesisFightYearLists;
                 const fight_year: number | null = campaignSettings[fight_key];
-                if (fight_year !== null) {
-                    timeline[fight_year].push(`NE - ${selection} lvl ${level}`);
+                if (fight_year === null) {
+                    return updatedTimeline;
                 }
-            });
-        });
+                return {
+                    ...updatedTimeline,
+                    [fight_year]: {
+                        ...updatedTimeline[fight_year],
+                        story_event: [
+                            ...updatedTimeline[fight_year].story_event,
+                            { name: 'Nemesis Encounter', monster: selection, monster_level: level },
+                        ],
+                    },
+                };
+            }, tl);
+        }, timeline);
     } else {
         return campaignSettings[nodeKey].reduce((tl, selection) => {
             const categoryTimelineData = campaignCreatorData.timeline[categoryKey];
@@ -45,7 +55,6 @@ const ConfigureMonsterEvents = (
             return tl;
         }, timeline);
     }
-    return timeline;
 };
 
 export default ConfigureMonsterEvents;
