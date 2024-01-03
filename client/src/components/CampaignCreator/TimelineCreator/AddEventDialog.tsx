@@ -13,8 +13,9 @@ interface AddEventDialogProps {
 }
 
 const AddEventDialog = ({ buttonText, title, label, onSubmit }: AddEventDialogProps) => {
+    const [nemesisEncounterSelected, setNemesisEncounterSelected] = useState(false);
     const [searchTerm, setSearchTerm] = useState('');
-    const [results, setResults] = useState<TypeStoryEvent[]>([]);
+    const [results, setResults] = useState<string[]>([]);
 
     const dataToSearch = useMemo(() => [...settlementEventsData, ...storyEventsData], []);
 
@@ -34,6 +35,7 @@ const AddEventDialog = ({ buttonText, title, label, onSubmit }: AddEventDialogPr
             onOpenChange={() => {
                 setSearchTerm('');
                 setResults([]);
+                setNemesisEncounterSelected(false);
             }}
         >
             <Dialog.Trigger>
@@ -51,25 +53,26 @@ const AddEventDialog = ({ buttonText, title, label, onSubmit }: AddEventDialogPr
                         onChange={(e) => {
                             const nextSearchTerm = e.currentTarget.value;
                             setSearchTerm(nextSearchTerm);
-                            console.log(
-                                'results',
+                            setResults(
                                 fuse
                                     .search(nextSearchTerm)
                                     .slice(0, 8) //Sets number of displayed results
                                     .map((searchResult) => searchResult.item),
                             );
-                            // setResults(
-                            //     fuse
-                            //         .search(nextSearchTerm)
-                            //         .slice(0, 8) //Sets number of displayed results
-                            //         .map((searchResult) => searchResult.item),
-                            // );
                         }}
                     />
                     {results.map((itemOption, idx) => {
                         return (
                             <Dialog.Close key={idx}>
-                                <Button onClick={() => onSubmit(results[idx])}>{itemOption.name}</Button>
+                                <Button
+                                    onClick={() => {
+                                        results[idx] === 'Nemesis Encounter'
+                                            ? setNemesisEncounterSelected(true)
+                                            : onSubmit({ name: itemOption });
+                                    }}
+                                >
+                                    {itemOption}
+                                </Button>
                             </Dialog.Close>
                         );
                     })}
