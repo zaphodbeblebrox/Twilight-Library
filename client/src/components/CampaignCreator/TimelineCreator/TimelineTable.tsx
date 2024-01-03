@@ -39,16 +39,31 @@ const TimelineTable = ({ timeline, onChange }: TimelineTableProps) => {
                                                         if (Number(year) === newYear) {
                                                             return;
                                                         }
-                                                        const updatedTimeline = { ...timeline };
-                                                        updatedTimeline[year] = updatedTimeline[year].filter(
-                                                            (event) => event !== timelineEvent,
-                                                        );
-                                                        // updatedTimeline[newYear] = [...updatedTimeline[newYear], timelineEvent];
+                                                        const updatedTimeline: Record<number, TypeYear> = {
+                                                            ...timeline,
+                                                            [Number(year)]: {
+                                                                ...timeline[Number(year)],
+                                                                story_event: timeline[Number(year)].story_event.filter(
+                                                                    (event) => event !== entry,
+                                                                ),
+                                                            },
+                                                            [newYear]: {
+                                                                ...timeline[newYear],
+                                                                story_event: [...timeline[newYear].story_event, entry],
+                                                            },
+                                                        };
                                                         onChange(updatedTimeline);
                                                     }}
                                                     deleteEvent={() => {
-                                                        const updatedTimeline = { ...timeline };
-                                                        // updatedTimeline[year] = updatedTimeline[year].filter((event) => event !== timelineEvent);
+                                                        const updatedTimeline: Record<number, TypeYear> = {
+                                                            ...timeline,
+                                                            [Number(year)]: {
+                                                                ...timeline[Number(year)],
+                                                                story_event: timeline[Number(year)].story_event.filter(
+                                                                    (event) => event !== entry,
+                                                                ),
+                                                            },
+                                                        };
                                                         onChange(updatedTimeline);
                                                     }}
                                                 />
