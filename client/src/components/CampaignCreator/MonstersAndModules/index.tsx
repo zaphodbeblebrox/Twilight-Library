@@ -46,13 +46,12 @@ const MonstersAndModules = ({
             // TODO: Add Toast popup with warning
             return;
         }
-        console.log('pre-timeline', selectedCampaign);
+        console.log('campaign info', selectedCampaign);
 
         const updatedCampaign = { ...selectedCampaign, timeline: { ...InitializeTimeline(selectedCampaign) } };
+        setSelectedCampaign(updatedCampaign);
 
-        // setSelectedCampaign(updatedCampaign);
-
-        // navigate('/twilight-library/dashboard/create-campaign/timeline');
+        navigate('/twilight-library/dashboard/create-campaign/timeline');
     };
     return (
         <form onSubmit={(e) => handleCreateTimeline(e)}>

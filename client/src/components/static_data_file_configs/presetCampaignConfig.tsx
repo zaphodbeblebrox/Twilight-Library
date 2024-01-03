@@ -1,4 +1,4 @@
-import { TypeStoryEvent } from '../../../../SettlementTypes';
+import { TypeStoryEvent, TypeYear } from '../../../../SettlementTypes';
 import rawPresetCampaignData from '../../static_data/preset_campaigns.json';
 
 // --- Preset campaign Json ---
@@ -55,7 +55,7 @@ export type PrinciplesDefaultLists = {
 };
 
 export type TimelineLists = {
-    timeline: Record<string, TypeStoryEvent[]>;
+    timeline: Record<number, TypeYear>;
     default_timeline: Record<string, TypeStoryEvent[]>;
 };
 

@@ -46,7 +46,7 @@ const InitializeTimeline = (campaignSettings: TypeCampaignData) => {
         },
         timeline,
     );
-    console.log('converted timeline:', updatedTimeline);
+    // console.log('converted timeline:', updatedTimeline);
     return updatedTimeline;
 };
 
