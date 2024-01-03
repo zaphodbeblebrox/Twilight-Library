@@ -25,8 +25,8 @@ const TimelineCreator = ({ campaignSettings, setCampaignSettings }: TimelineCrea
         setCampaignSettings(updatedCampaign);
         navigate('/twilight-library/dashboard/create-campaign/final-settings');
     };
-    // console.log('campaign settings', campaignSettings);
-    // console.log('timeline', timeline);
+    console.log('campaign settings', campaignSettings);
+    console.log('timeline', timeline);
 
     const handleUpdateTimeline = (updatedTimeline: Record<number, string[]>) => {
         setTimeline(updatedTimeline);
