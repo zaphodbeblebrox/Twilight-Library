@@ -78,10 +78,10 @@
             "Scouts": { "1": [{ "name": "Extinguished Guidepost" }] }
         },
         "encounters": {
-            "Bone Eaters": { "3": ["Missing Statue"] }
+            "Bone Eaters": { "3": [{ "name": "Missing Statue" }] }
         },
         "wanderers": {
-            "Luck the Wanderer": { "23": ["Wanderer - Luck"] }
+            "Luck the Wanderer": { "23": [{ "name": "Wanderer - Luck" }] }
         }
     }
 }
