@@ -1,7 +1,9 @@
-import * as Label from '@radix-ui/react-label';
 import { Button, Dialog, Flex, TextField } from '@radix-ui/themes';
-import { useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { TypeStoryEvent } from '../../../../../SettlementTypes';
+import Fuse from 'fuse.js';
+import { settlementEventsData } from '../../static_data_file_configs/SettlementEventsConfig';
+import { storyEventsData } from '../../static_data_file_configs/StoryEventsConfig';
 
 interface AddEventDialogProps {
     buttonText: string;
@@ -11,39 +13,73 @@ interface AddEventDialogProps {
 }
 
 const AddEventDialog = ({ buttonText, title, label, onSubmit }: AddEventDialogProps) => {
-    const [storyEvent, setStoryEvent] = useState('');
+    const [searchTerm, setSearchTerm] = useState('');
+    const [results, setResults] = useState<TypeStoryEvent[]>([]);
 
-    const handleSubmitEntry = () => {
-        onSubmit(storyEvent);
-        setStoryEvent('');
-    };
+    const dataToSearch = useMemo(() => [...settlementEventsData, ...storyEventsData], []);
+
+    const fuse = useMemo(
+        () =>
+            new Fuse(dataToSearch, {
+                includeScore: true,
+                keys: ['name'],
+                threshold: 0.1,
+            }),
+        [dataToSearch],
+    );
+    useEffect(() => console.log(results), [results]);
 
     return (
-        <Dialog.Root>
+        <Dialog.Root
+            onOpenChange={() => {
+                setSearchTerm('');
+                setResults([]);
+            }}
+        >
             <Dialog.Trigger>
                 <Button>{buttonText}</Button>
             </Dialog.Trigger>
-            <Dialog.Content style={{ maxWidth: 450 }}>
-                <Dialog.Title>{title}</Dialog.Title>
-                <Flex direction="row" justify="center" align="center" gap="3">
-                    <Label.Root htmlFor="event">{label}</Label.Root>
-                    <TextField.Root>
-                        <TextField.Input value={storyEvent} onChange={(e) => setStoryEvent(e.target.value)} />
-                    </TextField.Root>
+
+            <Dialog.Content className="DialogContent">
+                <Dialog.Title className="DialogTitle">{label}</Dialog.Title>
+
+                <Dialog.Description className="DialogDescription">Search:</Dialog.Description>
+                <Flex direction="column" gap="3">
+                    <TextField.Input
+                        placeholder="Find..."
+                        value={searchTerm}
+                        onChange={(e) => {
+                            const nextSearchTerm = e.currentTarget.value;
+                            setSearchTerm(nextSearchTerm);
+                            console.log(
+                                'results',
+                                fuse
+                                    .search(nextSearchTerm)
+                                    .slice(0, 8) //Sets number of displayed results
+                                    .map((searchResult) => searchResult.item),
+                            );
+                            // setResults(
+                            //     fuse
+                            //         .search(nextSearchTerm)
+                            //         .slice(0, 8) //Sets number of displayed results
+                            //         .map((searchResult) => searchResult.item),
+                            // );
+                        }}
+                    />
+                    {results.map((itemOption, idx) => {
+                        return (
+                            <Dialog.Close key={idx}>
+                                <Button onClick={() => onSubmit(results[idx])}>{itemOption.name}</Button>
+                            </Dialog.Close>
+                        );
+                    })}
                 </Flex>
 
-                <Flex gap="3" mt="4" justify="end">
-                    <Dialog.Close>
-                        <Button variant="soft" color="gray">
-                            Cancel
-                        </Button>
-                    </Dialog.Close>
-                    <Dialog.Close>
-                        <Button onClick={handleSubmitEntry} variant="solid" color="green">
-                            Add
-                        </Button>
-                    </Dialog.Close>
-                </Flex>
+                <Dialog.Close>
+                    <Button variant="solid" color="red">
+                        Cancel
+                    </Button>
+                </Dialog.Close>
             </Dialog.Content>
         </Dialog.Root>
     );
