@@ -1,8 +1,9 @@
+import { TypeYear } from '../../../../../../../SettlementTypes';
 import { NemesisFightYearLists, TypeCampaignData } from '../../../../static_data_file_configs/PresetCampaignConfig';
 
 const ConfigureBossEvents = (
     campaignSettings: TypeCampaignData,
-    timeline: Record<number, string[]>,
+    timeline: Record<number, TypeYear>,
     nodeType: string,
 ) => {
     const fightYearKey: keyof NemesisFightYearLists = `${nodeType}_fight_year` as keyof NemesisFightYearLists;
