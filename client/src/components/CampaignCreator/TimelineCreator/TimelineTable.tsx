@@ -1,7 +1,7 @@
 import { Flex, Separator, Table } from '@radix-ui/themes';
-import { TwilightAddEventAlert, TwilightEditTimelineAlert } from '../../primitiveComponents/AlertBoxes';
 import { TypeStoryEvent, TypeYear } from '../../../../../SettlementTypes';
 import EditEventDialog from './EditEventDialog';
+import AddEventDialog from './AddEventDialog';
 
 interface TimelineTableProps {
     timeline: Record<number, TypeYear>;
@@ -76,16 +76,18 @@ const TimelineTable = ({ timeline, onChange }: TimelineTableProps) => {
                                 </Flex>
                             </Table.Cell>
                             <Table.Cell justify="center">
-                                <TwilightAddEventAlert
+                                <AddEventDialog
                                     buttonText="+"
                                     title="Add Story Event"
                                     label="Event:"
-                                    onSubmit={(newTimelineEvent: string) => {
-                                        const updatedTimeline = { ...timeline };
-                                        // updatedTimeline[Number(year)] = [
-                                        //     ...updatedTimeline[Number(year)],
-                                        //     newTimelineEvent,
-                                        // ];
+                                    onSubmit={(newEvent: TypeStoryEvent) => {
+                                        const updatedTimeline: Record<number, TypeYear> = {
+                                            ...timeline,
+                                            [Number(year)]: {
+                                                ...timeline[Number(year)],
+                                                story_event: [...timeline[Number(year)].story_event, newEvent],
+                                            },
+                                        };
                                         onChange(updatedTimeline);
                                     }}
                                 />
