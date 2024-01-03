@@ -1,3 +1,4 @@
+import { TypeStoryEvent } from '../../../../../../../SettlementTypes';
 import { TimelineOptionList } from '../../../../static_data_file_configs/CampaignCreatorConfig';
 import {
     NemesisFightYearLists,
@@ -7,7 +8,7 @@ import {
 
 const ConfigureMonsterEvents = (
     campaignSettings: TypeCampaignData,
-    timeline: Record<number, string[]>,
+    timeline: TypeStoryEvent,
     nodeKey: keyof NodePillarLists,
     typeKey: keyof TimelineOptionList,
 ) => {
