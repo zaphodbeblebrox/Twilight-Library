@@ -1,5 +1,5 @@
-import { TypeStoryEvent } from '../../../../../../../SettlementTypes';
-import { TimelineOptionList } from '../../../../static_data_file_configs/CampaignCreatorConfig';
+import { TypeStoryEvent, TypeYear } from '../../../../../../../SettlementTypes';
+import { TimelineOptionList, campaignCreatorData } from '../../../../static_data_file_configs/CampaignCreatorConfig';
 import {
     NemesisFightYearLists,
     NodePillarLists,
@@ -8,11 +8,11 @@ import {
 
 const ConfigureMonsterEvents = (
     campaignSettings: TypeCampaignData,
-    timeline: TypeStoryEvent,
+    timeline: Record<number, TypeYear>,
     nodeKey: keyof NodePillarLists,
-    typeKey: keyof TimelineOptionList,
+    categoryKey: keyof TimelineOptionList,
 ) => {
-    if (!campaignSettings.flexible_nemesis_encounters && typeKey === 'nemesis') {
+    if (!campaignSettings.flexible_nemesis_encounters && categoryKey === 'nemesis') {
         // Handle strict Nemesis timeline
         const nemesis_tier: string = nodeKey.slice(-1);
         campaignSettings[nodeKey].forEach((selection: string) => {
@@ -26,16 +26,24 @@ const ConfigureMonsterEvents = (
             });
         });
     } else {
-        campaignSettings[nodeKey].forEach((selection: string) => {
-            const query: Record<string, Record<string, string[]>> = campaignSettings.timeline[typeKey];
-            if (query[selection]) {
-                Object.keys(query[selection]).forEach((yearKey: string) => {
-                    query[selection][Number(yearKey)].forEach((yearData: string) => {
-                        timeline[Number(yearKey)].push(yearData);
-                    });
-                });
+        return campaignSettings[nodeKey].reduce((tl, selection) => {
+            const categoryTimelineData = campaignCreatorData.timeline[categoryKey];
+            if (categoryTimelineData[selection]) {
+                return Object.keys(categoryTimelineData[selection]).reduce((updatedTimeline, yearKey) => {
+                    const storyEvents = categoryTimelineData[selection][Number(yearKey)].reduce(
+                        (storyList: TypeStoryEvent[], yearData) => {
+                            return [...storyList, yearData];
+                        },
+                        updatedTimeline[Number(yearKey)].story_event,
+                    );
+                    return {
+                        ...updatedTimeline,
+                        [Number(yearKey)]: { ...updatedTimeline[Number(yearKey)], story_event: storyEvents },
+                    };
+                }, tl);
             }
-        });
+            return tl;
+        }, timeline);
     }
     return timeline;
 };
