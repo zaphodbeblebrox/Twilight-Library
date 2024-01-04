@@ -1,4 +1,4 @@
-import { Flex, Text } from '@radix-ui/themes';
+import { Flex, Separator, Text } from '@radix-ui/themes';
 import { PrinciplesDefaultLists, TypeCampaignData } from '../../static_data_file_configs/PresetCampaignConfig';
 import ModifyPrincipleDialog from './ModifyPrincipleDialog';
 
@@ -16,20 +16,24 @@ const Principle = ({ principleLable, principlekey, campaignSettings, setCampaign
             <Text>Principle - {principleLable}:</Text>
             {Object.keys(principleObj).map((option, idx) => {
                 return (
-                    <ModifyPrincipleDialog
-                        key={idx}
-                        buttonText={principleObj[option as keyof typeof principleObj]}
-                        targetKey={option}
-                        onSubmit={(selectedOption) => {
-                            setCampaignSettings({
-                                ...campaignSettings,
-                                [principlekey]: {
-                                    ...principleObj,
-                                    [option as keyof typeof principleObj]: selectedOption,
-                                },
-                            });
-                        }}
-                    />
+                    <Flex key={idx} direction="row" gap="3" align="center">
+                        <ModifyPrincipleDialog
+                            buttonText={principleObj[option as keyof typeof principleObj]}
+                            targetKey={option}
+                            onSubmit={(selectedOption) => {
+                                setCampaignSettings({
+                                    ...campaignSettings,
+                                    [principlekey]: {
+                                        ...principleObj,
+                                        [option as keyof typeof principleObj]: selectedOption,
+                                    },
+                                });
+                            }}
+                        />
+                        {idx !== Object.keys(principleObj).length - 1 && (
+                            <Separator orientation="vertical" color="purple" />
+                        )}
+                    </Flex>
                 );
             })}
         </Flex>
