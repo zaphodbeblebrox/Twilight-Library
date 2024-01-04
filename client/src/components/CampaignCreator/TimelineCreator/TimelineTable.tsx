@@ -2,6 +2,7 @@ import { Flex, Separator, Table } from '@radix-ui/themes';
 import { TypeStoryEvent, TypeYear } from '../../../../../SettlementTypes';
 import EditEventDialog from './EditEventDialog';
 import AddEventDialog from './AddEventDialog';
+import StoryEventTextDisplay from '../Helper/StoryEventTextDisplay';
 
 interface TimelineTableProps {
     timeline: Record<number, TypeYear>;
@@ -34,7 +35,7 @@ const TimelineTable = ({ timeline, onChange }: TimelineTableProps) => {
                                                 <EditEventDialog
                                                     year={Number(year)}
                                                     maxYears={Object.keys(timeline).length}
-                                                    entry={entry.name}
+                                                    entry={StoryEventTextDisplay(entry)}
                                                     moveEvent={(newYear: number) => {
                                                         if (Number(year) === newYear) {
                                                             return;
@@ -79,7 +80,6 @@ const TimelineTable = ({ timeline, onChange }: TimelineTableProps) => {
                                 <AddEventDialog
                                     buttonText="+"
                                     title="Add Story Event"
-                                    label="Event:"
                                     onSubmit={(newEvent: TypeStoryEvent) => {
                                         const updatedTimeline: Record<number, TypeYear> = {
                                             ...timeline,
