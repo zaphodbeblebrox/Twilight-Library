@@ -17,7 +17,7 @@ const SubTabGear = ({ campaignData, dbRefetch, dbExecutePatch }: SubTabGearProps
     const gearDataMemo = useMemo(() => Object.keys(gearData), []);
 
     return (
-        <Flex direction="row" wrap="wrap" gap="3">
+        <Flex direction="column" wrap="wrap" gap="3" align="start">
             <TwilightSearchPopup
                 buttonText="Add Gear"
                 labelText="Search Gear"
@@ -41,37 +41,39 @@ const SubTabGear = ({ campaignData, dbRefetch, dbExecutePatch }: SubTabGearProps
                         .catch((err) => console.error(err));
                 }}
             />
-            {Object.keys(campaignData.gear)
-                .sort()
-                .map((gearCategory, idx) => {
-                    return (
-                        <Flex key={idx} direction="column" gap="1" justify="start" align="end">
-                            <TwilightNodeHeader headerText={gearCategory} />
-                            {Object.keys(campaignData.gear[gearCategory])
-                                .sort()
-                                .map((gear, idy) => {
-                                    const handleCountChange = (updatedCount: number) => {
-                                        const updatedResources = { ...campaignData.gear };
-                                        updatedResources[gearCategory][gear] = updatedCount;
-                                        console.log(updatedResources);
-                                        dbExecutePatch({
-                                            data: { gear: updatedResources },
-                                        })
-                                            .then(() => dbRefetch())
-                                            .catch((err) => console.error(err));
-                                    };
-                                    return (
-                                        <TwilightEditCountDialog
-                                            key={idy}
-                                            labelText={gear}
-                                            count={campaignData.gear[gearCategory][gear]}
-                                            onSubmit={(updatedCount) => handleCountChange(updatedCount)}
-                                        />
-                                    );
-                                })}
-                        </Flex>
-                    );
-                })}
+            <Flex direction="column" wrap="wrap" gap="3">
+                {Object.keys(campaignData.gear)
+                    .sort()
+                    .map((gearCategory, idx) => {
+                        return (
+                            <Flex key={idx} direction="column" gap="1" justify="start" align="end">
+                                <TwilightNodeHeader headerText={gearCategory} />
+                                {Object.keys(campaignData.gear[gearCategory])
+                                    .sort()
+                                    .map((gear, idy) => {
+                                        const handleCountChange = (updatedCount: number) => {
+                                            const updatedResources = { ...campaignData.gear };
+                                            updatedResources[gearCategory][gear] = updatedCount;
+                                            console.log(updatedResources);
+                                            dbExecutePatch({
+                                                data: { gear: updatedResources },
+                                            })
+                                                .then(() => dbRefetch())
+                                                .catch((err) => console.error(err));
+                                        };
+                                        return (
+                                            <TwilightEditCountDialog
+                                                key={idy}
+                                                labelText={gear}
+                                                count={campaignData.gear[gearCategory][gear]}
+                                                onSubmit={(updatedCount) => handleCountChange(updatedCount)}
+                                            />
+                                        );
+                                    })}
+                            </Flex>
+                        );
+                    })}
+            </Flex>
         </Flex>
     );
 };
