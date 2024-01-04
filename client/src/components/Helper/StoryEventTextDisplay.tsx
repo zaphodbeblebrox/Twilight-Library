@@ -1,4 +1,4 @@
-import { TypeStoryEvent } from '../../../../../SettlementTypes';
+import { TypeStoryEvent } from '../../../../SettlementTypes';
 
 const StoryEventTextDisplay = (storyEvent: TypeStoryEvent) => {
     let convertedText = storyEvent.name;

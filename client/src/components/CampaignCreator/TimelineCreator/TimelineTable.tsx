@@ -2,7 +2,7 @@ import { Flex, Separator, Table } from '@radix-ui/themes';
 import { TypeStoryEvent, TypeYear } from '../../../../../SettlementTypes';
 import EditEventDialog from './EditEventDialog';
 import AddEventDialog from './AddEventDialog';
-import StoryEventTextDisplay from '../Helper/StoryEventTextDisplay';
+import StoryEventTextDisplay from '../../Helper/StoryEventTextDisplay';
 
 interface TimelineTableProps {
     timeline: Record<number, TypeYear>;
