@@ -37,10 +37,28 @@ export type SettlementStorageLists = {
     gear: Record<string, Record<string, number>>;
 };
 
+export type TypeStoryEvent = {
+    name: string;
+    monster?: string;
+    monster_level?: number;
+};
+
+export type TypeYear = {
+    settlement_event: string | null;
+    story_event: TypeStoryEvent[];
+    monster: string | null;
+    monster_level: number | null;
+    victorious: boolean | null;
+}
+
+export type TypeTimeline = {
+    timeline: Record<number, TypeYear>;
+}
+
 export type TypeServerSettlement = SettlementStrLists &
     SettlementStrArrayLists &
     SettlementStorageLists & PrinciplesList &
-    SettlementMonsterLists & {
+    SettlementMonsterLists & TypeTimeline & {
         _id: string;
         survival_limit: number;
         arc_survivors: boolean;
@@ -53,9 +71,8 @@ export type TypeServerSettlement = SettlementStrLists &
     };
 
 export type TypeInitializedSettlement = SettlementMonsterLists &
-    SettlementStorageLists & PrinciplesList & {
+    SettlementStorageLists & PrinciplesList & TypeTimeline & {
         name: string;
-        timeline: Record<number, string[]>;
         courage_event_1: string;
         courage_event_2: string;
         understanding_event_1: string;

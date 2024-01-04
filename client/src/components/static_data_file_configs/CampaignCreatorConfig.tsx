@@ -1,3 +1,4 @@
+import { TypeStoryEvent } from '../../../../SettlementTypes';
 import rawCampaignCreatorData from '../../static_data/campaign_creator.json';
 
 // --- Campaign Creator Json ---
@@ -16,12 +17,13 @@ export type NodeOptionsList = {
     wanderers: string[];
     pillars: string[];
 };
+
 export type TimelineOptionList = {
-    quarries: Record<string, Record<string, string[]>>;
-    nemesis: Record<string, Record<string, string[]>>;
-    pillars: Record<string, Record<string, string[]>>;
-    encounters: Record<string, Record<string, string[]>>;
-    wanderers: Record<string, Record<string, string[]>>;
+    quarries: Record<string, Record<string, TypeStoryEvent[]>>;
+    nemesis: Record<string, Record<string, TypeStoryEvent[]>>;
+    pillars: Record<string, Record<string, TypeStoryEvent[]>>;
+    encounters: Record<string, Record<string, TypeStoryEvent[]>>;
+    wanderers: Record<string, Record<string, TypeStoryEvent[]>>;
 };
 
 export type BonusQuarryOptionList = {
