@@ -60,7 +60,8 @@ const AddMonsterDialog = ({ currentMonster, currentMonsterLevel, currentVictory,
                             : 'green'
                     }
                 >
-                    {currentMonster ? currentMonster : 'Hunt Quarry'}
+                    {currentMonster ? currentMonster : 'Hunt Quarry'}{' '}
+                    {currentMonsterLevel && ` - Lvl ${currentMonsterLevel}`}
                 </Button>
             </Dialog.Trigger>
 

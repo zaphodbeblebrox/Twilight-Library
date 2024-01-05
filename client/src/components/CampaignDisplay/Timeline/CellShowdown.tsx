@@ -14,7 +14,11 @@ const CellShowdown = ({ yearData, onSubmit }: CellShowdownProps) => {
             currentMonster={
                 nemesisFound && nemesisFound.monster && !yearData.monster ? nemesisFound.monster : yearData.monster
             }
-            currentMonsterLevel={yearData.monster_level}
+            currentMonsterLevel={
+                nemesisFound && nemesisFound.monster_level && !yearData.monster_level
+                    ? nemesisFound.monster_level
+                    : yearData.monster_level
+            }
             currentVictory={yearData.victorious}
             onSubmit={(monsterObj) => {
                 onSubmit({
