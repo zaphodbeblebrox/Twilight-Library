@@ -56,23 +56,7 @@ const TimelineTable = ({ timeline, onChange }: TimelineTableProps) => {
                                     }}
                                 />
                             </Table.Cell>
-                            <Table.Cell justify="center">
-                                <AddEventDialog
-                                    buttonText="+"
-                                    title="Add Story Event"
-                                    dataToSearch={[...settlementEventsData, ...storyEventsData]}
-                                    onSubmit={(newEvent: TypeStoryEvent) => {
-                                        const updatedTimeline: Record<number, TypeYear> = {
-                                            ...timeline,
-                                            [Number(year)]: {
-                                                ...timeline[Number(year)],
-                                                story_event: [...timeline[Number(year)].story_event, newEvent],
-                                            },
-                                        };
-                                        onChange(updatedTimeline);
-                                    }}
-                                />
-                            </Table.Cell>
+                            <Table.Cell></Table.Cell>
                         </Table.Row>
                     );
                 })}
