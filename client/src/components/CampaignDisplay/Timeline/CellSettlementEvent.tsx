@@ -3,13 +3,13 @@ import DeleteEventDialog from './DeleteEventDialog';
 import AddEventDialog from './AddEventDialog';
 import { settlementEventsData } from '../../static_data_file_configs/SettlementEventsConfig';
 
-interface SettlementEventCellProps {
+interface CellSettlementEventProps {
     yearData: TypeYear;
     onSubmit: (newEvent: TypeStoryEvent) => void;
     onDelete: () => void;
 }
 
-const SettlementEventCell = ({ yearData, onSubmit, onDelete }: SettlementEventCellProps) => {
+const CellSettlementEvent = ({ yearData, onSubmit, onDelete }: CellSettlementEventProps) => {
     if (yearData.settlement_event) {
         return (
             <DeleteEventDialog
@@ -31,4 +31,4 @@ const SettlementEventCell = ({ yearData, onSubmit, onDelete }: SettlementEventCe
     }
 };
 
-export default SettlementEventCell;
+export default CellSettlementEvent;

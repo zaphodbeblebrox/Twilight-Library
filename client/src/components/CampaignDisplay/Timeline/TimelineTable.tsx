@@ -3,10 +3,10 @@ import { TypeStoryEvent, TypeYear } from '../../../../../SettlementTypes';
 import EditEventDialog from './EditEventDialog';
 import AddEventDialog from './AddEventDialog';
 import StoryEventTextDisplay from '../../Helper/StoryEventTextDisplay';
-import SettlementEventCell from './SettlementEventCell';
+import CellSettlementEvent from './CellSettlementEvent';
 import { settlementEventsData } from '../../static_data_file_configs/SettlementEventsConfig';
 import { storyEventsData } from '../../static_data_file_configs/StoryEventsConfig';
-import StoryEventsCell from './StoryEventsCell';
+import CellStoryEvents from './CellStoryEvents';
 
 interface TimelineTableProps {
     timeline: Record<number, TypeYear>;
@@ -31,7 +31,7 @@ const TimelineTable = ({ timeline, onChange }: TimelineTableProps) => {
                         <Table.Row key={idx} align="center">
                             <Table.RowHeaderCell justify="center">{year}</Table.RowHeaderCell>
                             <Table.Cell>
-                                <SettlementEventCell
+                                <CellSettlementEvent
                                     yearData={timeline[Number(year)]}
                                     onSubmit={(newEvent) =>
                                         onChange({
@@ -48,7 +48,7 @@ const TimelineTable = ({ timeline, onChange }: TimelineTableProps) => {
                                 />
                             </Table.Cell>
                             <Table.Cell>
-                                <StoryEventsCell
+                                <CellStoryEvents
                                     year={Number(year)}
                                     timeline={timeline}
                                     onChange={(updatedTimeline) => {

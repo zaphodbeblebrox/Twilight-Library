@@ -6,13 +6,13 @@ import AddEventDialog from './AddEventDialog';
 import { settlementEventsData } from '../../static_data_file_configs/SettlementEventsConfig';
 import { storyEventsData } from '../../static_data_file_configs/StoryEventsConfig';
 
-interface StoryEventsCellProps {
+interface CellStoryEventsProps {
     year: number;
     timeline: Record<number, TypeYear>;
     onChange: (updatedTimeline: Record<number, TypeYear>) => void;
 }
 
-const StoryEventsCell = ({ year, timeline, onChange }: StoryEventsCellProps) => {
+const CellStoryEvents = ({ year, timeline, onChange }: CellStoryEventsProps) => {
     const entries: TypeStoryEvent[] = [...timeline[year].story_event];
     return (
         <Flex direction="row" align="center" gap="2" wrap="wrap" justify="between">
@@ -80,4 +80,4 @@ const StoryEventsCell = ({ year, timeline, onChange }: StoryEventsCellProps) => 
     );
 };
 
-export default StoryEventsCell;
+export default CellStoryEvents;
