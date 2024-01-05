@@ -6,6 +6,7 @@ import StoryEventTextDisplay from '../../Helper/StoryEventTextDisplay';
 import SettlementEventCell from './SettlementEventCell';
 import { settlementEventsData } from '../../static_data_file_configs/SettlementEventsConfig';
 import { storyEventsData } from '../../static_data_file_configs/StoryEventsConfig';
+import StoryEventsCell from './StoryEventsCell';
 
 interface TimelineTableProps {
     timeline: Record<number, TypeYear>;
@@ -26,8 +27,6 @@ const TimelineTable = ({ timeline, onChange }: TimelineTableProps) => {
 
             <Table.Body>
                 {Object.keys(timeline).map((year, idx) => {
-                    const entries: TypeStoryEvent[] = [...timeline[Number(year)].story_event];
-
                     return (
                         <Table.Row key={idx} align="center">
                             <Table.RowHeaderCell justify="center">{year}</Table.RowHeaderCell>
@@ -49,53 +48,13 @@ const TimelineTable = ({ timeline, onChange }: TimelineTableProps) => {
                                 />
                             </Table.Cell>
                             <Table.Cell>
-                                <Flex direction="row" align="start" gap="2" wrap="wrap">
-                                    {entries.map((entry, idy) => {
-                                        return (
-                                            <Flex key={idy} direction="row" align="start" gap="2">
-                                                <EditEventDialog
-                                                    year={Number(year)}
-                                                    maxYears={Object.keys(timeline).length}
-                                                    entry={StoryEventTextDisplay(entry)}
-                                                    moveEvent={(newYear: number) => {
-                                                        if (Number(year) === newYear) {
-                                                            return;
-                                                        }
-                                                        const updatedTimeline: Record<number, TypeYear> = {
-                                                            ...timeline,
-                                                            [Number(year)]: {
-                                                                ...timeline[Number(year)],
-                                                                story_event: timeline[Number(year)].story_event.filter(
-                                                                    (event) => event !== entry,
-                                                                ),
-                                                            },
-                                                            [newYear]: {
-                                                                ...timeline[newYear],
-                                                                story_event: [...timeline[newYear].story_event, entry],
-                                                            },
-                                                        };
-                                                        onChange(updatedTimeline);
-                                                    }}
-                                                    deleteEvent={() => {
-                                                        const updatedTimeline: Record<number, TypeYear> = {
-                                                            ...timeline,
-                                                            [Number(year)]: {
-                                                                ...timeline[Number(year)],
-                                                                story_event: timeline[Number(year)].story_event.filter(
-                                                                    (event) => event !== entry,
-                                                                ),
-                                                            },
-                                                        };
-                                                        onChange(updatedTimeline);
-                                                    }}
-                                                />
-                                                {idy !== entries.length - 1 && (
-                                                    <Separator orientation="vertical" color="purple" />
-                                                )}
-                                            </Flex>
-                                        );
-                                    })}
-                                </Flex>
+                                <StoryEventsCell
+                                    year={Number(year)}
+                                    timeline={timeline}
+                                    onChange={(updatedTimeline) => {
+                                        onChange(updatedTimeline);
+                                    }}
+                                />
                             </Table.Cell>
                             <Table.Cell justify="center">
                                 <AddEventDialog

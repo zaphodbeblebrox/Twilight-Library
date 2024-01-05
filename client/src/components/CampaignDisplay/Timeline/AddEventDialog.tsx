@@ -2,8 +2,6 @@ import { Button, Dialog, Flex, TextField } from '@radix-ui/themes';
 import { useMemo, useState } from 'react';
 import { TypeStoryEvent } from '../../../../../SettlementTypes';
 import Fuse from 'fuse.js';
-import { settlementEventsData } from '../../static_data_file_configs/SettlementEventsConfig';
-import { storyEventsData } from '../../static_data_file_configs/StoryEventsConfig';
 import { campaignCreatorData } from '../../static_data_file_configs/CampaignCreatorConfig';
 import { TwilightSelect } from '../../primitiveComponents/Primitives';
 
