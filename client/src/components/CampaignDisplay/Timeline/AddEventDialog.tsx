@@ -10,10 +10,11 @@ import { TwilightSelect } from '../../primitiveComponents/Primitives';
 interface AddEventDialogProps {
     buttonText: string;
     title: string;
+    dataToSearch: string[];
     onSubmit: (newEvent: TypeStoryEvent) => void;
 }
 
-const AddEventDialog = ({ buttonText, title, onSubmit }: AddEventDialogProps) => {
+const AddEventDialog = ({ buttonText, title, dataToSearch, onSubmit }: AddEventDialogProps) => {
     const [nemesisEncounterSelected, setNemesisEncounterSelected] = useState(false);
     const [searchTerm, setSearchTerm] = useState('');
     const [results, setResults] = useState<string[]>([]);
@@ -31,8 +32,6 @@ const AddEventDialog = ({ buttonText, title, onSubmit }: AddEventDialogProps) =>
     const nemesisLevelOptions = ['-', '1', '2', '3'];
     const [nemesisLevel, setNemesisLevel] = useState(nemesisLevelOptions[0]);
     const [nemesis, setNemesis] = useState(nemesisOptions[0]);
-
-    const dataToSearch = useMemo(() => [...settlementEventsData, ...storyEventsData], []);
 
     const fuse = useMemo(
         () =>
