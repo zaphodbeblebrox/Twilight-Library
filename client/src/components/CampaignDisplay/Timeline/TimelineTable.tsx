@@ -3,6 +3,7 @@ import { TypeStoryEvent, TypeYear } from '../../../../../SettlementTypes';
 import EditEventDialog from './EditEventDialog';
 import AddEventDialog from './AddEventDialog';
 import StoryEventTextDisplay from '../../Helper/StoryEventTextDisplay';
+import SettlementEventCell from './SettlementEventCell';
 
 interface TimelineTableProps {
     timeline: Record<number, TypeYear>;
@@ -15,8 +16,9 @@ const TimelineTable = ({ timeline, onChange }: TimelineTableProps) => {
             <Table.Header>
                 <Table.Row>
                     <Table.ColumnHeaderCell>Year</Table.ColumnHeaderCell>
+                    <Table.ColumnHeaderCell>Settlement Event</Table.ColumnHeaderCell>
                     <Table.ColumnHeaderCell>Story Events</Table.ColumnHeaderCell>
-                    <Table.ColumnHeaderCell>Add Event</Table.ColumnHeaderCell>
+                    <Table.ColumnHeaderCell>Showdowns</Table.ColumnHeaderCell>
                 </Table.Row>
             </Table.Header>
 
@@ -27,6 +29,9 @@ const TimelineTable = ({ timeline, onChange }: TimelineTableProps) => {
                     return (
                         <Table.Row key={idx} align="center">
                             <Table.RowHeaderCell justify="center">{year}</Table.RowHeaderCell>
+                            <Table.Cell>
+                                <SettlementEventCell yearData={timeline[Number(year)]} />
+                            </Table.Cell>
                             <Table.Cell>
                                 <Flex direction="row" align="start" gap="2" wrap="wrap">
                                     {entries.map((entry, idy) => {
