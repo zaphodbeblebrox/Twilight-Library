@@ -4,6 +4,8 @@ import EditEventDialog from './EditEventDialog';
 import AddEventDialog from './AddEventDialog';
 import StoryEventTextDisplay from '../../Helper/StoryEventTextDisplay';
 import SettlementEventCell from './SettlementEventCell';
+import { settlementEventsData } from '../../static_data_file_configs/SettlementEventsConfig';
+import { storyEventsData } from '../../static_data_file_configs/StoryEventsConfig';
 
 interface TimelineTableProps {
     timeline: Record<number, TypeYear>;
@@ -30,7 +32,21 @@ const TimelineTable = ({ timeline, onChange }: TimelineTableProps) => {
                         <Table.Row key={idx} align="center">
                             <Table.RowHeaderCell justify="center">{year}</Table.RowHeaderCell>
                             <Table.Cell>
-                                <SettlementEventCell yearData={timeline[Number(year)]} />
+                                <SettlementEventCell
+                                    yearData={timeline[Number(year)]}
+                                    onSubmit={(newEvent) =>
+                                        onChange({
+                                            ...timeline,
+                                            [Number(year)]: { ...timeline[Number(year)], settlement_event: newEvent },
+                                        })
+                                    }
+                                    onDelete={() =>
+                                        onChange({
+                                            ...timeline,
+                                            [Number(year)]: { ...timeline[Number(year)], settlement_event: null },
+                                        })
+                                    }
+                                />
                             </Table.Cell>
                             <Table.Cell>
                                 <Flex direction="row" align="start" gap="2" wrap="wrap">
@@ -85,6 +101,7 @@ const TimelineTable = ({ timeline, onChange }: TimelineTableProps) => {
                                 <AddEventDialog
                                     buttonText="+"
                                     title="Add Story Event"
+                                    dataToSearch={[...settlementEventsData, ...storyEventsData]}
                                     onSubmit={(newEvent: TypeStoryEvent) => {
                                         const updatedTimeline: Record<number, TypeYear> = {
                                             ...timeline,
