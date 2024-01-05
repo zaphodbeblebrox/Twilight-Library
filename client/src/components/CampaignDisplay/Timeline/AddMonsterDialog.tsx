@@ -1,4 +1,4 @@
-import { Button, Dialog, Flex, colorProp } from '@radix-ui/themes';
+import { Button, Dialog, Flex } from '@radix-ui/themes';
 import { useState } from 'react';
 import { campaignCreatorData } from '../../static_data_file_configs/CampaignCreatorConfig';
 import { TwilightSelect } from '../../primitiveComponents/Primitives';
@@ -60,7 +60,7 @@ const AddMonsterDialog = ({ currentMonster, currentMonsterLevel, currentVictory,
                             : 'green'
                     }
                 >
-                    {currentMonster ? currentMonster : '---'}
+                    {currentMonster ? currentMonster : 'Hunt Quarry'}
                 </Button>
             </Dialog.Trigger>
 

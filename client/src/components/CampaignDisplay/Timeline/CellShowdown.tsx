@@ -1,4 +1,4 @@
-import { TypeYear } from '../../../../../SettlementTypes';
+import { TypeStoryEvent, TypeYear } from '../../../../../SettlementTypes';
 import AddMonsterDialog from './AddMonsterDialog';
 
 interface CellShowdownProps {
@@ -7,9 +7,11 @@ interface CellShowdownProps {
 }
 
 const CellShowdown = ({ yearData, onSubmit }: CellShowdownProps) => {
+    const nemesisSearch: TypeStoryEvent[] = yearData.story_event.filter((event) => event.monster !== undefined);
+    const nemesisFound: TypeStoryEvent | null = nemesisSearch.length > 0 ? nemesisSearch[0] : null;
     return (
         <AddMonsterDialog
-            currentMonster={yearData.monster}
+            currentMonster={nemesisFound && nemesisFound.monster ? nemesisFound.monster : yearData.monster}
             currentMonsterLevel={yearData.monster_level}
             currentVictory={yearData.victorious}
             onSubmit={(monsterObj) => {
