@@ -1,7 +1,7 @@
 import { Flex, Separator, Button, Text } from '@radix-ui/themes';
 import { RefetchFunction } from 'axios-hooks';
-import { TypeServerSettlement } from '../../../../../SettlementTypes';
-import TimelineTable from '../../CampaignCreator/TimelineCreator/TimelineTable';
+import { TypeServerSettlement, TypeYear } from '../../../../../SettlementTypes';
+import TimelineTable from './TimelineTable';
 
 interface TabTimelineProps {
     campaignData: TypeServerSettlement;
@@ -18,7 +18,7 @@ const TabTimeline = ({ campaignData, dbRefetch, dbExecutePatch }: TabTimelinePro
             .catch((err) => console.error(err));
     };
 
-    const handleUpdateTimeline = (updatedTimeline: Record<number, string[]>) => {
+    const handleUpdateTimeline = (updatedTimeline: Record<number, TypeYear>) => {
         // console.log('updated timeline: ', updatedTimeline);
         dbExecutePatch({
             data: { timeline: updatedTimeline },
@@ -40,7 +40,7 @@ const TabTimeline = ({ campaignData, dbRefetch, dbExecutePatch }: TabTimelinePro
             <Separator my="3" size="4" />
             <TimelineTable
                 timeline={campaignData.timeline}
-                onChange={(updatedTimeline: Record<number, string[]>) => handleUpdateTimeline(updatedTimeline)}
+                onChange={(updatedTimeline: Record<number, TypeYear>) => handleUpdateTimeline(updatedTimeline)}
             />
         </Flex>
     );

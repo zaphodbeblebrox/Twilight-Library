@@ -44,7 +44,7 @@ export type TypeStoryEvent = {
 };
 
 export type TypeYear = {
-    settlement_event: string | null;
+    settlement_event: TypeStoryEvent | null;
     story_event: TypeStoryEvent[];
     monster: string | null;
     monster_level: number | null;
@@ -64,7 +64,6 @@ export type TypeServerSettlement = SettlementStrLists &
         arc_survivors: boolean;
         cognition_amount: number;
         current_year: number;
-        timeline: Record<number, string[]>;
         survivors: number[];
         milestones: Record<string, boolean>;
         constellations: boolean;

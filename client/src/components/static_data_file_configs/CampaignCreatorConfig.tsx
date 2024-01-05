@@ -16,6 +16,7 @@ export type NodeOptionsList = {
     encounters: string[];
     wanderers: string[];
     pillars: string[];
+    unique_monsters: string[];
 };
 
 export type TimelineOptionList = {

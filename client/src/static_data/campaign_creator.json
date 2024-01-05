@@ -9,6 +9,15 @@
     "node_core": ["Death of the Dragon King", "Gambler", "The Great Devourer", "Watcher"],
     "node_finale": ["None", "Godhand", "Gold Smoke Knight"],
     "node_special": ["Lonely Tree"],
+    "unique_monsters": [
+        "Giga Lion",
+        "Beast of Sorrow",
+        "Great Golden Cat",
+        "Mad Steed",
+        "Golden Eyed King 1000 Years",
+        "The Old Master",
+        "The Tyrant"
+    ],
 
     "pillars": ["Arc Survivors", "Characters", "Scouts", "Seed Patterns"],
     "encounters": ["Bone Eaters"],
