@@ -11,7 +11,9 @@ const CellShowdown = ({ yearData, onSubmit }: CellShowdownProps) => {
     const nemesisFound: TypeStoryEvent | null = nemesisSearch.length > 0 ? nemesisSearch[0] : null;
     return (
         <AddMonsterDialog
-            currentMonster={nemesisFound && nemesisFound.monster ? nemesisFound.monster : yearData.monster}
+            currentMonster={
+                nemesisFound && nemesisFound.monster && !yearData.monster ? nemesisFound.monster : yearData.monster
+            }
             currentMonsterLevel={yearData.monster_level}
             currentVictory={yearData.victorious}
             onSubmit={(monsterObj) => {
