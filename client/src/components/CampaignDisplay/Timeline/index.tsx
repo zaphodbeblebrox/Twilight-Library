@@ -1,6 +1,6 @@
 import { Flex, Separator, Button, Text } from '@radix-ui/themes';
 import { RefetchFunction } from 'axios-hooks';
-import { TypeServerSettlement, TypeStoryEvent, TypeYear } from '../../../../../SettlementTypes';
+import { TypeServerSettlement, TypeYear } from '../../../../../SettlementTypes';
 import TimelineTable from './TimelineTable';
 
 interface TabTimelineProps {

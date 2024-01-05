@@ -1,11 +1,6 @@
-import { Flex, Separator, Table } from '@radix-ui/themes';
-import { TypeStoryEvent, TypeYear } from '../../../../../SettlementTypes';
-import EditEventDialog from './EditEventDialog';
-import AddEventDialog from './AddEventDialog';
-import StoryEventTextDisplay from '../../Helper/StoryEventTextDisplay';
+import { Table } from '@radix-ui/themes';
+import { TypeYear } from '../../../../../SettlementTypes';
 import CellSettlementEvent from './CellSettlementEvent';
-import { settlementEventsData } from '../../static_data_file_configs/SettlementEventsConfig';
-import { storyEventsData } from '../../static_data_file_configs/StoryEventsConfig';
 import CellStoryEvents from './CellStoryEvents';
 
 interface TimelineTableProps {
