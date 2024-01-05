@@ -44,7 +44,7 @@ export type TypeStoryEvent = {
 };
 
 export type TypeYear = {
-    settlement_event: string | null;
+    settlement_event: TypeStoryEvent | null;
     story_event: TypeStoryEvent[];
     monster: string | null;
     monster_level: number | null;
