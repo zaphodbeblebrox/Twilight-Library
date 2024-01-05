@@ -23,6 +23,7 @@ const AddEventDialog = ({ buttonText, title, dataToSearch, onSubmit }: AddEventD
         ...campaignCreatorData.node_nemesis_3,
         ...campaignCreatorData.node_core,
         ...campaignCreatorData.node_finale,
+        ...campaignCreatorData.unique_monsters,
     ]
         .sort()
         .filter((monster) => monster !== 'None');
