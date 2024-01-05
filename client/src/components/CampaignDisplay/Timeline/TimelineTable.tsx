@@ -2,6 +2,7 @@ import { Table } from '@radix-ui/themes';
 import { TypeYear } from '../../../../../SettlementTypes';
 import CellSettlementEvent from './CellSettlementEvent';
 import CellStoryEvents from './CellStoryEvents';
+import CellShowdown from './CellShowdown';
 
 interface TimelineTableProps {
     timeline: Record<number, TypeYear>;
@@ -51,7 +52,17 @@ const TimelineTable = ({ timeline, onChange }: TimelineTableProps) => {
                                     }}
                                 />
                             </Table.Cell>
-                            <Table.Cell></Table.Cell>
+                            <Table.Cell align="center">
+                                <CellShowdown
+                                    yearData={timeline[Number(year)]}
+                                    onSubmit={(updatedYear) => {
+                                        onChange({
+                                            ...timeline,
+                                            [Number(year)]: updatedYear,
+                                        });
+                                    }}
+                                />
+                            </Table.Cell>
                         </Table.Row>
                     );
                 })}
