@@ -1,15 +1,33 @@
-import { Flex, Text } from '@radix-ui/themes';
-import { TypeYear } from '../../../../../SettlementTypes';
+import { TypeStoryEvent, TypeYear } from '../../../../../SettlementTypes';
+import DeleteEventDialog from './DeleteEventDialog';
+import AddEventDialog from './AddEventDialog';
+import { settlementEventsData } from '../../static_data_file_configs/SettlementEventsConfig';
 
 interface SettlementEventCellProps {
     yearData: TypeYear;
+    onSubmit: (newEvent: TypeStoryEvent) => void;
+    onDelete: () => void;
 }
 
-const SettlementEventCell = ({ yearData }: SettlementEventCellProps) => {
+const SettlementEventCell = ({ yearData, onSubmit, onDelete }: SettlementEventCellProps) => {
     if (yearData.settlement_event) {
-        return <Text>{yearData.settlement_event}</Text>;
+        return (
+            <DeleteEventDialog
+                storyEvent={yearData.settlement_event}
+                onSubmit={() => {
+                    onDelete();
+                }}
+            />
+        );
     } else {
-        return <Text>-</Text>;
+        return (
+            <AddEventDialog
+                buttonText="+"
+                title="Add Settlement Event"
+                dataToSearch={[...settlementEventsData]}
+                onSubmit={(newEvent: TypeStoryEvent) => onSubmit(newEvent)}
+            />
+        );
     }
 };
 
