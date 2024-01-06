@@ -3,7 +3,6 @@ import { TypeServerSettlement, TypeYear } from '../../../../../SettlementTypes';
 import CellSettlementEvent from './CellSettlementEvent';
 import CellStoryEvents from './CellStoryEvents';
 import CellShowdown from './CellShowdown';
-import CalcCollectiveCognition from '../Knowledge/CalcCollectiveCognition';
 
 interface TimelineTableProps {
     campaignData: TypeServerSettlement;
@@ -12,7 +11,6 @@ interface TimelineTableProps {
 }
 
 const TimelineTable = ({ campaignData, timeline, onChange }: TimelineTableProps) => {
-    console.log('CC: ', CalcCollectiveCognition(campaignData));
     return (
         <Table.Root>
             <Table.Header>
