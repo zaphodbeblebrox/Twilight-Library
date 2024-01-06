@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { SettlementMonsterLists, TypeServerSettlement, TypeYear } from '../../../../../SettlementTypes';
+import { TypeServerSettlement } from '../../../../../SettlementTypes';
 
 const CountVictories = (campaignData: TypeServerSettlement): Record<string, Record<number, number>> => {
     const timeline = { ...campaignData.timeline };
@@ -19,21 +18,6 @@ const CountVictories = (campaignData: TypeServerSettlement): Record<string, Reco
         },
         { ...campaignData.quarries, ...campaignData.nemesis },
     );
-};
-
-const CategoryCounter = (
-    totalVictories: Record<string, Record<number, number>>,
-    typeKey: keyof SettlementMonsterLists,
-) => {
-    const calcRules = {
-        quarry_level1: { maxCount: 1, value: 1 },
-        quarry_level2: { maxCount: 2, value: 2 },
-        quarry_level3: { maxCount: 3, value: 3 },
-        nemesis_level1: { maxCount: 1, value: 3 },
-        nemesis_level2: { maxCount: 1, value: 3 },
-        nemesis_level3: { maxCount: 1, value: 3 },
-        unique: { maxCount: 1, value: 3 },
-    };
 };
 
 const QuarryCounter = (totalVictories: Record<string, Record<number, number>>, campaignData: TypeServerSettlement) => {
@@ -83,11 +67,11 @@ const CalcCollectiveCognition = (campaignData: TypeServerSettlement): number => 
     const baseCC = 1;
 
     const totalVictories = CountVictories(campaignData);
-    console.log('total vict: ', totalVictories);
+    // console.log('total vict: ', totalVictories);
     const quarryCount = QuarryCounter(totalVictories, campaignData);
-    console.log('sum quarry cc: ', quarryCount);
+    // console.log('sum quarry cc: ', quarryCount);
     const nemesisCount = NemesisCounter(totalVictories, campaignData);
-    console.log('sum nemesis cc: ', nemesisCount);
+    // console.log('sum nemesis cc: ', nemesisCount);
 
     return baseCC + quarryCount + nemesisCount;
 };
