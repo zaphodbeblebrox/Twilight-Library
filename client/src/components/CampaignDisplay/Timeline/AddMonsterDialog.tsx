@@ -1,9 +1,11 @@
 import { Button, Dialog, Flex } from '@radix-ui/themes';
 import { useState } from 'react';
-import { campaignCreatorData } from '../../static_data_file_configs/CampaignCreatorConfig';
 import { TwilightSelect } from '../../primitiveComponents/Primitives';
+import { TypeServerSettlement } from '../../../../../SettlementTypes';
 
 interface AddMonsterDialogProps {
+    campaignData: TypeServerSettlement;
+    monsterOptions: string[];
     currentMonster: string | null;
     currentMonsterLevel: number | null;
     currentVictory: boolean | null;
@@ -18,33 +20,37 @@ interface AddMonsterDialogProps {
     }) => void;
 }
 
-const AddMonsterDialog = ({ currentMonster, currentMonsterLevel, currentVictory, onSubmit }: AddMonsterDialogProps) => {
-    const monsterOptions: string[] = [
-        ...campaignCreatorData.node_quarry_1,
-        ...campaignCreatorData.node_quarry_2,
-        ...campaignCreatorData.node_quarry_3,
-        ...campaignCreatorData.node_quarry_4,
-        ...campaignCreatorData.node_nemesis_1,
-        ...campaignCreatorData.node_nemesis_2,
-        ...campaignCreatorData.node_nemesis_3,
-        ...campaignCreatorData.node_core,
-        ...campaignCreatorData.node_finale,
-        ...campaignCreatorData.unique_monsters,
-    ]
-        .sort()
-        .filter((monster) => monster !== 'None');
+const AddMonsterDialog = ({
+    campaignData,
+    monsterOptions,
+    currentMonster,
+    currentMonsterLevel,
+    currentVictory,
+    onSubmit,
+}: AddMonsterDialogProps) => {
+    const GetMonsterOptions = (monster: string) => {
+        return monster in campaignData.nemesis
+            ? Object.keys(campaignData.nemesis[monster]).sort()
+            : Object.keys(campaignData.quarries[monster]).sort();
+    };
 
-    const monsterLevelOptions = ['1', '2', '3', '4', '5'];
+    const [monster, setMonster] = useState(currentMonster ? currentMonster : monsterOptions[0]);
+    const [monsterLevelOptions, setMonsterLevelOptions] = useState(
+        currentMonster ? GetMonsterOptions(currentMonster) : GetMonsterOptions(monsterOptions[0]),
+    );
+
     const [monsterLevel, setMonsterLevel] = useState(
         currentMonsterLevel ? String(currentMonsterLevel) : monsterLevelOptions[0],
     );
-    const [monster, setMonster] = useState(currentMonster ? currentMonster : monsterOptions[0]);
 
     return (
         <Dialog.Root
             onOpenChange={() => {
-                setMonster(monsterOptions[0]);
-                setMonsterLevel(monsterLevelOptions[0]);
+                setMonster(currentMonster ? currentMonster : monsterOptions[0]);
+                setMonsterLevel(currentMonsterLevel ? String(currentMonsterLevel) : monsterLevelOptions[0]);
+                setMonsterLevelOptions(
+                    currentMonster ? GetMonsterOptions(currentMonster) : GetMonsterOptions(monsterOptions[0]),
+                );
             }}
         >
             <Dialog.Trigger>
@@ -60,7 +66,8 @@ const AddMonsterDialog = ({ currentMonster, currentMonsterLevel, currentVictory,
                             : 'green'
                     }
                 >
-                    {currentMonster ? currentMonster : 'Hunt Quarry'}
+                    {currentMonster ? currentMonster : 'Hunt Quarry'}{' '}
+                    {currentMonsterLevel && ` - Lvl ${currentMonsterLevel}`}
                 </Button>
             </Dialog.Trigger>
 
@@ -73,7 +80,10 @@ const AddMonsterDialog = ({ currentMonster, currentMonsterLevel, currentVictory,
                         header="Monster Fought:"
                         defaultOption={monster}
                         options={monsterOptions}
-                        onChange={(selectedNemesis) => setMonster(selectedNemesis)}
+                        onChange={(selectedNemesis) => {
+                            setMonsterLevelOptions(GetMonsterOptions(selectedNemesis));
+                            setMonster(selectedNemesis);
+                        }}
                     />
                     <TwilightSelect
                         header="Monster Lvl:"

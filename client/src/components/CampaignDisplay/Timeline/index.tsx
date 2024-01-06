@@ -39,6 +39,7 @@ const TabTimeline = ({ campaignData, dbRefetch, dbExecutePatch }: TabTimelinePro
             </Flex>
             <Separator my="3" size="4" />
             <TimelineTable
+                campaignData={campaignData}
                 timeline={campaignData.timeline}
                 onChange={(updatedTimeline: Record<number, TypeYear>) => handleUpdateTimeline(updatedTimeline)}
             />

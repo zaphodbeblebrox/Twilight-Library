@@ -1,15 +1,16 @@
 import { Table } from '@radix-ui/themes';
-import { TypeYear } from '../../../../../SettlementTypes';
+import { TypeServerSettlement, TypeYear } from '../../../../../SettlementTypes';
 import CellSettlementEvent from './CellSettlementEvent';
 import CellStoryEvents from './CellStoryEvents';
 import CellShowdown from './CellShowdown';
 
 interface TimelineTableProps {
+    campaignData: TypeServerSettlement;
     timeline: Record<number, TypeYear>;
     onChange: (updatedTimeline: Record<number, TypeYear>) => void;
 }
 
-const TimelineTable = ({ timeline, onChange }: TimelineTableProps) => {
+const TimelineTable = ({ campaignData, timeline, onChange }: TimelineTableProps) => {
     return (
         <Table.Root>
             <Table.Header>
@@ -54,6 +55,7 @@ const TimelineTable = ({ timeline, onChange }: TimelineTableProps) => {
                             </Table.Cell>
                             <Table.Cell align="center">
                                 <CellShowdown
+                                    campaignData={campaignData}
                                     yearData={timeline[Number(year)]}
                                     onSubmit={(updatedYear) => {
                                         onChange({
