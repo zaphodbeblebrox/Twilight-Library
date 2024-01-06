@@ -29,7 +29,6 @@ const AddMonsterDialog = ({
     onSubmit,
 }: AddMonsterDialogProps) => {
     const GetMonsterOptions = (monster: string) => {
-        console.log('monster: ', monster, 'result: ', monster in campaignData.nemesis);
         return monster in campaignData.nemesis
             ? Object.keys(campaignData.nemesis[monster])
             : Object.keys(campaignData.quarries[monster]);

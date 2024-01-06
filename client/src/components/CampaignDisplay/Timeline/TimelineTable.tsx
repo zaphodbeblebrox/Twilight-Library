@@ -1,9 +1,9 @@
 import { Table } from '@radix-ui/themes';
-import { SettlementMonsterLists, TypeServerSettlement, TypeYear } from '../../../../../SettlementTypes';
+import { TypeServerSettlement, TypeYear } from '../../../../../SettlementTypes';
 import CellSettlementEvent from './CellSettlementEvent';
 import CellStoryEvents from './CellStoryEvents';
 import CellShowdown from './CellShowdown';
-import CountVictories from '../Knowledge/CalcCollectiveCognition';
+import CalcCollectiveCognition from '../Knowledge/CalcCollectiveCognition';
 
 interface TimelineTableProps {
     campaignData: TypeServerSettlement;
@@ -12,7 +12,7 @@ interface TimelineTableProps {
 }
 
 const TimelineTable = ({ campaignData, timeline, onChange }: TimelineTableProps) => {
-    // const temp = CountVictories(campaignData);
+    console.log('CC: ', CalcCollectiveCognition(campaignData));
     return (
         <Table.Root>
             <Table.Header>
