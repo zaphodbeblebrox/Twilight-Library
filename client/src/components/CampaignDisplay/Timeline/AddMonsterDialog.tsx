@@ -4,6 +4,7 @@ import { campaignCreatorData } from '../../static_data_file_configs/CampaignCrea
 import { TwilightSelect } from '../../primitiveComponents/Primitives';
 
 interface AddMonsterDialogProps {
+    monsterOptions: string[];
     currentMonster: string | null;
     currentMonsterLevel: number | null;
     currentVictory: boolean | null;
@@ -18,21 +19,27 @@ interface AddMonsterDialogProps {
     }) => void;
 }
 
-const AddMonsterDialog = ({ currentMonster, currentMonsterLevel, currentVictory, onSubmit }: AddMonsterDialogProps) => {
-    const monsterOptions: string[] = [
-        ...campaignCreatorData.node_quarry_1,
-        ...campaignCreatorData.node_quarry_2,
-        ...campaignCreatorData.node_quarry_3,
-        ...campaignCreatorData.node_quarry_4,
-        ...campaignCreatorData.node_nemesis_1,
-        ...campaignCreatorData.node_nemesis_2,
-        ...campaignCreatorData.node_nemesis_3,
-        ...campaignCreatorData.node_core,
-        ...campaignCreatorData.node_finale,
-        ...campaignCreatorData.unique_monsters,
-    ]
-        .sort()
-        .filter((monster) => monster !== 'None');
+const AddMonsterDialog = ({
+    monsterOptions,
+    currentMonster,
+    currentMonsterLevel,
+    currentVictory,
+    onSubmit,
+}: AddMonsterDialogProps) => {
+    // const monsterOptions: string[] = [
+    //     ...campaignCreatorData.node_quarry_1,
+    //     ...campaignCreatorData.node_quarry_2,
+    //     ...campaignCreatorData.node_quarry_3,
+    //     ...campaignCreatorData.node_quarry_4,
+    //     ...campaignCreatorData.node_nemesis_1,
+    //     ...campaignCreatorData.node_nemesis_2,
+    //     ...campaignCreatorData.node_nemesis_3,
+    //     ...campaignCreatorData.node_core,
+    //     ...campaignCreatorData.node_finale,
+    //     ...campaignCreatorData.unique_monsters,
+    // ]
+    //     .sort()
+    //     .filter((monster) => monster !== 'None');
 
     const monsterLevelOptions = ['1', '2', '3', '4', '5'];
     const [monsterLevel, setMonsterLevel] = useState(
