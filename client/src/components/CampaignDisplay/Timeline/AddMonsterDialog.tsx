@@ -30,8 +30,8 @@ const AddMonsterDialog = ({
 }: AddMonsterDialogProps) => {
     const GetMonsterOptions = (monster: string) => {
         return monster in campaignData.nemesis
-            ? Object.keys(campaignData.nemesis[monster])
-            : Object.keys(campaignData.quarries[monster]);
+            ? Object.keys(campaignData.nemesis[monster]).sort()
+            : Object.keys(campaignData.quarries[monster]).sort();
     };
 
     const [monster, setMonster] = useState(currentMonster ? currentMonster : monsterOptions[0]);
@@ -46,8 +46,11 @@ const AddMonsterDialog = ({
     return (
         <Dialog.Root
             onOpenChange={() => {
-                setMonster(monsterOptions[0]);
-                setMonsterLevel(monsterLevelOptions[0]);
+                setMonster(currentMonster ? currentMonster : monsterOptions[0]);
+                setMonsterLevel(currentMonsterLevel ? String(currentMonsterLevel) : monsterLevelOptions[0]);
+                setMonsterLevelOptions(
+                    currentMonster ? GetMonsterOptions(currentMonster) : GetMonsterOptions(monsterOptions[0]),
+                );
             }}
         >
             <Dialog.Trigger>

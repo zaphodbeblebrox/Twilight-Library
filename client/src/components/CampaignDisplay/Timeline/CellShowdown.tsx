@@ -13,7 +13,9 @@ const CellShowdown = ({ campaignData, yearData, onSubmit }: CellShowdownProps) =
     return (
         <AddMonsterDialog
             campaignData={campaignData}
-            monsterOptions={nemesisFound ? Object.keys(campaignData.nemesis) : Object.keys(campaignData.quarries)}
+            monsterOptions={
+                nemesisFound ? Object.keys(campaignData.nemesis).sort() : Object.keys(campaignData.quarries).sort()
+            }
             currentMonster={
                 nemesisFound && nemesisFound.monster && !yearData.monster ? nemesisFound.monster : yearData.monster
             }

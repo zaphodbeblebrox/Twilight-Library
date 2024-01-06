@@ -60,8 +60,6 @@ const TimelineTable = ({ campaignData, timeline, onChange }: TimelineTableProps)
                                     campaignData={campaignData}
                                     yearData={timeline[Number(year)]}
                                     onSubmit={(updatedYear) => {
-                                        // TODO: Perform a full count for CC
-
                                         onChange({
                                             ...timeline,
                                             [Number(year)]: updatedYear,
