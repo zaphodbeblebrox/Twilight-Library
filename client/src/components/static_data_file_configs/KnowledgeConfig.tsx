@@ -8,4 +8,4 @@ export type TypeKnowledge = {
 };
 
 export type KnowledgeKeys = { [K in keyof typeof rawKnowledgeData]: TypeKnowledge };
-export const KnowledgeData: Record<keyof KnowledgeKeys, TypeKnowledge> = rawKnowledgeData;
+export const knowledgeData: Record<keyof KnowledgeKeys, TypeKnowledge> = rawKnowledgeData;

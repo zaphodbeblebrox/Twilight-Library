@@ -1,7 +1,7 @@
 import { Button, Dialog, Flex, TextField } from '@radix-ui/themes';
 import { useMemo, useState } from 'react';
 import Fuse from 'fuse.js';
-import { KnowledgeData } from '../../static_data_file_configs/KnowledgeConfig';
+import { knowledgeData } from '../../static_data_file_configs/KnowledgeConfig';
 
 interface AddKnowledgeDialog {
     buttonText: string;
@@ -9,7 +9,7 @@ interface AddKnowledgeDialog {
 }
 
 const AddKnowledgeDialog = ({ buttonText, onSubmit }: AddKnowledgeDialog) => {
-    const knowledgeOptions: string[] = Object.keys(KnowledgeData).sort();
+    const knowledgeOptions: string[] = Object.keys(knowledgeData).sort();
     // const [knowledgeSelected, setKnowledgeSelected] = useState(knowledgeOptions[0]);
     const [searchTerm, setSearchTerm] = useState('');
     const [results, setResults] = useState<string[]>([]);
