@@ -10,7 +10,6 @@ interface AddKnowledgeDialog {
 
 const AddKnowledgeDialog = ({ buttonText, onSubmit }: AddKnowledgeDialog) => {
     const knowledgeOptions: string[] = Object.keys(knowledgeData).sort();
-    // const [knowledgeSelected, setKnowledgeSelected] = useState(knowledgeOptions[0]);
     const [searchTerm, setSearchTerm] = useState('');
     const [results, setResults] = useState<string[]>([]);
 
@@ -28,7 +27,6 @@ const AddKnowledgeDialog = ({ buttonText, onSubmit }: AddKnowledgeDialog) => {
             onOpenChange={() => {
                 setSearchTerm('');
                 setResults(knowledgeOptions.slice(0, 8));
-                // setKnowledgeSelected(knowledgeOptions[0]);
             }}
         >
             <Dialog.Trigger>

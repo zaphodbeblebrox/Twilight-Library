@@ -46,7 +46,7 @@ const AddEventDialog = ({ buttonText, title, dataToSearch, onSubmit }: AddEventD
         <Dialog.Root
             onOpenChange={() => {
                 setSearchTerm('');
-                setResults([]);
+                setResults(dataToSearch.slice(0, 8));
                 setNemesisEncounterSelected(false);
                 setNemesis(nemesisOptions[0]);
                 setNemesisLevel(nemesisLevelOptions[0]);

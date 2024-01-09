@@ -22,6 +22,7 @@ const TabCampaignSettings = ({ campaignData, dbRefetch, dbExecutePatch }: TabCam
 
     return (
         <Button
+            color="red"
             onClick={() => {
                 deletePatch().then(() => navigate('/twilight-library/dashboard'));
             }}

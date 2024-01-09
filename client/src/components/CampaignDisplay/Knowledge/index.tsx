@@ -4,7 +4,7 @@ import { Flex, Heading, Separator } from '@radix-ui/themes';
 import CalcCollectiveCognition from './CalcCollectiveCognition';
 import AddKnowledgeDialog from './AddKnowledgeDialog';
 import KnowledgeInfoCard from './KnowledgeInfoCard';
-import { KnowledgeKeys, TypeKnowledge, knowledgeData } from '../../static_data_file_configs/KnowledgeConfig';
+import { KnowledgeKeys, knowledgeData } from '../../static_data_file_configs/KnowledgeConfig';
 
 interface TabKnowledgeProps {
     campaignData: TypeServerSettlement;

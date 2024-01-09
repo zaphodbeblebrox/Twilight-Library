@@ -12,7 +12,7 @@ const KnowledgeInfoCard = ({ knowledge, knowledgeObj, onDelete, onChange }: Know
     return (
         <Dialog.Root>
             <Dialog.Trigger>
-                <Button>{knowledge}</Button>
+                <Button variant="ghost">{knowledge}</Button>
             </Dialog.Trigger>
 
             <Dialog.Content className="DialogContent">
