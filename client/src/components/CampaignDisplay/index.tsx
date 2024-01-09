@@ -7,6 +7,7 @@ import TabStorage from './Storage';
 import { useEffect } from 'react';
 import TabAdvancements from './Advancements';
 import TabCampaignSettings from './CampaignSettings';
+import TabKnowledge from './Knowledge';
 
 const CampaignTabs = () => {
     const { id } = useParams();
@@ -58,11 +59,8 @@ const CampaignTabs = () => {
                     <Tabs.Trigger style={{ flex: 1 }} value="advancements">
                         Advancements
                     </Tabs.Trigger>
-                    <Tabs.Trigger style={{ flex: 1 }} value="arc">
-                        Arc
-                    </Tabs.Trigger>
-                    <Tabs.Trigger style={{ flex: 1 }} value="patterns">
-                        Patterns
+                    <Tabs.Trigger style={{ flex: 1 }} value="knowledge">
+                        Knowledge
                     </Tabs.Trigger>
                     <Tabs.Trigger style={{ flex: 1 }} value="campaignSettings">
                         Campaign Settings
@@ -118,11 +116,14 @@ const CampaignTabs = () => {
                             />
                         )}
                     </Tabs.Content>
-                    <Tabs.Content value="arc">
-                        <Text size="2">arc Info...</Text>
-                    </Tabs.Content>
-                    <Tabs.Content value="patterns">
-                        <Text size="2">patterns Info...</Text>
+                    <Tabs.Content value="knowledge">
+                        {getData && (
+                            <TabKnowledge
+                                campaignData={getData.settlement}
+                                dbRefetch={refetch}
+                                dbExecutePatch={executePatch}
+                            />
+                        )}
                     </Tabs.Content>
                     <Tabs.Content value="campaignSettings">
                         {getData && (
