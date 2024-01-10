@@ -15,7 +15,7 @@ interface TabSettlementProps {
 }
 
 const TabSettlement = ({ campaignData, dbRefetch, dbExecutePatch }: TabSettlementProps) => {
-    /* TODO: 
+    /* 
   Settlement Name
   Population Count | Death Count
   Survival Limit | Survival on Departure | Insanity on Departure

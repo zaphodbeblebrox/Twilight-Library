@@ -17,7 +17,7 @@ const LocationDisplay = ({ campaignData, onChange }: LocationDisplayProps) => {
                     onSubmit={(newLocation) => onChange([...campaignData.locations, newLocation])}
                 />
             </Flex>
-            <Flex direction={'column'} gap={'2'}>
+            <Flex direction={'column'} gap={'2'} align={'start'}>
                 {campaignData.locations.map((location, idx) => (
                     <Text key={idx}>{location}</Text>
                 ))}
