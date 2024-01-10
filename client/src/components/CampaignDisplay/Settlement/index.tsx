@@ -40,10 +40,11 @@ const TabSettlement = ({ campaignData, dbRefetch, dbExecutePatch }: TabSettlemen
             </Flex>
             <LocationDisplay
                 campaignData={campaignData}
-                onChange={(updatedLocations) => {
+                onChange={(updatedData) => {
                     dbExecutePatch({
                         data: {
-                            locations: [...updatedLocations],
+                            locations: [...updatedData.locations],
+                            gear: { ...updatedData.gear },
                         },
                     })
                         .then(() => dbRefetch())

@@ -5,11 +5,10 @@ import { locationsData } from '../../static_data_file_configs/LocationsConfig';
 import { PlusIcon } from '@radix-ui/react-icons';
 
 interface AddLocationDialogProps {
-    buttonText: string;
     onSubmit: (newLocation: string) => void;
 }
 
-const AddLocationDialog = ({ buttonText, onSubmit }: AddLocationDialogProps) => {
+const AddLocationDialog = ({ onSubmit }: AddLocationDialogProps) => {
     const locationOptions: string[] = Object.keys(locationsData).sort();
     const [searchTerm, setSearchTerm] = useState('');
     const [results, setResults] = useState<string[]>([]);
