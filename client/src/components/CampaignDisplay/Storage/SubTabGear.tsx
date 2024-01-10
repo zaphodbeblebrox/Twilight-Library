@@ -41,7 +41,7 @@ const SubTabGear = ({ campaignData, dbRefetch, dbExecutePatch }: SubTabGearProps
                         .catch((err) => console.error(err));
                 }}
             />
-            <Flex direction="column" wrap="wrap" gap="3">
+            <Flex direction="row" wrap="wrap" gap="5">
                 {Object.keys(campaignData.gear)
                     .sort()
                     .map((gearCategory, idx) => {

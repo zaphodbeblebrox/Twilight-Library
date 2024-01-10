@@ -32,7 +32,6 @@ const TabKnowledge = ({ campaignData, dbRefetch, dbExecutePatch }: TabKnowledgeP
             </Flex>
             <Flex direction={'column'} gap={'2'}>
                 {campaignData.knowledges.sort().map((knowledge, idx) => {
-                    console.log('knowledge', knowledge, knowledgeData[knowledge as keyof KnowledgeKeys]);
                     return (
                         <KnowledgeInfoCard
                             key={idx}
