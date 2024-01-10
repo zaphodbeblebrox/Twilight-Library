@@ -1,4 +1,4 @@
-import { Tabs, Box, Text, Flex, Button, Heading } from '@radix-ui/themes';
+import { Tabs, Box, Text, Flex, Button } from '@radix-ui/themes';
 import { useNavigate, useParams } from 'react-router-dom';
 import useAxios from 'axios-hooks';
 import { settlementApi } from '../../service/api';
