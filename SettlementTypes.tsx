@@ -67,6 +67,7 @@ export type TypeServerSettlement = SettlementStrLists &
         survivors: number[];
         milestones: Record<string, boolean>;
         constellations: boolean;
+        settlement_lost: boolean;
     };
 
 export type TypeInitializedSettlement = SettlementMonsterLists &
