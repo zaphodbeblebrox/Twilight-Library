@@ -6,6 +6,7 @@ import {
     GetSurvivalDepartureBonus,
     GetSurvivalLimit,
 } from '../../Helper/ModifierCalculator';
+import LocationDisplay from './LocationDisplay';
 
 interface TabSettlementProps {
     campaignData: TypeServerSettlement;
@@ -33,10 +34,22 @@ const TabSettlement = ({ campaignData, dbRefetch, dbExecutePatch }: TabSettlemen
                 </Flex>
                 <Flex direction={'column'} gap={'2'} align={'end'}>
                     <Text>Departure Bonuses</Text>
-                    <Text>Survival: {GetSurvivalDepartureBonus(campaignData)}</Text>
-                    <Text>Insanity: {GetInsanityDepartureBonus(campaignData)}</Text>
+                    <Text>Survival: +{GetSurvivalDepartureBonus(campaignData)}</Text>
+                    <Text>Insanity: +{GetInsanityDepartureBonus(campaignData)}</Text>
                 </Flex>
             </Flex>
+            <LocationDisplay
+                campaignData={campaignData}
+                onChange={(updatedLocations) => {
+                    dbExecutePatch({
+                        data: {
+                            locations: [...updatedLocations],
+                        },
+                    })
+                        .then(() => dbRefetch())
+                        .catch((err) => console.error(err));
+                }}
+            />
         </Flex>
     );
 };
