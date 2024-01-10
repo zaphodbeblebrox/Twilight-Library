@@ -1,7 +1,8 @@
-import { Button, Dialog, Flex, TextField } from '@radix-ui/themes';
+import { Button, Dialog, Flex, IconButton, TextField } from '@radix-ui/themes';
 import { useMemo, useState } from 'react';
 import Fuse from 'fuse.js';
 import { locationsData } from '../../static_data_file_configs/LocationsConfig';
+import { PlusIcon } from '@radix-ui/react-icons';
 
 interface AddLocationDialogProps {
     buttonText: string;
@@ -30,7 +31,9 @@ const AddLocationDialog = ({ buttonText, onSubmit }: AddLocationDialogProps) => 
             }}
         >
             <Dialog.Trigger>
-                <Button>{buttonText}</Button>
+                <IconButton radius="full" color="gray">
+                    <PlusIcon />
+                </IconButton>
             </Dialog.Trigger>
 
             <Dialog.Content className="DialogContent">
