@@ -153,6 +153,11 @@ const SettlementSchema: Schema = new Schema(
             required: false,
             default: false,
         },
+        settlement_lost: {
+            type: Boolean,
+            required: false,
+            default: false,
+        },
     },
     {
         versionKey: false /* Probably want to enable this later, useful with concurent edits*/,

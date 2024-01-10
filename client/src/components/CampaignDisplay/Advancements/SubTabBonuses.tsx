@@ -103,11 +103,11 @@ const SubTabBonuses = ({ campaignData }: SubTabBonusesProps) => {
             {survivorModifiers.mod_speed > 0 && <Text>Speed: +{String(survivorModifiers.mod_speed)}</Text>}
             {survivorModifiers.mod_evasion > 0 && <Text>Evasion: +{String(survivorModifiers.mod_evasion)}</Text>}
             {survivorModifiers.mod_movement > 0 && <Text>Movement: +{String(survivorModifiers.mod_movement)}</Text>}
-            {survivorModifiers.mod_understanding && (
+            {survivorModifiers.mod_understanding > 0 && (
                 <Text>Understanding: +{String(survivorModifiers.mod_understanding)}</Text>
             )}
-            {survivorModifiers.mod_courage && <Text>Courage: +{String(survivorModifiers.mod_courage)}</Text>}
-            {survivorModifiers.mod_hunt_xp && <Text>Hunt XP: +{String(survivorModifiers.mod_hunt_xp)}</Text>}
+            {survivorModifiers.mod_courage > 0 && <Text>Courage: +{String(survivorModifiers.mod_courage)}</Text>}
+            {survivorModifiers.mod_hunt_xp > 0 && <Text>Hunt XP: +{String(survivorModifiers.mod_hunt_xp)}</Text>}
         </Flex>
     );
 };
