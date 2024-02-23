@@ -9,6 +9,7 @@ import TabAdvancements from './Advancements';
 import TabCampaignSettings from './CampaignSettings';
 import TabKnowledge from './Knowledge';
 import TabSettlement from './Settlement';
+import TabSurvivors from './Survivors';
 
 const CampaignTabs = () => {
     const { id } = useParams();
@@ -90,7 +91,13 @@ const CampaignTabs = () => {
                     </Tabs.Content>
 
                     <Tabs.Content value="survivors">
-                        <Text size="2">survivors Info...</Text>
+                        {getData && (
+                            <TabSurvivors
+                                campaignData={getData.settlement}
+                                dbRefetch={refetch}
+                                dbExecutePatch={executePatch}
+                            />
+                        )}
                     </Tabs.Content>
 
                     <Tabs.Content value="storage">
