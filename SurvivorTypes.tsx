@@ -42,7 +42,7 @@ export type TypeKnowledge = {
   knowledges: { name: string; observation: number }[];
 }
 
-export type TypeServerSurvivor = TypeNames & TypeChecks & TypeAttributes & TypeAbilities & TypeKnowledge& {
+export type TypeServerSurvivor = TypeNames & TypeChecks & TypeAttributes & TypeAbilities & TypeKnowledge & {
   _id: string;
   player_creator: string;
   mother: string|null;
