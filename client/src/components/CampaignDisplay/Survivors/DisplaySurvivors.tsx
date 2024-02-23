@@ -2,6 +2,7 @@ import { RefetchFunction } from 'axios-hooks';
 import { TypeServerSettlement } from '../../../../../SettlementTypes';
 import { Box, Flex, Heading, Tabs, Text } from '@radix-ui/themes';
 import Fuse from 'fuse.js';
+import CreateNewSurvivorDialog from './CreateNewSurvivorDialog';
 
 interface DisplaySurvivorsProps {
     campaignData: TypeServerSettlement;
@@ -18,10 +19,9 @@ const DisplaySurvivors = ({
 }: DisplaySurvivorsProps) => {
     // create object of only alive or dead survivors using filter
     const survivorList = campaignData.survivors.filter((survivor) => survivor.is_dead === showDeadSurvivors);
-    // TODO: display all survivors in object
     return (
         <Flex>
-            {!showDeadSurvivors && <button>New Survivor</button>}
+            {!showDeadSurvivors && <CreateNewSurvivorDialog onSubmit={(newSurvivor) => {}} />}
             {survivorList.map((survivor, idx) => {
                 return <p key={idx}>{survivor.first_name}</p>;
             })}
