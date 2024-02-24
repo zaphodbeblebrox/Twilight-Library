@@ -21,7 +21,9 @@ const DisplaySurvivors = ({
     const survivorList = campaignData.survivors.filter((survivor) => survivor.is_dead === showDeadSurvivors);
     return (
         <Flex>
-            {!showDeadSurvivors && <CreateNewSurvivorDialog onSubmit={(newSurvivor) => {}} />}
+            {!showDeadSurvivors && (
+                <CreateNewSurvivorDialog campaignData={campaignData} onSubmit={(newSurvivor) => {}} />
+            )}
             {survivorList.map((survivor, idx) => {
                 return <p key={idx}>{survivor.first_name}</p>;
             })}
