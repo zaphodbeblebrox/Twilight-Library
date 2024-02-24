@@ -7,6 +7,7 @@ export type TypeNames = {
 export type TypeChecks = {
   is_retired: boolean;
   is_dead: boolean;
+  is_male: boolean;
   has_lifetime_reroll: boolean;
   skip_next_hunt: boolean;
   cannot_use_fighting_arts: boolean;
