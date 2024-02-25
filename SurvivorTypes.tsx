@@ -38,17 +38,17 @@ export type TypeAbilities = {
 }
 
 export type TypeKnowledge = {
-  philosophy: string;
-  philosophy_rank: number;
+  philosophy: string|null;
+  philosophy_rank: number|null;
   knowledges: { name: string; observation: number }[];
 }
 
 export type TypeServerSurvivor = TypeNames & TypeChecks & TypeAttributes & TypeAbilities & TypeKnowledge & {
-  _id: string;
+  id: number;
   player_creator: string;
-  mother: string|null;
-  father: string|null;
+  mother: string;
+  father: string;
   death_story: string;
-  weapon_type: string;
+  weapon_type: string|null;
   weapon_xp: number;
 };
