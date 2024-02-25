@@ -5118,5 +5118,16 @@
             "On a [Perfect Hit], the monster suffers a wound.",
             "3{green_affinity}: This gains +1 [Perfect Hit] range."
         ]
+    },
+    "Stampede Glaive": {
+        "types": ["weapon", "melee", "axe", "spear", "two-handed", "bone"],
+        "location": "Pattern",
+        "crafting": "x1 Denticulated Bladehip, x1 perfect organ, x3 bone",
+        "stats": { "speed": 1, "accuracy": 7, "strength": 7 },
+        "affinities": { "top": "blue", "right": "", "bottom": "", "left": "blue", "center": "" },
+        "abilities": [
+            "[Reach] 2",
+            "When you [Dash], this weapon gains +1 speed until the end of the showdown (use tokens to track this)."
+        ]
     }
 }
