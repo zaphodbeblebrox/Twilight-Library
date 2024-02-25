@@ -20,14 +20,22 @@ const DisplaySurvivors = ({
     // create object of only alive or dead survivors using filter
     const survivorList = campaignData.survivors.filter((survivor) => survivor.is_dead === showDeadSurvivors);
     return (
-        <Flex>
+        <Flex direction={'column'}>
             {!showDeadSurvivors && (
-                <CreateNewSurvivorDialog campaignData={campaignData} onSubmit={(newSurvivor) => {}} />
+                <CreateNewSurvivorDialog
+                    campaignData={campaignData}
+                    onSubmit={(newSurvivor) => {
+                        dbExecutePatch({
+                            data: { survivors: [...campaignData.survivors, newSurvivor] },
+                        })
+                            .then(() => dbRefetch())
+                            .catch((err) => console.error(err));
+                    }}
+                />
             )}
             {survivorList.map((survivor, idx) => {
                 return <p key={idx}>{survivor.first_name}</p>;
             })}
-            <p>placeholder</p>
         </Flex>
     );
 };
