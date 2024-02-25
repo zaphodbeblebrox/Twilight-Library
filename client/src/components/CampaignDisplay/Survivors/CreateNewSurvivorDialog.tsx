@@ -34,10 +34,12 @@ const CreateNewSurvivorDialog = ({ campaignData, onSubmit }: CreateNewSurvivorDi
     // Create filtered lists of male and females for potential father/mother
     const males = campaignData.survivors
         .filter((survivor) => survivor.is_male === true)
+        .filter((survivor) => survivor.is_dead === false)
         .map((survivor) => `${survivor.first_name} ${survivor.last_name}`)
         .sort();
     const females = campaignData.survivors
         .filter((survivor) => survivor.is_male === false)
+        .filter((survivor) => survivor.is_dead === false)
         .map((survivor) => `${survivor.first_name} ${survivor.last_name}`)
         .sort();
 
@@ -45,7 +47,18 @@ const CreateNewSurvivorDialog = ({ campaignData, onSubmit }: CreateNewSurvivorDi
     const [mother, setMother] = useState(females[0]);
     // TODO: Add Weapon Specialization selection from parents to be inherited.
     return (
-        <Dialog.Root>
+        <Dialog.Root
+            onOpenChange={() => {
+                setFirstName('');
+                setLastName('');
+                setCreator('tester');
+                setHasParents(false);
+                setIsMale(false);
+                setCharacterCard(characterCardOptions[0]);
+                setFather(males[0]);
+                setMother(females[0]);
+            }}
+        >
             <Dialog.Trigger>
                 <Button>New Survivor</Button>
             </Dialog.Trigger>
