@@ -88,6 +88,7 @@ const SubTabBonuses = ({ campaignData }: SubTabBonusesProps) => {
         },
         { ...innovationModifiers },
     );
+    console.log(survivorModifiers);
 
     return (
         <Flex direction="column" gap="2" align="start" justify="start">
