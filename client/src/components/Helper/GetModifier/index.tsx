@@ -15,8 +15,8 @@ import {
 
 export const GetModifier = {
     SurvivalLimit: GetSurvivalLimit,
-    SurvivalDepartureBonus: GetSurvivalDepartureBonus,
-    InsanityDepartureBonus: GetInsanityDepartureBonus,
+    DepartureSurvival: GetSurvivalDepartureBonus,
+    DepartureInsanity: GetInsanityDepartureBonus,
     HuntXp: GetHuntXpBonus,
     Movement: GetMovementBonus,
     Accuracy: GetAccuracyBonus,
