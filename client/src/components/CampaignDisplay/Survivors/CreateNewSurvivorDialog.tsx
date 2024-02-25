@@ -4,6 +4,11 @@ import { useState } from 'react';
 import { TypeServerSettlement } from '../../../../../SettlementTypes';
 import BuildSurvivor from './BuildSurvivor';
 import { TypeServerSurvivor } from '../../../../../SurvivorTypes';
+import {
+    CharacterCardKeys,
+    TypeCharacterCardData,
+    characterCardData,
+} from '../../static_data_file_configs/CharacterCardsConfig';
 
 interface CreateNewSurvivorDialogProps {
     campaignData: TypeServerSettlement;
@@ -16,6 +21,10 @@ const CreateNewSurvivorDialog = ({ campaignData, onSubmit }: CreateNewSurvivorDi
     const [creator, setCreator] = useState('tester');
     const [hasParents, setHasParents] = useState(false);
     const [isMale, setIsMale] = useState(false);
+
+    const hasCharacterInnovation = campaignData.innovations.includes('Character');
+    const characterCardOptions = Object.keys(characterCardData).sort();
+    const [characterCard, setCharacterCard] = useState(characterCardOptions[0]);
 
     const id = campaignData.survivors.reduce(
         (currentId, survivor) => (currentId <= survivor.id ? survivor.id + 1 : currentId),
@@ -34,9 +43,7 @@ const CreateNewSurvivorDialog = ({ campaignData, onSubmit }: CreateNewSurvivorDi
 
     const [father, setFather] = useState(males[0]);
     const [mother, setMother] = useState(females[0]);
-    // TODO: Only ask for Character Card if proper innovation is held
-    // TODO: Add Character Card Data and give ability to select card drawn and auto apply stats.
-    // TODO: Only ask for Last Name if proper innovation is held
+    // TODO: Add Weapon Specialization selection from parents to be inherited.
     return (
         <Dialog.Root>
             <Dialog.Trigger>
@@ -71,15 +78,39 @@ const CreateNewSurvivorDialog = ({ campaignData, onSubmit }: CreateNewSurvivorDi
                             }}
                         />
                     </Flex>
-                    <Flex direction={'row'}>
-                        <Label>Last Name: </Label>
-                        <TextField.Input
-                            value={lastName}
-                            onChange={(e) => {
-                                setLastName(e.currentTarget.value);
-                            }}
-                        />
-                    </Flex>
+                    {campaignData.innovations.includes('Family') && (
+                        <Flex direction={'row'}>
+                            <Label>Last Name: </Label>
+                            <TextField.Input
+                                value={lastName}
+                                onChange={(e) => {
+                                    setLastName(e.currentTarget.value);
+                                }}
+                            />
+                        </Flex>
+                    )}
+                    {hasCharacterInnovation && (
+                        <Flex direction={'row'}>
+                            <Label>Character Card: </Label>
+                            <Select.Root
+                                defaultValue={characterCard}
+                                onValueChange={(value) => setCharacterCard(value)}
+                            >
+                                <Select.Trigger />
+                                <Select.Content>
+                                    <Select.Group>
+                                        {characterCardOptions.map((card, idx) => {
+                                            return (
+                                                <Select.Item key={idx} value={card}>
+                                                    {card}
+                                                </Select.Item>
+                                            );
+                                        })}
+                                    </Select.Group>
+                                </Select.Content>
+                            </Select.Root>
+                        </Flex>
+                    )}
                     <Text size="2">
                         <Flex gap="2">
                             <Switch
@@ -158,6 +189,8 @@ const CreateNewSurvivorDialog = ({ campaignData, onSubmit }: CreateNewSurvivorDi
                                     father: hasParents ? father : '',
                                     mother: hasParents ? mother : '',
                                     is_male: isMale,
+                                    character_card_selected: hasCharacterInnovation,
+                                    character_card: characterCard as keyof CharacterCardKeys,
                                 }),
                             );
                         }}
