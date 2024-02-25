@@ -1,0 +1,105 @@
+{
+    "Disorderly": {
+        "abilities_impairments": ["Disorderly"]
+    },
+    "Out of Sync": {
+        "abilities_impairments": ["Out of Sync"]
+    },
+    "The Adventurer": {
+        "abilities_impairments": ["The Adventure"]
+    },
+    "The Axe": {
+        "abilities_impairments": ["The Axe"]
+    },
+    "The Berserker": {
+        "abilities_impairments": ["The Berserker"]
+    },
+    "The Bow": {
+        "abilities_impairments": ["The Bow"]
+    },
+    "The Bright Knives": {
+        "abilities_impairments": ["The Bright Knives"]
+    },
+    "The Bright Side": {
+        "abilities_impairments": ["The Bright Side"],
+        "courage": 2
+    },
+    "The Clever": {
+        "abilities_impairments": ["The Clever"]
+    },
+    "The Clumsy": {
+        "abilities_impairments": ["The Clumsy"]
+    },
+    "The Dark": {
+        "abilities_impairments": ["The Dark"]
+    },
+    "The Dying": {
+        "abilities_impairments": ["The Dying"]
+    },
+    "The Fang": {
+        "abilities_impairments": ["The Fang"]
+    },
+    "The Gatherer": {
+        "abilities_impairments": ["The Gatherer"]
+    },
+    "The Hasty": {
+        "abilities_impairments": ["The Hasty"]
+    },
+    "The Hoarder": {
+        "abilities_impairments": ["Hoarder"]
+    },
+    "The Hunger": {
+        "abilities_impairments": ["Marrow Hunger"],
+        "strength": 1
+    },
+    "The Last Stand": {
+        "abilities_impairments": ["The Last Stand"]
+    },
+    "The Lithe": {
+        "abilities_impairments": ["The Lithe"],
+        "evasion": 1
+    },
+    "The Lonely": {
+        "abilities_impairments": ["The Lonely"]
+    },
+    "The Mad": {
+        "abilities_impairments": ["The Mad"]
+    },
+    "The Magma": {
+        "speed": 1
+    },
+    "The Mighty": {
+        "abilities_impairments": ["The Mighty"]
+    },
+    "The Parent": {
+        "abilities_impairments": ["The Parent"]
+    },
+    "The Queen": {
+        "abilities_impairments": ["The Queen"]
+    },
+    "The Shadow": {
+        "movement": -2,
+        "evasion": 1
+    },
+    "The Soloist": {
+        "abilities_impairments": ["The Soloist"]
+    },
+    "The Spear": {
+        "abilities_impairments": ["The Spear"]
+    },
+    "The Sword": {
+        "abilities_impairments": ["The Sword"]
+    },
+    "The Tough": {
+        "abilities_impairments": ["The Tough"]
+    },
+    "The Unlucky": {
+        "luck": -1
+    },
+    "The Watched": {
+        "abilities_impairments": ["The Watched"]
+    },
+    "Weapon Master": {
+        "abilities_impairments": ["Weapon Master"]
+    }
+}
