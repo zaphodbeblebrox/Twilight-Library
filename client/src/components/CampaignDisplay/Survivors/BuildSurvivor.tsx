@@ -1,5 +1,11 @@
 import { TypeServerSettlement } from '../../../../../SettlementTypes';
 import { TypeServerSurvivor } from '../../../../../SurvivorTypes';
+import { GetModifier } from '../../Helper/GetModifier';
+import {
+    CharacterCardKeys,
+    TypeCharacterCardData,
+    characterCardData,
+} from '../../static_data_file_configs/CharacterCardsConfig';
 
 const BuildSurvivor = (
     campaignData: TypeServerSettlement,
@@ -11,11 +17,14 @@ const BuildSurvivor = (
         father: string;
         mother: string;
         is_male: boolean;
+        character_card_selected: boolean;
+        character_card: keyof CharacterCardKeys;
     },
-    characterCard: string | null = null,
 ): TypeServerSurvivor => {
-    console.log(initialCharacterData);
-    return {
+    console.log('initial char data', initialCharacterData);
+    const hasLifetimeReroll = campaignData.innovations.includes('Survival of the Fittest');
+    const characterCard: TypeCharacterCardData = characterCardData[initialCharacterData.character_card];
+    const newChar = {
         id: initialCharacterData.id,
         player_creator: initialCharacterData.player_creator,
         first_name: initialCharacterData.first_name,
@@ -29,31 +38,63 @@ const BuildSurvivor = (
         weapon_xp: 0, // TODO: add proper check
         is_retired: false,
         is_dead: false,
-        has_lifetime_reroll: false, // TODO: add proper check
+        has_lifetime_reroll: hasLifetimeReroll,
         skip_next_hunt: false,
         cannot_use_fighting_arts: false,
-        fighting_arts: [], // TODO: add proper check
-        secret_fighting_art: [], // TODO: add proper check
-        disorders: [], // TODO: add proper check
-        abilities_impairments: [], // TODO: add proper check
+
+        fighting_arts: [...(initialCharacterData.character_card_selected ? characterCard.fighting_arts ?? [] : [])],
+        secret_fighting_art: [],
+        disorders: [...(initialCharacterData.character_card_selected ? characterCard.disorders ?? [] : [])],
+        abilities_impairments: [
+            ...(initialCharacterData.character_card_selected ? characterCard.abilities_impairments ?? [] : []),
+        ],
+
         philosophy: null,
         philosophy_rank: null,
         knowledges: [],
-        hunt_xp: 0, // TODO: add proper check for below
+
+        hunt_xp: 0 + GetModifier.HuntXp(campaignData),
         survival: 1,
         insanity: 0,
         lumi: 0,
-        movement: 5,
-        accuracy: 0,
-        strength: 0,
-        evasion: 0,
-        luck: 0,
-        speed: 0,
-        systemic_pressure: 0,
-        torment: 0,
-        courage: 0,
-        understanding: 0,
+        movement:
+            5 +
+            (initialCharacterData.character_card_selected ? characterCard.movement ?? 0 : 0) +
+            GetModifier.Movement(campaignData),
+        accuracy:
+            0 +
+            (initialCharacterData.character_card_selected ? characterCard.accuracy ?? 0 : 0) +
+            GetModifier.Accuracy(campaignData),
+        strength:
+            0 +
+            (initialCharacterData.character_card_selected ? characterCard.strength ?? 0 : 0) +
+            GetModifier.Strength(campaignData),
+        evasion:
+            0 +
+            (initialCharacterData.character_card_selected ? characterCard.evasion ?? 0 : 0) +
+            GetModifier.Evasion(campaignData),
+        luck:
+            0 +
+            (initialCharacterData.character_card_selected ? characterCard.luck ?? 0 : 0) +
+            GetModifier.Luck(campaignData),
+        speed:
+            0 +
+            (initialCharacterData.character_card_selected ? characterCard.speed ?? 0 : 0) +
+            GetModifier.Speed(campaignData),
+        systemic_pressure:
+            0 + (initialCharacterData.character_card_selected ? characterCard.systemic_pressure ?? 0 : 0),
+        torment: 0 + (initialCharacterData.character_card_selected ? characterCard.torment ?? 0 : 0),
+        courage:
+            0 +
+            (initialCharacterData.character_card_selected ? characterCard.courage ?? 0 : 0) +
+            GetModifier.Courage(campaignData),
+        understanding:
+            0 +
+            (initialCharacterData.character_card_selected ? characterCard.understanding ?? 0 : 0) +
+            GetModifier.Understanding(campaignData),
     };
+    console.log('new char: ', newChar);
+    return newChar;
 };
 
 export default BuildSurvivor;
