@@ -1,18 +1,39 @@
-import { Button, Dialog, Flex, IconButton, TextField } from '@radix-ui/themes';
-import { PlusIcon } from '@radix-ui/react-icons';
+import { Button, Dialog, Flex, Select, SelectContent, Switch, Text, TextField } from '@radix-ui/themes';
 import { Label } from '@radix-ui/react-label';
 import { useState } from 'react';
+import { TypeServerSettlement } from '../../../../../SettlementTypes';
+import BuildSurvivor from './BuildSurvivor';
+import { TypeServerSurvivor } from '../../../../../SurvivorTypes';
 
 interface CreateNewSurvivorDialogProps {
-    onSubmit: (newSurvivor: string) => void;
+    campaignData: TypeServerSettlement;
+    onSubmit: (newSurvivor: TypeServerSurvivor) => void;
 }
 
-const CreateNewSurvivorDialog = ({ onSubmit }: CreateNewSurvivorDialogProps) => {
+const CreateNewSurvivorDialog = ({ campaignData, onSubmit }: CreateNewSurvivorDialogProps) => {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [creator, setCreator] = useState('tester');
-    const [father, setFather] = useState('');
-    const [mother, setMother] = useState('');
+    const [hasParents, setHasParents] = useState(false);
+    const [isMale, setIsMale] = useState(false);
+
+    const id = campaignData.survivors.reduce(
+        (currentId, survivor) => (currentId <= survivor.id ? survivor.id + 1 : currentId),
+        0,
+    );
+
+    // Create filtered lists of male and females for potential father/mother
+    const males = campaignData.survivors
+        .filter((survivor) => survivor.is_male === true)
+        .map((survivor) => `${survivor.first_name} ${survivor.last_name}`)
+        .sort();
+    const females = campaignData.survivors
+        .filter((survivor) => survivor.is_male === false)
+        .map((survivor) => `${survivor.first_name} ${survivor.last_name}`)
+        .sort();
+
+    const [father, setFather] = useState(males[0]);
+    const [mother, setMother] = useState(females[0]);
     // TODO: Only ask for Character Card if proper innovation is held
     // TODO: Add Character Card Data and give ability to select card drawn and auto apply stats.
     // TODO: Only ask for Last Name if proper innovation is held
@@ -24,8 +45,8 @@ const CreateNewSurvivorDialog = ({ onSubmit }: CreateNewSurvivorDialogProps) => 
 
             <Dialog.Content className="DialogContent">
                 <Dialog.Title className="DialogTitle">Create New Survivor</Dialog.Title>
-                <Flex direction="column" gap="3">
-                    <Flex direction={'row'}>
+                <Flex direction="column" gap="3" align={'center'}>
+                    <Flex direction={'row'} justify={'between'}>
                         <Label>Creator: </Label>
                         <TextField.Input
                             value={creator}
@@ -34,6 +55,13 @@ const CreateNewSurvivorDialog = ({ onSubmit }: CreateNewSurvivorDialogProps) => 
                             }}
                         />
                     </Flex>
+                    <Text size="2">
+                        <Flex gap="2">
+                            Female
+                            <Switch defaultChecked={isMale} onCheckedChange={() => setIsMale(!isMale)} />
+                            Male
+                        </Flex>
+                    </Text>
                     <Flex direction={'row'}>
                         <Label>First Name: </Label>
                         <TextField.Input
@@ -52,23 +80,57 @@ const CreateNewSurvivorDialog = ({ onSubmit }: CreateNewSurvivorDialogProps) => 
                             }}
                         />
                     </Flex>
+                    <Text size="2">
+                        <Flex gap="2">
+                            <Switch
+                                defaultChecked={hasParents}
+                                disabled={males.length === 0 || females.length === 0 ? true : false}
+                                onCheckedChange={() => setHasParents(!hasParents)}
+                            />{' '}
+                            Has Parents
+                        </Flex>
+                    </Text>
                     <Flex direction={'row'}>
                         <Label>Father: </Label>
-                        <TextField.Input
-                            value={father}
-                            onChange={(e) => {
-                                setFather(e.currentTarget.value);
-                            }}
-                        />
+                        <Select.Root
+                            disabled={!hasParents}
+                            defaultValue={father}
+                            onValueChange={(value) => setFather(value)}
+                        >
+                            <Select.Trigger />
+                            <Select.Content>
+                                <Select.Group>
+                                    {males.map((name, idx) => {
+                                        return (
+                                            <Select.Item key={idx} value={name}>
+                                                {name}
+                                            </Select.Item>
+                                        );
+                                    })}
+                                </Select.Group>
+                            </Select.Content>
+                        </Select.Root>
                     </Flex>
                     <Flex direction={'row'}>
                         <Label>Mother: </Label>
-                        <TextField.Input
-                            value={mother}
-                            onChange={(e) => {
-                                setMother(e.currentTarget.value);
-                            }}
-                        />
+                        <Select.Root
+                            disabled={!hasParents}
+                            defaultValue={mother}
+                            onValueChange={(value) => setMother(value)}
+                        >
+                            <Select.Trigger />
+                            <Select.Content>
+                                <Select.Group>
+                                    {females.map((name, idx) => {
+                                        return (
+                                            <Select.Item key={idx} value={name}>
+                                                {name}
+                                            </Select.Item>
+                                        );
+                                    })}
+                                </Select.Group>
+                            </Select.Content>
+                        </Select.Root>
                     </Flex>
                 </Flex>
 
@@ -78,7 +140,28 @@ const CreateNewSurvivorDialog = ({ onSubmit }: CreateNewSurvivorDialogProps) => 
                     </Button>
                 </Dialog.Close>
                 <Dialog.Close>
-                    <Button variant="solid" color="green">
+                    <Button
+                        variant="solid"
+                        color="green"
+                        onClick={(e) => {
+                            if (firstName.length === 0) {
+                                e.preventDefault();
+                                // TODO: Popup w/ error message
+                                return;
+                            }
+                            onSubmit(
+                                BuildSurvivor(campaignData, {
+                                    id: id,
+                                    first_name: firstName,
+                                    last_name: lastName,
+                                    player_creator: creator,
+                                    father: hasParents ? father : '',
+                                    mother: hasParents ? mother : '',
+                                    is_male: isMale,
+                                }),
+                            );
+                        }}
+                    >
                         Create
                     </Button>
                 </Dialog.Close>
