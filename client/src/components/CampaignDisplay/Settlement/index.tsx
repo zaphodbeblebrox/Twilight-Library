@@ -5,8 +5,9 @@ import {
     GetInsanityDepartureBonus,
     GetSurvivalDepartureBonus,
     GetSurvivalLimit,
-} from '../../Helper/ModifierCalculator';
+} from '../../Helper/GetModifier/ModifierCalculator';
 import LocationDisplay from './LocationDisplay';
+import { GetModifier } from '../../Helper/GetModifier';
 
 interface TabSettlementProps {
     campaignData: TypeServerSettlement;
@@ -28,14 +29,14 @@ const TabSettlement = ({ campaignData, dbRefetch, dbExecutePatch }: TabSettlemen
             <Heading>{campaignData.name}</Heading>
             <Flex direction={'row'} justify={'between'} align={'start'}>
                 <Flex direction={'column'} gap={'2'} align={'start'}>
-                    <Text>Survival Limit: {GetSurvivalLimit(campaignData)}</Text>
+                    <Text>Survival Limit: {GetModifier.SurvivalLimit(campaignData)}</Text>
                     <Text>Population Count: {0}</Text>
                     <Text>Death Count: {0}</Text>
                 </Flex>
                 <Flex direction={'column'} gap={'2'} align={'end'}>
                     <Text>Departure Bonuses</Text>
-                    <Text>Survival: +{GetSurvivalDepartureBonus(campaignData)}</Text>
-                    <Text>Insanity: +{GetInsanityDepartureBonus(campaignData)}</Text>
+                    <Text>Survival: +{GetModifier.DepartureSurvival(campaignData)}</Text>
+                    <Text>Insanity: +{GetModifier.DepartureInsanity(campaignData)}</Text>
                 </Flex>
             </Flex>
             <LocationDisplay
