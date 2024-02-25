@@ -1,11 +1,6 @@
 import { RefetchFunction } from 'axios-hooks';
 import { TypeServerSettlement } from '../../../../../SettlementTypes';
 import { Flex, Heading, Text } from '@radix-ui/themes';
-import {
-    GetInsanityDepartureBonus,
-    GetSurvivalDepartureBonus,
-    GetSurvivalLimit,
-} from '../../Helper/GetModifier/ModifierCalculator';
 import LocationDisplay from './LocationDisplay';
 import { GetModifier } from '../../Helper/GetModifier';
 
