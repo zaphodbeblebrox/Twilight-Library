@@ -99,7 +99,7 @@ const SettlementSchema: Schema = new Schema(
             required: [true, 'Nemesis are required for creation'],
         },
         survivors: {
-            type: [Object],
+            type: Object,
             required: false,
             default: [],
         },

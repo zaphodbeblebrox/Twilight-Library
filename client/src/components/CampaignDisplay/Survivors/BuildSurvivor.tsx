@@ -22,7 +22,7 @@ const BuildSurvivor = (
     },
 ): TypeServerSurvivor => {
     console.log('initial char data', initialCharacterData);
-    const hasLifetimeReroll = campaignData.innovations.includes('Survival of the Fittest');
+    const hasLifetimeReroll = campaignData.principle_new_life.selected === 'Survival of the Fittest';
     const characterCard: TypeCharacterCardData = characterCardData[initialCharacterData.character_card];
     const newChar = {
         id: initialCharacterData.id,

@@ -26,21 +26,29 @@ const CreateNewSurvivorDialog = ({ campaignData, onSubmit }: CreateNewSurvivorDi
     const characterCardOptions = Object.keys(characterCardData).sort();
     const [characterCard, setCharacterCard] = useState(characterCardOptions[0]);
 
-    const id = campaignData.survivors.reduce(
-        (currentId, survivor) => (currentId <= survivor.id ? survivor.id + 1 : currentId),
+    const survivorIdList = Object.keys(campaignData.survivors).map((survivorId) => Number(survivorId));
+    const id = survivorIdList.reduce(
+        (currentId, survivorId) =>
+            currentId <= campaignData.survivors[survivorId].id ? campaignData.survivors[survivorId].id + 1 : currentId,
         0,
     );
 
     // Create filtered lists of male and females for potential father/mother
-    const males = campaignData.survivors
-        .filter((survivor) => survivor.is_male === true)
-        .filter((survivor) => survivor.is_dead === false)
-        .map((survivor) => `${survivor.first_name} ${survivor.last_name}`)
+    const males = survivorIdList
+        .filter((survivorId) => campaignData.survivors[survivorId].is_male === true)
+        .filter((survivorId) => campaignData.survivors[survivorId].is_dead === false)
+        .map(
+            (survivorId) =>
+                `${campaignData.survivors[survivorId].first_name} ${campaignData.survivors[survivorId].last_name}`,
+        )
         .sort();
-    const females = campaignData.survivors
-        .filter((survivor) => survivor.is_male === false)
-        .filter((survivor) => survivor.is_dead === false)
-        .map((survivor) => `${survivor.first_name} ${survivor.last_name}`)
+    const females = survivorIdList
+        .filter((survivorId) => campaignData.survivors[survivorId].is_male === false)
+        .filter((survivorId) => campaignData.survivors[survivorId].is_dead === false)
+        .map(
+            (survivorId) =>
+                `${campaignData.survivors[survivorId].first_name} ${campaignData.survivors[survivorId].last_name}`,
+        )
         .sort();
 
     const [father, setFather] = useState(males[0]);

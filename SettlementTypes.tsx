@@ -66,7 +66,7 @@ export type TypeServerSettlement = SettlementStrLists &
         arc_survivors: boolean;
         cognition_amount: number;
         current_year: number;
-        survivors: TypeServerSurvivor[];
+        survivors: Record<number, TypeServerSurvivor>;
         milestones: Record<string, boolean>;
         constellations: boolean;
         settlement_lost: boolean;
