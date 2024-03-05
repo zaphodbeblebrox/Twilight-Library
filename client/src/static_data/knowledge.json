@@ -347,6 +347,24 @@
         "condition": "(Dangerous) When you depart and there is no Keeper of Dreams settlement Location, gain +1 mark.",
         "next_rank": null
     },
+    "Dutybound I": {
+        "ability": "[Theory]",
+        "observation": 2,
+        "condition": "When you depart, gain +1 mark.",
+        "next_rank": "Dutybound II"
+    },
+    "Dutybound II": {
+        "ability": "If you retired or otherwise cannot depart, you may gain +1 systemic pressure to depart this lantern year.",
+        "observation": 2,
+        "condition": "When you gain systemic pressure, gain +1 mark.",
+        "next_rank": "Dutybound III"
+    },
+    "Dutybound III": {
+        "ability": "If you retired or otherwise cannot depart, you may gain +1 systemic pressure to depart this lantern year. On arrival, gain [Deflect] tokens equal to your systemic pressure.",
+        "observation": null,
+        "condition": null,
+        "next_rank": null
+    },
     "Eight Eyes": {
         "ability": "On Arrival, if the survivors have more functioning eyes than the monster, they ambush the monster.",
         "observation": null,

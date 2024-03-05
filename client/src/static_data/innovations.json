@@ -109,6 +109,20 @@
             }
         ]
     },
+    "Bell of Challenge": {
+        "name": "Bell of Challenge",
+        "endeavor": [
+            {
+                "cost": "1[[Endeavor]]",
+                "roll": "1d10",
+                "effect": "Departing survivors with [Honorable] gain the following benefits: Lvl 1 - Gain +1 Survival; Lvl 2 - Add 1 {Armor} to all hit locations; Lvl 3 - Gain +1 Strength token; Lvl 4 - Gain a reroll token."
+            }
+        ]
+    },
+    "Black Guard Code": {
+        "name": "Black Guard Code",
+        "static_effect": ["All survivors gain [Oath] survival action."]
+    },
     "Black Mask": {
         "name": "Black Mask",
         "endeavor": [
@@ -1242,6 +1256,15 @@
         "name": "Symposium",
         "static_effect": ["When a survivor innovates, draw an additonal 2 innovation cards to choose from."],
         "survival_limit_mod": 1
+    },
+    "Toppled Bell": {
+        "name": "Toppled Bell",
+        "endeavor": [
+            {
+                "cost": "1[[Endeavor]], Gain [Dishonorable]",
+                "effect": "Survivors with [Dishonorable] may always depart. Survivors with [Honorable] can no longer depart."
+            }
+        ]
     },
     "Ultimate Weapon": {
         "name": "Ultimate Weapon",

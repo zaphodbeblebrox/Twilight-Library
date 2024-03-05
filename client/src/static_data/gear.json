@@ -5129,5 +5129,271 @@
             "[Reach] 2",
             "When you [Dash], this weapon gains +1 speed until the end of the showdown (use tokens to track this)."
         ]
+    },
+    "Marchioness Sollerets": {
+        "types": ["armor", "set", "metal", "fur"],
+        "location": "Pattern",
+        "crafting": "x4 Iron, x2 Leather, x2 Bone",
+        "stats": { "armor": 6, "location": "legs" },
+        "affinities": { "top": "blue", "right": "red", "bottom": "", "left": "red", "center": "" },
+        "abilities": ["Gain +2 movement while you have a sword in your gear grid."]
+    },
+    "Marchioness Gloves": {
+        "types": ["armor", "set", "metal", "fur"],
+        "location": "Pattern",
+        "crafting": "x3 Iron, x2 Leather, x1 Hide, x1 Organ",
+        "stats": { "armor": 6, "location": "arms" },
+        "affinities": { "top": "red", "right": "blue", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "{red_puzzle}, {red_affinity}, {blue_puzzle}, {blue_affinity}: Riposte - When you block or deflect a hit, gain {Activation} at the start of your next act. Limit once per round."
+        ]
+    },
+    "Marchioness Trousers": {
+        "types": ["armor", "set", "metal", "fur"],
+        "location": "Pattern",
+        "crafting": "x5 Leather, x1 Organ, x1 Perfect Hide",
+        "stats": { "armor": 6, "location": "waist" },
+        "affinities": { "top": "blue", "right": "", "bottom": "", "left": "blue", "center": "" },
+        "abilities": []
+    },
+    "Marchioness Blouse": {
+        "types": ["armor", "set", "metal", "fur"],
+        "location": "Pattern",
+        "crafting": "x2 Iron, x4 Leather, x2 Organ",
+        "stats": { "armor": 6, "location": "chest" },
+        "affinities": { "top": "red", "right": "blue", "bottom": "blue", "left": "red", "center": "" },
+        "abilities": [
+            "Swords in your gear grid without Deflect gain [Deflect] 1.",
+            "Swords in your gear grid with [Deflect] have its effect increased by 1."
+        ]
+    },
+    "Marchioness Gorget": {
+        "types": ["armor", "set", "metal", "fur"],
+        "location": "Pattern",
+        "crafting": "x3 Iron, x2 Leather, x3 Bone",
+        "stats": { "armor": 6, "location": "head" },
+        "affinities": { "top": "", "right": "red", "bottom": "red", "left": "blue", "center": "" },
+        "abilities": ["On arrival, all non-deaf survivors gain +2 survival."]
+    },
+    "Count Sandals": {
+        "types": ["armor", "set", "bone", "fur"],
+        "location": "Pattern",
+        "crafting": "x2 Leather, x2 Bone",
+        "stats": { "armor": 2, "location": "legs" },
+        "affinities": { "top": "green", "right": "green", "bottom": "", "left": "red", "center": "" },
+        "abilities": ["{green_puzzle}: On Arrival, lose 1 survival and gain +1 movement token."]
+    },
+    "Count Wrappings": {
+        "types": ["armor", "set", "bone", "fur"],
+        "location": "Pattern",
+        "crafting": "x1 Leather, x1 Bone, x1 Perfect Bone",
+        "stats": { "armor": 2, "location": "arms" },
+        "affinities": { "top": "red", "right": "", "bottom": "red", "left": "red", "center": "" },
+        "abilities": ["2 {red_puzzle}, 2 {red_affinity}: On arrival, lose 2 survival and gain +2 strength tokens."]
+    },
+    "Count Tabard": {
+        "types": ["armor", "set", "bone", "fur"],
+        "location": "Pattern",
+        "crafting": "x1 Leather, x1 Organ, x1 Perfect Hide",
+        "stats": { "armor": 2, "location": "waist" },
+        "affinities": { "top": "green", "right": "green", "bottom": "green", "left": "red", "center": "" },
+        "abilities": ["3 {green_puzzle}: On arrival, lose 1 survival and gain +1 speed token."]
+    },
+    "Count Vest": {
+        "types": ["armor", "set", "bone", "fur"],
+        "location": "Pattern",
+        "crafting": "x1 Leather, x1 Bone, x1 Hide, x1 Scrap",
+        "stats": { "armor": 2, "location": "chest" },
+        "affinities": { "top": "red", "right": "red", "bottom": "green", "left": "green", "center": "" },
+        "abilities": []
+    },
+    "Count Treukh": {
+        "types": ["armor", "set", "bone", "fur"],
+        "location": "Pattern",
+        "crafting": "x1 Hide, x1 Perfect Hide, x1 Skull",
+        "stats": { "armor": 2, "location": "head" },
+        "affinities": { "top": "", "right": "red", "bottom": "", "left": "", "center": "" },
+        "abilities": ["[Shred]"]
+    },
+    "Earl Boots": {
+        "types": ["armor", "set", "metal", "heavy"],
+        "location": "Pattern",
+        "crafting": "x2 Iron, x1 Bone, x1 Organ",
+        "stats": { "armor": 3, "location": "legs" },
+        "affinities": { "top": "blue", "right": "blue", "bottom": "", "left": "green", "center": "" },
+        "abilities": []
+    },
+    "Earl Sleeves": {
+        "types": ["armor", "set", "metal", "heavy"],
+        "location": "Pattern",
+        "crafting": "x1 Iron, x1 Leather, x1 Hide, x1 Scrap",
+        "stats": { "armor": 3, "location": "arms" },
+        "affinities": { "top": "", "right": "green", "bottom": "blue", "left": "", "center": "" },
+        "abilities": ["When you [Encourage], all affected survivors gain a deflect token."]
+    },
+    "Earl Tassets": {
+        "types": ["armor", "set", "metal", "heavy"],
+        "location": "Pattern",
+        "crafting": "x1 Iron, x1 Leather, x1 Perfect Hide",
+        "stats": { "armor": 3, "location": "waist" },
+        "affinities": { "top": "", "right": "", "bottom": "blue", "left": "green", "center": "" },
+        "abilities": ["When you depart, gain +3 survival."]
+    },
+    "Earl Raiment": {
+        "types": ["armor", "set", "metal", "heavy"],
+        "location": "Pattern",
+        "crafting": "x2 Iron, x2 Leather",
+        "stats": { "armor": 3, "location": "chest" },
+        "affinities": { "top": "blue", "right": "green", "bottom": "blue", "left": "green", "center": "" },
+        "abilities": [
+            "{blue_puzzle}, {green_puzzle}: Whenever you [Encourage], roll 1d10. On a 6+, all affected survivors gain +1 survival."
+        ]
+    },
+    "Earl Jaw Guard": {
+        "types": ["armor", "set", "metal", "heavy"],
+        "location": "Pattern",
+        "crafting": "x1 Iron, x2 Bone, x1 Organ",
+        "stats": { "armor": 3, "location": "head" },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "green", "center": "" },
+        "abilities": ["{green_puzzle}: Your [Encourage] affects all knocked down survivors."]
+    },
+    "Piercing Claws": {
+        "types": ["weapon", "melee", "katar", "metal", "finesse"],
+        "location": "Seed Pattern",
+        "crafting": "x2 Iron, x1 Leather",
+        "stats": { "speed": 2, "accuracy": 5, "strength": 7 },
+        "affinities": { "top": "", "right": "", "bottom": "blue", "left": "red", "center": "" },
+        "abilities": [
+            "[Paired]",
+            "[Barbed] 2",
+            "If 3 or more of your attack rolls hit, remove a token from the monster before drawing {hit_location}."
+        ]
+    },
+    "Clasping Shield": {
+        "types": ["weapon", "melee", "shield", "metal", "finesse"],
+        "location": "Seed Pattern",
+        "crafting": "x1 Iron, x2 Scrap",
+        "stats": { "speed": 1, "accuracy": 7, "strength": 5 },
+        "affinities": { "top": "red", "right": "", "bottom": "", "left": "red", "center": "" },
+        "abilities": [
+            "[Block] 2",
+            "If another survivor would collide with you due to knockback, instead end their knockback and place them standing in the nearest unoccupied space to you."
+        ]
+    },
+    "Black Gauntlet": {
+        "types": ["item", "other", "metal", ""],
+        "location": "Rare Gear",
+        "crafting": "",
+        "stats": { "armor": 2, "location": "arms" },
+        "affinities": { "top": "green", "right": "", "bottom": "", "left": "blue", "center": "" },
+        "abilities": [
+            "[Accessory]",
+            "Ignore severe injuries to the arms location.",
+            "You cannot activate two-handed weapons."
+        ]
+    },
+    "Black Knight Badge": {
+        "types": ["item", "jewelry", "knight"],
+        "location": "Rare Gear",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "red", "left": "", "center": "" },
+        "abilities": ["[Unique]", "On arrival, gain +1 strength token and draw 1 tactics card."]
+    },
+    "Camping Bag": {
+        "types": ["item", "heavy"],
+        "location": "Rare Gear",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "", "right": "green", "bottom": "", "left": "", "center": "" },
+        "abilities": ["-1 Evasion", "On arrival, all survivors gain +3 survival."]
+    },
+    "Portable Waterphone": {
+        "types": ["item", "instrument", "noisy"],
+        "location": "Rare Gear",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": ["{activation}: Roll 1d10. On a 8+, remove 1 token from the monster."]
+    },
+    "Iron Hand (Left)": {
+        "types": ["weapon", "melee", "two-handed", "metal"],
+        "location": "Rare Gear",
+        "crafting": "",
+        "stats": { "speed": 2, "accuracy": 5, "strength": 30 },
+        "affinities": { "top": "red", "right": "", "bottom": "green", "left": "red", "center": "" },
+        "abilities": [
+            "[Unique]",
+            "[Sharp]",
+            "[Reach] 3",
+            "You may [Concentrate]. If you do, spend {activation} to perform an attack with this weapon at the start of your next act (if a monster is within reach) that ignores [Impervious] and [Parry]. This gear cannot be activated any other way."
+        ]
+    },
+    "Iron Hand (Right)": {
+        "types": ["club", "grand", "sword", "massive", "heavy"],
+        "location": "Rare Gear",
+        "crafting": "",
+        "stats": {},
+        "affinities": { "top": "green", "right": "red", "bottom": "red", "left": "", "center": "" },
+        "abilities": ["[Devastating] 3", "[Irreplaceable]"]
+    },
+    "Wrath": {
+        "types": ["weapon", "melee", "sword", "nuclear", "resin", "finesse"],
+        "location": "Rare Gear",
+        "crafting": "",
+        "stats": { "speed": 1, "accuracy": 5, "strength": 13 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Deadly] 3",
+            "When you critically wound with this, archive all tokens the monster has and inflict an additional wound for each."
+        ]
+    },
+    "Shrieking Bow": {
+        "types": ["weapon", "ranged", "two-handed", "bow", "noisy"],
+        "location": "Rare Gear",
+        "crafting": "",
+        "stats": { "speed": 2, "accuracy": 6, "strength": 5 },
+        "affinities": { "top": "", "right": "blue", "bottom": "", "left": "red", "center": "" },
+        "abilities": [
+            "[Range] 5",
+            "[Cumbersome]",
+            "At the end of your attack, if you wounded the monster, roll 1d10. On a 7+, gain the [Priority Target] token."
+        ]
+    },
+    "Magnum Knives": {
+        "types": ["weapon", "thrown", "sword", "dagger", "other"],
+        "location": "Rare Gear",
+        "crafting": "",
+        "stats": { "speed": 3, "accuracy": 6, "strength": 7 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "red", "center": "" },
+        "abilities": [
+            "[Range] 5",
+            "[Deadly]",
+            "[Savage]",
+            "When you attack, if you are within 3 spaces of the monster, you may hit once automatically instead of making any attack rolls."
+        ]
+    },
+    "Fellbrandt": {
+        "types": ["weapon", "melee", "grand", "sword", "finesse", "metal"],
+        "location": "Rare Gear",
+        "crafting": "",
+        "stats": { "speed": 1, "accuracy": 6, "strength": 9 },
+        "affinities": { "top": "", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "[Sharp]",
+            "[Devastating] 1",
+            "[Deflect] 1",
+            "When you wound the monster, it gains a -1 evasion token. Limit once per round."
+        ]
+    },
+    "Everburn": {
+        "types": ["item", "tool", "other", "metal"],
+        "location": "Rare Gear",
+        "crafting": "",
+        "stats": { "speed": 1, "accuracy": 9, "strength": 9 },
+        "affinities": { "top": "blue", "right": "", "bottom": "", "left": "", "center": "" },
+        "abilities": [
+            "{activation}: One of your or an adjacent survivor's weapons gains [Sharp] and [Deadly] 2 until the end of the round. Limit once per round."
+        ]
     }
 }
