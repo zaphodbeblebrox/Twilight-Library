@@ -1,10 +1,19 @@
 import { RefetchFunction } from 'axios-hooks';
-import { TypeServerSettlement } from '../../../../../SettlementTypes';
+import { TypeServerSettlement } from '../../../../../../SettlementTypes';
 import { Box, Flex, Heading, IconButton, Tabs, Text, Tooltip } from '@radix-ui/themes';
 import Fuse from 'fuse.js';
-import { TypeServerSurvivor } from '../../../../../SurvivorTypes';
+import { TypeServerSurvivor } from '../../../../../../SurvivorTypes';
 import { useState } from 'react';
-import { Cross1Icon, CubeIcon, EyeNoneIcon, EyeOpenIcon, MinusIcon, PlusIcon } from '@radix-ui/react-icons';
+import {
+    ArrowDownIcon,
+    ArrowTopRightIcon,
+    Cross1Icon,
+    CubeIcon,
+    EyeNoneIcon,
+    EyeOpenIcon,
+    MinusIcon,
+    PlusIcon,
+} from '@radix-ui/react-icons';
 
 interface SurvivorCardProps {
     survivorData: TypeServerSurvivor;
@@ -14,9 +23,13 @@ interface SurvivorCardProps {
 const SurvivorCard = ({ survivorData, onChange }: SurvivorCardProps) => {
     const [isCondensed, setIsCondensed] = useState(true);
     return (
-        <Flex>
+        <Flex className="flex-1">
             <Flex className="nameline" direction={'row'} justify={'between'} align={'center'} gap={'3'}>
-                {survivorData.is_male ? <p>Male</p> : <p>Female</p>}
+                <Tooltip content={survivorData.is_male ? 'Male' : 'Female'}>
+                    <IconButton radius="full" color="bronze">
+                        {survivorData.is_male ? <ArrowTopRightIcon /> : <ArrowDownIcon />}
+                    </IconButton>
+                </Tooltip>
                 <Flex direction={'row'} gap={'2'} className="flex-1">
                     <p>{survivorData.first_name}</p>
                     <p>{survivorData.nickname}</p>

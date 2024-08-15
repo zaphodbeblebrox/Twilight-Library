@@ -1,4 +1,5 @@
 import './App.css';
+import './styles.css'; // Import your styles
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import DashboardRoutes from './components/DashboardRoutes';
 import CampaignTabs from './components/CampaignDisplay';
