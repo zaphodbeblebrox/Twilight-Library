@@ -2,6 +2,9 @@
     "Disorderly": {
         "abilities_impairments": ["Disorderly"]
     },
+    "Dream of the Heart": {
+        "abilities_impairments": ["Olthawartta", "Life Exchange"]
+    },
     "Out of Sync": {
         "abilities_impairments": ["Out of Sync"]
     },
